@@ -18,23 +18,28 @@ export function ProductDetailPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Product image */}
           <div className="lg:col-span-4">
-            <div className="aspect-square bg-gray-200 rounded-sm flex items-center justify-center mb-4">
-              <div className="text-center px-8">
-                <div className="w-20 h-20 border-2 border-dashed border-gray-400 rounded-sm mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-gray-400 text-3xl">📦</span>
-                </div>
-                <p className="text-gray-400 text-xs font-mono uppercase tracking-widest">Imagen del producto</p>
-                <p className="text-gray-300 text-xs font-mono mt-1">500 × 500px</p>
-              </div>
-            </div>
-            {/* Thumbnail strip */}
-            <div className="flex gap-2">
-              {[1, 2, 3, 4].map((n) => (
-                <div key={n} className={`flex-1 aspect-square bg-gray-200 rounded-sm border-2 flex items-center justify-center ${n === 1 ? "border-gray-500" : "border-gray-200"}`}>
-                  <span className="text-gray-300 text-xs font-mono">{n}</span>
-                </div>
-              ))}
-            </div>
+            {(() => {
+              const imgs = [
+                "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=500&q=80&fit=crop",
+                "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80&fit=crop",
+                "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=500&q=80&fit=crop",
+                "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=500&q=80&fit=crop",
+              ];
+              return (
+                <>
+                  <div className="aspect-square rounded-sm overflow-hidden mb-4 border border-gray-200">
+                    <img src={imgs[0]} alt="Producto destacado" className="w-full h-full object-cover grayscale" />
+                  </div>
+                  <div className="flex gap-2">
+                    {imgs.map((src, i) => (
+                      <div key={i} className={`flex-1 aspect-square rounded-sm overflow-hidden border-2 ${i === 0 ? "border-gray-500" : "border-gray-200"}`}>
+                        <img src={src} alt={`Vista ${i + 1}`} className="w-full h-full object-cover grayscale" />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
 
           {/* Product info */}

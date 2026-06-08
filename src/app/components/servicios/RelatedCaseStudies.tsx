@@ -1,3 +1,9 @@
+const caseImgs = [
+  "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=300&q=70&fit=crop",
+  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop",
+  "https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?w=300&q=70&fit=crop",
+];
+
 const cases = [
   {
     number: "01",
@@ -62,8 +68,12 @@ export function RelatedCaseStudies() {
                     {c.badge}
                   </span>
                 </div>
-                <div className="w-14 h-8 bg-gray-200 rounded-sm flex items-center justify-center mb-3">
-                  <span className="text-gray-400 text-[9px] font-mono uppercase">LOGO</span>
+                <div className="w-full h-28 rounded-sm overflow-hidden mb-3">
+                  <img
+                    src={caseImgs[parseInt(c.number) - 1]}
+                    alt={c.client}
+                    className="w-full h-full object-cover grayscale"
+                  />
                 </div>
                 <div className="font-semibold text-gray-800 text-sm">{c.client}</div>
                 <div className="text-xs text-gray-400 font-mono mt-0.5">{c.sector}</div>

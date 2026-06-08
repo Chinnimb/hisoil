@@ -63,8 +63,12 @@ export function TestimoniosMembresia() {
             <div className="text-gray-100 font-serif text-8xl leading-none mb-6 select-none">"</div>
             <p className="text-gray-700 text-lg leading-relaxed mb-10">{t.quote}</p>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gray-200 border border-gray-300 rounded-full flex items-center justify-center">
-                <span className="text-gray-400 text-xs font-mono">FOTO</span>
+              <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-300 flex-shrink-0">
+                <img
+                  src="https://images.unsplash.com/photo-1545830790-68595959c491?w=100&q=70&fit=crop&crop=face"
+                  alt={t.name}
+                  className="w-full h-full object-cover grayscale"
+                />
               </div>
               <div>
                 <div className="text-gray-900 font-semibold">{t.name}</div>

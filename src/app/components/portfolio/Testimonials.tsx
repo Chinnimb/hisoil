@@ -79,10 +79,16 @@ export function PortfolioTestimonials() {
               {/* Person */}
               <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
                 {/* Avatar placeholder */}
-                <div className="w-11 h-11 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-gray-400 text-sm font-semibold">
-                    {t.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
-                  </span>
+                <div className="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 border border-gray-200">
+                  <img
+                    src={[
+                      "https://images.unsplash.com/photo-1545830790-68595959c491?w=80&q=70&fit=crop&crop=face",
+                      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&q=70&fit=crop&crop=face",
+                      "https://images.unsplash.com/photo-1627829382469-f4bce7df99ba?w=80&q=70&fit=crop&crop=face",
+                    ][testimonials.indexOf(t) % 3]}
+                    alt={t.name}
+                    className="w-full h-full object-cover grayscale"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 text-sm">{t.name}</div>

@@ -83,8 +83,8 @@ export function ClientsResults() {
               {/* Card header */}
               <div className="bg-gray-100 px-6 py-5 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="w-12 h-8 bg-gray-300 rounded-sm flex items-center justify-center">
-                    <span className="text-gray-500 text-[9px] font-mono">LOGO</span>
+                  <div className="w-12 h-8 bg-gray-200 rounded-sm flex items-center justify-center">
+                    <span className="text-gray-600 text-[9px] font-bold uppercase tracking-wider">{cs.client.slice(0, 4)}</span>
                   </div>
                   <span className="text-xs font-mono text-gray-400 bg-white border border-gray-200 px-2 py-1 rounded-full">
                     {cs.tag}
