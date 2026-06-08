@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
+import { useModal } from '../context/ModalContext';
 
 const IMG_URL =
   "https://images.unsplash.com/photo-1642686929941-92f0689c4adb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzb3liZWFuJTIwZmllbGQlMjByb3dzJTIwYWVyaWFsJTIwdmlldyUyMGFncmljdWx0dXJlJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc4MDkyOTE1OHww&ixlib=rb-4.1.0&q=80&w=1080";
@@ -50,6 +51,7 @@ const rightCards = [
 
 export function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
+  const { open } = useModal();
 
   useEffect(() => {
     let rafId: number;
@@ -169,14 +171,13 @@ export function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/contacto">
-                  <button
-                    className="bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99]"
-                    style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
-                  >
-                    Solicitar presupuesto
-                  </button>
-                </Link>
+                <button
+                  onClick={open}
+                  className="bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99]"
+                  style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
+                >
+                  Solicitar presupuesto
+                </button>
                 <Link to="/productos">
                   <button
                     className="border border-white/35 bg-white/8 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/15 hover:border-white/50 transition-all"

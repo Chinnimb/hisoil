@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
+import { useModal } from '../context/ModalContext';
 
 const navItems = [
   { label: 'Productos', to: '/productos' },
@@ -13,6 +14,7 @@ const navItems = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { open } = useModal();
 
   return (
     <header className="sticky top-0 bg-white border-b border-gray-200 z-50 shadow-sm">
@@ -52,11 +54,9 @@ export function Header() {
             >
               Contacto
             </Link>
-            <Link to="/contacto">
-              <button className="px-6 py-2.5 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg text-sm">
-                Solicitar Presupuesto
-              </button>
-            </Link>
+            <button onClick={open} className="px-6 py-2.5 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg text-sm">
+              Solicitar Presupuesto
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -94,13 +94,12 @@ export function Header() {
               >
                 Contacto
               </Link>
-              <Link
-                to="/contacto"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                onClick={() => { open(); setMobileMenuOpen(false) }}
                 className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full text-center"
               >
                 Solicitar Presupuesto
-              </Link>
+              </button>
             </nav>
           </div>
         )}
