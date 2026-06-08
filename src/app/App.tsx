@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
+import { ModalProvider } from './context/ModalContext';
+import { PresupuestoModal } from './components/PresupuestoModal';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { WhatDoYouNeed } from './components/WhatDoYouNeed';
@@ -43,16 +45,19 @@ function HomePage() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/nosotros" element={<AboutPage />} />
-        <Route path="/servicios" element={<ServiciosPage />} />
-        <Route path="/productos" element={<ProductosPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/membresia" element={<MembresiaPage />} />
-        <Route path="/contacto" element={<ContactoPage />} />
-      </Routes>
-    </BrowserRouter>
+    <ModalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/nosotros" element={<AboutPage />} />
+          <Route path="/servicios" element={<ServiciosPage />} />
+          <Route path="/productos" element={<ProductosPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/membresia" element={<MembresiaPage />} />
+          <Route path="/contacto" element={<ContactoPage />} />
+        </Routes>
+        <PresupuestoModal />
+      </BrowserRouter>
+    </ModalProvider>
   );
 }

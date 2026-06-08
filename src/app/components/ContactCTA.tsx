@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { useModal } from '../context/ModalContext';
 
 const whatsappSvg = (
   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
@@ -7,6 +7,7 @@ const whatsappSvg = (
 );
 
 export function ContactCTA() {
+  const { open } = useModal();
   return (
     <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -45,11 +46,9 @@ export function ContactCTA() {
 
           {/* Right — CTAs */}
           <div className="lg:col-span-5 bg-white p-12 md:p-16 flex flex-col justify-center gap-4">
-            <Link to="/contacto">
-              <button className="bg-gray-900 text-white py-4 px-8 rounded-full font-semibold hover:bg-gray-800 transition-colors w-full">
-                Solicitar presupuesto
-              </button>
-            </Link>
+            <button onClick={open} className="bg-gray-900 text-white py-4 px-8 rounded-full font-semibold hover:bg-gray-800 transition-colors w-full">
+              Solicitar presupuesto
+            </button>
             <button className="border border-gray-300 text-gray-700 py-4 px-8 rounded-full font-medium hover:bg-gray-50 transition-colors w-full flex items-center justify-center gap-2.5">
               {whatsappSvg}
               Contactar por WhatsApp
