@@ -34,36 +34,42 @@ export function ProductSpotlight() {
           {/* Left — gallery */}
           <div className="lg:col-span-5">
             {/* Main image */}
-            <div className="aspect-square bg-gray-100 rounded-sm flex items-center justify-center mb-4 border border-gray-200 relative">
-              <div className="text-center px-8">
-                <div className="w-24 h-28 border-2 border-dashed border-gray-300 rounded-sm mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-gray-300 text-4xl">📦</span>
-                </div>
-                <p className="text-gray-400 text-xs font-mono uppercase tracking-widest">
-                  Vista {activeImg + 1} — Imagen principal
-                </p>
-                <p className="text-gray-300 text-xs font-mono mt-1">600 × 600px</p>
-              </div>
-              <div className="absolute top-4 left-4 flex flex-col gap-1.5">
-                <span className="bg-gray-900 text-white text-xs px-2.5 py-1 rounded-full font-mono">⭐ Destacado</span>
-                <span className="bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">Fertilizante</span>
-              </div>
-            </div>
-
-            {/* Thumbnail strip */}
-            <div className="flex gap-2">
-              {[0, 1, 2, 3].map((n) => (
-                <button
-                  key={n}
-                  onClick={() => setActiveImg(n)}
-                  className={`flex-1 aspect-square bg-gray-100 rounded-sm border-2 flex items-center justify-center transition-colors ${
-                    activeImg === n ? "border-gray-700" : "border-gray-200 hover:border-gray-400"
-                  }`}
-                >
-                  <span className="text-gray-300 text-xs font-mono">{n + 1}</span>
-                </button>
-              ))}
-            </div>
+            {(() => {
+              const imgs = [
+                "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=600&q=80&fit=crop",
+                "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&fit=crop",
+                "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80&fit=crop",
+                "https://images.unsplash.com/photo-1492496913980-501348b61469?w=600&q=80&fit=crop",
+              ];
+              return (
+                <>
+                  <div className="aspect-square rounded-sm overflow-hidden mb-4 relative border border-gray-200">
+                    <img
+                      src={imgs[activeImg]}
+                      alt={`Vista ${activeImg + 1}`}
+                      className="w-full h-full object-cover grayscale"
+                    />
+                    <div className="absolute top-4 left-4 flex flex-col gap-1.5">
+                      <span className="bg-gray-900 text-white text-xs px-2.5 py-1 rounded-full font-mono">⭐ Destacado</span>
+                      <span className="bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">Fertilizante</span>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    {imgs.map((src, n) => (
+                      <button
+                        key={n}
+                        onClick={() => setActiveImg(n)}
+                        className={`flex-1 aspect-square rounded-sm border-2 overflow-hidden transition-colors ${
+                          activeImg === n ? "border-gray-700" : "border-gray-200 hover:border-gray-400"
+                        }`}
+                      >
+                        <img src={src} alt={`Vista ${n + 1}`} className="w-full h-full object-cover grayscale" />
+                      </button>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
 
           {/* Right — info */}

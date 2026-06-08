@@ -117,13 +117,15 @@ export function FeaturedProducts() {
           {/* Medium cards */}
           {featured.slice(1, 3).map((p) => (
             <div key={p.id} className="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-gray-400 hover:shadow-lg transition-all cursor-pointer flex flex-col">
-              <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center relative border-b border-gray-200">
-                <div className="text-center">
-                  <div className="w-12 h-14 border-2 border-dashed border-gray-300 rounded-sm mx-auto mb-1 flex items-center justify-center">
-                    <span className="text-gray-300 text-xl">📦</span>
-                  </div>
-                  <p className="text-gray-300 text-[10px] font-mono">Imagen {String(p.id).padStart(2, "0")}</p>
-                </div>
+              <div className="aspect-[4/3] relative overflow-hidden border-b border-gray-200">
+                <img
+                  src={p.id === 2
+                    ? "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=400&q=70&fit=crop"
+                    : "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=400&q=70&fit=crop"
+                  }
+                  alt={p.name}
+                  className="w-full h-full object-cover grayscale"
+                />
                 {p.badge && (
                   <div className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-mono ${p.badgeStyle}`}>
                     {p.badge}
@@ -156,13 +158,15 @@ export function FeaturedProducts() {
           {/* Small cards */}
           {featured.slice(3).map((p) => (
             <div key={p.id} className="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer flex flex-row">
-              <div className="w-32 bg-gray-100 flex items-center justify-center flex-shrink-0 relative">
-                <div className="text-center p-3">
-                  <div className="w-10 h-12 border border-dashed border-gray-300 rounded-sm mx-auto mb-1 flex items-center justify-center">
-                    <span className="text-gray-300 text-base">📦</span>
-                  </div>
-                  <p className="text-gray-300 text-[9px] font-mono">IMG</p>
-                </div>
+              <div className="w-32 flex-shrink-0 relative overflow-hidden">
+                <img
+                  src={p.id === 4
+                    ? "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=200&q=70&fit=crop"
+                    : "https://images.unsplash.com/photo-1492496913980-501348b61469?w=200&q=70&fit=crop"
+                  }
+                  alt={p.name}
+                  className="w-full h-full object-cover grayscale"
+                />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <div className="flex items-start justify-between gap-2 mb-2">
