@@ -12,6 +12,8 @@ const cases = [
     resultLabel: "rendimiento soja",
     secondaryResult: "28 qq/ha promedio alcanzado",
     tags: ["Compost Premium", "Asesoramiento"],
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80&fit=crop",
+    imageAlt: "Campo de soja en Buenos Aires",
   },
   {
     number: "02",
@@ -24,6 +26,8 @@ const cases = [
     resultLabel: "ahorro anual",
     secondaryResult: "2.400 toneladas procesadas por campaña",
     tags: ["Compostaje", "Residuos"],
+    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80&fit=crop",
+    imageAlt: "Compostaje de residuos orgánicos ganaderos",
   },
   {
     number: "03",
@@ -36,6 +40,8 @@ const cases = [
     resultLabel: "productividad maíz",
     secondaryResult: "110 qq/ha alcanzados en 1 campaña",
     tags: ["Bioestimulante", "Diagnóstico"],
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80&fit=crop",
+    imageAlt: "Cultivo de maíz en Córdoba",
   },
 ];
 
@@ -118,20 +124,16 @@ export function CaseStudies() {
                 </div>
               </div>
 
-              {/* Visual placeholder — right */}
-              <div className="hidden lg:flex lg:col-span-3 bg-gray-100 border-l border-gray-200 items-center justify-center relative overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-20"
-                  style={{
-                    backgroundImage: `repeating-linear-gradient(-10deg, #9ca3af 0, #9ca3af 1px, transparent 0, transparent 20px)`,
-                  }}
+              {/* Image — right */}
+              <div className="hidden lg:block lg:col-span-3 border-l border-gray-200 relative overflow-hidden">
+                <img
+                  src={c.image}
+                  alt={c.imageAlt}
+                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className="text-center relative z-10">
-                  <div className="text-gray-300 text-[10px] font-mono uppercase tracking-widest mb-1">Imagen del caso</div>
-                  <div className="text-gray-200 text-[9px] font-mono">Campo · Proceso · Resultado</div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 right-4">
-                  <span className="text-gray-300 group-hover:text-gray-600 transition-colors text-xs font-mono">Ver caso completo →</span>
+                  <span className="text-white/70 group-hover:text-white transition-colors text-xs font-mono">Ver caso completo →</span>
                 </div>
               </div>
             </div>
