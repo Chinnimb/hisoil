@@ -44,11 +44,10 @@ export function ClientesAlianzas() {
                 key={i}
                 className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 hover:bg-gray-50 transition-colors cursor-pointer group"
               >
-                <div className="w-16 h-9 bg-gray-100 border border-gray-200 rounded-sm flex items-center justify-center mb-1.5 group-hover:border-gray-300 transition-colors">
-                  <span className="text-gray-300 text-[9px] font-mono uppercase tracking-widest">LOGO</span>
+                <div className="w-16 h-9 bg-gray-50 border border-gray-200 rounded-sm flex items-center justify-center mb-1.5 group-hover:border-gray-400 transition-colors">
+                  <span className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">{c.name.slice(0, 6)}</span>
                 </div>
-                <span className="text-gray-300 text-[9px] font-mono text-center">{c.name}</span>
-                <span className="text-gray-200 text-[8px] font-mono text-center">{c.sector}</span>
+                <span className="text-gray-400 text-[9px] font-mono text-center">{c.sector}</span>
               </div>
             ))}
           </div>
@@ -60,8 +59,8 @@ export function ClientesAlianzas() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {alianzas.map((a, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-sm p-5 flex flex-col items-center gap-3 hover:border-gray-400 transition-colors">
-                <div className="w-20 h-10 bg-gray-100 border border-gray-200 rounded-sm flex items-center justify-center">
-                  <span className="text-gray-300 text-[10px] font-mono uppercase tracking-widest">LOGO</span>
+                <div className="w-20 h-10 bg-gray-50 border border-gray-200 rounded-sm flex items-center justify-center">
+                  <span className="text-gray-600 text-xs font-bold uppercase tracking-wider">{a.name}</span>
                 </div>
                 <div className="text-center">
                   <div className="text-gray-700 text-sm font-semibold">{a.name}</div>
