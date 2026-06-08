@@ -53,18 +53,27 @@ export function Hero() {
 
   useEffect(() => {
     let rafId: number;
-    let currentY = 0;
-    let targetY = 0;
+    let currentProgress = 0;
+    let targetProgress = 0;
 
     const onScroll = () => {
-      targetY = window.scrollY * 0.45;
+      const heroHeight = window.innerHeight;
+      targetProgress = Math.min(window.scrollY / heroHeight, 1);
     };
 
     const tick = () => {
-      currentY += (targetY - currentY) * 0.08;
+      currentProgress += (targetProgress - currentProgress) * 0.06;
+
       if (imgRef.current) {
-        imgRef.current.style.transform = `translateY(${currentY}px) scale(1.08)`;
+        // Zoom hacia adelante: empieza en 1 y llega a 1.35 al final del hero
+        const scale = 1 + currentProgress * 0.35;
+        // Leve subida para reforzar la sensación de avanzar
+        const translateY = currentProgress * 60;
+        imgRef.current.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+        // La imagen se va aclarando levemente al avanzar
+        imgRef.current.style.filter = `grayscale(100%) brightness(${0.75 + currentProgress * 0.35})`;
       }
+
       rafId = requestAnimationFrame(tick);
     };
 
