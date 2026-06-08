@@ -1,0 +1,127 @@
+export function ProductosHero() {
+  return (
+    <section className="bg-gray-950 min-h-screen flex flex-col relative overflow-hidden">
+      {/* Subtle grid texture */}
+      <div
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: `repeating-linear-gradient(0deg, #fff 0, #fff 1px, transparent 0, transparent 60px), repeating-linear-gradient(90deg, #fff 0, #fff 1px, transparent 0, transparent 60px)`,
+        }}
+      />
+
+      <div className="relative z-10 flex-1 flex flex-col">
+        {/* Top breadcrumb */}
+        <div className="border-b border-white/10 px-6 md:px-12 lg:px-20 py-4">
+          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-white/30">
+            <span>Inicio</span>
+            <span>/</span>
+            <span className="text-white/60">Productos</span>
+          </div>
+        </div>
+
+        {/* Main hero grid */}
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 py-16 md:py-24 gap-12 lg:gap-0">
+          {/* Left — copy */}
+          <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
+            <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
+              <span className="text-white/40 text-xs font-mono uppercase tracking-[0.2em]">
+                Centro de soluciones agrícolas
+              </span>
+            </div>
+
+            <h1 className="text-white mb-6 leading-[1.1]">
+              Insumos técnicos para cada etapa de tu cultivo.
+            </h1>
+
+            <p className="text-white/50 text-lg leading-relaxed mb-10 max-w-lg">
+              [Subtítulo — Portafolio completo de fertilizantes, bioestimulantes y compost
+              formulados para maximizar rendimiento, mejorar suelo y sostener la producción
+              ciclo a ciclo.]
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 mb-12">
+              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                Solicitar presupuesto
+              </button>
+              <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
+                Hablar con un asesor
+              </button>
+            </div>
+
+            {/* Quick stats */}
+            <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-10">
+              {[
+                { value: "+60", label: "productos en catálogo" },
+                { value: "6", label: "categorías técnicas" },
+                { value: "SENASA", label: "registros vigentes" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div className="text-2xl font-bold text-white mb-1">{s.value}</div>
+                  <div className="text-white/35 text-xs font-mono leading-tight">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — featured product showcase */}
+          <div className="lg:col-span-6 flex items-center">
+            <div className="w-full">
+              {/* Main product placeholder */}
+              <div className="relative bg-white/5 border border-white/10 rounded-sm aspect-[4/3] flex items-center justify-center mb-4">
+                <div className="text-center px-8">
+                  <div className="w-20 h-24 border-2 border-dashed border-white/20 rounded-sm mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white/20 text-3xl">📦</span>
+                  </div>
+                  <p className="text-white/30 text-xs font-mono uppercase tracking-widest mb-1">
+                    Producto destacado principal
+                  </p>
+                  <p className="text-white/15 text-xs font-mono">imagen 600 × 450px</p>
+                </div>
+                {/* Badge */}
+                <div className="absolute top-4 left-4 bg-white/10 border border-white/20 px-3 py-1 rounded-full">
+                  <span className="text-white/60 text-xs font-mono">⭐ Más vendido</span>
+                </div>
+                {/* Category tag */}
+                <div className="absolute bottom-4 right-4 bg-white text-gray-900 px-3 py-1.5 rounded-full text-xs font-semibold">
+                  Fertilizante
+                </div>
+              </div>
+
+              {/* Thumbnail strip */}
+              <div className="grid grid-cols-4 gap-2">
+                {["Bioestimulante", "Compost", "Enmienda", "Kit"].map((label) => (
+                  <div
+                    key={label}
+                    className="aspect-square bg-white/5 border border-white/10 rounded-sm flex flex-col items-center justify-center p-2 cursor-pointer hover:border-white/30 transition-colors"
+                  >
+                    <div className="w-6 h-7 border border-dashed border-white/20 rounded-sm mb-1 flex items-center justify-center">
+                      <span className="text-white/15 text-[9px] font-mono">IMG</span>
+                    </div>
+                    <span className="text-white/30 text-[9px] font-mono text-center leading-tight">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom scroll hint */}
+        <div className="border-t border-white/10 py-4 px-6 md:px-12 lg:px-20">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex gap-6 overflow-x-auto">
+              {["Fertilizantes", "Bioestimulantes", "Compost", "Enmiendas", "Nutrición vegetal", "Tratamiento de suelos"].map((cat) => (
+                <button key={cat} className="text-white/30 text-xs font-mono whitespace-nowrap hover:text-white/60 transition-colors">
+                  {cat}
+                </button>
+              ))}
+            </div>
+            <div className="hidden md:flex items-center gap-2 text-white/20 text-xs font-mono flex-shrink-0 ml-8">
+              <span>Scroll</span>
+              <span>↓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
