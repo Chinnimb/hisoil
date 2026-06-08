@@ -1,3 +1,9 @@
+const productImgs: Record<string, string> = {
+  "Fertilizante": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=80&q=70&fit=crop",
+  "Bioestimulante": "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=80&q=70&fit=crop",
+  "Compost": "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=80&q=70&fit=crop",
+};
+
 const results = [
   {
     number: "01",
@@ -70,8 +76,12 @@ export function FieldResults() {
                 </div>
                 {/* Product ref */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-12 bg-gray-200 rounded-sm flex items-center justify-center flex-shrink-0">
-                    <span className="text-gray-400 text-[10px] font-mono">IMG</span>
+                  <div className="w-10 h-12 bg-gray-200 rounded-sm overflow-hidden flex-shrink-0">
+                    <img
+                      src={productImgs[r.category] ?? productImgs["Fertilizante"]}
+                      alt={r.product}
+                      className="w-full h-full object-cover grayscale"
+                    />
                   </div>
                   <div>
                     <div className="text-gray-800 text-sm font-semibold">{r.product}</div>
