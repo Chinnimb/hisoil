@@ -82,7 +82,7 @@ export function FeaturedProducts() {
               <div className="aspect-square md:aspect-auto relative min-h-[220px] border-b md:border-b-0 md:border-r border-gray-200 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=500&q=75&fit=crop"
-                  alt={products[0].name}
+                  alt={featured[0].name}
                   className="absolute inset-0 w-full h-full object-cover grayscale"
                 />
                 <div className="absolute top-3 left-3 bg-gray-900 text-white px-2.5 py-1 rounded-full text-xs font-mono">
