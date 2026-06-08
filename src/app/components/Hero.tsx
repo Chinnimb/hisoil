@@ -52,14 +52,28 @@ export function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (imgRef.current) {
-        const y = window.scrollY;
-        imgRef.current.style.transform = `translateY(${y * 0.25}px)`;
-      }
+    let rafId: number;
+    let currentY = 0;
+    let targetY = 0;
+
+    const onScroll = () => {
+      targetY = window.scrollY * 0.45;
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const tick = () => {
+      currentY += (targetY - currentY) * 0.08;
+      if (imgRef.current) {
+        imgRef.current.style.transform = `translateY(${currentY}px) scale(1.08)`;
+      }
+      rafId = requestAnimationFrame(tick);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    rafId = requestAnimationFrame(tick);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
@@ -86,8 +100,8 @@ export function Hero() {
             className="w-full object-cover will-change-transform"
             style={{
               filter: 'grayscale(100%)',
-              height: '130%',
-              top: '-15%',
+              height: '150%',
+              top: '-25%',
               position: 'absolute',
             }}
           />
