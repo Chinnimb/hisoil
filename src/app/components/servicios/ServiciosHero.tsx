@@ -1,17 +1,12 @@
 export function ServiciosHero() {
   return (
     <section className="relative min-h-screen bg-gray-100 flex flex-col">
-      {/* Image placeholder */}
-      <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-24 h-24 border-4 border-dashed border-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-4xl">🏭</span>
-          </div>
-          <p className="text-gray-500 text-sm font-mono uppercase tracking-widest">
-            Imagen — Planta de tratamiento / operación industrial
-          </p>
-          <p className="text-gray-400 text-xs font-mono mt-1">1440 × 900px</p>
-        </div>
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1440&q=80&fit=crop"
+          alt="Planta de compostaje industrial"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Overlay */}

@@ -2,14 +2,14 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const moreProjects = [
-  { id: 1, title: "Inoculación de soja en siembra directa — 8.000 ha", category: "Agricultura", client: "Pool de siembra — Entre Ríos", result: "+12% nodulación efectiva", tone: "bg-gray-700" },
-  { id: 2, title: "Compostaje de biorresiduos municipales", category: "Municipios", client: "Municipio de [Ciudad]", result: "600 tn/mes", tone: "bg-gray-600" },
-  { id: 3, title: "Biorremediación de suelo contaminado con hidrocarburos", category: "Industria", client: "Estación de servicio — Córdoba", result: "Pasivo cerrado 14 meses", tone: "bg-gray-800" },
-  { id: 4, title: "Nutrición vegetal en cultivo de papa bajo riego", category: "Agricultura", client: "Empresa hortícola — Mendoza", result: "+28% calibre comercial", tone: "bg-gray-700" },
-  { id: 5, title: "Tratamiento de lixiviados en relleno sanitario", category: "Municipios", client: "Consorcio regional — Santa Fe", result: "Cumplimiento normativo", tone: "bg-gray-800" },
-  { id: 6, title: "Bioestimulación en citrus — implantación y fructificación", category: "Agricultura", client: "Empresa citrícola — Tucumán", result: "+15% rendimiento", tone: "bg-gray-600" },
-  { id: 7, title: "Gestión de efluentes para feedlot 8.000 cab.", category: "Empresas", client: "Empresa ganadera — Córdoba", result: "0 infracciones en 2 años", tone: "bg-gray-700" },
-  { id: 8, title: "Producción de compost para programa de huerta social", category: "Municipios", client: "Municipio de [Ciudad]", result: "200 familias beneficiadas", tone: "bg-gray-600" },
+  { id: 1, title: "Inoculación de soja en siembra directa — 8.000 ha", category: "Agricultura", client: "Pool de siembra — Entre Ríos", result: "+12% nodulación efectiva", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=75&fit=crop" },
+  { id: 2, title: "Compostaje de biorresiduos municipales", category: "Municipios", client: "Municipio de [Ciudad]", result: "600 tn/mes", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=700&q=75&fit=crop" },
+  { id: 3, title: "Biorremediación de suelo contaminado con hidrocarburos", category: "Industria", client: "Estación de servicio — Córdoba", result: "Pasivo cerrado 14 meses", img: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=700&q=75&fit=crop" },
+  { id: 4, title: "Nutrición vegetal en cultivo de papa bajo riego", category: "Agricultura", client: "Empresa hortícola — Mendoza", result: "+28% calibre comercial", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=75&fit=crop" },
+  { id: 5, title: "Tratamiento de lixiviados en relleno sanitario", category: "Municipios", client: "Consorcio regional — Santa Fe", result: "Cumplimiento normativo", img: "https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?w=700&q=75&fit=crop" },
+  { id: 6, title: "Bioestimulación en citrus — implantación y fructificación", category: "Agricultura", client: "Empresa citrícola — Tucumán", result: "+15% rendimiento", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=700&q=75&fit=crop" },
+  { id: 7, title: "Gestión de efluentes para feedlot 8.000 cab.", category: "Empresas", client: "Empresa ganadera — Córdoba", result: "0 infracciones en 2 años", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=75&fit=crop" },
+  { id: 8, title: "Producción de compost para programa de huerta social", category: "Municipios", client: "Municipio de [Ciudad]", result: "200 familias beneficiadas", img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=700&q=75&fit=crop" },
 ];
 
 const PAGE_SIZE = 4;
@@ -54,17 +54,13 @@ export function MoreProjects() {
           {visible.map((p) => (
             <div
               key={p.id}
-              className={`${p.tone} relative overflow-hidden cursor-pointer group aspect-[16/9]`}
+              className="relative overflow-hidden cursor-pointer group aspect-[16/9] bg-gray-800"
             >
-              {/* Image placeholder fill */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-10 h-10 border border-dashed border-white/15 rounded-sm mx-auto mb-2 flex items-center justify-center">
-                    <span className="text-white/15 text-lg">📷</span>
-                  </div>
-                  <p className="text-white/10 text-[9px] font-mono uppercase tracking-widest">{p.category}</p>
-                </div>
-              </div>
+              <img
+                src={p.img}
+                alt={p.title}
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
 
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent" />

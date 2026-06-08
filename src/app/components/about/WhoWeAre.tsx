@@ -13,16 +13,12 @@ export function WhoWeAre() {
 
           {/* Left — image */}
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-[3/4] bg-gray-200 rounded-sm flex items-center justify-center relative">
-              <div className="text-center px-8">
-                <div className="w-14 h-14 border-2 border-dashed border-gray-400 rounded-sm mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-gray-400 text-2xl">🌿</span>
-                </div>
-                <p className="text-gray-400 text-xs font-mono uppercase tracking-widest">
-                  Imagen — Equipo técnico en campo
-                </p>
-                <p className="text-gray-300 text-xs font-mono mt-1">600 × 800px</p>
-              </div>
+            <div className="aspect-[3/4] rounded-sm overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80&fit=crop"
+                alt="Equipo técnico de Hisoil en campo"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Accent corner */}
             <div className="absolute -bottom-5 -right-5 w-24 h-24 border-r-2 border-b-2 border-gray-300 hidden lg:block" />

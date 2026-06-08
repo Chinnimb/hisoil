@@ -70,14 +70,19 @@ export function TabbedProducts() {
               key={i}
               className="bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer"
             >
-              {/* Image placeholder */}
-              <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center border-b border-gray-200 relative group-hover:bg-gray-150 transition-colors">
-                <div className="text-center">
-                  <div className="w-12 h-14 border border-dashed border-gray-300 rounded-sm mx-auto mb-1 flex items-center justify-center">
-                    <span className="text-gray-300 text-xl">📦</span>
-                  </div>
-                  <p className="text-gray-300 text-[10px] font-mono">Imagen {String(i + 1).padStart(2, "0")}</p>
-                </div>
+              <div className="aspect-[4/3] border-b border-gray-200 relative overflow-hidden">
+                <img
+                  src={[
+                    "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1492496913980-501348b61469?w=400&q=70&fit=crop",
+                  ][i % 6]}
+                  alt={p.name}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
                 <span className="absolute top-3 right-3 bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
                   {p.category}
                 </span>

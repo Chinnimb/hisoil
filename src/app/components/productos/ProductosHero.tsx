@@ -66,22 +66,18 @@ export function ProductosHero() {
           {/* Right — featured product showcase */}
           <div className="lg:col-span-6 flex items-center">
             <div className="w-full">
-              {/* Main product placeholder */}
-              <div className="relative bg-white/5 border border-white/10 rounded-sm aspect-[4/3] flex items-center justify-center mb-4">
-                <div className="text-center px-8">
-                  <div className="w-20 h-24 border-2 border-dashed border-white/20 rounded-sm mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white/20 text-3xl">📦</span>
-                  </div>
-                  <p className="text-white/30 text-xs font-mono uppercase tracking-widest mb-1">
-                    Producto destacado principal
-                  </p>
-                  <p className="text-white/15 text-xs font-mono">imagen 600 × 450px</p>
-                </div>
-                {/* Badge */}
+              {/* Main product image */}
+              <div className="relative rounded-sm aspect-[4/3] overflow-hidden mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=600&q=80&fit=crop"
+                  alt="Compost Premium — producto destacado"
+                  className="w-full h-full object-cover"
+                  style={{ filter: 'grayscale(20%)' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 <div className="absolute top-4 left-4 bg-white/10 border border-white/20 px-3 py-1 rounded-full">
-                  <span className="text-white/60 text-xs font-mono">⭐ Más vendido</span>
+                  <span className="text-white/80 text-xs font-mono">⭐ Más vendido</span>
                 </div>
-                {/* Category tag */}
                 <div className="absolute bottom-4 right-4 bg-white text-gray-900 px-3 py-1.5 rounded-full text-xs font-semibold">
                   Fertilizante
                 </div>
@@ -89,15 +85,17 @@ export function ProductosHero() {
 
               {/* Thumbnail strip */}
               <div className="grid grid-cols-4 gap-2">
-                {["Bioestimulante", "Compost", "Enmienda", "Kit"].map((label) => (
-                  <div
-                    key={label}
-                    className="aspect-square bg-white/5 border border-white/10 rounded-sm flex flex-col items-center justify-center p-2 cursor-pointer hover:border-white/30 transition-colors"
-                  >
-                    <div className="w-6 h-7 border border-dashed border-white/20 rounded-sm mb-1 flex items-center justify-center">
-                      <span className="text-white/15 text-[9px] font-mono">IMG</span>
+                {[
+                  { label: "Bioestimulante", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=150&q=70&fit=crop" },
+                  { label: "Compost", img: "https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=150&q=70&fit=crop" },
+                  { label: "Enmienda", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=150&q=70&fit=crop" },
+                  { label: "Kit", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=150&q=70&fit=crop" },
+                ].map(({ label, img }) => (
+                  <div key={label} className="aspect-square rounded-sm overflow-hidden border border-white/10 cursor-pointer hover:border-white/30 transition-colors relative">
+                    <img src={img} alt={label} className="w-full h-full object-cover grayscale" />
+                    <div className="absolute bottom-0 inset-x-0 bg-black/50 py-1 text-center">
+                      <span className="text-white/60 text-[9px] font-mono">{label}</span>
                     </div>
-                    <span className="text-white/30 text-[9px] font-mono text-center leading-tight">{label}</span>
                   </div>
                 ))}
               </div>

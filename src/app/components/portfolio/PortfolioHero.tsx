@@ -13,14 +13,11 @@ export function PortfolioHero() {
 
         {/* Hero image — large left */}
         <div className="col-span-12 md:col-span-7 row-span-2 bg-gray-800 relative overflow-hidden group cursor-pointer">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-20 h-20 border-2 border-dashed border-white/20 rounded-sm mx-auto mb-3 flex items-center justify-center">
-                <span className="text-white/20 text-4xl">📷</span>
-              </div>
-              <p className="text-white/20 text-xs font-mono uppercase tracking-widest">Imagen principal — 900×600px</p>
-            </div>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&fit=crop"
+            alt="Recuperación de suelos degradados en zona pampeana"
+            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent" />
           {/* Content */}
@@ -40,14 +37,11 @@ export function PortfolioHero() {
 
         {/* Top-right image */}
         <div className="col-span-12 md:col-span-5 bg-gray-700 relative overflow-hidden group cursor-pointer">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-12 h-12 border border-dashed border-white/20 rounded-sm mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white/20 text-xl">📷</span>
-              </div>
-              <p className="text-white/15 text-[10px] font-mono">Imagen proyecto</p>
-            </div>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=75&fit=crop"
+            alt="Planta de compostaje Frigorífico del Norte"
+            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-5">
             <span className="bg-white/10 border border-white/20 text-white/50 text-[10px] font-mono px-2.5 py-1 rounded-full">Compostaje</span>
@@ -59,16 +53,15 @@ export function PortfolioHero() {
         {/* Bottom-right — two micro images */}
         <div className="col-span-12 md:col-span-5 grid grid-cols-2 gap-1.5">
           {[
-            { label: "Tratamiento de residuos", client: "Empresa textil", result: "100% norma" },
-            { label: "Industria", client: "Planta láctea", result: "−85% carga" },
+            { label: "Tratamiento de residuos", client: "Empresa textil", result: "100% norma", img: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=300&q=70&fit=crop" },
+            { label: "Industria", client: "Planta láctea", result: "−85% carga", img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop" },
           ].map((item) => (
             <div key={item.label} className="bg-gray-700 relative overflow-hidden cursor-pointer group">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-3">
-                  <span className="text-white/15 text-2xl">📷</span>
-                  <p className="text-white/10 text-[9px] font-mono mt-1">Imagen</p>
-                </div>
-              </div>
+              <img
+                src={item.img}
+                alt={item.label}
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3.5">
                 <p className="text-white/50 text-[10px] font-mono mb-1">{item.label}</p>

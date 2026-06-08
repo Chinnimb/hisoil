@@ -11,16 +11,12 @@ export function ServiceOverview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Left — image */}
           <div className="relative">
-            <div className="aspect-[4/3] bg-gray-200 rounded-sm flex items-center justify-center">
-              <div className="text-center px-8">
-                <div className="w-14 h-14 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl">♻️</span>
-                </div>
-                <p className="text-gray-400 text-xs font-mono uppercase tracking-widest">
-                  Imagen — Proceso de tratamiento de residuos
-                </p>
-                <p className="text-gray-300 text-xs font-mono mt-1">680 × 510px</p>
-              </div>
+            <div className="aspect-[4/3] rounded-sm overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=680&q=80&fit=crop"
+                alt="Proceso de tratamiento de residuos orgánicos"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Accent */}
             <div className="absolute -bottom-4 -left-4 w-20 h-20 border-l-2 border-b-2 border-gray-200" />

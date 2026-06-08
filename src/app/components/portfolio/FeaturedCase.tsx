@@ -40,16 +40,15 @@ export function FeaturedCase() {
         {/* Main image + problem */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
           {/* Large image */}
-          <div className="lg:col-span-7 aspect-[16/10] bg-white/5 border border-white/10 rounded-sm flex items-center justify-center relative">
-            <div className="text-center px-8">
-              <div className="w-16 h-16 border-2 border-dashed border-white/20 rounded-sm mx-auto mb-3 flex items-center justify-center">
-                <span className="text-white/20 text-3xl">📷</span>
-              </div>
-              <p className="text-white/25 text-xs font-mono uppercase tracking-widest">Imagen principal del proyecto</p>
-              <p className="text-white/15 text-xs font-mono mt-1">900 × 562px</p>
-            </div>
+          <div className="lg:col-span-7 aspect-[16/10] rounded-sm relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=900&q=80&fit=crop"
+              alt="Planta de tratamiento de efluentes frigorífico"
+              className="w-full h-full object-cover grayscale"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             <div className="absolute bottom-4 left-4 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full">
-              <span className="text-white/50 text-xs font-mono">Vista de planta — instalación</span>
+              <span className="text-white/70 text-xs font-mono">Vista de planta — instalación</span>
             </div>
           </div>
 
