@@ -6,7 +6,11 @@ const needs = [
     label: "Mejorar crecimiento",
     icon: "🌱",
     description: "Estimular el desarrollo vegetativo, raíces y biomasa foliar desde las primeras etapas del cultivo.",
-    products: ["Bioestimulante Radicular Plus", "Aminoácidos Concentrados", "Activador Foliar Pro"],
+    products: [
+      { name: "Bioestimulante Radicular Plus", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=300&q=70&fit=crop" },
+      { name: "Aminoácidos Concentrados", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=300&q=70&fit=crop" },
+      { name: "Activador Foliar Pro", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=70&fit=crop" },
+    ],
     productCount: 8,
   },
   {
@@ -14,7 +18,11 @@ const needs = [
     label: "Aumentar rendimiento",
     icon: "📈",
     description: "Maximizar llenado de grano, cantidad de frutos y toneladas por hectárea en cereales y oleaginosas.",
-    products: ["Fertilizante NPK Balance", "Potasio Activado", "Zinc Quelado"],
+    products: [
+      { name: "Fertilizante NPK Balance", img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop" },
+      { name: "Potasio Activado", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop" },
+      { name: "Zinc Quelado", img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=300&q=70&fit=crop" },
+    ],
     productCount: 12,
   },
   {
@@ -22,7 +30,11 @@ const needs = [
     label: "Mejorar suelo",
     icon: "🪱",
     description: "Recuperar estructura, aumentar actividad biológica y mejorar capacidad de retención hídrica del suelo.",
-    products: ["Compost Premium A", "Inoculante Microbiano", "Humus de Lombriz"],
+    products: [
+      { name: "Compost Premium A", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop" },
+      { name: "Inoculante Microbiano", img: "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=300&q=70&fit=crop" },
+      { name: "Humus de Lombriz", img: "https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=300&q=70&fit=crop" },
+    ],
     productCount: 9,
   },
   {
@@ -30,7 +42,11 @@ const needs = [
     label: "Recuperar nutrientes",
     icon: "🔄",
     description: "Reponer macronutrientes y microelementos perdidos por extracción del cultivo o lixiviación del suelo.",
-    products: ["Enmienda Calcárea", "Azufre Granulado", "Microelemento Mix"],
+    products: [
+      { name: "Enmienda Calcárea", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=70&fit=crop" },
+      { name: "Azufre Granulado", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=300&q=70&fit=crop" },
+      { name: "Microelemento Mix", img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=300&q=70&fit=crop" },
+    ],
     productCount: 7,
   },
   {
@@ -38,7 +54,11 @@ const needs = [
     label: "Compostaje",
     icon: "♻️",
     description: "Transformar residuos orgánicos propios en enmienda de calidad para reducir costos y cerrar el ciclo.",
-    products: ["Acelerador Compost", "Inoculante Compostador", "Correctivo pH Orgánico"],
+    products: [
+      { name: "Acelerador Compost", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
+      { name: "Inoculante Compostador", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop" },
+      { name: "Correctivo pH Orgánico", img: "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=300&q=70&fit=crop" },
+    ],
     productCount: 5,
   },
   {
@@ -46,7 +66,11 @@ const needs = [
     label: "Agricultura sustentable",
     icon: "🌍",
     description: "Reducir la dependencia de agroquímicos convencionales con soluciones biológicas certificadas.",
-    products: ["Biofungicida Bacillus", "Biofertilizante Rizobio", "Azospirillum Líquido"],
+    products: [
+      { name: "Biofungicida Bacillus", img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop" },
+      { name: "Biofertilizante Rizobio", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop" },
+      { name: "Azospirillum Líquido", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=300&q=70&fit=crop" },
+    ],
     productCount: 10,
   },
 ];
@@ -122,21 +146,23 @@ export function NeedSelector() {
                   Productos recomendados — {active.productCount} resultados
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  {active.products.map((p, i) => (
+                  {active.products.map((p) => (
                     <div
-                      key={p}
-                      className="bg-white/5 border border-white/10 rounded-sm p-5 hover:border-white/30 transition-colors cursor-pointer group"
+                      key={p.name}
+                      className="bg-white/5 border border-white/10 rounded-sm overflow-hidden hover:border-white/30 transition-colors cursor-pointer group"
                     >
-                      <div className="aspect-square bg-white/5 rounded-sm flex items-center justify-center mb-4 border border-white/10">
-                        <div className="text-center">
-                          <div className="w-8 h-9 border border-dashed border-white/15 rounded-sm mx-auto mb-1 flex items-center justify-center">
-                            <span className="text-white/15 text-[9px] font-mono">{String(i + 1).padStart(2, "0")}</span>
-                          </div>
-                          <span className="text-white/15 text-[9px] font-mono">Producto</span>
-                        </div>
+                      <div className="aspect-square relative overflow-hidden">
+                        <img
+                          src={p.img}
+                          alt={p.name}
+                          className="w-full h-full object-cover grayscale"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>
-                      <div className="text-white/70 text-sm font-medium leading-tight mb-2 group-hover:text-white transition-colors">{p}</div>
-                      <div className="text-white/25 text-xs font-mono">Ver detalle →</div>
+                      <div className="p-4">
+                        <div className="text-white/70 text-sm font-medium leading-tight mb-2 group-hover:text-white transition-colors">{p.name}</div>
+                        <div className="text-white/25 text-xs font-mono">Ver detalle →</div>
+                      </div>
                     </div>
                   ))}
                 </div>
