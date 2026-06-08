@@ -3,13 +3,11 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router';
 
 const navItems = [
-  { label: 'Inicio', to: '/' },
-  { label: 'Nosotros', to: '/nosotros' },
-  { label: 'Servicios', to: '/servicios' },
   { label: 'Productos', to: '/productos' },
+  { label: 'Servicios', to: '/servicios' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Membresía', to: '/membresia' },
-  { label: 'Contacto', to: '/contacto' },
+  { label: 'Nosotros', to: '/nosotros' },
 ];
 
 export function Header() {
@@ -44,11 +42,21 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <button className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg">
-              Solicitar Presupuesto
-            </button>
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              to="/contacto"
+              className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all text-sm ${
+                location.pathname === '/contacto' ? 'border-gray-900 text-gray-900' : ''
+              }`}
+            >
+              Contacto
+            </Link>
+            <Link to="/contacto">
+              <button className="px-6 py-2.5 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg text-sm">
+                Solicitar Presupuesto
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,9 +87,20 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <button className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full text-center">
+              <Link
+                to="/contacto"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full text-center"
+              >
+                Contacto
+              </Link>
+              <Link
+                to="/contacto"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full text-center"
+              >
                 Solicitar Presupuesto
-              </button>
+              </Link>
             </nav>
           </div>
         )}
