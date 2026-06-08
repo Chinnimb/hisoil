@@ -29,7 +29,7 @@ const categories = [
     count: 7,
     description: "[Correctores de pH, calcáreo agrícola y yeso agrícola. Ajuste y estabilización de condiciones fisicoquímicas del suelo a largo plazo.]",
     tag: "Corrección de suelo",
-    img: "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=640&q=75&fit=crop",
+    img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=640&q=75&fit=crop",
   },
   {
     id: "nutricion",
