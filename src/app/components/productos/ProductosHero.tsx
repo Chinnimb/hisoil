@@ -71,7 +71,7 @@ export function ProductosHero() {
                 <img
                   src="https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=600&q=80&fit=crop"
                   alt="Compost Premium — producto destacado"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                   style={{ filter: 'grayscale(20%)' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

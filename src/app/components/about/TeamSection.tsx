@@ -42,7 +42,7 @@ export function TeamSection() {
                 <img
                   src={member.photo}
                   alt={member.role}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top grayscale"
                   style={{ filter: 'grayscale(100%)' }}
                 />
 
