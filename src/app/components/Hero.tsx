@@ -106,7 +106,7 @@ export function Hero() {
             ref={imgRef}
             src={IMG_URL}
             alt="Campo agrícola — filas de cultivo"
-            className="w-full object-cover will-change-transform"
+            className="w-full object-cover will-change-transform grayscale"
             style={{
               filter: 'grayscale(100%)',
               height: '150%',

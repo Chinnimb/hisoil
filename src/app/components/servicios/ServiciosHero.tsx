@@ -5,7 +5,7 @@ export function ServiciosHero() {
         <img
           src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1440&q=80&fit=crop"
           alt="Planta de compostaje industrial"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover grayscale"
         />
       </div>
 

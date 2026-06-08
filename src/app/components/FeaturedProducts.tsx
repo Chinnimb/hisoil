@@ -75,7 +75,7 @@ export function FeaturedProducts() {
               <img
                 src="https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2lsJTIwY29tcG9zdCUyMG9yZ2FuaWMlMjBtYXR0ZXIlMjBjbG9zZSUyMHVwJTIwdGV4dHVyZXxlbnwxfHx8fDE3ODA5MzU0MTZ8MA&ixlib=rb-4.1.0&q=80&w=600"
                 alt="Compost Premium — enmienda orgánica"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover grayscale"
                 style={{ filter: 'grayscale(100%)' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 to-transparent" />
@@ -127,7 +127,7 @@ export function FeaturedProducts() {
                   <img
                     src={thumbImgs[idx]}
                     alt={p.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale"
                     style={{ filter: 'grayscale(100%)' }}
                   />
                   <div className="absolute -top-2 -right-2">

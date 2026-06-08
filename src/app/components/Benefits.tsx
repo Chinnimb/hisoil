@@ -60,7 +60,7 @@ export function Benefits() {
                 <img
                   src={p.img}
                   alt={p.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                   style={{ filter: 'grayscale(100%)' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-950/90" />
