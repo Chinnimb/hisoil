@@ -79,13 +79,12 @@ export function FeaturedProducts() {
           <div className="lg:col-span-2 bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-gray-400 hover:shadow-lg transition-all cursor-pointer">
             <div className="grid grid-cols-1 md:grid-cols-2 h-full">
               {/* Image */}
-              <div className="aspect-square md:aspect-auto bg-gray-100 flex items-center justify-center relative min-h-[220px] border-b md:border-b-0 md:border-r border-gray-200">
-                <div className="text-center">
-                  <div className="w-20 h-24 border-2 border-dashed border-gray-300 rounded-sm mx-auto mb-2 flex items-center justify-center">
-                    <span className="text-gray-300 text-3xl">📦</span>
-                  </div>
-                  <p className="text-gray-300 text-xs font-mono">Imagen producto 01</p>
-                </div>
+              <div className="aspect-square md:aspect-auto relative min-h-[220px] border-b md:border-b-0 md:border-r border-gray-200 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=500&q=75&fit=crop"
+                  alt={products[0].name}
+                  className="absolute inset-0 w-full h-full object-cover grayscale"
+                />
                 <div className="absolute top-3 left-3 bg-gray-900 text-white px-2.5 py-1 rounded-full text-xs font-mono">
                   {featured[0].badge}
                 </div>
