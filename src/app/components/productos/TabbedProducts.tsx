@@ -76,7 +76,7 @@ export function TabbedProducts() {
                     "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=70&fit=crop",
                     "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=400&q=70&fit=crop",
                     "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=400&q=70&fit=crop",
-                    "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&q=70&fit=crop",
                     "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=70&fit=crop",
                     "https://images.unsplash.com/photo-1492496913980-501348b61469?w=400&q=70&fit=crop",
                   ][i % 6]}

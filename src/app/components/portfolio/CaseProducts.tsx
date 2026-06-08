@@ -50,7 +50,7 @@ export function CaseProducts() {
                   src={[
                     "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&q=70&fit=crop",
                     "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=400&q=70&fit=crop",
-                    "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=400&q=70&fit=crop",
+                    "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&q=70&fit=crop",
                   ][i % 3]}
                   alt={p.name}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"

@@ -32,7 +32,7 @@ const needs = [
     description: "Recuperar estructura, aumentar actividad biológica y mejorar capacidad de retención hídrica del suelo.",
     products: [
       { name: "Compost Premium A", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop" },
-      { name: "Inoculante Microbiano", img: "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=300&q=70&fit=crop" },
+      { name: "Inoculante Microbiano", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
       { name: "Humus de Lombriz", img: "https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=300&q=70&fit=crop" },
     ],
     productCount: 9,
@@ -57,7 +57,7 @@ const needs = [
     products: [
       { name: "Acelerador Compost", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
       { name: "Inoculante Compostador", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop" },
-      { name: "Correctivo pH Orgánico", img: "https://images.unsplash.com/photo-1650138688049-a0ee1c15aabb?w=300&q=70&fit=crop" },
+      { name: "Correctivo pH Orgánico", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
     ],
     productCount: 5,
   },
