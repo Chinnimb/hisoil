@@ -47,19 +47,15 @@ export function WhatDoYouNeed() {
   return (
     <section className="py-24 md:py-32 px-6 bg-white">
       <div className="w-full">
-        {/* Header — aligned to mosaic grid below */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 mb-12 items-end">
-          <div className="lg:col-span-5">
-            <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
-            </div>
-            <h2 className="text-gray-900">Soluciones para cada tipo de operación.</h2>
+        {/* Header — title + subtitle left-aligned */}
+        <div className="mb-12 max-w-3xl">
+          <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
+            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
           </div>
-          <div className="lg:col-span-7 lg:pl-6">
-            <p className="text-gray-500 text-sm leading-relaxed max-w-xl">
-              Desde el productor individual hasta la industria agroalimentaria — diseñamos una solución a medida para cada escala y necesidad.
-            </p>
-          </div>
+          <h2 className="text-gray-900 mb-6">Soluciones para cada tipo de operación.</h2>
+          <p className="text-gray-500 text-sm leading-relaxed">
+            Desde el productor individual hasta la industria agroalimentaria — diseñamos una solución a medida para cada escala y necesidad.
+          </p>
         </div>
 
         {/* Mosaic grid */}
