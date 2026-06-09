@@ -23,7 +23,7 @@ export function ProductSpotlight() {
   const [activeTab, setActiveTab] = useState<"specs" | "benefits">("specs");
 
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-white">
+    <section className="py-24 md:py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section tag */}
         <div className="inline-block border border-gray-300 px-3 py-1 mb-12">

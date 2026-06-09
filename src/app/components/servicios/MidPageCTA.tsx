@@ -1,6 +1,6 @@
 export function MidPageCTA() {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-20 bg-gray-900">
+    <section className="py-20 px-6 bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left */}

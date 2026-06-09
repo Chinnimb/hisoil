@@ -9,7 +9,7 @@ const specs = [
 
 export function ProductDetailPreview() {
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-24 md:py-32 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="inline-block border border-gray-300 px-3 py-1 mb-10">
           <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">08 — Producto destacado</span>

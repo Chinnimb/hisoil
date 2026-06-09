@@ -25,7 +25,7 @@ const pillars = [
 
 export function Benefits() {
   return (
-    <section className="bg-gray-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-gray-950 py-24 md:py-32 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16">

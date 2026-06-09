@@ -35,7 +35,7 @@ const audiences = [
 
 export function WhoIsItFor() {
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-24 md:py-32 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
