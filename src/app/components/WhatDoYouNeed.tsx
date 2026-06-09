@@ -47,22 +47,26 @@ export function WhatDoYouNeed() {
   return (
     <section className="py-24 md:py-32 px-6 bg-white">
       <div className="w-full">
-        {/* Header — title + subtitle left-aligned */}
-        <div className="mb-12 max-w-3xl">
-          <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
+        {/* Header — title left, subtitle right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-end">
+          <div>
+            <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
+              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
+            </div>
+            <h2 className="text-gray-900">Soluciones para cada tipo de operación.</h2>
           </div>
-          <h2 className="text-gray-900 mb-6">Soluciones para cada tipo de operación.</h2>
-          <p className="text-gray-500 text-sm leading-relaxed">
-            Desde el productor individual hasta la industria agroalimentaria — diseñamos una solución a medida para cada escala y necesidad.
-          </p>
+          <div className="lg:flex lg:justify-end">
+            <p className="text-gray-500 text-sm leading-relaxed lg:text-right max-w-md">
+              Desde el productor individual hasta la industria agroalimentaria — diseñamos una solución a medida para cada escala y necesidad.
+            </p>
+          </div>
         </div>
 
         {/* Mosaic grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
 
           {/* Large tile — col-span-5, 2 rows */}
-          <Link to={sectors[0].to} className="lg:col-span-5 lg:row-span-2 block group">
+          <Link to={sectors[0].to} className="lg:col-span-6 lg:row-span-2 block group">
             <div className="relative h-72 lg:h-full min-h-[500px] overflow-hidden rounded-sm">
               <img
                 src={sectors[0].img}
