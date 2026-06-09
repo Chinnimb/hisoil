@@ -19,9 +19,9 @@ export function Header() {
   return (
     <header className="sticky top-0 bg-white border-b border-gray-200 z-50 shadow-sm">
       <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20">
-        <div className="relative flex justify-between items-center gap-6 h-20">
+        <div className="flex lg:grid lg:grid-cols-[1fr_auto_1fr] justify-between items-center gap-4 lg:gap-6 h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center relative z-10">
+          <Link to="/" className="flex items-center lg:justify-self-start">
             <img
               src="/hisoil-logo.png"
               alt="HISOIL"
@@ -29,13 +29,13 @@ export function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation — absolutely centered in container */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 -translate-x-1/2 pointer-events-auto">
+          {/* Desktop Navigation — centered column of the grid */}
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 justify-self-center">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.to}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-colors whitespace-nowrap ${
                   location.pathname === item.to
                     ? 'text-gray-900 border-b-2 border-gray-900 pb-0.5'
                     : 'text-gray-600 hover:text-gray-900'
@@ -47,7 +47,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center justify-end gap-3 relative z-10">
+          <div className="hidden lg:flex items-center justify-end gap-3 lg:justify-self-end">
             <Link
               to="/contacto"
               className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all text-sm ${
