@@ -22,9 +22,11 @@ export function Header() {
         <div className="relative flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg">
-              <span className="text-xl font-bold text-white">HISOIL</span>
-            </div>
+            <img
+              src="/hisoil-logo.png"
+              alt="HISOIL"
+              className="h-10 w-auto grayscale"
+            />
           </Link>
 
           {/* Desktop Navigation — absolutely centered */}
