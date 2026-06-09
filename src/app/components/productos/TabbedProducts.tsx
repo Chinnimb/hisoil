@@ -34,7 +34,7 @@ export function TabbedProducts() {
   const products = productsByTab[activeTab];
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-10 bg-gray-50">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header + tabs */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
