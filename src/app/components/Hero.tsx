@@ -173,14 +173,14 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={open}
-                  className="bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99]"
+                  className="bg-white text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99] min-w-[240px] flex items-center justify-center"
                   style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
                 >
                   Solicitar presupuesto
                 </button>
                 <Link to="/productos">
                   <button
-                    className="border border-white/35 bg-white/8 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/15 hover:border-white/50 transition-all"
+                    className="w-full border border-white/35 bg-white/8 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/15 hover:border-white/50 transition-all min-w-[240px] flex items-center justify-center"
                     style={{ padding: '1.05rem 2.25rem', fontSize: '1rem' }}
                   >
                     Ver productos →
