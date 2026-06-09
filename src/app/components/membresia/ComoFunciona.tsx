@@ -27,7 +27,7 @@ const steps = [
 
 export function ComoFunciona() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-10 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16">

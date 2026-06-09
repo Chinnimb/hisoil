@@ -21,7 +21,7 @@ export function FormularioPresupuesto() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-white" id="presupuesto">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-10 bg-white" id="presupuesto">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 

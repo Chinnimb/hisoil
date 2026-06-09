@@ -121,7 +121,7 @@ export function Hero() {
         </div>
 
         {/* Breadcrumb strip */}
-        <div className="relative z-10 border-b border-white/10 px-6 md:px-8 py-4">
+        <div className="relative z-10 border-b border-white/10 px-6 md:px-10 lg:px-10 py-4">
           <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs font-mono text-white/25">
               <span>Hisoil</span><span>/</span>
@@ -135,7 +135,7 @@ export function Hero() {
         </div>
 
         {/* Main content */}
-        <div className="relative z-10 flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-6 md:px-8 pt-10 pb-10 md:pt-14 md:pb-14">
+        <div className="relative z-10 flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-6 md:px-10 lg:px-10 pt-10 pb-10 md:pt-14 md:pb-14">
           <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
 
             {/* Left — copy + CTAs */}
