@@ -12,7 +12,7 @@ export function ProductosHero() {
       <div className="relative z-10 flex-1 flex flex-col">
         {/* Top breadcrumb */}
         <div className="border-b border-white/10 px-6 py-4">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-white/30">
+          <div className="w-full flex items-center gap-2 text-xs font-mono text-white/30">
             <span>Inicio</span>
             <span>/</span>
             <span className="text-white/60">Productos</span>
@@ -20,7 +20,7 @@ export function ProductosHero() {
         </div>
 
         {/* Main hero grid */}
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-7xl mx-auto w-full px-6 py-16 md:py-24 gap-12 lg:gap-0">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 w-full w-full px-6 py-16 md:py-24 gap-12 lg:gap-0">
           {/* Left — copy */}
           <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
             <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
@@ -105,7 +105,7 @@ export function ProductosHero() {
 
         {/* Bottom scroll hint */}
         <div className="border-t border-white/10 py-4 px-6">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="w-full flex items-center justify-between">
             <div className="flex gap-6 overflow-x-auto">
               {["Fertilizantes", "Bioestimulantes", "Compost", "Enmiendas", "Nutrición vegetal", "Tratamiento de suelos"].map((cat) => (
                 <button key={cat} className="text-white/30 text-xs font-mono whitespace-nowrap hover:text-white/60 transition-colors">

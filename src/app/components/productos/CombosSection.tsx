@@ -60,7 +60,7 @@ const combos = [
 export function CombosSection() {
   return (
     <section className="py-24 md:py-32 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">

@@ -13,7 +13,7 @@ const certs = ["SENASA", "INTA", "IRAM", "Org. Reg."];
 export function AboutHisoil() {
   return (
     <section className="py-24 md:py-32 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
           {/* Left — copy */}

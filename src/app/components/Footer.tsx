@@ -14,7 +14,7 @@ export function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-6">

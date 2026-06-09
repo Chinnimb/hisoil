@@ -11,13 +11,13 @@ export function MembresiaHero() {
     <section className="bg-gray-950 min-h-screen flex flex-col">
       {/* Top label */}
       <div className="border-b border-white/10 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-white/30">
+        <div className="w-full flex items-center gap-2 text-xs font-mono text-white/30">
           <span>Inicio</span><span>/</span>
           <span className="text-white/60">Membresía</span>
         </div>
       </div>
 
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-7xl mx-auto w-full px-6 py-16 md:py-24 gap-12 items-center">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 w-full w-full px-6 py-16 md:py-24 gap-12 items-center">
 
         {/* Left — copy */}
         <div className="lg:col-span-6 flex flex-col">

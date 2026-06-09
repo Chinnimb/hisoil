@@ -38,7 +38,7 @@ const metrics = [
 export function CircularEconomy() {
   return (
     <section className="py-24 md:py-32 bg-gray-950">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full px-6">
 
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">

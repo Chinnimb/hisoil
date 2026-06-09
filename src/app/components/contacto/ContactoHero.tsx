@@ -11,7 +11,7 @@ export function ContactoHero() {
         />
         <div className="absolute inset-0 bg-gray-950/85" />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block border border-white/20 px-3 py-1.5 mb-8">
             <span className="text-white/40 text-xs font-mono uppercase tracking-[0.2em]">Contacto</span>

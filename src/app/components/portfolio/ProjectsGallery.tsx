@@ -35,7 +35,7 @@ export function ProjectsGallery() {
 
   return (
     <section className="py-20 md:py-28 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* Header + filters inline */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
           <div>

@@ -40,7 +40,7 @@ export function ServiciosHero() {
 
       {/* Trust indicators */}
       <div className="relative z-10 bg-gray-900/80 border-t border-white/10 py-5 px-6">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-6">
+        <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6">
           {[
             "ISO 14001 certificado",
             "+2.400 proyectos ejecutados",
