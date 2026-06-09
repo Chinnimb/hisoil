@@ -74,7 +74,7 @@ export function PortfolioHero() {
       </div>
 
       {/* Bottom bar — headline + CTAs + stats */}
-      <div className="border-t border-white/10 px-6 md:px-12 lg:px-20 py-8 md:py-10">
+      <div className="border-t border-white/10 px-6 py-8 md:py-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left — headline */}
           <div className="lg:col-span-5">

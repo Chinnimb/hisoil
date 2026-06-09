@@ -13,7 +13,7 @@ export function ServiciosHero() {
       <div className="absolute inset-0 bg-gray-900/65" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 md:px-12 lg:px-20 text-center py-32 pt-44">
+      <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
         <div className="inline-block border border-white/30 px-4 py-1.5 mb-8">
           <span className="text-white/60 text-xs font-mono uppercase tracking-[0.2em]">Servicios</span>
         </div>
@@ -39,7 +39,7 @@ export function ServiciosHero() {
       </div>
 
       {/* Trust indicators */}
-      <div className="relative z-10 bg-gray-900/80 border-t border-white/10 py-5 px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 bg-gray-900/80 border-t border-white/10 py-5 px-6">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-6">
           {[
             "ISO 14001 certificado",

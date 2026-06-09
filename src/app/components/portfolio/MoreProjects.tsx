@@ -20,7 +20,7 @@ export function MoreProjects() {
   const visible = moreProjects.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
   return (
-    <section className="py-20 md:py-28 px-6 md:px-12 lg:px-20 bg-gray-950">
+    <section className="py-20 md:py-28 px-6 bg-gray-950">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

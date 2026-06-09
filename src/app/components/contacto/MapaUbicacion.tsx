@@ -1,7 +1,7 @@
 export function MapaUbicacion() {
   return (
     <section className="py-0 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-0 pb-0">
+      <div className="max-w-7xl mx-auto px-6 pt-0 pb-0">
         {/* Section label */}
         <div className="py-10 flex items-center justify-between">
           <div className="flex items-center gap-4">
