@@ -1,7 +1,7 @@
 export function MidPageCTA() {
   return (
     <section className="py-20 px-6 bg-gray-900">
-      <div className="w-full">
+      <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left */}
           <div className="lg:col-span-7">

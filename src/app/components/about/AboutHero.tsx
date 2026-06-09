@@ -37,7 +37,7 @@ export function AboutHero() {
 
   return (
     <section className="bg-white min-h-screen flex flex-col border-b border-gray-200">
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 w-full w-full px-6 pt-16 md:pt-24 gap-0">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 pt-16 md:pt-24 gap-0">
 
         {/* Left — copy */}
         <div className="lg:col-span-6 flex flex-col justify-center pb-16 lg:pb-24 lg:pr-16 lg:border-r border-gray-200">
@@ -79,7 +79,7 @@ export function AboutHero() {
 
         {/* Right — image */}
         <div className="lg:col-span-6 flex items-center pb-16 lg:pb-24 lg:pl-16">
-          <div className="w-full">
+          <div className="max-w-[1600px] mx-auto w-full">
             {/* Fadeshow — main image */}
             <div className="aspect-[4/3] bg-gray-900 rounded-sm relative overflow-hidden mb-3">
               <img

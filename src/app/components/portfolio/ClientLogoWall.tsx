@@ -16,7 +16,7 @@ const clients = [
 export function ClientLogoWall() {
   return (
     <section className="py-20 md:py-24 px-6 bg-gray-50 border-b border-gray-200">
-      <div className="w-full">
+      <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-5">

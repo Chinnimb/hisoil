@@ -17,7 +17,7 @@ export function MembresiaHero() {
         </div>
       </div>
 
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 w-full w-full px-6 py-16 md:py-24 gap-12 items-center">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 py-16 md:py-24 gap-12 items-center">
 
         {/* Left — copy */}
         <div className="lg:col-span-6 flex flex-col">

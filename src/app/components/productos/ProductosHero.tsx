@@ -20,7 +20,7 @@ export function ProductosHero() {
         </div>
 
         {/* Main hero grid */}
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 w-full w-full px-6 py-16 md:py-24 gap-12 lg:gap-0">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 py-16 md:py-24 gap-12 lg:gap-0">
           {/* Left — copy */}
           <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
             <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
@@ -65,7 +65,7 @@ export function ProductosHero() {
 
           {/* Right — featured product showcase */}
           <div className="lg:col-span-6 flex items-center">
-            <div className="w-full">
+            <div className="max-w-[1600px] mx-auto w-full">
               {/* Main product image */}
               <div className="relative rounded-sm aspect-[4/3] overflow-hidden mb-4">
                 <img

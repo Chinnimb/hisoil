@@ -1,7 +1,7 @@
 export function PortfolioFinalCTA() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-white">
-      <div className="w-full">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-white">
+      <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden">
           {/* Left — dark */}
           <div className="lg:col-span-7 bg-gray-950 p-12 md:p-16 relative overflow-hidden">

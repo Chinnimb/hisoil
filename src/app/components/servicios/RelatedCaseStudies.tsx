@@ -42,8 +42,8 @@ const cases = [
 
 export function RelatedCaseStudies() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-white">
-      <div className="w-full">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-white">
+      <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
