@@ -53,7 +53,7 @@ const grid = [
 export function ServicesOverview() {
   return (
     <section className="py-24 md:py-32 px-6 bg-gray-950">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>

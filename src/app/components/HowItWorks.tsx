@@ -28,7 +28,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <section className="py-24 md:py-32 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 items-end">
           <div className="lg:col-span-6">
