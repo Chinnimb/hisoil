@@ -1,6 +1,6 @@
 export function FinalCTAServicios() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-10 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-16 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="bg-gray-900 rounded-sm p-12 md:p-20 text-center relative overflow-hidden">
           {/* Grid texture */}

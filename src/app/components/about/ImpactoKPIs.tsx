@@ -35,7 +35,7 @@ const kpis = [
 
 export function ImpactoKPIs() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-10 lg:px-10 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-16 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
