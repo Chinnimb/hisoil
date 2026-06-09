@@ -80,8 +80,8 @@ export function NeedSelector() {
   const active = needs.find((n) => n.id === activeNeed)!;
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-gray-950 text-white">
-      <div className="w-full">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-gray-950 text-white">
+      <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-white/20 px-3 py-1 mb-6">

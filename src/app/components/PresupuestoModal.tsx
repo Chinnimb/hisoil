@@ -52,7 +52,7 @@ export function PresupuestoModal() {
       <div className="relative bg-white w-full max-w-2xl rounded-sm shadow-2xl max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
 
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-100 px-8 py-5 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white border-b border-gray-100 px-5 md:px-8 py-5 flex items-center justify-between z-10">
           <div>
             <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-0.5">
               {sent ? 'Solicitud enviada' : `Paso ${step} de 2`}
@@ -80,7 +80,7 @@ export function PresupuestoModal() {
         )}
 
         {/* Content */}
-        <div className="px-8 py-8">
+        <div className="px-5 md:px-8 py-6 md:py-8">
           {sent ? (
             /* Confirmación */
             <div className="text-center py-8">

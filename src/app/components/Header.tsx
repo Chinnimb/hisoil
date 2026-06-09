@@ -18,19 +18,19 @@ export function Header() {
 
   return (
     <header className="sticky top-0 bg-white border-b border-gray-200 z-50 shadow-sm">
-      <div className="w-full px-6">
-        <div className="relative flex justify-between items-center h-20">
+      <div className="max-w-[1600px] mx-auto w-full px-6">
+        <div className="flex justify-between items-center gap-6 h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-1 lg:flex-1">
             <img
               src="/hisoil-logo.png"
               alt="HISOIL"
-              className="h-10 w-auto grayscale"
+              className="h-8 md:h-10 w-auto grayscale"
             />
           </Link>
 
-          {/* Desktop Navigation — absolutely centered */}
-          <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
+          {/* Desktop Navigation — centered via flex */}
+          <nav className="hidden lg:flex items-center justify-center gap-6 xl:gap-8 flex-shrink-0">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -47,7 +47,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center justify-end gap-3 flex-1">
             <Link
               to="/contacto"
               className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all text-sm ${

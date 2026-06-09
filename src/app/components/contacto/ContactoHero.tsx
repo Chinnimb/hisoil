@@ -1,6 +1,6 @@
 export function ContactoHero() {
   return (
-    <section className="relative bg-gray-950 py-24 md:py-32 px-6 overflow-hidden">
+    <section className="relative bg-gray-950 py-16 md:py-24 lg:py-32 px-6 md:px-8 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img

@@ -45,8 +45,8 @@ const sectors = [
 
 export function WhatDoYouNeed() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-white">
-      <div className="w-full">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-8 bg-white">
+      <div className="max-w-[1600px] mx-auto w-full">
         {/* Header — title left, subtitle right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-end">
           <div>
