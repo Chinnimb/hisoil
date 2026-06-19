@@ -39,15 +39,15 @@ const benefits = [
 
 export function BeneficiosMembresia() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">03 — Beneficios</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">03 — Beneficios</span>
           </div>
           <h2 className="text-oliva mb-4">Todo lo que incluye ser miembro Hisoil.</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Subtítulo — Desde el descuento en productos hasta el acompañamiento técnico personalizado, cada beneficio está diseñado para mejorar la rentabilidad de tu operación.]
           </p>
         </div>
@@ -60,17 +60,17 @@ export function BeneficiosMembresia() {
               <div className="text-2xl mb-5 opacity-40">{b.icon}</div>
               <div className="flex items-start justify-between mb-3 gap-2">
                 <h3 className="text-oliva font-semibold">{b.title}</h3>
-                <span className="bg-paja/40 text-gray-500 text-[10px] font-mono px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 border border-gray-200">
+                <span className="bg-paja text-gray-700 text-[10px] font-mono px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 border border-gray-200">
                   {b.tag}
                 </span>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed flex-1">{b.description}</p>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1">{b.description}</p>
             </div>
           ))}
         </div>
 
         {/* Bottom note */}
-        <div className="mt-8 flex items-center justify-center gap-3 text-gray-400 text-sm">
+        <div className="mt-8 flex items-center justify-center gap-3 text-gray-600 text-sm">
           <div className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
           <span className="font-mono text-xs">Todos los beneficios aplican desde el primer mes de suscripción activa</span>
           <div className="w-1.5 h-1.5 bg-gray-300 rounded-full" />

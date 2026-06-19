@@ -51,12 +51,12 @@ export function WhatDoYouNeed() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-end">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
             </div>
             <h2 className="text-oliva">Soluciones para cada tipo de operación.</h2>
           </div>
           <div className="lg:flex lg:justify-end">
-            <p className="text-gray-500 text-sm leading-relaxed lg:text-right max-w-md">
+            <p className="text-gray-700 text-sm leading-relaxed lg:text-right max-w-md">
               Desde el productor individual hasta la industria agroalimentaria — diseñamos una solución a medida para cada escala y necesidad.
             </p>
           </div>
@@ -85,11 +85,11 @@ export function WhatDoYouNeed() {
 
               {/* Bottom content */}
               <div className="absolute bottom-0 left-0 right-0 p-7">
-                <div className="text-white/50 text-xs font-mono mb-1">{sectors[0].sub}</div>
+                <div className="text-white/70 text-xs font-mono mb-1">{sectors[0].sub}</div>
                 <h3 className="text-white font-bold text-2xl mb-3">{sectors[0].label}</h3>
                 <div className="flex items-center justify-between">
                   <span className="text-white/60 text-xs font-mono">{sectors[0].stat}</span>
-                  <span className="text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all text-sm">→</span>
+                  <span className="text-white/65 group-hover:text-white group-hover:translate-x-1 transition-all text-sm">→</span>
                 </div>
               </div>
             </div>
@@ -107,11 +107,11 @@ export function WhatDoYouNeed() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/85 via-gray-950/30 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <div className="text-white/40 text-[10px] font-mono mb-1">{s.sub}</div>
+                  <div className="text-white/65 text-[10px] font-mono mb-1">{s.sub}</div>
                   <h3 className="text-white font-semibold mb-2 leading-tight">{s.label}</h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-white/40 text-[10px] font-mono">{s.stat}</span>
-                    <span className="text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all text-xs">→</span>
+                    <span className="text-white/65 text-[10px] font-mono">{s.stat}</span>
+                    <span className="text-white/55 group-hover:text-white group-hover:translate-x-1 transition-all text-xs">→</span>
                   </div>
                 </div>
               </div>
@@ -120,8 +120,8 @@ export function WhatDoYouNeed() {
         </div>
 
         {/* Bottom strip */}
-        <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border border-gray-200 rounded-sm bg-paja/30">
-          <span className="text-gray-500 text-sm">¿No encontrás tu sector? Trabajamos con cualquier tipo de operación agropecuaria o industrial.</span>
+        <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border border-gray-300 rounded-sm bg-paja">
+          <span className="text-gray-700 text-sm">¿No encontrás tu sector? Trabajamos con cualquier tipo de operación agropecuaria o industrial.</span>
           <Link to="/contacto">
             <button className="bg-oliva text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-oliva transition-colors flex-shrink-0">
               Consultar →

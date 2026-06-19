@@ -9,9 +9,9 @@ const whatsappSvg = (
 export function ContactCTA() {
   const { open } = useModal();
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-300 rounded-sm overflow-hidden">
 
           {/* Left — dark */}
           <div className="lg:col-span-7 bg-oliva p-12 md:p-16 relative overflow-hidden">
@@ -23,10 +23,10 @@ export function ContactCTA() {
             />
             <div className="relative z-10">
               <div className="inline-block border border-white/20 px-3 py-1 mb-8">
-                <span className="text-white/40 text-xs font-mono uppercase tracking-widest">¿Listo para empezar?</span>
+                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">¿Listo para empezar?</span>
               </div>
               <h2 className="text-white mb-6">El primer paso es una consulta sin compromiso.</h2>
-              <p className="text-white/50 leading-relaxed text-lg mb-10 max-w-lg">
+              <p className="text-white/70 leading-relaxed text-lg mb-10 max-w-lg">
                 Nuestro equipo técnico analiza tu situación y diseña una solución a medida. Sin costo, con respuesta en 24 horas y acompañamiento real en cada etapa.
               </p>
               <div className="grid grid-cols-3 gap-6">
@@ -37,7 +37,7 @@ export function ContactCTA() {
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="text-xl font-bold text-white">{s.value}</div>
-                    <div className="text-white/30 text-xs font-mono">{s.label}</div>
+                    <div className="text-white/55 text-xs font-mono">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -49,18 +49,18 @@ export function ContactCTA() {
             <button onClick={open} className="bg-oliva text-white py-4 px-8 rounded-full font-semibold hover:bg-oliva transition-colors w-full">
               Solicitar presupuesto
             </button>
-            <button className="border border-gray-300 text-gray-700 py-4 px-8 rounded-full font-medium hover:bg-paja/30 transition-colors w-full flex items-center justify-center gap-2.5">
+            <button className="border border-gray-300 text-gray-700 py-4 px-8 rounded-full font-medium hover:bg-paja transition-colors w-full flex items-center justify-center gap-2.5">
               {whatsappSvg}
               Contactar por WhatsApp
             </button>
 
-            <div className="pt-6 border-t border-gray-100 space-y-3">
+            <div className="pt-6 border-t border-gray-300 space-y-3">
               {[
                 "Diagnóstico inicial sin costo",
                 "Respuesta en menos de 24 hs",
                 "Sin compromisos en la primera consulta",
               ].map((f) => (
-                <div key={f} className="flex items-center gap-3 text-gray-400 text-sm">
+                <div key={f} className="flex items-center gap-3 text-gray-600 text-sm">
                   <div className="w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
                   </div>

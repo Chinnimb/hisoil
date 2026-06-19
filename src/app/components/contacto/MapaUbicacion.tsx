@@ -1,12 +1,12 @@
 export function MapaUbicacion() {
   return (
-    <section className="py-0 bg-paja/40">
+    <section className="py-0 bg-paja">
       <div className="w-full px-6 pt-0 pb-0">
         {/* Section label */}
         <div className="py-10 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="inline-block border border-gray-300 px-3 py-1">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">05 — Ubicación</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">05 — Ubicación</span>
             </div>
             <div className="text-gray-600 text-sm">
               [Calle y número], [Localidad], [Provincia]
@@ -53,7 +53,7 @@ export function MapaUbicacion() {
 
         {/* Map label */}
         <div className="absolute bottom-4 right-4 bg-white/80 border border-gray-300 rounded-sm px-3 py-1.5">
-          <span className="text-gray-400 text-xs font-mono">Google Maps · placeholder</span>
+          <span className="text-gray-600 text-xs font-mono">Google Maps · placeholder</span>
         </div>
       </div>
     </section>

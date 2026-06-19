@@ -52,9 +52,9 @@ export function PresupuestoModal() {
       <div className="relative bg-white w-full max-w-2xl rounded-sm shadow-2xl max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
 
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-100 px-5 md:px-8 py-5 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white border-b border-gray-300 px-5 md:px-8 py-5 flex items-center justify-between z-10">
           <div>
-            <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-0.5">
+            <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-0.5">
               {sent ? 'Solicitud enviada' : `Paso ${step} de 2`}
             </div>
             <h2 className="text-oliva font-semibold text-lg">
@@ -63,7 +63,7 @@ export function PresupuestoModal() {
           </div>
           <button
             onClick={handleClose}
-            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-paja/40 transition-colors text-gray-500"
+            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-paja transition-colors text-gray-700"
           >
             <X className="w-4 h-4" />
           </button>
@@ -71,7 +71,7 @@ export function PresupuestoModal() {
 
         {/* Progress bar */}
         {!sent && (
-          <div className="h-0.5 bg-paja/40">
+          <div className="h-0.5 bg-paja">
             <div
               className="h-full bg-oliva transition-all duration-300"
               style={{ width: `${(step / 2) * 100}%` }}
@@ -86,18 +86,18 @@ export function PresupuestoModal() {
             <div className="text-center py-8">
               <CheckCircle className="w-16 h-16 text-oliva mx-auto mb-5" />
               <h3 className="text-oliva font-bold text-2xl mb-3">Gracias, {form.nombre.split(' ')[0]}.</h3>
-              <p className="text-gray-500 leading-relaxed mb-2">
+              <p className="text-gray-700 leading-relaxed mb-2">
                 Tu solicitud fue recibida. Un asesor técnico de Hisoil se va a comunicar con vos en las próximas <strong className="text-gray-800">24 horas</strong>.
               </p>
-              <p className="text-gray-400 text-sm font-mono mb-8">Confirmación enviada a {form.email}</p>
-              <div className="grid grid-cols-3 gap-px bg-paja/40 border border-gray-100 rounded-sm mb-8">
+              <p className="text-gray-600 text-sm font-mono mb-8">Confirmación enviada a {form.email}</p>
+              <div className="grid grid-cols-3 gap-px bg-paja border border-gray-300 rounded-sm mb-8">
                 {[
                   { label: 'Servicio', value: form.servicio || '—' },
                   { label: 'Cultivo', value: form.cultivo || '—' },
                   { label: 'Hectáreas', value: form.hectareas || '—' },
                 ].map((d) => (
                   <div key={d.label} className="bg-white p-4 text-center">
-                    <div className="text-xs font-mono text-gray-400 mb-1">{d.label}</div>
+                    <div className="text-xs font-mono text-gray-600 mb-1">{d.label}</div>
                     <div className="text-oliva font-semibold text-sm">{d.value}</div>
                   </div>
                 ))}
@@ -112,7 +112,7 @@ export function PresupuestoModal() {
           ) : step === 1 ? (
             /* Paso 1 — Datos de contacto */
             <form onSubmit={(e) => { e.preventDefault(); setStep(2) }}>
-              <p className="text-gray-500 text-sm mb-6">
+              <p className="text-gray-700 text-sm mb-6">
                 Completá tus datos y en 24 horas te contactamos con una propuesta personalizada.
               </p>
               <div className="space-y-4">
@@ -125,7 +125,7 @@ export function PresupuestoModal() {
                       value={form.nombre}
                       onChange={(e) => setForm({ ...form, nombre: e.target.value })}
                       placeholder="Ej: Carlos Rodríguez"
-                      className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
                     />
                   </div>
                   <div>
@@ -135,7 +135,7 @@ export function PresupuestoModal() {
                       value={form.empresa}
                       onChange={(e) => setForm({ ...form, empresa: e.target.value })}
                       placeholder="Opcional"
-                      className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
                     />
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export function PresupuestoModal() {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       placeholder="tu@email.com"
-                      className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
                     />
                   </div>
                   <div>
@@ -158,7 +158,7 @@ export function PresupuestoModal() {
                       value={form.telefono}
                       onChange={(e) => setForm({ ...form, telefono: e.target.value })}
                       placeholder="+54 9 11..."
-                      className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
                     />
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export function PresupuestoModal() {
           ) : (
             /* Paso 2 — Detalle del pedido */
             <form onSubmit={handleSubmit}>
-              <p className="text-gray-500 text-sm mb-6">
+              <p className="text-gray-700 text-sm mb-6">
                 Contanos sobre tu campo para preparar una propuesta técnica a medida.
               </p>
               <div className="space-y-4">
@@ -186,7 +186,7 @@ export function PresupuestoModal() {
                       required
                       value={form.servicio}
                       onChange={(e) => setForm({ ...form, servicio: e.target.value })}
-                      className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
                     >
                       <option value="">Seleccioná una opción</option>
                       {servicios.map((s) => <option key={s}>{s}</option>)}
@@ -197,7 +197,7 @@ export function PresupuestoModal() {
                     <select
                       value={form.cultivo}
                       onChange={(e) => setForm({ ...form, cultivo: e.target.value })}
-                      className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
                     >
                       <option value="">Seleccioná un cultivo</option>
                       {cultivos.map((c) => <option key={c}>{c}</option>)}
@@ -211,7 +211,7 @@ export function PresupuestoModal() {
                     value={form.hectareas}
                     onChange={(e) => setForm({ ...form, hectareas: e.target.value })}
                     placeholder="Ej: 500 ha"
-                    className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
+                    className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
                   />
                 </div>
                 <div>
@@ -221,7 +221,7 @@ export function PresupuestoModal() {
                     value={form.mensaje}
                     onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
                     placeholder="Contanos más sobre tu situación o lo que necesitás..."
-                    className="w-full border border-gray-200 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors resize-none"
+                    className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors resize-none"
                   />
                 </div>
               </div>
@@ -229,7 +229,7 @@ export function PresupuestoModal() {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="text-gray-500 text-sm hover:text-oliva transition-colors flex items-center gap-1"
+                  className="text-gray-700 text-sm hover:text-oliva transition-colors flex items-center gap-1"
                 >
                   ← Atrás
                 </button>

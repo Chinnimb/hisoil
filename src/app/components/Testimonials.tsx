@@ -45,7 +45,7 @@ export function Testimonials() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">Testimonios</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">Testimonios</span>
             </div>
             <h2 className="text-white">Lo que dicen nuestros clientes.</h2>
           </div>
@@ -70,11 +70,11 @@ export function Testimonials() {
           {/* Result — left */}
           <div className="lg:col-span-3 bg-white/5 border-b lg:border-b-0 lg:border-r border-white/10 p-8 flex flex-col justify-between">
             <div>
-              <div className="text-white/30 text-xs font-mono uppercase tracking-widest mb-4">Resultado verificado</div>
+              <div className="text-white/55 text-xs font-mono uppercase tracking-widest mb-4">Resultado verificado</div>
               <div className="text-white font-bold leading-none mb-2" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>{t.stat}</div>
               <div className="text-white/60 font-medium mb-4">{t.statLabel}</div>
               <div className="bg-white/10 border border-white/10 rounded-sm px-3 py-2">
-                <span className="text-white/40 text-[10px] font-mono">{t.plan}</span>
+                <span className="text-white/65 text-[10px] font-mono">{t.plan}</span>
               </div>
             </div>
             {/* Dots */}
@@ -99,7 +99,7 @@ export function Testimonials() {
               </div>
               <div>
                 <div className="text-white font-semibold">{t.author}</div>
-                <div className="text-white/40 text-sm">{t.role} — {t.company}</div>
+                <div className="text-white/65 text-sm">{t.role} — {t.company}</div>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export function Testimonials() {
                   <img src={tm.avatar} alt={tm.author} className="w-full h-full object-cover" style={{ filter: 'grayscale(100%)' }} />
                 </div>
                 <div className="text-white/60 text-xs font-semibold truncate">{tm.author.split(" ")[0]}</div>
-                <div className={`text-sm font-bold ${i === current ? "text-white" : "text-white/30"}`}>{tm.stat}</div>
+                <div className={`text-sm font-bold ${i === current ? "text-white" : "text-white/55"}`}>{tm.stat}</div>
               </button>
             ))}
           </div>

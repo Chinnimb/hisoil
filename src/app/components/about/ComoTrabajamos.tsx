@@ -47,10 +47,10 @@ export function ComoTrabajamos() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">09 — Cultura y forma de trabajar</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">09 — Cultura y forma de trabajar</span>
           </div>
           <h2 className="text-oliva mb-4">Cómo trabajamos</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Descripción — Una metodología de trabajo que pone el conocimiento técnico al servicio de cada cliente, con acompañamiento real en todas las etapas.]
           </p>
         </div>
@@ -72,14 +72,14 @@ export function ComoTrabajamos() {
                   className="flex-1 flex flex-col items-center relative z-10 group"
                 >
                   <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center mb-3 transition-all ${
-                    i <= active ? "bg-oliva border-gray-900 text-white" : "bg-white border-gray-300 text-gray-400 group-hover:border-gray-500"
+                    i <= active ? "bg-oliva border-gray-900 text-white" : "bg-white border-gray-300 text-gray-600 group-hover:border-gray-500"
                   }`}>
                     {i < active
                       ? <span className="text-xs text-white">✓</span>
                       : <span className="text-xs font-mono font-bold">{s.number}</span>
                     }
                   </div>
-                  <span className={`text-xs font-medium transition-colors ${i === active ? "text-oliva" : "text-gray-400 group-hover:text-gray-600"}`}>
+                  <span className={`text-xs font-medium transition-colors ${i === active ? "text-oliva" : "text-gray-600 group-hover:text-gray-600"}`}>
                     {s.title}
                   </span>
                 </button>
@@ -88,17 +88,17 @@ export function ComoTrabajamos() {
           </div>
 
           {/* Active step detail */}
-          <div className="border border-gray-200 rounded-sm p-10 grid grid-cols-12 gap-8">
+          <div className="border border-gray-300 rounded-sm p-10 grid grid-cols-12 gap-8">
             <div className="col-span-1">
               <span className="text-gray-100 font-bold font-mono text-6xl leading-none">{steps[active].number}</span>
             </div>
             <div className="col-span-7">
-              <div className="text-gray-400 text-xs font-mono uppercase tracking-widest mb-2">{steps[active].subtitle}</div>
+              <div className="text-gray-600 text-xs font-mono uppercase tracking-widest mb-2">{steps[active].subtitle}</div>
               <h3 className="text-oliva text-2xl font-semibold mb-4">{steps[active].title}</h3>
-              <p className="text-gray-500 leading-relaxed">{steps[active].description}</p>
+              <p className="text-gray-700 leading-relaxed">{steps[active].description}</p>
             </div>
-            <div className="col-span-4 border-l border-gray-100 pl-8">
-              <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-4">Entregables</div>
+            <div className="col-span-4 border-l border-gray-300 pl-8">
+              <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-4">Entregables</div>
               <div className="space-y-2">
                 {steps[active].outputs.map((o) => (
                   <div key={o} className="flex items-center gap-2.5 text-sm text-gray-600">
@@ -129,12 +129,12 @@ export function ComoTrabajamos() {
                 {i < steps.length - 1 && <div className="w-px flex-1 bg-gray-200 my-2" style={{ minHeight: 32 }} />}
               </div>
               <div className="pb-8">
-                <div className="text-gray-400 text-xs font-mono mb-1">{s.subtitle}</div>
+                <div className="text-gray-600 text-xs font-mono mb-1">{s.subtitle}</div>
                 <h3 className="text-oliva font-semibold mb-2">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-3">{s.description}</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3">{s.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {s.outputs.map((o) => (
-                    <span key={o} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{o}</span>
+                    <span key={o} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">{o}</span>
                   ))}
                 </div>
               </div>

@@ -11,7 +11,7 @@ export function MembresiaHero() {
     <section className="bg-oliva min-h-screen flex flex-col">
       {/* Top label */}
       <div className="border-b border-white/10 px-6 py-4">
-        <div className="w-full flex items-center gap-2 text-xs font-mono text-white/30">
+        <div className="w-full flex items-center gap-2 text-xs font-mono text-white/55">
           <span>Inicio</span><span>/</span>
           <span className="text-white/60">Membresía</span>
         </div>
@@ -22,19 +22,19 @@ export function MembresiaHero() {
         {/* Left — copy */}
         <div className="lg:col-span-6 flex flex-col">
           <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
-            <span className="text-white/40 text-xs font-mono uppercase tracking-[0.2em]">Programa de Membresía</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Programa de Membresía</span>
           </div>
 
           <h1 className="text-white mb-6 leading-[1.05]">
             Potenciá tus resultados con la Membresía Hisoil.
           </h1>
 
-          <p className="text-white/50 text-lg leading-relaxed mb-10 max-w-lg">
+          <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-lg">
             [Subtítulo — Un programa de suscripción diseñado para clientes que quieren acceso prioritario a productos, asesoramiento técnico continuo y beneficios exclusivos en cada campaña.]
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-12">
-            <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja/40 transition-colors">
+            <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja transition-colors">
               Unirme ahora
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
@@ -49,7 +49,7 @@ export function MembresiaHero() {
                 <div className="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
                   <span className="text-white/60 text-[10px]">✓</span>
                 </div>
-                <span className="text-white/50 text-sm">{b}</span>
+                <span className="text-white/70 text-sm">{b}</span>
               </div>
             ))}
           </div>
@@ -68,7 +68,7 @@ export function MembresiaHero() {
               />
               <div className="relative z-10 flex items-start justify-between mb-8">
                 <div>
-                  <div className="text-white/30 text-xs font-mono uppercase tracking-widest mb-1">Miembro Hisoil</div>
+                  <div className="text-white/55 text-xs font-mono uppercase tracking-widest mb-1">Miembro Hisoil</div>
                   <div className="text-white font-bold text-lg">Plan Profesional</div>
                 </div>
                 <div className="bg-white/10 border border-white/20 px-3 py-1.5 rounded-full">
@@ -82,7 +82,7 @@ export function MembresiaHero() {
                   { label: "Descuento", value: "15%" },
                 ].map((s) => (
                   <div key={s.label}>
-                    <div className="text-white/30 text-xs font-mono mb-0.5">{s.label}</div>
+                    <div className="text-white/55 text-xs font-mono mb-0.5">{s.label}</div>
                     <div className="text-white font-semibold text-sm">{s.value}</div>
                   </div>
                 ))}
@@ -98,7 +98,7 @@ export function MembresiaHero() {
               ].map((s) => (
                 <div key={s.label} className="bg-oliva p-5 text-center">
                   <div className="text-white font-bold text-xl mb-1">{s.value}</div>
-                  <div className="text-white/30 text-xs font-mono">{s.label}</div>
+                  <div className="text-white/55 text-xs font-mono">{s.label}</div>
                 </div>
               ))}
             </div>

@@ -53,12 +53,12 @@ export function CaseStudies() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">Casos de éxito</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">Casos de éxito</span>
             </div>
             <h2 className="text-oliva max-w-lg">Resultados reales en campo. Documentados.</h2>
           </div>
           <Link to="/portfolio">
-            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors flex-shrink-0">
+            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja transition-colors flex-shrink-0">
               Ver todos los casos →
             </button>
           </Link>
@@ -69,12 +69,12 @@ export function CaseStudies() {
           {cases.map((c, i) => (
             <div
               key={c.number}
-              className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden hover:border-gray-400 transition-colors group"
+              className="grid grid-cols-1 lg:grid-cols-12 border border-gray-300 rounded-sm overflow-hidden hover:border-gray-400 transition-colors group"
             >
               {/* Result block — left */}
-              <div className={`lg:col-span-3 p-8 flex flex-col justify-between ${i % 2 === 1 ? "bg-oliva" : "bg-paja/30"}`}>
+              <div className={`lg:col-span-3 p-8 flex flex-col justify-between ${i % 2 === 1 ? "bg-oliva" : "bg-paja"}`}>
                 <div>
-                  <div className={`text-xs font-mono uppercase tracking-widest mb-4 ${i % 2 === 1 ? "text-white/30" : "text-gray-400"}`}>
+                  <div className={`text-xs font-mono uppercase tracking-widest mb-4 ${i % 2 === 1 ? "text-white/55" : "text-gray-600"}`}>
                     {c.number} · Resultado
                   </div>
                   <div className={`font-bold leading-none mb-2 ${i % 2 === 1 ? "text-white" : "text-oliva"}`}
@@ -84,25 +84,25 @@ export function CaseStudies() {
                   <div className={`font-medium mb-1 ${i % 2 === 1 ? "text-white/70" : "text-gray-700"}`}>
                     {c.resultLabel}
                   </div>
-                  <div className={`text-xs font-mono leading-relaxed ${i % 2 === 1 ? "text-white/30" : "text-gray-400"}`}>
+                  <div className={`text-xs font-mono leading-relaxed ${i % 2 === 1 ? "text-white/55" : "text-gray-600"}`}>
                     {c.secondaryResult}
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1.5 mt-6">
                   {c.tags.map((t) => (
                     <span key={t} className={`text-[10px] font-mono px-2.5 py-1 rounded-full ${
-                      i % 2 === 1 ? "bg-white/10 text-white/50" : "bg-white border border-gray-200 text-gray-500"
+                      i % 2 === 1 ? "bg-white/10 text-white/70" : "bg-white border border-gray-300 text-gray-700"
                     }`}>{t}</span>
                   ))}
                 </div>
               </div>
 
               {/* Case detail — center */}
-              <div className="lg:col-span-6 p-8 bg-white border-t lg:border-t-0 lg:border-l border-gray-100">
+              <div className="lg:col-span-6 p-8 bg-white border-t lg:border-t-0 lg:border-l border-gray-200">
                 <div className="flex items-start justify-between gap-4 mb-6">
                   <div>
                     <div className="text-oliva font-bold text-lg">{c.client}</div>
-                    <div className="text-gray-400 text-xs font-mono">{c.location} · {c.sector}</div>
+                    <div className="text-gray-600 text-xs font-mono">{c.location} · {c.sector}</div>
                   </div>
                 </div>
 
@@ -110,14 +110,14 @@ export function CaseStudies() {
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
-                      <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">Problema</span>
+                      <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">Problema</span>
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed pl-3.5">{c.problem}</p>
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-1.5 h-1.5 bg-gray-600 rounded-full" />
-                      <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">Solución</span>
+                      <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">Solución</span>
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed pl-3.5">{c.solution}</p>
                   </div>
@@ -125,7 +125,7 @@ export function CaseStudies() {
               </div>
 
               {/* Image — right */}
-              <div className="hidden lg:block lg:col-span-3 border-l border-gray-200 relative overflow-hidden">
+              <div className="hidden lg:block lg:col-span-3 border-l border-gray-300 relative overflow-hidden">
                 <img
                   src={c.image}
                   alt={c.imageAlt}

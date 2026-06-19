@@ -41,23 +41,23 @@ export function TestimoniosMembresia() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">08 — Testimonios</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">08 — Testimonios</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-oliva">Lo que dicen nuestros miembros.</h2>
             <div className="flex gap-2">
-              <button onClick={prev} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja/30 transition-colors">
-                <ChevronLeft size={16} className="text-gray-500" />
+              <button onClick={prev} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja transition-colors">
+                <ChevronLeft size={16} className="text-gray-700" />
               </button>
-              <button onClick={next} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja/30 transition-colors">
-                <ChevronRight size={16} className="text-gray-500" />
+              <button onClick={next} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja transition-colors">
+                <ChevronRight size={16} className="text-gray-700" />
               </button>
             </div>
           </div>
         </div>
 
         {/* Testimonial */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-300 rounded-sm overflow-hidden">
           {/* Left — quote */}
           <div className="lg:col-span-8 p-10 md:p-14">
             <div className="text-gray-100 font-serif text-8xl leading-none mb-6 select-none">"</div>
@@ -72,24 +72,24 @@ export function TestimoniosMembresia() {
               </div>
               <div>
                 <div className="text-oliva font-semibold">{t.name}</div>
-                <div className="text-gray-400 text-sm">{t.role}</div>
+                <div className="text-gray-600 text-sm">{t.role}</div>
               </div>
             </div>
           </div>
 
           {/* Right — data */}
-          <div className="lg:col-span-4 bg-paja/30 border-t lg:border-t-0 lg:border-l border-gray-200 p-8 flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-paja border-t lg:border-t-0 lg:border-l border-gray-300 p-8 flex flex-col justify-between">
             <div className="space-y-4">
               <div className="card-gradient-border px-4 py-3">
-                <div className="text-gray-400 text-xs font-mono mb-0.5">Plan activo</div>
+                <div className="text-gray-600 text-xs font-mono mb-0.5">Plan activo</div>
                 <div className="text-oliva font-semibold text-sm">{t.plan}</div>
               </div>
               <div className="card-gradient-border px-4 py-3">
-                <div className="text-gray-400 text-xs font-mono mb-0.5">Antigüedad</div>
+                <div className="text-gray-600 text-xs font-mono mb-0.5">Antigüedad</div>
                 <div className="text-oliva font-semibold text-sm">{t.years}</div>
               </div>
               <div className="bg-oliva border border-gray-800 rounded-sm px-4 py-4">
-                <div className="text-white/40 text-xs font-mono mb-1">{t.stats.label}</div>
+                <div className="text-white/65 text-xs font-mono mb-1">{t.stats.label}</div>
                 <div className="text-white font-bold text-2xl">{t.stats.value}</div>
               </div>
             </div>

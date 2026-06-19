@@ -27,15 +27,15 @@ const approachCards = [
 
 export function OurApproach() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">03 — Nuestra forma de trabajar</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">03 — Nuestra forma de trabajar</span>
           </div>
           <h2 className="text-oliva mb-4">Nuestra forma de trabajar</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Subtítulo — Descripción de los tres pilares que guían cada proyecto e intervención de Hisoil.]
           </p>
         </div>
@@ -45,21 +45,21 @@ export function OurApproach() {
           {approachCards.map((card) => (
             <div
               key={card.number}
-              className="bg-white border border-gray-200 p-8 rounded-sm group hover:border-gray-400 transition-colors"
+              className="bg-white border border-gray-300 p-8 rounded-sm group hover:border-gray-400 transition-colors"
             >
               {/* Number + icon */}
               <div className="flex items-start justify-between mb-6">
                 <span className="text-gray-200 font-mono text-5xl font-bold leading-none">
                   {card.number}
                 </span>
-                <div className="w-12 h-12 bg-paja/40 rounded-sm flex items-center justify-center text-2xl">
+                <div className="w-12 h-12 bg-paja rounded-sm flex items-center justify-center text-2xl">
                   {card.icon}
                 </div>
               </div>
 
               <h3 className="text-oliva mb-4 text-xl">{card.title}</h3>
 
-              <p className="text-gray-500 text-sm leading-relaxed mb-6">
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">
                 {card.description}
               </p>
 
@@ -68,7 +68,7 @@ export function OurApproach() {
                 {card.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-paja/40 text-gray-500 text-xs px-3 py-1 rounded-full font-mono"
+                    className="bg-paja text-gray-700 text-xs px-3 py-1 rounded-full font-mono"
                   >
                     {tag}
                   </span>

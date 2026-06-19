@@ -19,7 +19,7 @@ export function Membership() {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-300 rounded-sm overflow-hidden">
 
           {/* Left — dark copy */}
           <div className="lg:col-span-7 bg-oliva p-10 md:p-14 relative overflow-hidden">
@@ -31,10 +31,10 @@ export function Membership() {
             />
             <div className="relative z-10">
               <div className="inline-block border border-white/20 px-3 py-1 mb-8">
-                <span className="text-white/40 text-xs font-mono uppercase tracking-widest">Membresía Hisoil</span>
+                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">Membresía Hisoil</span>
               </div>
               <h2 className="text-white mb-4">Un programa para clientes que operan en serio.</h2>
-              <p className="text-white/50 leading-relaxed mb-10 max-w-lg">
+              <p className="text-white/70 leading-relaxed mb-10 max-w-lg">
                 La Membresía Hisoil es un programa de suscripción para productores, empresas y profesionales que quieren acceso continuo a productos, técnicos y recursos, con beneficios que crecen con el tiempo.
               </p>
 
@@ -43,7 +43,7 @@ export function Membership() {
                 {highlights.map((h) => (
                   <div key={h.label} className="bg-oliva p-5">
                     <div className="text-white font-bold text-lg mb-0.5">{h.value}</div>
-                    <div className="text-white/30 text-xs font-mono">{h.label}</div>
+                    <div className="text-white/55 text-xs font-mono">{h.label}</div>
                   </div>
                 ))}
               </div>
@@ -53,9 +53,9 @@ export function Membership() {
                 {quickBenefits.map((b) => (
                   <div key={b} className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded-full border border-white/20 bg-white/5 flex items-center justify-center flex-shrink-0">
-                      <span className="text-white/50 text-[9px]">✓</span>
+                      <span className="text-white/70 text-[9px]">✓</span>
                     </div>
-                    <span className="text-white/50 text-sm">{b}</span>
+                    <span className="text-white/70 text-sm">{b}</span>
                   </div>
                 ))}
               </div>
@@ -63,10 +63,10 @@ export function Membership() {
           </div>
 
           {/* Right — CTA */}
-          <div className="lg:col-span-5 bg-paja/30 p-10 md:p-14 flex flex-col justify-center gap-4 border-t lg:border-t-0 lg:border-l border-gray-200">
+          <div className="lg:col-span-5 bg-paja p-10 md:p-14 flex flex-col justify-center gap-4 border-t lg:border-t-0 lg:border-l border-gray-200">
             <div className="mb-2">
               <div className="text-oliva font-bold text-xl mb-1">Elegí tu plan.</div>
-              <div className="text-gray-500 text-sm leading-relaxed">
+              <div className="text-gray-700 text-sm leading-relaxed">
                 Starter, Profesional o Premium. Podés cambiar de plan en cualquier momento. El primer mes incluye asesoramiento técnico de bienvenida sin cargo.
               </div>
             </div>
@@ -82,9 +82,9 @@ export function Membership() {
               </button>
             </Link>
 
-            <div className="pt-6 border-t border-gray-200 space-y-3">
+            <div className="pt-6 border-t border-gray-300 space-y-3">
               {["Activación en menos de 24 horas", "Sin permanencia obligatoria", "Soporte técnico desde el día uno"].map((f) => (
-                <div key={f} className="flex items-center gap-3 text-gray-400 text-sm">
+                <div key={f} className="flex items-center gap-3 text-gray-600 text-sm">
                   <div className="w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
                   </div>

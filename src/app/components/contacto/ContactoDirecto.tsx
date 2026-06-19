@@ -42,12 +42,12 @@ const channels = [
 
 export function ContactoDirecto() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-12">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">03 — Contacto directo</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">03 — Contacto directo</span>
           </div>
           <h2 className="text-oliva">¿Preferís hablar directamente?</h2>
         </div>
@@ -69,25 +69,25 @@ export function ContactoDirecto() {
                 </div>
               )}
 
-              <div className={`mb-6 ${c.highlight ? "text-white/60" : "text-gray-400"}`}>
+              <div className={`mb-6 ${c.highlight ? "text-white/60" : "text-gray-600"}`}>
                 {c.icon}
               </div>
 
-              <div className={`text-xs font-mono uppercase tracking-widest mb-1 ${c.highlight ? "text-white/40" : "text-gray-400"}`}>
+              <div className={`text-xs font-mono uppercase tracking-widest mb-1 ${c.highlight ? "text-white/65" : "text-gray-600"}`}>
                 {c.label}
               </div>
               <div className={`font-semibold mb-4 ${c.highlight ? "text-white" : "text-oliva"}`}>
                 {c.value}
               </div>
-              <p className={`text-sm leading-relaxed flex-1 mb-8 ${c.highlight ? "text-white/50" : "text-gray-500"}`}>
+              <p className={`text-sm leading-relaxed flex-1 mb-8 ${c.highlight ? "text-white/70" : "text-gray-700"}`}>
                 {c.description}
               </p>
 
               <button
                 className={`w-full py-3.5 px-6 rounded-full font-semibold transition-colors ${
                   c.highlight
-                    ? "bg-white text-oliva hover:bg-paja/40"
-                    : "border border-gray-300 text-gray-700 hover:bg-paja/30"
+                    ? "bg-white text-oliva hover:bg-paja"
+                    : "border border-gray-300 text-gray-700 hover:bg-paja"
                 }`}
               >
                 {c.cta}

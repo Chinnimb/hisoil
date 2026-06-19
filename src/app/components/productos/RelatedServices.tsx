@@ -35,10 +35,10 @@ export function RelatedServices() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">09 — Servicios relacionados</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">09 — Servicios relacionados</span>
           </div>
           <h2 className="text-oliva mb-4">Potenciá tus productos con nuestros servicios</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Descripción — Los productos funcionan mejor con el acompañamiento técnico adecuado. Estos servicios complementan y potencian cada solución.]
           </p>
         </div>
@@ -47,20 +47,20 @@ export function RelatedServices() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="border border-gray-200 rounded-sm p-8 flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
+              className="border border-gray-300 rounded-sm p-8 flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-paja/40 rounded-sm flex items-center justify-center text-2xl mb-6 group-hover:bg-gray-200 transition-colors">
+              <div className="w-14 h-14 bg-paja rounded-sm flex items-center justify-center text-2xl mb-6 group-hover:bg-gray-200 transition-colors">
                 {s.icon}
               </div>
 
               <h3 className="text-oliva font-semibold text-lg mb-3">{s.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-6">{s.description}</p>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-6">{s.description}</p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1.5 mb-6">
                 {s.tags.map((tag) => (
-                  <span key={tag} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
+                  <span key={tag} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">
                     {tag}
                   </span>
                 ))}

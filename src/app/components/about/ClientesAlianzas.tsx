@@ -22,32 +22,32 @@ const alianzas = [
 
 export function ClientesAlianzas() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-14">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">10 — Clientes y alianzas</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">10 — Clientes y alianzas</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-oliva">Clientes y alianzas estratégicas</h2>
-            <p className="text-gray-400 text-sm font-mono">800+ clientes activos · 12 provincias</p>
+            <p className="text-gray-600 text-sm font-mono">800+ clientes activos · 12 provincias</p>
           </div>
         </div>
 
         {/* Clients logo wall */}
         <div className="mb-4">
-          <p className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-4">Empresas que confían en Hisoil</p>
+          <p className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-4">Empresas que confían en Hisoil</p>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-200 border border-gray-200">
             {clients.map((c, i) => (
               <div
                 key={i}
-                className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 hover:bg-paja/30 transition-colors cursor-pointer group"
+                className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 hover:bg-paja transition-colors cursor-pointer group"
               >
-                <div className="w-16 h-9 bg-paja/30 border border-gray-200 rounded-sm flex items-center justify-center mb-1.5 group-hover:border-gray-400 transition-colors">
-                  <span className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">{c.name.slice(0, 6)}</span>
+                <div className="w-16 h-9 bg-paja border border-gray-300 rounded-sm flex items-center justify-center mb-1.5 group-hover:border-gray-400 transition-colors">
+                  <span className="text-gray-700 text-[10px] font-bold uppercase tracking-widest">{c.name.slice(0, 6)}</span>
                 </div>
-                <span className="text-gray-400 text-[9px] font-mono text-center">{c.sector}</span>
+                <span className="text-gray-600 text-[9px] font-mono text-center">{c.sector}</span>
               </div>
             ))}
           </div>
@@ -55,16 +55,16 @@ export function ClientesAlianzas() {
 
         {/* Alianzas strip */}
         <div>
-          <p className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-4 mt-10">Alianzas y organismos</p>
+          <p className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-4 mt-10">Alianzas y organismos</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {alianzas.map((a, i) => (
               <div key={i} className="card-gradient-border p-5 flex flex-col items-center gap-3 hover:border-gray-400 transition-colors">
-                <div className="w-20 h-10 bg-paja/30 border border-gray-200 rounded-sm flex items-center justify-center">
+                <div className="w-20 h-10 bg-paja border border-gray-300 rounded-sm flex items-center justify-center">
                   <span className="text-gray-600 text-xs font-bold uppercase tracking-wider">{a.name}</span>
                 </div>
                 <div className="text-center">
                   <div className="text-gray-700 text-sm font-semibold">{a.name}</div>
-                  <div className="text-gray-400 text-xs font-mono mt-0.5">{a.type}</div>
+                  <div className="text-gray-600 text-xs font-mono mt-0.5">{a.type}</div>
                 </div>
               </div>
             ))}
@@ -74,7 +74,7 @@ export function ClientesAlianzas() {
         {/* Sector pills */}
         <div className="mt-10 flex flex-wrap gap-2 justify-center">
           {["Agroindustria", "Ganadería", "Horticultura", "Forestal", "Municipios", "Industria", "Cooperativas", "Retail"].map((s) => (
-            <span key={s} className="bg-white border border-gray-200 text-gray-400 text-xs font-mono px-3 py-1.5 rounded-full">
+            <span key={s} className="bg-white border border-gray-300 text-gray-600 text-xs font-mono px-3 py-1.5 rounded-full">
               {s}
             </span>
           ))}

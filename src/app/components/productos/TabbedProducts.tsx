@@ -34,19 +34,19 @@ export function TabbedProducts() {
   const products = productsByTab[activeTab];
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header + tabs */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">06 — Catálogo</span>
+              <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">06 — Catálogo</span>
             </div>
             <h2 className="text-oliva">Explorá el catálogo completo</h2>
           </div>
 
           {/* Tab selector */}
-          <div className="flex gap-1 bg-white border border-gray-200 p-1 rounded-full self-start md:self-auto">
+          <div className="flex gap-1 bg-white border border-gray-300 p-1 rounded-full self-start md:self-auto">
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -54,7 +54,7 @@ export function TabbedProducts() {
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                   activeTab === tab
                     ? "bg-oliva text-white"
-                    : "text-gray-500 hover:text-gray-700"
+                    : "text-gray-700 hover:text-gray-700"
                 }`}
               >
                 {tab}
@@ -70,7 +70,7 @@ export function TabbedProducts() {
               key={i}
               className="card-gradient-border overflow-hidden flex flex-col group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer"
             >
-              <div className="aspect-[4/3] border-b border-gray-200 relative overflow-hidden">
+              <div className="aspect-[4/3] border-b border-gray-300 relative overflow-hidden">
                 <img
                   src={[
                     "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&q=70&fit=crop",
@@ -83,7 +83,7 @@ export function TabbedProducts() {
                   alt={p.name}
                   className="w-full h-full object-cover transition-all duration-300"
                 />
-                <span className="absolute top-3 right-3 bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
+                <span className="absolute top-3 right-3 bg-white border border-gray-300 text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">
                   {p.category}
                 </span>
                 {activeTab === "Nuevos ingresos" && (
@@ -96,10 +96,10 @@ export function TabbedProducts() {
               {/* Info */}
               <div className="p-6 flex flex-col flex-1">
                 <h4 className="font-semibold text-oliva mb-2 text-sm">{p.name}</h4>
-                <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-4">{p.description}</p>
+                <p className="text-gray-700 text-xs leading-relaxed flex-1 mb-4">{p.description}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
+                    <span key={s} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">
                       {s}
                     </span>
                   ))}
@@ -108,7 +108,7 @@ export function TabbedProducts() {
                   <button className="flex-1 bg-oliva text-white py-2.5 rounded-full text-xs font-medium hover:bg-oliva transition-colors">
                     Solicitar presupuesto
                   </button>
-                  <button className="border border-gray-200 text-gray-500 px-4 py-2.5 rounded-full text-xs hover:bg-paja/30 transition-colors">
+                  <button className="border border-gray-300 text-gray-700 px-4 py-2.5 rounded-full text-xs hover:bg-paja transition-colors">
                     Ver
                   </button>
                 </div>
@@ -125,7 +125,7 @@ export function TabbedProducts() {
               className={`w-9 h-9 rounded-full text-sm font-mono border transition-colors ${
                 p === 1
                   ? "bg-oliva text-white border-gray-900"
-                  : "border-gray-200 text-gray-400 hover:border-gray-400"
+                  : "border-gray-300 text-gray-600 hover:border-gray-400"
               }`}
             >
               {p}

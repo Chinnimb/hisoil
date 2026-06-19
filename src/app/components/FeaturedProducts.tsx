@@ -27,7 +27,7 @@ const products = [
     name: "Fertilizante Líquido",
     category: "Nutrición vegetal",
     badge: "Alta demanda",
-    badgeStyle: "bg-paja/300 text-white",
+    badgeStyle: "bg-paja0 text-white",
     result: "Absorción rápida en 7 días",
     stat: "20–30 L/ha",
     statLabel: "aplicación basal",
@@ -49,13 +49,13 @@ const products = [
 
 export function FeaturedProducts() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">Productos destacados</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">Productos destacados</span>
             </div>
             <h2 className="text-oliva max-w-lg">Los más elegidos por productores de todo el país.</h2>
           </div>
@@ -87,16 +87,16 @@ export function FeaturedProducts() {
             </div>
 
             <div className="p-8">
-              <div className="text-white/30 text-xs font-mono uppercase tracking-widest mb-1">{products[0].category}</div>
+              <div className="text-white/55 text-xs font-mono uppercase tracking-widest mb-1">{products[0].category}</div>
               <h3 className="text-white font-bold text-2xl mb-3">{products[0].name}</h3>
               <div className="bg-white/10 border border-white/10 rounded-sm px-4 py-3 mb-6">
-                <div className="text-white/40 text-xs font-mono mb-0.5">Resultado documentado</div>
+                <div className="text-white/65 text-xs font-mono mb-0.5">Resultado documentado</div>
                 <div className="text-white font-semibold text-sm">{products[0].result}</div>
               </div>
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <div className="text-white font-bold text-xl">{products[0].stat}</div>
-                  <div className="text-white/30 text-xs font-mono">{products[0].statLabel}</div>
+                  <div className="text-white/55 text-xs font-mono">{products[0].statLabel}</div>
                 </div>
                 <div className="flex gap-1 flex-wrap justify-end">
                   {products[0].uses.map((u) => (
@@ -105,7 +105,7 @@ export function FeaturedProducts() {
                 </div>
               </div>
               <Link to="/productos">
-                <button className="w-full bg-white text-oliva py-3 rounded-full font-semibold hover:bg-paja/40 transition-colors">
+                <button className="w-full bg-white text-oliva py-3 rounded-full font-semibold hover:bg-paja transition-colors">
                   Ver producto →
                 </button>
               </Link>
@@ -139,16 +139,16 @@ export function FeaturedProducts() {
 
                 {/* Info */}
                 <div className="flex-1 flex flex-col">
-                  <div className="text-gray-400 text-[10px] font-mono uppercase tracking-widest mb-0.5">{p.category}</div>
+                  <div className="text-gray-600 text-[10px] font-mono uppercase tracking-widest mb-0.5">{p.category}</div>
                   <h3 className="text-oliva font-semibold mb-1">{p.name}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-3">{p.result}</p>
+                  <p className="text-gray-700 text-xs leading-relaxed flex-1 mb-3">{p.result}</p>
                   <div className="flex items-center justify-between gap-4">
                     <div>
                       <span className="text-oliva font-bold text-sm">{p.stat}</span>
-                      <span className="text-gray-400 text-xs font-mono ml-1">{p.statLabel}</span>
+                      <span className="text-gray-600 text-xs font-mono ml-1">{p.statLabel}</span>
                     </div>
                     <Link to="/productos">
-                      <button className="text-gray-500 text-xs font-mono hover:text-oliva transition-colors">
+                      <button className="text-gray-700 text-xs font-mono hover:text-oliva transition-colors">
                         Ver →
                       </button>
                     </Link>
@@ -162,7 +162,7 @@ export function FeaturedProducts() {
             <div className="bg-oliva border border-gray-800 rounded-sm p-6 flex items-center justify-between">
               <div>
                 <div className="text-white font-semibold mb-0.5">Ver catálogo completo</div>
-                <div className="text-white/30 text-xs font-mono">+20 productos disponibles</div>
+                <div className="text-white/55 text-xs font-mono">+20 productos disponibles</div>
               </div>
               <Link to="/productos">
                 <button className="border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 transition-colors">

@@ -21,20 +21,20 @@ const products = [
 
 export function CaseProducts() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">06 — Productos utilizados en este caso</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">06 — Productos utilizados en este caso</span>
             </div>
             <h2 className="text-oliva mb-2">Productos aplicados en el proyecto</h2>
-            <p className="text-gray-500 text-sm leading-relaxed max-w-lg">
+            <p className="text-gray-700 text-sm leading-relaxed max-w-lg">
               [Texto — Portafolio de productos específicos utilizados en este proyecto, seleccionados y formulados para los requerimientos del cliente.]
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja/40 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-300 text-gray-700 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja transition-colors whitespace-nowrap">
             Ver catálogo completo →
           </button>
         </div>
@@ -45,7 +45,7 @@ export function CaseProducts() {
               key={i}
               className="card-gradient-border overflow-hidden flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
             >
-              <div className="aspect-[4/3] border-b border-gray-200 relative overflow-hidden">
+              <div className="aspect-[4/3] border-b border-gray-300 relative overflow-hidden">
                 <img
                   src={[
                     "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&q=70&fit=crop",
@@ -55,24 +55,24 @@ export function CaseProducts() {
                   alt={p.name}
                   className="w-full h-full object-cover transition-all duration-300"
                 />
-                <span className="absolute top-3 right-3 bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
+                <span className="absolute top-3 right-3 bg-white border border-gray-300 text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">
                   {p.category}
                 </span>
               </div>
 
               <div className="p-7 flex flex-col flex-1">
                 <h3 className="font-semibold text-oliva text-sm mb-3">{p.name}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{p.benefit}</p>
+                <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5">{p.benefit}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
+                    <span key={s} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
                   ))}
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 bg-oliva text-white py-2.5 rounded-full text-xs font-medium hover:bg-oliva transition-colors">
                     Solicitar presupuesto
                   </button>
-                  <button className="border border-gray-200 text-gray-500 px-4 py-2.5 rounded-full text-xs hover:bg-paja/30 transition-colors">
+                  <button className="border border-gray-300 text-gray-700 px-4 py-2.5 rounded-full text-xs hover:bg-paja transition-colors">
                     Ver producto
                   </button>
                 </div>

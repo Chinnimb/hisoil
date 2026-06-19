@@ -23,7 +23,7 @@ export function Footer() {
               alt="HISOIL"
               className="h-12 w-auto"
             />
-            <p className="text-gray-400 leading-relaxed text-sm">
+            <p className="text-gray-600 leading-relaxed text-sm">
               Soluciones agrícolas sostenibles que transforman residuos en valor para tu campo.
             </p>
           </div>
@@ -35,7 +35,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                    <a href="#" className="text-gray-600 hover:text-white transition-colors text-sm">
                       {link}
                     </a>
                   </li>
@@ -49,16 +49,16 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-4">Contacto</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400 text-sm">Ruta 9 Km 142<br />Pergamino, Buenos Aires</span>
+                <MapPin className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-600 text-sm">Ruta 9 Km 142<br />Pergamino, Buenos Aires</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">0800-HISOIL (447645)</span>
+                <Phone className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                <span className="text-gray-600 text-sm">0800-HISOIL (447645)</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">info@hisoil.com.ar</span>
+                <Mail className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                <span className="text-gray-600 text-sm">info@hisoil.com.ar</span>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ export function Footer() {
                     href="#"
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                   >
-                    <Icon className="w-5 h-5 text-gray-400" />
+                    <Icon className="w-5 h-5 text-gray-600" />
                   </a>
                 ))}
               </div>
@@ -83,17 +83,17 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-700 text-sm">
               © 2026 Hisoil. Todos los derechos reservados.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-gray-700 hover:text-white text-sm transition-colors">
                 Privacidad
               </a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-gray-700 hover:text-white text-sm transition-colors">
                 Términos y condiciones
               </a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-gray-700 hover:text-white text-sm transition-colors">
                 Cookies
               </a>
             </div>

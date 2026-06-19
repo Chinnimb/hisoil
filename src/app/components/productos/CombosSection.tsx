@@ -64,10 +64,10 @@ export function CombosSection() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">05 — Soluciones recomendadas</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">05 — Soluciones recomendadas</span>
           </div>
           <h2 className="text-oliva mb-4">Combos diseñados para resultados concretos</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Descripción — Paquetes de productos formulados y recomendados por nuestro equipo técnico para objetivos específicos. Incluyen protocolo de aplicación.]
           </p>
         </div>
@@ -79,7 +79,7 @@ export function CombosSection() {
               className={`rounded-sm overflow-hidden flex flex-col relative ${
                 combo.highlight
                   ? "bg-oliva text-white border-2 border-gray-700 shadow-2xl scale-[1.02]"
-                  : "bg-paja/30 border border-gray-200"
+                  : "bg-paja border border-gray-200"
               }`}
             >
               {combo.highlight && (
@@ -96,21 +96,21 @@ export function CombosSection() {
                 <h3 className={`text-xl font-bold mb-2 ${combo.highlight ? "text-white" : "text-oliva"}`}>
                   {combo.name}
                 </h3>
-                <p className={`text-sm ${combo.highlight ? "text-white/50" : "text-gray-500"}`}>
+                <p className={`text-sm ${combo.highlight ? "text-white/70" : "text-gray-700"}`}>
                   {combo.tagline}
                 </p>
               </div>
 
               {/* Products included */}
               <div className={`px-8 py-6 border-b ${combo.highlight ? "border-white/10" : "border-gray-200"}`}>
-                <div className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? "text-white/30" : "text-gray-400"}`}>
+                <div className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? "text-white/55" : "text-gray-600"}`}>
                   Productos incluidos
                 </div>
                 <div className="space-y-2">
                   {combo.products.map((p) => (
                     <div key={p} className={`flex items-center gap-2 text-sm ${combo.highlight ? "text-white/70" : "text-gray-600"}`}>
-                      <div className={`w-5 h-5 rounded-sm border flex items-center justify-center flex-shrink-0 ${combo.highlight ? "border-white/20 bg-white/5" : "border-gray-200 bg-white"}`}>
-                        <span className={`text-[10px] ${combo.highlight ? "text-white/30" : "text-gray-300"}`}>▪</span>
+                      <div className={`w-5 h-5 rounded-sm border flex items-center justify-center flex-shrink-0 ${combo.highlight ? "border-white/20 bg-white/5" : "border-gray-300 bg-white"}`}>
+                        <span className={`text-[10px] ${combo.highlight ? "text-white/55" : "text-gray-500"}`}>▪</span>
                       </div>
                       {p}
                     </div>
@@ -120,7 +120,7 @@ export function CombosSection() {
 
               {/* Benefits */}
               <div className={`px-8 py-6 flex-1 border-b ${combo.highlight ? "border-white/10" : "border-gray-200"}`}>
-                <div className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? "text-white/30" : "text-gray-400"}`}>
+                <div className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? "text-white/55" : "text-gray-600"}`}>
                   Beneficios
                 </div>
                 <ul className="space-y-2">
@@ -137,12 +137,12 @@ export function CombosSection() {
 
               {/* Saving + CTA */}
               <div className="px-8 py-6">
-                <div className={`text-xs font-mono mb-4 ${combo.highlight ? "text-white/40" : "text-gray-400"}`}>
+                <div className={`text-xs font-mono mb-4 ${combo.highlight ? "text-white/65" : "text-gray-600"}`}>
                   {combo.saving}
                 </div>
                 <button className={`w-full py-3.5 rounded-full font-semibold text-sm transition-colors ${
                   combo.highlight
-                    ? "bg-white text-oliva hover:bg-paja/40"
+                    ? "bg-white text-oliva hover:bg-paja"
                     : "bg-oliva text-white hover:bg-oliva"
                 }`}>
                   Solicitar presupuesto
@@ -154,9 +154,9 @@ export function CombosSection() {
 
         {/* Custom combo CTA */}
         <div className="mt-10 border border-dashed border-gray-300 rounded-sm p-8 text-center">
-          <p className="text-gray-500 mb-2 font-medium">¿Necesitás un combo personalizado para tu operación?</p>
-          <p className="text-gray-400 text-sm mb-5">[Texto — Nuestro equipo técnico diseña paquetes a medida según tu cultivo, superficie y objetivos.]</p>
-          <button className="border border-gray-400 text-gray-600 px-7 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors">
+          <p className="text-gray-700 mb-2 font-medium">¿Necesitás un combo personalizado para tu operación?</p>
+          <p className="text-gray-600 text-sm mb-5">[Texto — Nuestro equipo técnico diseña paquetes a medida según tu cultivo, superficie y objetivos.]</p>
+          <button className="border border-gray-400 text-gray-600 px-7 py-3 rounded-full text-sm font-medium hover:bg-paja transition-colors">
             Hablar con un asesor →
           </button>
         </div>

@@ -29,7 +29,7 @@ export function PortfolioHero() {
               Recuperación de suelos degradados en zona pampeana
             </h3>
             <div className="flex items-center gap-3">
-              <span className="text-white/40 text-sm">Pool de siembra — 4.800 ha</span>
+              <span className="text-white/65 text-sm">Pool de siembra — 4.800 ha</span>
               <span className="bg-white text-oliva text-xs font-bold px-3 py-1 rounded-full">+22% MO en suelo</span>
             </div>
           </div>
@@ -44,9 +44,9 @@ export function PortfolioHero() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-5">
-            <span className="bg-white/10 border border-white/20 text-white/50 text-[10px] font-mono px-2.5 py-1 rounded-full">Compostaje</span>
+            <span className="bg-white/10 border border-white/20 text-white/70 text-[10px] font-mono px-2.5 py-1 rounded-full">Compostaje</span>
             <p className="text-white/70 text-sm font-medium mt-2 leading-snug">Planta de compostaje — Frigorífico del Norte</p>
-            <span className="text-white/40 text-xs font-mono">800 tn/mes valorizadas</span>
+            <span className="text-white/65 text-xs font-mono">800 tn/mes valorizadas</span>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ export function PortfolioHero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3.5">
-                <p className="text-white/50 text-[10px] font-mono mb-1">{item.label}</p>
+                <p className="text-white/70 text-[10px] font-mono mb-1">{item.label}</p>
                 <p className="text-white/70 text-xs font-medium leading-tight">{item.client}</p>
                 <span className="text-white/35 text-[10px] font-mono">{item.result}</span>
               </div>
@@ -79,13 +79,13 @@ export function PortfolioHero() {
           {/* Left — headline */}
           <div className="lg:col-span-5">
             <div className="inline-block border border-white/20 px-3 py-1 mb-4">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-[0.2em]">Portfolio</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Portfolio</span>
             </div>
             <h1 className="text-white leading-tight mb-3">
               Casos reales.<br />
-              <span className="text-white/40">Resultados comprobados.</span>
+              <span className="text-white/65">Resultados comprobados.</span>
             </h1>
-            <p className="text-white/40 leading-relaxed max-w-md">
+            <p className="text-white/65 leading-relaxed max-w-md">
               [Subtítulo — Proyectos documentados con métricas reales para productores, empresas e industrias.]
             </p>
           </div>
@@ -95,14 +95,14 @@ export function PortfolioHero() {
             {stats.map((s) => (
               <div key={s.label} className="text-center">
                 <div className="text-xl font-bold text-white">{s.value}</div>
-                <div className="text-white/30 text-xs font-mono">{s.label}</div>
+                <div className="text-white/55 text-xs font-mono">{s.label}</div>
               </div>
             ))}
           </div>
 
           {/* Right — CTAs */}
           <div className="lg:col-span-3 flex gap-3 justify-start lg:justify-end">
-            <button className="bg-white text-oliva px-6 py-3 rounded-full font-semibold text-sm hover:bg-paja/40 transition-colors whitespace-nowrap">
+            <button className="bg-white text-oliva px-6 py-3 rounded-full font-semibold text-sm hover:bg-paja transition-colors whitespace-nowrap">
               Ver proyectos
             </button>
             <button className="border border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors whitespace-nowrap">
