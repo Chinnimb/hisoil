@@ -14,20 +14,20 @@ const mockProducts = [
 export function AreaMiembros() {
   return (
     <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
-      {/* Background image — moss macro with sprouts */}
+      {/* Background image — moss macro with sprouts (the image you sent) */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1582730147924-d2cf2d5b3636?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+          src="/moss-membresia.jpg"
           alt=""
           className="w-full h-full object-cover"
           aria-hidden="true"
         />
-        {/* Strong dark green overlay for legibility */}
-        <div className="absolute inset-0 bg-[#14201A]/75" />
-        {/* Left-to-right gradient: very dark on left where text sits, lighter on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#14201A]/90 via-[#14201A]/55 to-transparent" />
-        {/* Subtle blur for glass texture */}
-        <div className="absolute inset-0 backdrop-blur-[1px]" />
+        {/* Strong dark base overlay for full-section legibility */}
+        <div className="absolute inset-0 bg-[#14201A]/72" />
+        {/* Left-to-right gradient: very dark on left (where title sits), softer on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#14201A]/85 via-[#14201A]/50 to-[#14201A]/30" />
+        {/* Bottom darkening to frame the dashboard mockup */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#14201A]/60 via-transparent to-transparent" />
       </div>
 
       <div className="relative max-w-[1600px] mx-auto w-full">
