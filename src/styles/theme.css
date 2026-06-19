@@ -9,26 +9,26 @@
   --font-mono:     'IBM Plex Mono', monospace; /* eyebrows, tags, data */
 
   /* ── Hisoil brand palette ── */
-  --color-oliva:   #515E18;  /* dark olive — primary */
+  --color-oliva:   #2EA549;  /* Hisoil green (from logo SOIL) — primary */
   --color-lima:    #B8C521;  /* lima — accent bright */
   --color-nata:    #FFF0E5;  /* nata — warm background */
   --color-canola:  #FFF7BD;  /* canola — yellow */
   --color-paja:    #F3F3D0;  /* paja — light olive bg */
 
-  --background: #FFF0E5;
-  --foreground: #2A2A1A;
+  --background: #FFFFFF;
+  --foreground: #1F2A1A;
   --card: #FFFFFF;
-  --card-foreground: #2A2A1A;
+  --card-foreground: #1F2A1A;
   --popover: #FFFFFF;
-  --popover-foreground: #2A2A1A;
-  --primary: #515E18;
-  --primary-foreground: #FFF0E5;
+  --popover-foreground: #1F2A1A;
+  --primary: #2EA549;
+  --primary-foreground: #FFFFFF;
   --secondary: #F3F3D0;
-  --secondary-foreground: #515E18;
+  --secondary-foreground: #1F2A1A;
   --muted: #F3F3D0;
-  --muted-foreground: #6F7A4A;
+  --muted-foreground: #4B6B3F;
   --accent: #B8C521;
-  --accent-foreground: #2A2A1A;
+  --accent-foreground: #1F2A1A;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
