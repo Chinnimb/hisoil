@@ -13,7 +13,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-oliva text-white py-16">
+    <footer className="bg-[#14201A] text-white py-16">
       <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -23,7 +23,7 @@ export function Footer() {
               alt="HISOIL"
               className="h-12 w-auto"
             />
-            <p className="text-gray-600 leading-relaxed text-sm">
+            <p className="text-white/65 leading-relaxed text-sm">
               Soluciones agrícolas sostenibles que transforman residuos en valor para tu campo.
             </p>
           </div>
@@ -35,7 +35,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href="#" className="text-gray-600 hover:text-white transition-colors text-sm">
+                    <a href="#" className="text-white/65 hover:text-lima transition-colors text-sm">
                       {link}
                     </a>
                   </li>
@@ -49,16 +49,16 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-4">Contacto</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-600 text-sm">Ruta 9 Km 142<br />Pergamino, Buenos Aires</span>
+                <MapPin className="w-5 h-5 text-lima flex-shrink-0 mt-0.5" />
+                <span className="text-white/75 text-sm">Ruta 9 Km 142<br />Pergamino, Buenos Aires</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gray-600 flex-shrink-0" />
-                <span className="text-gray-600 text-sm">0800-HISOIL (447645)</span>
+                <Phone className="w-5 h-5 text-lima flex-shrink-0" />
+                <span className="text-white/75 text-sm">0800-HISOIL (447645)</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-gray-600 flex-shrink-0" />
-                <span className="text-gray-600 text-sm">info@hisoil.com.ar</span>
+                <Mail className="w-5 h-5 text-lima flex-shrink-0" />
+                <span className="text-white/75 text-sm">info@hisoil.com.ar</span>
               </div>
             </div>
 
@@ -70,9 +70,9 @@ export function Footer() {
                   <a
                     key={index}
                     href="#"
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
+                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-lima/20 hover:text-lima transition-colors"
                   >
-                    <Icon className="w-5 h-5 text-gray-600" />
+                    <Icon className="w-5 h-5 text-white/75" />
                   </a>
                 ))}
               </div>
@@ -81,19 +81,19 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800">
+        <div className="pt-8 border-t border-white/15">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-700 text-sm">
+            <p className="text-white/55 text-sm">
               © 2026 Hisoil. Todos los derechos reservados.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-700 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
                 Privacidad
               </a>
-              <a href="#" className="text-gray-700 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
                 Términos y condiciones
               </a>
-              <a href="#" className="text-gray-700 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
                 Cookies
               </a>
             </div>
