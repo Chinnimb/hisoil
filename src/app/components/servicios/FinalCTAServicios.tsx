@@ -14,20 +14,20 @@ export function FinalCTAServicios() {
 
           <div className="relative z-10">
             <div className="inline-block border border-white/20 px-3 py-1 mb-8">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">11 — Contacto final</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">11 — Contacto final</span>
             </div>
 
             <h2 className="text-white max-w-3xl mx-auto mb-6">
               Hablemos de tu proyecto.
             </h2>
 
-            <p className="text-white/50 max-w-xl mx-auto mb-12 leading-relaxed">
+            <p className="text-white/70 max-w-xl mx-auto mb-12 leading-relaxed">
               [Texto de apoyo — Diagnóstico inicial gratuito. El equipo técnico de Hisoil
               analiza tu operación y propone una solución a medida en menos de 48 horas.]
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-              <button className="bg-white text-oliva px-10 py-4 rounded-full font-medium hover:bg-paja/40 transition-colors">
+              <button className="bg-white text-oliva px-10 py-4 rounded-full font-medium hover:bg-paja transition-colors">
                 Solicitar Presupuesto
               </button>
               <button className="border border-white/30 text-white px-10 py-4 rounded-full font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-3">
@@ -39,7 +39,7 @@ export function FinalCTAServicios() {
             </div>
 
             {/* Micro-trust */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm text-white/30">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm text-white/55">
               {["Diagnóstico inicial sin costo", "Respuesta en menos de 24 hs", "Sin compromisos en la primera consulta"].map((t) => (
                 <div key={t} className="flex items-center gap-2">
                   <div className="w-4 h-4 border border-white/20 rounded-full flex items-center justify-center">

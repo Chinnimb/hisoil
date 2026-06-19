@@ -44,10 +44,10 @@ export function PortfolioTestimonials() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">09 — Testimonios</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">09 — Testimonios</span>
           </div>
           <h2 className="text-oliva mb-3">La voz de quienes trabajaron con Hisoil</h2>
-          <p className="text-gray-500 leading-relaxed max-w-xl">
+          <p className="text-gray-700 leading-relaxed max-w-xl">
             [Descripción — Testimonios de clientes reales que documentaron su experiencia y los resultados obtenidos en sus proyectos.]
           </p>
         </div>
@@ -56,14 +56,14 @@ export function PortfolioTestimonials() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`border border-gray-200 rounded-sm p-8 flex flex-col relative ${i === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+              className={`border border-gray-300 rounded-sm p-8 flex flex-col relative ${i === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
             >
               {/* Quote mark */}
               <div className="text-gray-100 font-serif text-7xl leading-none mb-2 select-none absolute top-6 right-7">"</div>
 
               {/* Project tag */}
               <div className="flex items-center gap-2 mb-6">
-                <span className="bg-paja/40 text-gray-500 text-xs font-mono px-2.5 py-1 rounded-full">
+                <span className="bg-paja text-gray-700 text-xs font-mono px-2.5 py-1 rounded-full">
                   {t.project}
                 </span>
                 <span className="bg-oliva text-white text-xs font-mono px-2.5 py-1 rounded-full">
@@ -77,7 +77,7 @@ export function PortfolioTestimonials() {
               </p>
 
               {/* Person */}
-              <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
                 {/* Avatar placeholder */}
                 <div className="w-11 h-11 rounded-full overflow-hidden flex-shrink-0 border border-gray-200">
                   <img
@@ -92,10 +92,10 @@ export function PortfolioTestimonials() {
                 </div>
                 <div>
                   <div className="font-semibold text-oliva text-sm">{t.name}</div>
-                  <div className="text-gray-400 text-xs font-mono">{t.role} · {t.company}</div>
+                  <div className="text-gray-600 text-xs font-mono">{t.role} · {t.company}</div>
                 </div>
                 <div className="ml-auto">
-                  <span className="text-gray-300 text-xs font-mono">{t.sector}</span>
+                  <span className="text-gray-500 text-xs font-mono">{t.sector}</span>
                 </div>
               </div>
             </div>

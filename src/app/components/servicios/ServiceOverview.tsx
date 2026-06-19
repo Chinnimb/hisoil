@@ -25,7 +25,7 @@ export function ServiceOverview() {
           {/* Right — content */}
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">02 — Servicio principal</span>
+              <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">02 — Servicio principal</span>
             </div>
 
             <h2 className="text-oliva mb-6">Tratamiento de Residuos</h2>
@@ -33,28 +33,28 @@ export function ServiceOverview() {
             <div className="space-y-4 mb-10">
               <div>
                 <h4 className="text-gray-700 font-semibold text-sm uppercase tracking-wide mb-1">¿Qué es?</h4>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm">
                   [Descripción del servicio — qué procesos incluye, tecnologías utilizadas y
                   alcance del tratamiento ofrecido por Hisoil.]
                 </p>
               </div>
               <div>
                 <h4 className="text-gray-700 font-semibold text-sm uppercase tracking-wide mb-1">¿Qué problemas resuelve?</h4>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm">
                   [Problemas que resuelve — acumulación de efluentes, incumplimiento normativo,
                   costos de disposición, riesgo ambiental y sanitario.]
                 </p>
               </div>
               <div>
                 <h4 className="text-gray-700 font-semibold text-sm uppercase tracking-wide mb-1">Impacto ambiental</h4>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm">
                   [Impacto ambiental — reducción de contaminación, recuperación de suelos y agua,
                   cumplimiento de normativas ambientales vigentes.]
                 </p>
               </div>
               <div>
                 <h4 className="text-gray-700 font-semibold text-sm uppercase tracking-wide mb-1">Impacto en el negocio</h4>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm">
                   [Impacto en el negocio — ahorro en costos de disposición, evitar multas y
                   sanciones, mejora de imagen corporativa y habilitación de mercados.]
                 </p>
@@ -64,10 +64,10 @@ export function ServiceOverview() {
             {/* KPI cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {kpis.map((kpi) => (
-                <div key={kpi.label} className="bg-paja/30 border border-gray-200 p-5 rounded-sm">
+                <div key={kpi.label} className="bg-paja border border-gray-300 p-5 rounded-sm">
                   <div className="text-2xl font-bold text-oliva mb-1">{kpi.value}</div>
                   <div className="text-xs font-medium text-gray-600 leading-tight mb-1">{kpi.label}</div>
-                  <div className="text-xs text-gray-400 font-mono">{kpi.sub}</div>
+                  <div className="text-xs text-gray-600 font-mono">{kpi.sub}</div>
                 </div>
               ))}
             </div>

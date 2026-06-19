@@ -28,25 +28,25 @@ export function FormularioPresupuesto() {
           {/* Left — form */}
           <div className="lg:col-span-7">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">02 — Formulario</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">02 — Formulario</span>
             </div>
             <h2 className="text-oliva mb-3">Solicitá tu presupuesto.</h2>
-            <p className="text-gray-500 mb-10 leading-relaxed">
+            <p className="text-gray-700 mb-10 leading-relaxed">
               Completá el formulario y un asesor técnico se contacta con vos en menos de 24 horas hábiles.
             </p>
 
             {sent ? (
-              <div className="border border-gray-200 rounded-sm p-12 text-center">
-                <div className="w-12 h-12 bg-paja/40 border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-gray-500 text-lg">✓</span>
+              <div className="border border-gray-300 rounded-sm p-12 text-center">
+                <div className="w-12 h-12 bg-paja border border-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gray-700 text-lg">✓</span>
                 </div>
                 <div className="text-oliva font-semibold text-lg mb-2">Solicitud recibida</div>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-700 text-sm">
                   Un asesor técnico se pondrá en contacto con vos en menos de 24 horas hábiles.
                 </p>
                 <button
                   onClick={() => setSent(false)}
-                  className="mt-6 text-gray-400 text-xs font-mono underline hover:text-gray-600"
+                  className="mt-6 text-gray-600 text-xs font-mono underline hover:text-gray-600"
                 >
                   Enviar otra consulta
                 </button>
@@ -58,7 +58,7 @@ export function FormularioPresupuesto() {
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+                    <label className="block text-xs font-mono text-gray-700 uppercase tracking-widest mb-2">
                       Nombre *
                     </label>
                     <input
@@ -69,7 +69,7 @@ export function FormularioPresupuesto() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+                    <label className="block text-xs font-mono text-gray-700 uppercase tracking-widest mb-2">
                       Empresa
                     </label>
                     <input
@@ -82,7 +82,7 @@ export function FormularioPresupuesto() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+                    <label className="block text-xs font-mono text-gray-700 uppercase tracking-widest mb-2">
                       Email *
                     </label>
                     <input
@@ -93,7 +93,7 @@ export function FormularioPresupuesto() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+                    <label className="block text-xs font-mono text-gray-700 uppercase tracking-widest mb-2">
                       Teléfono
                     </label>
                     <input
@@ -105,7 +105,7 @@ export function FormularioPresupuesto() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+                  <label className="block text-xs font-mono text-gray-700 uppercase tracking-widest mb-2">
                     Tipo de consulta *
                   </label>
                   <select
@@ -119,7 +119,7 @@ export function FormularioPresupuesto() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-gray-500 uppercase tracking-widest mb-2">
+                  <label className="block text-xs font-mono text-gray-700 uppercase tracking-widest mb-2">
                     Mensaje
                   </label>
                   <textarea
@@ -136,7 +136,7 @@ export function FormularioPresupuesto() {
                   Enviar solicitud
                 </button>
 
-                <p className="text-gray-400 text-xs font-mono text-center">
+                <p className="text-gray-600 text-xs font-mono text-center">
                   * Campos obligatorios. Tu información es confidencial y no será compartida.
                 </p>
               </form>
@@ -145,13 +145,13 @@ export function FormularioPresupuesto() {
 
           {/* Right — trust signals */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="bg-paja/30 border border-gray-200 rounded-sm p-8 mb-6">
-              <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-5">Por qué elegirnos</div>
+            <div className="bg-paja border border-gray-300 rounded-sm p-8 mb-6">
+              <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-5">Por qué elegirnos</div>
               <div className="space-y-4">
                 {trustSignals.map((s) => (
                   <div key={s} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full border border-gray-300 bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-gray-500 text-[10px]">✓</span>
+                      <span className="text-gray-700 text-[10px]">✓</span>
                     </div>
                     <span className="text-gray-600 text-sm leading-relaxed">{s}</span>
                   </div>
@@ -161,7 +161,7 @@ export function FormularioPresupuesto() {
 
             {/* WhatsApp shortcut */}
             <div className="bg-oliva border border-gray-800 rounded-sm p-6">
-              <div className="text-white/40 text-xs font-mono uppercase tracking-widest mb-2">
+              <div className="text-white/65 text-xs font-mono uppercase tracking-widest mb-2">
                 ¿Necesitás una respuesta rápida?
               </div>
               <div className="text-white font-semibold mb-4">

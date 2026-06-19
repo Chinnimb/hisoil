@@ -41,22 +41,22 @@ const caseStudies = [
 
 export function ClientsResults() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">05 — Clientes y resultados</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">05 — Clientes y resultados</span>
           </div>
           <h2 className="text-oliva mb-4">Empresas que confían en Hisoil</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Descripción breve de la base de clientes, sectores atendidos y tipo de proyectos realizados.]
           </p>
         </div>
 
         {/* Logo wall */}
-        <div className="border border-gray-200 bg-white rounded-sm p-8 md:p-12 mb-20">
-          <p className="text-xs font-mono text-gray-400 uppercase tracking-widest text-center mb-8">
+        <div className="border border-gray-300 bg-white rounded-sm p-8 md:p-12 mb-20">
+          <p className="text-xs font-mono text-gray-600 uppercase tracking-widest text-center mb-8">
             Logos de clientes — placeholder
           </p>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-200">
@@ -66,10 +66,10 @@ export function ClientsResults() {
                 className="bg-white aspect-[3/2] flex items-center justify-center"
               >
                 <div className="text-center">
-                  <div className="w-10 h-10 bg-paja/40 border border-gray-200 rounded-sm mx-auto mb-1 flex items-center justify-center">
-                    <span className="text-gray-300 text-xs font-mono">{logo.id}</span>
+                  <div className="w-10 h-10 bg-paja border border-gray-300 rounded-sm mx-auto mb-1 flex items-center justify-center">
+                    <span className="text-gray-500 text-xs font-mono">{logo.id}</span>
                   </div>
-                  <span className="text-gray-300 text-[10px] font-mono">{logo.label}</span>
+                  <span className="text-gray-500 text-[10px] font-mono">{logo.label}</span>
                 </div>
               </div>
             ))}
@@ -81,36 +81,36 @@ export function ClientsResults() {
           {caseStudies.map((cs, i) => (
             <div key={i} className="card-gradient-border overflow-hidden flex flex-col">
               {/* Card header */}
-              <div className="bg-paja/40 px-6 py-5 border-b border-gray-200">
+              <div className="bg-paja px-6 py-5 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-2">
                   <div className="w-12 h-8 bg-gray-200 rounded-sm flex items-center justify-center">
                     <span className="text-gray-600 text-[9px] font-bold uppercase tracking-wider">{cs.client.slice(0, 4)}</span>
                   </div>
-                  <span className="text-xs font-mono text-gray-400 bg-white border border-gray-200 px-2 py-1 rounded-full">
+                  <span className="text-xs font-mono text-gray-600 bg-white border border-gray-300 px-2 py-1 rounded-full">
                     {cs.tag}
                   </span>
                 </div>
                 <div className="font-semibold text-gray-800 text-sm">{cs.client}</div>
-                <div className="text-xs text-gray-400 font-mono mt-0.5">{cs.sector}</div>
+                <div className="text-xs text-gray-600 font-mono mt-0.5">{cs.sector}</div>
               </div>
 
               {/* Body */}
               <div className="p-6 flex-1 space-y-4">
                 <div>
-                  <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Problema</div>
+                  <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Problema</div>
                   <p className="text-gray-600 text-sm leading-relaxed">{cs.problem}</p>
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Solución</div>
+                  <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Solución</div>
                   <p className="text-gray-600 text-sm leading-relaxed">{cs.solution}</p>
                 </div>
               </div>
 
               {/* Result */}
               <div className="bg-oliva text-white px-6 py-5">
-                <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Resultado</div>
+                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Resultado</div>
                 <div className="font-bold text-lg">{cs.result}</div>
-                <div className="text-gray-400 text-sm">{cs.resultSub}</div>
+                <div className="text-gray-600 text-sm">{cs.resultSub}</div>
               </div>
             </div>
           ))}

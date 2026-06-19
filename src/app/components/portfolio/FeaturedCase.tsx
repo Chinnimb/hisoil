@@ -21,19 +21,19 @@ export function FeaturedCase() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-16">
           <div className="max-w-2xl">
             <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">05 — Caso destacado</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">05 — Caso destacado</span>
             </div>
             <h2 className="text-white mb-4">Tratamiento de efluentes para empresa frigorífica de exportación</h2>
             <div className="flex flex-wrap gap-3">
-              <span className="bg-white/10 border border-white/20 text-white/50 text-xs font-mono px-3 py-1.5 rounded-full">Tratamiento de residuos</span>
-              <span className="bg-white/10 border border-white/20 text-white/50 text-xs font-mono px-3 py-1.5 rounded-full">Industria alimentaria</span>
-              <span className="bg-white/10 border border-white/20 text-white/50 text-xs font-mono px-3 py-1.5 rounded-full">2024</span>
+              <span className="bg-white/10 border border-white/20 text-white/70 text-xs font-mono px-3 py-1.5 rounded-full">Tratamiento de residuos</span>
+              <span className="bg-white/10 border border-white/20 text-white/70 text-xs font-mono px-3 py-1.5 rounded-full">Industria alimentaria</span>
+              <span className="bg-white/10 border border-white/20 text-white/70 text-xs font-mono px-3 py-1.5 rounded-full">2024</span>
             </div>
           </div>
           <div className="flex-shrink-0 text-right">
             <div className="text-white/20 text-xs font-mono mb-1">Cliente</div>
             <div className="text-white/60 text-sm font-medium">Frigorífico [Nombre] S.A.</div>
-            <div className="text-white/30 text-xs font-mono mt-0.5">NEA — Planta 3.200 t/mes</div>
+            <div className="text-white/55 text-xs font-mono mt-0.5">NEA — Planta 3.200 t/mes</div>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export function FeaturedCase() {
           {/* Problem */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="text-xs font-mono text-white/25 uppercase tracking-widest mb-4 flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/40 text-xs">!</div>
+              <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/65 text-xs">!</div>
               El problema
             </div>
             <h3 className="text-white text-xl font-semibold mb-5">
@@ -71,7 +71,7 @@ export function FeaturedCase() {
                   <div className="w-4 h-4 rounded-full border border-white/15 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <div className="w-1.5 h-1.5 bg-white/25 rounded-full" />
                   </div>
-                  <span className="text-white/40 text-sm">{item}</span>
+                  <span className="text-white/65 text-sm">{item}</span>
                 </div>
               ))}
             </div>
@@ -81,7 +81,7 @@ export function FeaturedCase() {
         {/* Solution */}
         <div className="bg-white/5 border border-white/10 rounded-sm p-8 md:p-10 mb-8">
           <div className="text-xs font-mono text-white/25 uppercase tracking-widest mb-6 flex items-center gap-3">
-            <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/40 text-xs">→</div>
+            <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/65 text-xs">→</div>
             La solución
           </div>
           <h3 className="text-white text-xl font-semibold mb-4">
@@ -97,7 +97,7 @@ export function FeaturedCase() {
               <div key={t.step} className="flex gap-6">
                 <div className="flex flex-col items-center">
                   <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 z-10">
-                    <span className="text-white/50 text-xs font-mono">{t.step}</span>
+                    <span className="text-white/70 text-xs font-mono">{t.step}</span>
                   </div>
                   {i < timeline.length - 1 && <div className="w-px flex-1 bg-white/10 my-1" style={{ minHeight: 24 }} />}
                 </div>
@@ -106,7 +106,7 @@ export function FeaturedCase() {
                     <span className="text-white/70 font-semibold text-sm">{t.phase}</span>
                     <span className="text-white/25 text-xs font-mono">{t.weeks}</span>
                   </div>
-                  <p className="text-white/40 text-sm leading-relaxed">{t.desc}</p>
+                  <p className="text-white/65 text-sm leading-relaxed">{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -116,7 +116,7 @@ export function FeaturedCase() {
         {/* Result metrics */}
         <div>
           <div className="text-xs font-mono text-white/25 uppercase tracking-widest mb-6 flex items-center gap-3">
-            <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/40 text-xs">✓</div>
+            <div className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/65 text-xs">✓</div>
             Resultados obtenidos
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">

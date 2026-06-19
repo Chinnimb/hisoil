@@ -27,18 +27,18 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 items-end">
           <div className="lg:col-span-6">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">Cómo trabajamos</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">Cómo trabajamos</span>
             </div>
             <h2 className="text-oliva">De la consulta al resultado. Cuatro pasos.</h2>
           </div>
           <div className="lg:col-span-6">
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               Un proceso técnico y ordenado que garantiza que cada producto se aplique correctamente y que el cliente vea resultados medibles en cada campaña.
             </p>
           </div>
@@ -66,10 +66,10 @@ export function HowItWorks() {
             <div key={s.number} className="bg-white p-8 flex flex-col">
               <div className="text-gray-100 font-mono font-bold text-6xl leading-none mb-8">{s.number}</div>
               <h3 className="text-oliva font-semibold mb-3">{s.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-6">{s.description}</p>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-6">{s.description}</p>
               <div className="space-y-1.5">
                 {s.outputs.map((o) => (
-                  <div key={o} className="flex items-center gap-2 text-gray-400 text-xs font-mono">
+                  <div key={o} className="flex items-center gap-2 text-gray-600 text-xs font-mono">
                     <div className="w-1 h-1 bg-gray-300 rounded-full" />
                     {o}
                   </div>
@@ -80,7 +80,7 @@ export function HowItWorks() {
         </div>
 
         {/* CTA strip */}
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 border border-gray-200 bg-white rounded-sm">
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 border border-gray-300 bg-white rounded-sm">
           <div className="text-gray-600 text-sm">El diagnóstico inicial es sin costo y sin compromiso. Coordina en menos de 24 hs.</div>
           <button className="bg-oliva text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-oliva transition-colors flex-shrink-0">
             Solicitar diagnóstico

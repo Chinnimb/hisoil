@@ -57,14 +57,14 @@ export function ProductCategories() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div className="max-w-xl">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">02 — Categorías</span>
+              <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">02 — Categorías</span>
             </div>
             <h2 className="text-oliva mb-3">Explorá el catálogo por categoría</h2>
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               [Descripción — Seis líneas de productos formuladas con respaldo técnico para cada necesidad agronómica.]
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja/30 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-300 text-gray-700 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja transition-colors whitespace-nowrap">
             Ver catálogo completo →
           </button>
         </div>
@@ -74,7 +74,7 @@ export function ProductCategories() {
           {categories.map((cat) => (
             <div
               key={cat.id}
-              className="group border border-gray-200 rounded-sm overflow-hidden hover:border-gray-500 hover:shadow-md transition-all cursor-pointer"
+              className="group border border-gray-300 rounded-sm overflow-hidden hover:border-gray-500 hover:shadow-md transition-all cursor-pointer"
             >
               <div className="aspect-[16/9] relative overflow-hidden border-b border-gray-200">
                 <img
@@ -83,8 +83,8 @@ export function ProductCategories() {
                   className="w-full h-full object-cover transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <div className="absolute top-3 right-3 bg-white border border-gray-200 px-2.5 py-1 rounded-full">
-                  <span className="text-gray-500 text-xs font-mono">{cat.count} productos</span>
+                <div className="absolute top-3 right-3 bg-white border border-gray-300 px-2.5 py-1 rounded-full">
+                  <span className="text-gray-700 text-xs font-mono">{cat.count} productos</span>
                 </div>
                 <div className="absolute bottom-3 left-3 bg-oliva text-white px-2.5 py-1 rounded-full">
                   <span className="text-xs font-mono">{cat.tag}</span>
@@ -94,9 +94,9 @@ export function ProductCategories() {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-oliva font-semibold text-lg mb-2">{cat.name}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">{cat.description}</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-5">{cat.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-400 text-xs font-mono">{cat.count} productos disponibles</span>
+                  <span className="text-gray-600 text-xs font-mono">{cat.count} productos disponibles</span>
                   <span className="text-gray-700 text-sm font-medium group-hover:text-oliva transition-colors flex items-center gap-1">
                     Ver productos <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
                   </span>

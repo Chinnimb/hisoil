@@ -30,11 +30,11 @@ export function Benefits() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-            <span className="text-white/40 text-xs font-mono uppercase tracking-widest">Impacto comprobado</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-widest">Impacto comprobado</span>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <h2 className="text-white lg:col-span-6">Números que respaldan cada campaña.</h2>
-            <p className="text-white/40 lg:col-span-6 leading-relaxed">
+            <p className="text-white/65 lg:col-span-6 leading-relaxed">
               Estos resultados no son de laboratorio. Son del campo de clientes reales, medidos en campaña y documentados por nuestro equipo técnico.
             </p>
           </div>
@@ -71,7 +71,7 @@ export function Benefits() {
                   0{i + 1}
                 </div>
                 <h3 className="text-white font-semibold mb-4 relative z-10">{p.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed relative z-10">{p.body}</p>
+                <p className="text-white/65 text-sm leading-relaxed relative z-10">{p.body}</p>
               </div>
             </div>
           ))}

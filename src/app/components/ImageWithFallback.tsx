@@ -11,7 +11,7 @@ export function ImageWithFallback({ src, alt, className, style, ...props }: Imag
   if (error) {
     return (
       <div className={`bg-gray-200 flex items-center justify-center ${className}`} style={style}>
-        <span className="text-gray-400 text-sm">Image unavailable</span>
+        <span className="text-gray-600 text-sm">Image unavailable</span>
       </div>
     );
   }

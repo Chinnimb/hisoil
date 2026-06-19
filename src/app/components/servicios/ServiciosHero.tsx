@@ -1,6 +1,6 @@
 export function ServiciosHero() {
   return (
-    <section className="relative min-h-screen bg-paja/40 flex flex-col">
+    <section className="relative min-h-screen bg-paja flex flex-col">
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1440&q=80&fit=crop"
@@ -29,7 +29,7 @@ export function ServiciosHero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-oliva px-9 py-4 rounded-full font-medium hover:bg-paja/40 transition-colors">
+          <button className="bg-white text-oliva px-9 py-4 rounded-full font-medium hover:bg-paja transition-colors">
             Solicitar Presupuesto
           </button>
           <button className="border border-white text-white px-9 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
@@ -47,7 +47,7 @@ export function ServiciosHero() {
             "Cobertura nacional",
             "Respuesta en 24 hs",
           ].map((item) => (
-            <div key={item} className="flex items-center gap-2 text-white/50 text-sm font-mono">
+            <div key={item} className="flex items-center gap-2 text-white/70 text-sm font-mono">
               <div className="w-1.5 h-1.5 bg-white/30 rounded-full" />
               {item}
             </div>

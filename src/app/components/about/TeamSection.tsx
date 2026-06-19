@@ -11,22 +11,22 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-xl">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">08 — Equipo</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">08 — Equipo</span>
             </div>
             <h2 className="text-oliva mb-3">Las personas detrás de Hisoil</h2>
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               [Descripción — Un equipo multidisciplinario de agrónomos, ingenieros ambientales, técnicos de campo y especialistas en biología de suelos comprometidos con cada proyecto.]
             </p>
           </div>
           <div className="flex gap-2 flex-shrink-0">
-            <div className="bg-white border border-gray-200 px-4 py-2 rounded-full text-xs font-mono text-gray-500">+35 profesionales</div>
-            <div className="bg-white border border-gray-200 px-4 py-2 rounded-full text-xs font-mono text-gray-500">5 disciplinas</div>
+            <div className="bg-white border border-gray-300 px-4 py-2 rounded-full text-xs font-mono text-gray-700">+35 profesionales</div>
+            <div className="bg-white border border-gray-300 px-4 py-2 rounded-full text-xs font-mono text-gray-700">5 disciplinas</div>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export function TeamSection() {
                 </div>
 
                 {/* LinkedIn */}
-                <div className="absolute top-3 right-3 w-7 h-7 bg-white/80 border border-gray-200 rounded-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-3 right-3 w-7 h-7 bg-white/80 border border-gray-300 rounded-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-gray-600 text-xs font-bold">in</span>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export function TeamSection() {
               {/* Info */}
               <div className="p-5">
                 <div className="font-semibold text-oliva text-sm">{member.name}</div>
-                <div className="text-gray-500 text-xs mt-0.5">{member.role}</div>
+                <div className="text-gray-700 text-xs mt-0.5">{member.role}</div>
               </div>
             </div>
           ))}
@@ -70,8 +70,8 @@ export function TeamSection() {
 
         {/* CTA */}
         <div className="mt-10 text-center border border-dashed border-gray-300 rounded-sm py-8 px-6">
-          <p className="text-gray-500 text-sm mb-4">¿Querés conocer a todo el equipo técnico?</p>
-          <button className="border border-gray-400 text-gray-600 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors">
+          <p className="text-gray-700 text-sm mb-4">¿Querés conocer a todo el equipo técnico?</p>
+          <button className="border border-gray-400 text-gray-600 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja transition-colors">
             Ver todos los profesionales
           </button>
         </div>

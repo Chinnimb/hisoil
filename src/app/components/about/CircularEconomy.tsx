@@ -44,7 +44,7 @@ export function CircularEconomy() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
           <div className="lg:col-span-7">
             <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">06 — Compromiso ambiental</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">06 — Compromiso ambiental</span>
             </div>
             <h2 className="text-white mb-6">Comprometidos con la economía circular</h2>
             <p className="text-white/45 leading-relaxed text-lg">
@@ -56,7 +56,7 @@ export function CircularEconomy() {
               {metrics.map((m) => (
                 <div key={m.label} className="bg-oliva p-6 text-center">
                   <div className="text-2xl font-bold text-white mb-1">{m.value}</div>
-                  <div className="text-white/50 text-xs font-semibold mb-0.5 leading-tight">{m.label}</div>
+                  <div className="text-white/70 text-xs font-semibold mb-0.5 leading-tight">{m.label}</div>
                   <div className="text-white/25 text-[10px] font-mono">{m.sub}</div>
                 </div>
               ))}
@@ -82,13 +82,13 @@ export function CircularEconomy() {
               </div>
               <div className="text-white/20 font-mono font-bold text-3xl mb-2">{f.step}</div>
               <h3 className="text-white text-lg font-semibold mb-3">{f.title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed mb-5">{f.desc}</p>
+              <p className="text-white/65 text-sm leading-relaxed mb-5">{f.desc}</p>
 
               <div className="space-y-1.5">
                 {f.examples.map((ex) => (
                   <div key={ex} className="flex items-center gap-2">
                     <div className="w-1 h-1 bg-white/25 rounded-full" />
-                    <span className="text-white/30 text-xs font-mono">{ex}</span>
+                    <span className="text-white/55 text-xs font-mono">{ex}</span>
                   </div>
                 ))}
               </div>
@@ -109,10 +109,10 @@ export function CircularEconomy() {
               <div className="pb-8 flex-1">
                 <div className="text-white/20 text-xs font-mono mb-1">{f.step}</div>
                 <h3 className="text-white font-semibold mb-2">{f.title}</h3>
-                <p className="text-white/40 text-sm leading-relaxed mb-3">{f.desc}</p>
+                <p className="text-white/65 text-sm leading-relaxed mb-3">{f.desc}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {f.examples.map((ex) => (
-                    <span key={ex} className="bg-white/5 border border-white/10 text-white/30 text-xs font-mono px-2.5 py-1 rounded-full">{ex}</span>
+                    <span key={ex} className="bg-white/5 border border-white/10 text-white/55 text-xs font-mono px-2.5 py-1 rounded-full">{ex}</span>
                   ))}
                 </div>
               </div>
@@ -123,10 +123,10 @@ export function CircularEconomy() {
         {/* Bottom supporting text */}
         <div className="border border-white/10 rounded-sm p-8 md:p-10 mt-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <p className="text-white/40 leading-relaxed text-sm">
+            <p className="text-white/65 leading-relaxed text-sm">
               [Texto — Descripción del marco de economía circular que aplica Hisoil en sus proyectos: cómo se integra en el diseño de cada solución y qué beneficios genera para el cliente y el ecosistema.]
             </p>
-            <p className="text-white/40 leading-relaxed text-sm">
+            <p className="text-white/65 leading-relaxed text-sm">
               [Texto — Certificaciones ambientales obtenidas, compromisos medibles asumidos públicamente y alianzas estratégicas con organismos de control y entidades del sector.]
             </p>
           </div>

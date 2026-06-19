@@ -30,13 +30,13 @@ export function QueEsMembresia() {
           {/* Left */}
           <div className="lg:col-span-5">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">02 — ¿Qué es?</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">02 — ¿Qué es?</span>
             </div>
             <h2 className="text-oliva mb-6">Un programa diseñado para clientes que operan en serio.</h2>
-            <p className="text-gray-500 leading-relaxed mb-6">
+            <p className="text-gray-700 leading-relaxed mb-6">
               [Párrafo 1 — La Membresía Hisoil es un programa de suscripción anual para productores, empresas y profesionales agropecuarios que quieren acceso continuo a productos, técnicos y recursos.]
             </p>
-            <p className="text-gray-500 leading-relaxed mb-10">
+            <p className="text-gray-700 leading-relaxed mb-10">
               [Párrafo 2 — No es solo un descuento: es un sistema de trabajo colaborativo donde Hisoil acompaña cada etapa del proceso productivo, desde la planificación hasta el seguimiento de resultados.]
             </p>
 
@@ -56,17 +56,17 @@ export function QueEsMembresia() {
               <p className="text-gray-700 italic leading-relaxed">
                 "[Cita destacada — El cliente miembro tiene un equipo técnico propio sin pagar el costo de tenerlo en planta.]"
               </p>
-              <div className="mt-3 text-gray-400 text-xs font-mono">— Equipo técnico Hisoil</div>
+              <div className="mt-3 text-gray-600 text-xs font-mono">— Equipo técnico Hisoil</div>
             </div>
           </div>
 
           {/* Right — pillars */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-200 border border-gray-200">
             {pillars.map((p) => (
-              <div key={p.number} className="bg-white p-8 hover:bg-paja/30 transition-colors">
+              <div key={p.number} className="bg-white p-8 hover:bg-paja transition-colors">
                 <div className="text-gray-100 font-mono font-bold text-5xl leading-none mb-5">{p.number}</div>
                 <h3 className="text-oliva text-base font-semibold mb-3">{p.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{p.description}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">{p.description}</p>
               </div>
             ))}
           </div>

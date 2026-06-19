@@ -12,7 +12,7 @@ const sampleSchedule = [
 const statusStyle: Record<string, string> = {
   entregado: "bg-gray-200 text-gray-600",
   próximo: "bg-oliva text-white",
-  programado: "bg-paja/40 text-gray-400 border border-gray-200",
+  programado: "bg-paja text-gray-600 border border-gray-200",
 };
 
 export function EnviosRecurrentes() {
@@ -24,13 +24,13 @@ export function EnviosRecurrentes() {
           {/* Left — copy */}
           <div className="lg:col-span-5">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">06 — Envíos recurrentes</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">06 — Envíos recurrentes</span>
             </div>
             <h2 className="text-oliva mb-6">Los productos llegan cuando los necesitás, sin que tengas que pedirlos.</h2>
-            <p className="text-gray-500 leading-relaxed mb-6">
+            <p className="text-gray-700 leading-relaxed mb-6">
               [Descripción 1 — El sistema de envíos recurrentes de Hisoil te permite programar la entrega de los productos que usás regularmente según el calendario de tu campaña.]
             </p>
-            <p className="text-gray-500 leading-relaxed mb-10">
+            <p className="text-gray-700 leading-relaxed mb-10">
               [Descripción 2 — Podés ajustar cantidades, pausar temporalmente o agregar productos en cualquier momento desde el área de miembros, con al menos 5 días hábiles de anticipación.]
             </p>
 
@@ -40,11 +40,11 @@ export function EnviosRecurrentes() {
                 { title: "Notificaciones automáticas", body: "Aviso previo 7 días antes de cada envío" },
                 { title: "Sin costo adicional de envío", body: "Incluido en todos los planes de membresía" },
               ].map((f) => (
-                <div key={f.title} className="flex items-start gap-4 p-4 border border-gray-100 rounded-sm bg-paja/30">
+                <div key={f.title} className="flex items-start gap-4 p-4 border border-gray-300 rounded-sm bg-paja">
                   <div className="w-2 h-2 bg-oliva rounded-full mt-1.5 flex-shrink-0" />
                   <div>
                     <div className="text-oliva text-sm font-semibold">{f.title}</div>
-                    <div className="text-gray-400 text-xs font-mono mt-0.5">{f.body}</div>
+                    <div className="text-gray-600 text-xs font-mono mt-0.5">{f.body}</div>
                   </div>
                 </div>
               ))}
@@ -53,13 +53,13 @@ export function EnviosRecurrentes() {
 
           {/* Right — calendar mockup */}
           <div className="lg:col-span-7">
-            <div className="bg-paja/30 border border-gray-200 rounded-sm p-8">
+            <div className="bg-paja border border-gray-300 rounded-sm p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <div className="text-oliva font-semibold">Calendario de envíos</div>
-                  <div className="text-gray-400 text-xs font-mono">Campaña 2025 — Plan Profesional</div>
+                  <div className="text-gray-600 text-xs font-mono">Campaña 2025 — Plan Profesional</div>
                 </div>
-                <button className="border border-gray-300 text-gray-500 text-xs font-mono px-3 py-1.5 rounded-full hover:bg-paja/40 transition-colors">
+                <button className="border border-gray-300 text-gray-700 text-xs font-mono px-3 py-1.5 rounded-full hover:bg-paja transition-colors">
                   Editar calendario
                 </button>
               </div>
@@ -77,8 +77,8 @@ export function EnviosRecurrentes() {
                             ? "bg-oliva text-white"
                             : scheduled.status === "entregado"
                             ? "bg-gray-200 text-gray-600"
-                            : "bg-paja/40 border border-gray-300 text-gray-500"
-                          : "bg-white border border-gray-100 text-gray-300"
+                            : "bg-paja border border-gray-300 text-gray-700"
+                          : "bg-white border border-gray-300 text-gray-500"
                       }`}
                     >
                       {m}
@@ -90,12 +90,12 @@ export function EnviosRecurrentes() {
               {/* Schedule list */}
               <div className="space-y-2">
                 {sampleSchedule.map((item) => (
-                  <div key={item.month} className="flex items-center justify-between gap-4 py-2 border-b border-gray-100 last:border-0">
+                  <div key={item.month} className="flex items-center justify-between gap-4 py-2 border-b border-gray-300 last:border-0">
                     <div className="flex items-center gap-3">
-                      <span className="text-xs font-mono text-gray-400 w-8">{item.month}</span>
+                      <span className="text-xs font-mono text-gray-600 w-8">{item.month}</span>
                       <div className="flex flex-wrap gap-1.5">
                         {item.products.map((p) => (
-                          <span key={p} className="text-xs text-gray-600 bg-white border border-gray-200 px-2 py-0.5 rounded-full">{p}</span>
+                          <span key={p} className="text-xs text-gray-600 bg-white border border-gray-300 px-2 py-0.5 rounded-full">{p}</span>
                         ))}
                       </div>
                     </div>
@@ -106,10 +106,10 @@ export function EnviosRecurrentes() {
                 ))}
               </div>
 
-              <div className="mt-6 flex gap-3 text-[10px] font-mono text-gray-400">
+              <div className="mt-6 flex gap-3 text-[10px] font-mono text-gray-600">
                 <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-gray-200 inline-block" />Entregado</span>
                 <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-oliva inline-block" />Próximo</span>
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-paja/40 border border-gray-300 inline-block" />Programado</span>
+                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-paja border border-gray-300 inline-block" />Programado</span>
               </div>
             </div>
           </div>

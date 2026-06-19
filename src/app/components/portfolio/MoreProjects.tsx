@@ -26,12 +26,12 @@ export function MoreProjects() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="inline-block border border-white/20 px-3 py-1 mb-4">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">10 — Más proyectos</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">10 — Más proyectos</span>
             </div>
             <h2 className="text-white">Seguí explorando casos</h2>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-white/30 text-sm font-mono">{page + 1}/{totalPages}</span>
+            <span className="text-white/55 text-sm font-mono">{page + 1}/{totalPages}</span>
             <button
               onClick={() => setPage((p) => Math.max(0, p - 1))}
               disabled={page === 0}
@@ -68,7 +68,7 @@ export function MoreProjects() {
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="bg-white/10 border border-white/20 text-white/50 text-xs font-mono px-2.5 py-1 rounded-full">
+                  <span className="bg-white/10 border border-white/20 text-white/70 text-xs font-mono px-2.5 py-1 rounded-full">
                     {p.category}
                   </span>
                   <span className="bg-white text-oliva text-xs font-bold px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200">
@@ -80,7 +80,7 @@ export function MoreProjects() {
                 </h3>
                 <div className="flex items-center justify-between">
                   <span className="text-white/35 text-xs font-mono">{p.client}</span>
-                  <span className="text-white/50 text-sm flex items-center gap-1 group-hover:text-white transition-colors">
+                  <span className="text-white/70 text-sm flex items-center gap-1 group-hover:text-white transition-colors">
                     Ver caso <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
                   </span>
                 </div>

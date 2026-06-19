@@ -42,14 +42,14 @@ export function AboutHero() {
         {/* Left — copy */}
         <div className="lg:col-span-6 flex flex-col justify-center pb-16 lg:pb-24 lg:pr-16 lg:border-r border-gray-200">
           <div className="inline-block border border-gray-300 px-3 py-1.5 mb-8 self-start">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-[0.2em]">Sobre nosotros</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-[0.2em]">Sobre nosotros</span>
           </div>
 
           <h1 className="text-oliva mb-6 leading-[1.05]">
             Transformamos desafíos ambientales en soluciones sostenibles.
           </h1>
 
-          <p className="text-gray-500 text-lg leading-relaxed mb-10 max-w-lg">
+          <p className="text-gray-700 text-lg leading-relaxed mb-10 max-w-lg">
             [Subtítulo — Hisoil es una empresa especializada en soluciones agro-ambientales que acompaña a productores, empresas e industrias con productos técnicos y servicios de gestión ambiental con impacto real y medible.]
           </p>
 
@@ -57,7 +57,7 @@ export function AboutHero() {
             <button className="bg-oliva text-white px-8 py-4 rounded-full font-semibold hover:bg-oliva transition-colors">
               Solicitar presupuesto
             </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-paja/30 transition-colors">
+            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-paja transition-colors">
               Conocer nuestros productos
             </button>
           </div>
@@ -71,7 +71,7 @@ export function AboutHero() {
             ].map((s) => (
               <div key={s.label}>
                 <div className="font-bold text-oliva text-lg">{s.value}</div>
-                <div className="text-gray-400 text-xs font-mono">{s.label}</div>
+                <div className="text-gray-600 text-xs font-mono">{s.label}</div>
               </div>
             ))}
           </div>

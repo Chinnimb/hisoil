@@ -6,12 +6,12 @@ export function MidPageCTA() {
           {/* Left */}
           <div className="lg:col-span-7">
             <div className="inline-block border border-white/20 px-3 py-1 mb-5">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">06 — Conversión</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">06 — Conversión</span>
             </div>
             <h2 className="text-white mb-4">
               ¿Necesitás una solución adaptada a tu operación?
             </h2>
-            <p className="text-white/50 leading-relaxed max-w-xl">
+            <p className="text-white/70 leading-relaxed max-w-xl">
               [Texto — Diagnóstico inicial sin costo. Nuestro equipo técnico analiza tu situación
               y propone una solución a medida en menos de 48 horas.]
             </p>
@@ -19,7 +19,7 @@ export function MidPageCTA() {
             {/* Trust row */}
             <div className="flex flex-wrap gap-6 mt-8">
               {["Diagnóstico sin costo", "Respuesta en 24 hs", "Sin compromisos"].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-white/40 text-sm">
+                <div key={t} className="flex items-center gap-2 text-white/65 text-sm">
                   <div className="w-4 h-4 border border-white/20 rounded-full flex items-center justify-center">
                     <div className="w-1.5 h-1.5 bg-white/30 rounded-full" />
                   </div>
@@ -31,7 +31,7 @@ export function MidPageCTA() {
 
           {/* Right — CTAs */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <button className="bg-white text-oliva px-8 py-4 rounded-full font-medium hover:bg-paja/40 transition-colors w-full">
+            <button className="bg-white text-oliva px-8 py-4 rounded-full font-medium hover:bg-paja transition-colors w-full">
               Solicitar Presupuesto
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-3">

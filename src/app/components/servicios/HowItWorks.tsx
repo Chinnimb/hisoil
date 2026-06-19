@@ -47,15 +47,15 @@ export function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">03 — Proceso</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">03 — Proceso</span>
           </div>
           <h2 className="text-oliva mb-4">Cómo funciona</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Descripción del proceso — 5 etapas claras que garantizan trazabilidad, eficiencia y
             cumplimiento normativo en cada proyecto.]
           </p>
@@ -82,7 +82,7 @@ export function HowItWorks() {
                 <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center mb-3 transition-all ${
                   i <= activeStep
                     ? "bg-oliva border-gray-900 text-white"
-                    : "bg-white border-gray-300 text-gray-400 group-hover:border-gray-500"
+                    : "bg-white border-gray-300 text-gray-600 group-hover:border-gray-500"
                 }`}>
                   {i < activeStep
                     ? <span className="text-white text-xs">✓</span>
@@ -90,7 +90,7 @@ export function HowItWorks() {
                   }
                 </div>
                 <span className={`text-xs font-medium transition-colors ${
-                  i === activeStep ? "text-oliva" : "text-gray-400 group-hover:text-gray-600"
+                  i === activeStep ? "text-oliva" : "text-gray-600 group-hover:text-gray-600"
                 }`}>
                   {step.title}
                 </span>
@@ -101,17 +101,17 @@ export function HowItWorks() {
           {/* Active step detail */}
           <div className="card-gradient-border p-10 grid grid-cols-12 gap-8">
             <div className="col-span-2 flex flex-col items-center">
-              <div className="w-16 h-16 bg-paja/40 rounded-sm flex items-center justify-center text-3xl mb-3">
+              <div className="w-16 h-16 bg-paja rounded-sm flex items-center justify-center text-3xl mb-3">
                 {steps[activeStep].icon}
               </div>
               <span className="text-4xl font-bold text-gray-100 font-mono">{steps[activeStep].number}</span>
             </div>
             <div className="col-span-6">
               <h3 className="text-2xl text-oliva mb-4">{steps[activeStep].title}</h3>
-              <p className="text-gray-500 leading-relaxed">{steps[activeStep].description}</p>
+              <p className="text-gray-700 leading-relaxed">{steps[activeStep].description}</p>
             </div>
-            <div className="col-span-4 border-l border-gray-100 pl-8">
-              <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-3">Incluye</div>
+            <div className="col-span-4 border-l border-gray-300 pl-8">
+              <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-3">Incluye</div>
               <div className="space-y-2">
                 {steps[activeStep].detail.split(" · ").map((d) => (
                   <div key={d} className="flex items-center gap-2 text-sm text-gray-600">
@@ -136,15 +136,15 @@ export function HowItWorks() {
               </div>
               <div className="pb-8">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-paja/40 rounded-sm flex items-center justify-center text-lg">
+                  <div className="w-8 h-8 bg-paja rounded-sm flex items-center justify-center text-lg">
                     {step.icon}
                   </div>
                   <h3 className="font-semibold text-oliva">{step.title}</h3>
                 </div>
-                <p className="text-gray-500 text-sm leading-relaxed mb-3">{step.description}</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3">{step.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {step.detail.split(" · ").map((d) => (
-                    <span key={d} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{d}</span>
+                    <span key={d} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">{d}</span>
                   ))}
                 </div>
               </div>

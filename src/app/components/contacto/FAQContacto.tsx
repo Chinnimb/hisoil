@@ -36,17 +36,17 @@ export function FAQContacto() {
   const [openKey, setOpenKey] = useState<number | null>(null);
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
           {/* Left — header */}
           <div className="lg:col-span-4">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
-              <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">06 — FAQ</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">06 — FAQ</span>
             </div>
             <h2 className="text-oliva mb-6">Preguntas frecuentes.</h2>
-            <p className="text-gray-500 leading-relaxed mb-8">
+            <p className="text-gray-700 leading-relaxed mb-8">
               [Descripción — Si no encontrás la respuesta que buscás, escribinos y te respondemos en menos de 24 hs.]
             </p>
             <div className="space-y-3">
@@ -68,16 +68,16 @@ export function FAQContacto() {
                   <div key={i}>
                     <button
                       onClick={() => setOpenKey(isOpen ? null : i)}
-                      className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-paja/30 transition-colors"
+                      className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-paja transition-colors"
                     >
                       <span className="text-oliva font-medium text-sm">{item.q}</span>
                       <ChevronDown
                         size={16}
-                        className={`text-gray-400 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        className={`text-gray-600 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                       />
                     </button>
                     <div className={`overflow-hidden transition-all duration-200 ${isOpen ? "max-h-64" : "max-h-0"}`}>
-                      <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed">{item.a}</div>
+                      <div className="px-6 pb-5 text-gray-700 text-sm leading-relaxed">{item.a}</div>
                     </div>
                   </div>
                 );

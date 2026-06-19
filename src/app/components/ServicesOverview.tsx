@@ -58,12 +58,12 @@ export function ServicesOverview() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-widest">Servicios</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">Servicios</span>
             </div>
             <h2 className="text-white max-w-xl">Los servicios que potencian nuestros productos.</h2>
           </div>
           <div className="flex flex-col gap-3 items-start md:items-end">
-            <p className="text-white/40 text-sm leading-relaxed max-w-xs text-left md:text-right">
+            <p className="text-white/65 text-sm leading-relaxed max-w-xs text-left md:text-right">
               El servicio técnico hace que los productos funcionen mejor — y que los resultados duren.
             </p>
             <Link to="/servicios">
@@ -89,7 +89,7 @@ export function ServicesOverview() {
 
                 {/* Top row */}
                 <div className="absolute top-5 left-5 right-5 flex items-center justify-between">
-                  <span className="text-white/30 font-mono text-xs">{s.number}</span>
+                  <span className="text-white/55 font-mono text-xs">{s.number}</span>
                   <span className="bg-white/10 border border-white/20 text-white/70 text-[10px] font-mono px-2.5 py-1 rounded-full">
                     {s.tag}
                   </span>
@@ -98,12 +98,12 @@ export function ServicesOverview() {
                 {/* Bottom content */}
                 <div className="absolute bottom-0 left-0 right-0 p-7">
                   <h3 className="text-white font-bold text-xl mb-2">{s.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed mb-4">{s.description}</p>
+                  <p className="text-white/70 text-sm leading-relaxed mb-4">{s.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="bg-white/10 border border-white/15 rounded-sm px-3 py-1.5">
                       <span className="text-white/60 text-xs font-mono">{s.stat}</span>
                     </div>
-                    <span className="text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all text-sm">→</span>
+                    <span className="text-white/55 group-hover:text-white group-hover:translate-x-1 transition-all text-sm">→</span>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export function ServicesOverview() {
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <div className="text-white/35 text-[9px] font-mono uppercase tracking-widest mb-1">{s.tag}</div>
                   <h3 className="text-white font-semibold text-sm leading-tight mb-1">{s.title}</h3>
-                  <p className="text-white/40 text-[11px] leading-relaxed line-clamp-2">{s.description}</p>
+                  <p className="text-white/65 text-[11px] leading-relaxed line-clamp-2">{s.description}</p>
                 </div>
 
                 {/* Hover line */}

@@ -12,7 +12,7 @@ const rightCards = [
       <>
         <div className="text-white font-extrabold mb-1" style={{ fontSize: "2.4rem", lineHeight: 1 }}>+42%</div>
         <div className="text-white/60 text-sm mb-1">rendimiento soja</div>
-        <div className="text-white/30 text-xs font-mono">Estancia San Jorge · Bs As</div>
+        <div className="text-white/55 text-xs font-mono">Estancia San Jorge · Bs As</div>
       </>
     ),
     delay: "0.25s",
@@ -23,7 +23,7 @@ const rightCards = [
       <>
         <div className="text-white font-extrabold mb-1" style={{ fontSize: "2.4rem", lineHeight: 1 }}>2.400 t</div>
         <div className="text-white/60 text-sm mb-1">procesadas</div>
-        <div className="text-white/30 text-xs font-mono">en las últimas 3 campañas</div>
+        <div className="text-white/55 text-xs font-mono">en las últimas 3 campañas</div>
       </>
     ),
     delay: "0.5s",
@@ -124,11 +124,11 @@ export function Hero() {
           <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs font-mono text-white/25">
               <span>Hisoil</span><span>/</span>
-              <span className="text-white/40">Agricultura sustentable · Transformación de residuos</span>
+              <span className="text-white/65">Agricultura sustentable · Transformación de residuos</span>
             </div>
             <div className="hidden md:flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-pulse" />
-              <span className="text-white/30 text-xs font-mono">En operación · Argentina</span>
+              <span className="text-white/55 text-xs font-mono">En operación · Argentina</span>
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export function Hero() {
             <div className="lg:col-span-7 flex flex-col gap-8">
 
               <div className="inline-block border border-white/20 bg-white/5 backdrop-blur-sm px-3 py-1.5 self-start">
-                <span className="text-white/50 text-xs font-mono uppercase tracking-[0.2em]">
+                <span className="text-white/70 text-xs font-mono uppercase tracking-[0.2em]">
                   Soluciones para el agro argentino
                 </span>
               </div>
@@ -172,7 +172,7 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={open}
-                  className="bg-white text-oliva rounded-full font-bold hover:bg-paja/40 transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99] min-w-[240px] flex items-center justify-center"
+                  className="bg-white text-oliva rounded-full font-bold hover:bg-paja transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99] min-w-[240px] flex items-center justify-center"
                   style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
                 >
                   Solicitar presupuesto
@@ -196,7 +196,7 @@ export function Hero() {
                   className="hero-card bg-white/10 border border-white/15 backdrop-blur-md p-5 rounded-sm w-64 self-end"
                   style={{ animationDelay: card.delay }}
                 >
-                  <div className="text-white/30 text-[10px] font-mono mb-3 uppercase tracking-widest">
+                  <div className="text-white/55 text-[10px] font-mono mb-3 uppercase tracking-widest">
                     {card.eyebrow}
                   </div>
                   {card.content}
@@ -217,7 +217,7 @@ export function Hero() {
                       <div className="w-12 h-9 bg-white/8 border border-white/15 rounded-sm flex items-center justify-center">
                         <div className="w-7 h-4 bg-white/20 rounded-sm" />
                       </div>
-                      <span className="text-white/30 text-[9px] font-mono">{c}</span>
+                      <span className="text-white/55 text-[9px] font-mono">{c}</span>
                     </div>
                   ))}
                 </div>

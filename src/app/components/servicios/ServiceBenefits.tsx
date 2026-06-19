@@ -48,14 +48,14 @@ export function ServiceBenefits() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-xl">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">04 — Beneficios</span>
+              <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">04 — Beneficios</span>
             </div>
             <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               [Descripción — Impacto concreto y medible en las tres dimensiones que más importan a cada cliente.]
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-900 text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-900 text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-paja transition-colors whitespace-nowrap">
             Solicitar Presupuesto
           </button>
         </div>
@@ -63,20 +63,20 @@ export function ServiceBenefits() {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((b) => (
-            <div key={b.number} className="border border-gray-200 rounded-sm overflow-hidden flex flex-col">
+            <div key={b.number} className="border border-gray-300 rounded-sm overflow-hidden flex flex-col">
               {/* Card top */}
-              <div className="bg-paja/30 p-8 border-b border-gray-200">
+              <div className="bg-paja p-8 border-b border-gray-200">
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-12 h-12 card-gradient-border flex items-center justify-center text-2xl">
                     {b.icon}
                   </div>
-                  <span className="text-xs font-mono text-gray-400 bg-white border border-gray-200 px-2.5 py-1 rounded-full">
+                  <span className="text-xs font-mono text-gray-600 bg-white border border-gray-300 px-2.5 py-1 rounded-full">
                     {b.badge}
                   </span>
                 </div>
                 <div className="text-gray-200 font-bold font-mono text-4xl mb-2">{b.number}</div>
                 <h3 className="text-oliva text-lg font-semibold mb-1">{b.title}</h3>
-                <p className="text-gray-500 text-sm">{b.headline}</p>
+                <p className="text-gray-700 text-sm">{b.headline}</p>
               </div>
 
               {/* Points */}

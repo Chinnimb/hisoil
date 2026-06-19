@@ -17,7 +17,7 @@ export function Header() {
   const { open } = useModal();
 
   return (
-    <header className="sticky top-0 bg-white border-b border-gray-200 z-50 shadow-sm">
+    <header className="sticky top-0 bg-white border-b border-gray-300 z-50 shadow-sm">
       <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20">
         <div className="flex lg:grid lg:grid-cols-[1fr_auto_1fr] justify-between items-center gap-4 lg:gap-6 h-20">
           {/* Logo */}
@@ -50,7 +50,7 @@ export function Header() {
           <div className="hidden lg:flex items-center justify-end gap-3 lg:justify-self-end">
             <Link
               to="/contacto"
-              className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-paja/30 transition-all text-sm ${
+              className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-paja transition-all text-sm ${
                 location.pathname === '/contacto' ? 'border-gray-900 text-oliva' : ''
               }`}
             >
@@ -63,7 +63,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-paja/40"
+            className="lg:hidden p-2 rounded-lg hover:bg-paja"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen

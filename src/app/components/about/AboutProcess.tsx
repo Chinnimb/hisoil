@@ -52,10 +52,10 @@ export function AboutProcess() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">04 — Proceso</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">04 — Proceso</span>
           </div>
           <h2 className="text-oliva mb-4">Cómo acompañamos cada proyecto</h2>
-          <p className="text-gray-500 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed">
             [Descripción breve del proceso de trabajo, destacando el acompañamiento continuo y el enfoque técnico en cada etapa.]
           </p>
         </div>
@@ -63,7 +63,7 @@ export function AboutProcess() {
         {/* Desktop — Horizontal timeline */}
         <div className="hidden md:block">
           {/* Step tabs */}
-          <div className="flex border-b border-gray-200 mb-12">
+          <div className="flex border-b border-gray-300 mb-12">
             {steps.map((step, i) => (
               <button
                 key={step.number}
@@ -71,7 +71,7 @@ export function AboutProcess() {
                 className={`flex-1 pb-4 text-left transition-colors border-b-2 -mb-px ${
                   activeStep === i
                     ? "border-gray-900 text-oliva"
-                    : "border-transparent text-gray-400 hover:text-gray-600"
+                    : "border-transparent text-gray-600 hover:text-gray-600"
                 }`}
               >
                 <span className="block text-xs font-mono mb-1">Paso {step.number}</span>
@@ -89,17 +89,17 @@ export function AboutProcess() {
                 </span>
                 <h3 className="text-2xl text-oliva">{steps[activeStep].title}</h3>
               </div>
-              <p className="text-gray-500 leading-relaxed text-lg">
+              <p className="text-gray-700 leading-relaxed text-lg">
                 {steps[activeStep].description}
               </p>
             </div>
             <div className="col-span-4 space-y-4">
-              <div className="bg-paja/30 border border-gray-200 p-5 rounded-sm">
-                <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Duración estimada</div>
+              <div className="bg-paja border border-gray-300 p-5 rounded-sm">
+                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Duración estimada</div>
                 <div className="font-medium text-gray-800">{steps[activeStep].duration}</div>
               </div>
-              <div className="bg-paja/30 border border-gray-200 p-5 rounded-sm">
-                <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Entregable</div>
+              <div className="bg-paja border border-gray-300 p-5 rounded-sm">
+                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Entregable</div>
                 <div className="font-medium text-gray-800">{steps[activeStep].deliverable}</div>
               </div>
             </div>
@@ -125,7 +125,7 @@ export function AboutProcess() {
               {/* Line + dot */}
               <div className="flex flex-col items-center">
                 <div className="w-10 h-10 rounded-full border-2 border-gray-300 bg-white flex items-center justify-center flex-shrink-0 z-10">
-                  <span className="text-xs font-mono font-bold text-gray-500">{step.number}</span>
+                  <span className="text-xs font-mono font-bold text-gray-700">{step.number}</span>
                 </div>
                 {i < steps.length - 1 && (
                   <div className="w-px flex-1 bg-gray-200 my-2" style={{ minHeight: 40 }} />
@@ -135,12 +135,12 @@ export function AboutProcess() {
               {/* Content */}
               <div className="pb-10">
                 <h3 className="text-oliva font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-3">{step.description}</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3">{step.description}</p>
                 <div className="flex gap-3 flex-wrap">
-                  <span className="bg-paja/40 text-gray-500 text-xs px-3 py-1 rounded-full font-mono">
+                  <span className="bg-paja text-gray-700 text-xs px-3 py-1 rounded-full font-mono">
                     {step.duration}
                   </span>
-                  <span className="bg-paja/40 text-gray-500 text-xs px-3 py-1 rounded-full font-mono">
+                  <span className="bg-paja text-gray-700 text-xs px-3 py-1 rounded-full font-mono">
                     {step.deliverable}
                   </span>
                 </div>

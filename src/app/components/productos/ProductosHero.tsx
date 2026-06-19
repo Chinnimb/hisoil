@@ -12,7 +12,7 @@ export function ProductosHero() {
       <div className="relative z-10 flex-1 flex flex-col">
         {/* Top breadcrumb */}
         <div className="border-b border-white/10 px-6 py-4">
-          <div className="w-full flex items-center gap-2 text-xs font-mono text-white/30">
+          <div className="w-full flex items-center gap-2 text-xs font-mono text-white/55">
             <span>Inicio</span>
             <span>/</span>
             <span className="text-white/60">Productos</span>
@@ -24,7 +24,7 @@ export function ProductosHero() {
           {/* Left — copy */}
           <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
             <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
-              <span className="text-white/40 text-xs font-mono uppercase tracking-[0.2em]">
+              <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">
                 Centro de soluciones agrícolas
               </span>
             </div>
@@ -33,14 +33,14 @@ export function ProductosHero() {
               Insumos técnicos para cada etapa de tu cultivo.
             </h1>
 
-            <p className="text-white/50 text-lg leading-relaxed mb-10 max-w-lg">
+            <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-lg">
               [Subtítulo — Portafolio completo de fertilizantes, bioestimulantes y compost
               formulados para maximizar rendimiento, mejorar suelo y sostener la producción
               ciclo a ciclo.]
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-12">
-              <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja/40 transition-colors">
+              <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja transition-colors">
                 Solicitar presupuesto
               </button>
               <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
@@ -108,7 +108,7 @@ export function ProductosHero() {
           <div className="w-full flex items-center justify-between">
             <div className="flex gap-6 overflow-x-auto">
               {["Fertilizantes", "Bioestimulantes", "Compost", "Enmiendas", "Nutrición vegetal", "Tratamiento de suelos"].map((cat) => (
-                <button key={cat} className="text-white/30 text-xs font-mono whitespace-nowrap hover:text-white/60 transition-colors">
+                <button key={cat} className="text-white/55 text-xs font-mono whitespace-nowrap hover:text-white/60 transition-colors">
                   {cat}
                 </button>
               ))}

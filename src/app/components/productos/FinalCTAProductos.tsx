@@ -15,14 +15,14 @@ export function FinalCTAProductos() {
             {/* Left — copy */}
             <div className="lg:col-span-7 p-12 md:p-16 border-b lg:border-b-0 lg:border-r border-white/10">
               <div className="inline-block border border-white/20 px-3 py-1 mb-8">
-                <span className="text-white/40 text-xs font-mono uppercase tracking-widest">11 — ¿Necesitás ayuda?</span>
+                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">11 — ¿Necesitás ayuda?</span>
               </div>
 
               <h2 className="text-white mb-6">
                 ¿Necesitás ayuda para elegir el producto adecuado?
               </h2>
 
-              <p className="text-white/50 leading-relaxed text-lg mb-10 max-w-lg">
+              <p className="text-white/70 leading-relaxed text-lg mb-10 max-w-lg">
                 [Texto — Nuestro equipo técnico te ayuda a identificar el producto correcto según tu cultivo, suelo y objetivos de campaña. Sin costo, sin compromiso.]
               </p>
 
@@ -34,7 +34,7 @@ export function FinalCTAProductos() {
                   "Respuesta en menos de 24 horas",
                   "Asesor técnico dedicado",
                 ].map((f) => (
-                  <div key={f} className="flex items-center gap-3 text-white/50 text-sm">
+                  <div key={f} className="flex items-center gap-3 text-white/70 text-sm">
                     <div className="w-5 h-5 border border-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-2 h-2 bg-white/30 rounded-full" />
                     </div>
@@ -46,7 +46,7 @@ export function FinalCTAProductos() {
 
             {/* Right — CTAs */}
             <div className="lg:col-span-5 p-12 md:p-16 flex flex-col justify-center gap-4">
-              <button className="bg-white text-oliva py-4 px-8 rounded-full font-semibold hover:bg-paja/40 transition-colors w-full">
+              <button className="bg-white text-oliva py-4 px-8 rounded-full font-semibold hover:bg-paja transition-colors w-full">
                 Solicitar presupuesto
               </button>
               <button className="border border-white/30 text-white py-4 px-8 rounded-full font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-3">
@@ -57,11 +57,11 @@ export function FinalCTAProductos() {
               </button>
 
               <div className="mt-4 pt-6 border-t border-white/10">
-                <p className="text-white/30 text-xs font-mono text-center">
+                <p className="text-white/55 text-xs font-mono text-center">
                   [Dato de contacto directo — horarios de atención]
                 </p>
                 <div className="mt-3 bg-white/5 border border-white/10 rounded-sm px-5 py-4 text-center">
-                  <div className="text-white/50 text-xs font-mono mb-1">Atención técnica directa</div>
+                  <div className="text-white/70 text-xs font-mono mb-1">Atención técnica directa</div>
                   <div className="text-white/20 text-sm font-mono">[Teléfono / Email placeholder]</div>
                 </div>
               </div>

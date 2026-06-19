@@ -14,19 +14,19 @@ export function ContactoHero() {
       <div className="relative z-10 w-full">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block border border-white/20 px-3 py-1.5 mb-8">
-            <span className="text-white/40 text-xs font-mono uppercase tracking-[0.2em]">Contacto</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Contacto</span>
           </div>
 
           <h1 className="text-white mb-6 leading-[1.05]">
             Hablemos de tu proyecto.
           </h1>
 
-          <p className="text-white/50 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+          <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
             Nuestro equipo está listo para ayudarte a encontrar la mejor solución para tu operación, cultivo o empresa.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja/40 transition-colors">
+            <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja transition-colors">
               Solicitar presupuesto
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2.5">
@@ -44,7 +44,7 @@ export function ContactoHero() {
               "Diagnóstico inicial sin costo",
               "Sin compromisos en la primera consulta",
             ].map((s) => (
-              <div key={s} className="flex items-center gap-2 text-white/30 text-xs font-mono">
+              <div key={s} className="flex items-center gap-2 text-white/55 text-xs font-mono">
                 <div className="w-1 h-1 bg-white/30 rounded-full" />
                 {s}
               </div>

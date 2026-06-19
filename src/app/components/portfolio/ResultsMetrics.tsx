@@ -35,21 +35,21 @@ const kpis = [
 
 export function ResultsMetrics() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">08 — Resultados e indicadores</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">08 — Resultados e indicadores</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <h2 className="text-oliva mb-3">Métricas que demuestran el impacto</h2>
-              <p className="text-gray-500 leading-relaxed max-w-xl">
+              <p className="text-gray-700 leading-relaxed max-w-xl">
                 [Descripción — Indicadores documentados en proyectos reales, agrupados por dimensión de impacto.]
               </p>
             </div>
-            <p className="text-gray-400 text-xs font-mono flex-shrink-0">
+            <p className="text-gray-600 text-xs font-mono flex-shrink-0">
               Datos de proyectos 2022–2025
             </p>
           </div>
@@ -68,12 +68,12 @@ export function ResultsMetrics() {
               </div>
 
               {/* Metrics */}
-              <div className="grid grid-cols-2 gap-px bg-paja/40">
+              <div className="grid grid-cols-2 gap-px bg-paja">
                 {group.metrics.map((m) => (
                   <div key={m.label} className="bg-white px-7 py-7">
                     <div className="text-3xl md:text-4xl font-bold text-oliva mb-2 leading-none">{m.value}</div>
                     <div className="text-gray-700 font-medium text-sm mb-1 leading-tight">{m.label}</div>
-                    <div className="text-gray-400 text-xs font-mono leading-tight">{m.sub}</div>
+                    <div className="text-gray-600 text-xs font-mono leading-tight">{m.sub}</div>
                   </div>
                 ))}
               </div>
@@ -91,7 +91,7 @@ export function ResultsMetrics() {
             ].map((s) => (
               <div key={s.label} className="text-center md:text-left">
                 <div className="text-2xl font-bold text-oliva">{s.value}</div>
-                <div className="text-gray-400 text-xs font-mono">{s.label}</div>
+                <div className="text-gray-600 text-xs font-mono">{s.label}</div>
               </div>
             ))}
           </div>

@@ -85,10 +85,10 @@ export function NeedSelector() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-            <span className="text-white/40 text-xs font-mono uppercase tracking-widest">03 — Descubrí por necesidad</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-widest">03 — Descubrí por necesidad</span>
           </div>
           <h2 className="text-white mb-4">¿Qué necesitás mejorar?</h2>
-          <p className="text-white/40 leading-relaxed">
+          <p className="text-white/65 leading-relaxed">
             [Descripción — Elegí el objetivo de tu campaña y te mostramos los productos más adecuados para cada situación.]
           </p>
         </div>
@@ -107,7 +107,7 @@ export function NeedSelector() {
                 }`}
               >
                 <div className={`w-10 h-10 rounded-sm flex items-center justify-center text-xl flex-shrink-0 ${
-                  activeNeed === need.id ? "bg-paja/40" : "bg-white/5"
+                  activeNeed === need.id ? "bg-paja" : "bg-white/5"
                 }`}>
                   {need.icon}
                 </div>
@@ -115,12 +115,12 @@ export function NeedSelector() {
                   <div className={`font-medium text-sm ${activeNeed === need.id ? "text-oliva" : "text-white/70"}`}>
                     {need.label}
                   </div>
-                  <div className={`text-xs font-mono mt-0.5 ${activeNeed === need.id ? "text-gray-500" : "text-white/30"}`}>
+                  <div className={`text-xs font-mono mt-0.5 ${activeNeed === need.id ? "text-gray-700" : "text-white/55"}`}>
                     {need.productCount} productos
                   </div>
                 </div>
                 {activeNeed === need.id && (
-                  <span className="text-gray-400 text-sm flex-shrink-0">→</span>
+                  <span className="text-gray-600 text-sm flex-shrink-0">→</span>
                 )}
               </button>
             ))}
@@ -136,13 +136,13 @@ export function NeedSelector() {
                 </div>
                 <div>
                   <h3 className="text-white text-2xl font-semibold mb-2">{active.label}</h3>
-                  <p className="text-white/50 leading-relaxed">{active.description}</p>
+                  <p className="text-white/70 leading-relaxed">{active.description}</p>
                 </div>
               </div>
 
               {/* Recommended products */}
               <div className="flex-1">
-                <div className="text-xs font-mono text-white/30 uppercase tracking-widest mb-4">
+                <div className="text-xs font-mono text-white/55 uppercase tracking-widest mb-4">
                   Productos recomendados — {active.productCount} resultados
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -170,7 +170,7 @@ export function NeedSelector() {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-white text-oliva px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-paja/40 transition-colors">
+                <button className="bg-white text-oliva px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-paja transition-colors">
                   Ver los {active.productCount} productos
                 </button>
                 <button className="border border-white/20 text-white/60 px-7 py-3.5 rounded-full text-sm hover:bg-white/10 transition-colors">

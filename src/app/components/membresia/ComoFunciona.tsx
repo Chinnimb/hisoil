@@ -32,18 +32,18 @@ export function ComoFunciona() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">04 — Cómo funciona</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">04 — Cómo funciona</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-oliva max-w-xl">Cuatro pasos para empezar a ser miembro.</h2>
-            <p className="text-gray-400 text-sm font-mono max-w-xs text-right">
+            <p className="text-gray-600 text-sm font-mono max-w-xs text-right">
               [Tagline — El proceso completo lleva menos de un día hábil desde la solicitud hasta la activación.]
             </p>
           </div>
         </div>
 
         {/* Steps — horizontal on desktop */}
-        <div className="hidden md:grid grid-cols-4 gap-px bg-gray-200 border border-gray-200 mb-12">
+        <div className="hidden md:grid grid-cols-4 gap-px bg-gray-200 border border-gray-300 mb-12">
           {steps.map((s, i) => (
             <div key={s.number} className="bg-white p-8 flex flex-col relative">
               {i < steps.length - 1 && (
@@ -58,9 +58,9 @@ export function ComoFunciona() {
                 )}
               </div>
               <h3 className="text-oliva font-semibold mb-3">{s.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">{s.description}</p>
-              <div className="bg-paja/30 border border-gray-200 rounded-sm px-3 py-2">
-                <span className="text-gray-400 text-xs font-mono">{s.detail}</span>
+              <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-4">{s.description}</p>
+              <div className="bg-paja border border-gray-300 rounded-sm px-3 py-2">
+                <span className="text-gray-600 text-xs font-mono">{s.detail}</span>
               </div>
             </div>
           ))}
@@ -78,9 +78,9 @@ export function ComoFunciona() {
               </div>
               <div className="pb-8 flex-1">
                 <h3 className="text-oliva font-semibold mb-2">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-3">{s.description}</p>
-                <div className="bg-paja/30 border border-gray-200 rounded-sm px-3 py-2">
-                  <span className="text-gray-400 text-xs font-mono">{s.detail}</span>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3">{s.description}</p>
+                <div className="bg-paja border border-gray-300 rounded-sm px-3 py-2">
+                  <span className="text-gray-600 text-xs font-mono">{s.detail}</span>
                 </div>
               </div>
             </div>
@@ -91,9 +91,9 @@ export function ComoFunciona() {
         <div className="bg-oliva rounded-sm p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <div className="text-white font-semibold mb-1">¿Listo para empezar?</div>
-            <div className="text-white/40 text-sm font-mono">El primer mes incluye asesoramiento técnico de bienvenida sin cargo.</div>
+            <div className="text-white/65 text-sm font-mono">El primer mes incluye asesoramiento técnico de bienvenida sin cargo.</div>
           </div>
-          <button className="bg-white text-oliva px-8 py-3 rounded-full font-semibold hover:bg-paja/40 transition-colors flex-shrink-0">
+          <button className="bg-white text-oliva px-8 py-3 rounded-full font-semibold hover:bg-paja transition-colors flex-shrink-0">
             Solicitar membresía
           </button>
         </div>
