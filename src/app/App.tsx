@@ -6,12 +6,7 @@ import { Hero } from './components/Hero';
 import { WhatDoYouNeed } from './components/WhatDoYouNeed';
 import { ServicesOverview } from './components/ServicesOverview';
 import { FeaturedProducts } from './components/FeaturedProducts';
-import { HowItWorks } from './components/HowItWorks';
-import { Benefits } from './components/Benefits';
 import { CaseStudies } from './components/CaseStudies';
-import { Testimonials } from './components/Testimonials';
-import { Membership } from './components/Membership';
-import { AboutHisoil } from './components/AboutHisoil';
 import { ContactCTA } from './components/ContactCTA';
 import { Footer } from './components/Footer';
 import AboutPage from './AboutPage';
@@ -30,12 +25,7 @@ function HomePage() {
         <WhatDoYouNeed />
         <ServicesOverview />
         <FeaturedProducts />
-        <HowItWorks />
-        <Benefits />
         <CaseStudies />
-        <Testimonials />
-        <Membership />
-        <AboutHisoil />
         <ContactCTA />
       </main>
       <Footer />
