@@ -5,7 +5,7 @@ const products = [
     name: "Compost Premium",
     category: "Enmienda orgánica",
     badge: "Más vendido",
-    badgeStyle: "bg-gray-900 text-white",
+    badgeStyle: "bg-oliva text-white",
     result: "+28% materia orgánica del suelo",
     stat: "3–6 t/ha",
     statLabel: "dosis recomendada",
@@ -27,7 +27,7 @@ const products = [
     name: "Fertilizante Líquido",
     category: "Nutrición vegetal",
     badge: "Alta demanda",
-    badgeStyle: "bg-gray-500 text-white",
+    badgeStyle: "bg-paja/300 text-white",
     result: "Absorción rápida en 7 días",
     stat: "20–30 L/ha",
     statLabel: "aplicación basal",
@@ -38,7 +38,7 @@ const products = [
     name: "Humus de Lombriz",
     category: "Fertilizante orgánico",
     badge: "Nuevo",
-    badgeStyle: "bg-white text-gray-900 border border-gray-300",
+    badgeStyle: "bg-white text-oliva border border-gray-300",
     result: "Microorganismos activos en el suelo",
     stat: "500 kg/ha",
     statLabel: "aplicación mínima",
@@ -49,7 +49,7 @@ const products = [
 
 export function FeaturedProducts() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -57,7 +57,7 @@ export function FeaturedProducts() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">Productos destacados</span>
             </div>
-            <h2 className="text-gray-900 max-w-lg">Los más elegidos por productores de todo el país.</h2>
+            <h2 className="text-oliva max-w-lg">Los más elegidos por productores de todo el país.</h2>
           </div>
           <Link to="/productos">
             <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-sm font-medium hover:bg-white transition-colors flex-shrink-0">
@@ -69,7 +69,7 @@ export function FeaturedProducts() {
         {/* Products — asymmetric grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Featured large card */}
-          <div className="lg:col-span-5 bg-gray-950 border border-gray-800 rounded-sm flex flex-col overflow-hidden">
+          <div className="lg:col-span-5 bg-oliva border border-gray-800 rounded-sm flex flex-col overflow-hidden">
             {/* Product visual */}
             <div className="flex-1 relative border-b border-white/10 min-h-56 overflow-hidden">
               <img
@@ -105,7 +105,7 @@ export function FeaturedProducts() {
                 </div>
               </div>
               <Link to="/productos">
-                <button className="w-full bg-white text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                <button className="w-full bg-white text-oliva py-3 rounded-full font-semibold hover:bg-paja/40 transition-colors">
                   Ver producto →
                 </button>
               </Link>
@@ -140,15 +140,15 @@ export function FeaturedProducts() {
                 {/* Info */}
                 <div className="flex-1 flex flex-col">
                   <div className="text-gray-400 text-[10px] font-mono uppercase tracking-widest mb-0.5">{p.category}</div>
-                  <h3 className="text-gray-900 font-semibold mb-1">{p.name}</h3>
+                  <h3 className="text-oliva font-semibold mb-1">{p.name}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-3">{p.result}</p>
                   <div className="flex items-center justify-between gap-4">
                     <div>
-                      <span className="text-gray-900 font-bold text-sm">{p.stat}</span>
+                      <span className="text-oliva font-bold text-sm">{p.stat}</span>
                       <span className="text-gray-400 text-xs font-mono ml-1">{p.statLabel}</span>
                     </div>
                     <Link to="/productos">
-                      <button className="text-gray-500 text-xs font-mono hover:text-gray-900 transition-colors">
+                      <button className="text-gray-500 text-xs font-mono hover:text-oliva transition-colors">
                         Ver →
                       </button>
                     </Link>
@@ -159,7 +159,7 @@ export function FeaturedProducts() {
             })}
 
             {/* Browse all CTA */}
-            <div className="bg-gray-950 border border-gray-800 rounded-sm p-6 flex items-center justify-between">
+            <div className="bg-oliva border border-gray-800 rounded-sm p-6 flex items-center justify-between">
               <div>
                 <div className="text-white font-semibold mb-0.5">Ver catálogo completo</div>
                 <div className="text-white/30 text-xs font-mono">+20 productos disponibles</div>

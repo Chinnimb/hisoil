@@ -54,7 +54,7 @@ export function AboutProcess() {
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">04 — Proceso</span>
           </div>
-          <h2 className="text-gray-900 mb-4">Cómo acompañamos cada proyecto</h2>
+          <h2 className="text-oliva mb-4">Cómo acompañamos cada proyecto</h2>
           <p className="text-gray-500 leading-relaxed">
             [Descripción breve del proceso de trabajo, destacando el acompañamiento continuo y el enfoque técnico en cada etapa.]
           </p>
@@ -70,7 +70,7 @@ export function AboutProcess() {
                 onClick={() => setActiveStep(i)}
                 className={`flex-1 pb-4 text-left transition-colors border-b-2 -mb-px ${
                   activeStep === i
-                    ? "border-gray-900 text-gray-900"
+                    ? "border-gray-900 text-oliva"
                     : "border-transparent text-gray-400 hover:text-gray-600"
                 }`}
               >
@@ -87,18 +87,18 @@ export function AboutProcess() {
                 <span className="text-6xl font-bold text-gray-100 font-mono">
                   {steps[activeStep].number}
                 </span>
-                <h3 className="text-2xl text-gray-900">{steps[activeStep].title}</h3>
+                <h3 className="text-2xl text-oliva">{steps[activeStep].title}</h3>
               </div>
               <p className="text-gray-500 leading-relaxed text-lg">
                 {steps[activeStep].description}
               </p>
             </div>
             <div className="col-span-4 space-y-4">
-              <div className="bg-gray-50 border border-gray-200 p-5 rounded-sm">
+              <div className="bg-paja/30 border border-gray-200 p-5 rounded-sm">
                 <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Duración estimada</div>
                 <div className="font-medium text-gray-800">{steps[activeStep].duration}</div>
               </div>
-              <div className="bg-gray-50 border border-gray-200 p-5 rounded-sm">
+              <div className="bg-paja/30 border border-gray-200 p-5 rounded-sm">
                 <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Entregable</div>
                 <div className="font-medium text-gray-800">{steps[activeStep].deliverable}</div>
               </div>
@@ -134,13 +134,13 @@ export function AboutProcess() {
 
               {/* Content */}
               <div className="pb-10">
-                <h3 className="text-gray-900 font-semibold mb-2">{step.title}</h3>
+                <h3 className="text-oliva font-semibold mb-2">{step.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-3">{step.description}</p>
                 <div className="flex gap-3 flex-wrap">
-                  <span className="bg-gray-100 text-gray-500 text-xs px-3 py-1 rounded-full font-mono">
+                  <span className="bg-paja/40 text-gray-500 text-xs px-3 py-1 rounded-full font-mono">
                     {step.duration}
                   </span>
-                  <span className="bg-gray-100 text-gray-500 text-xs px-3 py-1 rounded-full font-mono">
+                  <span className="bg-paja/40 text-gray-500 text-xs px-3 py-1 rounded-full font-mono">
                     {step.deliverable}
                   </span>
                 </div>

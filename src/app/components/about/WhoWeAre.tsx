@@ -7,7 +7,7 @@ const kpis = [
 
 export function WhoWeAre() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
 
@@ -25,7 +25,7 @@ export function WhoWeAre() {
 
             {/* Floating stat card */}
             <div className="absolute -bottom-6 left-6 bg-white border border-gray-200 px-6 py-4 rounded-sm shadow-sm">
-              <div className="text-2xl font-bold text-gray-900">+15 años</div>
+              <div className="text-2xl font-bold text-oliva">+15 años</div>
               <div className="text-gray-500 text-xs font-mono mt-0.5">transformando el agro</div>
             </div>
           </div>
@@ -36,7 +36,7 @@ export function WhoWeAre() {
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">02 — Quiénes somos</span>
             </div>
 
-            <h2 className="text-gray-900 mb-8">Quiénes somos</h2>
+            <h2 className="text-oliva mb-8">Quiénes somos</h2>
 
             <div className="space-y-5 mb-12">
               <div>
@@ -69,7 +69,7 @@ export function WhoWeAre() {
             <div className="grid grid-cols-2 gap-4">
               {kpis.map((k) => (
                 <div key={k.label} className="bg-white border border-gray-200 p-5 rounded-sm">
-                  <div className="text-2xl font-bold text-gray-900 mb-1">{k.value}</div>
+                  <div className="text-2xl font-bold text-oliva mb-1">{k.value}</div>
                   <div className="text-gray-700 text-xs font-semibold mb-0.5">{k.label}</div>
                   <div className="text-gray-400 text-xs font-mono">{k.sub}</div>
                 </div>

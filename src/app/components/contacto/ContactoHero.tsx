@@ -1,6 +1,6 @@
 export function ContactoHero() {
   return (
-    <section className="relative bg-gray-950 py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative bg-oliva py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -9,7 +9,7 @@ export function ContactoHero() {
           className="w-full h-full object-cover grayscale"
           style={{ filter: 'grayscale(100%)' }}
         />
-        <div className="absolute inset-0 bg-gray-950/85" />
+        <div className="absolute inset-0 bg-oliva/85" />
       </div>
       <div className="relative z-10 w-full">
         <div className="max-w-3xl mx-auto text-center">
@@ -26,7 +26,7 @@ export function ContactoHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja/40 transition-colors">
               Solicitar presupuesto
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2.5">

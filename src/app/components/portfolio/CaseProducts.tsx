@@ -21,7 +21,7 @@ const products = [
 
 export function CaseProducts() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -29,12 +29,12 @@ export function CaseProducts() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">06 — Productos utilizados en este caso</span>
             </div>
-            <h2 className="text-gray-900 mb-2">Productos aplicados en el proyecto</h2>
+            <h2 className="text-oliva mb-2">Productos aplicados en el proyecto</h2>
             <p className="text-gray-500 text-sm leading-relaxed max-w-lg">
               [Texto — Portafolio de productos específicos utilizados en este proyecto, seleccionados y formulados para los requerimientos del cliente.]
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja/40 transition-colors whitespace-nowrap">
             Ver catálogo completo →
           </button>
         </div>
@@ -61,18 +61,18 @@ export function CaseProducts() {
               </div>
 
               <div className="p-7 flex flex-col flex-1">
-                <h3 className="font-semibold text-gray-900 text-sm mb-3">{p.name}</h3>
+                <h3 className="font-semibold text-oliva text-sm mb-3">{p.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{p.benefit}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-gray-100 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
+                    <span key={s} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-gray-900 text-white py-2.5 rounded-full text-xs font-medium hover:bg-gray-800 transition-colors">
+                  <button className="flex-1 bg-oliva text-white py-2.5 rounded-full text-xs font-medium hover:bg-oliva transition-colors">
                     Solicitar presupuesto
                   </button>
-                  <button className="border border-gray-200 text-gray-500 px-4 py-2.5 rounded-full text-xs hover:bg-gray-50 transition-colors">
+                  <button className="border border-gray-200 text-gray-500 px-4 py-2.5 rounded-full text-xs hover:bg-paja/30 transition-colors">
                     Ver producto
                   </button>
                 </div>

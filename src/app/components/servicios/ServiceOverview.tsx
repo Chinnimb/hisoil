@@ -28,7 +28,7 @@ export function ServiceOverview() {
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">02 — Servicio principal</span>
             </div>
 
-            <h2 className="text-gray-900 mb-6">Tratamiento de Residuos</h2>
+            <h2 className="text-oliva mb-6">Tratamiento de Residuos</h2>
 
             <div className="space-y-4 mb-10">
               <div>
@@ -64,8 +64,8 @@ export function ServiceOverview() {
             {/* KPI cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {kpis.map((kpi) => (
-                <div key={kpi.label} className="bg-gray-50 border border-gray-200 p-5 rounded-sm">
-                  <div className="text-2xl font-bold text-gray-900 mb-1">{kpi.value}</div>
+                <div key={kpi.label} className="bg-paja/30 border border-gray-200 p-5 rounded-sm">
+                  <div className="text-2xl font-bold text-oliva mb-1">{kpi.value}</div>
                   <div className="text-xs font-medium text-gray-600 leading-tight mb-1">{kpi.label}</div>
                   <div className="text-xs text-gray-400 font-mono">{kpi.sub}</div>
                 </div>

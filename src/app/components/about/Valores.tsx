@@ -39,7 +39,7 @@ const valores = [
 
 export function Valores() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
@@ -47,7 +47,7 @@ export function Valores() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">05 — Valores</span>
             </div>
-            <h2 className="text-gray-900 mb-3">Nuestros valores</h2>
+            <h2 className="text-oliva mb-3">Nuestros valores</h2>
             <p className="text-gray-500 leading-relaxed">
               [Descripción — Los principios que guían cada decisión, cada proyecto y cada relación con clientes, socios y comunidades.]
             </p>
@@ -64,16 +64,16 @@ export function Valores() {
               {/* Number + icon row */}
               <div className="flex items-start justify-between mb-6">
                 <span className="text-gray-100 font-bold font-mono text-5xl leading-none">{v.number}</span>
-                <div className="w-12 h-12 bg-gray-100 rounded-sm flex items-center justify-center text-2xl group-hover:bg-gray-200 transition-colors">
+                <div className="w-12 h-12 bg-paja/40 rounded-sm flex items-center justify-center text-2xl group-hover:bg-gray-200 transition-colors">
                   {v.icon}
                 </div>
               </div>
 
-              <h3 className="text-gray-900 text-xl font-semibold mb-3">{v.title}</h3>
+              <h3 className="text-oliva text-xl font-semibold mb-3">{v.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed flex-1">{v.description}</p>
 
               {/* Bottom accent line */}
-              <div className="mt-6 h-px bg-gray-100 group-hover:bg-gray-300 transition-colors" />
+              <div className="mt-6 h-px bg-paja/40 group-hover:bg-gray-300 transition-colors" />
             </div>
           ))}
         </div>

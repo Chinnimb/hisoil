@@ -50,9 +50,9 @@ export function RelatedCaseStudies() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">09 — Casos de estudio</span>
             </div>
-            <h2 className="text-gray-900">Resultados en campo</h2>
+            <h2 className="text-oliva">Resultados en campo</h2>
           </div>
-          <button className="self-start md:self-auto text-gray-600 border border-gray-300 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto text-gray-600 border border-gray-300 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors whitespace-nowrap">
             Ver todos los casos →
           </button>
         </div>
@@ -61,7 +61,7 @@ export function RelatedCaseStudies() {
           {cases.map((c) => (
             <div key={c.number} className="border border-gray-200 rounded-sm overflow-hidden flex flex-col">
               {/* Header */}
-              <div className="bg-gray-50 border-b border-gray-200 px-6 py-5">
+              <div className="bg-paja/30 border-b border-gray-200 px-6 py-5">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-gray-200 font-bold font-mono text-4xl">{c.number}</span>
                   <span className="text-xs font-mono text-gray-400 border border-gray-200 bg-white px-2.5 py-1 rounded-full">
@@ -92,7 +92,7 @@ export function RelatedCaseStudies() {
               </div>
 
               {/* Result */}
-              <div className="bg-gray-900 text-white px-6 py-5 flex items-center justify-between">
+              <div className="bg-oliva text-white px-6 py-5 flex items-center justify-between">
                 <div>
                   <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Resultado</div>
                   <div className="font-bold text-lg">{c.result}</div>

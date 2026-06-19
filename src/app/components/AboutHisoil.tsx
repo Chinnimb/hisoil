@@ -21,7 +21,7 @@ export function AboutHisoil() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">Sobre Hisoil</span>
             </div>
-            <h2 className="text-gray-900 mb-6">15 años transformando la agricultura argentina.</h2>
+            <h2 className="text-oliva mb-6">15 años transformando la agricultura argentina.</h2>
             <p className="text-gray-500 leading-relaxed mb-6">
               Nacimos con la visión de cerrar el ciclo de nutrientes en el agro: convertir residuos en insumos, mejorar suelos sin química agresiva y acompañar a productores con técnicos que saben lo que hacen.
             </p>
@@ -32,7 +32,7 @@ export function AboutHisoil() {
             <div className="flex flex-wrap gap-2 mb-10">
               {certs.map((c) => (
                 <div key={c} className="border border-gray-200 rounded-sm px-4 py-2 flex items-center gap-2">
-                  <div className="w-4 h-4 bg-gray-100 border border-gray-200 rounded-sm flex items-center justify-center">
+                  <div className="w-4 h-4 bg-paja/40 border border-gray-200 rounded-sm flex items-center justify-center">
                     <span className="text-gray-400 text-[7px] font-mono">✓</span>
                   </div>
                   <span className="text-gray-600 text-sm font-medium">{c}</span>
@@ -41,7 +41,7 @@ export function AboutHisoil() {
             </div>
 
             <Link to="/nosotros">
-              <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+              <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors">
                 Conocer la empresa →
               </button>
             </Link>
@@ -67,14 +67,14 @@ export function AboutHisoil() {
                   {/* Timeline spine */}
                   <div className="flex flex-col items-center">
                     <div className="w-10 h-10 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center flex-shrink-0 group-hover:border-gray-900 transition-colors z-10">
-                      <span className="text-[10px] font-mono text-gray-400 group-hover:text-gray-900 transition-colors">{m.year.slice(2)}</span>
+                      <span className="text-[10px] font-mono text-gray-400 group-hover:text-oliva transition-colors">{m.year.slice(2)}</span>
                     </div>
                     {i < milestones.length - 1 && <div className="w-px flex-1 bg-gray-200 my-1" style={{ minHeight: 32 }} />}
                   </div>
 
                   {/* Content */}
                   <div className="pb-8 pt-2 flex-1">
-                    <div className="text-gray-900 font-mono text-sm font-bold mb-0.5">{m.year}</div>
+                    <div className="text-oliva font-mono text-sm font-bold mb-0.5">{m.year}</div>
                     <div className="text-gray-500 text-sm">{m.label}</div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export function AboutHisoil() {
                 { value: "2.400+", label: "proyectos" },
               ].map((s) => (
                 <div key={s.label} className="bg-white p-6 text-center">
-                  <div className="text-gray-900 font-bold text-2xl mb-0.5">{s.value}</div>
+                  <div className="text-oliva font-bold text-2xl mb-0.5">{s.value}</div>
                   <div className="text-gray-400 text-xs font-mono">{s.label}</div>
                 </div>
               ))}

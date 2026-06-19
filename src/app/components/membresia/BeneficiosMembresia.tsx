@@ -39,14 +39,14 @@ const benefits = [
 
 export function BeneficiosMembresia() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">03 — Beneficios</span>
           </div>
-          <h2 className="text-gray-900 mb-4">Todo lo que incluye ser miembro Hisoil.</h2>
+          <h2 className="text-oliva mb-4">Todo lo que incluye ser miembro Hisoil.</h2>
           <p className="text-gray-500 leading-relaxed">
             [Subtítulo — Desde el descuento en productos hasta el acompañamiento técnico personalizado, cada beneficio está diseñado para mejorar la rentabilidad de tu operación.]
           </p>
@@ -56,11 +56,11 @@ export function BeneficiosMembresia() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
           {benefits.map((b) => (
             <div key={b.title} className="bg-white p-8 flex flex-col group hover:bg-white transition-colors relative">
-              <div className="absolute top-0 left-0 w-0 h-0.5 bg-gray-900 group-hover:w-full transition-all duration-300" />
+              <div className="absolute top-0 left-0 w-0 h-0.5 bg-oliva group-hover:w-full transition-all duration-300" />
               <div className="text-2xl mb-5 grayscale opacity-40">{b.icon}</div>
               <div className="flex items-start justify-between mb-3 gap-2">
-                <h3 className="text-gray-900 font-semibold">{b.title}</h3>
-                <span className="bg-gray-100 text-gray-500 text-[10px] font-mono px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 border border-gray-200">
+                <h3 className="text-oliva font-semibold">{b.title}</h3>
+                <span className="bg-paja/40 text-gray-500 text-[10px] font-mono px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 border border-gray-200">
                   {b.tag}
                 </span>
               </div>

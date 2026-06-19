@@ -7,12 +7,12 @@ export function PortfolioHero() {
   ];
 
   return (
-    <section className="bg-gray-950 min-h-screen flex flex-col">
+    <section className="bg-oliva min-h-screen flex flex-col">
       {/* Full-bleed image mosaic — takes most of the viewport */}
       <div className="flex-1 grid grid-cols-12 grid-rows-[1fr_1fr] gap-1.5 p-1.5 min-h-[80vh]">
 
         {/* Hero image — large left */}
-        <div className="col-span-12 md:col-span-7 row-span-2 bg-gray-800 relative overflow-hidden group cursor-pointer">
+        <div className="col-span-12 md:col-span-7 row-span-2 bg-oliva relative overflow-hidden group cursor-pointer">
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&fit=crop"
             alt="Recuperación de suelos degradados en zona pampeana"
@@ -30,7 +30,7 @@ export function PortfolioHero() {
             </h3>
             <div className="flex items-center gap-3">
               <span className="text-white/40 text-sm">Pool de siembra — 4.800 ha</span>
-              <span className="bg-white text-gray-900 text-xs font-bold px-3 py-1 rounded-full">+22% MO en suelo</span>
+              <span className="bg-white text-oliva text-xs font-bold px-3 py-1 rounded-full">+22% MO en suelo</span>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export function PortfolioHero() {
 
           {/* Right — CTAs */}
           <div className="lg:col-span-3 flex gap-3 justify-start lg:justify-end">
-            <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors whitespace-nowrap">
+            <button className="bg-white text-oliva px-6 py-3 rounded-full font-semibold text-sm hover:bg-paja/40 transition-colors whitespace-nowrap">
               Ver proyectos
             </button>
             <button className="border border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors whitespace-nowrap">

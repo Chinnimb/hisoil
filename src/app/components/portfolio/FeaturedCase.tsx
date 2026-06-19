@@ -15,7 +15,7 @@ const timeline = [
 
 export function FeaturedCase() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-950">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-16">
@@ -121,7 +121,7 @@ export function FeaturedCase() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10">
             {metrics.map((m) => (
-              <div key={m.label} className="bg-gray-950 p-7 md:p-8">
+              <div key={m.label} className="bg-oliva p-7 md:p-8">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{m.value}</div>
                 <div className="text-white/60 font-medium text-sm mb-1 leading-tight">{m.label}</div>
                 <div className="text-white/25 text-xs font-mono">{m.sub}</div>

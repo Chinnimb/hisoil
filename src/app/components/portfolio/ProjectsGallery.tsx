@@ -42,7 +42,7 @@ export function ProjectsGallery() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-4">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">03–04 — Proyectos</span>
             </div>
-            <h2 className="text-gray-900">Galería de proyectos</h2>
+            <h2 className="text-oliva">Galería de proyectos</h2>
           </div>
           <span className="text-gray-400 text-sm font-mono">{filtered.length} casos</span>
         </div>
@@ -55,7 +55,7 @@ export function ProjectsGallery() {
               onClick={() => setActiveFilter(f)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all border whitespace-nowrap ${
                 activeFilter === f
-                  ? "bg-gray-900 text-white border-gray-900"
+                  ? "bg-oliva text-white border-gray-900"
                   : "bg-white text-gray-500 border-gray-200 hover:border-gray-400"
               }`}
             >
@@ -73,7 +73,7 @@ export function ProjectsGallery() {
                 key={p.id}
                 className={`group relative overflow-hidden cursor-pointer ${isLarge ? "lg:col-span-2 lg:row-span-2" : ""}`}
               >
-                <div className={`w-full ${isLarge ? "aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[560px]" : "aspect-[4/3]"} relative overflow-hidden bg-gray-800`}>
+                <div className={`w-full ${isLarge ? "aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[560px]" : "aspect-[4/3]"} relative overflow-hidden bg-oliva`}>
                   <img
                     src={projectImages[i % projectImages.length]}
                     alt={p.title}
@@ -101,7 +101,7 @@ export function ProjectsGallery() {
 
                     {/* Result pill + CTA — visible on hover on desktop, always on mobile */}
                     <div className="flex items-center justify-between translate-y-2 group-hover:translate-y-0 opacity-70 group-hover:opacity-100 transition-all duration-300">
-                      <span className="bg-white text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap">
+                      <span className="bg-white text-oliva text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap">
                         {p.result}
                       </span>
                       <span className="text-white/60 text-sm font-medium flex items-center gap-1 group-hover:text-white transition-colors">
@@ -117,7 +117,7 @@ export function ProjectsGallery() {
 
         {/* Load more */}
         <div className="mt-10 text-center">
-          <button className="border border-gray-300 text-gray-600 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+          <button className="border border-gray-300 text-gray-600 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors whitespace-nowrap">
             Ver más proyectos (+15)
           </button>
         </div>

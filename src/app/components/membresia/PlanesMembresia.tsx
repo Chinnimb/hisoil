@@ -51,14 +51,14 @@ export function PlanesMembresia() {
   const [billing, setBilling] = useState<"mensual" | "anual">("mensual");
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-12 text-center">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">05 — Planes</span>
           </div>
-          <h2 className="text-gray-900 mb-4">Elegí el plan que se adapta a tu operación.</h2>
+          <h2 className="text-oliva mb-4">Elegí el plan que se adapta a tu operación.</h2>
           <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
             [Subtítulo — Tres niveles de membresía diseñados para cubrir distintos tamaños y necesidades de operación, con la posibilidad de cambiar de plan en cualquier momento.]
           </p>
@@ -67,16 +67,16 @@ export function PlanesMembresia() {
           <div className="mt-8 inline-flex items-center gap-1 bg-white border border-gray-200 rounded-full p-1">
             <button
               onClick={() => setBilling("mensual")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${billing === "mensual" ? "bg-gray-900 text-white" : "text-gray-500 hover:text-gray-700"}`}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${billing === "mensual" ? "bg-oliva text-white" : "text-gray-500 hover:text-gray-700"}`}
             >
               Mensual
             </button>
             <button
               onClick={() => setBilling("anual")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${billing === "anual" ? "bg-gray-900 text-white" : "text-gray-500 hover:text-gray-700"}`}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${billing === "anual" ? "bg-oliva text-white" : "text-gray-500 hover:text-gray-700"}`}
             >
               Anual
-              <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${billing === "anual" ? "bg-white/20 text-white" : "bg-gray-100 text-gray-400"}`}>
+              <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${billing === "anual" ? "bg-white/20 text-white" : "bg-paja/40 text-gray-400"}`}>
                 −15%
               </span>
             </button>
@@ -90,7 +90,7 @@ export function PlanesMembresia() {
               key={p.id}
               className={`relative flex flex-col border rounded-sm p-8 ${
                 p.highlight
-                  ? "bg-gray-950 border-gray-700 md:scale-[1.03] md:shadow-xl z-10"
+                  ? "bg-oliva border-gray-700 md:scale-[1.03] md:shadow-xl z-10"
                   : "bg-white border-gray-200"
               }`}
             >
@@ -105,7 +105,7 @@ export function PlanesMembresia() {
                 {p.name}
               </div>
               <div className="mb-4">
-                <span className={`text-4xl font-bold ${p.highlight ? "text-white" : "text-gray-900"}`}>{p.price}</span>
+                <span className={`text-4xl font-bold ${p.highlight ? "text-white" : "text-oliva"}`}>{p.price}</span>
                 <span className={`text-sm ml-1 ${p.highlight ? "text-white/40" : "text-gray-400"}`}>{p.cycle}</span>
               </div>
               <p className={`text-sm leading-relaxed mb-8 flex-1 ${p.highlight ? "text-white/50" : "text-gray-500"}`}>
@@ -114,8 +114,8 @@ export function PlanesMembresia() {
               <button
                 className={`w-full py-3 px-6 rounded-full font-semibold transition-colors ${
                   p.highlight
-                    ? "bg-white text-gray-900 hover:bg-gray-100"
-                    : "bg-gray-900 text-white hover:bg-gray-800"
+                    ? "bg-white text-oliva hover:bg-paja/40"
+                    : "bg-oliva text-white hover:bg-oliva"
                 }`}
               >
                 {p.cta}
@@ -127,22 +127,22 @@ export function PlanesMembresia() {
         {/* Comparison table */}
         <div className="bg-white border border-gray-200 rounded-sm overflow-hidden">
           <div className="grid grid-cols-4 border-b border-gray-100">
-            <div className="p-4 col-span-1 bg-gray-50">
+            <div className="p-4 col-span-1 bg-paja/30">
               <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">Característica</span>
             </div>
             {plans.map((p) => (
-              <div key={p.id} className={`p-4 text-center border-l border-gray-100 ${p.highlight ? "bg-gray-950" : ""}`}>
+              <div key={p.id} className={`p-4 text-center border-l border-gray-100 ${p.highlight ? "bg-oliva" : ""}`}>
                 <span className={`text-sm font-semibold ${p.highlight ? "text-white" : "text-gray-700"}`}>{p.name}</span>
               </div>
             ))}
           </div>
           {features.map((f, i) => (
-            <div key={f.label} className={`grid grid-cols-4 border-b border-gray-50 ${i % 2 === 0 ? "" : "bg-gray-50/50"}`}>
+            <div key={f.label} className={`grid grid-cols-4 border-b border-gray-50 ${i % 2 === 0 ? "" : "bg-paja/30/50"}`}>
               <div className="p-4 col-span-1">
                 <span className="text-sm text-gray-600">{f.label}</span>
               </div>
               {[f.starter, f.profesional, f.premium].map((val, j) => (
-                <div key={j} className={`p-4 text-center border-l border-gray-100 ${j === 1 ? "bg-gray-950/5" : ""}`}>
+                <div key={j} className={`p-4 text-center border-l border-gray-100 ${j === 1 ? "bg-oliva/5" : ""}`}>
                   <span className={`text-sm font-mono ${val === "—" ? "text-gray-200" : val === "✓" ? "text-gray-700" : "text-gray-700"}`}>
                     {val}
                   </span>

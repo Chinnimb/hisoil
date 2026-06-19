@@ -41,7 +41,7 @@ export function FAQMembresia() {
   const toggle = (key: string) => setOpenKey(openKey === key ? null : key);
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-12">
@@ -49,7 +49,7 @@ export function FAQMembresia() {
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">09 — Preguntas frecuentes</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-gray-900">Preguntas frecuentes sobre la membresía.</h2>
+            <h2 className="text-oliva">Preguntas frecuentes sobre la membresía.</h2>
             <p className="text-gray-400 text-sm font-mono">¿No encontrás tu respuesta? Escribinos.</p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export function FAQMembresia() {
             <button
               key={cat.label}
               onClick={() => setActiveCategory(i)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${i === activeCategory ? "bg-gray-900 text-white" : "bg-white border border-gray-200 text-gray-500 hover:border-gray-400"}`}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${i === activeCategory ? "bg-oliva text-white" : "bg-white border border-gray-200 text-gray-500 hover:border-gray-400"}`}
             >
               {cat.label}
             </button>
@@ -76,9 +76,9 @@ export function FAQMembresia() {
               <div key={key}>
                 <button
                   onClick={() => toggle(key)}
-                  className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-paja/30 transition-colors"
                 >
-                  <span className="text-gray-900 font-medium">{item.q}</span>
+                  <span className="text-oliva font-medium">{item.q}</span>
                   <ChevronDown
                     size={18}
                     className={`text-gray-400 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
@@ -95,14 +95,14 @@ export function FAQMembresia() {
         {/* Contact strip */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 border border-gray-200 rounded-sm bg-white">
           <div>
-            <div className="text-gray-900 font-medium mb-0.5">¿Tenés otras preguntas?</div>
+            <div className="text-oliva font-medium mb-0.5">¿Tenés otras preguntas?</div>
             <div className="text-gray-400 text-sm font-mono">El equipo de membresías responde en menos de 24 horas.</div>
           </div>
           <div className="flex gap-3">
-            <button className="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+            <button className="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors">
               Enviar consulta
             </button>
-            <button className="bg-gray-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+            <button className="bg-oliva text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-oliva transition-colors">
               WhatsApp
             </button>
           </div>

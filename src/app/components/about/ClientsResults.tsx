@@ -41,14 +41,14 @@ const caseStudies = [
 
 export function ClientsResults() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">05 — Clientes y resultados</span>
           </div>
-          <h2 className="text-gray-900 mb-4">Empresas que confían en Hisoil</h2>
+          <h2 className="text-oliva mb-4">Empresas que confían en Hisoil</h2>
           <p className="text-gray-500 leading-relaxed">
             [Descripción breve de la base de clientes, sectores atendidos y tipo de proyectos realizados.]
           </p>
@@ -66,7 +66,7 @@ export function ClientsResults() {
                 className="bg-white aspect-[3/2] flex items-center justify-center"
               >
                 <div className="text-center">
-                  <div className="w-10 h-10 bg-gray-100 border border-gray-200 rounded-sm mx-auto mb-1 flex items-center justify-center">
+                  <div className="w-10 h-10 bg-paja/40 border border-gray-200 rounded-sm mx-auto mb-1 flex items-center justify-center">
                     <span className="text-gray-300 text-xs font-mono">{logo.id}</span>
                   </div>
                   <span className="text-gray-300 text-[10px] font-mono">{logo.label}</span>
@@ -81,7 +81,7 @@ export function ClientsResults() {
           {caseStudies.map((cs, i) => (
             <div key={i} className="bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col">
               {/* Card header */}
-              <div className="bg-gray-100 px-6 py-5 border-b border-gray-200">
+              <div className="bg-paja/40 px-6 py-5 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-2">
                   <div className="w-12 h-8 bg-gray-200 rounded-sm flex items-center justify-center">
                     <span className="text-gray-600 text-[9px] font-bold uppercase tracking-wider">{cs.client.slice(0, 4)}</span>
@@ -107,7 +107,7 @@ export function ClientsResults() {
               </div>
 
               {/* Result */}
-              <div className="bg-gray-900 text-white px-6 py-5">
+              <div className="bg-oliva text-white px-6 py-5">
                 <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-1">Resultado</div>
                 <div className="font-bold text-lg">{cs.result}</div>
                 <div className="text-gray-400 text-sm">{cs.resultSub}</div>

@@ -45,7 +45,7 @@ export function AboutHero() {
             <span className="text-gray-400 text-xs font-mono uppercase tracking-[0.2em]">Sobre nosotros</span>
           </div>
 
-          <h1 className="text-gray-900 mb-6 leading-[1.05]">
+          <h1 className="text-oliva mb-6 leading-[1.05]">
             Transformamos desafíos ambientales en soluciones sostenibles.
           </h1>
 
@@ -54,10 +54,10 @@ export function AboutHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-16">
-            <button className="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+            <button className="bg-oliva text-white px-8 py-4 rounded-full font-semibold hover:bg-oliva transition-colors">
               Solicitar presupuesto
             </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-gray-50 transition-colors">
+            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-paja/30 transition-colors">
               Conocer nuestros productos
             </button>
           </div>
@@ -70,7 +70,7 @@ export function AboutHero() {
               { value: "ISO 14001", label: "certificado" },
             ].map((s) => (
               <div key={s.label}>
-                <div className="font-bold text-gray-900 text-lg">{s.value}</div>
+                <div className="font-bold text-oliva text-lg">{s.value}</div>
                 <div className="text-gray-400 text-xs font-mono">{s.label}</div>
               </div>
             ))}
@@ -81,7 +81,7 @@ export function AboutHero() {
         <div className="lg:col-span-6 flex items-center pb-16 lg:pb-24 lg:pl-16">
           <div className="max-w-[1600px] mx-auto w-full">
             {/* Fadeshow — main image */}
-            <div className="aspect-[4/3] bg-gray-900 rounded-sm relative overflow-hidden mb-3">
+            <div className="aspect-[4/3] bg-oliva rounded-sm relative overflow-hidden mb-3">
               <img
                 key={current}
                 src={slides[current].url}
@@ -99,7 +99,7 @@ export function AboutHero() {
               {/* Label pill */}
               <div className="absolute bottom-4 left-4">
                 <span
-                  className="bg-gray-900/80 backdrop-blur-sm text-white text-xs font-mono px-3 py-1.5 rounded-full"
+                  className="bg-oliva/80 backdrop-blur-sm text-white text-xs font-mono px-3 py-1.5 rounded-full"
                   style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}
                 >
                   {slides[current].label}

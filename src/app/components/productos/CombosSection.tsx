@@ -66,7 +66,7 @@ export function CombosSection() {
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">05 — Soluciones recomendadas</span>
           </div>
-          <h2 className="text-gray-900 mb-4">Combos diseñados para resultados concretos</h2>
+          <h2 className="text-oliva mb-4">Combos diseñados para resultados concretos</h2>
           <p className="text-gray-500 leading-relaxed">
             [Descripción — Paquetes de productos formulados y recomendados por nuestro equipo técnico para objetivos específicos. Incluyen protocolo de aplicación.]
           </p>
@@ -78,12 +78,12 @@ export function CombosSection() {
               key={combo.id}
               className={`rounded-sm overflow-hidden flex flex-col relative ${
                 combo.highlight
-                  ? "bg-gray-900 text-white border-2 border-gray-700 shadow-2xl scale-[1.02]"
-                  : "bg-gray-50 border border-gray-200"
+                  ? "bg-oliva text-white border-2 border-gray-700 shadow-2xl scale-[1.02]"
+                  : "bg-paja/30 border border-gray-200"
               }`}
             >
               {combo.highlight && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-gray-900 text-xs font-mono px-4 py-1.5 rounded-full border border-gray-300">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-oliva text-xs font-mono px-4 py-1.5 rounded-full border border-gray-300">
                   ⭐ Más recomendado
                 </div>
               )}
@@ -93,7 +93,7 @@ export function CombosSection() {
                 <div className={`w-14 h-14 rounded-sm flex items-center justify-center text-3xl mb-4 ${combo.highlight ? "bg-white/10" : "bg-white border border-gray-200"}`}>
                   {combo.icon}
                 </div>
-                <h3 className={`text-xl font-bold mb-2 ${combo.highlight ? "text-white" : "text-gray-900"}`}>
+                <h3 className={`text-xl font-bold mb-2 ${combo.highlight ? "text-white" : "text-oliva"}`}>
                   {combo.name}
                 </h3>
                 <p className={`text-sm ${combo.highlight ? "text-white/50" : "text-gray-500"}`}>
@@ -142,8 +142,8 @@ export function CombosSection() {
                 </div>
                 <button className={`w-full py-3.5 rounded-full font-semibold text-sm transition-colors ${
                   combo.highlight
-                    ? "bg-white text-gray-900 hover:bg-gray-100"
-                    : "bg-gray-900 text-white hover:bg-gray-800"
+                    ? "bg-white text-oliva hover:bg-paja/40"
+                    : "bg-oliva text-white hover:bg-oliva"
                 }`}>
                   Solicitar presupuesto
                 </button>
@@ -156,7 +156,7 @@ export function CombosSection() {
         <div className="mt-10 border border-dashed border-gray-300 rounded-sm p-8 text-center">
           <p className="text-gray-500 mb-2 font-medium">¿Necesitás un combo personalizado para tu operación?</p>
           <p className="text-gray-400 text-sm mb-5">[Texto — Nuestro equipo técnico diseña paquetes a medida según tu cultivo, superficie y objetivos.]</p>
-          <button className="border border-gray-400 text-gray-600 px-7 py-3 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+          <button className="border border-gray-400 text-gray-600 px-7 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors">
             Hablar con un asesor →
           </button>
         </div>

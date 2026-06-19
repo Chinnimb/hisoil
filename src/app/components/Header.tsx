@@ -37,8 +37,8 @@ export function Header() {
                 to={item.to}
                 className={`text-sm font-medium transition-colors whitespace-nowrap ${
                   location.pathname === item.to
-                    ? 'text-gray-900 border-b-2 border-gray-900 pb-0.5'
-                    : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-oliva border-b-2 border-gray-900 pb-0.5'
+                    : 'text-gray-600 hover:text-oliva'
                 }`}
               >
                 {item.label}
@@ -50,20 +50,20 @@ export function Header() {
           <div className="hidden lg:flex items-center justify-end gap-3 lg:justify-self-end">
             <Link
               to="/contacto"
-              className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all text-sm ${
-                location.pathname === '/contacto' ? 'border-gray-900 text-gray-900' : ''
+              className={`px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-paja/30 transition-all text-sm ${
+                location.pathname === '/contacto' ? 'border-gray-900 text-oliva' : ''
               }`}
             >
               Contacto
             </Link>
-            <button onClick={open} className="px-6 py-2.5 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg text-sm">
+            <button onClick={open} className="px-6 py-2.5 bg-oliva text-white font-medium rounded-full hover:bg-oliva transition-all shadow-md hover:shadow-lg text-sm">
               Solicitar Presupuesto
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+            className="lg:hidden p-2 rounded-lg hover:bg-paja/40"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen
@@ -83,7 +83,7 @@ export function Header() {
                   to={item.to}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`text-sm font-medium transition-colors ${
-                    location.pathname === item.to ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+                    location.pathname === item.to ? 'text-oliva' : 'text-gray-600 hover:text-oliva'
                   }`}
                 >
                   {item.label}
@@ -98,7 +98,7 @@ export function Header() {
               </Link>
               <button
                 onClick={() => { open(); setMobileMenuOpen(false) }}
-                className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full text-center"
+                className="px-6 py-3 bg-oliva text-white font-medium rounded-full text-center"
               >
                 Solicitar Presupuesto
               </button>

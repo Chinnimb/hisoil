@@ -50,7 +50,7 @@ export function ProductSpotlight() {
                       className="w-full h-full object-cover grayscale"
                     />
                     <div className="absolute top-4 left-4 flex flex-col gap-1.5">
-                      <span className="bg-gray-900 text-white text-xs px-2.5 py-1 rounded-full font-mono">⭐ Destacado</span>
+                      <span className="bg-oliva text-white text-xs px-2.5 py-1 rounded-full font-mono">⭐ Destacado</span>
                       <span className="bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">Fertilizante</span>
                     </div>
                   </div>
@@ -76,12 +76,12 @@ export function ProductSpotlight() {
           <div className="lg:col-span-7">
             {/* Tags */}
             <div className="flex items-center gap-2 flex-wrap mb-5">
-              <span className="bg-gray-900 text-white text-xs font-mono px-3 py-1.5 rounded-full">Fertilizante</span>
-              <span className="bg-gray-100 text-gray-500 text-xs font-mono px-3 py-1.5 rounded-full">Soja · Maíz · Trigo</span>
-              <span className="bg-gray-100 text-gray-500 text-xs font-mono px-3 py-1.5 rounded-full">Registro SENASA ✓</span>
+              <span className="bg-oliva text-white text-xs font-mono px-3 py-1.5 rounded-full">Fertilizante</span>
+              <span className="bg-paja/40 text-gray-500 text-xs font-mono px-3 py-1.5 rounded-full">Soja · Maíz · Trigo</span>
+              <span className="bg-paja/40 text-gray-500 text-xs font-mono px-3 py-1.5 rounded-full">Registro SENASA ✓</span>
             </div>
 
-            <h2 className="text-gray-900 mb-1">[Nombre Completo del Producto Destacado]</h2>
+            <h2 className="text-oliva mb-1">[Nombre Completo del Producto Destacado]</h2>
             <p className="text-gray-400 font-mono text-sm mb-6">SKU: HIS-[XXX-000] · Última actualización: Jun 2026</p>
 
             <p className="text-gray-600 leading-relaxed mb-8 text-base">
@@ -100,8 +100,8 @@ export function ProductSpotlight() {
                     onClick={() => setActiveTab(tab)}
                     className={`flex-1 py-3 text-sm font-medium transition-colors ${
                       activeTab === tab
-                        ? "bg-gray-900 text-white"
-                        : "bg-white text-gray-500 hover:bg-gray-50"
+                        ? "bg-oliva text-white"
+                        : "bg-white text-gray-500 hover:bg-paja/30"
                     }`}
                   >
                     {tab === "specs" ? "Especificaciones técnicas" : "Beneficios"}
@@ -116,7 +116,7 @@ export function ProductSpotlight() {
                     {specs.map((spec, i) => (
                       <div
                         key={spec.label}
-                        className={`grid grid-cols-2 px-5 py-3 text-sm ${i % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
+                        className={`grid grid-cols-2 px-5 py-3 text-sm ${i % 2 === 0 ? "bg-paja/30" : "bg-white"}`}
                       >
                         <span className="text-gray-600 font-medium">{spec.label}</span>
                         <span className="text-gray-400 font-mono">{spec.value}</span>
@@ -140,13 +140,13 @@ export function ProductSpotlight() {
 
             {/* Download + CTA */}
             <div className="flex flex-wrap gap-3">
-              <button className="border border-gray-300 text-gray-600 px-5 py-3 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
+              <button className="border border-gray-300 text-gray-600 px-5 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors flex items-center gap-2">
                 <span className="text-gray-400">↓</span> Ficha técnica (PDF)
               </button>
-              <button className="border border-gray-300 text-gray-600 px-5 py-3 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
+              <button className="border border-gray-300 text-gray-600 px-5 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors flex items-center gap-2">
                 <span className="text-gray-400">↓</span> Brochure (PDF)
               </button>
-              <button className="bg-gray-900 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors ml-auto">
+              <button className="bg-oliva text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-oliva transition-colors ml-auto">
                 Solicitar presupuesto
               </button>
             </div>

@@ -80,7 +80,7 @@ export function NeedSelector() {
   const active = needs.find((n) => n.id === activeNeed)!;
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-950 text-white">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva text-white">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
@@ -102,17 +102,17 @@ export function NeedSelector() {
                 onClick={() => setActiveNeed(need.id)}
                 className={`flex items-center gap-4 p-5 rounded-sm border text-left transition-all ${
                   activeNeed === need.id
-                    ? "bg-white text-gray-900 border-white"
+                    ? "bg-white text-oliva border-white"
                     : "bg-white/5 border-white/10 text-white/60 hover:bg-white/10 hover:border-white/20"
                 }`}
               >
                 <div className={`w-10 h-10 rounded-sm flex items-center justify-center text-xl flex-shrink-0 ${
-                  activeNeed === need.id ? "bg-gray-100" : "bg-white/5"
+                  activeNeed === need.id ? "bg-paja/40" : "bg-white/5"
                 }`}>
                   {need.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className={`font-medium text-sm ${activeNeed === need.id ? "text-gray-900" : "text-white/70"}`}>
+                  <div className={`font-medium text-sm ${activeNeed === need.id ? "text-oliva" : "text-white/70"}`}>
                     {need.label}
                   </div>
                   <div className={`text-xs font-mono mt-0.5 ${activeNeed === need.id ? "text-gray-500" : "text-white/30"}`}>
@@ -170,7 +170,7 @@ export function NeedSelector() {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-white text-gray-900 px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-gray-100 transition-colors">
+                <button className="bg-white text-oliva px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-paja/40 transition-colors">
                   Ver los {active.productCount} productos
                 </button>
                 <button className="border border-white/20 text-white/60 px-7 py-3.5 rounded-full text-sm hover:bg-white/10 transition-colors">

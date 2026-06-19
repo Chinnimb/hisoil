@@ -22,7 +22,7 @@ export function Membership() {
         <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden">
 
           {/* Left — dark copy */}
-          <div className="lg:col-span-7 bg-gray-950 p-10 md:p-14 relative overflow-hidden">
+          <div className="lg:col-span-7 bg-oliva p-10 md:p-14 relative overflow-hidden">
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
@@ -41,7 +41,7 @@ export function Membership() {
               {/* Stat grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border border-white/10 mb-10">
                 {highlights.map((h) => (
-                  <div key={h.label} className="bg-gray-950 p-5">
+                  <div key={h.label} className="bg-oliva p-5">
                     <div className="text-white font-bold text-lg mb-0.5">{h.value}</div>
                     <div className="text-white/30 text-xs font-mono">{h.label}</div>
                   </div>
@@ -63,16 +63,16 @@ export function Membership() {
           </div>
 
           {/* Right — CTA */}
-          <div className="lg:col-span-5 bg-gray-50 p-10 md:p-14 flex flex-col justify-center gap-4 border-t lg:border-t-0 lg:border-l border-gray-200">
+          <div className="lg:col-span-5 bg-paja/30 p-10 md:p-14 flex flex-col justify-center gap-4 border-t lg:border-t-0 lg:border-l border-gray-200">
             <div className="mb-2">
-              <div className="text-gray-900 font-bold text-xl mb-1">Elegí tu plan.</div>
+              <div className="text-oliva font-bold text-xl mb-1">Elegí tu plan.</div>
               <div className="text-gray-500 text-sm leading-relaxed">
                 Starter, Profesional o Premium. Podés cambiar de plan en cualquier momento. El primer mes incluye asesoramiento técnico de bienvenida sin cargo.
               </div>
             </div>
 
             <Link to="/membresia">
-              <button className="w-full bg-gray-900 text-white py-4 px-8 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+              <button className="w-full bg-oliva text-white py-4 px-8 rounded-full font-semibold hover:bg-oliva transition-colors">
                 Ver planes y precios
               </button>
             </Link>

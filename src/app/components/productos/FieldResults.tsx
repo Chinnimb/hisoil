@@ -45,7 +45,7 @@ const results = [
 
 export function FieldResults() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
@@ -53,12 +53,12 @@ export function FieldResults() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">08 — Resultados en campo</span>
             </div>
-            <h2 className="text-gray-900 mb-3">Productos con resultados comprobados</h2>
+            <h2 className="text-oliva mb-3">Productos con resultados comprobados</h2>
             <p className="text-gray-500 leading-relaxed">
               [Descripción — Casos documentados con datos reales de rendimiento y métricas de impacto verificadas por el equipo técnico de Hisoil.]
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-gray-50 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja/30 transition-colors whitespace-nowrap">
             Ver todos los casos →
           </button>
         </div>
@@ -67,7 +67,7 @@ export function FieldResults() {
           {results.map((r) => (
             <div key={r.number} className="bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col">
               {/* Card top */}
-              <div className="bg-gray-50 border-b border-gray-200 px-7 py-6">
+              <div className="bg-paja/30 border-b border-gray-200 px-7 py-6">
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-gray-200 font-bold font-mono text-5xl leading-none">{r.number}</span>
                   <span className="text-xs font-mono text-gray-400 border border-gray-200 bg-white px-2.5 py-1 rounded-full">
@@ -103,7 +103,7 @@ export function FieldResults() {
               </div>
 
               {/* Result */}
-              <div className="bg-gray-900 px-7 py-5 flex items-center justify-between gap-4">
+              <div className="bg-oliva px-7 py-5 flex items-center justify-between gap-4">
                 <div>
                   <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Resultado</div>
                   <div className="text-white font-bold text-lg">{r.result}</div>

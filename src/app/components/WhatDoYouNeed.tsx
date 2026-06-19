@@ -53,7 +53,7 @@ export function WhatDoYouNeed() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">¿Para quién?</span>
             </div>
-            <h2 className="text-gray-900">Soluciones para cada tipo de operación.</h2>
+            <h2 className="text-oliva">Soluciones para cada tipo de operación.</h2>
           </div>
           <div className="lg:flex lg:justify-end">
             <p className="text-gray-500 text-sm leading-relaxed lg:text-right max-w-md">
@@ -120,10 +120,10 @@ export function WhatDoYouNeed() {
         </div>
 
         {/* Bottom strip */}
-        <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border border-gray-200 rounded-sm bg-gray-50">
+        <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border border-gray-200 rounded-sm bg-paja/30">
           <span className="text-gray-500 text-sm">¿No encontrás tu sector? Trabajamos con cualquier tipo de operación agropecuaria o industrial.</span>
           <Link to="/contacto">
-            <button className="bg-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors flex-shrink-0">
+            <button className="bg-oliva text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-oliva transition-colors flex-shrink-0">
               Consultar →
             </button>
           </Link>

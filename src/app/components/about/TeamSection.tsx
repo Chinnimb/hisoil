@@ -11,7 +11,7 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
@@ -19,7 +19,7 @@ export function TeamSection() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">08 — Equipo</span>
             </div>
-            <h2 className="text-gray-900 mb-3">Las personas detrás de Hisoil</h2>
+            <h2 className="text-oliva mb-3">Las personas detrás de Hisoil</h2>
             <p className="text-gray-500 leading-relaxed">
               [Descripción — Un equipo multidisciplinario de agrónomos, ingenieros ambientales, técnicos de campo y especialistas en biología de suelos comprometidos con cada proyecto.]
             </p>
@@ -47,7 +47,7 @@ export function TeamSection() {
                 />
 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-end">
+                <div className="absolute inset-0 bg-oliva/0 group-hover:bg-oliva/60 transition-all duration-300 flex items-end">
                   <div className="p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full">
                     <p className="text-white text-xs font-mono leading-relaxed">{member.specialty}</p>
                   </div>
@@ -61,7 +61,7 @@ export function TeamSection() {
 
               {/* Info */}
               <div className="p-5">
-                <div className="font-semibold text-gray-900 text-sm">{member.name}</div>
+                <div className="font-semibold text-oliva text-sm">{member.name}</div>
                 <div className="text-gray-500 text-xs mt-0.5">{member.role}</div>
               </div>
             </div>
@@ -71,7 +71,7 @@ export function TeamSection() {
         {/* CTA */}
         <div className="mt-10 text-center border border-dashed border-gray-300 rounded-sm py-8 px-6">
           <p className="text-gray-500 text-sm mb-4">¿Querés conocer a todo el equipo técnico?</p>
-          <button className="border border-gray-400 text-gray-600 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+          <button className="border border-gray-400 text-gray-600 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors">
             Ver todos los profesionales
           </button>
         </div>

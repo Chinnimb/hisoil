@@ -37,7 +37,7 @@ export function CaseServices() {
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">07 — Servicios aplicados en este caso</span>
           </div>
-          <h2 className="text-gray-900 mb-3">Servicios que hicieron posible este resultado</h2>
+          <h2 className="text-oliva mb-3">Servicios que hicieron posible este resultado</h2>
           <p className="text-gray-500 leading-relaxed max-w-xl">
             [Texto — Los resultados de este proyecto fueron posibles gracias a la combinación de productos técnicos con un servicio de acompañamiento integral.]
           </p>
@@ -48,15 +48,15 @@ export function CaseServices() {
             <div key={i} className="border border-gray-200 rounded-sm p-8 flex flex-col group hover:border-gray-400 hover:shadow-md transition-all">
               {/* Icon + role */}
               <div className="flex items-start justify-between mb-5">
-                <div className="w-12 h-12 bg-gray-100 rounded-sm flex items-center justify-center text-2xl group-hover:bg-gray-200 transition-colors">
+                <div className="w-12 h-12 bg-paja/40 rounded-sm flex items-center justify-center text-2xl group-hover:bg-gray-200 transition-colors">
                   {s.icon}
                 </div>
-                <span className="text-xs font-mono text-gray-400 bg-gray-50 border border-gray-200 px-2.5 py-1 rounded-full text-right leading-tight max-w-[140px]">
+                <span className="text-xs font-mono text-gray-400 bg-paja/30 border border-gray-200 px-2.5 py-1 rounded-full text-right leading-tight max-w-[140px]">
                   {s.role}
                 </span>
               </div>
 
-              <h3 className="text-gray-900 font-semibold text-lg mb-3">{s.title}</h3>
+              <h3 className="text-oliva font-semibold text-lg mb-3">{s.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-6">{s.description}</p>
 
               {/* Deliverables */}
@@ -64,12 +64,12 @@ export function CaseServices() {
                 <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-2.5">Entregables</div>
                 <div className="flex flex-wrap gap-1.5">
                   {s.deliverables.map((d) => (
-                    <span key={d} className="bg-gray-100 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{d}</span>
+                    <span key={d} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{d}</span>
                   ))}
                 </div>
               </div>
 
-              <a href={s.link} className="text-gray-700 text-sm font-medium flex items-center gap-2 hover:text-gray-900 transition-colors self-start group/link">
+              <a href={s.link} className="text-gray-700 text-sm font-medium flex items-center gap-2 hover:text-oliva transition-colors self-start group/link">
                 Ver servicio completo
                 <span className="group-hover/link:translate-x-1 transition-transform inline-block">→</span>
               </a>

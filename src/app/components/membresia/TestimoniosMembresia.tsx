@@ -44,12 +44,12 @@ export function TestimoniosMembresia() {
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">08 — Testimonios</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-gray-900">Lo que dicen nuestros miembros.</h2>
+            <h2 className="text-oliva">Lo que dicen nuestros miembros.</h2>
             <div className="flex gap-2">
-              <button onClick={prev} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors">
+              <button onClick={prev} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja/30 transition-colors">
                 <ChevronLeft size={16} className="text-gray-500" />
               </button>
-              <button onClick={next} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors">
+              <button onClick={next} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja/30 transition-colors">
                 <ChevronRight size={16} className="text-gray-500" />
               </button>
             </div>
@@ -71,24 +71,24 @@ export function TestimoniosMembresia() {
                 />
               </div>
               <div>
-                <div className="text-gray-900 font-semibold">{t.name}</div>
+                <div className="text-oliva font-semibold">{t.name}</div>
                 <div className="text-gray-400 text-sm">{t.role}</div>
               </div>
             </div>
           </div>
 
           {/* Right — data */}
-          <div className="lg:col-span-4 bg-gray-50 border-t lg:border-t-0 lg:border-l border-gray-200 p-8 flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-paja/30 border-t lg:border-t-0 lg:border-l border-gray-200 p-8 flex flex-col justify-between">
             <div className="space-y-4">
               <div className="bg-white border border-gray-200 rounded-sm px-4 py-3">
                 <div className="text-gray-400 text-xs font-mono mb-0.5">Plan activo</div>
-                <div className="text-gray-900 font-semibold text-sm">{t.plan}</div>
+                <div className="text-oliva font-semibold text-sm">{t.plan}</div>
               </div>
               <div className="bg-white border border-gray-200 rounded-sm px-4 py-3">
                 <div className="text-gray-400 text-xs font-mono mb-0.5">Antigüedad</div>
-                <div className="text-gray-900 font-semibold text-sm">{t.years}</div>
+                <div className="text-oliva font-semibold text-sm">{t.years}</div>
               </div>
-              <div className="bg-gray-950 border border-gray-800 rounded-sm px-4 py-4">
+              <div className="bg-oliva border border-gray-800 rounded-sm px-4 py-4">
                 <div className="text-white/40 text-xs font-mono mb-1">{t.stats.label}</div>
                 <div className="text-white font-bold text-2xl">{t.stats.value}</div>
               </div>
@@ -100,7 +100,7 @@ export function TestimoniosMembresia() {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all ${i === current ? "w-6 bg-gray-900" : "w-1.5 bg-gray-300"}`}
+                  className={`h-1.5 rounded-full transition-all ${i === current ? "w-6 bg-oliva" : "w-1.5 bg-gray-300"}`}
                 />
               ))}
             </div>
