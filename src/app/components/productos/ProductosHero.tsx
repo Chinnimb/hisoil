@@ -1,6 +1,19 @@
 export function ProductosHero() {
   return (
     <section className="bg-oliva min-h-screen flex flex-col relative overflow-hidden">
+      <style>{`
+        @keyframes phIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes phInImg {
+          from { opacity: 0; transform: scale(0.96); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+        .ph-fade { opacity: 0; animation: phIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        .ph-img { opacity: 0; animation: phInImg 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+      `}</style>
+
       {/* Subtle grid texture */}
       <div
         className="absolute inset-0 opacity-[0.06]"
@@ -23,23 +36,21 @@ export function ProductosHero() {
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 py-16 md:py-24 gap-12 lg:gap-0">
           {/* Left — copy */}
           <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
-            <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
+            <div className="ph-fade inline-block border border-white/20 px-3 py-1.5 mb-8 self-start" style={{ animationDelay: '0.1s' }}>
               <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">
                 Centro de soluciones agrícolas
               </span>
             </div>
 
-            <h1 className="text-white mb-6 leading-[1.1]">
+            <h1 className="ph-fade text-white mb-6 leading-[1.1]" style={{ animationDelay: '0.25s' }}>
               Insumos técnicos para cada etapa de tu cultivo.
             </h1>
 
-            <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-lg">
-              [Subtítulo — Portafolio completo de fertilizantes, bioestimulantes y compost
-              formulados para maximizar rendimiento, mejorar suelo y sostener la producción
-              ciclo a ciclo.]
+            <p className="ph-fade text-white/70 text-lg leading-relaxed mb-10 max-w-lg" style={{ animationDelay: '0.4s' }}>
+              Portafolio completo de fertilizantes, bioestimulantes y compost formulados para maximizar rendimiento, mejorar suelo y sostener la producción ciclo a ciclo.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-12">
+            <div className="ph-fade flex flex-col sm:flex-row gap-3 mb-12" style={{ animationDelay: '0.55s' }}>
               <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja transition-colors">
                 Solicitar presupuesto
               </button>
@@ -49,7 +60,7 @@ export function ProductosHero() {
             </div>
 
             {/* Quick stats */}
-            <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-10">
+            <div className="ph-fade grid grid-cols-3 gap-4 border-t border-white/10 pt-10" style={{ animationDelay: '0.7s' }}>
               {[
                 { value: "+60", label: "productos en catálogo" },
                 { value: "6", label: "categorías técnicas" },
@@ -64,7 +75,7 @@ export function ProductosHero() {
           </div>
 
           {/* Right — featured product showcase */}
-          <div className="lg:col-span-6 flex items-center">
+          <div className="ph-img lg:col-span-6 flex items-center" style={{ animationDelay: '0.45s' }}>
             <div className="max-w-[1600px] mx-auto w-full">
               {/* Main product image */}
               <div className="relative rounded-sm aspect-[4/3] overflow-hidden mb-4">
