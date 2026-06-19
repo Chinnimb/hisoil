@@ -13,8 +13,21 @@ const mockProducts = [
 
 export function AreaMiembros() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva">
-      <div className="max-w-[1600px] mx-auto w-full">
+    <section className="relative py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+      {/* Background image — moss macro */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+          alt=""
+          className="w-full h-full object-cover"
+          aria-hidden="true"
+        />
+        {/* Deep green overlay + slight blur for text legibility */}
+        <div className="absolute inset-0 bg-oliva/80 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-oliva/40 via-transparent to-[#14201A]/60" />
+      </div>
+
+      <div className="relative max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-12">
           <div className="inline-block border border-white/20 px-3 py-1 mb-6">
