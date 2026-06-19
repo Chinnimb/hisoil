@@ -35,7 +35,7 @@ export function TeamSection() {
           {team.map((member, i) => (
             <div
               key={i}
-              className="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer"
+              className="card-gradient-border overflow-hidden group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer"
             >
               {/* Portrait photo */}
               <div className="aspect-[3/4] bg-gray-200 relative overflow-hidden">

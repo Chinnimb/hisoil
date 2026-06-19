@@ -53,7 +53,7 @@ export function WhoIsItFor() {
           {audiences.map((a) => (
             <div
               key={a.title}
-              className="bg-white border border-gray-200 rounded-sm p-7 flex flex-col hover:border-gray-400 transition-colors group cursor-pointer"
+              className="card-gradient-border p-7 flex flex-col hover:border-gray-400 transition-colors group cursor-pointer"
             >
               {/* Icon */}
               <div className="w-14 h-14 bg-paja/40 rounded-sm flex items-center justify-center text-2xl mb-5 group-hover:bg-gray-200 transition-colors">
@@ -83,7 +83,7 @@ export function WhoIsItFor() {
         </div>
 
         {/* CTA strip */}
-        <div className="mt-12 bg-white border border-gray-200 rounded-sm px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 card-gradient-border px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <p className="font-medium text-gray-800">¿Tu industria no aparece acá?</p>
             <p className="text-gray-500 text-sm mt-1">[Texto — Invitación a consultar independientemente del sector.]</p>

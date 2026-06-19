@@ -43,7 +43,7 @@ export function CaseProducts() {
           {products.map((p, i) => (
             <div
               key={i}
-              className="bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
+              className="card-gradient-border overflow-hidden flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
             >
               <div className="aspect-[4/3] border-b border-gray-200 relative overflow-hidden">
                 <img

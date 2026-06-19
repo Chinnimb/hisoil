@@ -67,7 +67,7 @@ export function ServiceBenefits() {
               {/* Card top */}
               <div className="bg-paja/30 p-8 border-b border-gray-200">
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-12 h-12 bg-white border border-gray-200 rounded-sm flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 card-gradient-border flex items-center justify-center text-2xl">
                     {b.icon}
                   </div>
                   <span className="text-xs font-mono text-gray-400 bg-white border border-gray-200 px-2.5 py-1 rounded-full">

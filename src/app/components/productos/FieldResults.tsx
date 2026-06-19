@@ -65,7 +65,7 @@ export function FieldResults() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
           {results.map((r) => (
-            <div key={r.number} className="bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col">
+            <div key={r.number} className="card-gradient-border overflow-hidden flex flex-col">
               {/* Card top */}
               <div className="bg-paja/30 border-b border-gray-200 px-7 py-6">
                 <div className="flex items-start justify-between mb-4">

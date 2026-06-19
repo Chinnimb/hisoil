@@ -58,7 +58,7 @@ export function ResultsMetrics() {
         {/* KPI grid — 2×2 groups */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {kpis.map((group) => (
-            <div key={group.category} className="bg-white border border-gray-200 rounded-sm overflow-hidden">
+            <div key={group.category} className="card-gradient-border overflow-hidden">
               {/* Group header */}
               <div className="bg-oliva px-7 py-4 flex items-center gap-3">
                 <div className="w-8 h-8 bg-white/10 rounded-sm flex items-center justify-center text-lg">
@@ -82,7 +82,7 @@ export function ResultsMetrics() {
         </div>
 
         {/* Aggregated total bar */}
-        <div className="mt-8 bg-white border border-gray-200 rounded-sm px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-8 card-gradient-border px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-wrap gap-8 md:gap-12">
             {[
               { value: "+2.400", label: "proyectos realizados" },

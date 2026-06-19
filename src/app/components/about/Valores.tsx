@@ -59,7 +59,7 @@ export function Valores() {
           {valores.map((v) => (
             <div
               key={v.number}
-              className="bg-white border border-gray-200 rounded-sm p-8 flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
+              className="card-gradient-border p-8 flex flex-col group hover:border-gray-400 hover:shadow-md transition-all"
             >
               {/* Number + icon row */}
               <div className="flex items-start justify-between mb-6">

@@ -125,7 +125,7 @@ export function PlanesMembresia() {
         </div>
 
         {/* Comparison table */}
-        <div className="bg-white border border-gray-200 rounded-sm overflow-hidden">
+        <div className="card-gradient-border overflow-hidden">
           <div className="grid grid-cols-4 border-b border-gray-100">
             <div className="p-4 col-span-1 bg-paja/30">
               <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">Característica</span>

@@ -79,7 +79,7 @@ export function ClientsResults() {
         {/* Case study cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {caseStudies.map((cs, i) => (
-            <div key={i} className="bg-white border border-gray-200 rounded-sm overflow-hidden flex flex-col">
+            <div key={i} className="card-gradient-border overflow-hidden flex flex-col">
               {/* Card header */}
               <div className="bg-paja/40 px-6 py-5 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-2">
