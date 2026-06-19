@@ -42,14 +42,14 @@ const channels = [
 
 export function ContactoDirecto() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-12">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">03 — Contacto directo</span>
           </div>
-          <h2 className="text-gray-900">¿Preferís hablar directamente?</h2>
+          <h2 className="text-oliva">¿Preferís hablar directamente?</h2>
         </div>
 
         {/* Channel cards */}
@@ -58,7 +58,7 @@ export function ContactoDirecto() {
             <div
               key={c.label}
               className={`relative border rounded-sm p-8 flex flex-col ${
-                c.highlight ? "bg-gray-950 border-gray-700" : "bg-white border-gray-200"
+                c.highlight ? "bg-oliva border-gray-700" : "bg-white border-gray-200"
               }`}
             >
               {c.tag && (
@@ -76,7 +76,7 @@ export function ContactoDirecto() {
               <div className={`text-xs font-mono uppercase tracking-widest mb-1 ${c.highlight ? "text-white/40" : "text-gray-400"}`}>
                 {c.label}
               </div>
-              <div className={`font-semibold mb-4 ${c.highlight ? "text-white" : "text-gray-900"}`}>
+              <div className={`font-semibold mb-4 ${c.highlight ? "text-white" : "text-oliva"}`}>
                 {c.value}
               </div>
               <p className={`text-sm leading-relaxed flex-1 mb-8 ${c.highlight ? "text-white/50" : "text-gray-500"}`}>
@@ -86,8 +86,8 @@ export function ContactoDirecto() {
               <button
                 className={`w-full py-3.5 px-6 rounded-full font-semibold transition-colors ${
                   c.highlight
-                    ? "bg-white text-gray-900 hover:bg-gray-100"
-                    : "border border-gray-300 text-gray-700 hover:bg-gray-50"
+                    ? "bg-white text-oliva hover:bg-paja/40"
+                    : "border border-gray-300 text-gray-700 hover:bg-paja/30"
                 }`}
               >
                 {c.cta}

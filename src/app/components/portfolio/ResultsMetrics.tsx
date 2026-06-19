@@ -35,7 +35,7 @@ const kpis = [
 
 export function ResultsMetrics() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16">
@@ -44,7 +44,7 @@ export function ResultsMetrics() {
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <h2 className="text-gray-900 mb-3">Métricas que demuestran el impacto</h2>
+              <h2 className="text-oliva mb-3">Métricas que demuestran el impacto</h2>
               <p className="text-gray-500 leading-relaxed max-w-xl">
                 [Descripción — Indicadores documentados en proyectos reales, agrupados por dimensión de impacto.]
               </p>
@@ -60,7 +60,7 @@ export function ResultsMetrics() {
           {kpis.map((group) => (
             <div key={group.category} className="bg-white border border-gray-200 rounded-sm overflow-hidden">
               {/* Group header */}
-              <div className="bg-gray-900 px-7 py-4 flex items-center gap-3">
+              <div className="bg-oliva px-7 py-4 flex items-center gap-3">
                 <div className="w-8 h-8 bg-white/10 rounded-sm flex items-center justify-center text-lg">
                   {group.icon}
                 </div>
@@ -68,10 +68,10 @@ export function ResultsMetrics() {
               </div>
 
               {/* Metrics */}
-              <div className="grid grid-cols-2 gap-px bg-gray-100">
+              <div className="grid grid-cols-2 gap-px bg-paja/40">
                 {group.metrics.map((m) => (
                   <div key={m.label} className="bg-white px-7 py-7">
-                    <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-none">{m.value}</div>
+                    <div className="text-3xl md:text-4xl font-bold text-oliva mb-2 leading-none">{m.value}</div>
                     <div className="text-gray-700 font-medium text-sm mb-1 leading-tight">{m.label}</div>
                     <div className="text-gray-400 text-xs font-mono leading-tight">{m.sub}</div>
                   </div>
@@ -90,12 +90,12 @@ export function ResultsMetrics() {
               { value: "15 años", label: "de trayectoria técnica" },
             ].map((s) => (
               <div key={s.label} className="text-center md:text-left">
-                <div className="text-2xl font-bold text-gray-900">{s.value}</div>
+                <div className="text-2xl font-bold text-oliva">{s.value}</div>
                 <div className="text-gray-400 text-xs font-mono">{s.label}</div>
               </div>
             ))}
           </div>
-          <button className="bg-gray-900 text-white px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors flex-shrink-0 whitespace-nowrap">
+          <button className="bg-oliva text-white px-7 py-3.5 rounded-full text-sm font-semibold hover:bg-oliva transition-colors flex-shrink-0 whitespace-nowrap">
             Solicitar presupuesto
           </button>
         </div>

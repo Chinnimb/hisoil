@@ -48,7 +48,7 @@ const featured = [
 
 export function FeaturedProducts() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
 
         {/* Header */}
@@ -57,12 +57,12 @@ export function FeaturedProducts() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">04 — Productos destacados</span>
             </div>
-            <h2 className="text-gray-900 mb-3">Los productos que marcan la diferencia</h2>
+            <h2 className="text-oliva mb-3">Los productos que marcan la diferencia</h2>
             <p className="text-gray-500 leading-relaxed max-w-lg">
               Selección técnica de los productos con mayor impacto en rendimiento y salud de suelo por campaña.
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-300 text-gray-500 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja/40 transition-colors whitespace-nowrap">
             Ver todo →
           </button>
         </div>
@@ -83,7 +83,7 @@ export function FeaturedProducts() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 {p.badge && (
-                  <div className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-xs font-mono">
+                  <div className="absolute top-4 left-4 bg-oliva text-white px-3 py-1 rounded-full text-xs font-mono">
                     {p.badge}
                   </div>
                 )}
@@ -93,18 +93,18 @@ export function FeaturedProducts() {
               </div>
               {/* Contenido */}
               <div className="p-7 flex flex-col flex-1">
-                <h3 className="text-gray-900 text-lg font-semibold mb-2">{p.name}</h3>
+                <h3 className="text-oliva text-lg font-semibold mb-2">{p.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{p.benefit}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full font-mono">{s}</span>
+                    <span key={s} className="bg-paja/40 text-gray-600 text-xs px-3 py-1.5 rounded-full font-mono">{s}</span>
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <button className="bg-gray-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors flex-1">
+                  <button className="bg-oliva text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-oliva transition-colors flex-1">
                     Solicitar presupuesto
                   </button>
-                  <button className="border border-gray-300 text-gray-600 px-5 py-2.5 rounded-full text-sm hover:bg-gray-50 transition-colors">
+                  <button className="border border-gray-300 text-gray-600 px-5 py-2.5 rounded-full text-sm hover:bg-paja/30 transition-colors">
                     Ver
                   </button>
                 </div>
@@ -128,7 +128,7 @@ export function FeaturedProducts() {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
                 {p.badge && (
-                  <div className="absolute top-3 left-3 bg-gray-900 text-white px-2.5 py-1 rounded-full text-xs font-mono">
+                  <div className="absolute top-3 left-3 bg-oliva text-white px-2.5 py-1 rounded-full text-xs font-mono">
                     {p.badge}
                   </div>
                 )}
@@ -138,18 +138,18 @@ export function FeaturedProducts() {
               </div>
               {/* Contenido */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-gray-900 font-semibold mb-2 text-sm">{p.name}</h3>
+                <h3 className="text-oliva font-semibold mb-2 text-sm">{p.name}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-4">{p.benefit}</p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-gray-100 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
+                    <span key={s} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <button className="bg-gray-900 text-white px-4 py-2 rounded-full text-xs font-medium hover:bg-gray-800 transition-colors flex-1">
+                  <button className="bg-oliva text-white px-4 py-2 rounded-full text-xs font-medium hover:bg-oliva transition-colors flex-1">
                     Solicitar presupuesto
                   </button>
-                  <button className="border border-gray-200 text-gray-500 px-4 py-2 rounded-full text-xs hover:bg-gray-50 transition-colors">
+                  <button className="border border-gray-200 text-gray-500 px-4 py-2 rounded-full text-xs hover:bg-paja/30 transition-colors">
                     Ver
                   </button>
                 </div>

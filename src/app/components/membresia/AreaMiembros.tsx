@@ -1,5 +1,5 @@
 const mockNotifications = [
-  { text: "Próximo envío: 15 jun · Corrector pH + Inoculante X", time: "hace 2 días", dot: "bg-gray-900" },
+  { text: "Próximo envío: 15 jun · Corrector pH + Inoculante X", time: "hace 2 días", dot: "bg-oliva" },
   { text: "Informe técnico mayo 2025 disponible para descarga", time: "hace 5 días", dot: "bg-gray-400" },
   { text: "Recordatorio: ventana óptima de aplicación foliar esta semana", time: "hace 1 semana", dot: "bg-gray-400" },
 ];
@@ -13,7 +13,7 @@ const mockProducts = [
 
 export function AreaMiembros() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-950">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-12">

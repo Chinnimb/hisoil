@@ -50,12 +50,12 @@ export function ServiceBenefits() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">04 — Beneficios</span>
             </div>
-            <h2 className="text-gray-900 mb-3">Beneficios para tu operación</h2>
+            <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
             <p className="text-gray-500 leading-relaxed">
               [Descripción — Impacto concreto y medible en las tres dimensiones que más importan a cada cliente.]
             </p>
           </div>
-          <button className="self-start md:self-auto border border-gray-900 text-gray-900 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+          <button className="self-start md:self-auto border border-gray-900 text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-paja/30 transition-colors whitespace-nowrap">
             Solicitar Presupuesto
           </button>
         </div>
@@ -65,7 +65,7 @@ export function ServiceBenefits() {
           {benefits.map((b) => (
             <div key={b.number} className="border border-gray-200 rounded-sm overflow-hidden flex flex-col">
               {/* Card top */}
-              <div className="bg-gray-50 p-8 border-b border-gray-200">
+              <div className="bg-paja/30 p-8 border-b border-gray-200">
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-12 h-12 bg-white border border-gray-200 rounded-sm flex items-center justify-center text-2xl">
                     {b.icon}
@@ -75,7 +75,7 @@ export function ServiceBenefits() {
                   </span>
                 </div>
                 <div className="text-gray-200 font-bold font-mono text-4xl mb-2">{b.number}</div>
-                <h3 className="text-gray-900 text-lg font-semibold mb-1">{b.title}</h3>
+                <h3 className="text-oliva text-lg font-semibold mb-1">{b.title}</h3>
                 <p className="text-gray-500 text-sm">{b.headline}</p>
               </div>
 

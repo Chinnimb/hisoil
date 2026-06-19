@@ -1,6 +1,6 @@
 export function MidPageCTA() {
   return (
-    <section className="py-20 px-6 bg-gray-900">
+    <section className="py-20 px-6 bg-oliva">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left */}
@@ -31,7 +31,7 @@ export function MidPageCTA() {
 
           {/* Right — CTAs */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors w-full">
+            <button className="bg-white text-oliva px-8 py-4 rounded-full font-medium hover:bg-paja/40 transition-colors w-full">
               Solicitar Presupuesto
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-3">

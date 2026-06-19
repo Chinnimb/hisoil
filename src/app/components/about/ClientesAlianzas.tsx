@@ -22,7 +22,7 @@ const alianzas = [
 
 export function ClientesAlianzas() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-14">
@@ -30,7 +30,7 @@ export function ClientesAlianzas() {
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">10 — Clientes y alianzas</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-gray-900">Clientes y alianzas estratégicas</h2>
+            <h2 className="text-oliva">Clientes y alianzas estratégicas</h2>
             <p className="text-gray-400 text-sm font-mono">800+ clientes activos · 12 provincias</p>
           </div>
         </div>
@@ -42,9 +42,9 @@ export function ClientesAlianzas() {
             {clients.map((c, i) => (
               <div
                 key={i}
-                className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 hover:bg-gray-50 transition-colors cursor-pointer group"
+                className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 hover:bg-paja/30 transition-colors cursor-pointer group"
               >
-                <div className="w-16 h-9 bg-gray-50 border border-gray-200 rounded-sm flex items-center justify-center mb-1.5 group-hover:border-gray-400 transition-colors">
+                <div className="w-16 h-9 bg-paja/30 border border-gray-200 rounded-sm flex items-center justify-center mb-1.5 group-hover:border-gray-400 transition-colors">
                   <span className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">{c.name.slice(0, 6)}</span>
                 </div>
                 <span className="text-gray-400 text-[9px] font-mono text-center">{c.sector}</span>
@@ -59,7 +59,7 @@ export function ClientesAlianzas() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {alianzas.map((a, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-sm p-5 flex flex-col items-center gap-3 hover:border-gray-400 transition-colors">
-                <div className="w-20 h-10 bg-gray-50 border border-gray-200 rounded-sm flex items-center justify-center">
+                <div className="w-20 h-10 bg-paja/30 border border-gray-200 rounded-sm flex items-center justify-center">
                   <span className="text-gray-600 text-xs font-bold uppercase tracking-wider">{a.name}</span>
                 </div>
                 <div className="text-center">

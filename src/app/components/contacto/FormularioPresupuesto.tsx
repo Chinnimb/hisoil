@@ -30,17 +30,17 @@ export function FormularioPresupuesto() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">02 — Formulario</span>
             </div>
-            <h2 className="text-gray-900 mb-3">Solicitá tu presupuesto.</h2>
+            <h2 className="text-oliva mb-3">Solicitá tu presupuesto.</h2>
             <p className="text-gray-500 mb-10 leading-relaxed">
               Completá el formulario y un asesor técnico se contacta con vos en menos de 24 horas hábiles.
             </p>
 
             {sent ? (
               <div className="border border-gray-200 rounded-sm p-12 text-center">
-                <div className="w-12 h-12 bg-gray-100 border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-paja/40 border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-gray-500 text-lg">✓</span>
                 </div>
-                <div className="text-gray-900 font-semibold text-lg mb-2">Solicitud recibida</div>
+                <div className="text-oliva font-semibold text-lg mb-2">Solicitud recibida</div>
                 <p className="text-gray-500 text-sm">
                   Un asesor técnico se pondrá en contacto con vos en menos de 24 horas hábiles.
                 </p>
@@ -65,7 +65,7 @@ export function FormularioPresupuesto() {
                       type="text"
                       required
                       placeholder="Tu nombre completo"
-                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-oliva placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
                     />
                   </div>
                   <div>
@@ -75,7 +75,7 @@ export function FormularioPresupuesto() {
                     <input
                       type="text"
                       placeholder="Nombre de la empresa"
-                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-oliva placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
                     />
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export function FormularioPresupuesto() {
                       type="email"
                       required
                       placeholder="tu@email.com"
-                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-oliva placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
                     />
                   </div>
                   <div>
@@ -99,7 +99,7 @@ export function FormularioPresupuesto() {
                     <input
                       type="tel"
                       placeholder="+54 9 ..."
-                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
+                      className="w-full border border-gray-300 rounded-sm px-4 py-3 text-oliva placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm"
                     />
                   </div>
                 </div>
@@ -125,13 +125,13 @@ export function FormularioPresupuesto() {
                   <textarea
                     rows={4}
                     placeholder="Contanos brevemente sobre tu operación o lo que necesitás..."
-                    className="w-full border border-gray-300 rounded-sm px-4 py-3 text-gray-900 placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm resize-none"
+                    className="w-full border border-gray-300 rounded-sm px-4 py-3 text-oliva placeholder-gray-300 focus:outline-none focus:border-gray-600 transition-colors bg-white text-sm resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-900 text-white py-4 px-8 rounded-full font-semibold hover:bg-gray-800 transition-colors"
+                  className="w-full bg-oliva text-white py-4 px-8 rounded-full font-semibold hover:bg-oliva transition-colors"
                 >
                   Enviar solicitud
                 </button>
@@ -145,7 +145,7 @@ export function FormularioPresupuesto() {
 
           {/* Right — trust signals */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="bg-gray-50 border border-gray-200 rounded-sm p-8 mb-6">
+            <div className="bg-paja/30 border border-gray-200 rounded-sm p-8 mb-6">
               <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-5">Por qué elegirnos</div>
               <div className="space-y-4">
                 {trustSignals.map((s) => (
@@ -160,7 +160,7 @@ export function FormularioPresupuesto() {
             </div>
 
             {/* WhatsApp shortcut */}
-            <div className="bg-gray-950 border border-gray-800 rounded-sm p-6">
+            <div className="bg-oliva border border-gray-800 rounded-sm p-6">
               <div className="text-white/40 text-xs font-mono uppercase tracking-widest mb-2">
                 ¿Necesitás una respuesta rápida?
               </div>

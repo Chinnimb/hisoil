@@ -20,7 +20,7 @@ export function MoreProjects() {
   const visible = moreProjects.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-gray-950">
+    <section className="py-20 md:py-28 px-6 bg-oliva">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -54,7 +54,7 @@ export function MoreProjects() {
           {visible.map((p) => (
             <div
               key={p.id}
-              className="relative overflow-hidden cursor-pointer group aspect-[16/9] bg-gray-800"
+              className="relative overflow-hidden cursor-pointer group aspect-[16/9] bg-oliva"
             >
               <img
                 src={p.img}
@@ -71,7 +71,7 @@ export function MoreProjects() {
                   <span className="bg-white/10 border border-white/20 text-white/50 text-xs font-mono px-2.5 py-1 rounded-full">
                     {p.category}
                   </span>
-                  <span className="bg-white text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200">
+                  <span className="bg-white text-oliva text-xs font-bold px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-200">
                     {p.result}
                   </span>
                 </div>

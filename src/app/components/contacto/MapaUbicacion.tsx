@@ -1,6 +1,6 @@
 export function MapaUbicacion() {
   return (
-    <section className="py-0 bg-gray-100">
+    <section className="py-0 bg-paja/40">
       <div className="w-full px-6 pt-0 pb-0">
         {/* Section label */}
         <div className="py-10 flex items-center justify-between">
@@ -45,10 +45,10 @@ export function MapaUbicacion() {
 
         {/* Pin */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full flex flex-col items-center">
-          <div className="bg-gray-900 text-white rounded-sm px-3 py-1.5 text-xs font-mono shadow-lg mb-1 whitespace-nowrap">
+          <div className="bg-oliva text-white rounded-sm px-3 py-1.5 text-xs font-mono shadow-lg mb-1 whitespace-nowrap">
             Hisoil · [Localidad]
           </div>
-          <div className="w-3 h-3 bg-gray-900 rotate-45 -mt-1.5" />
+          <div className="w-3 h-3 bg-oliva rotate-45 -mt-1.5" />
         </div>
 
         {/* Map label */}

@@ -34,7 +34,7 @@ export function TabbedProducts() {
   const products = productsByTab[activeTab];
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header + tabs */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
@@ -42,7 +42,7 @@ export function TabbedProducts() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
               <span className="text-gray-500 text-xs font-mono uppercase tracking-widest">06 — Catálogo</span>
             </div>
-            <h2 className="text-gray-900">Explorá el catálogo completo</h2>
+            <h2 className="text-oliva">Explorá el catálogo completo</h2>
           </div>
 
           {/* Tab selector */}
@@ -53,7 +53,7 @@ export function TabbedProducts() {
                 onClick={() => setActiveTab(tab)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                   activeTab === tab
-                    ? "bg-gray-900 text-white"
+                    ? "bg-oliva text-white"
                     : "text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -87,7 +87,7 @@ export function TabbedProducts() {
                   {p.category}
                 </span>
                 {activeTab === "Nuevos ingresos" && (
-                  <span className="absolute top-3 left-3 bg-gray-900 text-white text-xs px-2.5 py-1 rounded-full font-mono">
+                  <span className="absolute top-3 left-3 bg-oliva text-white text-xs px-2.5 py-1 rounded-full font-mono">
                     Nuevo
                   </span>
                 )}
@@ -95,20 +95,20 @@ export function TabbedProducts() {
 
               {/* Info */}
               <div className="p-6 flex flex-col flex-1">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm">{p.name}</h4>
+                <h4 className="font-semibold text-oliva mb-2 text-sm">{p.name}</h4>
                 <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-4">{p.description}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-gray-100 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
+                    <span key={s} className="bg-paja/40 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
                       {s}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <button className="flex-1 bg-gray-900 text-white py-2.5 rounded-full text-xs font-medium hover:bg-gray-800 transition-colors">
+                  <button className="flex-1 bg-oliva text-white py-2.5 rounded-full text-xs font-medium hover:bg-oliva transition-colors">
                     Solicitar presupuesto
                   </button>
-                  <button className="border border-gray-200 text-gray-500 px-4 py-2.5 rounded-full text-xs hover:bg-gray-50 transition-colors">
+                  <button className="border border-gray-200 text-gray-500 px-4 py-2.5 rounded-full text-xs hover:bg-paja/30 transition-colors">
                     Ver
                   </button>
                 </div>
@@ -124,7 +124,7 @@ export function TabbedProducts() {
               key={i}
               className={`w-9 h-9 rounded-full text-sm font-mono border transition-colors ${
                 p === 1
-                  ? "bg-gray-900 text-white border-gray-900"
+                  ? "bg-oliva text-white border-gray-900"
                   : "border-gray-200 text-gray-400 hover:border-gray-400"
               }`}
             >

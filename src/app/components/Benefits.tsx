@@ -25,7 +25,7 @@ const pillars = [
 
 export function Benefits() {
   return (
-    <section className="bg-gray-950 py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-oliva py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16">
@@ -43,7 +43,7 @@ export function Benefits() {
         {/* Stats grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10 mb-16">
           {stats.map((s) => (
-            <div key={s.label} className="bg-gray-950 p-8 md:p-10">
+            <div key={s.label} className="bg-oliva p-8 md:p-10">
               <div className="text-white font-bold text-4xl md:text-5xl mb-2 leading-none">{s.value}</div>
               <div className="text-white/60 font-medium mb-1">{s.label}</div>
               <div className="text-white/25 text-xs font-mono leading-relaxed">{s.sub}</div>

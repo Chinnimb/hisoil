@@ -57,13 +57,13 @@ export function PresupuestoModal() {
             <div className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-0.5">
               {sent ? 'Solicitud enviada' : `Paso ${step} de 2`}
             </div>
-            <h2 className="text-gray-900 font-semibold text-lg">
+            <h2 className="text-oliva font-semibold text-lg">
               {sent ? '¡Recibimos tu consulta!' : 'Solicitar presupuesto'}
             </h2>
           </div>
           <button
             onClick={handleClose}
-            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-gray-500"
+            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-paja/40 transition-colors text-gray-500"
           >
             <X className="w-4 h-4" />
           </button>
@@ -71,9 +71,9 @@ export function PresupuestoModal() {
 
         {/* Progress bar */}
         {!sent && (
-          <div className="h-0.5 bg-gray-100">
+          <div className="h-0.5 bg-paja/40">
             <div
-              className="h-full bg-gray-900 transition-all duration-300"
+              className="h-full bg-oliva transition-all duration-300"
               style={{ width: `${(step / 2) * 100}%` }}
             />
           </div>
@@ -84,13 +84,13 @@ export function PresupuestoModal() {
           {sent ? (
             /* Confirmación */
             <div className="text-center py-8">
-              <CheckCircle className="w-16 h-16 text-gray-900 mx-auto mb-5" />
-              <h3 className="text-gray-900 font-bold text-2xl mb-3">Gracias, {form.nombre.split(' ')[0]}.</h3>
+              <CheckCircle className="w-16 h-16 text-oliva mx-auto mb-5" />
+              <h3 className="text-oliva font-bold text-2xl mb-3">Gracias, {form.nombre.split(' ')[0]}.</h3>
               <p className="text-gray-500 leading-relaxed mb-2">
                 Tu solicitud fue recibida. Un asesor técnico de Hisoil se va a comunicar con vos en las próximas <strong className="text-gray-800">24 horas</strong>.
               </p>
               <p className="text-gray-400 text-sm font-mono mb-8">Confirmación enviada a {form.email}</p>
-              <div className="grid grid-cols-3 gap-px bg-gray-100 border border-gray-100 rounded-sm mb-8">
+              <div className="grid grid-cols-3 gap-px bg-paja/40 border border-gray-100 rounded-sm mb-8">
                 {[
                   { label: 'Servicio', value: form.servicio || '—' },
                   { label: 'Cultivo', value: form.cultivo || '—' },
@@ -98,13 +98,13 @@ export function PresupuestoModal() {
                 ].map((d) => (
                   <div key={d.label} className="bg-white p-4 text-center">
                     <div className="text-xs font-mono text-gray-400 mb-1">{d.label}</div>
-                    <div className="text-gray-900 font-semibold text-sm">{d.value}</div>
+                    <div className="text-oliva font-semibold text-sm">{d.value}</div>
                   </div>
                 ))}
               </div>
               <button
                 onClick={handleClose}
-                className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                className="bg-oliva text-white px-8 py-3 rounded-full font-medium hover:bg-oliva transition-colors"
               >
                 Cerrar
               </button>
@@ -166,7 +166,7 @@ export function PresupuestoModal() {
               <div className="flex justify-end mt-8">
                 <button
                   type="submit"
-                  className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center gap-2"
+                  className="bg-oliva text-white px-8 py-3 rounded-full font-medium hover:bg-oliva transition-colors flex items-center gap-2"
                 >
                   Continuar →
                 </button>
@@ -229,13 +229,13 @@ export function PresupuestoModal() {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="text-gray-500 text-sm hover:text-gray-900 transition-colors flex items-center gap-1"
+                  className="text-gray-500 text-sm hover:text-oliva transition-colors flex items-center gap-1"
                 >
                   ← Atrás
                 </button>
                 <button
                   type="submit"
-                  className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+                  className="bg-oliva text-white px-8 py-3 rounded-full font-medium hover:bg-oliva transition-colors"
                 >
                   Enviar solicitud
                 </button>

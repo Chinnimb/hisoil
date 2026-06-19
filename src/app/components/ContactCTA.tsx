@@ -9,12 +9,12 @@ const whatsappSvg = (
 export function ContactCTA() {
   const { open } = useModal();
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-200 rounded-sm overflow-hidden">
 
           {/* Left — dark */}
-          <div className="lg:col-span-7 bg-gray-950 p-12 md:p-16 relative overflow-hidden">
+          <div className="lg:col-span-7 bg-oliva p-12 md:p-16 relative overflow-hidden">
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
@@ -46,10 +46,10 @@ export function ContactCTA() {
 
           {/* Right — CTAs */}
           <div className="lg:col-span-5 bg-white p-12 md:p-16 flex flex-col justify-center gap-4">
-            <button onClick={open} className="bg-gray-900 text-white py-4 px-8 rounded-full font-semibold hover:bg-gray-800 transition-colors w-full">
+            <button onClick={open} className="bg-oliva text-white py-4 px-8 rounded-full font-semibold hover:bg-oliva transition-colors w-full">
               Solicitar presupuesto
             </button>
-            <button className="border border-gray-300 text-gray-700 py-4 px-8 rounded-full font-medium hover:bg-gray-50 transition-colors w-full flex items-center justify-center gap-2.5">
+            <button className="border border-gray-300 text-gray-700 py-4 px-8 rounded-full font-medium hover:bg-paja/30 transition-colors w-full flex items-center justify-center gap-2.5">
               {whatsappSvg}
               Contactar por WhatsApp
             </button>

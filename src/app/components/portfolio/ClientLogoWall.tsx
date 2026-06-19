@@ -15,14 +15,14 @@ const clients = [
 
 export function ClientLogoWall() {
   return (
-    <section className="py-20 md:py-24 px-6 bg-gray-50 border-b border-gray-200">
+    <section className="py-20 md:py-24 px-6 bg-paja/30 border-b border-gray-200">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-5">
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">02 — Clientes</span>
           </div>
-          <h2 className="text-gray-900 mb-3">Empresas que confían en Hisoil</h2>
+          <h2 className="text-oliva mb-3">Empresas que confían en Hisoil</h2>
           <p className="text-gray-400 max-w-xl mx-auto leading-relaxed text-sm">
             [Descripción — Empresas líderes, productores y organismos públicos que eligieron a Hisoil como socio técnico en sus proyectos.]
           </p>
@@ -33,9 +33,9 @@ export function ClientLogoWall() {
           {clients.map((c) => (
             <div
               key={c.id}
-              className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 group hover:bg-gray-50 transition-colors cursor-pointer"
+              className="bg-white aspect-[5/3] flex flex-col items-center justify-center p-4 group hover:bg-paja/30 transition-colors cursor-pointer"
             >
-              <div className="w-16 h-9 bg-gray-100 border border-gray-200 rounded-sm flex items-center justify-center mb-2 group-hover:border-gray-300 transition-colors">
+              <div className="w-16 h-9 bg-paja/40 border border-gray-200 rounded-sm flex items-center justify-center mb-2 group-hover:border-gray-300 transition-colors">
                 <span className="text-gray-300 text-[10px] font-mono uppercase tracking-widest">LOGO</span>
               </div>
               <span className="text-gray-300 text-[9px] font-mono text-center leading-tight">{c.name}</span>

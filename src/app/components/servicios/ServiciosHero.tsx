@@ -1,6 +1,6 @@
 export function ServiciosHero() {
   return (
-    <section className="relative min-h-screen bg-gray-100 flex flex-col">
+    <section className="relative min-h-screen bg-paja/40 flex flex-col">
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1440&q=80&fit=crop"
@@ -10,7 +10,7 @@ export function ServiciosHero() {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gray-900/65" />
+      <div className="absolute inset-0 bg-oliva/65" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
@@ -29,7 +29,7 @@ export function ServiciosHero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-gray-900 px-9 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors">
+          <button className="bg-white text-oliva px-9 py-4 rounded-full font-medium hover:bg-paja/40 transition-colors">
             Solicitar Presupuesto
           </button>
           <button className="border border-white text-white px-9 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
@@ -39,7 +39,7 @@ export function ServiciosHero() {
       </div>
 
       {/* Trust indicators */}
-      <div className="relative z-10 bg-gray-900/80 border-t border-white/10 py-5 px-6">
+      <div className="relative z-10 bg-oliva/80 border-t border-white/10 py-5 px-6">
         <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6">
           {[
             "ISO 14001 certificado",

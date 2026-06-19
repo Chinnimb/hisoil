@@ -8,7 +8,7 @@ const quickBenefits = [
 
 export function MembresiaHero() {
   return (
-    <section className="bg-gray-950 min-h-screen flex flex-col">
+    <section className="bg-oliva min-h-screen flex flex-col">
       {/* Top label */}
       <div className="border-b border-white/10 px-6 py-4">
         <div className="w-full flex items-center gap-2 text-xs font-mono text-white/30">
@@ -34,7 +34,7 @@ export function MembresiaHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-12">
-            <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja/40 transition-colors">
               Unirme ahora
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
@@ -96,7 +96,7 @@ export function MembresiaHero() {
                 { value: "3", label: "planes disponibles" },
                 { value: "15%", label: "ahorro promedio" },
               ].map((s) => (
-                <div key={s.label} className="bg-gray-950 p-5 text-center">
+                <div key={s.label} className="bg-oliva p-5 text-center">
                   <div className="text-white font-bold text-xl mb-1">{s.value}</div>
                   <div className="text-white/30 text-xs font-mono">{s.label}</div>
                 </div>

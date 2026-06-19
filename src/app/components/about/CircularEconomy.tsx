@@ -37,7 +37,7 @@ const metrics = [
 
 export function CircularEconomy() {
   return (
-    <section className="py-24 md:py-32 bg-gray-950">
+    <section className="py-24 md:py-32 bg-oliva">
       <div className="w-full px-6">
 
         {/* Header */}
@@ -54,7 +54,7 @@ export function CircularEconomy() {
           <div className="lg:col-span-5 flex items-end">
             <div className="grid grid-cols-3 gap-px bg-white/10 w-full">
               {metrics.map((m) => (
-                <div key={m.label} className="bg-gray-950 p-6 text-center">
+                <div key={m.label} className="bg-oliva p-6 text-center">
                   <div className="text-2xl font-bold text-white mb-1">{m.value}</div>
                   <div className="text-white/50 text-xs font-semibold mb-0.5 leading-tight">{m.label}</div>
                   <div className="text-white/25 text-[10px] font-mono">{m.sub}</div>
@@ -67,7 +67,7 @@ export function CircularEconomy() {
         {/* Flow — desktop horizontal, mobile vertical */}
         <div className="hidden md:grid grid-cols-4 gap-px bg-white/10 mb-8">
           {flow.map((f, i) => (
-            <div key={f.step} className="bg-gray-950 p-8 relative group">
+            <div key={f.step} className="bg-oliva p-8 relative group">
               {/* Arrow connector */}
               {i < flow.length - 1 && (
                 <div className="absolute top-8 -right-3 z-10 flex items-center">

@@ -46,7 +46,7 @@ export function PortfolioTestimonials() {
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
             <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">09 — Testimonios</span>
           </div>
-          <h2 className="text-gray-900 mb-3">La voz de quienes trabajaron con Hisoil</h2>
+          <h2 className="text-oliva mb-3">La voz de quienes trabajaron con Hisoil</h2>
           <p className="text-gray-500 leading-relaxed max-w-xl">
             [Descripción — Testimonios de clientes reales que documentaron su experiencia y los resultados obtenidos en sus proyectos.]
           </p>
@@ -63,10 +63,10 @@ export function PortfolioTestimonials() {
 
               {/* Project tag */}
               <div className="flex items-center gap-2 mb-6">
-                <span className="bg-gray-100 text-gray-500 text-xs font-mono px-2.5 py-1 rounded-full">
+                <span className="bg-paja/40 text-gray-500 text-xs font-mono px-2.5 py-1 rounded-full">
                   {t.project}
                 </span>
-                <span className="bg-gray-900 text-white text-xs font-mono px-2.5 py-1 rounded-full">
+                <span className="bg-oliva text-white text-xs font-mono px-2.5 py-1 rounded-full">
                   {t.result}
                 </span>
               </div>
@@ -91,7 +91,7 @@ export function PortfolioTestimonials() {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
+                  <div className="font-semibold text-oliva text-sm">{t.name}</div>
                   <div className="text-gray-400 text-xs font-mono">{t.role} · {t.company}</div>
                 </div>
                 <div className="ml-auto">

@@ -36,7 +36,7 @@ export function FAQContacto() {
   const [openKey, setOpenKey] = useState<number | null>(null);
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja/30">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
@@ -45,7 +45,7 @@ export function FAQContacto() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">06 — FAQ</span>
             </div>
-            <h2 className="text-gray-900 mb-6">Preguntas frecuentes.</h2>
+            <h2 className="text-oliva mb-6">Preguntas frecuentes.</h2>
             <p className="text-gray-500 leading-relaxed mb-8">
               [Descripción — Si no encontrás la respuesta que buscás, escribinos y te respondemos en menos de 24 hs.]
             </p>
@@ -53,7 +53,7 @@ export function FAQContacto() {
               <button className="w-full border border-gray-300 text-gray-700 py-3 px-5 rounded-full text-sm font-medium hover:bg-white transition-colors">
                 Enviar otra consulta
               </button>
-              <button className="w-full bg-gray-900 text-white py-3 px-5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">
+              <button className="w-full bg-oliva text-white py-3 px-5 rounded-full text-sm font-semibold hover:bg-oliva transition-colors">
                 WhatsApp
               </button>
             </div>
@@ -68,9 +68,9 @@ export function FAQContacto() {
                   <div key={i}>
                     <button
                       onClick={() => setOpenKey(isOpen ? null : i)}
-                      className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                      className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-paja/30 transition-colors"
                     >
-                      <span className="text-gray-900 font-medium text-sm">{item.q}</span>
+                      <span className="text-oliva font-medium text-sm">{item.q}</span>
                       <ChevronDown
                         size={16}
                         className={`text-gray-400 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}

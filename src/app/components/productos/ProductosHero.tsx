@@ -1,6 +1,6 @@
 export function ProductosHero() {
   return (
-    <section className="bg-gray-950 min-h-screen flex flex-col relative overflow-hidden">
+    <section className="bg-oliva min-h-screen flex flex-col relative overflow-hidden">
       {/* Subtle grid texture */}
       <div
         className="absolute inset-0 opacity-[0.06]"
@@ -40,7 +40,7 @@ export function ProductosHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-12">
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja/40 transition-colors">
                 Solicitar presupuesto
               </button>
               <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
@@ -78,7 +78,7 @@ export function ProductosHero() {
                 <div className="absolute top-4 left-4 bg-white/10 border border-white/20 px-3 py-1 rounded-full">
                   <span className="text-white/80 text-xs font-mono">⭐ Más vendido</span>
                 </div>
-                <div className="absolute bottom-4 right-4 bg-white text-gray-900 px-3 py-1.5 rounded-full text-xs font-semibold">
+                <div className="absolute bottom-4 right-4 bg-white text-oliva px-3 py-1.5 rounded-full text-xs font-semibold">
                   Fertilizante
                 </div>
               </div>

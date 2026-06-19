@@ -32,7 +32,7 @@ export function QueEsMembresia() {
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
               <span className="text-gray-400 text-xs font-mono uppercase tracking-widest">02 — ¿Qué es?</span>
             </div>
-            <h2 className="text-gray-900 mb-6">Un programa diseñado para clientes que operan en serio.</h2>
+            <h2 className="text-oliva mb-6">Un programa diseñado para clientes que operan en serio.</h2>
             <p className="text-gray-500 leading-relaxed mb-6">
               [Párrafo 1 — La Membresía Hisoil es un programa de suscripción anual para productores, empresas y profesionales agropecuarios que quieren acceso continuo a productos, técnicos y recursos.]
             </p>
@@ -63,9 +63,9 @@ export function QueEsMembresia() {
           {/* Right — pillars */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-200 border border-gray-200">
             {pillars.map((p) => (
-              <div key={p.number} className="bg-white p-8 hover:bg-gray-50 transition-colors">
+              <div key={p.number} className="bg-white p-8 hover:bg-paja/30 transition-colors">
                 <div className="text-gray-100 font-mono font-bold text-5xl leading-none mb-5">{p.number}</div>
-                <h3 className="text-gray-900 text-base font-semibold mb-3">{p.title}</h3>
+                <h3 className="text-oliva text-base font-semibold mb-3">{p.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{p.description}</p>
               </div>
             ))}

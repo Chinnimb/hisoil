@@ -2,7 +2,7 @@ export function FinalCTAProductos() {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
-        <div className="bg-gray-950 rounded-sm overflow-hidden relative">
+        <div className="bg-oliva rounded-sm overflow-hidden relative">
           {/* Grid texture */}
           <div
             className="absolute inset-0 opacity-[0.05]"
@@ -46,7 +46,7 @@ export function FinalCTAProductos() {
 
             {/* Right — CTAs */}
             <div className="lg:col-span-5 p-12 md:p-16 flex flex-col justify-center gap-4">
-              <button className="bg-white text-gray-900 py-4 px-8 rounded-full font-semibold hover:bg-gray-100 transition-colors w-full">
+              <button className="bg-white text-oliva py-4 px-8 rounded-full font-semibold hover:bg-paja/40 transition-colors w-full">
                 Solicitar presupuesto
               </button>
               <button className="border border-white/30 text-white py-4 px-8 rounded-full font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-3">

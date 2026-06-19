@@ -5,7 +5,7 @@ export function MisionVision() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
           {/* Misión — dark */}
-          <div className="bg-gray-950 rounded-sm p-10 md:p-14 relative overflow-hidden flex flex-col">
+          <div className="bg-oliva rounded-sm p-10 md:p-14 relative overflow-hidden flex flex-col">
             {/* Grid texture */}
             <div
               className="absolute inset-0 opacity-[0.05]"
@@ -40,7 +40,7 @@ export function MisionVision() {
           </div>
 
           {/* Visión — light */}
-          <div className="bg-gray-50 border border-gray-200 rounded-sm p-10 md:p-14 flex flex-col relative overflow-hidden">
+          <div className="bg-paja/30 border border-gray-200 rounded-sm p-10 md:p-14 flex flex-col relative overflow-hidden">
             <div
               className="absolute inset-0 opacity-[0.04]"
               style={{
@@ -54,7 +54,7 @@ export function MisionVision() {
 
               <div className="text-gray-100 font-serif text-[120px] leading-none select-none -mt-4 mb-2">"</div>
 
-              <h2 className="text-gray-900 mb-6">Nuestra visión</h2>
+              <h2 className="text-oliva mb-6">Nuestra visión</h2>
               <p className="text-gray-500 leading-relaxed text-lg flex-1">
                 [Visión — Ser la empresa de referencia en soluciones agro-ambientales en Latinoamérica, reconocida por la innovación de sus productos, la solidez de su equipo técnico y su contribución concreta a la transición hacia una economía circular en el sector agropecuario e industrial.]
               </p>
