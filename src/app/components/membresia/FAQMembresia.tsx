@@ -68,7 +68,7 @@ export function FAQMembresia() {
         </div>
 
         {/* Accordion */}
-        <div className="bg-white border border-gray-200 rounded-sm overflow-hidden divide-y divide-gray-100">
+        <div className="card-gradient-border overflow-hidden divide-y divide-gray-100">
           {categories[activeCategory].items.map((item, i) => {
             const key = `${activeCategory}-${i}`;
             const isOpen = openKey === key;
@@ -93,7 +93,7 @@ export function FAQMembresia() {
         </div>
 
         {/* Contact strip */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 border border-gray-200 rounded-sm bg-white">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 card-gradient-border">
           <div>
             <div className="text-oliva font-medium mb-0.5">¿Tenés otras preguntas?</div>
             <div className="text-gray-400 text-sm font-mono">El equipo de membresías responde en menos de 24 horas.</div>

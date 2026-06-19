@@ -61,7 +61,7 @@ export function FAQContacto() {
 
           {/* Right — accordion */}
           <div className="lg:col-span-8">
-            <div className="bg-white border border-gray-200 rounded-sm overflow-hidden divide-y divide-gray-100">
+            <div className="card-gradient-border overflow-hidden divide-y divide-gray-100">
               {faqs.map((item, i) => {
                 const isOpen = openKey === i;
                 return (

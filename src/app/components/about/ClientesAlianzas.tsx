@@ -58,7 +58,7 @@ export function ClientesAlianzas() {
           <p className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-4 mt-10">Alianzas y organismos</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {alianzas.map((a, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-sm p-5 flex flex-col items-center gap-3 hover:border-gray-400 transition-colors">
+              <div key={i} className="card-gradient-border p-5 flex flex-col items-center gap-3 hover:border-gray-400 transition-colors">
                 <div className="w-20 h-10 bg-paja/30 border border-gray-200 rounded-sm flex items-center justify-center">
                   <span className="text-gray-600 text-xs font-bold uppercase tracking-wider">{a.name}</span>
                 </div>

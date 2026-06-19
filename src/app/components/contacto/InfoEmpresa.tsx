@@ -77,7 +77,7 @@ export function InfoEmpresa() {
               {/* Provinces grid */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-8">
                 {regions.map((r) => (
-                  <div key={r} className="bg-white border border-gray-200 rounded-sm px-3 py-2">
+                  <div key={r} className="card-gradient-border px-3 py-2">
                     <span className="text-gray-600 text-xs">{r}</span>
                   </div>
                 ))}

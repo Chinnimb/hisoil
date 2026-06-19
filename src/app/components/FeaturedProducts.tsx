@@ -121,7 +121,7 @@ export function FeaturedProducts() {
                 "https://images.unsplash.com/photo-1697047070930-12043019a0d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxzb2lsJTIwY29tcG9zdCUyMG9yZ2FuaWMlMjBtYXR0ZXIlMjBjbG9zZSUyMHVwJTIwdGV4dHVyZXxlbnwxfHx8fDE3ODA5MzU0MTZ8MA&ixlib=rb-4.1.0&q=80&w=200",
               ];
               return (
-              <div key={p.name || idx} className="bg-white border border-gray-200 rounded-sm p-6 flex flex-col sm:flex-row lg:flex-row gap-6 hover:border-gray-400 transition-colors group">
+              <div key={p.name || idx} className="card-gradient-border p-6 flex flex-col sm:flex-row lg:flex-row gap-6 group">
                 {/* Visual */}
                 <div className="w-full sm:w-20 lg:w-24 h-20 rounded-sm flex-shrink-0 relative overflow-hidden">
                   <img

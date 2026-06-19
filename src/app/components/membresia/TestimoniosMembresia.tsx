@@ -80,11 +80,11 @@ export function TestimoniosMembresia() {
           {/* Right — data */}
           <div className="lg:col-span-4 bg-paja/30 border-t lg:border-t-0 lg:border-l border-gray-200 p-8 flex flex-col justify-between">
             <div className="space-y-4">
-              <div className="bg-white border border-gray-200 rounded-sm px-4 py-3">
+              <div className="card-gradient-border px-4 py-3">
                 <div className="text-gray-400 text-xs font-mono mb-0.5">Plan activo</div>
                 <div className="text-oliva font-semibold text-sm">{t.plan}</div>
               </div>
-              <div className="bg-white border border-gray-200 rounded-sm px-4 py-3">
+              <div className="card-gradient-border px-4 py-3">
                 <div className="text-gray-400 text-xs font-mono mb-0.5">Antigüedad</div>
                 <div className="text-oliva font-semibold text-sm">{t.years}</div>
               </div>

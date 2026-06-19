@@ -99,7 +99,7 @@ export function HowItWorks() {
           </div>
 
           {/* Active step detail */}
-          <div className="bg-white border border-gray-200 rounded-sm p-10 grid grid-cols-12 gap-8">
+          <div className="card-gradient-border p-10 grid grid-cols-12 gap-8">
             <div className="col-span-2 flex flex-col items-center">
               <div className="w-16 h-16 bg-paja/40 rounded-sm flex items-center justify-center text-3xl mb-3">
                 {steps[activeStep].icon}

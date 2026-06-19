@@ -72,7 +72,7 @@ export function FeaturedProducts() {
           {featured.slice(0, 2).map((p) => (
             <div
               key={p.id}
-              className="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-gray-400 hover:shadow-lg transition-all cursor-pointer flex flex-col"
+              className="card-gradient-border overflow-hidden group hover:border-gray-400 hover:shadow-lg transition-all cursor-pointer flex flex-col"
             >
               {/* Imagen grande */}
               <div className="aspect-[16/9] relative overflow-hidden">
@@ -118,7 +118,7 @@ export function FeaturedProducts() {
           {featured.slice(2).map((p) => (
             <div
               key={p.id}
-              className="bg-white border border-gray-200 rounded-sm overflow-hidden group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer flex flex-col"
+              className="card-gradient-border overflow-hidden group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer flex flex-col"
             >
               {/* Imagen */}
               <div className="aspect-[4/3] relative overflow-hidden">
