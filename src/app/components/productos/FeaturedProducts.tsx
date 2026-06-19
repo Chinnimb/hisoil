@@ -79,7 +79,7 @@ export function FeaturedProducts() {
                 <img
                   src={p.img}
                   alt={p.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 {p.badge && (
@@ -125,7 +125,7 @@ export function FeaturedProducts() {
                 <img
                   src={p.img}
                   alt={p.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover transition-all duration-500"
                 />
                 {p.badge && (
                   <div className="absolute top-3 left-3 bg-oliva text-white px-2.5 py-1 rounded-full text-xs font-mono">

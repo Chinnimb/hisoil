@@ -17,7 +17,7 @@ export function WhoWeAre() {
               <img
                 src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80&fit=crop"
                 alt="Equipo técnico de Hisoil en campo"
-                className="w-full h-full object-cover grayscale"
+                className="w-full h-full object-cover"
               />
             </div>
             {/* Accent corner */}

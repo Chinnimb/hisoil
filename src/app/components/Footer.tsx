@@ -21,7 +21,7 @@ export function Footer() {
             <img
               src="/hisoil-logo.png"
               alt="HISOIL"
-              className="h-12 w-auto grayscale brightness-0 invert"
+              className="h-12 w-auto"
             />
             <p className="text-gray-400 leading-relaxed text-sm">
               Soluciones agrícolas sostenibles que transforman residuos en valor para tu campo.

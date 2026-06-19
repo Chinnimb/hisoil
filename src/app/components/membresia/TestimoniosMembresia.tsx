@@ -67,7 +67,7 @@ export function TestimoniosMembresia() {
                 <img
                   src="https://images.unsplash.com/photo-1545830790-68595959c491?w=100&q=70&fit=crop&crop=face"
                   alt={t.name}
-                  className="w-full h-full object-cover grayscale"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div>

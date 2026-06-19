@@ -87,7 +87,7 @@ export function PortfolioTestimonials() {
                       "https://images.unsplash.com/photo-1627829382469-f4bce7df99ba?w=80&q=70&fit=crop&crop=face",
                     ][testimonials.indexOf(t) % 3]}
                     alt={t.name}
-                    className="w-full h-full object-cover grayscale"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div>

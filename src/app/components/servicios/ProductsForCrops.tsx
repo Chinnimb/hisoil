@@ -85,7 +85,7 @@ export function ProductsForCrops() {
                     "https://images.unsplash.com/photo-1492496913980-501348b61469?w=400&q=70&fit=crop",
                   ][i % 6]}
                   alt={p.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-full object-cover transition-all duration-300"
                 />
                 <span className="absolute top-3 right-3 bg-white border border-gray-200 text-gray-500 text-xs px-2 py-1 rounded-full font-mono">
                   {p.category}

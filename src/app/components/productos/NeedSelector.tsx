@@ -155,7 +155,7 @@ export function NeedSelector() {
                         <img
                           src={p.img}
                           alt={p.name}
-                          className="w-full h-full object-cover grayscale"
+                          className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>

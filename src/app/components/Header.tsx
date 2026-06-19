@@ -25,7 +25,7 @@ export function Header() {
             <img
               src="/hisoil-logo.png"
               alt="HISOIL"
-              className="h-8 md:h-10 w-auto grayscale"
+              className="h-8 md:h-10 w-auto"
             />
           </Link>
 

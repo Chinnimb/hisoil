@@ -28,12 +28,12 @@ export function ProductDetailPreview() {
               return (
                 <>
                   <div className="aspect-square rounded-sm overflow-hidden mb-4 border border-gray-200">
-                    <img src={imgs[0]} alt="Producto destacado" className="w-full h-full object-cover grayscale" />
+                    <img src={imgs[0]} alt="Producto destacado" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex gap-2">
                     {imgs.map((src, i) => (
                       <div key={i} className={`flex-1 aspect-square rounded-sm overflow-hidden border-2 ${i === 0 ? "border-gray-500" : "border-gray-200"}`}>
-                        <img src={src} alt={`Vista ${i + 1}`} className="w-full h-full object-cover grayscale" />
+                        <img src={src} alt={`Vista ${i + 1}`} className="w-full h-full object-cover" />
                       </div>
                     ))}
                   </div>

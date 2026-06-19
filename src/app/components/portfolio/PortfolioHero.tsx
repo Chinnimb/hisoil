@@ -16,7 +16,7 @@ export function PortfolioHero() {
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&fit=crop"
             alt="Recuperación de suelos degradados en zona pampeana"
-            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent" />
@@ -40,7 +40,7 @@ export function PortfolioHero() {
           <img
             src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=75&fit=crop"
             alt="Planta de compostaje Frigorífico del Norte"
-            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -60,7 +60,7 @@ export function PortfolioHero() {
               <img
                 src={item.img}
                 alt={item.label}
-                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3.5">
