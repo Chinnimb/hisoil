@@ -9,26 +9,26 @@
   --font-mono:     'IBM Plex Mono', monospace; /* eyebrows, tags, data */
 
   /* ── Hisoil brand palette ── */
-  --color-oliva:   #4A8B3F;  /* muted Hisoil green — primary */
-  --color-lima:    #B8C521;  /* lima — accent bright */
-  --color-nata:    #FFF0E5;  /* nata — warm background */
-  --color-canola:  #D4DAD2;  /* minimalist grayish green */
-  --color-paja:    #D4DAD2;  /* minimalist grayish green bg */
+  --color-oliva:   #2B463C;  /* deep forest green — primary, used sparingly */
+  --color-lima:    #688F4E;  /* mid sage — accent, CTAs */
+  --color-nata:    #F4F1E9;  /* warm cream — main background */
+  --color-canola:  #B1D182;  /* light sage — soft accent */
+  --color-paja:    #EFEDE4;  /* subtle off-white — minimal differentiation */
 
-  --background: #FFFFFF;
-  --foreground: #1F2A1A;
+  --background: #F4F1E9;
+  --foreground: #1F2A22;
   --card: #FFFFFF;
-  --card-foreground: #1F2A1A;
+  --card-foreground: #1F2A22;
   --popover: #FFFFFF;
-  --popover-foreground: #1F2A1A;
-  --primary: #4A8B3F;
-  --primary-foreground: #FFFFFF;
-  --secondary: #F3F3D0;
-  --secondary-foreground: #1F2A1A;
-  --muted: #F3F3D0;
-  --muted-foreground: #4B6B3F;
-  --accent: #B8C521;
-  --accent-foreground: #1F2A1A;
+  --popover-foreground: #1F2A22;
+  --primary: #2B463C;
+  --primary-foreground: #F4F1E9;
+  --secondary: #EFEDE4;
+  --secondary-foreground: #1F2A22;
+  --muted: #EFEDE4;
+  --muted-foreground: #5A6B57;
+  --accent: #688F4E;
+  --accent-foreground: #FFFFFF;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
