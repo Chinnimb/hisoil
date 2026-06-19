@@ -77,7 +77,7 @@ export function ProjectsGallery() {
                   <img
                     src={projectImages[i % projectImages.length]}
                     alt={p.title}
-                    className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/30 to-transparent" />
 

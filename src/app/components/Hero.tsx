@@ -73,7 +73,7 @@ export function Hero() {
         const translateY = currentProgress * 60;
         imgRef.current.style.transform = `scale(${scale}) translateY(${translateY}px)`;
         // La imagen se va aclarando levemente al avanzar
-        imgRef.current.style.filter = `grayscale(100%) brightness(${0.75 + currentProgress * 0.35})`;
+        imgRef.current.style.filter = `brightness(${0.85 + currentProgress * 0.25})`;
       }
 
       rafId = requestAnimationFrame(tick);
@@ -108,16 +108,15 @@ export function Hero() {
             ref={imgRef}
             src={IMG_URL}
             alt="Campo agrícola — filas de cultivo"
-            className="w-full object-cover will-change-transform grayscale"
+            className="w-full object-cover will-change-transform"
             style={{
-              filter: 'grayscale(100%)',
               height: '150%',
               top: '-25%',
               position: 'absolute',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/96 via-gray-950/78 to-gray-950/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-gray-950/35" />
+          <div className="absolute inset-0 bg-gradient-to-r from-oliva/95 via-oliva/70 to-oliva/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-oliva/75 via-transparent to-oliva/25" />
         </div>
 
         {/* Breadcrumb strip */}
@@ -149,18 +148,18 @@ export function Hero() {
 
               <div>
                 <h1
-                  className="text-white leading-[1.0]"
+                  className="text-white leading-[1.05]"
                   style={{
-                    fontSize: 'clamp(2.8rem, 6vw, 5.5rem)',
-                    fontWeight: 800,
-                    textShadow: '0 2px 40px rgba(0,0,0,0.9), 0 1px 8px rgba(0,0,0,1)',
+                    fontSize: 'clamp(2.2rem, 4.5vw, 4rem)',
+                    fontWeight: 700,
+                    textShadow: '0 2px 40px rgba(0,0,0,0.85), 0 1px 8px rgba(0,0,0,0.9)',
                     letterSpacing: '-0.02em',
                   }}
                 >
                   Transformamos<br />
                   residuos.<br />
                   Potenciamos<br />
-                  <span style={{ color: 'rgba(255,255,255,0.38)' }}>resultados.</span>
+                  <span style={{ color: '#B8C521' }}>resultados.</span>
                 </h1>
               </div>
 

@@ -49,7 +49,7 @@ export function HowItWorks() {
           <img
             src="https://images.unsplash.com/photo-1709532388333-acf472eae61a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhZ3Jvbm9taXN0JTIwZmllbGQlMjBjcm9wJTIwaW5zcGVjdGlvbiUyMGFncmljdWx0dXJlJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc4MDkzNTAzNnww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Técnica aplicando tratamiento en cultivo"
-            className="w-full h-full object-cover object-center grayscale"
+            className="w-full h-full object-cover object-center"
             style={{ filter: 'grayscale(100%)' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-50/80 via-transparent to-gray-50/80" />

@@ -44,7 +44,7 @@ export function FeaturedCase() {
             <img
               src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=900&q=80&fit=crop"
               alt="Planta de tratamiento de efluentes frigorífico"
-              className="w-full h-full object-cover grayscale"
+              className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             <div className="absolute bottom-4 left-4 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full">

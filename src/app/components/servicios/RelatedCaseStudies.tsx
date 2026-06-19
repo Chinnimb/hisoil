@@ -72,7 +72,7 @@ export function RelatedCaseStudies() {
                   <img
                     src={caseImgs[parseInt(c.number) - 1]}
                     alt={c.client}
-                    className="w-full h-full object-cover grayscale"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="font-semibold text-gray-800 text-sm">{c.client}</div>

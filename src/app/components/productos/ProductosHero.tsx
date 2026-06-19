@@ -71,7 +71,7 @@ export function ProductosHero() {
                 <img
                   src="https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=600&q=80&fit=crop"
                   alt="Compost Premium — producto destacado"
-                  className="w-full h-full object-cover grayscale"
+                  className="w-full h-full object-cover"
                   style={{ filter: 'grayscale(20%)' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -92,7 +92,7 @@ export function ProductosHero() {
                   { label: "Kit", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=150&q=70&fit=crop" },
                 ].map(({ label, img }) => (
                   <div key={label} className="aspect-square rounded-sm overflow-hidden border border-white/10 cursor-pointer hover:border-white/30 transition-colors relative">
-                    <img src={img} alt={label} className="w-full h-full object-cover grayscale" />
+                    <img src={img} alt={label} className="w-full h-full object-cover" />
                     <div className="absolute bottom-0 inset-x-0 bg-black/50 py-1 text-center">
                       <span className="text-white/60 text-[9px] font-mono">{label}</span>
                     </div>

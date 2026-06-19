@@ -47,7 +47,7 @@ export function ProductSpotlight() {
                     <img
                       src={imgs[activeImg]}
                       alt={`Vista ${activeImg + 1}`}
-                      className="w-full h-full object-cover grayscale"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute top-4 left-4 flex flex-col gap-1.5">
                       <span className="bg-oliva text-white text-xs px-2.5 py-1 rounded-full font-mono">⭐ Destacado</span>
@@ -63,7 +63,7 @@ export function ProductSpotlight() {
                           activeImg === n ? "border-gray-700" : "border-gray-200 hover:border-gray-400"
                         }`}
                       >
-                        <img src={src} alt={`Vista ${n + 1}`} className="w-full h-full object-cover grayscale" />
+                        <img src={src} alt={`Vista ${n + 1}`} className="w-full h-full object-cover" />
                       </button>
                     ))}
                   </div>

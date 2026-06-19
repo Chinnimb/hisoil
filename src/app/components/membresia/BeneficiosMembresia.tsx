@@ -57,7 +57,7 @@ export function BeneficiosMembresia() {
           {benefits.map((b) => (
             <div key={b.title} className="bg-white p-8 flex flex-col group hover:bg-white transition-colors relative">
               <div className="absolute top-0 left-0 w-0 h-0.5 bg-oliva group-hover:w-full transition-all duration-300" />
-              <div className="text-2xl mb-5 grayscale opacity-40">{b.icon}</div>
+              <div className="text-2xl mb-5 opacity-40">{b.icon}</div>
               <div className="flex items-start justify-between mb-3 gap-2">
                 <h3 className="text-oliva font-semibold">{b.title}</h3>
                 <span className="bg-paja/40 text-gray-500 text-[10px] font-mono px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 border border-gray-200">

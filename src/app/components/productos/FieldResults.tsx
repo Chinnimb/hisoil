@@ -80,7 +80,7 @@ export function FieldResults() {
                     <img
                       src={productImgs[r.category] ?? productImgs["Fertilizante"]}
                       alt={r.product}
-                      className="w-full h-full object-cover grayscale"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div>

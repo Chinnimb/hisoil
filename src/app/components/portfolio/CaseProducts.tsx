@@ -53,7 +53,7 @@ export function CaseProducts() {
                     "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&q=70&fit=crop",
                   ][i % 3]}
                   alt={p.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-full object-cover transition-all duration-300"
                 />
                 <span className="absolute top-3 right-3 bg-white border border-gray-200 text-gray-500 text-xs px-2.5 py-1 rounded-full font-mono">
                   {p.category}

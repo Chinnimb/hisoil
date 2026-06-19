@@ -15,7 +15,7 @@ export function ServiceOverview() {
               <img
                 src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=680&q=80&fit=crop"
                 alt="Proceso de tratamiento de residuos orgánicos"
-                className="w-full h-full object-cover grayscale"
+                className="w-full h-full object-cover"
               />
             </div>
             {/* Accent */}

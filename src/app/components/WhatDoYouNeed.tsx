@@ -71,7 +71,7 @@ export function WhatDoYouNeed() {
               <img
                 src={sectors[0].img}
                 alt={sectors[0].label}
-                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/40 to-gray-950/10" />
@@ -102,7 +102,7 @@ export function WhatDoYouNeed() {
                 <img
                   src={s.img}
                   alt={s.label}
-                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/85 via-gray-950/30 to-transparent" />
 

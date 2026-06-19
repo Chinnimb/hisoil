@@ -59,7 +59,7 @@ export function MoreProjects() {
               <img
                 src={p.img}
                 alt={p.title}
-                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
               />
 
               {/* Gradient overlay */}

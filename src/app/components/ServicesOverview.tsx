@@ -82,7 +82,7 @@ export function ServicesOverview() {
                 <img
                   src={s.img}
                   alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 {/* Layered overlay for contrast */}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-gray-950/20" />
@@ -119,7 +119,7 @@ export function ServicesOverview() {
                 <img
                   src={s.img}
                   alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/50 to-gray-950/10" />
 
