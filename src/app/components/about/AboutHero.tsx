@@ -88,7 +88,7 @@ export function AboutHero() {
                 alt={slides[current].label}
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
-                  filter: 'grayscale(100%)',
+                  
                   opacity: visible ? 1 : 0,
                   transition: 'opacity 0.5s ease-in-out',
                 }}
@@ -136,7 +136,7 @@ export function AboutHero() {
                     src={s.url}
                     alt={s.label}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ filter: 'grayscale(100%)' }}
+                    
                   />
                   <div
                     className="absolute inset-0 transition-all duration-200"

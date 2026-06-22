@@ -57,7 +57,7 @@ function CaseCard({ c, img, index }: CaseCardProps) {
   return (
     <div
       ref={ref}
-      className="scroll-reveal group"
+      className={`scroll-reveal group ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${index * 0.12}s` : '0s' }}
     >
       <div className="relative h-full flex flex-col">

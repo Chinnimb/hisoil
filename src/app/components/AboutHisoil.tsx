@@ -55,7 +55,7 @@ export function AboutHisoil() {
                 src="https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxvcmdhbmljJTIwZmVydGlsaXplciUyMHNvaWwlMjBhZ3JpY3VsdHVyZSUyMGZpZWxkJTIwQXJnZW50aW5hfGVufDF8fHx8MTc4MDkzNTAzNXww&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Tractor en campo agrícola argentino"
                 className="w-full h-full object-cover"
-                style={{ filter: 'grayscale(100%)' }}
+                
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
               <div className="absolute bottom-4 left-4 text-gray-700 text-xs font-mono">Operaciones en campo · Argentina</div>

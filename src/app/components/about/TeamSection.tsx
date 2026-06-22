@@ -43,7 +43,7 @@ export function TeamSection() {
                   src={member.photo}
                   alt={member.role}
                   className="w-full h-full object-cover object-top"
-                  style={{ filter: 'grayscale(100%)' }}
+                  
                 />
 
                 {/* Hover overlay */}

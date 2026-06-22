@@ -7,7 +7,7 @@ export function ContactoHero() {
           src="https://images.unsplash.com/photo-1773412910387-56cce5df7cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx3aGVhdCUyMGhhcnZlc3QlMjBjb21iaW5lJTIwbWFjaGluZSUyMGdvbGRlbiUyMGZpZWxkfGVufDF8fHx8MTc4MDkzNTA0N3ww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Cosecha de trigo"
           className="w-full h-full object-cover"
-          style={{ filter: 'grayscale(100%)' }}
+          
         />
         <div className="absolute inset-0 bg-oliva/85" />
       </div>
