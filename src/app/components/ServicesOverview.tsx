@@ -1,142 +1,139 @@
 import { Link } from 'react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { useReveal } from '../hooks/useReveal';
 
-const featured = [
+const services = [
   {
     title: "Fertilización orgánica",
-    description: "Productos certificados que mejoran la estructura del suelo y aumentan la productividad de manera sostenible. Sin residuos químicos en tu cultivo.",
-    tag: "Producto",
-    img: "https://images.unsplash.com/photo-1642952273588-ed6fa28870ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxmZXJ0aWxpemVyJTIwb3JnYW5pYyUyMGZhcm0lMjBoYW5kcyUyMHNvaWx8ZW58MXx8fHwxNzgwOTI2MzIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Productos certificados que mejoran la estructura del suelo y aumentan la productividad de manera sostenible.",
+    img: "https://images.unsplash.com/photo-1642952273588-ed6fa28870ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
     stat: "+28% materia orgánica",
     number: "01",
+    tag: "Productos",
   },
   {
     title: "Compostaje profesional",
-    description: "Sistemas para transformar residuos orgánicos agroindustriales en enmiendas de alto valor agronómico. Cerramos el ciclo de nutrientes.",
-    tag: "Proceso",
-    img: "https://images.unsplash.com/photo-1573119798379-011dfedae008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb3liZWFuJTIwY3JvcCUyMGdyZWVuJTIwZmllbGQlMjBhZ3JpY3VsdHVyZXxlbnwxfHx8fDE3ODA5MjYzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    stat: "2.400 t procesadas/campaña",
+    description: "Transformamos residuos orgánicos agroindustriales en enmiendas de alto valor agronómico. Cerramos el ciclo de nutrientes.",
+    img: "https://images.unsplash.com/photo-1573119798379-011dfedae008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
+    stat: "2.400 t/campaña",
     number: "02",
+    tag: "Procesos",
   },
-];
-
-const grid = [
   {
-    title: "Análisis de suelos",
-    description: "Estudios completos para determinar las necesidades específicas de tu campo.",
-    tag: "Diagnóstico",
-    img: "https://images.unsplash.com/photo-1618212624319-3cd9681707e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxvcmdhbmljJTIwY29tcG9zdGluZyUyMHNvaWwlMjBmYXJtaW5nfGVufDF8fHx8MTc4MDkyNjMxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    title: "Análisis de suelo",
+    description: "Estudios completos para determinar las necesidades específicas y diseñar el plan técnico óptimo para tu campo.",
+    img: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
+    stat: "Diagnóstico técnico",
     number: "03",
+    tag: "Diagnóstico",
   },
   {
     title: "Agricultura regenerativa",
-    description: "Prácticas que restauran la salud del suelo y aumentan la biodiversidad.",
-    tag: "Sustentabilidad",
-    img: "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWdlbmVyYXRpdmUlMjBhZ3JpY3VsdHVyZSUyMGdyZWVuJTIwbGFuZHNjYXBlJTIwYWVyaWFsfGVufDF8fHx8MTc4MDkyNjMyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Prácticas que restauran la salud del suelo, recuperan biodiversidad y aumentan la rentabilidad a largo plazo.",
+    img: "https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
+    stat: "Sustentabilidad",
     number: "04",
-  },
-  {
-    title: "Control biológico",
-    description: "Soluciones naturales para el manejo de plagas sin impacto ambiental.",
-    tag: "Protección",
-    img: "https://images.unsplash.com/photo-1557234195-bd9f290f0e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxvcmdhbmljJTIwY29tcG9zdGluZyUyMHNvaWwlMjBmYXJtaW5nfGVufDF8fHx8MTc4MDkyNjMxMnww&ixlib=rb-4.1.0&q=80&w=1080",
-    number: "05",
-  },
-  {
-    title: "Optimización de rendimiento",
-    description: "Monitoreo y ajustes estratégicos para alcanzar el máximo potencial productivo.",
-    tag: "Resultados",
-    img: "https://images.unsplash.com/photo-1471289660181-7feae98d61ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxyZWdlbmVyYXRpdmUlMjBhZ3JpY3VsdHVyZSUyMGdyZWVuJTIwbGFuZHNjYXBlJTIwYWVyaWFsfGVufDF8fHx8MTc4MDkyNjMyMXww&ixlib=rb-4.1.0&q=80&w=1080",
-    number: "06",
+    tag: "Estrategia",
   },
 ];
 
-export function ServicesOverview() {
+interface ServiceCardProps {
+  s: typeof services[number];
+  index: number;
+}
+
+function ServiceCard({ s, index }: ServiceCardProps) {
+  const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.2 });
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva">
-      <div className="max-w-[1600px] mx-auto w-full">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <div>
-            <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">Servicios</span>
+    <Link
+      to="/servicios"
+      ref={ref}
+      className={`group block scroll-reveal ${visible ? 'is-visible' : ''}`}
+      style={{ transitionDelay: visible ? `${(index % 2) * 0.12}s` : '0s' }}
+    >
+      <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/15 hover:border-lima/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
+        {/* Image */}
+        <div className="relative aspect-[5/4] overflow-hidden">
+          <img
+            src={s.img}
+            alt={s.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+          />
+          {/* Subtle dark overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-oliva/90 via-oliva/20 to-transparent" />
+
+          {/* Number top-left */}
+          <div className="absolute top-4 left-4 text-white/45 group-hover:text-lima transition-colors duration-500 font-bold font-mono text-3xl">
+            {s.number}
+          </div>
+
+          {/* Arrow corner */}
+          <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
+            <ArrowUpRight className="w-4 h-4 text-white group-hover:text-oliva transition-colors duration-300" />
+          </div>
+
+          {/* Title at bottom of image */}
+          <div className="absolute bottom-4 left-4 right-4">
+            <div className="inline-block bg-lima/95 text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-semibold mb-2">
+              {s.tag}
             </div>
-            <h2 className="text-white max-w-xl">Los servicios que potencian nuestros productos.</h2>
-          </div>
-          <div className="flex flex-col gap-3 items-start md:items-end">
-            <p className="text-white/65 text-sm leading-relaxed max-w-xs text-left md:text-right">
-              El servicio técnico hace que los productos funcionen mejor — y que los resultados duren.
-            </p>
-            <Link to="/servicios">
-              <button className="border border-white/20 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 transition-colors">
-                Ver todos los servicios →
-              </button>
-            </Link>
+            <h3 className="text-white font-bold text-2xl leading-tight">{s.title}</h3>
           </div>
         </div>
 
-        {/* Featured — 2 large horizontal cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-          {featured.map((s) => (
-            <Link key={s.title} to="/servicios" className="block group">
-              <div className="relative h-72 md:h-80 overflow-hidden rounded-sm">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                {/* Layered overlay for contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-gray-950/20" />
+        {/* Body */}
+        <div className="p-6 md:p-7 flex-1 flex flex-col">
+          <p className="text-white/85 text-sm leading-relaxed mb-5">{s.description}</p>
 
-                {/* Top row */}
-                <div className="absolute top-5 left-5 right-5 flex items-center justify-between">
-                  <span className="text-white/55 font-mono text-xs">{s.number}</span>
-                  <span className="bg-white/10 border border-white/20 text-white/70 text-[10px] font-mono px-2.5 py-1 rounded-full">
-                    {s.tag}
-                  </span>
-                </div>
+          {/* Stat */}
+          <div className="mt-auto flex items-center justify-between">
+            <div className="text-white text-xs font-mono">{s.stat}</div>
+            <div className="h-[2px] bg-white/15 relative overflow-hidden rounded-full flex-1 ml-4">
+              <div className="absolute inset-y-0 left-0 bg-lima w-0 group-hover:w-full transition-all duration-700 ease-out" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
 
-                {/* Bottom content */}
-                <div className="absolute bottom-0 left-0 right-0 p-7">
-                  <h3 className="text-white font-bold text-xl mb-2">{s.title}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed mb-4">{s.description}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="bg-white/10 border border-white/15 rounded-sm px-3 py-1.5">
-                      <span className="text-white/60 text-xs font-mono">{s.stat}</span>
-                    </div>
-                    <span className="text-white/55 group-hover:text-white group-hover:translate-x-1 transition-all text-sm">→</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
+export function ServicesOverview() {
+  const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
+
+  return (
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva relative overflow-hidden">
+      {/* Soft texture overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: `repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 80px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 80px)`,
+        }}
+      />
+
+      <div className="relative max-w-[1600px] mx-auto w-full">
+        {/* Header */}
+        <div
+          ref={headerRef}
+          className={`flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
+        >
+          <div className="max-w-2xl">
+            <div className="inline-block border border-white/25 px-3 py-1 mb-6">
+              <span className="text-white/75 text-xs font-mono uppercase tracking-widest">Servicios</span>
+            </div>
+            <h2 className="text-white">Servicios que potencian cada hectárea.</h2>
+          </div>
+          <Link to="/servicios">
+            <button className="border border-white/35 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-lima hover:text-oliva hover:border-lima transition-all flex-shrink-0">
+              Ver todos →
+            </button>
+          </Link>
         </div>
 
-        {/* Secondary — 4 smaller cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-          {grid.map((s) => (
-            <Link key={s.title} to="/servicios" className="block group">
-              <div className="relative h-52 overflow-hidden rounded-sm">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-gray-950/50 to-gray-950/10" />
-
-                <div className="absolute top-3 left-3">
-                  <span className="text-white/25 font-mono text-[10px]">{s.number}</span>
-                </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <div className="text-white/35 text-[9px] font-mono uppercase tracking-widest mb-1">{s.tag}</div>
-                  <h3 className="text-white font-semibold text-sm leading-tight mb-1">{s.title}</h3>
-                  <p className="text-white/65 text-[11px] leading-relaxed line-clamp-2">{s.description}</p>
-                </div>
-
-                {/* Hover line */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-white/0 group-hover:bg-white/30 transition-colors" />
-              </div>
-            </Link>
+        {/* Service cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+          {services.map((s, i) => (
+            <ServiceCard key={s.title} s={s} index={i} />
           ))}
         </div>
       </div>
