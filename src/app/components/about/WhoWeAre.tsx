@@ -7,53 +7,6 @@ const kpis = [
   { value: "40%", label: "Reducción de impacto", sub: "ambiental por cliente" },
 ];
 
-const pilares = [
-  {
-    eyebrow: "Cómo empezó",
-    title: "Nacimos en el campo, no en una oficina.",
-    body: "Hisoil surgió de la necesidad real de los productores: recuperar suelos cansados, valorizar residuos y reducir costos sin sacrificar rendimiento. Más de 15 años en el sector agro-ambiental nos hicieron expertos en eso.",
-  },
-  {
-    eyebrow: "Qué hacemos",
-    title: "Dos líneas. Un mismo propósito: economía circular.",
-    body: "Producimos insumos agro-biológicos certificados y ofrecemos servicios técnicos de gestión ambiental. Cada solución conecta producción y sostenibilidad. Lo que para otros es residuo, para nosotros es materia prima.",
-  },
-  {
-    eyebrow: "Para quién",
-    title: "Trabajamos con quienes están en la cancha.",
-    body: "Productores agrícolas, empresas agroindustriales, frigoríficos, municipios, cooperativas. Si generás residuos orgánicos o querés cuidar tu suelo, tenemos una propuesta que se adapta a tu escala.",
-  },
-  {
-    eyebrow: "Qué nos diferencia",
-    title: "Respaldo técnico, no humo de marketing.",
-    body: "Equipo propio de agrónomos en campo, alianza con INTA, sin intermediarios. Cada recomendación viene con datos. Cada resultado, con seguimiento. Por eso nuestros clientes vuelven campaña tras campaña.",
-  },
-];
-
-interface PilarProps {
-  p: typeof pilares[number];
-  index: number;
-}
-
-function Pilar({ p, index }: PilarProps) {
-  const [ref, visible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
-  return (
-    <div
-      ref={ref}
-      className={`scroll-reveal grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 py-8 md:py-10 border-b border-oliva/15 last:border-b-0 ${visible ? 'is-visible' : ''}`}
-      style={{ transitionDelay: visible ? `${index * 0.08}s` : '0s' }}
-    >
-      <div className="md:col-span-3">
-        <div className="text-oliva text-[11px] font-mono uppercase tracking-[0.2em]">{p.eyebrow}</div>
-      </div>
-      <div className="md:col-span-9">
-        <h3 className="text-oliva font-bold text-xl md:text-2xl leading-tight mb-3">{p.title}</h3>
-        <p className="text-gray-700 leading-relaxed">{p.body}</p>
-      </div>
-    </div>
-  );
-}
-
 interface KpiProps {
   k: typeof kpis[number];
   index: number;
@@ -150,28 +103,17 @@ export function WhoWeAre() {
           </div>
         </div>
 
-        {/* Pillars */}
-        <div className="mb-20 md:mb-24">
-          {pilares.map((p, i) => (
-            <Pilar key={p.eyebrow} p={p} index={i} />
-          ))}
-        </div>
-
         {/* Big quote */}
         <div
           ref={quoteRef}
-          className={`bg-oliva rounded-3xl p-10 md:p-16 lg:p-20 mb-16 md:mb-24 relative overflow-hidden scroll-reveal-scale ${quoteVisible ? 'is-visible' : ''}`}
+          className={`bg-oliva rounded-3xl p-10 md:p-14 mb-12 md:mb-16 relative overflow-hidden scroll-reveal-scale ${quoteVisible ? 'is-visible' : ''}`}
         >
-          <div className="absolute -top-12 -left-6 text-lima/20 font-bold leading-none select-none pointer-events-none" style={{ fontSize: 'clamp(10rem, 18vw, 18rem)' }}>"</div>
+          <div className="absolute -top-10 -left-4 text-lima/20 font-bold leading-none select-none pointer-events-none" style={{ fontSize: 'clamp(8rem, 14vw, 14rem)' }}>"</div>
           <div className="relative max-w-3xl">
-            <p className="text-white font-bold text-2xl md:text-3xl lg:text-4xl leading-tight mb-6">
-              No buscamos vender un producto.<br />
+            <p className="text-white font-bold text-2xl md:text-3xl leading-tight">
+              No vendemos un producto.<br />
               <span className="text-lima">Construimos campos que duran.</span>
             </p>
-            <div className="flex items-center gap-3 mt-8">
-              <div className="w-12 h-px bg-lima" />
-              <span className="text-white/80 text-xs font-mono uppercase tracking-widest">Equipo técnico Hisoil</span>
-            </div>
           </div>
         </div>
 
