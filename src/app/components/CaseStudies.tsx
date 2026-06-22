@@ -1,4 +1,6 @@
 import { Link } from 'react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { useReveal } from '../hooks/useReveal';
 
 const cases = [
   {
@@ -7,9 +9,8 @@ const cases = [
     title: "Estancia San Jorge",
     location: "Buenos Aires · 200 ha",
     description: "Compostaje in-situ con residuos del feedlot propio. Recuperación de materia orgánica en 2 campañas.",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=85&fit=crop",
-    rotate: "-rotate-3",
-    translate: "md:translate-y-8",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=85&fit=crop",
+    tag: "Soja / Maíz",
   },
   {
     metric: "2.400t",
@@ -17,9 +18,8 @@ const cases = [
     title: "Agropecuaria del Norte",
     location: "Santa Fe · Feedlot 5.000 cab.",
     description: "Sistema de compostaje profesional con valorización de residuos. Ahorro anual de $850k.",
-    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=900&q=85&fit=crop",
-    rotate: "rotate-2",
-    translate: "md:-translate-y-6",
+    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1200&q=85&fit=crop",
+    tag: "Ganadería",
   },
   {
     metric: "+38%",
@@ -27,73 +27,98 @@ const cases = [
     title: "Productores Asociados",
     location: "Córdoba · 800 ha",
     description: "Plan técnico con bioestimulantes + análisis de suelo. 110 qq/ha en la primera campaña.",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=85&fit=crop",
-    rotate: "-rotate-2",
-    translate: "md:translate-y-12",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=85&fit=crop",
+    tag: "Maíz",
   },
 ];
 
-export function CaseStudies() {
-  return (
-    <section className="relative py-16 md:py-28 lg:py-36 px-6 md:px-12 lg:px-20 bg-oliva overflow-hidden">
-      {/* Soft texture overlay */}
-      <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage: `repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 80px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 80px)`,
-        }}
-      />
+interface CaseCardProps {
+  c: typeof cases[number];
+  index: number;
+}
 
-      <div className="relative max-w-[1600px] mx-auto w-full">
+function CaseCard({ c, index }: CaseCardProps) {
+  const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.2 });
+  return (
+    <Link
+      to="/portfolio"
+      ref={ref}
+      className={`group block scroll-reveal ${visible ? 'is-visible' : ''}`}
+      style={{ transitionDelay: visible ? `${index * 0.12}s` : '0s' }}
+    >
+      <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
+        {/* Image */}
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <img
+            src={c.image}
+            alt={c.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-oliva/90 via-oliva/30 to-transparent" />
+
+          {/* Metric tag — top left */}
+          <div className="absolute top-5 left-5 bg-lima text-oliva rounded-lg px-4 py-2.5 shadow-lg">
+            <div className="font-bold text-2xl leading-none">{c.metric}</div>
+            <div className="text-[10px] font-mono uppercase tracking-wider mt-1">{c.metricLabel}</div>
+          </div>
+
+          {/* Arrow corner */}
+          <div className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
+            <ArrowUpRight className="w-4 h-4 text-white group-hover:text-oliva transition-colors duration-300" />
+          </div>
+
+          {/* Tag at bottom */}
+          <div className="absolute bottom-5 left-5">
+            <span className="inline-block bg-white/95 backdrop-blur-sm text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full">
+              {c.tag}
+            </span>
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className="p-6 md:p-7 flex-1 flex flex-col">
+          <h3 className="text-oliva font-bold text-2xl leading-tight mb-1">{c.title}</h3>
+          <div className="text-gray-600 text-xs font-mono mb-4">{c.location}</div>
+          <p className="text-gray-700 text-sm leading-relaxed">{c.description}</p>
+
+          {/* Animated underline */}
+          <div className="mt-5 h-[2px] bg-oliva/10 relative overflow-hidden rounded-full">
+            <div className="absolute inset-y-0 left-0 bg-lima w-0 group-hover:w-full transition-all duration-700 ease-out" />
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export function CaseStudies() {
+  const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
+
+  return (
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
+      <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 md:mb-24">
+        <div
+          ref={headerRef}
+          className={`flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
+        >
           <div className="max-w-2xl">
-            <div className="inline-block border border-white/25 px-3 py-1 mb-6">
-              <span className="text-white/70 text-xs font-mono uppercase tracking-widest">Casos documentados</span>
+            <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
+              <span className="text-oliva text-xs font-mono uppercase tracking-widest">Casos documentados</span>
             </div>
-            <h2 className="text-white">Resultados que se ven en el campo.</h2>
+            <h2 className="text-oliva">Resultados que se ven en el campo.</h2>
           </div>
           <Link to="/portfolio">
-            <button className="border border-white/35 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white hover:text-oliva transition-all flex-shrink-0">
+            <button className="border border-oliva text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-oliva hover:text-white transition-all flex-shrink-0">
               Ver todos los casos →
             </button>
           </Link>
         </div>
 
-        {/* Floating staggered cards — Farm Minerals style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 px-4 md:px-12 lg:px-20 py-8 md:py-16">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
           {cases.map((c, i) => (
-            <Link
-              key={c.title}
-              to="/portfolio"
-              className={`group block reveal-up ${c.translate}`}
-              style={{ animationDelay: `${i * 0.18}s` }}
-            >
-              <div className={`relative rounded-2xl overflow-hidden bg-white shadow-2xl transition-all duration-700 ease-out ${c.rotate} group-hover:rotate-0 group-hover:scale-[1.03]`}>
-                {/* Image */}
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <img
-                    src={c.image}
-                    alt={c.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  {/* Bottom gradient for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                  {/* Metric tag — top left, green square */}
-                  <div className="absolute top-5 left-5 bg-oliva rounded-lg px-4 py-3 shadow-lg">
-                    <div className="text-white font-bold text-2xl leading-none">{c.metric}</div>
-                    <div className="text-white/75 text-[10px] font-mono uppercase tracking-wider mt-1">{c.metricLabel}</div>
-                  </div>
-
-                  {/* Title block — bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white font-bold text-2xl leading-tight mb-1">{c.title}</h3>
-                    <div className="text-white/70 text-xs font-mono mb-3">{c.location}</div>
-                    <p className="text-white/85 text-sm leading-relaxed line-clamp-3">{c.description}</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <CaseCard key={c.title} c={c} index={i} />
           ))}
         </div>
       </div>
