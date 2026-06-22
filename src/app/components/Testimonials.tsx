@@ -95,7 +95,7 @@ export function Testimonials() {
             <p className="text-white/80 text-lg leading-relaxed mb-10">{t.quote}</p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full overflow-hidden border border-white/20 flex-shrink-0">
-                <img src={t.avatar} alt={t.author} className="w-full h-full object-cover" style={{ filter: 'grayscale(100%)' }} />
+                <img src={t.avatar} alt={t.author} className="w-full h-full object-cover"  />
               </div>
               <div>
                 <div className="text-white font-semibold">{t.author}</div>
@@ -115,7 +115,7 @@ export function Testimonials() {
                 }`}
               >
                 <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 flex-shrink-0">
-                  <img src={tm.avatar} alt={tm.author} className="w-full h-full object-cover" style={{ filter: 'grayscale(100%)' }} />
+                  <img src={tm.avatar} alt={tm.author} className="w-full h-full object-cover"  />
                 </div>
                 <div className="text-white/60 text-xs font-semibold truncate">{tm.author.split(" ")[0]}</div>
                 <div className={`text-sm font-bold ${i === current ? "text-white" : "text-white/55"}`}>{tm.stat}</div>

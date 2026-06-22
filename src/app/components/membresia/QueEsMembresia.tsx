@@ -46,7 +46,7 @@ export function QueEsMembresia() {
                 src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb3liZWFuJTIwY29ybiUyMGNyb3AlMjBjbG9zZSUyMHVwJTIwcGxhbnQlMjBncm93dGh8ZW58MXx8fHwxNzgwOTM1MDQ4fDA&ixlib=rb-4.1.0&q=80&w=600"
                 alt="Cultivo en crecimiento con suelo tratado"
                 className="w-full h-full object-cover"
-                style={{ filter: 'grayscale(100%)' }}
+                
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent" />
             </div>
