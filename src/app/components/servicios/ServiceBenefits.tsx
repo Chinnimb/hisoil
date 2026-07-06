@@ -1,7 +1,9 @@
+import { Leaf, TrendingUp, Settings } from 'lucide-react';
+
 const benefits = [
   {
     number: "01",
-    icon: "🌿",
+    Icon: Leaf,
     title: "Beneficio ambiental",
     headline: "Cumplimiento normativo garantizado",
     points: [
@@ -14,7 +16,7 @@ const benefits = [
   },
   {
     number: "02",
-    icon: "💰",
+    Icon: TrendingUp,
     title: "Beneficio económico",
     headline: "Ahorro y retorno medible",
     points: [
@@ -27,7 +29,7 @@ const benefits = [
   },
   {
     number: "03",
-    icon: "⚙️",
+    Icon: Settings,
     title: "Beneficio operativo",
     headline: "Eficiencia y continuidad productiva",
     points: [
@@ -62,13 +64,15 @@ export function ServiceBenefits() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {benefits.map((b) => (
-            <div key={b.number} className="border border-gray-300 rounded-sm overflow-hidden flex flex-col">
+          {benefits.map((b) => {
+            const { Icon } = b;
+            return (
+            <div key={b.number} className="border border-gray-300 rounded-2xl overflow-hidden flex flex-col group hover:border-oliva/40 hover:shadow-xl transition-all duration-500">
               {/* Card top */}
               <div className="bg-paja p-8 border-b border-gray-200">
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-12 h-12 card-gradient-border flex items-center justify-center text-2xl">
-                    {b.icon}
+                  <div className="w-12 h-12 rounded-xl bg-oliva flex items-center justify-center group-hover:bg-lima transition-colors duration-500">
+                    <Icon className="w-5 h-5 text-lima group-hover:text-oliva transition-colors duration-500" />
                   </div>
                   <span className="text-xs font-mono text-gray-600 bg-white border border-gray-300 px-2.5 py-1 rounded-full">
                     {b.badge}
@@ -93,7 +97,8 @@ export function ServiceBenefits() {
                 </ul>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

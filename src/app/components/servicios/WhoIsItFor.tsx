@@ -1,34 +1,36 @@
+import { Factory, Building2, Wheat, Landmark } from 'lucide-react';
+
 const audiences = [
   {
-    icon: "🏭",
+    Icon: Factory,
     title: "Industria",
     subtitle: "Plantas de producción y manufactura",
     description:
-      "[Descripción — Industrias con generación de efluentes, residuos industriales peligrosos o no peligrosos que requieren gestión certificada.]",
+      "Industrias con generación de efluentes, residuos industriales peligrosos o no peligrosos que requieren gestión certificada.",
     examples: ["Frigoríficos", "Textiles", "Química", "Metalmecánica"],
   },
   {
-    icon: "🏢",
+    Icon: Building2,
     title: "Empresas agropecuarias",
     subtitle: "Grandes y medianas empresas del agro",
     description:
-      "[Descripción — Empresas con operaciones agrícolas o ganaderas de escala que generan residuos orgánicos y requieren soluciones técnicas de valorización.]",
+      "Empresas con operaciones agrícolas o ganaderas de escala que generan residuos orgánicos y requieren soluciones técnicas de valorización.",
     examples: ["Pools de siembra", "Feedlots", "Tambos", "Cooperativas"],
   },
   {
-    icon: "🌾",
+    Icon: Wheat,
     title: "Productores agrícolas",
     subtitle: "Agricultores familiares y de mediana escala",
     description:
-      "[Descripción — Productores que buscan mejorar la gestión de residuos de campaña, envases vacíos de agroquímicos y subproductos orgánicos.]",
+      "Productores que buscan mejorar la gestión de residuos de campaña, envases vacíos de agroquímicos y subproductos orgánicos.",
     examples: ["Soja", "Maíz", "Trigo", "Horticultura"],
   },
   {
-    icon: "🏛️",
+    Icon: Landmark,
     title: "Organismos públicos",
     subtitle: "Municipios e instituciones estatales",
     description:
-      "[Descripción — Municipios y organismos con pasivos ambientales, necesidad de gestión de RSU o proyectos de remediación de sitios contaminados.]",
+      "Municipios y organismos con pasivos ambientales, necesidad de gestión de RSU o proyectos de remediación de sitios contaminados.",
     examples: ["Municipios", "Provincias", "Entes reguladores"],
   },
 ];
@@ -50,14 +52,16 @@ export function WhoIsItFor() {
 
         {/* Audience cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {audiences.map((a) => (
+          {audiences.map((a) => {
+            const { Icon } = a;
+            return (
             <div
               key={a.title}
               className="card-gradient-border p-7 flex flex-col hover:border-gray-400 transition-colors group cursor-pointer"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-paja rounded-sm flex items-center justify-center text-2xl mb-5 group-hover:bg-gray-200 transition-colors">
-                {a.icon}
+              <div className="w-14 h-14 bg-oliva rounded-xl flex items-center justify-center mb-5 group-hover:bg-lima transition-colors duration-500">
+                <Icon className="w-6 h-6 text-lima group-hover:text-oliva transition-colors duration-500" />
               </div>
 
               <h3 className="font-semibold text-oliva mb-1">{a.title}</h3>
@@ -79,7 +83,8 @@ export function WhoIsItFor() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA strip */}

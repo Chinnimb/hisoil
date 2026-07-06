@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Sprout, Target, Droplets, Zap, Recycle } from 'lucide-react';
 
 const navCategories = [
-  { id: "cultivo", label: "Catálogo por cultivo", icon: "🌱", count: 24 },
-  { id: "necesidad", label: "Catálogo por necesidad", icon: "🎯", count: 18 },
-  { id: "fertilizantes", label: "Fertilizantes", icon: "💧", count: 12 },
-  { id: "bioestimulantes", label: "Bioestimulantes", icon: "⚡", count: 9 },
-  { id: "compost", label: "Compost", icon: "♻️", count: 6 },
+  { id: "cultivo", label: "Catálogo por cultivo", Icon: Sprout, count: 24 },
+  { id: "necesidad", label: "Catálogo por necesidad", Icon: Target, count: 18 },
+  { id: "fertilizantes", label: "Fertilizantes", Icon: Droplets, count: 12 },
+  { id: "bioestimulantes", label: "Bioestimulantes", Icon: Zap, count: 9 },
+  { id: "compost", label: "Compost", Icon: Recycle, count: 6 },
 ];
 
 const productGrid = [
@@ -42,29 +43,33 @@ export function ProductsForCrops() {
 
         {/* Category navigation cards */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
-          {navCategories.map((cat) => (
+          {navCategories.map((cat) => {
+            const { Icon } = cat;
+            const isActive = activeCategory === cat.id;
+            return (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`p-5 rounded-sm border text-left transition-all ${
-                activeCategory === cat.id
-                  ? "bg-oliva border-gray-900 text-white"
+              className={`p-5 rounded-xl border text-left transition-all ${
+                isActive
+                  ? "bg-oliva border-oliva text-white"
                   : "bg-paja border-gray-300 text-gray-600 hover:border-gray-400"
               }`}
             >
-              <div className={`w-10 h-10 rounded-sm flex items-center justify-center text-xl mb-3 ${
-                activeCategory === cat.id ? "bg-white/10" : "bg-white border border-gray-200"
+              <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${
+                isActive ? "bg-lima" : "bg-oliva"
               }`}>
-                {cat.icon}
+                <Icon className={`w-5 h-5 ${isActive ? "text-oliva" : "text-lima"}`} />
               </div>
-              <div className={`font-medium text-sm leading-tight mb-2 ${activeCategory === cat.id ? "text-white" : "text-gray-700"}`}>
+              <div className={`font-medium text-sm leading-tight mb-2 ${isActive ? "text-white" : "text-gray-700"}`}>
                 {cat.label}
               </div>
-              <div className={`text-xs font-mono ${activeCategory === cat.id ? "text-white/70" : "text-gray-600"}`}>
+              <div className={`text-xs font-mono ${isActive ? "text-white/70" : "text-gray-600"}`}>
                 {cat.count} productos
               </div>
             </button>
-          ))}
+            );
+          })}
         </div>
 
         {/* Product grid */}
