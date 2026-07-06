@@ -69,7 +69,7 @@ function BenefitCard({ b, index }: BenefitCardProps) {
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {/* Green gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-oliva/90 via-oliva/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 
         {/* Icon + badge */}
         <div className="absolute top-4 left-4 right-4 flex items-start justify-between">

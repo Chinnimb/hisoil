@@ -54,7 +54,7 @@ export function ServiciosHero() {
 
         {/* Overlays */}
         <div className="absolute inset-0 bg-oliva/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-oliva/70 via-transparent to-oliva/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noche/60 via-transparent to-noche/10" />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">

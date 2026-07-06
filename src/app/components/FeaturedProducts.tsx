@@ -175,7 +175,7 @@ function ProductCard({ p }: ProductCardProps) {
             alt={p.name}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-oliva/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-noche/60 via-transparent to-transparent" />
 
           {/* Line tag top-left */}
           <div className="absolute top-3 left-3 flex items-center gap-2">

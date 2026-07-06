@@ -10,7 +10,8 @@
 
   /* ── Hisoil brand palette ── */
   --color-oliva:   #2F6B33;  /* Hisoil green — primary */
-  --color-oliva-dark: #14201A;  /* deep forest — emphasis sections */
+  --color-oliva-dark: #0E1610;  /* deep forest almost black — for overlays */
+  --color-noche:   #0E1610;  /* alias — verde muy oscuro para overlays */
   --color-lima:    #B8C521;  /* lima — accent bright */
   --color-nata:    #FAFAF7;  /* warm off-white — section bg */
   --color-canola:  #B1D182;  /* light sage — soft accent */
@@ -96,6 +97,7 @@
 
 @theme inline {
   --color-oliva: var(--color-oliva);
+  --color-noche: var(--color-noche);
   --color-lima: var(--color-lima);
   --color-nata: var(--color-nata);
   --color-canola: var(--color-canola);

@@ -62,7 +62,7 @@ function SectorCard({ s, index, large = false }: SectorCardProps) {
           alt={s.label}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-oliva/95 via-oliva/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noche/85 via-noche/25 to-transparent" />
 
         {/* Tag for "Más consultado" */}
         {s.tag && (

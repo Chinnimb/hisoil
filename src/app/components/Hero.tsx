@@ -70,8 +70,8 @@ export function Hero() {
               position: 'absolute',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-oliva/90 via-oliva/50 to-oliva/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-oliva/70 via-transparent to-oliva/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-noche/80 via-noche/30 to-noche/8" />
+          <div className="absolute inset-0 bg-gradient-to-t from-noche/60 via-transparent to-noche/10" />
         </div>
 
         {/* Breadcrumb strip */}

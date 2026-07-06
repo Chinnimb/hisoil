@@ -76,7 +76,7 @@ function ValorCard({ v, index }: ValorCardProps) {
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-oliva/90 via-oliva/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 
           {/* Number top right */}
           <div className="absolute top-4 right-4 text-white/40 group-hover:text-lima transition-colors duration-500 font-bold font-mono text-3xl">
