@@ -211,29 +211,47 @@ function ProductCard({ p, index }: ProductCardProps) {
       )}
 
       {/* Contenido */}
-      <div className="relative z-10 flex flex-col h-full">
-        <div className="flex items-start justify-between gap-3 mb-3">
-          <h4 className="font-bold text-base md:text-lg leading-tight transition-colors duration-500 text-oliva group-hover:text-white">
-            {p.name}
-          </h4>
-          {p.status && (
-            <span className={`text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full flex-shrink-0 whitespace-nowrap transition-colors duration-500 ${
-              p.status === 'a-desarrollar'
-                ? 'bg-lima/20 text-oliva border border-lima/40 group-hover:bg-lima group-hover:text-oliva group-hover:border-lima'
-                : 'bg-oliva/10 text-oliva/70 border border-oliva/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/40'
-            }`}>
-              {p.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
-            </span>
+      <div className="relative z-10 flex gap-4 h-full">
+        {/* Thumbnail cuadrado con imagen */}
+        <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 rounded-xl overflow-hidden border border-oliva/15 group-hover:border-white/40 transition-colors duration-500 relative">
+          {img ? (
+            <img
+              src={img}
+              alt={p.name}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-oliva/10 flex items-center justify-center">
+              <span className="text-oliva/40 font-mono text-xs">HiSoil</span>
+            </div>
           )}
         </div>
-        <p className="text-sm leading-relaxed mb-4 flex-1 transition-colors duration-500 text-gray-700 group-hover:text-white/90">
-          {p.desc}
-        </p>
-        <div className="flex items-center justify-between pt-3 border-t transition-colors duration-500 border-oliva/10 group-hover:border-white/25">
-          <span className="text-xs font-mono transition-colors duration-500 text-oliva/60 group-hover:text-lima">
-            Ver ficha técnica
-          </span>
-          <ArrowUpRight className="w-4 h-4 transition-all duration-500 text-oliva/50 group-hover:text-lima group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+
+        {/* Textos y footer */}
+        <div className="flex flex-col flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-3 mb-2">
+            <h4 className="font-bold text-base md:text-lg leading-tight transition-colors duration-500 text-oliva group-hover:text-white">
+              {p.name}
+            </h4>
+            {p.status && (
+              <span className={`text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full flex-shrink-0 whitespace-nowrap transition-colors duration-500 ${
+                p.status === 'a-desarrollar'
+                  ? 'bg-lima/20 text-oliva border border-lima/40 group-hover:bg-lima group-hover:text-oliva group-hover:border-lima'
+                  : 'bg-oliva/10 text-oliva/70 border border-oliva/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/40'
+              }`}>
+                {p.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
+              </span>
+            )}
+          </div>
+          <p className="text-sm leading-relaxed mb-4 flex-1 transition-colors duration-500 text-gray-700 group-hover:text-white/90">
+            {p.desc}
+          </p>
+          <div className="flex items-center justify-between pt-3 border-t transition-colors duration-500 border-oliva/10 group-hover:border-white/25">
+            <span className="text-xs font-mono transition-colors duration-500 text-oliva/60 group-hover:text-lima">
+              Ver ficha técnica
+            </span>
+            <ArrowUpRight className="w-4 h-4 transition-all duration-500 text-oliva/50 group-hover:text-lima group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </div>
         </div>
       </div>
     </div>
