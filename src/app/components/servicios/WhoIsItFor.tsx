@@ -60,8 +60,8 @@ export function WhoIsItFor() {
               className="card-gradient-border p-7 flex flex-col hover:border-gray-400 transition-colors group cursor-pointer"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-oliva rounded-xl flex items-center justify-center mb-5 group-hover:bg-lima transition-colors duration-500">
-                <Icon className="w-6 h-6 text-lima group-hover:text-oliva transition-colors duration-500" />
+              <div className="w-14 h-14 bg-oliva/10 backdrop-blur-md border border-oliva/20 rounded-xl flex items-center justify-center mb-5 group-hover:bg-lima/25 group-hover:border-lima/40 transition-all duration-500">
+                <Icon className="w-6 h-6 text-oliva transition-colors duration-500" />
               </div>
 
               <h3 className="font-semibold text-oliva mb-1">{a.title}</h3>

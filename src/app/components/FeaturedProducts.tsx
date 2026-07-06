@@ -179,8 +179,8 @@ function ProductCard({ p }: ProductCardProps) {
 
           {/* Line tag top-left */}
           <div className="absolute top-3 left-3 flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-white/95 backdrop-blur-md flex items-center justify-center shadow">
-              <Icon className="w-4 h-4 text-oliva" />
+            <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center">
+              <Icon className="w-4 h-4 text-white" />
             </div>
             <span className="bg-white/95 backdrop-blur-md text-oliva text-[9px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full font-semibold">
               {p.line}

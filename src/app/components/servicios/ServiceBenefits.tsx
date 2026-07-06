@@ -71,8 +71,8 @@ export function ServiceBenefits() {
               {/* Card top */}
               <div className="bg-paja p-8 border-b border-gray-200">
                 <div className="flex items-start justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-oliva flex items-center justify-center group-hover:bg-lima transition-colors duration-500">
-                    <Icon className="w-5 h-5 text-lima group-hover:text-oliva transition-colors duration-500" />
+                  <div className="w-12 h-12 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center group-hover:bg-lima/25 group-hover:border-lima/40 transition-all duration-500">
+                    <Icon className="w-5 h-5 text-oliva group-hover:text-oliva transition-colors duration-500" />
                   </div>
                   <span className="text-xs font-mono text-gray-600 bg-white border border-gray-300 px-2.5 py-1 rounded-full">
                     {b.badge}

@@ -260,8 +260,8 @@ function CategoryBlock({ category, index }: CategoryBlockProps) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-10 md:mb-14 items-start">
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-oliva flex items-center justify-center">
-              <Icon className="w-6 h-6 text-lima" />
+            <div className="w-12 h-12 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center hover:bg-lima/25 hover:border-lima/40 transition-all duration-500">
+              <Icon className="w-6 h-6 text-oliva" />
             </div>
             <div className="text-oliva text-xs font-mono uppercase tracking-widest">
               {String(index + 1).padStart(2, '0')} · {category.eyebrow}

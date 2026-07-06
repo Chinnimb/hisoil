@@ -56,10 +56,12 @@ export function ProductsForCrops() {
                   : "bg-paja border-gray-300 text-gray-600 hover:border-gray-400"
               }`}
             >
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${
-                isActive ? "bg-lima" : "bg-oliva"
+              <div className={`w-10 h-10 rounded-lg backdrop-blur-md border flex items-center justify-center mb-3 transition-all duration-500 ${
+                isActive
+                  ? "bg-lima/30 border-lima/50"
+                  : "bg-oliva/10 border-oliva/20"
               }`}>
-                <Icon className={`w-5 h-5 ${isActive ? "text-oliva" : "text-lima"}`} />
+                <Icon className={`w-5 h-5 ${isActive ? "text-white" : "text-oliva"}`} />
               </div>
               <div className={`font-medium text-sm leading-tight mb-2 ${isActive ? "text-white" : "text-gray-700"}`}>
                 {cat.label}
