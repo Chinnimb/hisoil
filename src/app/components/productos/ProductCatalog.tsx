@@ -4,6 +4,51 @@ import { useReveal } from '../../hooks/useReveal';
 
 type LucideIcon = typeof Sprout;
 
+// Product name -> image (single map for all lines, matches by name)
+const productImages: Record<string, string> = {
+  // Agricultura
+  'HiSoil Compost': 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80&fit=crop',
+  'HiSoil Biofert': 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=700&q=80&fit=crop',
+  'HiSoil Humic': 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=700&q=80&fit=crop',
+  'HiSoil Carbon': 'https://images.unsplash.com/photo-1596568359553-a56de6970068?w=700&q=80&fit=crop',
+  'HiSoil NPK Organic': 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=700&q=80&fit=crop',
+  'HiSoil Phospho': 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700&q=80&fit=crop',
+  'HiSoil Potassium': 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80&fit=crop',
+  'HiSoil BioProtect': 'https://images.unsplash.com/photo-1470753523043-63c8b7f0e6a2?w=700&q=80&fit=crop',
+  'HiSoil AgroEco': 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=80&fit=crop',
+  'HiSoil Regenera': 'https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?w=700&q=80&fit=crop',
+  // Sustratos
+  'HiSoil Seed': 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80&fit=crop',
+  'HiSoil Plug': 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?w=700&q=80&fit=crop',
+  'HiSoil Nursery': 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=700&q=80&fit=crop',
+  'HiSoil Premium': 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=700&q=80&fit=crop',
+  'HiSoil Forest': 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80&fit=crop',
+  'HiSoil Tobacco': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=700&q=80&fit=crop',
+  'HiSoil Berry': 'https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=700&q=80&fit=crop',
+  'HiSoil Cannabis': 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?w=700&q=80&fit=crop',
+  'HiSoil Citrus': 'https://images.unsplash.com/photo-1594059353569-6ca6ccb3b0c2?w=700&q=80&fit=crop',
+  'HiSoil Turf': 'https://images.unsplash.com/photo-1553648858-2a49b7c5e91a?w=700&q=80&fit=crop',
+  'HiSoil Hydro': 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=700&q=80&fit=crop',
+  'HiSoil Palm': 'https://images.unsplash.com/photo-1449752955586-8fbc39a6d68b?w=700&q=80&fit=crop',
+  // Paisajismo
+  'HiSoil Tierra Fértil': 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=80&fit=crop',
+  'HiSoil Level': 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80&fit=crop',
+  'HiSoil Outdoor': 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700&q=80&fit=crop',
+  'HiSoil Indoor': 'https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=700&q=80&fit=crop',
+  'HiSoil GreenRoof': 'https://images.unsplash.com/photo-1527863280617-15596f92e5c8?w=700&q=80&fit=crop',
+  'HiSoil Chip': 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80&fit=crop',
+  'HiSoil MiniChip': 'https://images.unsplash.com/photo-1518131955366-a2b23ded8ed8?w=700&q=80&fit=crop',
+  'HiSoil Sphagnum': 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=700&q=80&fit=crop',
+  'HiSoil Perlite': 'https://images.unsplash.com/photo-1596568359553-a56de6970068?w=700&q=80&fit=crop',
+  'HiSoil Pometina': 'https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?w=700&q=80&fit=crop',
+  'HiSoil Vermiculite': 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=700&q=80&fit=crop',
+  // Infraestructura
+  'HiSoil Restore': 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=700&q=80&fit=crop',
+  'HiSoil HydroMulch': 'https://images.unsplash.com/photo-1518131955366-a2b23ded8ed8?w=700&q=80&fit=crop',
+  'HiSoil Erosion': 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=700&q=80&fit=crop',
+  'HiSoil Native': 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700&q=80&fit=crop',
+};
+
 interface Product {
   name: string;
   desc: string;
@@ -143,28 +188,53 @@ interface ProductCardProps {
 
 function ProductCard({ p, index }: ProductCardProps) {
   const [ref, visible] = useReveal<HTMLDivElement>({ threshold: 0.15 });
+  const img = productImages[p.name];
+
   return (
     <div
       ref={ref}
-      className={`scroll-reveal group bg-white border border-oliva/15 hover:border-oliva/40 hover:shadow-lg rounded-2xl p-5 md:p-6 transition-all duration-500 flex flex-col ${visible ? 'is-visible' : ''}`}
+      className={`scroll-reveal group relative overflow-hidden bg-white border border-oliva/15 hover:border-oliva/50 hover:shadow-2xl rounded-2xl p-5 md:p-6 transition-all duration-500 flex flex-col min-h-[220px] ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${(index % 4) * 0.05}s` : '0s' }}
     >
-      <div className="flex items-start justify-between gap-3 mb-3">
-        <h4 className="text-oliva font-bold text-base md:text-lg leading-tight">{p.name}</h4>
-        {p.status && (
-          <span className={`text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full flex-shrink-0 whitespace-nowrap ${
-            p.status === 'a-desarrollar'
-              ? 'bg-lima/20 text-oliva border border-lima/40'
-              : 'bg-oliva/10 text-oliva/70 border border-oliva/20'
-          }`}>
-            {p.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
+      {/* Hover image background */}
+      {img && (
+        <>
+          <img
+            src={img}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+          />
+          {/* Overlay verde para asegurar contraste del texto */}
+          <div className="absolute inset-0 bg-gradient-to-br from-oliva/95 via-oliva/85 to-oliva/95 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+        </>
+      )}
+
+      {/* Contenido */}
+      <div className="relative z-10 flex flex-col h-full">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <h4 className="font-bold text-base md:text-lg leading-tight transition-colors duration-500 text-oliva group-hover:text-white">
+            {p.name}
+          </h4>
+          {p.status && (
+            <span className={`text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full flex-shrink-0 whitespace-nowrap transition-colors duration-500 ${
+              p.status === 'a-desarrollar'
+                ? 'bg-lima/20 text-oliva border border-lima/40 group-hover:bg-lima group-hover:text-oliva group-hover:border-lima'
+                : 'bg-oliva/10 text-oliva/70 border border-oliva/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/40'
+            }`}>
+              {p.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
+            </span>
+          )}
+        </div>
+        <p className="text-sm leading-relaxed mb-4 flex-1 transition-colors duration-500 text-gray-700 group-hover:text-white/90">
+          {p.desc}
+        </p>
+        <div className="flex items-center justify-between pt-3 border-t transition-colors duration-500 border-oliva/10 group-hover:border-white/25">
+          <span className="text-xs font-mono transition-colors duration-500 text-oliva/60 group-hover:text-lima">
+            Ver ficha técnica
           </span>
-        )}
-      </div>
-      <p className="text-gray-700 text-sm leading-relaxed mb-4 flex-1">{p.desc}</p>
-      <div className="flex items-center justify-between pt-3 border-t border-oliva/10">
-        <span className="text-oliva/60 text-xs font-mono">Ver ficha técnica</span>
-        <ArrowUpRight className="w-4 h-4 text-oliva/50 group-hover:text-oliva group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+          <ArrowUpRight className="w-4 h-4 transition-all duration-500 text-oliva/50 group-hover:text-lima group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </div>
       </div>
     </div>
   );
