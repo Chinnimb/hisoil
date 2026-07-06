@@ -102,8 +102,8 @@ export function HowItWorks() {
           {/* Active step detail */}
           <div className="card-gradient-border p-10 grid grid-cols-12 gap-8">
             <div className="col-span-2 flex flex-col items-center">
-              <div className="w-16 h-16 bg-oliva rounded-xl flex items-center justify-center mb-3">
-                {(() => { const Icon = steps[activeStep].Icon; return <Icon className="w-7 h-7 text-lima" />; })()}
+              <div className="w-16 h-16 bg-oliva/10 backdrop-blur-md border border-oliva/20 rounded-xl flex items-center justify-center mb-3 hover:bg-lima/25 hover:border-lima/40 transition-all duration-500">
+                {(() => { const Icon = steps[activeStep].Icon; return <Icon className="w-7 h-7 text-oliva" />; })()}
               </div>
               <span className="text-4xl font-bold text-gray-100 font-mono">{steps[activeStep].number}</span>
             </div>
@@ -139,8 +139,8 @@ export function HowItWorks() {
               </div>
               <div className="pb-8">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-oliva rounded-lg flex items-center justify-center">
-                    <Icon className="w-4 h-4 text-lima" />
+                  <div className="w-8 h-8 bg-oliva/10 backdrop-blur-md border border-oliva/20 rounded-lg flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-oliva" />
                   </div>
                   <h3 className="font-semibold text-oliva">{step.title}</h3>
                 </div>

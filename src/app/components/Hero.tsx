@@ -177,7 +177,7 @@ export function Hero() {
                   style={{ animationDelay: `${0.85 + i * 0.1}s` }}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-lima/25 flex items-center justify-center group-hover:bg-lima transition-colors duration-300">
+                    <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
                       <c.Icon className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
                     </div>
                     <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">{c.label}</div>
