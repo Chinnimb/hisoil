@@ -275,6 +275,15 @@
     animation: revealUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
+  /* Hide scrollbar for carousels */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   /* Scroll-triggered reveal — used with useReveal hook */
   .scroll-reveal {
     opacity: 0;

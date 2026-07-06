@@ -1,105 +1,165 @@
 import { Link } from 'react-router';
-import { ArrowUpRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import { useRef, useState, useEffect } from 'react';
 
-const categories = [
+type LucideIcon = typeof Sprout;
+
+interface Product {
+  name: string;
+  desc: string;
+  line: 'Agricultura' | 'Sustratos' | 'Paisajismo' | 'Infraestructura';
+  Icon: LucideIcon;
+  image: string;
+}
+
+const products: Product[] = [
+  // Agricultura
   {
-    name: "Agricultura",
-    Icon: Sprout,
-    tagline: "Enmiendas, biofertilizantes y bioinsumos para cultivos extensivos e intensivos.",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900",
-    products: 10,
-    highlight: "Compost · Biofert · Humic",
-    href: "/productos#agricultura",
+    name: 'HiSoil Compost',
+    desc: 'Enmienda orgánica para cultivos extensivos e intensivos.',
+    line: 'Agricultura', Icon: Sprout,
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
   },
   {
-    name: "Sustratos Profesionales",
-    Icon: Layers,
-    tagline: "Mezclas formuladas para desarrollo radicular y rendimiento óptimo.",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900",
-    products: 12,
-    highlight: "Seed · Berry · Cannabis",
-    href: "/productos#sustratos",
+    name: 'HiSoil Biofert',
+    desc: 'Biofertilizante líquido con microorganismos para suelo y fertirriego.',
+    line: 'Agricultura', Icon: Sprout,
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
   },
   {
-    name: "Paisajismo & Techos Verdes",
-    Icon: TreePine,
-    tagline: "Sustratos y materias primas para paisajistas y desarrollos inmobiliarios.",
-    image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900",
-    products: 12,
-    highlight: "GreenRoof · Outdoor · Chip",
-    href: "/productos#paisajismo",
+    name: 'HiSoil Humic',
+    desc: 'Concentrado de ácidos húmicos y fúlvicos.',
+    line: 'Agricultura', Icon: Sprout,
+    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
   },
   {
-    name: "Infraestructura & Restauración",
-    Icon: Mountain,
-    tagline: "Revegetación y recuperación de suelos para obras civiles y minería.",
-    image: "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900",
-    products: 8,
-    highlight: "Restore · Native · HydroMulch",
-    href: "/productos#infraestructura",
+    name: 'HiSoil Regenera',
+    desc: 'Programa integral de regeneración de suelos.',
+    line: 'Agricultura', Icon: Sprout,
+    image: 'https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  // Sustratos
+  {
+    name: 'HiSoil Berry',
+    desc: 'Sustrato optimizado para arándanos y frutos rojos.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1587393855524-087f83d95bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Cannabis',
+    desc: 'Sustrato profesional para cannabis medicinal.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Nursery',
+    desc: 'Sustrato profesional para viveros de producción.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Hydro',
+    desc: 'Sustrato específico para cultivos hidropónicos.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  // Paisajismo
+  {
+    name: 'HiSoil GreenRoof',
+    desc: 'Sustrato liviano para terrazas y techos verdes.',
+    line: 'Paisajismo', Icon: TreePine,
+    image: 'https://images.unsplash.com/photo-1527863280617-15596f92e5c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Tierra Fértil',
+    desc: 'Tierra enriquecida para jardinería y paisajismo.',
+    line: 'Paisajismo', Icon: TreePine,
+    image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Outdoor',
+    desc: 'Sustrato profesional para plantas de exterior.',
+    line: 'Paisajismo', Icon: TreePine,
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Chip',
+    desc: 'Astillas de madera para cobertura decorativa.',
+    line: 'Paisajismo', Icon: TreePine,
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  // Infraestructura
+  {
+    name: 'HiSoil Restore',
+    desc: 'Sustrato para recuperación integral de suelos degradados.',
+    line: 'Infraestructura', Icon: Mountain,
+    image: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Native',
+    desc: 'Mezcla con semillas nativas para restauración ecológica.',
+    line: 'Infraestructura', Icon: Mountain,
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil Carbon',
+    desc: 'Mejorador de suelo rico en carbono estable.',
+    line: 'Infraestructura', Icon: Mountain,
+    image: 'https://images.unsplash.com/photo-1596568359553-a56de6970068?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+  },
+  {
+    name: 'HiSoil HydroMulch',
+    desc: 'Aplicación hidráulica para taludes y grandes superficies.',
+    line: 'Infraestructura', Icon: Mountain,
+    image: 'https://images.unsplash.com/photo-1518131955366-a2b23ded8ed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
   },
 ];
 
-interface CategoryCardProps {
-  c: typeof categories[number];
-  index: number;
+interface ProductCardProps {
+  p: Product;
 }
 
-function CategoryCard({ c, index }: CategoryCardProps) {
-  const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.15 });
-  const { Icon } = c;
-
+function ProductCard({ p }: ProductCardProps) {
+  const { Icon } = p;
   return (
     <Link
-      to={c.href}
-      ref={ref}
-      className={`group block scroll-reveal ${visible ? 'is-visible' : ''}`}
-      style={{ transitionDelay: visible ? `${index * 0.1}s` : '0s' }}
+      to="/productos"
+      className="group block flex-shrink-0 w-[280px] sm:w-[300px] snap-start"
     >
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
-        {/* Photo */}
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
-            src={c.image}
-            alt={c.name}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            src={p.image}
+            alt={p.name}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-oliva/95 via-oliva/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-oliva/90 via-oliva/30 to-transparent" />
 
-          {/* Icon + product count */}
+          {/* Line tag */}
           <div className="absolute top-4 left-4 flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
-              <Icon className="w-4 h-4 text-white group-hover:text-oliva transition-colors duration-500" />
+            <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all">
+              <Icon className="w-4 h-4 text-white group-hover:text-oliva transition-colors" />
             </div>
-            <div className="bg-lima text-oliva rounded-md px-2 py-1">
-              <span className="font-bold text-xs">{c.products} productos</span>
-            </div>
+            <span className="bg-lima/95 text-oliva text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full font-semibold">
+              {p.line}
+            </span>
           </div>
 
           {/* Arrow */}
-          <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500 group-hover:rotate-45">
-            <ArrowUpRight className="w-4 h-4 text-white group-hover:text-oliva transition-colors" />
+          <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima group-hover:rotate-45 transition-all duration-500">
+            <ArrowUpRight className="w-3.5 h-3.5 text-white group-hover:text-oliva transition-colors" />
           </div>
 
-          {/* Title at bottom */}
+          {/* Product name at bottom */}
           <div className="absolute bottom-4 left-4 right-4">
-            <h3 className="text-white font-bold text-lg md:text-xl leading-tight">{c.name}</h3>
+            <h3 className="text-white font-bold text-lg leading-tight">{p.name}</h3>
           </div>
         </div>
 
-        {/* Body */}
         <div className="p-5 flex-1 flex flex-col relative">
-          <div
-            className="absolute top-0 left-0 h-[2px] bg-lima transition-all duration-700 ease-out w-0 group-hover:w-full"
-          />
-          <p className="text-gray-700 text-xs md:text-sm leading-relaxed mb-4 flex-1">
-            {c.tagline}
-          </p>
-          <div className="pt-3 border-t border-oliva/10">
-            <div className="text-oliva/60 text-[9px] font-mono uppercase tracking-widest mb-0.5">Incluye</div>
-            <div className="text-oliva font-semibold text-xs">{c.highlight}</div>
-          </div>
+          <div className="absolute top-0 left-0 h-[2px] bg-lima transition-all duration-700 ease-out w-0 group-hover:w-full" />
+          <p className="text-gray-700 text-xs leading-relaxed">{p.desc}</p>
         </div>
       </div>
     </Link>
@@ -108,10 +168,40 @@ function CategoryCard({ c, index }: CategoryCardProps) {
 
 export function FeaturedProducts() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [canLeft, setCanLeft] = useState(false);
+  const [canRight, setCanRight] = useState(true);
+
+  const updateArrows = () => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    setCanLeft(el.scrollLeft > 8);
+    setCanRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 8);
+  };
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    updateArrows();
+    el.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    return () => {
+      el.removeEventListener('scroll', updateArrows);
+      window.removeEventListener('resize', updateArrows);
+    };
+  }, []);
+
+  const scrollBy = (dir: 'left' | 'right') => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>('a');
+    const step = card ? card.offsetWidth + 20 : 320;
+    el.scrollBy({ left: dir === 'left' ? -step * 2 : step * 2, behavior: 'smooth' });
+  };
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-nata">
-      <div className="max-w-[1600px] mx-auto w-full">
+    <section className="py-16 md:py-24 lg:py-32 pl-6 md:pl-12 lg:pl-20 bg-nata overflow-hidden">
+      <div className="max-w-[1600px] mx-auto w-full pr-6 md:pr-12 lg:pr-20">
         <div
           ref={headerRef}
           className={`flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-14 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
@@ -128,11 +218,40 @@ export function FeaturedProducts() {
             </button>
           </Link>
         </div>
+      </div>
 
-        {/* Grid 4 columnas desktop, 2 tablet, 1 mobile — cards mas chicas */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          {categories.map((c, i) => (
-            <CategoryCard key={c.name} c={c} index={i} />
+      {/* Carousel */}
+      <div className="relative">
+        {/* Chevrons flotantes */}
+        <button
+          onClick={() => scrollBy('left')}
+          disabled={!canLeft}
+          aria-label="Anterior"
+          className={`hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-2xl border border-oliva/15 items-center justify-center transition-all duration-300 ${
+            canLeft ? 'opacity-100 hover:bg-lima hover:border-lima hover:scale-110' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          <ChevronLeft className="w-5 h-5 text-oliva" />
+        </button>
+        <button
+          onClick={() => scrollBy('right')}
+          disabled={!canRight}
+          aria-label="Siguiente"
+          className={`hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-2xl border border-oliva/15 items-center justify-center transition-all duration-300 ${
+            canRight ? 'opacity-100 hover:bg-lima hover:border-lima hover:scale-110' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          <ChevronRight className="w-5 h-5 text-oliva" />
+        </button>
+
+        {/* Scroller */}
+        <div
+          ref={scrollerRef}
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 pl-6 md:pl-12 lg:pl-20 pr-6 md:pr-12 lg:pr-20"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {products.map((p) => (
+            <ProductCard key={p.name} p={p} />
           ))}
         </div>
       </div>
