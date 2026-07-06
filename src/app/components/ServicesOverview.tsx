@@ -63,38 +63,53 @@ function ServiceCard({ s, index }: ServiceCardProps) {
       style={{ transitionDelay: visible ? `${(index % 3) * 0.12}s` : '0s' }}
     >
       <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/15 hover:border-lima/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
-        {/* Image */}
-        <div className="relative aspect-[4/3] overflow-hidden">
+        {/* Background image — full card on hover */}
+        <img
+          src={s.image}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+        />
+        {/* Dark gradient overlay on hover — asegura contraste con el texto */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+        {/* Image visible en estado base (imagen chica arriba) — se oculta en hover */}
+        <div className="relative aspect-[4/3] overflow-hidden transition-opacity duration-500 group-hover:opacity-0">
           <img
             src={s.image}
             alt={s.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-oliva/95 via-oliva/40 to-transparent" />
 
-          {/* Icon + Tag */}
-          <div className="absolute top-4 left-4 flex items-center gap-3">
-            <div className="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
-              <Icon className="w-5 h-5 text-white group-hover:text-oliva transition-colors duration-500" />
-            </div>
-            <span className="bg-white/95 text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-semibold">
-              {s.tag}
-            </span>
-          </div>
-
-          {/* Arrow corner */}
-          <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
-            <ArrowUpRight className="w-4 h-4 text-white group-hover:text-oliva transition-colors duration-300" />
-          </div>
-
-          {/* Title at bottom of image */}
+          {/* Title dentro de la imagen — se oculta en hover con el bloque padre */}
           <div className="absolute bottom-4 left-4 right-4">
             <h3 className="text-white font-bold text-xl md:text-2xl leading-tight">{s.title}</h3>
           </div>
         </div>
 
-        {/* Body */}
-        <div className="p-6 flex-1 flex flex-col">
+        {/* Fixed elements — Icon + Tag arriba (siempre visibles) */}
+        <div className="absolute top-4 left-4 z-10 flex items-center gap-3">
+          <div className="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
+            <Icon className="w-5 h-5 text-white group-hover:text-oliva transition-colors duration-500" />
+          </div>
+          <span className="bg-white/95 text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-semibold">
+            {s.tag}
+          </span>
+        </div>
+
+        {/* Arrow corner (siempre visible) */}
+        <div className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
+          <ArrowUpRight className="w-4 h-4 text-white group-hover:text-oliva transition-colors duration-300" />
+        </div>
+
+        {/* Title on hover — sobre la imagen full-card */}
+        <h3 className="absolute top-1/2 -translate-y-1/2 left-6 right-6 z-10 text-white font-bold text-2xl md:text-3xl leading-tight drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          {s.title}
+        </h3>
+
+        {/* Body — se mantiene visible, pero encima del image overlay en hover */}
+        <div className="relative z-10 p-6 flex-1 flex flex-col justify-end">
           <p className="text-white/85 text-sm leading-relaxed">{s.description}</p>
 
           {/* Animated underline */}
