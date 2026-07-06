@@ -205,8 +205,8 @@ function ProductCard({ p, index }: ProductCardProps) {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none"
           />
-          {/* Overlay verde para asegurar contraste del texto */}
-          <div className="absolute inset-0 bg-gradient-to-br from-oliva/95 via-oliva/85 to-oliva/95 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          {/* Solo un gradient oscuro suave para asegurar contraste del texto — la imagen sigue visible */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
         </>
       )}
 
