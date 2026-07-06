@@ -80,7 +80,7 @@ function ServiceCard({ s, index }: ServiceCardProps) {
             alt={s.title}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-oliva/95 via-oliva/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-noche/85 via-noche/25 to-transparent" />
 
           {/* Title dentro de la imagen — se oculta en hover con el bloque padre */}
           <div className="absolute bottom-4 left-4 right-4">

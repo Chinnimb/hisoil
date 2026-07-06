@@ -54,7 +54,7 @@ function CaseCard({ c, index }: CaseCardProps) {
             alt={c.title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-oliva/90 via-oliva/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/20 to-transparent" />
 
           {/* Metric tag — top left */}
           <div className="absolute top-5 left-5 bg-lima text-oliva rounded-lg px-4 py-2.5 shadow-lg">
