@@ -1,44 +1,45 @@
 import { useState } from "react";
+import { Truck, Microscope, FlaskConical, RefreshCw, Wheat } from 'lucide-react';
 
 const steps = [
   {
     number: "01",
     title: "Recolección",
-    icon: "🚛",
+    Icon: Truck,
     description:
-      "[Descripción — Recolección y logística de residuos desde el punto de origen. Coordinación de transporte habilitado y documentación de trazabilidad.]",
+      "Recolección y logística de residuos desde el punto de origen. Coordinación de transporte habilitado y documentación de trazabilidad.",
     detail: "Camiones habilitados · Manifiesto de transporte · Georeferenciación",
   },
   {
     number: "02",
     title: "Clasificación",
-    icon: "🔬",
+    Icon: Microscope,
     description:
-      "[Descripción — Análisis y clasificación del residuo según tipo, composición y peligrosidad. Determinación del protocolo de tratamiento más adecuado.]",
+      "Análisis y clasificación del residuo según tipo, composición y peligrosidad. Determinación del protocolo de tratamiento más adecuado.",
     detail: "Análisis fisicoquímico · Clasificación por norma · Protocolo asignado",
   },
   {
     number: "03",
     title: "Tratamiento",
-    icon: "⚗️",
+    Icon: FlaskConical,
     description:
-      "[Descripción — Aplicación del tratamiento específico: físico, químico, biológico o combinado, según la naturaleza del residuo y el objetivo final.]",
+      "Aplicación del tratamiento específico: físico, químico, biológico o combinado, según la naturaleza del residuo y el objetivo final.",
     detail: "Tratamiento físico · Biológico · Químico · Mixto",
   },
   {
     number: "04",
     title: "Transformación",
-    icon: "🔄",
+    Icon: RefreshCw,
     description:
-      "[Descripción — Proceso de valorización del residuo tratado: compostaje, biodigestión, recuperación de nutrientes o producción de enmiendas de suelo.]",
+      "Proceso de valorización del residuo tratado: compostaje, biodigestión, recuperación de nutrientes o producción de enmiendas de suelo.",
     detail: "Compostaje · Biodigestión · Recuperación de nutrientes",
   },
   {
     number: "05",
     title: "Resultado",
-    icon: "🌾",
+    Icon: Wheat,
     description:
-      "[Descripción — Entrega del producto final o disposición certificada. Informe técnico de cierre con métricas de impacto ambiental y documental regulatorio.]",
+      "Entrega del producto final o disposición certificada. Informe técnico de cierre con métricas de impacto ambiental y documental regulatorio.",
     detail: "Biofertilizante · Informe técnico · Certificado ambiental",
   },
 ];
@@ -101,8 +102,8 @@ export function HowItWorks() {
           {/* Active step detail */}
           <div className="card-gradient-border p-10 grid grid-cols-12 gap-8">
             <div className="col-span-2 flex flex-col items-center">
-              <div className="w-16 h-16 bg-paja rounded-sm flex items-center justify-center text-3xl mb-3">
-                {steps[activeStep].icon}
+              <div className="w-16 h-16 bg-oliva rounded-xl flex items-center justify-center mb-3">
+                {(() => { const Icon = steps[activeStep].Icon; return <Icon className="w-7 h-7 text-lima" />; })()}
               </div>
               <span className="text-4xl font-bold text-gray-100 font-mono">{steps[activeStep].number}</span>
             </div>
@@ -126,7 +127,9 @@ export function HowItWorks() {
 
         {/* Mobile — vertical */}
         <div className="md:hidden space-y-0">
-          {steps.map((step, i) => (
+          {steps.map((step, i) => {
+            const Icon = step.Icon;
+            return (
             <div key={step.number} className="flex gap-5">
               <div className="flex flex-col items-center">
                 <div className="w-10 h-10 rounded-full bg-oliva text-white flex items-center justify-center flex-shrink-0 z-10">
@@ -136,8 +139,8 @@ export function HowItWorks() {
               </div>
               <div className="pb-8">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-paja rounded-sm flex items-center justify-center text-lg">
-                    {step.icon}
+                  <div className="w-8 h-8 bg-oliva rounded-lg flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-lima" />
                   </div>
                   <h3 className="font-semibold text-oliva">{step.title}</h3>
                 </div>
@@ -149,7 +152,8 @@ export function HowItWorks() {
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
