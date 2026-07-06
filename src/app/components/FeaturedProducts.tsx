@@ -169,7 +169,7 @@ function ProductCard({ p }: ProductCardProps) {
     <div className="group flex-shrink-0 w-[300px] sm:w-[320px] snap-start">
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
         {/* Image */}
-        <div className="relative aspect-square overflow-hidden">
+        <div className="relative aspect-[16/10] overflow-hidden">
           <img
             src={p.image}
             alt={p.name}
