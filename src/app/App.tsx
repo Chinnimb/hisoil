@@ -23,8 +23,8 @@ function HomePage() {
       <main>
         <Hero />
         <WhatDoYouNeed />
-        <ServicesOverview />
         <FeaturedProducts />
+        <ServicesOverview />
         <CaseStudies />
         <ContactCTA />
       </main>
