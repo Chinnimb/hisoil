@@ -1,53 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
+import { Leaf, CloudOff, MapPin } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
+import { AnimatedCounter } from './AnimatedCounter';
 
 const IMG_URL =
-  "https://images.unsplash.com/photo-1642686929941-92f0689c4adb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzb3liZWFuJTIwZmllbGQlMjByb3dzJTIwYWVyaWFsJTIwdmlldyUyMGFncmljdWx0dXJlJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc4MDkyOTE1OHww&ixlib=rb-4.1.0&q=80&w=1080";
-
-const rightCards = [
-  {
-    eyebrow: "Último caso documentado",
-    content: (
-      <>
-        <div className="text-white font-extrabold mb-1" style={{ fontSize: "2.4rem", lineHeight: 1 }}>+42%</div>
-        <div className="text-white/60 text-sm mb-1">rendimiento soja</div>
-        <div className="text-white/55 text-xs font-mono">Estancia San Jorge · Bs As</div>
-      </>
-    ),
-    delay: "0.25s",
-  },
-  {
-    eyebrow: "Residuos valorizados",
-    content: (
-      <>
-        <div className="text-white font-extrabold mb-1" style={{ fontSize: "2.4rem", lineHeight: 1 }}>2.400 t</div>
-        <div className="text-white/60 text-sm mb-1">procesadas</div>
-        <div className="text-white/55 text-xs font-mono">en las últimas 3 campañas</div>
-      </>
-    ),
-    delay: "0.5s",
-  },
-  {
-    eyebrow: "Alcance nacional",
-    content: (
-      <div className="grid grid-cols-2 gap-x-6 gap-y-3">
-        {[
-          { v: "800+", l: "clientes activos" },
-          { v: "15+",  l: "años en el agro" },
-          { v: "+42%", l: "rendimiento prom." },
-          { v: "12",   l: "provincias" },
-        ].map((k) => (
-          <div key={k.l}>
-            <div className="text-white font-bold text-lg leading-none mb-0.5">{k.v}</div>
-            <div className="text-white/35 text-[10px] font-mono leading-tight">{k.l}</div>
-          </div>
-        ))}
-      </div>
-    ),
-    delay: "1s",
-  },
-];
+  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1920";
 
 export function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -67,12 +25,9 @@ export function Hero() {
       currentProgress += (targetProgress - currentProgress) * 0.06;
 
       if (imgRef.current) {
-        // Zoom hacia adelante: empieza en 1 y llega a 1.35 al final del hero
         const scale = 1 + currentProgress * 0.35;
-        // Leve subida para reforzar la sensación de avanzar
         const translateY = currentProgress * 60;
         imgRef.current.style.transform = `scale(${scale}) translateY(${translateY}px)`;
-        // La imagen se va aclarando levemente al avanzar
         imgRef.current.style.filter = `brightness(${0.85 + currentProgress * 0.25})`;
       }
 
@@ -91,12 +46,12 @@ export function Hero() {
     <>
       <style>{`
         @keyframes heroFadeUp {
-          from { opacity: 0; transform: translateY(18px); }
+          from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
         }
-        .hero-card {
+        .hero-fade {
           opacity: 0;
-          animation: heroFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
       `}</style>
 
@@ -107,7 +62,7 @@ export function Hero() {
           <img
             ref={imgRef}
             src={IMG_URL}
-            alt="Campo agrícola — filas de cultivo"
+            alt="Campo agrícola argentino"
             className="w-full object-cover will-change-transform"
             style={{
               height: '150%',
@@ -115,122 +70,125 @@ export function Hero() {
               position: 'absolute',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-oliva/90 via-oliva/50 to-oliva/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-oliva/70 via-transparent to-oliva/20" />
         </div>
 
         {/* Breadcrumb strip */}
         <div className="relative z-10 border-b border-white/10 px-6 md:px-12 lg:px-20 py-4">
           <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs font-mono text-white/25">
+            <div className="flex items-center gap-2 text-xs font-mono text-white/40">
               <span>Hisoil</span><span>/</span>
-              <span className="text-white/65">Agricultura sustentable · Transformación de residuos</span>
+              <span className="text-white/70">Regeneración de recursos · Compostaje profesional</span>
             </div>
             <div className="hidden md:flex items-center gap-1.5">
-              <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-pulse" />
-              <span className="text-white/55 text-xs font-mono">En operación · Argentina</span>
+              <div className="w-1.5 h-1.5 bg-lima rounded-full animate-pulse" />
+              <span className="text-white/70 text-xs font-mono">En operación · Argentina</span>
             </div>
           </div>
         </div>
 
         {/* Main content */}
-        <div className="relative z-10 flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-10 pb-10 md:pt-14 md:pb-14">
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+        <div className="relative z-10 flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-12 pb-16 md:pt-16 md:pb-20">
+          <div className="flex-1 flex flex-col justify-center max-w-5xl">
 
-            {/* Left — copy + CTAs */}
-            <div className="lg:col-span-7 flex flex-col gap-8">
-
-              <div className="inline-block border border-white/20 bg-white/5 backdrop-blur-sm px-3 py-1.5 self-start">
-                <span className="text-white/70 text-xs font-mono uppercase tracking-[0.2em]">
-                  Soluciones para el agro argentino
-                </span>
-              </div>
-
-              <div>
-                <h1
-                  className="text-white leading-[1.05]"
-                  style={{
-                    fontSize: 'clamp(2.2rem, 4.5vw, 4rem)',
-                    fontWeight: 700,
-                    textShadow: '0 2px 40px rgba(0,0,0,0.85), 0 1px 8px rgba(0,0,0,0.9)',
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  Transformamos<br />
-                  residuos.<br />
-                  Potenciamos<br />
-                  <span style={{ color: '#B8C521' }}>resultados.</span>
-                </h1>
-              </div>
-
-              <div className="w-10 h-px bg-white/25" />
-
-              <p className="text-white/62 leading-relaxed max-w-lg" style={{ fontSize: '1.05rem' }}>
-                Fertilizantes orgánicos, compostaje profesional y asesoramiento técnico especializado para productores, empresas y municipios que buscan resultados reales en campo.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={open}
-                  className="bg-white text-oliva rounded-full font-bold hover:bg-paja transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99] min-w-[240px] flex items-center justify-center"
-                  style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
-                >
-                  Solicitar presupuesto
-                </button>
-                <Link to="/productos">
-                  <button
-                    className="w-full border border-white/35 bg-white/8 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/15 hover:border-white/50 transition-all min-w-[240px] flex items-center justify-center"
-                    style={{ padding: '1.05rem 2.25rem', fontSize: '1rem' }}
-                  >
-                    Ver productos →
-                  </button>
-                </Link>
-              </div>
+            <div
+              className="hero-fade inline-block border border-white/25 bg-white/5 backdrop-blur-sm px-4 py-1.5 self-start mb-8"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <span className="text-white/85 text-xs font-mono uppercase tracking-[0.2em]">
+                Soluciones regenerativas para el agro
+              </span>
             </div>
 
-            {/* Right — staggered cards */}
-            <div className="hidden lg:flex lg:col-span-5 flex-col items-end gap-4 pl-10">
-              {rightCards.map((card, i) => (
-                <div
-                  key={i}
-                  className="hero-card bg-white/10 border border-white/15 backdrop-blur-md p-5 rounded-sm w-64 self-end"
-                  style={{ animationDelay: card.delay }}
+            <h1
+              className="hero-fade text-white leading-[1.05] mb-8"
+              style={{
+                fontSize: 'clamp(2.4rem, 5vw, 4.5rem)',
+                fontWeight: 700,
+                textShadow: '0 2px 40px rgba(0,0,0,0.6), 0 1px 8px rgba(0,0,0,0.7)',
+                letterSpacing: '-0.02em',
+                animationDelay: '0.25s',
+              }}
+            >
+              Regeneramos recursos.<br />
+              <span style={{ color: '#B8C521' }}>Construimos el futuro.</span>
+            </h1>
+
+            <p
+              className="hero-fade text-white/85 leading-relaxed max-w-2xl mb-10"
+              style={{ fontSize: '1.1rem', animationDelay: '0.4s' }}
+            >
+              Transformamos recursos orgánicos en soluciones de valor mediante compostaje profesional, sustratos de alta calidad y asesoramiento técnico especializado para productores, empresas y municipios.
+            </p>
+
+            <div
+              className="hero-fade flex flex-col sm:flex-row gap-3 mb-16"
+              style={{ animationDelay: '0.55s' }}
+            >
+              <button
+                onClick={open}
+                className="bg-white text-oliva rounded-full font-bold hover:bg-lima transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99] min-w-[240px] flex items-center justify-center"
+                style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
+              >
+                Solicitar presupuesto
+              </button>
+              <Link to="/productos">
+                <button
+                  className="w-full border border-white/40 bg-white/10 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/20 hover:border-white/60 transition-all min-w-[240px] flex items-center justify-center"
+                  style={{ padding: '1.05rem 2.25rem', fontSize: '1rem' }}
                 >
-                  <div className="text-white/55 text-[10px] font-mono mb-3 uppercase tracking-widest">
-                    {card.eyebrow}
+                  Ver productos →
+                </button>
+              </Link>
+            </div>
+
+            {/* 3 animated counters */}
+            <div
+              className="hero-fade grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl"
+              style={{ animationDelay: '0.7s' }}
+            >
+              {[
+                {
+                  Icon: Leaf,
+                  end: 2400,
+                  suffix: ' t',
+                  label: 'Toneladas procesadas',
+                  sub: 'de residuos valorizados',
+                },
+                {
+                  Icon: CloudOff,
+                  end: 1850,
+                  suffix: ' t CO₂',
+                  label: 'Emisiones evitadas',
+                  sub: 'de gases de efecto invernadero',
+                },
+                {
+                  Icon: MapPin,
+                  end: 12,
+                  suffix: '',
+                  label: 'Alcance nacional',
+                  sub: 'provincias en operación',
+                },
+              ].map((c, i) => (
+                <div
+                  key={c.label}
+                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-6 hover:bg-white/15 hover:border-lima/40 transition-all group"
+                  style={{ animationDelay: `${0.85 + i * 0.1}s` }}
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-lg bg-lima/25 flex items-center justify-center group-hover:bg-lima transition-colors duration-300">
+                      <c.Icon className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
+                    </div>
+                    <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">{c.label}</div>
                   </div>
-                  {card.content}
+                  <div className="text-white font-bold leading-none mb-1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
+                    <AnimatedCounter end={c.end} suffix={c.suffix} />
+                  </div>
+                  <div className="text-white/60 text-xs">{c.sub}</div>
                 </div>
               ))}
-
-              {/* Certifications — loose logos below cards */}
-              <div
-                className="hero-card self-end"
-                style={{ animationDelay: "1s" }}
-              >
-                <div className="text-white/25 text-[9px] font-mono uppercase tracking-widest mb-2.5 text-right">
-                  Certificaciones
-                </div>
-                <div className="flex gap-3 items-end justify-end">
-                  {["SENASA", "INTA", "IRAM"].map((c) => (
-                    <div key={c} className="flex flex-col items-center gap-1.5">
-                      <div className="w-12 h-9 bg-white/8 border border-white/15 rounded-sm flex items-center justify-center">
-                        <div className="w-7 h-4 bg-white/20 rounded-sm" />
-                      </div>
-                      <span className="text-white/55 text-[9px] font-mono">{c}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div
-                className="hero-card text-white/20 text-xs font-mono self-end"
-                style={{ animationDelay: "1.2s" }}
-              >
-                Scroll para explorar ↓
-              </div>
             </div>
-
           </div>
         </div>
       </section>
