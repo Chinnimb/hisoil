@@ -166,7 +166,7 @@ function ProductCard({ p }: ProductCardProps) {
   const { open } = useModal();
 
   return (
-    <div className="group flex-shrink-0 w-[300px] sm:w-[320px] snap-start">
+    <div className="group flex-shrink-0 w-[280px] sm:w-[300px] snap-start">
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden">
@@ -216,21 +216,21 @@ function ProductCard({ p }: ProductCardProps) {
             </div>
           </div>
 
-          {/* Actions */}
-          <div className="mt-auto flex gap-2">
+          {/* Actions — stacked */}
+          <div className="mt-auto flex flex-col gap-2">
             <Link
               to="/productos"
-              className="flex-1 flex items-center justify-center gap-1.5 border border-oliva text-oliva text-xs font-semibold py-2.5 px-3 rounded-full hover:bg-oliva hover:text-white transition-all"
+              className="w-full flex items-center justify-center gap-1.5 border border-oliva text-oliva text-xs font-semibold py-2.5 rounded-full hover:bg-oliva hover:text-white transition-all"
             >
               <Eye className="w-3.5 h-3.5" />
               Ver detalle
             </Link>
             <button
               onClick={open}
-              className="flex-1 flex items-center justify-center gap-1.5 bg-oliva text-white text-xs font-semibold py-2.5 px-3 rounded-full hover:bg-lima hover:text-oliva transition-all"
+              className="w-full flex items-center justify-center gap-1.5 bg-oliva text-white text-xs font-semibold py-2.5 rounded-full hover:bg-lima hover:text-oliva transition-all"
             >
               <ShoppingCart className="w-3.5 h-3.5" />
-              Cotizar
+              Consultar precio
             </button>
           </div>
         </div>
@@ -295,6 +295,10 @@ export function FeaturedProducts() {
 
       {/* Carousel */}
       <div className="relative">
+        {/* Fade gradients a los costados — resalta los chevrones */}
+        <div className="hidden md:block pointer-events-none absolute inset-y-0 left-0 w-24 lg:w-32 z-10 bg-gradient-to-r from-nata via-nata/85 to-transparent" />
+        <div className="hidden md:block pointer-events-none absolute inset-y-0 right-0 w-24 lg:w-32 z-10 bg-gradient-to-l from-nata via-nata/85 to-transparent" />
+
         <button
           onClick={() => scrollBy('left')}
           disabled={!canLeft}
