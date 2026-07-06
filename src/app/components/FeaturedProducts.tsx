@@ -322,7 +322,7 @@ export function FeaturedProducts() {
 
         <div
           ref={scrollerRef}
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 pl-6 md:pl-12 lg:pl-20 pr-6 md:pr-12 lg:pr-20"
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-6 pl-6 md:pl-12 lg:pl-20 pr-6 md:pr-12 lg:pr-20"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {products.map((p) => (
