@@ -1,7 +1,9 @@
+import { TrendingUp, Leaf, DollarSign, ClipboardCheck } from 'lucide-react';
+
 const kpis = [
   {
     category: "Rendimiento",
-    icon: "📈",
+    Icon: TrendingUp,
     metrics: [
       { value: "+22%", label: "Incremento de rendimiento", sub: "qq/ha promedio · campaña 2024/25" },
       { value: "+18 qq", label: "Por hectárea adicionales", sub: "sobre histórico de la zona" },
@@ -9,7 +11,7 @@ const kpis = [
   },
   {
     category: "Ambiental",
-    icon: "🌿",
+    Icon: Leaf,
     metrics: [
       { value: "−85%", label: "Reducción de carga orgánica", sub: "en efluentes industriales" },
       { value: "1.200 tn", label: "Residuos valorizados / año", sub: "desviados de disposición final" },
@@ -17,7 +19,7 @@ const kpis = [
   },
   {
     category: "Económico",
-    icon: "💰",
+    Icon: DollarSign,
     metrics: [
       { value: "−40%", label: "Ahorro operativo", sub: "en costos de disposición de residuos" },
       { value: "3× ROI", label: "Retorno estimado", sub: "a 12 meses de implementación" },
@@ -25,7 +27,7 @@ const kpis = [
   },
   {
     category: "Regulatorio",
-    icon: "📋",
+    Icon: ClipboardCheck,
     metrics: [
       { value: "100%", label: "Cumplimiento normativo", sub: "en proyectos certificados" },
       { value: "8", label: "Certificaciones obtenidas", sub: "en últimos 24 meses" },
@@ -57,12 +59,14 @@ export function ResultsMetrics() {
 
         {/* KPI grid — 2×2 groups */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {kpis.map((group) => (
+          {kpis.map((group) => {
+            const { Icon } = group;
+            return (
             <div key={group.category} className="card-gradient-border overflow-hidden">
               {/* Group header */}
               <div className="bg-oliva px-7 py-4 flex items-center gap-3">
-                <div className="w-8 h-8 bg-white/10 rounded-sm flex items-center justify-center text-lg">
-                  {group.icon}
+                <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center">
+                  <Icon className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-white font-semibold text-sm">{group.category}</span>
               </div>
@@ -78,7 +82,8 @@ export function ResultsMetrics() {
                 ))}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Aggregated total bar */}
