@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import { ArrowUpRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 
@@ -81,6 +82,47 @@ const productImages: Record<string, string> = {
   'HiSoil HydroMulch': IMG.waterDrops,
   'HiSoil Erosion': IMG.taludes,
   'HiSoil Native': IMG.nativeSeeds,
+};
+
+// Name -> detail page slug
+const productSlugs: Record<string, string> = {
+  'HiSoil Compost': 'compost',
+  'HiSoil Biofert': 'biofert',
+  'HiSoil Humic': 'humic',
+  'HiSoil Carbon': 'carbon',
+  'HiSoil NPK Organic': 'npk-organic',
+  'HiSoil Phospho': 'phospho',
+  'HiSoil Potassium': 'potassium',
+  'HiSoil BioProtect': 'bioprotect',
+  'HiSoil AgroEco': 'agroeco',
+  'HiSoil Regenera': 'regenera',
+  'HiSoil Seed': 'seed',
+  'HiSoil Plug': 'plug',
+  'HiSoil Nursery': 'nursery',
+  'HiSoil Premium': 'premium',
+  'HiSoil Forest': 'forest',
+  'HiSoil Tobacco': 'tobacco',
+  'HiSoil Berry': 'berry',
+  'HiSoil Cannabis': 'cannabis',
+  'HiSoil Citrus': 'citrus',
+  'HiSoil Turf': 'turf',
+  'HiSoil Hydro': 'hydro',
+  'HiSoil Palm': 'palm',
+  'HiSoil Tierra Fértil': 'tierra-fertil',
+  'HiSoil Level': 'level',
+  'HiSoil Outdoor': 'outdoor',
+  'HiSoil Indoor': 'indoor',
+  'HiSoil GreenRoof': 'greenroof',
+  'HiSoil Chip': 'chip',
+  'HiSoil MiniChip': 'minichip',
+  'HiSoil Sphagnum': 'sphagnum',
+  'HiSoil Perlite': 'perlite',
+  'HiSoil Pometina': 'pometina',
+  'HiSoil Vermiculite': 'vermiculite',
+  'HiSoil Restore': 'restore',
+  'HiSoil HydroMulch': 'hydromulch',
+  'HiSoil Erosion': 'erosion',
+  'HiSoil Native': 'native',
 };
 
 interface Product {
@@ -221,13 +263,15 @@ interface ProductCardProps {
 }
 
 function ProductCard({ p, index }: ProductCardProps) {
-  const [ref, visible] = useReveal<HTMLDivElement>({ threshold: 0.15 });
+  const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.15 });
   const img = productImages[p.name];
+  const slug = productSlugs[p.name] ?? p.name.toLowerCase().replace('hisoil ', '').replace(/\s+/g, '-');
 
   return (
-    <div
+    <Link
+      to={`/productos/${slug}`}
       ref={ref}
-      className={`scroll-reveal group relative overflow-hidden bg-white border border-oliva/15 hover:border-oliva/50 hover:shadow-2xl rounded-2xl p-5 md:p-6 transition-all duration-500 flex flex-col min-h-[220px] ${visible ? 'is-visible' : ''}`}
+      className={`scroll-reveal group relative overflow-hidden bg-white border border-oliva/15 hover:border-oliva/50 hover:shadow-2xl rounded-2xl p-5 md:p-6 transition-all duration-500 flex flex-col min-h-[220px] block ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${(index % 4) * 0.05}s` : '0s' }}
     >
       {/* Hover image background */}
@@ -288,7 +332,7 @@ function ProductCard({ p, index }: ProductCardProps) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -7,6 +7,7 @@ import { useModal } from '../context/ModalContext';
 type LucideIcon = typeof Sprout;
 
 interface Product {
+  slug: string;
   name: string;
   desc: string;
   line: 'Agricultura' | 'Sustratos' | 'Paisajismo' | 'Infraestructura';
@@ -20,7 +21,7 @@ interface Product {
 const products: Product[] = [
   // Agricultura
   {
-    name: 'HiSoil Compost',
+    slug: 'compost', name: 'HiSoil Compost',
     desc: 'Enmienda orgánica para cultivos extensivos e intensivos.',
     line: 'Agricultura', Icon: Sprout,
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -29,7 +30,7 @@ const products: Product[] = [
     badge: 'Más vendido',
   },
   {
-    name: 'HiSoil Biofert',
+    slug: 'biofert', name: 'HiSoil Biofert',
     desc: 'Biofertilizante líquido con microorganismos para suelo y fertirriego.',
     line: 'Agricultura', Icon: Sprout,
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -37,7 +38,7 @@ const products: Product[] = [
     usage: '2–4 L/ha',
   },
   {
-    name: 'HiSoil Humic',
+    slug: 'humic', name: 'HiSoil Humic',
     desc: 'Concentrado de ácidos húmicos y fúlvicos.',
     line: 'Agricultura', Icon: Sprout,
     image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -45,7 +46,7 @@ const products: Product[] = [
     usage: '1–2 L/ha',
   },
   {
-    name: 'HiSoil Regenera',
+    slug: 'regenera', name: 'HiSoil Regenera',
     desc: 'Programa integral de regeneración de suelos.',
     line: 'Agricultura', Icon: Sprout,
     image: 'https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -55,7 +56,7 @@ const products: Product[] = [
   },
   // Sustratos
   {
-    name: 'HiSoil Berry',
+    slug: 'berry', name: 'HiSoil Berry',
     desc: 'Sustrato optimizado para arándanos y frutos rojos.',
     line: 'Sustratos', Icon: Layers,
     image: 'https://images.unsplash.com/photo-1587393855524-087f83d95bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -63,7 +64,7 @@ const products: Product[] = [
     usage: 'Trasplante directo',
   },
   {
-    name: 'HiSoil Cannabis',
+    slug: 'cannabis', name: 'HiSoil Cannabis',
     desc: 'Sustrato profesional para cannabis medicinal.',
     line: 'Sustratos', Icon: Layers,
     image: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -72,7 +73,7 @@ const products: Product[] = [
     badge: 'Nuevo',
   },
   {
-    name: 'HiSoil Nursery',
+    slug: 'nursery', name: 'HiSoil Nursery',
     desc: 'Sustrato profesional para viveros de producción.',
     line: 'Sustratos', Icon: Layers,
     image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -80,7 +81,7 @@ const products: Product[] = [
     usage: 'Producción intensiva',
   },
   {
-    name: 'HiSoil Hydro',
+    slug: 'hydro', name: 'HiSoil Hydro',
     desc: 'Sustrato específico para cultivos hidropónicos.',
     line: 'Sustratos', Icon: Layers,
     image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -89,7 +90,7 @@ const products: Product[] = [
   },
   // Paisajismo
   {
-    name: 'HiSoil GreenRoof',
+    slug: 'greenroof', name: 'HiSoil GreenRoof',
     desc: 'Sustrato liviano para terrazas y techos verdes.',
     line: 'Paisajismo', Icon: TreePine,
     image: 'https://images.unsplash.com/photo-1527863280617-15596f92e5c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -97,7 +98,7 @@ const products: Product[] = [
     usage: 'Espesor 10–15 cm',
   },
   {
-    name: 'HiSoil Tierra Fértil',
+    slug: 'tierra-fertil', name: 'HiSoil Tierra Fértil',
     desc: 'Tierra enriquecida para jardinería y paisajismo.',
     line: 'Paisajismo', Icon: TreePine,
     image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -105,7 +106,7 @@ const products: Product[] = [
     usage: 'Uso general',
   },
   {
-    name: 'HiSoil Outdoor',
+    slug: 'outdoor', name: 'HiSoil Outdoor',
     desc: 'Sustrato profesional para plantas de exterior.',
     line: 'Paisajismo', Icon: TreePine,
     image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -113,7 +114,7 @@ const products: Product[] = [
     usage: 'Trasplante directo',
   },
   {
-    name: 'HiSoil Chip',
+    slug: 'chip', name: 'HiSoil Chip',
     desc: 'Astillas de madera para cobertura decorativa.',
     line: 'Paisajismo', Icon: TreePine,
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -122,7 +123,7 @@ const products: Product[] = [
   },
   // Infraestructura
   {
-    name: 'HiSoil Restore',
+    slug: 'restore', name: 'HiSoil Restore',
     desc: 'Sustrato para recuperación integral de suelos degradados.',
     line: 'Infraestructura', Icon: Mountain,
     image: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -131,7 +132,7 @@ const products: Product[] = [
     badge: 'Obra pública',
   },
   {
-    name: 'HiSoil Native',
+    slug: 'native', name: 'HiSoil Native',
     desc: 'Mezcla con semillas nativas para restauración ecológica.',
     line: 'Infraestructura', Icon: Mountain,
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -139,7 +140,7 @@ const products: Product[] = [
     usage: '30–50 kg/ha',
   },
   {
-    name: 'HiSoil Carbon',
+    slug: 'carbon', name: 'HiSoil Carbon',
     desc: 'Mejorador de suelo rico en carbono estable.',
     line: 'Infraestructura', Icon: Mountain,
     image: 'https://images.unsplash.com/photo-1596568359553-a56de6970068?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -147,7 +148,7 @@ const products: Product[] = [
     usage: '2–5 t/ha',
   },
   {
-    name: 'HiSoil HydroMulch',
+    slug: 'hydromulch', name: 'HiSoil HydroMulch',
     desc: 'Aplicación hidráulica para taludes y grandes superficies.',
     line: 'Infraestructura', Icon: Mountain,
     image: 'https://images.unsplash.com/photo-1518131955366-a2b23ded8ed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
@@ -219,7 +220,7 @@ function ProductCard({ p }: ProductCardProps) {
           {/* Actions — stacked */}
           <div className="mt-auto flex flex-col gap-1.5">
             <Link
-              to={`/productos#${p.line.toLowerCase()}`}
+              to={`/productos/${p.slug}`}
               className="w-full flex items-center justify-center gap-1.5 border border-oliva text-oliva text-[11px] font-semibold py-2 rounded-full hover:bg-oliva hover:text-white transition-all"
             >
               <Eye className="w-3 h-3" />
