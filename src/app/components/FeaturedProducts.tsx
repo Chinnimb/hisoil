@@ -219,7 +219,7 @@ function ProductCard({ p }: ProductCardProps) {
           {/* Actions — stacked */}
           <div className="mt-auto flex flex-col gap-1.5">
             <Link
-              to="/productos"
+              to={`/productos#${p.line.toLowerCase()}`}
               className="w-full flex items-center justify-center gap-1.5 border border-oliva text-oliva text-[11px] font-semibold py-2 rounded-full hover:bg-oliva hover:text-white transition-all"
             >
               <Eye className="w-3 h-3" />

@@ -4,6 +4,7 @@ import { useReveal } from '../hooks/useReveal';
 
 const cases = [
   {
+    slug: "estancia-san-jorge",
     metric: "+42%",
     metricLabel: "rinde soja",
     title: "Estancia San Jorge",
@@ -13,6 +14,7 @@ const cases = [
     tag: "Soja / Maíz",
   },
   {
+    slug: "agropecuaria-del-norte",
     metric: "2.400t",
     metricLabel: "procesadas/año",
     title: "Agropecuaria del Norte",
@@ -22,6 +24,7 @@ const cases = [
     tag: "Ganadería",
   },
   {
+    slug: "productores-asociados",
     metric: "+38%",
     metricLabel: "rinde maíz",
     title: "Productores Asociados",
@@ -41,7 +44,7 @@ function CaseCard({ c, index }: CaseCardProps) {
   const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.2 });
   return (
     <Link
-      to="/portfolio"
+      to={`/portfolio#${c.slug}`}
       ref={ref}
       className={`group block scroll-reveal ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${index * 0.12}s` : '0s' }}

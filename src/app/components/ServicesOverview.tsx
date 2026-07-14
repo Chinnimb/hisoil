@@ -5,6 +5,7 @@ import { useReveal } from '../hooks/useReveal';
 const services = [
   {
     title: "Agricultura Regenerativa",
+    href: "/servicios#agricultura-regenerativa",
     description: "Proyectos de regeneración de suelos y captura de carbono. Consultoría técnica junto a Prosustentia.",
     Icon: Sprout,
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
@@ -12,6 +13,7 @@ const services = [
   },
   {
     title: "Gestión de Residuos Orgánicos",
+    href: "/servicios#gestion-residuos",
     description: "Diseño, ingeniería y operación de plantas de compostaje. Planta de Exaltación de la Cruz en operación.",
     Icon: Recycle,
     image: "https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
@@ -19,6 +21,7 @@ const services = [
   },
   {
     title: "Asesoramiento Técnico",
+    href: "/servicios#asesoramiento-tecnico",
     description: "Equipo de agrónomos e ingenieros a tu disposición. Acompañamiento en campo con datos y seguimiento.",
     Icon: UsersRound,
     image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
@@ -26,6 +29,7 @@ const services = [
   },
   {
     title: "Sostenibilidad y Créditos de Carbono",
+    href: "/servicios#sostenibilidad",
     description: "Proyectos de evitación de emisiones. Diseño, medición y certificación de créditos de carbono.",
     Icon: Leaf,
     image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
@@ -33,6 +37,7 @@ const services = [
   },
   {
     title: "Asistencia Técnica a Municipios",
+    href: "/servicios#asistencia-municipios",
     description: "Compostaje, chipeado y tratamiento de residuos verdes urbanos. Planes a medida por escala municipal.",
     Icon: Building2,
     image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
@@ -40,6 +45,7 @@ const services = [
   },
   {
     title: "Laboratorio",
+    href: "/servicios#laboratorio",
     description: "Análisis de compost, residuos y suelos. Desarrollo de soluciones a medida con validación técnica.",
     Icon: FlaskConical,
     image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
@@ -57,7 +63,7 @@ function ServiceCard({ s, index }: ServiceCardProps) {
   const { Icon } = s;
   return (
     <Link
-      to="/servicios"
+      to={s.href}
       ref={ref}
       className={`group block scroll-reveal ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${(index % 3) * 0.12}s` : '0s' }}
