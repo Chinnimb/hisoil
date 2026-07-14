@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { ModalProvider } from './context/ModalContext';
 import { PresupuestoModal } from './components/PresupuestoModal';
+import { ScrollToAnchor } from './components/ScrollToAnchor';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { WhatDoYouNeed } from './components/WhatDoYouNeed';
@@ -37,6 +38,7 @@ export default function App() {
   return (
     <ModalProvider>
       <BrowserRouter>
+        <ScrollToAnchor />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/nosotros" element={<AboutPage />} />
