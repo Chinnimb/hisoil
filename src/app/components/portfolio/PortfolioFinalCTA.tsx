@@ -1,3 +1,5 @@
+import { Check } from 'lucide-react';
+
 export function PortfolioFinalCTA() {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
@@ -51,9 +53,9 @@ export function PortfolioFinalCTA() {
 
             <div className="pt-6 border-t border-gray-300 space-y-3">
               {["Diagnóstico inicial sin costo", "Respuesta en menos de 24 hs", "Sin compromisos en la primera consulta"].map((f) => (
-                <div key={f} className="flex items-center gap-3 text-gray-600 text-sm">
-                  <div className="w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
+                <div key={f} className="flex items-center gap-3 text-gray-700 text-sm">
+                  <div className="w-5 h-5 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-oliva" strokeWidth={3} />
                   </div>
                   {f}
                 </div>

@@ -9,8 +9,8 @@
 .theme-compost {
   --color-oliva: #606C38;    /* oliva militar warm (primario) */
   --color-noche: #283618;    /* bosque profundo (overlays) */
-  --color-lima: #BC6C25;     /* cobre terroso (accent principal) */
-  --color-canola: #DDA15E;   /* tierra dorada (para chips/detalles) */
+  --color-lima: #DDA15E;     /* amarillo maiz / dorado (accent principal, mejor contraste con oliva) */
+  --color-canola: #BC6C25;   /* cobre terroso (para chips especificos) */
   --color-paja: #FFFFFF;     /* fondos blancos, sin tinte */
   --color-nata: #FFFFFF;     /* fondo pagina blanco puro */
   --color-oliva-dark: #283618;
