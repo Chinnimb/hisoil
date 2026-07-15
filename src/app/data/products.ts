@@ -607,6 +607,24 @@ export function getProductBySlug(slug: string): ProductDetail | undefined {
   return products.find((p) => p.slug === slug);
 }
 
+/**
+ * Returns true if the product belongs to the compost family
+ * (uses the "Tierra Cálida" warm palette instead of Hisoil green).
+ */
+export function isCompostProduct(slug: string): boolean {
+  const compostSlugs = new Set([
+    'compost',
+    'compost-infra',
+    'humic',
+    'carbon',
+    'regenera',
+    'sphagnum',
+    'chip',
+    'minichip',
+  ]);
+  return compostSlugs.has(slug);
+}
+
 export function getRelatedProducts(slug: string, line: ProductLine, limit = 3): ProductDetail[] {
   return products.filter((p) => p.line === line && p.slug !== slug).slice(0, limit);
 }
