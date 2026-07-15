@@ -1,5 +1,21 @@
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * Compost / Tierra Cálida sub-theme.
+ * Applied on the ProductoDetallePage when a product belongs to the compost family.
+ * Overrides brand tokens locally so all `text-oliva`, `bg-oliva`, `bg-lima`, etc.
+ * inside the wrapper automatically pick up the warm earth palette.
+ */
+.theme-compost {
+  --color-oliva: #606C38;    /* oliva militar warm */
+  --color-noche: #283618;    /* bosque profundo (overlays) */
+  --color-lima: #DDA15E;     /* tierra dorada (accent) */
+  --color-canola: #DDA15E;
+  --color-paja: #FEFAE0;     /* crema */
+  --color-nata: #FEFAE0;     /* crema como bg */
+  --color-oliva-dark: #283618;
+}
+
 :root {
   --font-size: 16px;
 
@@ -16,6 +32,13 @@
   --color-nata:    #FAFAF7;  /* warm off-white — section bg */
   --color-canola:  #B1D182;  /* light sage — soft accent */
   --color-paja:    #F2F4EE;  /* subtle alt section bg */
+
+  /* ── Compost warm-earth palette (Moodboard 03) ── */
+  --color-bosque:  #283618;  /* bosque profundo */
+  --color-oliva-warm: #606C38;  /* oliva militar */
+  --color-crema:   #FEFAE0;  /* crema cálido */
+  --color-tierra:  #DDA15E;  /* tierra dorada */
+  --color-cobre:   #BC6C25;  /* cobre terroso */
 
   --background: #FAFAF7;
   --foreground: #14201A;
@@ -102,6 +125,11 @@
   --color-nata: var(--color-nata);
   --color-canola: var(--color-canola);
   --color-paja: var(--color-paja);
+  --color-bosque: var(--color-bosque);
+  --color-oliva-warm: var(--color-oliva-warm);
+  --color-crema: var(--color-crema);
+  --color-tierra: var(--color-tierra);
+  --color-cobre: var(--color-cobre);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

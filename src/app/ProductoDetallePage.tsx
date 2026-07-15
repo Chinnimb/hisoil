@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowUpRight, Check, ChevronRight, ShoppingCart, Eye, Sparkl
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { useModal } from './context/ModalContext';
-import { getProductBySlug, getRelatedProducts, lineLabels } from './data/products';
+import { getProductBySlug, getRelatedProducts, lineLabels, isCompostProduct } from './data/products';
 import { useReveal } from './hooks/useReveal';
 
 export default function ProductoDetallePage() {
@@ -18,9 +18,10 @@ export default function ProductoDetallePage() {
 
   const { Icon } = product;
   const related = getRelatedProducts(product.slug, product.line);
+  const isCompost = isCompostProduct(product.slug);
 
   return (
-    <div className="min-h-screen bg-nata">
+    <div className={`min-h-screen bg-nata ${isCompost ? 'theme-compost' : ''}`}>
       <Header />
       <main>
         {/* Breadcrumb */}
@@ -36,8 +37,8 @@ export default function ProductoDetallePage() {
           </div>
         </nav>
 
-        {/* Back link */}
-        <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-8">
+        {/* Back link + compost badge */}
+        <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-8 flex items-center justify-between gap-4">
           <Link
             to="/productos"
             className="inline-flex items-center gap-2 text-oliva/70 hover:text-oliva transition-colors text-sm font-medium group"
@@ -45,6 +46,12 @@ export default function ProductoDetallePage() {
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Volver al catálogo
           </Link>
+          {isCompost && (
+            <div className="hidden md:inline-flex items-center gap-2 border border-oliva/30 rounded-full px-4 py-2 bg-white">
+              <span className="w-2 h-2 rounded-full bg-lima" />
+              <span className="text-oliva text-[10px] font-mono uppercase tracking-widest font-semibold">Línea Tierra Cálida</span>
+            </div>
+          )}
         </div>
 
         {/* Hero */}
