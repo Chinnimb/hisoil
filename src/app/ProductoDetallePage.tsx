@@ -37,8 +37,8 @@ export default function ProductoDetallePage() {
           </div>
         </nav>
 
-        {/* Back link + compost badge */}
-        <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-8 flex items-center justify-between gap-4">
+        {/* Back link */}
+        <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-8">
           <Link
             to="/productos"
             className="inline-flex items-center gap-2 text-oliva/70 hover:text-oliva transition-colors text-sm font-medium group"
@@ -46,12 +46,6 @@ export default function ProductoDetallePage() {
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Volver al catálogo
           </Link>
-          {isCompost && (
-            <div className="hidden md:inline-flex items-center gap-2 border border-oliva/30 rounded-full px-4 py-2 bg-white">
-              <span className="w-2 h-2 rounded-full bg-lima" />
-              <span className="text-oliva text-[10px] font-mono uppercase tracking-widest font-semibold">Línea Tierra Cálida</span>
-            </div>
-          )}
         </div>
 
         {/* Hero */}
