@@ -179,8 +179,8 @@ export default function ProductoDetallePage() {
               <ul className="space-y-3">
                 {product.composition.map((c) => (
                   <li key={c} className="flex items-start gap-3">
-                    <div className="w-4 h-4 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <div className="w-1.5 h-1.5 bg-oliva rounded-full" />
+                    <div className="w-5 h-5 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-oliva" strokeWidth={3} />
                     </div>
                     <span className="text-gray-700 text-sm leading-relaxed">{c}</span>
                   </li>

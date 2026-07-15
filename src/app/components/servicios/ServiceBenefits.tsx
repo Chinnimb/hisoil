@@ -1,4 +1,4 @@
-import { Leaf, TrendingUp, Settings } from 'lucide-react';
+import { Leaf, TrendingUp, Settings, Check } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 
 const benefits = [
@@ -98,8 +98,8 @@ function BenefitCard({ b, index }: BenefitCardProps) {
         <ul className="space-y-3">
           {b.points.map((point) => (
             <li key={point} className="flex items-start gap-3 text-sm text-gray-700">
-              <div className="w-4 h-4 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div className="w-1.5 h-1.5 bg-oliva rounded-full" />
+              <div className="w-5 h-5 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Check className="w-3 h-3 text-oliva" strokeWidth={3} />
               </div>
               {point}
             </li>
