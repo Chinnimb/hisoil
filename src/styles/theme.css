@@ -7,12 +7,12 @@
  * inside the wrapper automatically pick up the warm earth palette.
  */
 .theme-compost {
-  --color-oliva: #606C38;    /* oliva militar warm */
+  --color-oliva: #606C38;    /* oliva militar warm (primario) */
   --color-noche: #283618;    /* bosque profundo (overlays) */
-  --color-lima: #DDA15E;     /* tierra dorada (accent) */
-  --color-canola: #DDA15E;
-  --color-paja: #FEFAE0;     /* crema */
-  --color-nata: #FEFAE0;     /* crema como bg */
+  --color-lima: #BC6C25;     /* cobre terroso (accent principal) */
+  --color-canola: #DDA15E;   /* tierra dorada (para chips/detalles) */
+  --color-paja: #FFFFFF;     /* fondos blancos, sin tinte */
+  --color-nata: #FFFFFF;     /* fondo pagina blanco puro */
   --color-oliva-dark: #283618;
 }
 
