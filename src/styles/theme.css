@@ -11,10 +11,69 @@
   --color-noche: #283618;    /* bosque profundo (overlays) */
   --color-lima: #DDA15E;     /* amarillo maiz / dorado (accent principal, mejor contraste con oliva) */
   --color-canola: #BC6C25;   /* cobre terroso (para chips especificos) */
-  --color-paja: #FFFFFF;     /* fondos blancos, sin tinte */
-  --color-nata: #FFFFFF;     /* fondo pagina blanco puro */
+  --color-paja: #FFFFFF;
+  --color-nata: #FFFFFF;
   --color-oliva-dark: #283618;
 }
+
+/*
+ * Tailwind v4 compila `bg-lima`, `text-lima`, `border-lima` a un valor fijo,
+ * asi que forzamos overrides explicitos dentro del scope compost para que
+ * todas las clases utilitarias recojan la paleta calida.
+ */
+.theme-compost { color: #1F2A1A; }
+.theme-compost .bg-oliva { background-color: #606C38 !important; }
+.theme-compost .bg-oliva\/10 { background-color: rgba(96, 108, 56, 0.1) !important; }
+.theme-compost .bg-oliva\/15 { background-color: rgba(96, 108, 56, 0.15) !important; }
+.theme-compost .bg-oliva\/25 { background-color: rgba(96, 108, 56, 0.25) !important; }
+.theme-compost .bg-oliva\/40 { background-color: rgba(96, 108, 56, 0.4) !important; }
+.theme-compost .text-oliva { color: #606C38 !important; }
+.theme-compost .text-oliva\/40 { color: rgba(96, 108, 56, 0.4) !important; }
+.theme-compost .text-oliva\/60 { color: rgba(96, 108, 56, 0.6) !important; }
+.theme-compost .text-oliva\/70 { color: rgba(96, 108, 56, 0.7) !important; }
+.theme-compost .border-oliva { border-color: #606C38 !important; }
+.theme-compost .border-oliva\/10 { border-color: rgba(96, 108, 56, 0.1) !important; }
+.theme-compost .border-oliva\/15 { border-color: rgba(96, 108, 56, 0.15) !important; }
+.theme-compost .border-oliva\/20 { border-color: rgba(96, 108, 56, 0.2) !important; }
+.theme-compost .border-oliva\/25 { border-color: rgba(96, 108, 56, 0.25) !important; }
+.theme-compost .border-oliva\/30 { border-color: rgba(96, 108, 56, 0.3) !important; }
+.theme-compost .border-oliva\/40 { border-color: rgba(96, 108, 56, 0.4) !important; }
+.theme-compost .hover\:bg-oliva:hover { background-color: #606C38 !important; }
+.theme-compost .hover\:border-oliva\/40:hover { border-color: rgba(96, 108, 56, 0.4) !important; }
+.theme-compost .hover\:text-oliva:hover { color: #606C38 !important; }
+
+/* Lima -> amarillo maiz */
+.theme-compost .bg-lima { background-color: #DDA15E !important; }
+.theme-compost .bg-lima\/20 { background-color: rgba(221, 161, 94, 0.2) !important; }
+.theme-compost .bg-lima\/25 { background-color: rgba(221, 161, 94, 0.25) !important; }
+.theme-compost .bg-lima\/30 { background-color: rgba(221, 161, 94, 0.3) !important; }
+.theme-compost .text-lima { color: #DDA15E !important; }
+.theme-compost .border-lima { border-color: #DDA15E !important; }
+.theme-compost .border-lima\/40 { border-color: rgba(221, 161, 94, 0.4) !important; }
+.theme-compost .border-lima\/50 { border-color: rgba(221, 161, 94, 0.5) !important; }
+.theme-compost .hover\:bg-lima:hover { background-color: #DDA15E !important; }
+.theme-compost .hover\:text-lima:hover { color: #DDA15E !important; }
+.theme-compost .hover\:border-lima:hover { border-color: #DDA15E !important; }
+.theme-compost .group:hover .group-hover\:bg-lima { background-color: #DDA15E !important; }
+.theme-compost .group:hover .group-hover\:text-lima { color: #DDA15E !important; }
+.theme-compost .group:hover .group-hover\:border-lima { border-color: #DDA15E !important; }
+
+/* Overlays warm */
+.theme-compost .from-noche\/60,
+.theme-compost .from-noche\/70,
+.theme-compost .from-noche\/75,
+.theme-compost .from-noche\/80,
+.theme-compost .from-noche\/85 { --tw-gradient-from: rgba(40, 54, 24, 0.75) !important; }
+.theme-compost .via-noche\/25,
+.theme-compost .via-noche\/30,
+.theme-compost .via-noche\/40,
+.theme-compost .via-noche\/50 { --tw-gradient-via: rgba(40, 54, 24, 0.3) !important; }
+
+/* Backgrounds */
+.theme-compost .bg-nata,
+.theme-compost .bg-paja { background-color: #FFFFFF !important; }
+.theme-compost .bg-paja\/40,
+.theme-compost .bg-paja\/50 { background-color: rgba(254, 250, 224, 0.5) !important; }
 
 :root {
   --font-size: 16px;
