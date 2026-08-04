@@ -119,17 +119,24 @@ export function CompostApplications() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
 
   return (
-    <section className="theme-compost py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
-      <div className="max-w-[1600px] mx-auto w-full">
+    <section className="theme-compost py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva relative overflow-hidden">
+      {/* Grid texture */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: `repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 80px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 80px)`,
+        }}
+      />
+      <div className="relative max-w-[1600px] mx-auto w-full">
         <div
           ref={headerRef}
           className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
-          <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">Referencias internacionales</span>
+          <div className="inline-block border border-lima/40 bg-lima/10 px-3 py-1 mb-6">
+            <span className="text-lima text-xs font-mono uppercase tracking-widest">Referencias internacionales</span>
           </div>
-          <h2 className="text-oliva mb-4">Aplicaciones comprobadas del compost.</h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
+          <h2 className="text-white mb-4">Aplicaciones comprobadas del compost.</h2>
+          <p className="text-white/85 leading-relaxed text-lg">
             El compost demostró su eficacia en proyectos agrícolas, urbanos y ambientales de todo el mundo. Ejemplos respaldados por investigaciones y experiencias internacionales.
           </p>
         </div>
