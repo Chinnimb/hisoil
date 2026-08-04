@@ -1,10 +1,9 @@
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { PortfolioHero } from './components/portfolio/PortfolioHero';
-import { ClientLogoWall } from './components/portfolio/ClientLogoWall';
-import { ProjectsGallery } from './components/portfolio/ProjectsGallery';
-import { FeaturedCase } from './components/portfolio/FeaturedCase';
-import { ResultsMetrics } from './components/portfolio/ResultsMetrics';
+import { CarbonCredits } from './components/portfolio/CarbonCredits';
+import { IndustryCases } from './components/portfolio/IndustryCases';
+import { CompostApplications } from './components/portfolio/CompostApplications';
 import { PortfolioFinalCTA } from './components/portfolio/PortfolioFinalCTA';
 
 export default function PortfolioPage() {
@@ -13,10 +12,9 @@ export default function PortfolioPage() {
       <Header />
       <main>
         <PortfolioHero />
-        <ClientLogoWall />
-        <ProjectsGallery />
-        <FeaturedCase />
-        <ResultsMetrics />
+        <CarbonCredits />
+        <IndustryCases />
+        <CompostApplications />
         <PortfolioFinalCTA />
       </main>
       <Footer />
