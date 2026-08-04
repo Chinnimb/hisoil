@@ -21,13 +21,17 @@ export function CarbonCredits() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
 
   return (
-    <section id="creditos-carbono" className="theme-compost py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva text-white relative overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage: `repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 80px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 80px)`,
-        }}
+    <section id="creditos-carbono" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 text-white relative overflow-hidden">
+      {/* Background image */}
+      <img
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85&fit=crop"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
       />
+      {/* Dark overlay for legibility */}
+      <div className="absolute inset-0 bg-oliva/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-noche/40 via-transparent to-noche/60" />
 
       <div className="relative max-w-[1600px] mx-auto w-full">
         {/* Header */}
