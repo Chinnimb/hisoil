@@ -11,6 +11,8 @@ interface Step {
   Icon: LucideIcon;
   title: string;
   short: string;
+  image: string;
+  imageCaption: string;
   render: () => React.ReactNode;
 }
 
@@ -47,6 +49,8 @@ const steps: Step[] = [
     Icon: Target,
     title: 'Contexto',
     short: 'Del residuo al crédito de carbono',
+    image: 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=900&q=85&fit=crop',
+    imageCaption: 'Compostaje profesional · plantas Hisoil',
     render: () => (
       <div className="space-y-5 text-gray-700 leading-relaxed">
         <p className="text-base md:text-lg">
@@ -72,6 +76,8 @@ const steps: Step[] = [
     Icon: FlaskConical,
     title: 'Estrategia',
     short: 'Una estrategia basada en datos',
+    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=900&q=85&fit=crop',
+    imageCaption: 'Inventario GHG Protocol · Alcance 1, 2 y 3',
     render: () => (
       <div className="space-y-5 text-gray-700 leading-relaxed">
         <p className="text-base md:text-lg">
@@ -92,6 +98,8 @@ const steps: Step[] = [
     Icon: ShieldCheck,
     title: 'Proyecto',
     short: 'Del inventario al proyecto certificado',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=900&q=85&fit=crop',
+    imageCaption: 'Proyecto BCR-AR-763-13-003 · BioCarbon Standard',
     render: () => (
       <div className="space-y-5 text-gray-700 leading-relaxed">
         <div className="bg-oliva text-white rounded-2xl p-6">
@@ -118,6 +126,8 @@ const steps: Step[] = [
     Icon: Award,
     title: 'Impacto',
     short: 'Qué genera este proyecto',
+    image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=900&q=85&fit=crop',
+    imageCaption: 'Reducción de emisiones de metano',
     render: () => (
       <div className="space-y-5 text-gray-700 leading-relaxed">
         <p className="text-base md:text-lg">
@@ -148,6 +158,8 @@ const steps: Step[] = [
     Icon: TrendingUp,
     title: 'Resultados',
     short: 'Proyecciones documentadas',
+    image: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?w=900&q=85&fit=crop',
+    imageCaption: '36.951 tCO₂e evitadas por año',
     render: () => (
       <div className="space-y-5 text-gray-700 leading-relaxed">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -174,6 +186,8 @@ const steps: Step[] = [
     Icon: Rocket,
     title: 'Visión',
     short: 'Más allá del compost',
+    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=900&q=85&fit=crop',
+    imageCaption: 'Plataforma integral de soluciones climáticas',
     render: () => (
       <div className="space-y-5 text-gray-700 leading-relaxed">
         <p className="text-base md:text-lg">
@@ -215,54 +229,59 @@ export function CarbonCredits() {
   const active = steps.find((s) => s.id === activeId) ?? steps[0];
 
   return (
-    <section id="creditos-carbono" className="relative overflow-hidden">
-      {/* Background image (hero style) */}
-      <img
-        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85&fit=crop"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-96 object-cover"
-      />
-      <div className="absolute inset-x-0 top-0 h-96 bg-oliva/90" />
-      <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-noche/25 to-white" />
+    <section id="creditos-carbono" className="bg-white">
+      {/* ── HERO VERDE ─────────────────────────────── */}
+      <div className="relative overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85&fit=crop"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-oliva/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-noche/25 via-oliva/70 to-oliva/85" />
 
-      <div className="relative py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20">
-        <div className="max-w-[1600px] mx-auto w-full">
-          {/* ── Header sobre el hero verde ─────────────── */}
-          <div
-            ref={headerRef}
-            className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
-          >
-            <div className="inline-block border border-lima/40 bg-lima/10 px-3 py-1 mb-6">
-              <span className="text-lima text-xs font-mono uppercase tracking-widest">Destacado</span>
-            </div>
-            <h2 className="text-white mb-6">Créditos de Carbono.</h2>
-            <p className="text-white/85 leading-relaxed text-lg max-w-2xl">
-              Transformamos residuos en soluciones climáticas verificables bajo estándares internacionales.
-            </p>
-          </div>
-
-          {/* Stats en el hero */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-14 md:mb-20">
-            {stats.map((s) => (
-              <div key={s.label} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-lima/40 transition-all">
-                <div className="text-white font-bold leading-none mb-2" style={{ fontSize: 'clamp(1.7rem, 3vw, 2.4rem)' }}>
-                  <AnimatedCounter end={s.end} suffix={s.suffix} />
-                </div>
-                <div className="text-white text-sm font-semibold mb-1">{s.label}</div>
-                <div className="text-white/55 text-xs font-mono">{s.sub}</div>
+        <div className="relative py-16 md:py-24 lg:py-28 px-6 md:px-12 lg:px-20">
+          <div className="max-w-[1600px] mx-auto w-full">
+            <div
+              ref={headerRef}
+              className={`max-w-3xl mb-10 md:mb-14 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
+            >
+              <div className="inline-block border border-lima/40 bg-lima/10 px-3 py-1 mb-6">
+                <span className="text-lima text-xs font-mono uppercase tracking-widest">Destacado</span>
               </div>
-            ))}
-          </div>
+              <h2 className="text-white mb-6">Créditos de Carbono.</h2>
+              <p className="text-white/85 leading-relaxed text-lg max-w-2xl">
+                Transformamos residuos en soluciones climáticas verificables bajo estándares internacionales.
+              </p>
+            </div>
 
-          {/* ── Tabs card (fondo blanco, alineado con resto) ── */}
+            {/* Stats en el hero */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
+              {stats.map((s) => (
+                <div key={s.label} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-lima/40 transition-all">
+                  <div className="text-white font-bold leading-none mb-2" style={{ fontSize: 'clamp(1.7rem, 3vw, 2.4rem)' }}>
+                    <AnimatedCounter end={s.end} suffix={s.suffix} />
+                  </div>
+                  <div className="text-white text-sm font-semibold mb-1">{s.label}</div>
+                  <div className="text-white/55 text-xs font-mono">{s.sub}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── TABS CARD (fondo blanco, superpuesta al hero) ──── */}
+      <div className="relative -mt-16 md:-mt-20 px-6 md:px-12 lg:px-20 pb-16 md:pb-24 lg:pb-32">
+        <div className="max-w-[1600px] mx-auto w-full">
           <div
             ref={tabsRef}
             className={`bg-white rounded-3xl shadow-2xl border border-oliva/10 overflow-hidden scroll-reveal ${tabsVisible ? 'is-visible' : ''}`}
           >
-            {/* Tab strip */}
+            {/* Tab strip — grid en desktop, scroll horizontal solo en mobile */}
             <div className="border-b border-oliva/10 overflow-x-auto scrollbar-hide">
-              <div className="flex min-w-max">
+              <div className="flex md:grid md:grid-cols-6 min-w-max md:min-w-0">
                 {steps.map((s) => {
                   const { Icon } = s;
                   const isActive = s.id === activeId;
@@ -270,7 +289,7 @@ export function CarbonCredits() {
                     <button
                       key={s.id}
                       onClick={() => setActiveId(s.id)}
-                      className={`flex items-center gap-3 px-5 md:px-6 py-5 border-b-2 transition-all whitespace-nowrap ${
+                      className={`flex items-center justify-center md:justify-start gap-3 px-4 md:px-5 py-5 border-b-2 transition-all whitespace-nowrap ${
                         isActive
                           ? 'border-lima bg-paja/40 text-oliva'
                           : 'border-transparent text-oliva/50 hover:text-oliva hover:bg-paja/20'
@@ -285,11 +304,11 @@ export function CarbonCredits() {
                       >
                         <Icon className="w-4 h-4" />
                       </div>
-                      <div className="text-left">
+                      <div className="text-left min-w-0">
                         <div className={`text-[10px] font-mono uppercase tracking-widest ${isActive ? 'text-lima' : 'text-oliva/45'}`}>
                           {s.step}
                         </div>
-                        <div className={`font-semibold text-sm leading-tight ${isActive ? 'text-oliva' : 'text-oliva/70'}`}>
+                        <div className={`font-semibold text-sm leading-tight truncate ${isActive ? 'text-oliva' : 'text-oliva/70'}`}>
                           {s.title}
                         </div>
                       </div>
@@ -299,15 +318,33 @@ export function CarbonCredits() {
               </div>
             </div>
 
-            {/* Tab content */}
-            <div className="p-6 md:p-10 lg:p-12">
-              <div className="mb-6">
-                <div className="text-oliva/60 text-[10px] font-mono uppercase tracking-widest mb-2">
-                  Etapa {active.step}
+            {/* Tab content — 2 columnas con imagen a la izquierda */}
+            <div key={active.id} className="animate-in fade-in duration-500 grid grid-cols-1 lg:grid-cols-12 gap-0">
+              {/* Imagen del step (sticky en desktop) */}
+              <div className="lg:col-span-5 relative aspect-[4/3] lg:aspect-auto lg:min-h-[520px] overflow-hidden bg-oliva">
+                <img
+                  src={active.image}
+                  alt={active.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-noche/85 via-noche/20 to-transparent" />
+                {/* Step badge over image */}
+                <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow">
+                  <span className="text-oliva text-[10px] font-mono uppercase tracking-widest font-semibold">
+                    Etapa {active.step}
+                  </span>
                 </div>
-                <h3 className="text-oliva font-bold text-2xl md:text-3xl leading-tight">{active.short}.</h3>
+                {/* Caption at bottom */}
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-white text-sm font-mono">{active.imageCaption}</p>
+                </div>
               </div>
-              <div key={active.id} className="animate-in fade-in duration-500">
+
+              {/* Content */}
+              <div className="lg:col-span-7 p-6 md:p-10 lg:p-12">
+                <h3 className="text-oliva font-bold text-2xl md:text-3xl leading-tight mb-6">
+                  {active.short}.
+                </h3>
                 {active.render()}
               </div>
             </div>
