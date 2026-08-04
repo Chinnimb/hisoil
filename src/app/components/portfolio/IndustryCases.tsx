@@ -22,7 +22,7 @@ const cases: IndustryCase[] = [
     headline: 'Efluentes y valorización de rumen',
     treats: ['Compostaje de rumen y contenido digestivo', 'Gestión de barros biológicos', 'Tratamiento de efluentes', 'Certificados de disposición final'],
     companies: ['Quickfood', 'Frigorífico Cañuelas', 'Frigorífico Costanzo', 'Pekan', 'Marilú Damiano', 'Matadero Frigorífico Merlo', 'Industria Cárnica del Oeste', 'Soychú'],
-    image: 'https://images.unsplash.com/photo-1560743641-3914f2c45636?w=1200&q=85&fit=crop',
+    image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop',
   },
   {
     id: 'cervecera',
@@ -31,7 +31,7 @@ const cases: IndustryCase[] = [
     headline: 'Bagazo de malta y efluentes',
     treats: ['Bagazo de malta', 'Levaduras', 'Barros biológicos', 'Efluentes industriales'],
     companies: ['Cervecería y Maltería Quilmes'],
-    image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&q=85&fit=crop',
+    image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1200&q=85&fit=crop',
   },
   {
     id: 'alimenticia',
