@@ -229,7 +229,7 @@ export function IndustryCases() {
   };
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 pl-6 md:pl-12 lg:pl-20 bg-white overflow-hidden">
+    <section id="industrias" className="py-16 md:py-24 lg:py-32 pl-6 md:pl-12 lg:pl-20 bg-white overflow-hidden">
       <div className="max-w-[1600px] mx-auto w-full pr-6 md:pr-12 lg:pr-20">
         <div
           ref={headerRef}
