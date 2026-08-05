@@ -1,160 +1,113 @@
-import { useState, useEffect } from 'react';
-
-const slides = [
-  {
-    url: "https://images.unsplash.com/photo-1635174815450-337f1f0abf5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZ3Jvbm9taXN0JTIwdGVhbSUyMHdvcmtpbmclMjBmaWVsZCUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzMDU1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    label: "Equipo en campo",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2lsJTIwbGFib3JhdG9yeSUyMGFuYWx5c2lzJTIwc2NpZW5jZSUyMHJlc2VhcmNofGVufDF8fHx8MTc4MDkzMDU2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    label: "Análisis de suelo",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhZ3Jvbm9taXN0JTIwdGVhbSUyMHdvcmtpbmclMjBmaWVsZCUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzMDU1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    label: "Maquinaria agrícola",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1707235164180-85fa316ce0ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxhZ3Jvbm9taXN0JTIwdGVhbSUyMHdvcmtpbmclMjBmaWVsZCUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzMDU1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    label: "Relevamiento en campo",
-  },
-];
+import { useEffect, useRef } from 'react';
+import { useModal } from '../../context/ModalContext';
+import { Link } from 'react-router';
 
 export function AboutHero() {
-  const [current, setCurrent] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const { open } = useModal();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Fade out, swap, fade in
-      setVisible(false);
-      setTimeout(() => {
-        setCurrent((c) => (c + 1) % slides.length);
-        setVisible(true);
-      }, 500);
-    }, 4000);
-    return () => clearInterval(interval);
+    let rafId: number;
+    let current = 0;
+    let target = 0;
+    const onScroll = () => {
+      target = Math.min(window.scrollY / window.innerHeight, 1);
+    };
+    const tick = () => {
+      current += (target - current) * 0.06;
+      if (imgRef.current) {
+        const scale = 1 + current * 0.25;
+        const ty = current * 50;
+        imgRef.current.style.transform = `scale(${scale}) translateY(${ty}px)`;
+      }
+      rafId = requestAnimationFrame(tick);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    rafId = requestAnimationFrame(tick);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
-    <section className="bg-white min-h-screen flex flex-col border-b border-gray-200">
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 pt-16 md:pt-24 gap-0">
+    <>
+      <style>{`
+        @keyframes heroInAbout {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .ha-fade {
+          opacity: 0;
+          animation: heroInAbout 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+      `}</style>
 
-        {/* Left — copy */}
-        <div className="lg:col-span-6 flex flex-col justify-center pb-16 lg:pb-24 lg:pr-16 lg:border-r border-gray-200">
-          <div className="inline-block border border-gray-300 px-3 py-1.5 mb-8 self-start">
-            <span className="text-gray-600 text-xs font-mono uppercase tracking-[0.2em]">Sobre nosotros</span>
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        {/* Background image with parallax */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            ref={imgRef}
+            src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1920&q=85&fit=crop"
+            alt="Hisoil — Transformamos residuos orgánicos en soluciones para el suelo"
+            className="absolute w-full object-cover will-change-transform"
+            style={{ height: '120%', top: '-10%' }}
+          />
+        </div>
+
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-oliva/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noche/60 via-transparent to-noche/10" />
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
+          <div className="ha-fade inline-block border border-white/30 px-4 py-1.5 mb-8" style={{ animationDelay: '0.1s' }}>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Nosotros</span>
           </div>
 
-          <h1 className="text-oliva mb-6 leading-[1.05]">
-            Transformamos desafíos ambientales en soluciones sostenibles.
+          <h1 className="ha-fade text-white max-w-4xl mb-8 leading-tight" style={{ animationDelay: '0.25s' }}>
+            Transformamos residuos orgánicos en <span className="text-lima">soluciones para el suelo</span>.
           </h1>
 
-          <p className="text-gray-700 text-lg leading-relaxed mb-10 max-w-lg">
-            [Subtítulo — Hisoil es una empresa especializada en soluciones agro-ambientales que acompaña a productores, empresas e industrias con productos técnicos y servicios de gestión ambiental con impacto real y medible.]
+          <p className="ha-fade text-white/80 max-w-2xl mb-12 text-lg leading-relaxed" style={{ animationDelay: '0.4s' }}>
+            HISOIL desarrolla soluciones integrales para la gestión de residuos orgánicos, producción de compost, sustratos técnicos y restauración ambiental. Acompañamos a empresas, industrias, municipios y productores con proyectos que generan beneficios económicos, ambientales y sociales.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-16">
-            <button className="bg-oliva text-white px-8 py-4 rounded-full font-semibold hover:bg-oliva transition-colors">
-              Solicitar presupuesto
+          <div className="ha-fade flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '0.55s' }}>
+            <button
+              onClick={open}
+              className="bg-white text-oliva px-9 py-4 rounded-full font-semibold hover:bg-canola hover:text-oliva transition-all shadow-xl"
+            >
+              Solicitar asesoramiento
             </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-paja transition-colors">
-              Conocer nuestros productos
-            </button>
+            <Link
+              to="/productos"
+              className="border border-white/60 text-white px-9 py-4 rounded-full font-medium hover:bg-white/10 transition-colors backdrop-blur-sm"
+            >
+              Conocer nuestros productos →
+            </Link>
           </div>
+        </div>
 
-          {/* Quick trust row */}
-          <div className="flex flex-wrap gap-6 pt-8 border-t border-gray-200">
+        {/* Indicators footer */}
+        <div className="ha-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-6 px-6" style={{ animationDelay: '0.7s' }}>
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-[1600px] mx-auto text-center md:text-left">
             {[
-              { value: "+15 años", label: "en el sector" },
-              { value: "800+", label: "clientes atendidos" },
-              { value: "ISO 14001", label: "certificado" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="font-bold text-oliva text-lg">{s.value}</div>
-                <div className="text-gray-600 text-xs font-mono">{s.label}</div>
+              { value: "+25 años", label: "de experiencia en soluciones agroambientales" },
+              { value: "12 provincias", label: "con proyectos y presencia comercial" },
+              { value: "Economía Circular", label: "transformando residuos en recursos" },
+            ].map((item) => (
+              <div key={item.value} className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3 justify-center md:justify-start">
+                <div className="w-2 h-2 bg-lima rounded-full mx-auto md:mx-0 flex-shrink-0" />
+                <div>
+                  <div className="text-white font-bold text-lg leading-tight">{item.value}</div>
+                  <div className="text-white/60 text-xs font-mono">{item.label}</div>
+                </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Right — image */}
-        <div className="lg:col-span-6 flex items-center pb-16 lg:pb-24 lg:pl-16">
-          <div className="max-w-[1600px] mx-auto w-full">
-            {/* Fadeshow — main image */}
-            <div className="aspect-[4/3] bg-oliva rounded-sm relative overflow-hidden mb-3">
-              <img
-                key={current}
-                src={slides[current].url}
-                alt={slides[current].label}
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{
-                  
-                  opacity: visible ? 1 : 0,
-                  transition: 'opacity 0.5s ease-in-out',
-                }}
-              />
-              {/* Subtle bottom gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950/50 to-transparent pointer-events-none" />
-
-              {/* Label pill */}
-              <div className="absolute bottom-4 left-4">
-                <span
-                  className="bg-oliva/80 backdrop-blur-sm text-white text-xs font-mono px-3 py-1.5 rounded-full"
-                  style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}
-                >
-                  {slides[current].label}
-                </span>
-              </div>
-
-              {/* Dot indicators */}
-              <div className="absolute bottom-4 right-4 flex gap-1.5">
-                {slides.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => { setVisible(false); setTimeout(() => { setCurrent(i); setVisible(true); }, 500); }}
-                    className="rounded-full transition-all duration-300"
-                    style={{
-                      width: i === current ? '20px' : '6px',
-                      height: '6px',
-                      background: i === current ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.35)',
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Thumbnail strip — clickable */}
-            <div className="grid grid-cols-4 gap-2">
-              {slides.map((s, i) => (
-                <button
-                  key={i}
-                  onClick={() => { setVisible(false); setTimeout(() => { setCurrent(i); setVisible(true); }, 500); }}
-                  className="aspect-[4/3] rounded-sm overflow-hidden relative group"
-                  style={{ outline: 'none' }}
-                >
-                  <img
-                    src={s.url}
-                    alt={s.label}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    
-                  />
-                  <div
-                    className="absolute inset-0 transition-all duration-200"
-                    style={{
-                      background: i === current
-                        ? 'rgba(0,0,0,0.1)'
-                        : 'rgba(0,0,0,0.45)',
-                    }}
-                  />
-                  {i === current && (
-                    <div className="absolute inset-0 ring-2 ring-white/60 rounded-sm pointer-events-none" />
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

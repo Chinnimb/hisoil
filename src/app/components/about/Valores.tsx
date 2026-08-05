@@ -6,48 +6,48 @@ const valores = [
     number: "01",
     Icon: Handshake,
     title: "Compromiso",
-    quote: "No nos vamos hasta que el campo lo demuestra.",
-    description: "Cada proyecto sigue abierto hasta que los objetivos se cumplen y se documentan. Vos no quedás solo con un producto entregado.",
+    quote: "Nos involucramos en cada proyecto hasta alcanzar los resultados esperados.",
+    description: "Acompañamos a nuestros clientes desde el diagnóstico inicial hasta la implementación y el seguimiento técnico, construyendo relaciones de largo plazo basadas en la confianza.",
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=85&fit=crop",
   },
   {
     number: "02",
     Icon: FlaskConical,
     title: "Innovación",
-    quote: "Ciencia aplicada al suelo argentino.",
-    description: "Investigación constante con INTA y universidades. Cada producto pasa por ensayos a campo antes de salir al mercado.",
+    quote: "Desarrollamos soluciones adaptadas a cada desafío.",
+    description: "Incorporamos nuevas tecnologías, procesos y conocimientos para mejorar continuamente nuestros productos y servicios, ofreciendo soluciones eficientes y de alto valor agregado.",
     image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=900&q=85&fit=crop",
   },
   {
     number: "03",
     Icon: Leaf,
     title: "Sustentabilidad",
-    quote: "El ambiente no es un costo. Es la oportunidad.",
-    description: "Economía circular en cada solución. Lo que para otros es residuo, para nosotros es insumo. Mínimo impacto, máxima valorización.",
+    quote: "La economía circular es nuestra forma de trabajar.",
+    description: "Promovemos la valorización de residuos orgánicos, la recuperación de nutrientes y la regeneración de suelos mediante procesos que reducen el impacto ambiental y generan beneficios económicos.",
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=900&q=85&fit=crop",
   },
   {
     number: "04",
     Icon: Users,
     title: "Cercanía",
-    quote: "Un técnico con nombre y apellido detrás de cada proyecto.",
-    description: "Sin intermediarios, sin call centers. El mismo asesor que firma la propuesta es el que pisa el campo y responde el WhatsApp.",
+    quote: "Cada cliente cuenta con un equipo que conoce su realidad.",
+    description: "Brindamos atención personalizada, acompañamiento permanente y respuestas ágiles para adaptar cada solución a las necesidades de cada proyecto.",
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=85&fit=crop",
   },
   {
     number: "05",
     Icon: Award,
     title: "Calidad",
-    quote: "Registros oficiales, protocolos rigurosos.",
-    description: "SENASA, IRAM, ISO 14001. La calidad no es la meta — es el punto de partida obligatorio de todo lo que producimos.",
+    quote: "La calidad comienza en el proceso.",
+    description: "Aplicamos controles durante cada etapa de producción para garantizar productos confiables, trazables y consistentes, cumpliendo con los estándares técnicos y ambientales correspondientes.",
     image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=900&q=85&fit=crop",
   },
   {
     number: "06",
     Icon: Scale,
     title: "Responsabilidad",
-    quote: "Transparencia ante clientes, reguladores y comunidades.",
-    description: "Cada intervención queda documentada y trazable. Reportes claros, métricas reales, comunicación abierta en cada etapa.",
+    quote: "Cada decisión tiene impacto sobre el ambiente y las personas.",
+    description: "Trabajamos con transparencia, compromiso y responsabilidad, promoviendo prácticas que contribuyen al desarrollo sostenible y al cumplimiento de los objetivos ambientales de nuestros clientes.",
     image: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=900&q=85&fit=crop",
   },
 ];
@@ -123,7 +123,7 @@ export function Valores() {
           </div>
           <h2 className="text-oliva mb-6">Seis valores. Una sola forma de trabajar.</h2>
           <p className="text-gray-700 leading-relaxed text-lg">
-            Estos principios no están colgados en una pared — están en cada decisión técnica, cada propuesta, cada visita a campo.
+            Cada proyecto refleja nuestra manera de entender la sustentabilidad: compromiso técnico, mejora continua y soluciones pensadas para generar impacto positivo en el ambiente y en nuestros clientes.
           </p>
         </div>
 
