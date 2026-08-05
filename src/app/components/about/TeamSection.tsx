@@ -1,79 +1,97 @@
-const team = [
-  { name: "Nombre Apellido", role: "Director General", specialty: "Agronomía · MBA · 20+ años", photo: "https://images.unsplash.com/photo-1545830790-68595959c491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXJtZXIlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbCUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzNTAzNnww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Directora Técnica", specialty: "Ing. Ambiental · ISO 14001 · Gestión RSO", photo: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHNjaWVudGlzdCUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc4MDkzNTA0N3ww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Jefe de Agronomía", specialty: "Fitopatología · Nutrición vegetal · Soja/Maíz", photo: "https://images.unsplash.com/photo-1709532927468-2a9fd205cadc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxhZ3Jvbm9taXN0JTIwZmllbGQlMjBjcm9wJTIwaW5zcGVjdGlvbiUyMGFncmljdWx0dXJlJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc4MDkzNTAzNnww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Responsable Comercial", specialty: "Ventas B2B · Agro · Negociación técnica", photo: "https://images.unsplash.com/photo-1627829382469-f4bce7df99ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxmYXJtZXIlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbCUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzNTAzNnww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Especialista en Suelos", specialty: "Edafología · Fertilización · Laboratorio", photo: "https://images.unsplash.com/photo-1492496913980-501348b61469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2lsJTIwYW5hbHlzaXMlMjBsYWJvcmF0b3J5JTIwc2NpZW5jZSUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzNTA0Nnww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Ing. Ambiental Senior", specialty: "EIA · Remediación · Normativa ambiental", photo: "https://images.unsplash.com/photo-1709532388333-acf472eae61a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhZ3Jvbm9taXN0JTIwZmllbGQlMjBjcm9wJTIwaW5zcGVjdGlvbiUyMGFncmljdWx0dXJlJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc4MDkzNTAzNnww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Técnico de Campo", specialty: "Diagnóstico in situ · Aplicación · Monitoreo", photo: "https://images.unsplash.com/photo-1580982327559-c1202864eb05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxzb2lsJTIwYW5hbHlzaXMlMjBsYWJvcmF0b3J5JTIwc2NpZW5jZSUyMGFncmljdWx0dXJlfGVufDF8fHx8MTc4MDkzNTA0Nnww&ixlib=rb-4.1.0&q=80&w=400" },
-  { name: "Nombre Apellido", role: "Analista de Laboratorio", specialty: "Microbiología · Análisis fisicoquímicos", photo: "https://images.unsplash.com/photo-1631203883080-9e5338ebcf2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHNjaWVudGlzdCUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc4MDkzNTA0N3ww&ixlib=rb-4.1.0&q=80&w=400" },
+import { Sprout, ClipboardCheck, Wrench, Factory, Handshake, ImagePlus } from 'lucide-react';
+import { useReveal } from '../../hooks/useReveal';
+
+const disciplines = [
+  { Icon: Sprout, title: 'Ingenieros agrónomos', description: 'Diagnóstico técnico, planes nutricionales y seguimiento a campo.' },
+  { Icon: ClipboardCheck, title: 'Especialistas ambientales', description: 'Gestión de residuos, normativa y compliance ambiental.' },
+  { Icon: Wrench, title: 'Técnicos de producción', description: 'Control de calidad y procesos de compostaje profesional.' },
+  { Icon: Factory, title: 'Operadores de planta', description: 'Ejecución operativa en cada etapa del tratamiento.' },
+  { Icon: Handshake, title: 'Asesores comerciales', description: 'Acompañamiento personalizado desde la primera consulta.' },
 ];
 
 export function TeamSection() {
+  const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
+  const [bodyRef, bodyVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
+  const [gridRef, gridVisible] = useReveal<HTMLDivElement>({ threshold: 0.2 });
+  const [galleryRef, galleryVisible] = useReveal<HTMLDivElement>({ threshold: 0.15 });
+
   return (
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div className="max-w-xl">
-            <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">08 — Equipo</span>
-            </div>
-            <h2 className="text-oliva mb-3">Las personas detrás de Hisoil</h2>
-            <p className="text-gray-700 leading-relaxed">
-              [Descripción — Un equipo multidisciplinario de agrónomos, ingenieros ambientales, técnicos de campo y especialistas en biología de suelos comprometidos con cada proyecto.]
+        <div
+          ref={headerRef}
+          className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
+        >
+          <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">08 — Equipo</span>
+          </div>
+          <h2 className="text-oliva mb-4">Las personas detrás de Hisoil.</h2>
+        </div>
+
+        {/* Body copy */}
+        <div
+          ref={bodyRef}
+          className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-14 md:mb-20 scroll-reveal ${bodyVisible ? 'is-visible' : ''}`}
+        >
+          <div className="lg:col-span-4">
+            <h3 className="text-oliva font-bold text-2xl leading-tight">
+              Un equipo <span className="text-lima">multidisciplinario</span> integrado en cada etapa.
+            </h3>
+          </div>
+          <div className="lg:col-span-8 space-y-5 text-gray-700 leading-relaxed">
+            <p>
+              Detrás de cada proyecto hay un equipo multidisciplinario que trabaja de manera integrada para desarrollar soluciones eficientes y sostenibles.
+            </p>
+            <p>
+              Combinamos <span className="text-oliva font-semibold">experiencia, conocimiento técnico y compromiso con la mejora continua</span> para acompañar a nuestros clientes en cada etapa del proceso, desde el diagnóstico inicial hasta la implementación y el seguimiento de los resultados.
+            </p>
+            <p>
+              Nuestro objetivo es brindar soluciones <span className="text-oliva font-semibold">confiables, cercanas y adaptadas a cada realidad productiva</span>, generando relaciones de largo plazo basadas en la confianza y el trabajo conjunto.
             </p>
           </div>
-          <div className="flex gap-2 flex-shrink-0">
-            <div className="bg-white border border-gray-300 px-4 py-2 rounded-full text-xs font-mono text-gray-700">+35 profesionales</div>
-            <div className="bg-white border border-gray-300 px-4 py-2 rounded-full text-xs font-mono text-gray-700">5 disciplinas</div>
-          </div>
         </div>
 
-        {/* Team grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {team.map((member, i) => (
-            <div
-              key={i}
-              className="card-gradient-border overflow-hidden group hover:border-gray-400 hover:shadow-md transition-all cursor-pointer"
-            >
-              {/* Portrait photo */}
-              <div className="aspect-[3/4] bg-gray-200 relative overflow-hidden">
-                <img
-                  src={member.photo}
-                  alt={member.role}
-                  className="w-full h-full object-cover object-top"
-                  
-                />
-
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-oliva/0 group-hover:bg-oliva/60 transition-all duration-300 flex items-end">
-                  <div className="p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 w-full">
-                    <p className="text-white text-xs font-mono leading-relaxed">{member.specialty}</p>
-                  </div>
+        {/* Disciplines grid */}
+        <div
+          ref={gridRef}
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16 md:mb-20 scroll-reveal ${gridVisible ? 'is-visible' : ''}`}
+        >
+          {disciplines.map((d, i) => {
+            const { Icon } = d;
+            return (
+              <div
+                key={d.title}
+                className="bg-white border border-oliva/15 rounded-2xl p-6 hover:border-oliva/40 hover:shadow-lg transition-all duration-500 group"
+                style={{ transitionDelay: `${i * 60}ms` }}
+              >
+                <div className="w-11 h-11 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center mb-4 group-hover:bg-lima/25 group-hover:border-lima/40 transition-all duration-500">
+                  <Icon className="w-5 h-5 text-oliva" />
                 </div>
-
-                {/* LinkedIn */}
-                <div className="absolute top-3 right-3 w-7 h-7 bg-white/80 border border-gray-300 rounded-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-gray-600 text-xs font-bold">in</span>
-                </div>
+                <h4 className="text-oliva font-bold text-base leading-tight mb-2">{d.title}</h4>
+                <p className="text-gray-700 text-xs leading-relaxed">{d.description}</p>
               </div>
+            );
+          })}
+        </div>
 
-              {/* Info */}
-              <div className="p-5">
-                <div className="font-semibold text-oliva text-sm">{member.name}</div>
-                <div className="text-gray-700 text-xs mt-0.5">{member.role}</div>
-              </div>
+        {/* Placeholder para fotos y videos de planta */}
+        <div
+          ref={galleryRef}
+          className={`bg-white border border-dashed border-oliva/30 rounded-3xl p-8 md:p-12 scroll-reveal ${galleryVisible ? 'is-visible' : ''}`}
+        >
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="w-16 h-16 rounded-2xl bg-oliva/10 border border-oliva/20 flex items-center justify-center flex-shrink-0">
+              <ImagePlus className="w-7 h-7 text-oliva" />
             </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-10 text-center border border-dashed border-gray-300 rounded-sm py-8 px-6">
-          <p className="text-gray-700 text-sm mb-4">¿Querés conocer a todo el equipo técnico?</p>
-          <button className="border border-gray-400 text-gray-600 px-6 py-3 rounded-full text-sm font-medium hover:bg-paja transition-colors">
-            Ver todos los profesionales
-          </button>
+            <div className="flex-1 text-center md:text-left">
+              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-2">Galería</div>
+              <h4 className="text-oliva font-bold text-lg md:text-xl mb-1">Fotos y videos de nuestras plantas</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Próximamente incorporaremos material audiovisual de nuestras operaciones y equipo en campo.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
