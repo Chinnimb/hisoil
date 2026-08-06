@@ -81,7 +81,7 @@ export function ServiciosHero() {
         </div>
 
         {/* Trust indicators */}
-        <div className="h-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-5 px-6" style={{ animationDelay: '0.7s' }}>
+        <div className="h-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-5 px-6 md:px-12 lg:px-20" style={{ animationDelay: '0.7s' }}>
           <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6 max-w-[1600px] mx-auto">
             {[
               "ISO 14001 certificado",

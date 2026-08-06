@@ -90,7 +90,7 @@ export function AboutHero() {
         </div>
 
         {/* Indicators footer */}
-        <div className="ha-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-6 px-6" style={{ animationDelay: '0.7s' }}>
+        <div className="ha-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-6 px-6 md:px-12 lg:px-20" style={{ animationDelay: '0.7s' }}>
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-[1600px] mx-auto text-center md:text-left">
             {[
               { value: "+25 años", label: "de experiencia en soluciones agroambientales" },
