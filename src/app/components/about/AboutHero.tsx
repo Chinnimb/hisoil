@@ -91,14 +91,14 @@ export function AboutHero() {
 
         {/* Indicators footer */}
         <div className="ha-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-6 px-6 md:px-12 lg:px-20" style={{ animationDelay: '0.7s' }}>
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-[1600px] mx-auto text-center md:text-left">
+          <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             {[
               { value: "+25 años", label: "de experiencia en soluciones agroambientales" },
               { value: "12 provincias", label: "con proyectos y presencia comercial" },
               { value: "Economía Circular", label: "transformando residuos en recursos" },
             ].map((item) => (
-              <div key={item.value} className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3 justify-center md:justify-start">
-                <div className="w-2 h-2 bg-lima rounded-full mx-auto md:mx-0 flex-shrink-0" />
+              <div key={item.value} className="flex items-center gap-3 justify-center md:justify-start">
+                <div className="w-2 h-2 bg-lima rounded-full flex-shrink-0" />
                 <div>
                   <div className="text-white font-bold text-lg leading-tight">{item.value}</div>
                   <div className="text-white/60 text-xs font-mono">{item.label}</div>
