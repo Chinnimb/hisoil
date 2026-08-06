@@ -4,6 +4,7 @@ import { ServiciosHero } from './components/servicios/ServiciosHero';
 import { ServiceOverview } from './components/servicios/ServiceOverview';
 import { HowItWorks } from './components/servicios/HowItWorks';
 import { ServiceBenefits } from './components/servicios/ServiceBenefits';
+import { OtherServices } from './components/servicios/OtherServices';
 import { FinalCTAServicios } from './components/servicios/FinalCTAServicios';
 
 export default function ServiciosPage() {
@@ -15,6 +16,7 @@ export default function ServiciosPage() {
         <ServiceOverview />
         <HowItWorks />
         <ServiceBenefits />
+        <OtherServices />
         <FinalCTAServicios />
       </main>
       <Footer />

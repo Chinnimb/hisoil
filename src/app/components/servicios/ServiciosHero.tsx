@@ -63,20 +63,26 @@ export function ServiciosHero() {
           </div>
 
           <h1 className="h-fade text-white max-w-4xl mb-8 leading-tight" style={{ animationDelay: '0.25s' }}>
-            Soluciones para transformar residuos en valor.
+            Tratamiento de residuos orgánicos con <span className="text-lima">impacto real</span>.
           </h1>
 
-          <p className="h-fade text-white/75 max-w-2xl mb-12 text-lg leading-relaxed" style={{ animationDelay: '0.4s' }}>
-            Tratamiento de residuos, gestión ambiental y soluciones agrícolas con impacto medible en cada operación.
+          <p className="h-fade text-white/80 max-w-3xl mb-12 text-lg leading-relaxed" style={{ animationDelay: '0.4s' }}>
+            Servicio integral de recepción, transporte, tratamiento y valorización mediante procesos biológicos controlados de compostaje. Transformamos residuos de industrias, municipios y empresas en productos de alto valor para la recuperación de suelos.
           </p>
 
           <div className="h-fade flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '0.55s' }}>
-            <button className="bg-white text-oliva px-9 py-4 rounded-full font-semibold hover:bg-canola hover:text-oliva transition-all shadow-xl">
-              Solicitar Presupuesto
-            </button>
-            <button className="border border-white/60 text-white px-9 py-4 rounded-full font-medium hover:bg-white/10 transition-colors backdrop-blur-sm">
-              Ver Productos →
-            </button>
+            <a
+              href="#proceso"
+              className="bg-white text-oliva px-9 py-4 rounded-full font-semibold hover:bg-canola hover:text-oliva transition-all shadow-xl"
+            >
+              Cómo funciona
+            </a>
+            <a
+              href="#beneficios"
+              className="border border-white/60 text-white px-9 py-4 rounded-full font-medium hover:bg-white/10 transition-colors backdrop-blur-sm"
+            >
+              Ver beneficios →
+            </a>
           </div>
         </div>
 
@@ -84,10 +90,10 @@ export function ServiciosHero() {
         <div className="h-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-5 px-6 md:px-12 lg:px-20" style={{ animationDelay: '0.7s' }}>
           <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6 max-w-[1600px] mx-auto">
             {[
-              "ISO 14001 certificado",
-              "+2.400 proyectos ejecutados",
-              "Cobertura nacional",
-              "Respuesta en 24 hs",
+              "+25 años en gestión de residuos",
+              "12 provincias con operaciones",
+              "100% valorización biológica",
+              "Trazabilidad y certificados",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-white/75 text-sm font-mono">
                 <div className="w-1.5 h-1.5 bg-lima rounded-full" />
