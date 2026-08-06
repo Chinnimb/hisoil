@@ -75,11 +75,11 @@ export function WhoWeAre() {
           </div>
 
           <div className="col-span-12 md:col-span-5 grid grid-rows-2 gap-3 md:gap-5">
-            <div className="aspect-[5/3] rounded-2xl overflow-hidden relative group">
+            <div className="rounded-2xl overflow-hidden relative group min-h-[180px]">
               <img
                 src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=85&fit=crop"
                 alt="Diagnóstico técnico"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-oliva/40 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
@@ -88,7 +88,7 @@ export function WhoWeAre() {
                 </span>
               </div>
             </div>
-            <div className="aspect-[5/3] rounded-2xl overflow-hidden relative group bg-oliva flex items-center justify-center p-6">
+            <div className="rounded-2xl overflow-hidden relative group bg-oliva flex items-center justify-center p-6 min-h-[180px]">
               <div className="text-center">
                 <div className="text-lima text-4xl md:text-5xl font-bold leading-none mb-2">+25</div>
                 <div className="text-white text-xs md:text-sm font-mono uppercase tracking-widest">años en el sector</div>
