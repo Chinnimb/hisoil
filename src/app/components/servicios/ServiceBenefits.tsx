@@ -5,42 +5,45 @@ const benefits = [
   {
     number: "01",
     Icon: Leaf,
-    title: "Beneficio ambiental",
-    headline: "Cumplimiento normativo garantizado",
+    title: "Ambiental",
+    headline: "Gestión ambiental responsable",
     image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=85&fit=crop",
     points: [
-      "Reducción del 60% en pasivos ambientales",
-      "Certificación ISO 14001 del proceso",
-      "Documentación regulatoria completa",
-      "Cero vertidos fuera de norma",
+      "Valorización de residuos orgánicos mediante compostaje",
+      "Reducción de emisiones asociadas a la disposición final",
+      "Recuperación de nutrientes para los suelos",
+      "Contribución a proyectos de economía circular",
+      "Menor impacto ambiental de la operación",
     ],
     badge: "Ambiental",
   },
   {
     number: "02",
     Icon: TrendingUp,
-    title: "Beneficio económico",
-    headline: "Ahorro y retorno medible",
+    title: "Económico",
+    headline: "Reducción de costos",
     image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&q=85&fit=crop",
     points: [
-      "Reducción de costos de disposición final",
-      "Evitar multas y sanciones regulatorias",
-      "Valorización de subproductos recuperados",
-      "ROI estimado 3x en 12 meses",
+      "Menores costos de disposición final",
+      "Optimización logística del retiro de residuos",
+      "Reducción de contingencias y sanciones",
+      "Soluciones adaptadas al volumen generado",
+      "Mayor previsibilidad de costos operativos",
     ],
     badge: "Económico",
   },
   {
     number: "03",
     Icon: Settings,
-    title: "Beneficio operativo",
-    headline: "Eficiencia y continuidad productiva",
+    title: "Operativo",
+    headline: "Gestión simple y segura",
     image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&q=85&fit=crop",
     points: [
-      "Gestión integral sin carga operativa interna",
-      "Asesor técnico dedicado en cada proyecto",
-      "Reportes automáticos y trazabilidad completa",
-      "Flexibilidad en frecuencia y volumen",
+      "Un único proveedor para toda la gestión",
+      "Asesoramiento técnico permanente",
+      "Trazabilidad completa de cada retiro",
+      "Flexibilidad en frecuencias y volúmenes",
+      "Certificados y documentación para auditorías",
     ],
     badge: "Operativo",
   },
@@ -119,7 +122,7 @@ export function ServiceBenefits() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
 
   return (
-    <section id="agricultura-regenerativa" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
+    <section id="beneficios" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div
@@ -132,7 +135,7 @@ export function ServiceBenefits() {
             </div>
             <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
             <p className="text-gray-700 leading-relaxed">
-              Impacto concreto y medible en las tres dimensiones que más importan a cada cliente.
+              Una solución integral que combina cumplimiento ambiental, eficiencia operativa y generación de valor.
             </p>
           </div>
           <button className="self-start md:self-auto border border-oliva text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-oliva hover:text-white transition-all whitespace-nowrap">

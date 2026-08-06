@@ -1,46 +1,46 @@
 import { useState } from "react";
-import { Truck, Microscope, FlaskConical, RefreshCw, Wheat } from 'lucide-react';
+import { Microscope, Truck, FlaskConical, RefreshCw, FileCheck } from 'lucide-react';
 
 const steps = [
   {
     number: "01",
-    title: "Recolección",
-    Icon: Truck,
+    title: "Caracterización",
+    Icon: Microscope,
     description:
-      "Recolección y logística de residuos desde el punto de origen. Coordinación de transporte habilitado y documentación de trazabilidad.",
-    detail: "Camiones habilitados · Manifiesto de transporte · Georeferenciación",
+      "Analizamos el tipo de residuo, su composición y volumen para definir la estrategia de tratamiento más eficiente.",
+    detail: "Evaluación técnica · Clasificación del residuo · Plan de gestión",
   },
   {
     number: "02",
-    title: "Clasificación",
-    Icon: Microscope,
+    title: "Recolección y Transporte",
+    Icon: Truck,
     description:
-      "Análisis y clasificación del residuo según tipo, composición y peligrosidad. Determinación del protocolo de tratamiento más adecuado.",
-    detail: "Análisis fisicoquímico · Clasificación por norma · Protocolo asignado",
+      "Coordinamos el retiro mediante transportistas habilitados, asegurando la correcta documentación y trazabilidad desde el origen.",
+    detail: "Camiones habilitados · Manifiestos de transporte · Coordinación logística · Trazabilidad documental",
   },
   {
     number: "03",
-    title: "Tratamiento",
+    title: "Recepción y Tratamiento",
     Icon: FlaskConical,
     description:
-      "Aplicación del tratamiento específico: físico, químico, biológico o combinado, según la naturaleza del residuo y el objetivo final.",
-    detail: "Tratamiento físico · Biológico · Químico · Mixto",
+      "Los residuos ingresan a planta donde son acondicionados y tratados mediante procesos controlados de compostaje.",
+    detail: "Control de calidad · Mezcla de materiales · Compostaje controlado · Monitoreo de temperatura y humedad",
   },
   {
     number: "04",
-    title: "Transformación",
+    title: "Valorización",
     Icon: RefreshCw,
     description:
-      "Proceso de valorización del residuo tratado: compostaje, biodigestión, recuperación de nutrientes o producción de enmiendas de suelo.",
-    detail: "Compostaje · Biodigestión · Recuperación de nutrientes",
+      "El material estabilizado se transforma en compost, sustratos o productos destinados a restauración ambiental y agricultura.",
+    detail: "Maduración · Tamizado · Control de calidad · Certificación del proceso",
   },
   {
     number: "05",
-    title: "Resultado",
-    Icon: Wheat,
+    title: "Certificación y Trazabilidad",
+    Icon: FileCheck,
     description:
-      "Entrega del producto final o disposición certificada. Informe técnico de cierre con métricas de impacto ambiental y documental regulatorio.",
-    detail: "Biofertilizante · Informe técnico · Certificado ambiental",
+      "Entregamos la documentación que acredita el tratamiento y valorización de los residuos.",
+    detail: "Certificado de tratamiento · Certificado de disposición final · Reportes ambientales · Información para indicadores ESG",
   },
 ];
 
@@ -48,17 +48,16 @@ export function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="asesoramiento-tecnico" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
+    <section id="proceso" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
-          <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">03 — Proceso</span>
+          <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">03 — Proceso</span>
           </div>
           <h2 className="text-oliva mb-4">Cómo funciona</h2>
           <p className="text-gray-700 leading-relaxed">
-            [Descripción del proceso — 5 etapas claras que garantizan trazabilidad, eficiencia y
-            cumplimiento normativo en cada proyecto.]
+            Nuestro proceso integra logística, tratamiento y seguimiento técnico para garantizar una gestión segura, eficiente y completamente trazable.
           </p>
         </div>
 
