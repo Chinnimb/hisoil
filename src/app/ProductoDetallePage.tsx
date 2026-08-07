@@ -296,7 +296,7 @@ export default function ProductoDetallePage() {
                       return (
                         <span
                           key={c}
-                          className="inline-flex items-center gap-2 bg-oliva/10 text-oliva font-semibold text-sm px-5 py-2.5 rounded-full border border-oliva/20 hover:bg-oliva hover:text-white hover:border-oliva transition-all duration-300"
+                          className="inline-flex items-center gap-2 bg-oliva/10 text-oliva font-semibold text-sm px-5 py-2.5 rounded-full border border-oliva/20 hover:bg-oliva hover:text-lima hover:border-oliva transition-all duration-300"
                         >
                           <CropIcon className="w-4 h-4" />
                           {c}
