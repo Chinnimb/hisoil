@@ -1,5 +1,20 @@
 import { Link, useParams, Navigate } from 'react-router';
-import { ArrowLeft, ArrowUpRight, Check, ChevronRight, ShoppingCart, Eye, Sparkles, ShieldCheck, Package, Thermometer, Sprout, Layers, Droplets, Leaf, Repeat } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Check, ChevronRight, ShoppingCart, Eye, Sparkles, ShieldCheck, Package, Thermometer, Sprout, Layers, Droplets, Leaf, Repeat, Wheat, Grape, TreePine, Trees, Apple, Flower2, Carrot } from 'lucide-react';
+
+// Map crop name to icon (case-insensitive substring match)
+function getCropIcon(crop: string) {
+  const c = crop.toLowerCase();
+  if (c.includes('soja') || c.includes('oleaginosa')) return Sprout;
+  if (c.includes('maíz') || c.includes('maiz') || c.includes('trigo') || c.includes('cebada') || c.includes('cereal')) return Wheat;
+  if (c.includes('girasol')) return Flower2;
+  if (c.includes('viñedo') || c.includes('vinedo') || c.includes('vid')) return Grape;
+  if (c.includes('frutal')) return Apple;
+  if (c.includes('hortaliza') || c.includes('horticultura')) return Carrot;
+  if (c.includes('forestal')) return TreePine;
+  if (c.includes('pastura') || c.includes('alfalfa')) return Leaf;
+  if (c.includes('mixta') || c.includes('extensiva') || c.includes('intensiva') || c.includes('regenerativa')) return Trees;
+  return Sprout;
+}
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { useModal } from './context/ModalContext';
@@ -273,14 +288,21 @@ export default function ProductoDetallePage() {
 
             {product.crops && product.crops.length > 0 && (
               <>
-                <div className="pt-10 mt-14 border-t border-oliva/10">
-                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-4">Cultivos recomendados</div>
-                  <div className="flex flex-wrap gap-2">
-                    {product.crops.map((c) => (
-                      <span key={c} className="bg-oliva/10 text-oliva font-semibold text-sm px-4 py-2 rounded-full border border-oliva/20">
-                        {c}
-                      </span>
-                    ))}
+                <div className="pt-12 mt-16 border-t border-oliva/10 text-center">
+                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-6">Cultivos recomendados</div>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {product.crops.map((c) => {
+                      const CropIcon = getCropIcon(c);
+                      return (
+                        <span
+                          key={c}
+                          className="inline-flex items-center gap-2 bg-oliva/10 text-oliva font-semibold text-sm px-5 py-2.5 rounded-full border border-oliva/20 hover:bg-oliva hover:text-white hover:border-oliva transition-all duration-300"
+                        >
+                          <CropIcon className="w-4 h-4" />
+                          {c}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </>

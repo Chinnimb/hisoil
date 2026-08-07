@@ -9,7 +9,7 @@
 .theme-compost {
   --color-oliva: #606C38;    /* oliva militar warm (primario) */
   --color-noche: #283618;    /* bosque profundo (overlays) */
-  --color-lima: #DDA15E;     /* amarillo maiz / dorado (accent principal, mejor contraste con oliva) */
+  --color-lima: #EDB731;     /* amarillo maiz / dorado (accent principal, mejor contraste con oliva) */
   --color-canola: #BC6C25;   /* cobre terroso (para chips especificos) */
   --color-paja: #FFFFFF;
   --color-nata: #FFFFFF;
@@ -43,20 +43,20 @@
 .theme-compost .hover\:text-oliva:hover { color: #606C38 !important; }
 
 /* Lima -> amarillo maiz */
-.theme-compost .bg-lima { background-color: #DDA15E !important; }
-.theme-compost .bg-lima\/20 { background-color: rgba(221, 161, 94, 0.2) !important; }
-.theme-compost .bg-lima\/25 { background-color: rgba(221, 161, 94, 0.25) !important; }
-.theme-compost .bg-lima\/30 { background-color: rgba(221, 161, 94, 0.3) !important; }
-.theme-compost .text-lima { color: #DDA15E !important; }
-.theme-compost .border-lima { border-color: #DDA15E !important; }
-.theme-compost .border-lima\/40 { border-color: rgba(221, 161, 94, 0.4) !important; }
-.theme-compost .border-lima\/50 { border-color: rgba(221, 161, 94, 0.5) !important; }
-.theme-compost .hover\:bg-lima:hover { background-color: #DDA15E !important; }
-.theme-compost .hover\:text-lima:hover { color: #DDA15E !important; }
-.theme-compost .hover\:border-lima:hover { border-color: #DDA15E !important; }
-.theme-compost .group:hover .group-hover\:bg-lima { background-color: #DDA15E !important; }
-.theme-compost .group:hover .group-hover\:text-lima { color: #DDA15E !important; }
-.theme-compost .group:hover .group-hover\:border-lima { border-color: #DDA15E !important; }
+.theme-compost .bg-lima { background-color: #EDB731 !important; }
+.theme-compost .bg-lima\/20 { background-color: rgba(237, 183, 49, 0.2) !important; }
+.theme-compost .bg-lima\/25 { background-color: rgba(237, 183, 49, 0.25) !important; }
+.theme-compost .bg-lima\/30 { background-color: rgba(237, 183, 49, 0.3) !important; }
+.theme-compost .text-lima { color: #EDB731 !important; }
+.theme-compost .border-lima { border-color: #EDB731 !important; }
+.theme-compost .border-lima\/40 { border-color: rgba(237, 183, 49, 0.4) !important; }
+.theme-compost .border-lima\/50 { border-color: rgba(237, 183, 49, 0.5) !important; }
+.theme-compost .hover\:bg-lima:hover { background-color: #EDB731 !important; }
+.theme-compost .hover\:text-lima:hover { color: #EDB731 !important; }
+.theme-compost .hover\:border-lima:hover { border-color: #EDB731 !important; }
+.theme-compost .group:hover .group-hover\:bg-lima { background-color: #EDB731 !important; }
+.theme-compost .group:hover .group-hover\:text-lima { color: #EDB731 !important; }
+.theme-compost .group:hover .group-hover\:border-lima { border-color: #EDB731 !important; }
 
 /* Overlays warm */
 .theme-compost .from-noche\/60,
@@ -96,7 +96,7 @@
   --color-bosque:  #283618;  /* bosque profundo */
   --color-oliva-warm: #606C38;  /* oliva militar */
   --color-crema:   #FEFAE0;  /* crema cálido */
-  --color-tierra:  #DDA15E;  /* tierra dorada */
+  --color-tierra:  #EDB731;  /* tierra dorada */
   --color-cobre:   #BC6C25;  /* cobre terroso */
 
   --background: #FAFAF7;
