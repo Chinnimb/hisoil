@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from 'react-router';
-import { ArrowLeft, ArrowUpRight, Check, ChevronRight, ShoppingCart, Eye, Sparkles, ShieldCheck, Package, Thermometer } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Check, ChevronRight, ShoppingCart, Eye, Sparkles, ShieldCheck, Package, Thermometer, Sprout, Layers, Droplets, Leaf, Repeat } from 'lucide-react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { useModal } from './context/ModalContext';
@@ -206,26 +206,74 @@ export default function ProductoDetallePage() {
 
         {/* Applications + Crops */}
         <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-white">
-          <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            <div>
+          <div className="max-w-[1600px] mx-auto w-full">
+            <div className="max-w-2xl mb-14">
               <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">Cómo usar</div>
               <h3 className="text-oliva text-2xl md:text-3xl font-bold leading-tight mb-4">Formas de aplicación</h3>
               <p className="text-gray-700 text-sm leading-relaxed">Recomendaciones técnicas del equipo Hisoil. Consultá con un asesor para ajustes específicos a tu operación.</p>
             </div>
-            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {product.applications.map((a, i) => (
-                <div key={a} className="bg-paja/40 border border-oliva/10 rounded-xl p-5 flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-lg bg-oliva text-white flex items-center justify-center flex-shrink-0 font-mono text-xs font-bold">
-                    {String(i + 1).padStart(2, '0')}
+
+            {/* Desktop — horizontal timeline with connecting line */}
+            <div className="hidden md:block relative">
+              {/* Connector line */}
+              <div className="absolute top-8 left-0 right-0 h-px bg-oliva/20" style={{
+                marginLeft: `calc((100% / ${product.applications.length}) / 2)`,
+                marginRight: `calc((100% / ${product.applications.length}) / 2)`,
+              }} />
+
+              <div
+                className="grid gap-6"
+                style={{ gridTemplateColumns: `repeat(${product.applications.length}, minmax(0, 1fr))` }}
+              >
+                {product.applications.map((a, i) => {
+                  const icons = [Sprout, Layers, Droplets, Leaf, Repeat];
+                  const StepIcon = icons[i % icons.length];
+                  return (
+                    <div key={a} className="flex flex-col items-center text-center relative">
+                      {/* Icon circle */}
+                      <div className="relative z-10 w-16 h-16 rounded-full bg-white border-2 border-oliva flex items-center justify-center mb-5 shadow-sm">
+                        <StepIcon className="w-6 h-6 text-oliva" />
+                      </div>
+                      {/* Step number */}
+                      <div className="text-oliva/60 font-mono text-[10px] uppercase tracking-widest mb-2">
+                        Paso {String(i + 1).padStart(2, '0')}
+                      </div>
+                      {/* Text */}
+                      <p className="text-gray-700 text-sm leading-relaxed max-w-[240px]">{a}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Mobile — vertical timeline */}
+            <div className="md:hidden space-y-0">
+              {product.applications.map((a, i) => {
+                const icons = [Sprout, Layers, Droplets, Leaf, Repeat];
+                const StepIcon = icons[i % icons.length];
+                const isLast = i === product.applications.length - 1;
+                return (
+                  <div key={a} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 rounded-full bg-white border-2 border-oliva flex items-center justify-center flex-shrink-0 z-10">
+                        <StepIcon className="w-5 h-5 text-oliva" />
+                      </div>
+                      {!isLast && <div className="w-px flex-1 bg-oliva/20 my-2" style={{ minHeight: 32 }} />}
+                    </div>
+                    <div className="pb-8 pt-2">
+                      <div className="text-oliva/60 font-mono text-[10px] uppercase tracking-widest mb-1">
+                        Paso {String(i + 1).padStart(2, '0')}
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">{a}</p>
+                    </div>
                   </div>
-                  <span className="text-gray-700 text-sm leading-relaxed">{a}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {product.crops && product.crops.length > 0 && (
               <>
-                <div className="lg:col-span-3 pt-8 mt-4 border-t border-oliva/10">
+                <div className="pt-10 mt-14 border-t border-oliva/10">
                   <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-4">Cultivos recomendados</div>
                   <div className="flex flex-wrap gap-2">
                     {product.crops.map((c) => (
