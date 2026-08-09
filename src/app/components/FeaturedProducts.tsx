@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ChevronLeft, ChevronRight, Sprout, Layers, TreePine, Mountain, Eye, ShoppingCart } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Sprout, TreePine, Mountain, Eye, ShoppingCart } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import { useRef, useState, useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
@@ -10,7 +10,7 @@ interface Product {
   slug: string;
   name: string;
   desc: string;
-  line: 'Agricultura' | 'Sustratos' | 'Paisajismo' | 'Infraestructura';
+  line: 'Agricultura' | 'Paisajismo' | 'Infraestructura';
   Icon: LucideIcon;
   image: string;
   format: string;
@@ -53,40 +53,6 @@ const products: Product[] = [
     format: 'Plan por campaña',
     usage: 'A medida',
     badge: 'Recomendado',
-  },
-  // Sustratos
-  {
-    slug: 'berry', name: 'HiSoil Berry',
-    desc: 'Sustrato optimizado para arándanos y frutos rojos.',
-    line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1587393855524-087f83d95bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
-    format: 'Bolsa 50 L',
-    usage: 'Trasplante directo',
-  },
-  {
-    slug: 'cannabis', name: 'HiSoil Cannabis',
-    desc: 'Sustrato profesional para cannabis medicinal.',
-    line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
-    format: 'Bolsa 50 L · 70 L',
-    usage: 'Cultivo indoor / outdoor',
-    badge: 'Nuevo',
-  },
-  {
-    slug: 'nursery', name: 'HiSoil Nursery',
-    desc: 'Sustrato profesional para viveros de producción.',
-    line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
-    format: 'Big-bag 3.500 L',
-    usage: 'Producción intensiva',
-  },
-  {
-    slug: 'hydro', name: 'HiSoil Hydro',
-    desc: 'Sustrato específico para cultivos hidropónicos.',
-    line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
-    format: 'Bolsa 50 L',
-    usage: 'Sistema NFT / DWC',
   },
   // Paisajismo
   {
@@ -276,7 +242,7 @@ export function FeaturedProducts() {
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
               <span className="text-oliva text-xs font-mono uppercase tracking-widest">Productos</span>
             </div>
-            <h2 className="text-oliva">Cuatro líneas. Un mismo compromiso con la regeneración.</h2>
+            <h2 className="text-oliva">Tres líneas. Un mismo compromiso con la regeneración.</h2>
           </div>
           <Link to="/productos">
             <button className="border border-oliva text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-oliva hover:text-white transition-all flex-shrink-0">
