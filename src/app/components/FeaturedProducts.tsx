@@ -113,14 +113,6 @@ const products: Product[] = [
     format: 'Bolsa 50 L',
     usage: 'Trasplante directo',
   },
-  {
-    slug: 'chip', name: 'HiSoil Chip',
-    desc: 'Astillas de madera para cobertura decorativa.',
-    line: 'Paisajismo', Icon: TreePine,
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
-    format: 'Big-bag 1 m³',
-    usage: 'Cobertura 5–8 cm',
-  },
   // Infraestructura
   {
     slug: 'restore', name: 'HiSoil Restore',
