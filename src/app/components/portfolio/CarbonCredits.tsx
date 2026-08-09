@@ -279,9 +279,9 @@ export function CarbonCredits() {
             ref={tabsRef}
             className={`bg-white rounded-3xl shadow-2xl border border-oliva/10 overflow-hidden scroll-reveal ${tabsVisible ? 'is-visible' : ''}`}
           >
-            {/* Tab strip — grid en desktop, scroll horizontal solo en mobile */}
+            {/* Tab strip — grid en desktop, scroll horizontal en mobile y tablet */}
             <div className="border-b border-oliva/10 overflow-x-auto scrollbar-hide">
-              <div className="flex md:grid md:grid-cols-6 min-w-max md:min-w-0">
+              <div className="flex lg:grid lg:grid-cols-6 min-w-max lg:min-w-0">
                 {steps.map((s) => {
                   const { Icon } = s;
                   const isActive = s.id === activeId;
@@ -289,7 +289,7 @@ export function CarbonCredits() {
                     <button
                       key={s.id}
                       onClick={() => setActiveId(s.id)}
-                      className={`flex items-center justify-center md:justify-start gap-3 px-4 md:px-5 py-5 border-b-2 transition-all whitespace-nowrap ${
+                      className={`flex items-center justify-center lg:justify-start gap-3 px-4 lg:px-5 py-5 border-b-2 transition-all whitespace-nowrap ${
                         isActive
                           ? 'border-lima bg-paja/40 text-oliva'
                           : 'border-transparent text-oliva/50 hover:text-oliva hover:bg-paja/20'
