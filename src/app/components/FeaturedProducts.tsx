@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ChevronLeft, ChevronRight, Sprout, TreePine, Mountain, Eye, ShoppingCart } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Sprout, Layers, TreePine, Mountain, Eye, ShoppingCart } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import { useRef, useState, useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
@@ -10,7 +10,7 @@ interface Product {
   slug: string;
   name: string;
   desc: string;
-  line: 'Agricultura' | 'Paisajismo' | 'Infraestructura';
+  line: 'Agricultura' | 'Sustratos' | 'Materias Primas' | 'Paisajismo' | 'Infraestructura';
   Icon: LucideIcon;
   image: string;
   format: string;
@@ -53,6 +53,50 @@ const products: Product[] = [
     format: 'Plan por campaña',
     usage: 'A medida',
     badge: 'Recomendado',
+  },
+  // Sustratos Profesionales
+  {
+    slug: 'premium', name: 'HiSoil Premium',
+    desc: 'Sustrato profesional premium para cultivos de alta exigencia.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    format: 'Bolsa 25 · 50 · 80 dm³',
+    usage: 'Cultivos de alto valor',
+    badge: 'Premium',
+  },
+  {
+    slug: 'berry', name: 'HiSoil Berry',
+    desc: 'Sustrato profesional para arándanos y frutos rojos.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1587393855524-087f83d95bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    format: 'Bolsa 25 · 50 · 80 dm³',
+    usage: 'Producción profesional',
+  },
+  {
+    slug: 'cannabis', name: 'HiSoil Cannabis',
+    desc: 'Sustrato profesional para cannabis medicinal y cáñamo industrial.',
+    line: 'Sustratos', Icon: Layers,
+    image: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    format: 'Bolsa 25 · 50 · 80 dm³',
+    usage: 'Indoor / greenhouse / outdoor',
+    badge: 'Nuevo',
+  },
+  // Materias Primas
+  {
+    slug: 'sphagnum', name: 'HiSoil Sphagnum',
+    desc: 'Turba sphagnum natural de Tierra del Fuego.',
+    line: 'Materias Primas', Icon: TreePine,
+    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    format: 'Bolsas 130 · 25 · 5 dm³',
+    usage: 'Formulación de sustratos',
+  },
+  {
+    slug: 'chip', name: 'HiSoil Chip',
+    desc: 'Astillas de madera para cobertura decorativa (mulch).',
+    line: 'Materias Primas', Icon: TreePine,
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    format: 'Granel · Big Bag · Bolsas',
+    usage: 'Cobertura decorativa 5–8 cm',
   },
   // Paisajismo
   {
@@ -242,7 +286,7 @@ export function FeaturedProducts() {
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
               <span className="text-oliva text-xs font-mono uppercase tracking-widest">Productos</span>
             </div>
-            <h2 className="text-oliva">Tres líneas. Un mismo compromiso con la regeneración.</h2>
+            <h2 className="text-oliva">Cinco líneas. Un mismo compromiso con la regeneración.</h2>
           </div>
           <Link to="/productos">
             <button className="border border-oliva text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-oliva hover:text-white transition-all flex-shrink-0">
