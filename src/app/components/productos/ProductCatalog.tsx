@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import { ArrowUpRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
@@ -408,17 +408,54 @@ function CategoryBlock({ category, index }: CategoryBlockProps) {
 
 export function ProductCatalog() {
   const [active, setActive] = useState('agricultura');
+  const chipRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
+
+  // Scroll-spy: watch each category section and update active chip based on visibility.
+  useEffect(() => {
+    const sections = categories
+      .map((c) => document.getElementById(c.id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    // The section closest to the top of the viewport (accounting for sticky headers) wins.
+    const OFFSET = 200; // header (~80) + chip nav (~60) + comfort margin
+
+    const onScroll = () => {
+      let currentId = sections[0].id;
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top - OFFSET <= 0) {
+          currentId = section.id;
+        } else {
+          break;
+        }
+      }
+      setActive(currentId);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Keep the active chip scrolled into view within its horizontal container.
+  useEffect(() => {
+    const el = chipRefs.current[active];
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }, [active]);
 
   return (
     <section className="py-16 md:py-20 px-6 md:px-12 lg:px-20 bg-nata">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Sticky category nav */}
         <div className="sticky top-20 z-30 -mx-6 md:-mx-12 lg:-mx-20 px-6 md:px-12 lg:px-20 py-4 bg-nata/85 backdrop-blur-md border-y border-oliva/10 mb-8">
-          <div className="flex items-center gap-2 md:gap-3 overflow-x-auto">
+          <div className="flex items-center gap-2 md:gap-3 overflow-x-auto scrollbar-hide">
             <span className="text-oliva/50 text-[10px] font-mono uppercase tracking-widest flex-shrink-0 mr-2">Ir a</span>
             {categories.map((c) => (
               <a
                 key={c.id}
+                ref={(el) => { chipRefs.current[c.id] = el; }}
                 href={`#${c.id}`}
                 onClick={() => setActive(c.id)}
                 className={`whitespace-nowrap text-sm px-4 py-2 rounded-full border transition-all flex-shrink-0 ${
