@@ -24,8 +24,8 @@ export function ProductosHero() {
 
       <div className="relative z-10 flex-1 flex flex-col">
         {/* Top breadcrumb */}
-        <div className="border-b border-white/10 px-6 py-4">
-          <div className="w-full flex items-center gap-2 text-xs font-mono text-white/55">
+        <div className="border-b border-white/10 px-6 md:px-12 lg:px-20 py-4">
+          <div className="max-w-[1600px] mx-auto w-full flex items-center gap-2 text-xs font-mono text-white/55">
             <span>Inicio</span>
             <span>/</span>
             <span className="text-white/60">Productos</span>
@@ -33,7 +33,7 @@ export function ProductosHero() {
         </div>
 
         {/* Main hero grid */}
-        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 py-16 md:py-24 gap-12 lg:gap-0">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 py-16 md:py-24 gap-12 lg:gap-0">
           {/* Left — copy */}
           <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
             <div className="ph-fade inline-block border border-white/20 px-3 py-1.5 mb-8 self-start" style={{ animationDelay: '0.1s' }}>
@@ -62,8 +62,8 @@ export function ProductosHero() {
             {/* Quick stats */}
             <div className="ph-fade grid grid-cols-3 gap-4 border-t border-white/10 pt-10" style={{ animationDelay: '0.7s' }}>
               {[
-                { value: "+60", label: "productos en catálogo" },
-                { value: "6", label: "categorías técnicas" },
+                { value: "33", label: "productos en catálogo" },
+                { value: "5", label: "líneas técnicas" },
                 { value: "SENASA", label: "registros vigentes" },
               ].map((s) => (
                 <div key={s.label}>

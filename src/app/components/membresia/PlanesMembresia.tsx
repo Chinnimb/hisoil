@@ -125,8 +125,8 @@ export function PlanesMembresia() {
         </div>
 
         {/* Comparison table */}
-        <div className="card-gradient-border overflow-hidden">
-          <div className="grid grid-cols-4 border-b border-gray-200">
+        <div className="card-gradient-border overflow-x-auto">
+          <div className="grid grid-cols-4 border-b border-gray-200 min-w-[640px]">
             <div className="p-4 col-span-1 bg-paja">
               <span className="text-xs font-mono text-gray-600 uppercase tracking-widest">Característica</span>
             </div>
@@ -137,7 +137,7 @@ export function PlanesMembresia() {
             ))}
           </div>
           {features.map((f, i) => (
-            <div key={f.label} className={`grid grid-cols-4 border-b border-gray-50 ${i % 2 === 0 ? "" : "bg-paja/50"}`}>
+            <div key={f.label} className={`grid grid-cols-4 border-b border-gray-50 min-w-[640px] ${i % 2 === 0 ? "" : "bg-paja/50"}`}>
               <div className="p-4 col-span-1">
                 <span className="text-sm text-gray-600">{f.label}</span>
               </div>

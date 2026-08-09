@@ -104,7 +104,7 @@ export default function ProductoDetallePage() {
               <p className="text-gray-700 text-lg leading-relaxed mb-8">{product.short}</p>
 
               {/* Key specs */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="bg-white border border-oliva/15 rounded-2xl p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <Package className="w-3.5 h-3.5 text-oliva/60" />
@@ -229,7 +229,7 @@ export default function ProductoDetallePage() {
             </div>
 
             {/* Desktop — horizontal timeline with connecting line */}
-            <div className="hidden md:block relative">
+            <div className="hidden lg:block relative">
               {/* Connector line */}
               <div className="absolute top-8 left-0 right-0 h-px bg-oliva/20" style={{
                 marginLeft: `calc((100% / ${product.applications.length}) / 2)`,
@@ -261,8 +261,8 @@ export default function ProductoDetallePage() {
               </div>
             </div>
 
-            {/* Mobile — vertical timeline */}
-            <div className="md:hidden space-y-0">
+            {/* Mobile + Tablet — vertical timeline */}
+            <div className="lg:hidden space-y-0">
               {product.applications.map((a, i) => {
                 const icons = [Sprout, Layers, Droplets, Leaf, Repeat];
                 const StepIcon = icons[i % icons.length];
