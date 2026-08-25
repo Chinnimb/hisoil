@@ -1,15 +1,15 @@
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { FichaClienteHero } from './components/membresia/FichaClienteHero';
-import { FichaClienteForm } from './components/membresia/FichaClienteForm';
+import { SumateHero } from './components/membresia/SumateHero';
+import { SumateForm } from './components/membresia/SumateForm';
 
 export default function MembresiaPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <FichaClienteHero />
-        <FichaClienteForm />
+        <SumateHero />
+        <SumateForm />
       </main>
       <Footer />
     </div>
