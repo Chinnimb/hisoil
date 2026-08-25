@@ -94,7 +94,7 @@ export function AboutHero() {
           <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             {[
               { value: "+25 años", label: "de experiencia en soluciones agroambientales" },
-              { value: "12 provincias", label: "con proyectos y presencia comercial" },
+              { value: "3 provincias", label: "con proyectos activos · capacidad nacional" },
               { value: "Economía Circular", label: "transformando residuos en recursos" },
             ].map((item) => (
               <div key={item.value} className="flex items-center gap-3 justify-center md:justify-start">

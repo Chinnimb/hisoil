@@ -69,7 +69,7 @@ export function InfoEmpresa() {
           <div className="lg:col-span-6">
             <div className="bg-paja border border-gray-300 rounded-sm p-8 h-full">
               <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-2">Cobertura nacional</div>
-              <div className="text-oliva font-semibold mb-1">Operamos en 12 provincias</div>
+              <div className="text-oliva font-semibold mb-1">Operamos en 3 provincias · capacidad nacional</div>
               <p className="text-gray-700 text-sm mb-8 leading-relaxed">
                 Contamos con representantes técnicos y logística propia en todo el país.
               </p>
