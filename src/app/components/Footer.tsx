@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Phone, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 export function Footer() {
   const navigationSections = [
@@ -48,13 +48,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Contacto</h4>
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-lima flex-shrink-0 mt-0.5" />
-                <span className="text-white/75 text-sm">Ruta 9 Km 142<br />Pergamino, Buenos Aires</span>
-              </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-lima flex-shrink-0" />
-                <span className="text-white/75 text-sm">0800-HISOIL (447645)</span>
+                <span className="text-white/75 text-sm">+54 9 11 4440-1919</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-lima flex-shrink-0" />

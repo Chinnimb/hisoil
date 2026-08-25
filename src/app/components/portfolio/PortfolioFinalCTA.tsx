@@ -21,14 +21,13 @@ export function PortfolioFinalCTA() {
                 ¿Querés lograr resultados similares en tu operación?
               </h2>
               <p className="text-white/70 leading-relaxed text-lg mb-10 max-w-lg">
-                [Texto — El equipo técnico de Hisoil analiza tu situación sin cargo y propone una solución a medida. Sin compromiso, con respuesta en 24 horas.]
+                El equipo técnico de HISOIL analiza tu situación sin cargo y propone una solución a medida. Sin compromiso, con respuesta en 24 horas.
               </p>
               {/* Social proof */}
               <div className="flex flex-wrap gap-6">
                 {[
-                  { value: "+2.400", label: "proyectos completados" },
-                  { value: "800+", label: "clientes activos" },
-                  { value: "15+", label: "años de trayectoria" },
+                  { value: "+25", label: "años de trayectoria" },
+                  { value: "24 hs", label: "tiempo de respuesta" },
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="text-xl font-bold text-white">{s.value}</div>
