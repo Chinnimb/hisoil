@@ -13,7 +13,7 @@ export function CompostHighlight() {
   const [ref, visible] = useReveal<HTMLDivElement>({ threshold: 0.25 });
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-nata">
+    <section className="theme-compost py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-nata">
       <div className="max-w-[1600px] mx-auto w-full">
         <div
           ref={ref}
