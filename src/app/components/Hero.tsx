@@ -186,7 +186,7 @@ export function Hero() {
                 <div className="text-white/60 text-xs">de gases de efecto invernadero</div>
               </div>
 
-              {/* Alcance — reformulado: proyectos actuales + potencial nacional */}
+              {/* Alcance — presencia actual + capacidad nacional */}
               <div
                 className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-6 hover:bg-white/15 hover:border-lima/40 transition-all group"
                 style={{ animationDelay: '1.05s' }}
@@ -195,12 +195,12 @@ export function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
                     <MapPin className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
                   </div>
-                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Alcance</div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Presencia</div>
                 </div>
                 <div className="text-white font-bold leading-none mb-1" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
-                  Nacional
+                  3 provincias
                 </div>
-                <div className="text-white/60 text-xs">proyectos actuales y capacidad de desarrollo en todo el país</div>
+                <div className="text-white/60 text-xs">con proyectos activos · capacidad para desarrollar en todo el país</div>
               </div>
             </div>
           </div>

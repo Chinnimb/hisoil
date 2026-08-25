@@ -11,6 +11,7 @@ const cases = [
     description: "Proyecto de valorización de residuos orgánicos con reducción certificada de emisiones. 44.400 t procesadas anualmente.",
     image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1200&q=85&fit=crop",
     tag: "Carbono",
+    isCompost: false,
   },
   {
     href: "/portfolio#industrias",
@@ -20,6 +21,7 @@ const cases = [
     description: "Trabajamos con frigoríficos, cervecerías, alimenticias, laboratorios, barrios cerrados, retail, agroindustria y más.",
     image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop",
     tag: "Industrias",
+    isCompost: false,
   },
   {
     href: "/portfolio#aplicaciones-compost",
@@ -29,6 +31,7 @@ const cases = [
     description: "Referencias globales: Central Park (NY), Chicago City Hall, Universidad de Iowa y proyectos de restauración minera.",
     image: "https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=85&fit=crop",
     tag: "Compost",
+    isCompost: true,
   },
 ];
 
@@ -43,7 +46,7 @@ function CaseCard({ c, index }: CaseCardProps) {
     <Link
       to={c.href}
       ref={ref}
-      className={`group block scroll-reveal ${visible ? 'is-visible' : ''}`}
+      className={`group block scroll-reveal ${c.isCompost ? 'theme-compost' : ''} ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${index * 0.12}s` : '0s' }}
     >
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
