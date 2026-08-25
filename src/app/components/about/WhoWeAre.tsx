@@ -2,8 +2,8 @@ import { useReveal } from '../../hooks/useReveal';
 
 const kpis = [
   { value: "+25", label: "Años", sub: "desarrollando soluciones ambientales" },
-  { value: "12", label: "Provincias", sub: "con proyectos y clientes" },
-  { value: "Miles de tn", label: "Valorizadas", sub: "de residuos orgánicos" },
+  { value: "3", label: "Provincias", sub: "con proyectos activos" },
+  { value: "Nacional", label: "Capacidad", sub: "para proyectos en todo el país" },
   { value: "Circular", label: "Modelo", sub: "de trabajo y crecimiento" },
 ];
 

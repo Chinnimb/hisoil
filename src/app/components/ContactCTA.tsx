@@ -30,10 +30,9 @@ export function ContactCTA() {
               <p className="text-white/70 leading-relaxed text-lg mb-10 max-w-lg">
                 Nuestro equipo técnico analiza tu situación y diseña una solución a medida. Sin costo, con respuesta en 24 horas y acompañamiento real en cada etapa.
               </p>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 gap-6 max-w-md">
                 {[
-                  { value: "+15", label: "años de experiencia" },
-                  { value: "800+", label: "clientes activos" },
+                  { value: "+25", label: "años de experiencia" },
                   { value: "24 hs", label: "tiempo de respuesta" },
                 ].map((s) => (
                   <div key={s.label}>
