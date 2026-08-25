@@ -91,7 +91,7 @@ export function ServiciosHero() {
           <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6 max-w-[1600px] mx-auto">
             {[
               "+25 años en gestión de residuos",
-              "12 provincias con operaciones",
+              "3 provincias con operaciones",
               "100% valorización biológica",
               "Trazabilidad y certificados",
             ].map((item) => (

@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight, Sprout, Layers, TreePine, Mountain, Eye, Sho
 import { useReveal } from '../hooks/useReveal';
 import { useRef, useState, useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
-import { isCompostProduct } from '../data/products';
 
 type LucideIcon = typeof Sprout;
 
@@ -168,10 +167,9 @@ interface ProductCardProps {
 function ProductCard({ p }: ProductCardProps) {
   const { Icon } = p;
   const { open } = useModal();
-  const isCompost = isCompostProduct(p.slug);
 
   return (
-    <div className={`group flex-shrink-0 w-[300px] sm:w-[320px] snap-start ${isCompost ? 'theme-compost' : ''}`}>
+    <div className="group flex-shrink-0 w-[300px] sm:w-[320px] snap-start">
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
         {/* Image */}
         <div className="relative aspect-[16/10] overflow-hidden">
@@ -327,7 +325,7 @@ export function FeaturedProducts() {
 
         <div
           ref={scrollerRef}
-          className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-6 pl-6 md:pl-12 lg:pl-20 pr-6 md:pr-12 lg:pr-20"
+          className="flex gap-5 overflow-x-auto overflow-y-visible snap-x snap-mandatory scrollbar-hide py-10 pl-6 md:pl-12 lg:pl-20 pr-6 md:pr-12 lg:pr-20"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {products.map((p) => (

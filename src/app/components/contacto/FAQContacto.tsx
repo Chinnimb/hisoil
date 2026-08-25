@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "¿Puedo solicitar una visita técnica a mi campo o empresa?",
-    a: "[Respuesta — Sí. El diagnóstico inicial es sin costo y sin compromiso. Coordinamos una visita con un técnico especializado según tu zona. Cubrimos las 12 provincias donde operamos.]",
+    a: "[Respuesta — Sí. El diagnóstico inicial es sin costo y sin compromiso. Coordinamos una visita con un técnico especializado según tu zona. Actualmente operamos en 3 provincias y evaluamos proyectos en todo el país.]",
   },
   {
     q: "¿Qué información necesito tener para pedir un presupuesto?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "¿Tienen representantes en mi provincia?",
-    a: "[Respuesta — Contamos con representantes técnicos y logística propia en 12 provincias. Podés consultarnos si llegamos a tu zona completando el formulario o escribiéndonos por WhatsApp.]",
+    a: "[Respuesta — Contamos con representantes técnicos y logística propia en las provincias donde operamos. Podés consultarnos si llegamos a tu zona completando el formulario o escribiéndonos por WhatsApp.]",
   },
   {
     q: "¿Cuáles son los tiempos de entrega de los productos?",

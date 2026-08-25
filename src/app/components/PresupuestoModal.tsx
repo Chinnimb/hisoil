@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { X, CheckCircle } from 'lucide-react'
 import { useModal } from '../context/ModalContext'
 
-const cultivos = ['Soja', 'Maíz', 'Trigo', 'Girasol', 'Horticultura', 'Fruticultura', 'Ganadería', 'Otro']
+const rubros = ['Productor agrícola', 'Empresa / industria', 'Municipio', 'Vivero', 'Paisajismo / jardinería', 'Constructora / desarrolladora', 'Particular', 'Otro']
 const servicios = ['Compost', 'Sustratos profesionales', 'Materias primas', 'Paisajismo y techos verdes', 'Infraestructura y restauración', 'Tratamiento de residuos', 'Asesoramiento técnico', 'Otro']
 
 export function PresupuestoModal() {
@@ -11,7 +11,7 @@ export function PresupuestoModal() {
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({
     nombre: '', email: '', telefono: '', empresa: '',
-    cultivo: '', servicio: '', hectareas: '', mensaje: '',
+    rubro: '', servicio: '', volumen: '', mensaje: '',
   })
 
   // Cerrar con Escape
@@ -92,9 +92,9 @@ export function PresupuestoModal() {
               <p className="text-gray-600 text-sm font-mono mb-8">Confirmación enviada a {form.email}</p>
               <div className="grid grid-cols-3 gap-px bg-paja border border-gray-300 rounded-sm mb-8">
                 {[
-                  { label: 'Servicio', value: form.servicio || '—' },
-                  { label: 'Cultivo', value: form.cultivo || '—' },
-                  { label: 'Hectáreas', value: form.hectareas || '—' },
+                  { label: 'Interés', value: form.servicio || '—' },
+                  { label: 'Rubro', value: form.rubro || '—' },
+                  { label: 'Volumen', value: form.volumen || '—' },
                 ].map((d) => (
                   <div key={d.label} className="bg-white p-4 text-center">
                     <div className="text-xs font-mono text-gray-600 mb-1">{d.label}</div>
@@ -176,7 +176,7 @@ export function PresupuestoModal() {
             /* Paso 2 — Detalle del pedido */
             <form onSubmit={handleSubmit}>
               <p className="text-gray-700 text-sm mb-6">
-                Contanos sobre tu campo para preparar una propuesta técnica a medida.
+                Contanos sobre tu proyecto para preparar una propuesta técnica a medida.
               </p>
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -193,24 +193,24 @@ export function PresupuestoModal() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Cultivo principal</label>
+                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Rubro</label>
                     <select
-                      value={form.cultivo}
-                      onChange={(e) => setForm({ ...form, cultivo: e.target.value })}
+                      value={form.rubro}
+                      onChange={(e) => setForm({ ...form, rubro: e.target.value })}
                       className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
                     >
-                      <option value="">Seleccioná un cultivo</option>
-                      {cultivos.map((c) => <option key={c}>{c}</option>)}
+                      <option value="">Seleccioná tu rubro</option>
+                      {rubros.map((r) => <option key={r}>{r}</option>)}
                     </select>
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-gray-700 mb-1.5">Superficie aproximada (ha)</label>
+                  <label className="block text-xs font-medium text-gray-700 mb-1.5">Volumen o escala estimada</label>
                   <input
                     type="text"
-                    value={form.hectareas}
-                    onChange={(e) => setForm({ ...form, hectareas: e.target.value })}
-                    placeholder="Ej: 500 ha"
+                    value={form.volumen}
+                    onChange={(e) => setForm({ ...form, volumen: e.target.value })}
+                    placeholder="Ej: 500 kg, 10 m³, 200 ha, 1 tn/mes"
                     className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors"
                   />
                 </div>
