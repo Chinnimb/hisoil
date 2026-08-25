@@ -233,7 +233,7 @@ function ProductCard({ p }: ProductCardProps) {
               className="w-full flex items-center justify-center gap-1.5 bg-oliva text-white text-[11px] font-semibold py-2 rounded-full hover:bg-lima hover:text-oliva transition-all"
             >
               <ShoppingCart className="w-3 h-3" />
-              Consultar precio
+              Cotizar
             </button>
           </div>
         </div>

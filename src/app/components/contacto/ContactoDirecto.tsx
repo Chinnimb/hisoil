@@ -6,7 +6,7 @@ const channels = [
       </svg>
     ),
     label: "WhatsApp",
-    value: "+54 9 XXX XXX XXXX",
+    value: "+54 9 11 4440-1919",
     description: "Respuesta inmediata en horario comercial. El canal más rápido para consultas urgentes.",
     cta: "Iniciar conversación",
     highlight: true,
@@ -19,7 +19,7 @@ const channels = [
       </svg>
     ),
     label: "Teléfono",
-    value: "+54 XXX XXX XXXX",
+    value: "+54 9 11 4440-1919",
     description: "Atención telefónica de lunes a viernes de 8 a 18 hs. Para consultas que requieren explicación detallada.",
     cta: "Llamar ahora",
     highlight: false,
@@ -32,7 +32,7 @@ const channels = [
       </svg>
     ),
     label: "Email",
-    value: "contacto@hisoil.com",
+    value: "administracion@hisoil.com.ar",
     description: "Para consultas formales, envío de documentación o solicitudes que requieren seguimiento escrito.",
     cta: "Enviar correo",
     highlight: false,

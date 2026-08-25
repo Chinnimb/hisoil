@@ -58,7 +58,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-lima flex-shrink-0" />
-                <span className="text-white/75 text-sm">info@hisoil.com.ar</span>
+                <span className="text-white/75 text-sm">administracion@hisoil.com.ar</span>
               </div>
             </div>
 

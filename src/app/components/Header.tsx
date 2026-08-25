@@ -7,7 +7,7 @@ const navItems = [
   { label: 'Productos', to: '/productos' },
   { label: 'Servicios', to: '/servicios' },
   { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Membresía', to: '/membresia' },
+  { label: 'Registrate', to: '/membresia' },
   { label: 'Nosotros', to: '/nosotros' },
 ];
 

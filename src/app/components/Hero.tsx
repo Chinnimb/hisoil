@@ -2,7 +2,11 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import { Leaf, CloudOff, MapPin } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
-import { AnimatedCounter } from './AnimatedCounter';
+import { LiveCounter } from './LiveCounter';
+
+// Epoch de referencia: los valores base están calculados para este momento.
+// El contador avanza en tiempo real desde acá.
+const COUNTER_EPOCH = new Date('2026-08-25T00:00:00-03:00');
 
 const IMG_URL =
   "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1920";
@@ -143,51 +147,61 @@ export function Hero() {
               </Link>
             </div>
 
-            {/* 3 animated counters */}
+            {/* 3 counters (2 dinámicos en tiempo real + 1 estático) */}
             <div
               className="hero-fade grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl"
               style={{ animationDelay: '0.7s' }}
             >
-              {[
-                {
-                  Icon: Leaf,
-                  end: 2400,
-                  suffix: ' t',
-                  label: 'Toneladas procesadas',
-                  sub: 'de residuos valorizados',
-                },
-                {
-                  Icon: CloudOff,
-                  end: 1850,
-                  suffix: ' t CO₂',
-                  label: 'Emisiones evitadas',
-                  sub: 'de gases de efecto invernadero',
-                },
-                {
-                  Icon: MapPin,
-                  end: 12,
-                  suffix: '',
-                  label: 'Alcance nacional',
-                  sub: 'provincias en operación',
-                },
-              ].map((c, i) => (
-                <div
-                  key={c.label}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-6 hover:bg-white/15 hover:border-lima/40 transition-all group"
-                  style={{ animationDelay: `${0.85 + i * 0.1}s` }}
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
-                      <c.Icon className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
-                    </div>
-                    <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">{c.label}</div>
+              {/* Toneladas procesadas — dinámico */}
+              <div
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-6 hover:bg-white/15 hover:border-lima/40 transition-all group"
+                style={{ animationDelay: '0.85s' }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
+                    <Leaf className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
                   </div>
-                  <div className="text-white font-bold leading-none mb-1" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
-                    <AnimatedCounter end={c.end} suffix={c.suffix} />
-                  </div>
-                  <div className="text-white/60 text-xs">{c.sub}</div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Toneladas procesadas</div>
                 </div>
-              ))}
+                <div className="text-white font-bold leading-none mb-1 tabular-nums" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
+                  <LiveCounter base={216854} epoch={COUNTER_EPOCH} ratePerSecondKg={1.15} suffix=" t" />
+                </div>
+                <div className="text-white/60 text-xs">de residuos valorizados en tiempo real</div>
+              </div>
+
+              {/* Emisiones evitadas — dinámico */}
+              <div
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-6 hover:bg-white/15 hover:border-lima/40 transition-all group"
+                style={{ animationDelay: '0.95s' }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
+                    <CloudOff className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
+                  </div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Emisiones evitadas</div>
+                </div>
+                <div className="text-white font-bold leading-none mb-1 tabular-nums" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
+                  <LiveCounter base={118800} epoch={COUNTER_EPOCH} ratePerSecondKg={0.57} suffix=" t CO₂" />
+                </div>
+                <div className="text-white/60 text-xs">de gases de efecto invernadero</div>
+              </div>
+
+              {/* Alcance — reformulado: proyectos actuales + potencial nacional */}
+              <div
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 md:p-6 hover:bg-white/15 hover:border-lima/40 transition-all group"
+                style={{ animationDelay: '1.05s' }}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
+                    <MapPin className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
+                  </div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Alcance</div>
+                </div>
+                <div className="text-white font-bold leading-none mb-1" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
+                  Nacional
+                </div>
+                <div className="text-white/60 text-xs">proyectos actuales y capacidad de desarrollo en todo el país</div>
+              </div>
             </div>
           </div>
         </div>

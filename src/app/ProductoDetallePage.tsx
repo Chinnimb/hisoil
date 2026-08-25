@@ -123,22 +123,22 @@ export default function ProductoDetallePage() {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={open}
+                <a
+                  href={`https://wa.me/5491144401919?text=${encodeURIComponent(`Hola Hisoil, quisiera consultar el precio de ${product.name}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 bg-oliva text-white font-semibold py-3.5 px-6 rounded-full hover:bg-lima hover:text-oliva transition-all shadow-lg"
                 >
                   <ShoppingCart className="w-4 h-4" />
-                  Consultar precio
-                </button>
-                <a
-                  href="https://wa.me/5491100000000?text=Hola%20Hisoil,%20quisiera%20consultar%20por%20un%20producto"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  Consultar precio por WhatsApp
+                </a>
+                <button
+                  onClick={open}
                   className="flex-1 flex items-center justify-center gap-2 border border-oliva text-oliva font-semibold py-3.5 px-6 rounded-full hover:bg-oliva hover:text-white transition-all"
                 >
                   <Eye className="w-4 h-4" />
-                  Hablar con un asesor
-                </a>
+                  Solicitar cotización
+                </button>
               </div>
 
               {/* Certifications */}
@@ -352,10 +352,10 @@ export default function ProductoDetallePage() {
                 onClick={open}
                 className="bg-lima text-oliva font-bold py-3.5 px-8 rounded-full hover:bg-white transition-all shadow-lg"
               >
-                Consultar precio
+                Solicitar cotización
               </button>
               <a
-                href="https://wa.me/5491100000000?text=Hola%20Hisoil,%20quisiera%20consultar%20por%20un%20producto"
+                href="https://wa.me/5491144401919?text=Hola%20Hisoil,%20quisiera%20consultar%20por%20un%20producto"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/50 text-white font-medium py-3.5 px-8 rounded-full hover:bg-white/10 transition-all"
