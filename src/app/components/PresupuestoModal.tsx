@@ -3,7 +3,7 @@ import { X, CheckCircle } from 'lucide-react'
 import { useModal } from '../context/ModalContext'
 
 const cultivos = ['Soja', 'Maíz', 'Trigo', 'Girasol', 'Horticultura', 'Fruticultura', 'Ganadería', 'Otro']
-const servicios = ['Fertilizantes', 'Bioestimulantes', 'Compost', 'Enmiendas', 'Tratamiento de residuos', 'Asesoramiento técnico', 'Membresía', 'Otro']
+const servicios = ['Compost', 'Sustratos profesionales', 'Materias primas', 'Paisajismo y techos verdes', 'Infraestructura y restauración', 'Tratamiento de residuos', 'Asesoramiento técnico', 'Otro']
 
 export function PresupuestoModal() {
   const { isOpen, close } = useModal()

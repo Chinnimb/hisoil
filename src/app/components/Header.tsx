@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Servicios', to: '/servicios' },
   { label: 'Portfolio', to: '/portfolio' },
   { label: 'Nosotros', to: '/nosotros' },
+  { label: 'Sumate', to: '/sumate' },
 ];
 
 export function Header() {
