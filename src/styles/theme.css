@@ -41,6 +41,8 @@
 .theme-compost .hover\:bg-oliva:hover { background-color: #606C38 !important; }
 .theme-compost .hover\:border-oliva\/40:hover { border-color: rgba(96, 108, 56, 0.4) !important; }
 .theme-compost .hover\:text-oliva:hover { color: #606C38 !important; }
+/* Restaurar hover:text-white — sin esto queda oculto por text-oliva !important en cascada */
+.theme-compost .hover\:text-white:hover { color: #FFFFFF !important; }
 
 /* Lima -> amarillo maiz */
 .theme-compost .bg-lima { background-color: #EDB731 !important; }
