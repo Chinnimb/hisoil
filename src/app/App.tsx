@@ -4,10 +4,8 @@ import { PresupuestoModal } from './components/PresupuestoModal';
 import { ScrollToAnchor } from './components/ScrollToAnchor';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { WhatDoYouNeed } from './components/WhatDoYouNeed';
-import { ServicesOverview } from './components/ServicesOverview';
-import { FeaturedProducts } from './components/FeaturedProducts';
-import { CaseStudies } from './components/CaseStudies';
+import { CompostHighlight } from './components/CompostHighlight';
+import { HomeRubros } from './components/HomeRubros';
 import { ContactCTA } from './components/ContactCTA';
 import { Footer } from './components/Footer';
 import AboutPage from './AboutPage';
@@ -24,10 +22,8 @@ function HomePage() {
       <Header />
       <main>
         <Hero />
-        <WhatDoYouNeed />
-        <FeaturedProducts />
-        <ServicesOverview />
-        <CaseStudies />
+        <CompostHighlight />
+        <HomeRubros />
         <ContactCTA />
       </main>
       <Footer />

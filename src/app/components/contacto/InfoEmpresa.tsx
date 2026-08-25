@@ -11,12 +11,12 @@ const infoItems = [
   },
   {
     label: "Teléfono",
-    value: "+54 XXX XXX XXXX",
+    value: "+54 9 11 4440-1919",
     sub: null,
   },
   {
     label: "Email",
-    value: "contacto@hisoil.com",
+    value: "administracion@hisoil.com.ar",
     sub: null,
   },
   {
@@ -26,7 +26,7 @@ const infoItems = [
   },
   {
     label: "WhatsApp",
-    value: "+54 9 XXX XXX XXXX",
+    value: "+54 9 11 4440-1919",
     sub: "Respuesta inmediata en horario comercial",
   },
 ];
