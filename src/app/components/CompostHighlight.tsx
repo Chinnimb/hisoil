@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { Sprout, ArrowUpRight, Check } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import imgCompostHome from '../../imports/productos/compost-3.png';
 
 const benefits = [
   'Enmienda orgánica premium para regeneración de suelos',
@@ -22,7 +23,7 @@ export function CompostHighlight() {
           {/* Image */}
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden order-2 lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1400&q=85&fit=crop"
+              src={imgCompostHome}
               alt="HiSoil Compost — enmienda orgánica premium"
               className="w-full h-full object-cover"
             />
