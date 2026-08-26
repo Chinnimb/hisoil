@@ -4,6 +4,23 @@ import { useReveal } from '../hooks/useReveal';
 import { useRef, useState, useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
 
+// Imágenes reales de producto (src/imports/productos)
+import imgCompost from '../../imports/productos/compost-1.png';
+import imgBiofert from '../../imports/productos/biofert-1.png';
+import imgHumic from '../../imports/productos/humic.png';
+import imgRegenera from '../../imports/productos/regenera.png';
+import imgPremium from '../../imports/productos/premium.png';
+import imgBerry from '../../imports/productos/berry.png';
+import imgCannabis from '../../imports/productos/cannabis.png';
+import imgSphagnum from '../../imports/productos/sphagnum.png';
+import imgChip from '../../imports/productos/chip.png';
+import imgGreenroof from '../../imports/productos/greenroof.png';
+import imgTierraFertil from '../../imports/productos/tierra-fertil.png';
+import imgRestore from '../../imports/productos/restore-1.png';
+import imgNative from '../../imports/productos/native.png';
+import imgCarbon from '../../imports/productos/carbon.png';
+import imgHydromulch from '../../imports/productos/hydromulch.png';
+
 type LucideIcon = typeof Sprout;
 
 interface Product {
@@ -24,7 +41,7 @@ const products: Product[] = [
     slug: 'compost', name: 'HiSoil Compost',
     desc: 'Enmienda orgánica para cultivos extensivos e intensivos.',
     line: 'Agricultura', Icon: Sprout,
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgCompost,
     format: 'Bolsa 20 kg · Big-bag 1 tn',
     usage: '3–6 t/ha',
     badge: 'Más vendido',
@@ -33,7 +50,7 @@ const products: Product[] = [
     slug: 'biofert', name: 'HiSoil Biofert',
     desc: 'Biofertilizante líquido con microorganismos para suelo y fertirriego.',
     line: 'Agricultura', Icon: Sprout,
-    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgBiofert,
     format: 'Bidón 20 L · IBC 1.000 L',
     usage: '2–4 L/ha',
   },
@@ -41,7 +58,7 @@ const products: Product[] = [
     slug: 'humic', name: 'HiSoil Humic',
     desc: 'Concentrado de ácidos húmicos y fúlvicos.',
     line: 'Agricultura', Icon: Sprout,
-    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgHumic,
     format: 'Bidón 10 L · 20 L',
     usage: '1–2 L/ha',
   },
@@ -49,7 +66,7 @@ const products: Product[] = [
     slug: 'regenera', name: 'HiSoil Regenera',
     desc: 'Programa integral de regeneración de suelos.',
     line: 'Agricultura', Icon: Sprout,
-    image: 'https://images.unsplash.com/photo-1508175688576-0c076b47b5b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgRegenera,
     format: 'Plan por campaña',
     usage: 'A medida',
     badge: 'Recomendado',
@@ -59,7 +76,7 @@ const products: Product[] = [
     slug: 'premium', name: 'HiSoil Premium',
     desc: 'Sustrato profesional premium para cultivos de alta exigencia.',
     line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgPremium,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Cultivos de alto valor',
     badge: 'Premium',
@@ -68,7 +85,7 @@ const products: Product[] = [
     slug: 'berry', name: 'HiSoil Berry',
     desc: 'Sustrato profesional para arándanos y frutos rojos.',
     line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1587393855524-087f83d95bc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgBerry,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción profesional',
   },
@@ -76,7 +93,7 @@ const products: Product[] = [
     slug: 'cannabis', name: 'HiSoil Cannabis',
     desc: 'Sustrato profesional para cannabis medicinal y cáñamo industrial.',
     line: 'Sustratos', Icon: Layers,
-    image: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgCannabis,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Indoor / greenhouse / outdoor',
     badge: 'Nuevo',
@@ -86,7 +103,7 @@ const products: Product[] = [
     slug: 'sphagnum', name: 'HiSoil Sphagnum',
     desc: 'Turba sphagnum natural de Tierra del Fuego.',
     line: 'Materias Primas', Icon: TreePine,
-    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgSphagnum,
     format: 'Bolsas 130 · 25 · 5 dm³',
     usage: 'Formulación de sustratos',
   },
@@ -94,7 +111,7 @@ const products: Product[] = [
     slug: 'chip', name: 'HiSoil Chip',
     desc: 'Astillas de madera para cobertura decorativa (mulch).',
     line: 'Materias Primas', Icon: TreePine,
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgChip,
     format: 'Granel · Big Bag · Bolsas',
     usage: 'Cobertura decorativa 5–8 cm',
   },
@@ -103,7 +120,7 @@ const products: Product[] = [
     slug: 'greenroof', name: 'HiSoil GreenRoof',
     desc: 'Sustrato liviano para terrazas y techos verdes.',
     line: 'Paisajismo', Icon: TreePine,
-    image: 'https://images.unsplash.com/photo-1527863280617-15596f92e5c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgGreenroof,
     format: 'Big-bag 1 m³',
     usage: 'Espesor 10–15 cm',
   },
@@ -111,7 +128,7 @@ const products: Product[] = [
     slug: 'tierra-fertil', name: 'HiSoil Tierra Fértil',
     desc: 'Tierra enriquecida para jardinería y paisajismo.',
     line: 'Paisajismo', Icon: TreePine,
-    image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgTierraFertil,
     format: 'Bolsa 40 L · A granel',
     usage: 'Uso general',
   },
@@ -128,7 +145,7 @@ const products: Product[] = [
     slug: 'restore', name: 'HiSoil Restore',
     desc: 'Sustrato para recuperación integral de suelos degradados.',
     line: 'Infraestructura', Icon: Mountain,
-    image: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgRestore,
     format: 'A granel · Big-bag',
     usage: '10–20 cm de espesor',
     badge: 'Obra pública',
@@ -137,7 +154,7 @@ const products: Product[] = [
     slug: 'native', name: 'HiSoil Native',
     desc: 'Mezcla con semillas nativas para restauración ecológica.',
     line: 'Infraestructura', Icon: Mountain,
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgNative,
     format: 'Bolsa 25 kg',
     usage: '30–50 kg/ha',
   },
@@ -145,7 +162,7 @@ const products: Product[] = [
     slug: 'carbon', name: 'HiSoil Carbon',
     desc: 'Mejorador de suelo rico en carbono estable.',
     line: 'Infraestructura', Icon: Mountain,
-    image: 'https://images.unsplash.com/photo-1596568359553-a56de6970068?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgCarbon,
     format: 'Big-bag 1 tn',
     usage: '2–5 t/ha',
   },
@@ -153,7 +170,7 @@ const products: Product[] = [
     slug: 'hydromulch', name: 'HiSoil HydroMulch',
     desc: 'Aplicación hidráulica para taludes y grandes superficies.',
     line: 'Infraestructura', Icon: Mountain,
-    image: 'https://images.unsplash.com/photo-1518131955366-a2b23ded8ed8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgHydromulch,
     format: 'Aplicación por hidrosiembra',
     usage: 'Taludes / canteras',
     badge: 'A desarrollar',

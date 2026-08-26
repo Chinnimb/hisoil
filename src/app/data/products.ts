@@ -1,5 +1,27 @@
 import { Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 
+// Imágenes reales de producto (src/imports/productos)
+import imgCompost from '../../imports/productos/compost-1.png';
+import imgCompostPaisajismo from '../../imports/productos/compost-2.png';
+import imgHumic from '../../imports/productos/humic.png';
+import imgBiofert from '../../imports/productos/biofert-1.png';
+import imgCarbon from '../../imports/productos/carbon.png';
+import imgRegenera from '../../imports/productos/regenera.png';
+import imgPremium from '../../imports/productos/premium.png';
+import imgBerry from '../../imports/productos/berry.png';
+import imgCannabis from '../../imports/productos/cannabis.png';
+import imgCitrus from '../../imports/productos/citrus.png';
+import imgTurf from '../../imports/productos/turf.png';
+import imgHydro from '../../imports/productos/hydro.png';
+import imgPalm from '../../imports/productos/palm.png';
+import imgChip from '../../imports/productos/chip.png';
+import imgSphagnum from '../../imports/productos/sphagnum.png';
+import imgTierraFertil from '../../imports/productos/tierra-fertil.png';
+import imgGreenroof from '../../imports/productos/greenroof.png';
+import imgRestore from '../../imports/productos/restore-1.png';
+import imgHydromulch from '../../imports/productos/hydromulch.png';
+import imgNative from '../../imports/productos/native.png';
+
 type LucideIcon = typeof Sprout;
 
 export type ProductLine = 'agricultura' | 'sustratos' | 'materiasprimas' | 'paisajismo' | 'infraestructura';
@@ -66,7 +88,7 @@ export const products: ProductDetail[] = [
     slug: 'compost',
     name: 'HiSoil Compost',
     short: 'Enmienda orgánica premium para la regeneración y fertilidad de los suelos.',
-    line: 'agricultura', Icon: Sprout, image: IMG.compostPile,
+    line: 'agricultura', Icon: Sprout, image: imgCompost,
     format: 'A granel · Big Bag 1 m³', usage: '3–6 t/ha', badge: 'Más vendido',
     description: 'HiSoil Compost es una enmienda orgánica elaborada a partir de residuos agroindustriales seleccionados mediante un proceso controlado de compostaje aeróbico. Su alto contenido de materia orgánica estabilizada y actividad biológica contribuye a mejorar la fertilidad, la estructura y el funcionamiento del suelo de manera sostenible. Desarrollado para agricultura extensiva e intensiva, es una solución natural para incrementar la productividad, favorecer la salud del suelo y reducir la dependencia de fertilizantes de síntesis química.',
     composition: ['Materia orgánica 30%', 'Nitrógeno total 1,5–2,0%', 'Fósforo (P₂O₅) 0,8%', 'Potasio (K₂O) 1,2%', 'pH 6,5–7,5', 'Humedad ≤ 45%'],
@@ -95,7 +117,7 @@ export const products: ProductDetail[] = [
     slug: 'biofert',
     name: 'HiSoil Biofert',
     short: 'Biofertilizante biológico de última generación.',
-    line: 'agricultura', Icon: Sprout, image: IMG.greenSprout,
+    line: 'agricultura', Icon: Sprout, image: imgBiofert,
     format: 'Bidón 20 L · IBC 1.000 L', usage: 'Suelo · Fertirriego · Foliar',
     description: 'HiSoil Biofert es un biofertilizante líquido formulado con un consorcio de microorganismos benéficos y sustancias bioactivas, desarrollado para potenciar la actividad biológica del suelo y favorecer el crecimiento de los cultivos. Su formulación estimula los procesos biológicos naturales del suelo, promoviendo una mayor disponibilidad de nutrientes, un mejor desarrollo radicular y una mayor eficiencia en el aprovechamiento de los fertilizantes aplicados. Puede incorporarse fácilmente a programas de agricultura convencional, agricultura regenerativa y producción orgánica, mediante aplicaciones al suelo, fertirriego o pulverización foliar.',
     composition: [
@@ -127,7 +149,7 @@ export const products: ProductDetail[] = [
     slug: 'humic',
     name: 'HiSoil Humic',
     short: 'Enmienda orgánica húmica a base de compost y leonardita.',
-    line: 'agricultura', Icon: Sprout, image: IMG.soilDark,
+    line: 'agricultura', Icon: Sprout, image: imgHumic,
     format: 'A granel · Big Bag 1 m³', usage: '100–500 kg/ha',
     description: 'HiSoil Humic es una enmienda orgánica sólida elaborada a partir de una mezcla de compost de alta calidad y leonardita, diseñada para mejorar la fertilidad del suelo y potenciar el desarrollo de los cultivos. La combinación de materia orgánica estabilizada con sustancias húmicas naturales mejora las propiedades físicas, químicas y biológicas del suelo, favoreciendo la actividad microbiológica, la disponibilidad de nutrientes y el crecimiento radicular. Su aplicación incrementa la capacidad de intercambio catiónico (CIC), mejora la eficiencia de los fertilizantes y favorece una mayor estabilidad de la materia orgánica en el perfil del suelo. Por su composición de origen natural, es un producto apto para sistemas de producción orgánica.',
     composition: [
@@ -162,7 +184,7 @@ export const products: ProductDetail[] = [
     slug: 'carbon',
     name: 'HiSoil Carbon',
     short: 'Enmienda orgánica carbonizada para agricultura regenerativa.',
-    line: 'agricultura', Icon: Sprout, image: IMG.farmerHand,
+    line: 'agricultura', Icon: Sprout, image: imgCarbon,
     format: 'A granel · Big Bag 1 m³', usage: '2–5 t/ha',
     description: 'HiSoil Carbon es una enmienda orgánica premium elaborada a partir de una mezcla de 70% compost maduro HiSoil y 30% biochar (carbonilla vegetal), desarrollada para incrementar el contenido de carbono estable del suelo y potenciar los beneficios de la materia orgánica. La combinación del compost con el biochar integra los beneficios de la materia orgánica estabilizada con la alta porosidad y estabilidad del carbono vegetal, favoreciendo la actividad microbiológica, la disponibilidad de nutrientes y la regeneración de los suelos. Su aplicación mejora la estructura física del suelo, incrementa la capacidad de retención de agua y nutrientes y contribuye a aumentar el carbono orgánico del perfil, siendo una herramienta ideal para programas de agricultura regenerativa y proyectos vinculados a la captura de carbono.',
     composition: [
@@ -198,7 +220,7 @@ export const products: ProductDetail[] = [
     slug: 'regenera',
     name: 'HiSoil Regenera',
     short: 'Programa integral para la regeneración de suelos.',
-    line: 'agricultura', Icon: Sprout, image: IMG.fieldSunset,
+    line: 'agricultura', Icon: Sprout, image: imgRegenera,
     format: 'Programa técnico personalizado', usage: 'A medida de cada establecimiento', badge: 'Recomendado',
     description: 'HiSoil Regenera es un programa integral desarrollado para recuperar la salud y productividad de suelos degradados mediante un manejo técnico que combina diagnóstico, planificación, aplicación de enmiendas orgánicas, bioinsumos y seguimiento agronómico. Cada programa se diseña específicamente para cada establecimiento, considerando las características del suelo, el sistema productivo y los objetivos del productor. A través de un enfoque basado en agricultura regenerativa, HiSoil Regenera busca incrementar la materia orgánica, mejorar la actividad biológica, aumentar la eficiencia en el uso del agua y los nutrientes, y recuperar progresivamente la fertilidad del suelo. Más que un producto, HiSoil Regenera es un servicio de acompañamiento técnico pensado para lograr mejoras sostenibles y medibles en el tiempo.',
     composition: [
@@ -278,7 +300,7 @@ export const products: ProductDetail[] = [
     slug: 'premium',
     name: 'HiSoil Premium',
     short: 'Sustrato profesional premium para cultivos de alta exigencia.',
-    line: 'sustratos', Icon: Layers, image: IMG.cropRows, badge: 'Premium',
+    line: 'sustratos', Icon: Layers, image: imgPremium, badge: 'Premium',
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción profesional de cultivos de alto valor',
     description: 'HiSoil Premium es un sustrato de máxima calidad desarrollado para productores que buscan el mayor rendimiento y uniformidad en cultivos de alta exigencia. Su formulación combina materias primas cuidadosamente seleccionadas para ofrecer un equilibrio óptimo entre aireación, retención de agua, drenaje y disponibilidad de nutrientes. Está diseñado para adaptarse a distintos sistemas de producción y puede personalizarse según las necesidades específicas de cada cultivo, tipo de contenedor y manejo agronómico.',
     composition: ['Turba rubia sphagnum', 'Turba negra', 'Perlita gruesa', 'Fibra de coco', 'Enmiendas técnicas', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría media a gruesa', 'Excelente estabilidad física'],
@@ -317,7 +339,7 @@ export const products: ProductDetail[] = [
     slug: 'berry',
     name: 'HiSoil Berry',
     short: 'Sustrato profesional para arándanos y frutos rojos.',
-    line: 'sustratos', Icon: Layers, image: IMG.berry,
+    line: 'sustratos', Icon: Layers, image: imgBerry,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción profesional de arándanos y otros berries',
     description: 'HiSoil Berry es un sustrato profesional especialmente formulado para el cultivo de arándanos y otros frutos rojos que requieren medios de cultivo ácidos y altamente estables. Su composición proporciona un ambiente ideal para el desarrollo radicular, favoreciendo una excelente retención de humedad, alta aireación y un drenaje eficiente durante todo el ciclo productivo. Su pH naturalmente ácido y su estabilidad física lo convierten en una solución ideal para cultivos en macetas, bolsas de cultivo, camas elevadas y sistemas con fertirriego.',
     composition: ['Turba rubia sphagnum', 'Corteza de pino compostada', 'Perlita', 'Sulfato de amonio', 'pH ácido, ideal para cultivos acidófilos', 'Conductividad eléctrica controlada', 'Granulometría media', 'Alta estabilidad estructural'],
@@ -331,7 +353,7 @@ export const products: ProductDetail[] = [
     slug: 'cannabis',
     name: 'HiSoil Cannabis',
     short: 'Sustrato profesional para cannabis medicinal y cáñamo industrial.',
-    line: 'sustratos', Icon: Layers, image: IMG.cannabisLeaf, badge: 'Nuevo',
+    line: 'sustratos', Icon: Layers, image: imgCannabis, badge: 'Nuevo',
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Cultivo profesional indoor, greenhouse y outdoor',
     description: 'HiSoil Cannabis es un sustrato profesional desarrollado para la producción de cannabis medicinal y cáñamo industrial bajo sistemas indoor, greenhouse y outdoor. Su formulación ofrece un equilibrio óptimo entre aireación, retención de humedad y drenaje, favoreciendo un desarrollo radicular vigoroso y un crecimiento uniforme durante todo el ciclo del cultivo. Elaborado con materias primas seleccionadas y de calidad constante, es compatible con programas de fertilización mineral u orgánica y puede adaptarse a los requerimientos específicos de cada variedad y sistema de manejo.',
     composition: ['Turba sphagnum', 'Coco fibra', 'Perlita', 'Vermiculita', 'Enmiendas orgánicas', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría media', 'Excelente estabilidad física'],
@@ -345,7 +367,7 @@ export const products: ProductDetail[] = [
     slug: 'citrus',
     name: 'HiSoil Citrus',
     short: 'Sustrato profesional para producción de cítricos y frutales.',
-    line: 'sustratos', Icon: Layers, image: IMG.citrusFruit,
+    line: 'sustratos', Icon: Layers, image: imgCitrus,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción de plantines de cítricos y frutales en vivero',
     description: 'HiSoil Citrus es un sustrato profesional especialmente desarrollado para la producción de plantines de cítricos y frutales en vivero. Su formulación proporciona un equilibrio ideal entre retención de humedad, aireación y drenaje, promoviendo un crecimiento radicular vigoroso y la formación de un cepellón firme que mejora el prendimiento luego del trasplante a campo. Su estructura física estable permite un manejo eficiente del riego y la fertilización durante todo el ciclo de producción.',
     composition: ['Turba sphagnum', 'Corteza de pino', 'Perlita', 'Compost forestal', 'pH ligeramente ácido', 'Conductividad eléctrica controlada', 'Granulometría media', 'Excelente estabilidad estructural'],
@@ -359,7 +381,7 @@ export const products: ProductDetail[] = [
     slug: 'turf',
     name: 'HiSoil Turf',
     short: 'Sustrato profesional para producción de césped en rollo.',
-    line: 'sustratos', Icon: Layers, image: IMG.grassLawn,
+    line: 'sustratos', Icon: Layers, image: imgTurf,
     format: 'Bolsa 25 · 50 dm³ · Big-bag · A granel', usage: 'Producción profesional de césped y superficies deportivas',
     description: 'HiSoil Turf es un sustrato profesional especialmente desarrollado para la producción intensiva de césped en rollo y la implantación de superficies deportivas y paisajísticas. Su formulación ofrece una estructura física estable, excelente drenaje y un adecuado contenido de materia orgánica, favoreciendo un rápido establecimiento del césped y un desarrollo radicular uniforme. Su equilibrio entre componentes minerales y orgánicos facilita el manejo del cultivo, mejora la cosecha del rollo y contribuye a obtener un producto final de alta calidad.',
     composition: ['Arena silícea', 'Compost', 'Turba negra', 'Fertilizante starter', 'Excelente drenaje', 'Buena estabilidad estructural', 'Granulometría adaptada para producción de césped', 'Balance adecuado entre componentes minerales y orgánicos'],
@@ -372,7 +394,7 @@ export const products: ProductDetail[] = [
     slug: 'hydro',
     name: 'HiSoil Hydro',
     short: 'Sustrato profesional para cultivos hidropónicos.',
-    line: 'sustratos', Icon: Layers, image: IMG.hydroponics,
+    line: 'sustratos', Icon: Layers, image: imgHydro,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Sistemas hidropónicos comerciales y producción bajo cubierta',
     description: 'HiSoil Hydro es un sustrato profesional desarrollado para sistemas de producción hidropónica que requieren un medio de cultivo estable, liviano y de excelente comportamiento físico. Su formulación proporciona una óptima relación entre retención de solución nutritiva, aireación y drenaje, favoreciendo un desarrollo radicular uniforme y un manejo eficiente del riego y la fertirrigación. Elaborado con materiales de alta calidad, permite un control preciso de la nutrición del cultivo y es compatible con los principales sistemas hidropónicos comerciales.',
     composition: ['Perlita expandida', 'Vermiculita expandida', 'Pumita', 'Baja conductividad eléctrica', 'Excelente capacidad de aireación', 'Alta retención de solución nutritiva', 'Granulometría uniforme'],
@@ -386,7 +408,7 @@ export const products: ProductDetail[] = [
     slug: 'palm',
     name: 'HiSoil Palm',
     short: 'Sustrato profesional para palmeras y plantas ornamentales.',
-    line: 'sustratos', Icon: Layers, image: IMG.palmLeaf,
+    line: 'sustratos', Icon: Layers, image: imgPalm,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Palmeras, plantas tropicales y ornamentales',
     description: 'HiSoil Palm es un sustrato profesional desarrollado para el cultivo de palmeras, plantas tropicales y especies ornamentales de gran porte. Su formulación proporciona una estructura física estable con excelente drenaje, adecuada aireación y óptima retención de humedad, favoreciendo un crecimiento vigoroso y un desarrollo radicular saludable. Está diseñado para cultivos en macetas de gran volumen, jardinería profesional, paisajismo y espacios verdes donde se requiere un sustrato durable y de alto desempeño.',
     composition: ['Turba sphagnum', 'Corteza compostada', 'Perlita', 'Compost', 'Excelente drenaje', 'Alta estabilidad física', 'Granulometría media a gruesa', 'Óptimo equilibrio entre aireación y retención de humedad'],
@@ -401,7 +423,7 @@ export const products: ProductDetail[] = [
     slug: 'chip',
     name: 'HiSoil Chip',
     short: 'Astillas de madera para cobertura decorativa (Mulch).',
-    line: 'materiasprimas', Icon: TreePine, image: IMG.woodChips,
+    line: 'materiasprimas', Icon: TreePine, image: imgChip,
     format: 'Granel · Big Bag · Bolsas de 130, 100, 60, 25 y 5 dm³', usage: 'Cobertura decorativa · Control de malezas · Conservación de humedad',
     description: 'HiSoil Chip es un mulch elaborado a partir de astillas de madera seleccionadas, ideal para jardines, parques, plazas y proyectos de paisajismo. Actúa como cobertura superficial del suelo, reduciendo la evaporación del agua, limitando el crecimiento de malezas y mejorando la estética de los espacios verdes. Su granulometría uniforme y su baja proporción de finos permiten obtener una cobertura homogénea y de larga duración, protegiendo el suelo frente a cambios bruscos de temperatura y disminuyendo significativamente la frecuencia de riego. Es una solución sustentable para proyectos de jardinería residencial, paisajismo urbano y espacios verdes de uso público o privado.',
     composition: ['Astillas de madera seleccionadas', 'Granulometría 20–60 mm', 'Baja proporción de finos', 'Libre de contaminantes'],
@@ -429,7 +451,7 @@ export const products: ProductDetail[] = [
     slug: 'sphagnum',
     name: 'HiSoil Sphagnum',
     short: 'Turba sphagnum natural de Tierra del Fuego.',
-    line: 'materiasprimas', Icon: TreePine, image: IMG.mossGreen,
+    line: 'materiasprimas', Icon: TreePine, image: imgSphagnum,
     format: 'Bolsas de 130, 25 y 5 dm³', usage: 'Formulación de sustratos · Semilleros · Almácigos · Enmienda de suelos',
     description: 'HiSoil Sphagnum es turba sphagnum natural proveniente de Tierra del Fuego (Argentina), seleccionada por su elevada capacidad de retención de agua y su estructura fibrosa estable. Constituye una de las materias primas más utilizadas en la elaboración de sustratos profesionales gracias a su excelente equilibrio entre retención hídrica, aireación y estabilidad física. Su estructura porosa favorece el desarrollo radicular, mejora la disponibilidad de agua para las plantas y aporta una base homogénea para la formulación de mezclas destinadas a viveros, horticultura, floricultura y producción forestal. Su calidad uniforme permite obtener sustratos de alto rendimiento con excelentes propiedades físicas y una larga estabilidad en el tiempo.',
     composition: ['Turba sphagnum natural de Tierra del Fuego', 'pH natural 3,5–4,5', 'Alta porosidad', 'Estructura fibrosa estable', 'Libre de aditivos'],
@@ -487,7 +509,7 @@ export const products: ProductDetail[] = [
     slug: 'compost-paisajismo',
     name: 'HiSoil Compost',
     short: 'Enmienda orgánica para jardinería, paisajismo y espacios verdes.',
-    line: 'paisajismo', Icon: TreePine, image: IMG.compostPile,
+    line: 'paisajismo', Icon: TreePine, image: imgCompostPaisajismo,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³', usage: '5–20 L/m²',
     description: 'HiSoil Compost es una enmienda orgánica premium elaborada a partir de residuos agroindustriales seleccionados mediante un proceso controlado de compostaje aeróbico. El resultado es un producto estable, homogéneo y biológicamente activo que mejora las propiedades físicas, químicas y biológicas del suelo. Su incorporación incrementa el contenido de materia orgánica, favorece la actividad microbiana y mejora la estructura del suelo, permitiendo una mayor infiltración y retención de agua. Además, aporta nutrientes de liberación gradual que promueven un crecimiento más equilibrado y sostenible de la vegetación. Es una solución ideal para jardines, parques, plazas, viveros, canteros ornamentales, arbolado urbano y proyectos de paisajismo que buscan mejorar la calidad del suelo de forma natural.',
     composition: [
@@ -519,7 +541,7 @@ export const products: ProductDetail[] = [
     slug: 'tierra-fertil',
     name: 'HiSoil Tierra Fértil',
     short: 'Tierra enriquecida lista para jardinería, paisajismo y espacios verdes.',
-    line: 'paisajismo', Icon: TreePine, image: IMG.handSoil,
+    line: 'paisajismo', Icon: TreePine, image: imgTierraFertil,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³', usage: 'Plantación, nivelación y preparación de suelos',
     description: 'HiSoil Tierra Fértil es una mezcla premium desarrollada a partir de tierra vegetal seleccionada y compost HiSoil estabilizado, formulada para brindar un sustrato fértil, homogéneo y de excelente estructura física. Su composición mejora la aireación, favorece el drenaje y proporciona un aporte equilibrado de materia orgánica que promueve un rápido establecimiento de las plantas y un desarrollo radicular saludable. Es una solución lista para usar en jardines, parques, canteros, viveros, espacios verdes públicos y privados, permitiendo obtener superficies uniformes y de alta calidad sin necesidad de realizar mezclas adicionales.',
     composition: [
@@ -646,7 +668,7 @@ export const products: ProductDetail[] = [
     slug: 'greenroof',
     name: 'HiSoil Green Roof',
     short: 'Sustrato técnico liviano para techos verdes, terrazas y cubiertas vegetadas.',
-    line: 'paisajismo', Icon: TreePine, image: IMG.greenRoof,
+    line: 'paisajismo', Icon: TreePine, image: imgGreenroof,
     format: 'A granel · Big Bag', usage: 'Techos verdes extensivos: 10–15 cm · Semi-intensivos: 15–25 cm · Intensivos: según proyecto',
     description: 'HiSoil Green Roof es un sustrato técnico especialmente desarrollado para la implantación de techos verdes, terrazas ajardinadas y cubiertas vegetadas. Su formulación combina componentes minerales y orgánicos seleccionados para lograr una adecuada relación entre bajo peso, drenaje, aireación, retención de humedad y estabilidad física. Gracias a su estructura liviana y porosa, permite favorecer el desarrollo saludable de las raíces sin generar una sobrecarga innecesaria sobre la estructura del edificio. Además, contribuye a mantener una distribución equilibrada del agua, evitando encharcamientos y mejorando la disponibilidad de humedad para la vegetación. Es una solución especialmente indicada para proyectos de arquitectura sustentable, paisajismo urbano, desarrollos inmobiliarios e infraestructura verde.',
     composition: [
@@ -683,7 +705,7 @@ export const products: ProductDetail[] = [
     slug: 'restore',
     name: 'HiSoil Restore',
     short: 'Sustrato profesional para recuperación integral de suelos degradados y revegetación ambiental.',
-    line: 'infraestructura', Icon: Mountain, image: IMG.taludes,
+    line: 'infraestructura', Icon: Mountain, image: imgRestore,
     format: 'Big Bag 1 m³ · A granel', usage: 'Capa de 10 a 20 cm de espesor', badge: 'Obra pública',
     description: 'HiSoil Restore es un sustrato técnico especialmente desarrollado para la recuperación de suelos degradados y la restauración de áreas afectadas por actividades extractivas, movimientos de suelo, obras de infraestructura, incendios o erosión severa. Su formulación combina materia orgánica estabilizada, componentes minerales seleccionados y bioinsumos que mejoran las propiedades físicas, químicas y biológicas del suelo, favoreciendo el establecimiento rápido de la vegetación y la recuperación progresiva del ecosistema. Gracias a su elevada estabilidad estructural y capacidad de retención de agua, proporciona un medio ideal para el desarrollo radicular, disminuye los procesos erosivos y acelera la implantación de especies herbáceas, arbustivas o arbóreas. Es una solución especialmente indicada para proyectos de restauración ambiental, compensaciones ecológicas, obras públicas y privadas, minería, petróleo, gas y recuperación de áreas degradadas.',
     composition: [
@@ -723,7 +745,7 @@ export const products: ProductDetail[] = [
     slug: 'hydromulch',
     name: 'HiSoil HydroMulch',
     short: 'Sistema profesional de hidrosiembra para revegetación, control de erosión y restauración ambiental.',
-    line: 'infraestructura', Icon: Mountain, image: IMG.waterDrops,
+    line: 'infraestructura', Icon: Mountain, image: imgHydromulch,
     format: 'Servicio de hidrosiembra', usage: 'Taludes · Banquinas · Canteras · Grandes superficies',
     description: 'HiSoil HydroMulch es una mezcla técnica especialmente formulada para la aplicación mediante hidrosiembra, diseñada para lograr una rápida implantación vegetal y brindar protección inmediata contra la erosión en superficies con pendiente o de difícil acceso. Su composición integra fibras vegetales, semillas adaptadas al ambiente, fertilizantes de implantación y aditivos biodegradables que generan una cobertura uniforme sobre el terreno, favoreciendo la retención de humedad, la germinación y el establecimiento de la vegetación. La aplicación hidráulica permite cubrir rápidamente grandes extensiones de terreno con excelente homogeneidad, reduciendo tiempos de obra y costos operativos respecto a métodos tradicionales de siembra. Es una solución ideal para proyectos de infraestructura, minería, petróleo, gas, recuperación ambiental y estabilización de suelos.',
     composition: [
@@ -789,7 +811,7 @@ export const products: ProductDetail[] = [
     slug: 'native',
     name: 'HiSoil Native',
     short: 'Mezclas profesionales de semillas nativas para restauración ecológica y revegetación de ecosistemas.',
-    line: 'infraestructura', Icon: Mountain, image: IMG.nativeSeeds,
+    line: 'infraestructura', Icon: Mountain, image: imgNative,
     format: 'Producto en desarrollo', usage: 'Mezclas formuladas según ecorregión', status: 'a-desarrollar',
     description: 'HiSoil Native desarrolla mezclas de semillas adaptadas a cada región del país para favorecer la recuperación de ecosistemas, la biodiversidad y la estabilidad del suelo. Se trata de una línea actualmente en desarrollo, formulada específicamente para proyectos de restauración ecológica y compensación ambiental.',
     composition: ['Producto en desarrollo — mezclas formuladas específicamente para cada ecorregión'],

@@ -3,6 +3,27 @@ import { Link } from 'react-router';
 import { ArrowUpRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 
+// Imágenes reales de producto (src/imports/productos)
+import imgCompost from '../../../imports/productos/compost-1.png';
+import imgHumic from '../../../imports/productos/humic.png';
+import imgBiofert from '../../../imports/productos/biofert-1.png';
+import imgCarbon from '../../../imports/productos/carbon.png';
+import imgRegenera from '../../../imports/productos/regenera.png';
+import imgPremium from '../../../imports/productos/premium.png';
+import imgBerry from '../../../imports/productos/berry.png';
+import imgCannabis from '../../../imports/productos/cannabis.png';
+import imgCitrus from '../../../imports/productos/citrus.png';
+import imgTurf from '../../../imports/productos/turf.png';
+import imgHydro from '../../../imports/productos/hydro.png';
+import imgPalm from '../../../imports/productos/palm.png';
+import imgChip from '../../../imports/productos/chip.png';
+import imgSphagnum from '../../../imports/productos/sphagnum.png';
+import imgTierraFertil from '../../../imports/productos/tierra-fertil.png';
+import imgGreenroof from '../../../imports/productos/greenroof.png';
+import imgRestore from '../../../imports/productos/restore-1.png';
+import imgHydromulch from '../../../imports/productos/hydromulch.png';
+import imgNative from '../../../imports/productos/native.png';
+
 type LucideIcon = typeof Sprout;
 
 // Verified image pool — all agriculture / soil / plant related
@@ -39,45 +60,45 @@ const IMG = {
   nativeSeeds: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&h=400&fit=crop',
 };
 
-// Product name -> image
+// Product name -> image (imágenes reales del cliente cuando existen, fallback a Unsplash para las que faltan)
 const productImages: Record<string, string> = {
   // Agricultura
-  'HiSoil Compost': IMG.compostPile,
-  'HiSoil Biofert': IMG.greenSprout,
-  'HiSoil Humic': IMG.soilDark,
-  'HiSoil Carbon': IMG.farmerHand,
-  'HiSoil Regenera': IMG.fieldSunset,
+  'HiSoil Compost': imgCompost,
+  'HiSoil Biofert': imgBiofert,
+  'HiSoil Humic': imgHumic,
+  'HiSoil Carbon': imgCarbon,
+  'HiSoil Regenera': imgRegenera,
   // Sustratos Profesionales
   'HiSoil Seed': IMG.seedlings,
   'HiSoil Plug': IMG.seedlings,
   'HiSoil Nursery': IMG.handSoil,
-  'HiSoil Premium': IMG.cropRows,
+  'HiSoil Premium': imgPremium,
   'HiSoil Forest': IMG.landscape,
   'HiSoil Tobacco': IMG.tobaccoLeaf,
-  'HiSoil Berry': IMG.berry,
-  'HiSoil Cannabis': IMG.cannabisLeaf,
-  'HiSoil Citrus': IMG.citrusFruit,
-  'HiSoil Turf': IMG.grassLawn,
-  'HiSoil Hydro': IMG.hydroponics,
-  'HiSoil Palm': IMG.palmLeaf,
+  'HiSoil Berry': imgBerry,
+  'HiSoil Cannabis': imgCannabis,
+  'HiSoil Citrus': imgCitrus,
+  'HiSoil Turf': imgTurf,
+  'HiSoil Hydro': imgHydro,
+  'HiSoil Palm': imgPalm,
   // Materias Primas
-  'HiSoil Chip': IMG.woodChips,
+  'HiSoil Chip': imgChip,
   'HiSoil MiniChip': IMG.woodChips,
-  'HiSoil Sphagnum': IMG.mossGreen,
+  'HiSoil Sphagnum': imgSphagnum,
   'HiSoil Perlite': IMG.perlite,
   'HiSoil Vermiculite': IMG.perlite,
   'HiSoil Pometina': IMG.soilDark,
   // Paisajismo
-  'HiSoil Tierra Fértil': IMG.gardenTools,
+  'HiSoil Tierra Fértil': imgTierraFertil,
   'HiSoil Level': IMG.handSoil,
   'HiSoil Outdoor': IMG.outdoorGarden,
   'HiSoil Indoor': IMG.indoorPlant,
-  'HiSoil GreenRoof': IMG.greenRoof,
+  'HiSoil GreenRoof': imgGreenroof,
   // Infraestructura
-  'HiSoil Restore': IMG.taludes,
-  'HiSoil HydroMulch': IMG.waterDrops,
+  'HiSoil Restore': imgRestore,
+  'HiSoil HydroMulch': imgHydromulch,
   'HiSoil Erosion': IMG.taludes,
-  'HiSoil Native': IMG.nativeSeeds,
+  'HiSoil Native': imgNative,
 };
 
 // Name -> detail page slug
