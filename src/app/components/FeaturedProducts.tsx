@@ -20,6 +20,7 @@ import imgRestore from '../../imports/productos/restore-1.png';
 import imgNative from '../../imports/productos/native.png';
 import imgCarbon from '../../imports/productos/carbon.png';
 import imgHydromulch from '../../imports/productos/hydromulch.png';
+import imgOutdoor from '../../imports/productos/outdoor.png';
 
 type LucideIcon = typeof Sprout;
 
@@ -136,7 +137,7 @@ const products: Product[] = [
     slug: 'outdoor', name: 'HiSoil Outdoor',
     desc: 'Sustrato profesional para plantas de exterior.',
     line: 'Paisajismo', Icon: TreePine,
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=900',
+    image: imgOutdoor,
     format: 'Bolsa 50 L',
     usage: 'Trasplante directo',
   },

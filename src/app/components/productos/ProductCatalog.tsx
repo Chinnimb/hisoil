@@ -23,6 +23,7 @@ import imgGreenroof from '../../../imports/productos/greenroof.png';
 import imgRestore from '../../../imports/productos/restore-1.png';
 import imgHydromulch from '../../../imports/productos/hydromulch.png';
 import imgNative from '../../../imports/productos/native.png';
+import imgOutdoor from '../../../imports/productos/outdoor.png';
 
 type LucideIcon = typeof Sprout;
 
@@ -91,7 +92,7 @@ const productImages: Record<string, string> = {
   // Paisajismo
   'HiSoil Tierra Fértil': imgTierraFertil,
   'HiSoil Level': IMG.handSoil,
-  'HiSoil Outdoor': IMG.outdoorGarden,
+  'HiSoil Outdoor': imgOutdoor,
   'HiSoil Indoor': IMG.indoorPlant,
   'HiSoil GreenRoof': imgGreenroof,
   // Infraestructura

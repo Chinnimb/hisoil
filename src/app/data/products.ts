@@ -21,6 +21,7 @@ import imgGreenroof from '../../imports/productos/greenroof.png';
 import imgRestore from '../../imports/productos/restore-1.png';
 import imgHydromulch from '../../imports/productos/hydromulch.png';
 import imgNative from '../../imports/productos/native.png';
+import imgOutdoor from '../../imports/productos/outdoor.png';
 
 type LucideIcon = typeof Sprout;
 
@@ -604,7 +605,7 @@ export const products: ProductDetail[] = [
     slug: 'outdoor',
     name: 'HiSoil Outdoor',
     short: 'Sustrato profesional para plantas de exterior, jardines y paisajismo.',
-    line: 'paisajismo', Icon: TreePine, image: IMG.outdoorGarden,
+    line: 'paisajismo', Icon: TreePine, image: imgOutdoor,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³', usage: 'Plantación y trasplante de especies de exterior',
     description: 'HiSoil Outdoor es un sustrato profesional especialmente desarrollado para el cultivo de plantas de exterior en jardines, parques, canteros, macetas y proyectos de paisajismo. Su formulación combina materias primas de alta calidad que proporcionan un excelente equilibrio entre aireación, retención de humedad y estabilidad física. Su estructura favorece un rápido desarrollo radicular, permitiendo un mejor establecimiento de las plantas y un crecimiento más vigoroso durante todo el ciclo de cultivo. Además, mantiene sus propiedades físicas durante largos períodos, reduciendo la compactación y facilitando el mantenimiento de los espacios verdes. Es un producto ideal tanto para uso profesional como residencial, adaptándose a una amplia variedad de especies ornamentales y condiciones ambientales.',
     composition: [
