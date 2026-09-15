@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router';
 import { Leaf, CloudOff, MapPin } from 'lucide-react';
-import { useModal } from '../context/ModalContext';
 import { LiveCounter } from './LiveCounter';
 
 // Epoch de referencia: los valores base están calculados para este momento.
@@ -13,7 +11,6 @@ const IMG_URL =
 
 export function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
-  const { open } = useModal();
 
   useEffect(() => {
     let rafId: number;
@@ -125,27 +122,6 @@ export function Hero() {
             >
               Transformamos recursos orgánicos en soluciones de valor mediante compostaje profesional, sustratos de alta calidad y asesoramiento técnico especializado para productores, empresas y municipios.
             </p>
-
-            <div
-              className="hero-fade flex flex-col sm:flex-row gap-3 mb-16"
-              style={{ animationDelay: '0.55s' }}
-            >
-              <button
-                onClick={open}
-                className="bg-white text-oliva rounded-full font-bold hover:bg-lima transition-all shadow-2xl hover:scale-[1.02] active:scale-[0.99] min-w-[240px] flex items-center justify-center"
-                style={{ padding: '1.05rem 2.25rem', fontSize: '1rem', letterSpacing: '-0.01em' }}
-              >
-                Solicitar presupuesto
-              </button>
-              <Link to="/productos">
-                <button
-                  className="w-full border border-white/40 bg-white/10 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/20 hover:border-white/60 transition-all min-w-[240px] flex items-center justify-center"
-                  style={{ padding: '1.05rem 2.25rem', fontSize: '1rem' }}
-                >
-                  Ver productos →
-                </button>
-              </Link>
-            </div>
 
             {/* 3 counters (2 dinámicos en tiempo real + 1 estático) */}
             <div
