@@ -6,8 +6,8 @@ import imgCompostHome from '../../imports/productos/compost-3.png';
 const benefits = [
   'Enmienda orgánica premium para regeneración de suelos',
   'Apto para producción orgánica certificada',
-  'Aplicaciones agrícolas, paisajísticas e infraestructura',
-  'Presentaciones desde 5 dm³ hasta a granel',
+  'Aplicación en agricultura, jardinería, remediación de suelos.',
+  'Formato: bolsa de 5 dm³ a granel/big bag',
 ];
 
 export function CompostHighlight() {
