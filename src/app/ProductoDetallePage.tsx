@@ -19,7 +19,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ImagePlaceholder } from './components/ImagePlaceholder';
 import { useModal } from './context/ModalContext';
-import { getProductBySlug, getRelatedProducts, lineLabels, isCompostProduct } from './data/products';
+import { getProductBySlug, getRelatedProducts, lineLabels, isCompostProduct, PRODUCTOS_SHOW_PLACEHOLDERS } from './data/products';
 import { useReveal } from './hooks/useReveal';
 
 export default function ProductoDetallePage() {
@@ -72,7 +72,7 @@ export default function ProductoDetallePage() {
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Image */}
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-oliva/10 shadow-xl">
-              {product.image ? (
+              {product.image && !PRODUCTOS_SHOW_PLACEHOLDERS ? (
                 <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
               ) : (
                 <ImagePlaceholder label={`Foto pendiente — ${product.name}`} className="rounded-3xl" />
@@ -395,7 +395,7 @@ export default function ProductoDetallePage() {
                       className="group bg-white border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 flex flex-col"
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
-                        {r.image ? (
+                        {r.image && !PRODUCTOS_SHOW_PLACEHOLDERS ? (
                           <img src={r.image} alt={r.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                         ) : (
                           <ImagePlaceholder label={r.name} />

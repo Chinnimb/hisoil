@@ -1,4 +1,4 @@
-import { Recycle, RotateCcw, UserRoundCog } from 'lucide-react';
+import { Recycle, RotateCcw, Mountain, UserRoundCog } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 
 const services = [
@@ -19,6 +19,15 @@ const services = [
     link: "/servicios",
     linkLabel: "Ver servicio",
     tags: ["Economía circular", "Producción propia", "Certificado"],
+  },
+  {
+    Icon: Mountain,
+    title: "Restauración ambiental",
+    description:
+      "Recuperación de suelos degradados, control de erosión, hidrosiembra y revegetación con especies nativas para proyectos de infraestructura y restauración.",
+    link: "/servicios",
+    linkLabel: "Ver servicio",
+    tags: ["Hidrosiembra", "Control de erosión", "Restauración ecológica"],
   },
   {
     Icon: UserRoundCog,
@@ -100,7 +109,7 @@ export function RelatedServices() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {services.map((s, i) => (
             <Card key={s.title} s={s} index={i} />
           ))}
