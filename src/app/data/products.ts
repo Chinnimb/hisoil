@@ -27,6 +27,13 @@ type LucideIcon = typeof Sprout;
 
 export type ProductLine = 'agricultura' | 'sustratos' | 'materiasprimas' | 'paisajismo' | 'infraestructura';
 
+// El cliente envió un documento con la dirección fotográfica definitiva para
+// Productos. Hasta que cada foto se produzca/genere, TODA imagen de la
+// página de Productos (catálogo, banners de familia y ficha de detalle) se
+// reemplaza por ImagePlaceholder — tenga o no foto real confirmada. Volver a
+// `false` restaura las fotos reales ya cargadas.
+export const PRODUCTOS_SHOW_PLACEHOLDERS = true;
+
 export interface ProductDetail {
   slug: string;
   name: string;

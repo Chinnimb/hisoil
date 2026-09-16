@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router';
-import { ArrowUpRight, Sprout, Layers, TreePine, Mountain, ImageIcon } from 'lucide-react';
+import { ArrowUpRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
+import { ImagePlaceholder } from '../ImagePlaceholder';
+import { PRODUCTOS_SHOW_PLACEHOLDERS as SHOW_PLACEHOLDERS } from '../../data/products';
 
 // Imágenes reales de producto (src/imports/productos)
 import imgCompost from '../../../imports/productos/compost-1.png';
@@ -233,72 +235,51 @@ interface ProductCardProps {
 
 function ProductCard({ p, index }: ProductCardProps) {
   const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.15 });
-  const img = productImages[p.name];
+  const img = SHOW_PLACEHOLDERS ? undefined : productImages[p.name];
   const slug = productSlugs[p.name] ?? p.name.toLowerCase().replace('hisoil ', '').replace(/\s+/g, '-');
 
   return (
     <Link
       to={`/productos/${slug}`}
       ref={ref}
-      className={`scroll-reveal group relative overflow-hidden bg-white border border-oliva/15 hover:border-oliva/50 hover:shadow-2xl rounded-2xl p-5 md:p-6 transition-all duration-500 flex flex-col min-h-[220px] block ${visible ? 'is-visible' : ''}`}
+      className={`scroll-reveal group bg-white border border-oliva/15 hover:border-oliva/50 hover:shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 flex flex-col h-full block ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${(index % 4) * 0.05}s` : '0s' }}
     >
-      {/* Hover image background */}
-      {img && (
-        <>
+      {/* Imagen — ~38% de la card */}
+      <div className="relative aspect-[9/4] overflow-hidden flex-shrink-0">
+        {img ? (
           <img
             src={img}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none"
+            alt={p.name}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          {/* Solo un gradient oscuro suave para asegurar contraste del texto — la imagen sigue visible */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-        </>
-      )}
+        ) : (
+          <ImagePlaceholder label={p.name} />
+        )}
+        {p.status && (
+          <span className={`absolute top-3 right-3 text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full whitespace-nowrap ${
+            p.status === 'a-desarrollar'
+              ? 'bg-lima text-oliva'
+              : 'bg-white/90 text-oliva/70'
+          }`}>
+            {p.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
+          </span>
+        )}
+      </div>
 
       {/* Contenido */}
-      <div className="relative z-10 flex gap-4 h-full">
-        {/* Thumbnail cuadrado con imagen */}
-        <div className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 rounded-xl overflow-hidden border border-oliva/15 group-hover:border-white/40 transition-colors duration-500 relative">
-          {img ? (
-            <img
-              src={img}
-              alt={p.name}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          ) : (
-            <div className="absolute inset-0 bg-paja border border-dashed border-oliva/25 flex items-center justify-center">
-              <ImageIcon className="w-5 h-5 text-oliva/30" />
-            </div>
-          )}
-        </div>
-
-        {/* Textos y footer */}
-        <div className="flex flex-col flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-3 mb-2">
-            <h4 className="font-bold text-base md:text-lg leading-tight transition-colors duration-500 text-oliva group-hover:text-white">
-              {p.name}
-            </h4>
-            {p.status && (
-              <span className={`text-[9px] font-mono uppercase tracking-widest px-2 py-1 rounded-full flex-shrink-0 whitespace-nowrap transition-colors duration-500 ${
-                p.status === 'a-desarrollar'
-                  ? 'bg-lima/20 text-oliva border border-lima/40 group-hover:bg-lima group-hover:text-oliva group-hover:border-lima'
-                  : 'bg-oliva/10 text-oliva/70 border border-oliva/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/40'
-              }`}>
-                {p.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
-              </span>
-            )}
-          </div>
-          <p className="text-sm leading-relaxed mb-4 flex-1 transition-colors duration-500 text-gray-700 group-hover:text-white/90">
-            {p.desc}
-          </p>
-          <div className="flex items-center justify-between pt-3 border-t transition-colors duration-500 border-oliva/10 group-hover:border-white/25">
-            <span className="text-xs font-mono transition-colors duration-500 text-oliva/60 group-hover:text-lima">
-              Ver ficha técnica
-            </span>
-            <ArrowUpRight className="w-4 h-4 transition-all duration-500 text-oliva/50 group-hover:text-lima group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </div>
+      <div className="flex flex-col flex-1 min-w-0 p-5">
+        <h4 className="font-bold text-base md:text-lg leading-tight text-oliva mb-2">
+          {p.name}
+        </h4>
+        <p className="text-sm leading-relaxed mb-4 flex-1 text-gray-700 line-clamp-3">
+          {p.desc}
+        </p>
+        <div className="flex items-center justify-between pt-3 border-t border-oliva/10">
+          <span className="text-xs font-mono text-oliva/60 group-hover:text-oliva transition-colors duration-300">
+            Ver ficha técnica
+          </span>
+          <ArrowUpRight className="w-4 h-4 text-oliva/50 group-hover:text-oliva group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
         </div>
       </div>
     </Link>
@@ -355,8 +336,12 @@ function CategoryBlock({ category, index }: CategoryBlockProps) {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="aspect-[16/10] rounded-2xl overflow-hidden">
-            <img src={category.image} alt={category.name} className="w-full h-full object-cover" />
+          <div className="relative aspect-[16/10] rounded-2xl overflow-hidden">
+            {SHOW_PLACEHOLDERS ? (
+              <ImagePlaceholder label={`${category.name} — imagen editorial de familia`} />
+            ) : (
+              <img src={category.image} alt={category.name} className="w-full h-full object-cover" />
+            )}
           </div>
         </div>
       </div>
