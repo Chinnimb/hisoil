@@ -13,7 +13,7 @@ const services = [
     tags: ['Economía circular', 'Trazabilidad', 'Certificados ambientales'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    imageLabel: 'Tratamiento de residuos orgánicos — recepción y proceso en planta',
+    imageLabel: 'Recepción y manejo de residuos orgánicos en planta, con maquinaria',
     collage: false,
   },
   {
@@ -37,7 +37,7 @@ const services = [
     tags: ['Hidrosiembra', 'Control de erosión', 'Restauración ecológica'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    imageLabel: 'Restauración ambiental — terreno recuperado',
+    imageLabel: 'Recuperación de terrenos, taludes o grandes superficies',
     collage: false,
   },
   {
@@ -49,7 +49,7 @@ const services = [
     tags: ['Diagnóstico técnico', 'Recomendaciones', 'Acompañamiento permanente'],
     cta: 'Solicitar asesoramiento',
     action: 'modal' as const,
-    imageLabel: 'Asesoramiento técnico — equipo en campo',
+    imageLabel: 'Técnicos e ingenieros trabajando en campo',
     collage: false,
   },
 ];

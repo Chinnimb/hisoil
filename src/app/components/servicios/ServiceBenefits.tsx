@@ -128,7 +128,7 @@ export function ServiceBenefits() {
         >
           <div className="max-w-xl">
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-              <span className="text-oliva text-xs font-mono uppercase tracking-widest">04 — Beneficios</span>
+              <span className="text-oliva text-xs font-mono uppercase tracking-widest">05 — Beneficios</span>
             </div>
             <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
             <p className="text-gray-700 leading-relaxed">
