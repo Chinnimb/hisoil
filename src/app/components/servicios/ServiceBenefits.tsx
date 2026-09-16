@@ -1,5 +1,6 @@
 import { Leaf, TrendingUp, Settings, Check } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
+import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const benefits = [
   {
@@ -7,7 +8,7 @@ const benefits = [
     Icon: Leaf,
     title: "Ambiental",
     headline: "Gestión ambiental responsable",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=85&fit=crop",
+    imageLabel: "Beneficio ambiental — compost aplicado al suelo",
     points: [
       "Valorización de residuos orgánicos mediante compostaje",
       "Reducción de emisiones asociadas a la disposición final",
@@ -22,7 +23,7 @@ const benefits = [
     Icon: TrendingUp,
     title: "Económico",
     headline: "Reducción de costos",
-    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&q=85&fit=crop",
+    imageLabel: "Beneficio económico — operación en planta",
     points: [
       "Menores costos de disposición final",
       "Optimización logística del retiro de residuos",
@@ -37,7 +38,7 @@ const benefits = [
     Icon: Settings,
     title: "Operativo",
     headline: "Gestión simple y segura",
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1200&q=85&fit=crop",
+    imageLabel: "Beneficio operativo — equipo técnico en terreno",
     points: [
       "Un único proveedor para toda la gestión",
       "Asesoramiento técnico permanente",
@@ -66,11 +67,7 @@ function BenefitCard({ b, index }: BenefitCardProps) {
     >
       {/* Top image section */}
       <div className="relative aspect-[16/9] overflow-hidden">
-        <img
-          src={b.image}
-          alt={b.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        <ImagePlaceholder label={b.imageLabel} />
         {/* Green gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 

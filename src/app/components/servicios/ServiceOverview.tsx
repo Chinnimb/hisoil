@@ -4,7 +4,7 @@ import { AnimatedCounter } from '../AnimatedCounter';
 
 const indicators = [
   { end: 25, prefix: '+', label: 'Años', sub: 'de experiencia en gestión y valorización de residuos orgánicos' },
-  { end: 12, label: 'Provincias', sub: 'con proyectos y operaciones en Argentina' },
+  { end: 3, label: 'Provincias', sub: 'con proyectos activos · capacidad para todo el país' },
   { end: 100, suffix: '%', label: 'Valorización', sub: 'de residuos tratados mediante procesos biológicos' },
 ];
 

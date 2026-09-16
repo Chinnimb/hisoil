@@ -1,34 +1,9 @@
-import { useEffect, useRef } from 'react';
 import { useModal } from '../../context/ModalContext';
 import { Link } from 'react-router';
+import { ImageIcon } from 'lucide-react';
 
 export function AboutHero() {
-  const imgRef = useRef<HTMLImageElement>(null);
   const { open } = useModal();
-
-  useEffect(() => {
-    let rafId: number;
-    let current = 0;
-    let target = 0;
-    const onScroll = () => {
-      target = Math.min(window.scrollY / window.innerHeight, 1);
-    };
-    const tick = () => {
-      current += (target - current) * 0.06;
-      if (imgRef.current) {
-        const scale = 1 + current * 0.25;
-        const ty = current * 50;
-        imgRef.current.style.transform = `scale(${scale}) translateY(${ty}px)`;
-      }
-      rafId = requestAnimationFrame(tick);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    rafId = requestAnimationFrame(tick);
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      cancelAnimationFrame(rafId);
-    };
-  }, []);
 
   return (
     <>
@@ -43,21 +18,16 @@ export function AboutHero() {
         }
       `}</style>
 
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Background image with parallax */}
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            ref={imgRef}
-            src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1920&q=85&fit=crop"
-            alt="Hisoil — Transformamos residuos orgánicos en soluciones para el suelo"
-            className="absolute w-full object-cover will-change-transform"
-            style={{ height: '120%', top: '-10%' }}
-          />
+      <section className="relative min-h-screen flex flex-col overflow-hidden bg-noche">
+        {/* Foto pendiente — portada Nosotros: planta + paisaje. Fondo provisorio mientras se genera/produce la imagen final. */}
+        <div className="absolute inset-0 bg-gradient-to-br from-oliva via-noche to-noche" />
+        <div className="absolute inset-0 flex items-start justify-end p-8 opacity-30">
+          <div className="flex items-center gap-2 text-white/50 text-[10px] font-mono uppercase tracking-widest">
+            <ImageIcon className="w-4 h-4" />
+            Foto pendiente — planta + paisaje
+          </div>
         </div>
-
-        {/* Overlays */}
-        <div className="absolute inset-0 bg-oliva/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-noche/60 via-transparent to-noche/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noche/70 via-transparent to-noche/20" />
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
