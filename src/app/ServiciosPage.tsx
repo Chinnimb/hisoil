@@ -13,10 +13,10 @@ export default function ServiciosPage() {
       <Header />
       <main>
         <ServiciosHero />
+        <OtherServices />
         <ServiceOverview />
         <HowItWorks />
         <ServiceBenefits />
-        <OtherServices />
         <FinalCTAServicios />
       </main>
       <Footer />

@@ -17,6 +17,7 @@ function getCropIcon(crop: string) {
 }
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { ImagePlaceholder } from './components/ImagePlaceholder';
 import { useModal } from './context/ModalContext';
 import { getProductBySlug, getRelatedProducts, lineLabels, isCompostProduct } from './data/products';
 import { useReveal } from './hooks/useReveal';
@@ -71,7 +72,11 @@ export default function ProductoDetallePage() {
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Image */}
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-oliva/10 shadow-xl">
-              <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+              {product.image ? (
+                <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+              ) : (
+                <ImagePlaceholder label={`Foto pendiente — ${product.name}`} className="rounded-3xl" />
+              )}
               {product.badge && (
                 <span className="absolute top-5 left-5 bg-lima text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full font-bold shadow">
                   {product.badge}
@@ -390,7 +395,11 @@ export default function ProductoDetallePage() {
                       className="group bg-white border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl rounded-2xl overflow-hidden transition-all duration-500 flex flex-col"
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
-                        <img src={r.image} alt={r.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        {r.image ? (
+                          <img src={r.image} alt={r.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        ) : (
+                          <ImagePlaceholder label={r.name} />
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-t from-noche/70 via-transparent to-transparent" />
                         <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center">
                           <RIcon className="w-4 h-4 text-white" />

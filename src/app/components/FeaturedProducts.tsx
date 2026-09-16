@@ -28,7 +28,7 @@ interface Product {
   slug: string;
   name: string;
   desc: string;
-  line: 'Agricultura' | 'Sustratos' | 'Materias Primas' | 'Paisajismo' | 'Infraestructura';
+  line: 'Agricultura' | 'Sustratos Profesionales' | 'Materias Primas' | 'Sustratos' | 'Infraestructura';
   Icon: LucideIcon;
   image: string;
   format: string;
@@ -76,7 +76,7 @@ const products: Product[] = [
   {
     slug: 'premium', name: 'HiSoil Premium',
     desc: 'Sustrato profesional premium para cultivos de alta exigencia.',
-    line: 'Sustratos', Icon: Layers,
+    line: 'Sustratos Profesionales', Icon: Layers,
     image: imgPremium,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Cultivos de alto valor',
@@ -85,7 +85,7 @@ const products: Product[] = [
   {
     slug: 'berry', name: 'HiSoil Berry',
     desc: 'Sustrato profesional para arándanos y frutos rojos.',
-    line: 'Sustratos', Icon: Layers,
+    line: 'Sustratos Profesionales', Icon: Layers,
     image: imgBerry,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción profesional',
@@ -93,7 +93,7 @@ const products: Product[] = [
   {
     slug: 'cannabis', name: 'HiSoil Cannabis',
     desc: 'Sustrato profesional para cannabis medicinal y cáñamo industrial.',
-    line: 'Sustratos', Icon: Layers,
+    line: 'Sustratos Profesionales', Icon: Layers,
     image: imgCannabis,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Indoor / greenhouse / outdoor',
@@ -120,7 +120,7 @@ const products: Product[] = [
   {
     slug: 'greenroof', name: 'HiSoil GreenRoof',
     desc: 'Sustrato liviano para terrazas y techos verdes.',
-    line: 'Paisajismo', Icon: TreePine,
+    line: 'Sustratos', Icon: TreePine,
     image: imgGreenroof,
     format: 'Big-bag 1 m³',
     usage: 'Espesor 10–15 cm',
@@ -128,7 +128,7 @@ const products: Product[] = [
   {
     slug: 'tierra-fertil', name: 'HiSoil Tierra Fértil',
     desc: 'Tierra enriquecida para jardinería y paisajismo.',
-    line: 'Paisajismo', Icon: TreePine,
+    line: 'Sustratos', Icon: TreePine,
     image: imgTierraFertil,
     format: 'Bolsa 40 L · A granel',
     usage: 'Uso general',
@@ -136,7 +136,7 @@ const products: Product[] = [
   {
     slug: 'outdoor', name: 'HiSoil Outdoor',
     desc: 'Sustrato profesional para plantas de exterior.',
-    line: 'Paisajismo', Icon: TreePine,
+    line: 'Sustratos', Icon: TreePine,
     image: imgOutdoor,
     format: 'Bolsa 50 L',
     usage: 'Trasplante directo',

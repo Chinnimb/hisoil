@@ -1,53 +1,76 @@
 import { Recycle, Layers, Mountain, UserRoundCog, ArrowUpRight } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { useModal } from '../../context/ModalContext';
+import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const services = [
   {
     Icon: Recycle,
+    stage: 'Residuo',
     title: 'Tratamiento de residuos orgánicos',
     description:
       'Gestionamos integralmente residuos orgánicos industriales, agropecuarios, municipales y de espacios verdes mediante procesos de valorización biológica. Nos ocupamos de la logística, el tratamiento, la trazabilidad y la certificación de disposición final.',
     tags: ['Economía circular', 'Trazabilidad', 'Certificados ambientales'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1200&q=85&fit=crop',
+    imageLabel: 'Tratamiento de residuos orgánicos — recepción y proceso en planta',
+    collage: false,
   },
   {
     Icon: Layers,
+    stage: 'Proceso',
     title: 'Compostaje a medida',
     description:
       'Diseñamos e implementamos soluciones de compostaje adaptadas a cada operación. Transformamos los residuos propios en compost de alta calidad, reduciendo costos y generando un recurso valioso para la producción.',
     tags: ['Compostaje industrial', 'Valorización', 'Soluciones a medida'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    image: 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1200&q=85&fit=crop',
+    imageLabel: 'Compostaje a medida — planta profesional',
+    collage: true,
   },
   {
     Icon: Mountain,
+    stage: 'Recuperación',
     title: 'Restauración ambiental',
     description:
       'Desarrollamos soluciones para recuperación de suelos degradados, control de erosión, hidrosiembra y revegetación con especies nativas. Integramos productos, asistencia técnica y ejecución de proyectos.',
     tags: ['Hidrosiembra', 'Control de erosión', 'Restauración ecológica'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    image: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=1200&q=85&fit=crop',
+    imageLabel: 'Restauración ambiental — terreno recuperado',
+    collage: false,
   },
   {
     Icon: UserRoundCog,
+    stage: 'Conocimiento',
     title: 'Asesoramiento técnico',
     description:
       'Brindamos acompañamiento profesional para seleccionar productos, definir dosis de aplicación y diseñar soluciones adaptadas a cada proyecto. Nuestro equipo acompaña desde el diagnóstico inicial hasta la implementación.',
     tags: ['Diagnóstico técnico', 'Recomendaciones', 'Acompañamiento permanente'],
     cta: 'Solicitar asesoramiento',
     action: 'modal' as const,
-    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&q=85&fit=crop',
+    imageLabel: 'Asesoramiento técnico — equipo en campo',
+    collage: false,
   },
 ];
 
 interface CardProps {
   s: typeof services[number];
   index: number;
+}
+
+/** Small placeholder collage — reserves space for future photos of distintas industrias, sistemas de compostaje y tipos de residuos. */
+function CompostCollage() {
+  const slots = ['Industria A', 'Industria B', 'Sistema de compostaje', 'Tipo de residuo'];
+  return (
+    <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0.5 bg-oliva/10">
+      {slots.map((label) => (
+        <div key={label} className="relative">
+          <ImagePlaceholder label={label} className="text-[8px]" />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function ServiceCard({ s, index }: CardProps) {
@@ -66,14 +89,12 @@ function ServiceCard({ s, index }: CardProps) {
     >
       {/* Image left */}
       <div className="relative md:w-2/5 aspect-[16/9] md:aspect-auto md:min-h-[280px] overflow-hidden flex-shrink-0">
-        <img
-          src={s.image}
-          alt={s.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-noche/70 via-transparent to-transparent" />
-        <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center">
-          <Icon className="w-5 h-5 text-white" />
+        {s.collage ? <CompostCollage /> : <ImagePlaceholder label={s.imageLabel} />}
+        <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-md border border-oliva/20 flex items-center justify-center z-10">
+          <Icon className="w-5 h-5 text-oliva" />
+        </div>
+        <div className="absolute top-4 right-4 bg-noche/80 backdrop-blur-md text-white text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full z-10">
+          {s.stage}
         </div>
       </div>
 
@@ -111,7 +132,7 @@ export function OtherServices() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
+    <section id="servicios-overview" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div
@@ -119,12 +140,20 @@ export function OtherServices() {
           className={`max-w-3xl mb-14 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">05 — Servicios complementarios</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">01 — Nuestros servicios</span>
           </div>
           <h2 className="text-oliva mb-4">Potenciá tus proyectos con nuestros servicios.</h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
-            Los mejores resultados se logran combinando productos de alta calidad con el respaldo de un equipo técnico especializado. Nuestros servicios integran gestión ambiental, valorización de residuos y asesoramiento para acompañar cada etapa de tu proyecto.
+          <p className="text-gray-700 leading-relaxed text-lg mb-4">
+            Cuatro servicios que forman un mismo recorrido: recibimos el residuo, lo transformamos mediante un proceso técnico, recuperamos suelos y ecosistemas, y acompañamos cada proyecto con conocimiento especializado.
           </p>
+          <div className="flex flex-wrap items-center gap-2 text-oliva/70 text-xs font-mono uppercase tracking-widest">
+            {['Residuo', 'Proceso', 'Recuperación', 'Conocimiento'].map((step, i, arr) => (
+              <span key={step} className="flex items-center gap-2">
+                <span className="text-oliva">{step}</span>
+                {i < arr.length - 1 && <ArrowUpRight className="w-3 h-3 rotate-45 text-oliva/40" />}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Cards grid */}

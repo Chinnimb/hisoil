@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { Beef, Beer, Wheat, GlassWater, FlaskConical, Home, ShoppingCart, Factory, Layers3, Trophy, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { Beef, Beer, GlassWater, FlaskConical, Home, ShoppingCart, Factory, Layers3, Trophy, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
+import { ImagePlaceholder } from '../ImagePlaceholder';
 
 type LucideIcon = typeof Beef;
 
@@ -8,102 +9,105 @@ interface IndustryCase {
   id: string;
   Icon: LucideIcon;
   title: string;
-  headline: string;
+  /** Tipo de residuo que HISOIL gestiona en esta industria */
+  waste: string;
+  /** Breve explicación */
+  description: string;
   treats: string[];
   companies: string[];
-  image: string;
+  imageLabel: string;
 }
 
 const cases: IndustryCase[] = [
   {
-    id: 'frigorifica',
+    id: 'frigorificos',
     Icon: Beef,
-    title: 'Frigorífica',
-    headline: 'Efluentes y valorización de rumen',
+    title: 'Frigoríficos',
+    waste: 'Rumen y subproductos orgánicos del proceso productivo',
+    description: 'Gestionamos el contenido digestivo y los subproductos orgánicos de la faena mediante compostaje controlado.',
     treats: ['Compostaje de rumen y contenido digestivo', 'Gestión de barros biológicos', 'Tratamiento de efluentes', 'Certificados de disposición final'],
     companies: ['Quickfood', 'Frigorífico Cañuelas', 'Frigorífico Costanzo', 'Pekan', 'Marilú Damiano', 'Matadero Frigorífico Merlo', 'Industria Cárnica del Oeste', 'Soychú'],
-    image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop',
+    imageLabel: 'Frigoríficos — industria + rumen/subproductos orgánicos',
   },
   {
-    id: 'cervecera',
+    id: 'cerveza',
     Icon: Beer,
-    title: 'Cervecera',
-    headline: 'Bagazo de malta y efluentes',
+    title: 'Cerveza',
+    waste: 'Bagazo de malta y levaduras',
+    description: 'Valorizamos el bagazo húmedo y las levaduras resultantes de la elaboración cervecera.',
     treats: ['Bagazo de malta', 'Levaduras', 'Barros biológicos', 'Efluentes industriales'],
     companies: ['Cervecería y Maltería Quilmes'],
-    image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1200&q=85&fit=crop',
-  },
-  {
-    id: 'alimenticia',
-    Icon: Wheat,
-    title: 'Alimenticia',
-    headline: 'Residuos orgánicos de producción',
-    treats: ['Restos de producción', 'Productos fuera de especificación', 'Lodos', 'Compostaje industrial'],
-    companies: ['Molinos Río de la Plata', 'Bagley', 'PepsiCo', 'Molino Cañuelas', 'Alfajores Jorgito', 'Pilares Compañías Alimenticias', 'Pan\'s Company', 'Alimentaria La Pompeya', 'Frescovo'],
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&q=85&fit=crop',
+    imageLabel: 'Cerveza — industria + bagazo de malta',
   },
   {
     id: 'bebidas',
     Icon: GlassWater,
     title: 'Bebidas',
-    headline: 'Subproductos y efluentes',
+    waste: 'Restos de frutas, pulpas y cáscaras',
+    description: 'Tratamos subproductos orgánicos de destilerías, vinícolas y elaboración de bebidas sin alcohol.',
     treats: ['Destilerías', 'Bebidas sin alcohol', 'Vinícolas', 'Efluentes'],
     companies: ['Grupo Peñaflor', 'Campari', 'Fratelli Branca', 'Refres Now'],
-    image: 'https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=1200&q=85&fit=crop',
+    imageLabel: 'Bebidas — industria + pulpas y cáscaras',
   },
   {
     id: 'laboratorios',
     Icon: FlaskConical,
-    title: 'Laboratorios y Biotech',
-    headline: 'Residuos industriales biológicos',
+    title: 'Laboratorios',
+    waste: 'Corrientes orgánicas biodegradables',
+    description: 'Gestionamos residuos industriales biológicos aptos para tratamiento, con cumplimiento normativo estricto.',
     treats: ['Barros biológicos', 'Residuos orgánicos', 'Cumplimiento normativo'],
     companies: ['Biogénesis Bagó', 'Mabxience', 'Sinergium Biotech', 'Laboratorio CKC', 'Laboratorio Dewey', 'Internacional Farmacéutica Argentina'],
-    image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&q=85&fit=crop',
+    imageLabel: 'Laboratorios — instalaciones industriales limpias',
   },
   {
     id: 'barrios-cerrados',
     Icon: Home,
     title: 'Barrios Cerrados',
-    headline: 'Residuos verdes y poda',
+    waste: 'Poda, césped y hojas',
+    description: 'Gestionamos los residuos verdes del mantenimiento de espacios comunes en countries y barrios privados.',
     treats: ['Poda', 'Césped', 'Hojas', 'Residuos de mantenimiento'],
     companies: ['Nordelta', 'Puertos del Lago', 'Albanueva', 'Barrio Septiembre', 'Los Lagartos', 'Hacoaj'],
-    image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1200&q=85&fit=crop',
+    imageLabel: 'Barrios Cerrados — industria + poda y residuos verdes',
   },
   {
     id: 'retail',
     Icon: ShoppingCart,
     title: 'Retail y Logística',
-    headline: 'Orgánicos y espacios verdes',
+    waste: 'Frutas y verduras descartadas',
+    description: 'Valorizamos orgánicos y alimentos fuera de especificación de centros de distribución y comercios.',
     treats: ['Residuos alimenticios', 'Frutas y verduras', 'Mantenimiento de espacios verdes'],
     companies: ['Coto', 'Cencosud', 'Día', 'Farmacity', 'Plaza Logística', 'Exologística', 'AXIS Logística'],
-    image: 'https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?w=1200&q=85&fit=crop',
+    imageLabel: 'Retail y Logística — industria + frutas y verduras descartadas',
   },
   {
     id: 'agroindustria',
     Icon: Factory,
     title: 'Agroindustria',
-    headline: 'Residuos agroindustriales',
+    waste: 'Restos vegetales y descartes de cosecha',
+    description: 'Tratamos grandes volúmenes de residuos vegetales provenientes del procesamiento agroindustrial.',
     treats: ['Residuos vegetales', 'Barros', 'Compost para uso agrícola'],
     companies: ['Ingredion', 'Agroindustrias Quilmes', 'Compañía Argentina de Aceite', 'Cooperativa Aceitera La Matanza', 'Refinería del Centro'],
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=85&fit=crop',
+    imageLabel: 'Agroindustria — industria + restos vegetales',
   },
   {
     id: 'curtiembres',
     Icon: Layers3,
     title: 'Curtiembres',
-    headline: 'Barros, carnazas y efluentes',
+    waste: 'Barros y subproductos biodegradables del curtido',
+    description: 'Gestionamos las corrientes orgánicas del procesamiento de cueros aptas para tratamiento biológico.',
     treats: ['Barros', 'Carnazas', 'Efluentes'],
     companies: ['JBS Leather', 'La Hispano Argentina Curtiembre'],
-    image: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=1200&q=85&fit=crop',
+    imageLabel: 'Curtiembres — industria + barros y subproductos',
   },
   {
-    id: 'clubes',
+    id: 'clubes-hipicos-golf',
     Icon: Trophy,
-    title: 'Clubes y Predios',
-    headline: 'Residuos verdes y compost interno',
-    treats: ['Poda', 'Césped', 'Hojas', 'Compost para reutilización'],
+    title: 'Clubes Hípicos y Golf',
+    waste: 'Estiércol, cama de caballerizas y césped',
+    description: 'En hípicos gestionamos estiércol y cama de caballerizas; en golf, césped y poda del mantenimiento de la cancha.',
+    treats: ['Estiércol equino', 'Cama de caballerizas', 'Césped y poda', 'Compost para reutilización'],
     companies: ['Hipódromo de Palermo', 'Los Lagartos Country Club', 'Olivos Golf Club', 'Club Náutico Hacoaj'],
-    image: 'https://images.unsplash.com/photo-1493589976221-c2357c31ad77?w=1200&q=85&fit=crop',
+    imageLabel: 'Clubes Hípicos y Golf — industria + estiércol/césped',
   },
 ];
 
@@ -124,13 +128,9 @@ function IndustryCard({ c, index }: CardProps) {
       id={c.id}
       className="group flex-shrink-0 w-[300px] sm:w-[340px] lg:w-[380px] snap-start"
     >
-      <div className="relative rounded-2xl overflow-hidden h-[440px] border border-oliva/15 hover:border-oliva/40 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+      <div className="relative rounded-2xl overflow-hidden h-[460px] border border-oliva/15 hover:border-oliva/40 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
         {/* Full background image */}
-        <img
-          src={c.image}
-          alt={c.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        <ImagePlaceholder dark label={c.imageLabel} />
         {/* Gradient overlay — always visible but darker at bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-noche/95 via-noche/50 to-noche/15 transition-opacity duration-500" />
         {/* Extra dark on hover for readability */}
@@ -144,20 +144,20 @@ function IndustryCard({ c, index }: CardProps) {
             </div>
             <span className="text-white/70 font-bold font-mono text-lg">{String(index + 1).padStart(2, '0')}</span>
           </div>
-          {/* Arrow corner */}
-          <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-lima group-hover:border-lima transition-all duration-500">
-            <ArrowUpRight className="w-4 h-4 text-white group-hover:text-oliva transition-colors duration-300" />
-          </div>
         </div>
 
         {/* Bottom content — always visible */}
         <div className="absolute bottom-0 left-0 right-0 p-6 z-10 flex flex-col">
-          {/* Eyebrow */}
-          <div className="text-white/75 text-[10px] font-mono uppercase tracking-widest mb-2">
-            {c.headline}
-          </div>
           {/* Title */}
-          <h3 className="text-white font-bold text-2xl leading-tight mb-3">{c.title}</h3>
+          <h3 className="text-white font-bold text-2xl leading-tight mb-2">{c.title}</h3>
+
+          {/* Tipo de residuo — siempre visible */}
+          <div className="text-lima text-[10px] font-mono uppercase tracking-widest mb-3">
+            {c.waste}
+          </div>
+
+          {/* Breve explicación — siempre visible */}
+          <p className="text-white/85 text-xs leading-relaxed mb-3">{c.description}</p>
 
           {/* Divider that fills on hover */}
           <div className="h-[2px] bg-white/20 relative overflow-hidden mb-3">
@@ -165,13 +165,11 @@ function IndustryCard({ c, index }: CardProps) {
           </div>
 
           {/* Extra info revealed on hover — max-height transition */}
-          <div className="max-h-[64px] group-hover:max-h-[400px] overflow-hidden transition-all duration-500 ease-out">
-            {/* Empresas count — always visible */}
+          <div className="max-h-[40px] group-hover:max-h-[300px] overflow-hidden transition-all duration-500 ease-out">
             <div className="text-white/85 text-xs font-mono mb-3">
               {c.companies.length} {c.companies.length === 1 ? 'empresa del sector' : 'empresas del sector'}
             </div>
 
-            {/* Hidden until hover */}
             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
               <div className="text-white/60 text-[9px] font-mono uppercase tracking-widest mb-2">Qué tratamos</div>
               <ul className="space-y-1.5 mb-4">
@@ -183,10 +181,15 @@ function IndustryCard({ c, index }: CardProps) {
                 ))}
               </ul>
 
-              <div className="text-white/60 text-[9px] font-mono uppercase tracking-widest mb-2">Empresas</div>
-              <p className="text-white text-xs leading-snug">
-                {c.companies.slice(0, 3).join(' · ')}{c.companies.length > 3 ? `  +${c.companies.length - 3}` : ''}
-              </p>
+              <a
+                href={`https://wa.me/5491144401919?text=${encodeURIComponent(`Hola Hisoil, quisiera consultar sobre gestión de residuos para ${c.title}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-lima text-xs font-semibold hover:gap-2.5 transition-all"
+              >
+                Solicitar cotización
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>
@@ -239,9 +242,9 @@ export function IndustryCases() {
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
               <span className="text-oliva text-xs font-mono uppercase tracking-widest">Casos de éxito por industria</span>
             </div>
-            <h2 className="text-oliva mb-4">10 industrias que confían en nuestro servicio.</h2>
+            <h2 className="text-oliva mb-4">9 industrias, 9 residuos que sabemos gestionar.</h2>
             <p className="text-gray-700 leading-relaxed">
-              Cada tarjeta representa un problema resuelto: qué residuos tratamos y las empresas del sector que trabajan con Hisoil.
+              Cada tarjeta une industria y residuo: qué genera cada sector y cómo lo transformamos en un recurso.
             </p>
           </div>
         </div>

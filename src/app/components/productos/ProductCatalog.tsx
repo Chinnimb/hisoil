@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router';
-import { ArrowUpRight, Sprout, Layers, TreePine, Mountain } from 'lucide-react';
+import { ArrowUpRight, Sprout, Layers, TreePine, Mountain, ImageIcon } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 
 // Imágenes reales de producto (src/imports/productos)
@@ -27,41 +27,9 @@ import imgOutdoor from '../../../imports/productos/outdoor.png';
 
 type LucideIcon = typeof Sprout;
 
-// Verified image pool — all agriculture / soil / plant related
-const IMG = {
-  fieldSunset: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=400&fit=crop',
-  cornCrop: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?w=400&h=400&fit=crop',
-  wheatField: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=400&fit=crop',
-  soilDark: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=400&h=400&fit=crop',
-  handSoil: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop',
-  compostPile: 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=400&h=400&fit=crop',
-  greenSprout: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=400&fit=crop',
-  seedlings: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=400&h=400&fit=crop',
-  cropRows: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=400&h=400&fit=crop',
-  greenLeaves: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&h=400&fit=crop',
-  farmerHand: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=400&h=400&fit=crop',
-  waterDrops: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=400&h=400&fit=crop',
-  regenAgri: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=400&h=400&fit=crop',
-  berry: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&h=400&fit=crop',
-  cannabisLeaf: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?w=400&h=400&fit=crop',
-  citrusFruit: 'https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&h=400&fit=crop',
-  grassLawn: 'https://images.unsplash.com/photo-1493589976221-c2357c31ad77?w=400&h=400&fit=crop',
-  hydroponics: 'https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=400&h=400&fit=crop',
-  palmLeaf: 'https://images.unsplash.com/photo-1516214104703-d870798883c5?w=400&h=400&fit=crop',
-  gardenTools: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop',
-  indoorPlant: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=400&fit=crop',
-  outdoorGarden: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=400&fit=crop',
-  greenRoof: 'https://images.unsplash.com/photo-1527863280617-15596f92e5c8?w=400&h=400&fit=crop',
-  woodChips: 'https://images.unsplash.com/photo-1445264718234-a623be589d37?w=400&h=400&fit=crop',
-  mossGreen: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&h=400&fit=crop',
-  perlite: 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=400&h=400&fit=crop',
-  tobaccoLeaf: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=400&fit=crop',
-  landscape: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=400&fit=crop',
-  taludes: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&h=400&fit=crop',
-  nativeSeeds: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&h=400&fit=crop',
-};
-
-// Product name -> image (imágenes reales del cliente cuando existen, fallback a Unsplash para las que faltan)
+// Product name -> real product photo. Products without a confirmed photo are
+// intentionally omitted here — the card falls back to ImagePlaceholder rather
+// than shipping a generic stock photo as if it were final.
 const productImages: Record<string, string> = {
   // Agricultura
   'HiSoil Compost': imgCompost,
@@ -70,12 +38,7 @@ const productImages: Record<string, string> = {
   'HiSoil Carbon': imgCarbon,
   'HiSoil Regenera': imgRegenera,
   // Sustratos Profesionales
-  'HiSoil Seed': IMG.seedlings,
-  'HiSoil Plug': IMG.seedlings,
-  'HiSoil Nursery': IMG.handSoil,
   'HiSoil Premium': imgPremium,
-  'HiSoil Forest': IMG.landscape,
-  'HiSoil Tobacco': IMG.tobaccoLeaf,
   'HiSoil Berry': imgBerry,
   'HiSoil Cannabis': imgCannabis,
   'HiSoil Citrus': imgCitrus,
@@ -84,21 +47,14 @@ const productImages: Record<string, string> = {
   'HiSoil Palm': imgPalm,
   // Materias Primas
   'HiSoil Chip': imgChip,
-  'HiSoil MiniChip': IMG.woodChips,
   'HiSoil Sphagnum': imgSphagnum,
-  'HiSoil Perlite': IMG.perlite,
-  'HiSoil Vermiculite': IMG.perlite,
-  'HiSoil Pometina': IMG.soilDark,
   // Paisajismo
   'HiSoil Tierra Fértil': imgTierraFertil,
-  'HiSoil Level': IMG.handSoil,
   'HiSoil Outdoor': imgOutdoor,
-  'HiSoil Indoor': IMG.indoorPlant,
   'HiSoil GreenRoof': imgGreenroof,
   // Infraestructura
   'HiSoil Restore': imgRestore,
   'HiSoil HydroMulch': imgHydromulch,
-  'HiSoil Erosion': IMG.taludes,
   'HiSoil Native': imgNative,
 };
 
@@ -229,7 +185,7 @@ const categories: Category[] = [
   },
   {
     id: 'paisajismo',
-    name: 'Paisajismo & Techos Verdes',
+    name: 'Sustratos',
     Icon: TreePine,
     eyebrow: 'Línea D',
     intro: 'Sustratos y enmiendas para empresas de paisajismo, countries, parques y desarrollos inmobiliarios.',
@@ -312,8 +268,8 @@ function ProductCard({ p, index }: ProductCardProps) {
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
-            <div className="absolute inset-0 bg-oliva/10 flex items-center justify-center">
-              <span className="text-oliva/40 font-mono text-xs">HiSoil</span>
+            <div className="absolute inset-0 bg-paja border border-dashed border-oliva/25 flex items-center justify-center">
+              <ImageIcon className="w-5 h-5 text-oliva/30" />
             </div>
           )}
         </div>

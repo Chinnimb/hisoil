@@ -1,5 +1,6 @@
 import { Handshake, FlaskConical, Leaf, Users, Award, Scale } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
+import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const valores = [
   {
@@ -8,7 +9,7 @@ const valores = [
     title: "Compromiso",
     quote: "Nos involucramos en cada proyecto hasta alcanzar los resultados esperados.",
     description: "Acompañamos a nuestros clientes desde el diagnóstico inicial hasta la implementación y el seguimiento técnico, construyendo relaciones de largo plazo basadas en la confianza.",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=85&fit=crop",
+    imageLabel: "Compromiso — trabajo en terreno",
   },
   {
     number: "02",
@@ -16,7 +17,7 @@ const valores = [
     title: "Innovación",
     quote: "Desarrollamos soluciones adaptadas a cada desafío.",
     description: "Incorporamos nuevas tecnologías, procesos y conocimientos para mejorar continuamente nuestros productos y servicios, ofreciendo soluciones eficientes y de alto valor agregado.",
-    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=900&q=85&fit=crop",
+    imageLabel: "Innovación — tecnología",
   },
   {
     number: "03",
@@ -24,7 +25,7 @@ const valores = [
     title: "Sustentabilidad",
     quote: "La economía circular es nuestra forma de trabajar.",
     description: "Promovemos la valorización de residuos orgánicos, la recuperación de nutrientes y la regeneración de suelos mediante procesos que reducen el impacto ambiental y generan beneficios económicos.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=900&q=85&fit=crop",
+    imageLabel: "Sustentabilidad — suelo + naturaleza",
   },
   {
     number: "04",
@@ -32,7 +33,7 @@ const valores = [
     title: "Cercanía",
     quote: "Cada cliente cuenta con un equipo que conoce su realidad.",
     description: "Brindamos atención personalizada, acompañamiento permanente y respuestas ágiles para adaptar cada solución a las necesidades de cada proyecto.",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=900&q=85&fit=crop",
+    imageLabel: "Cercanía — acompañamiento",
   },
   {
     number: "05",
@@ -40,7 +41,7 @@ const valores = [
     title: "Calidad",
     quote: "La calidad comienza en el proceso.",
     description: "Aplicamos controles durante cada etapa de producción para garantizar productos confiables, trazables y consistentes, cumpliendo con los estándares técnicos y ambientales correspondientes.",
-    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=900&q=85&fit=crop",
+    imageLabel: "Calidad — producto + control",
   },
   {
     number: "06",
@@ -48,7 +49,7 @@ const valores = [
     title: "Responsabilidad",
     quote: "Cada decisión tiene impacto sobre el ambiente y las personas.",
     description: "Trabajamos con transparencia, compromiso y responsabilidad, promoviendo prácticas que contribuyen al desarrollo sostenible y al cumplimiento de los objetivos ambientales de nuestros clientes.",
-    image: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=900&q=85&fit=crop",
+    imageLabel: "Responsabilidad — operación + proyecto ambiental",
   },
 ];
 
@@ -70,11 +71,7 @@ function ValorCard({ v, index }: ValorCardProps) {
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
         {/* Image with hover zoom */}
         <div className="relative aspect-[4/3] overflow-hidden">
-          <img
-            src={v.image}
-            alt={v.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-          />
+          <ImagePlaceholder label={v.imageLabel} />
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 

@@ -33,7 +33,8 @@ export interface ProductDetail {
   short: string;
   line: ProductLine;
   Icon: LucideIcon;
-  image: string;
+  /** Real product photo. Omitted while photography/generation is pending — UI falls back to a placeholder. */
+  image?: string;
   format: string;
   usage: string;
   badge?: string;
@@ -47,38 +48,6 @@ export interface ProductDetail {
   packaging: string[];
   storage: string;
 }
-
-const IMG = {
-  compostPile: 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=1400&q=85&fit=crop',
-  greenSprout: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1400&q=85&fit=crop',
-  soilDark: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=1400&q=85&fit=crop',
-  handSoil: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1400&q=85&fit=crop',
-  fieldSunset: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=85&fit=crop',
-  cornCrop: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?w=1400&q=85&fit=crop',
-  wheatField: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1400&q=85&fit=crop',
-  cropRows: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1400&q=85&fit=crop',
-  greenLeaves: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1400&q=85&fit=crop',
-  farmerHand: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=1400&q=85&fit=crop',
-  regenAgri: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1400&q=85&fit=crop',
-  waterDrops: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=1400&q=85&fit=crop',
-  seedlings: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=1400&q=85&fit=crop',
-  berry: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=1400&q=85&fit=crop',
-  cannabisLeaf: 'https://images.unsplash.com/photo-1536819114556-1e10f967fb61?w=1400&q=85&fit=crop',
-  citrusFruit: 'https://images.unsplash.com/photo-1557800636-894a64c1696f?w=1400&q=85&fit=crop',
-  grassLawn: 'https://images.unsplash.com/photo-1493589976221-c2357c31ad77?w=1400&q=85&fit=crop',
-  hydroponics: 'https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=1400&q=85&fit=crop',
-  palmLeaf: 'https://images.unsplash.com/photo-1516214104703-d870798883c5?w=1400&q=85&fit=crop',
-  landscape: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1400&q=85&fit=crop',
-  tobaccoLeaf: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1400&q=85&fit=crop',
-  indoorPlant: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1400&q=85&fit=crop',
-  outdoorGarden: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1400&q=85&fit=crop',
-  greenRoof: 'https://images.unsplash.com/photo-1527863280617-15596f92e5c8?w=1400&q=85&fit=crop',
-  woodChips: 'https://images.unsplash.com/photo-1445264718234-a623be589d37?w=1400&q=85&fit=crop',
-  mossGreen: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1400&q=85&fit=crop',
-  perlite: 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=1400&q=85&fit=crop',
-  taludes: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=85&fit=crop',
-  nativeSeeds: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1400&q=85&fit=crop',
-};
 
 const commonPack = ['Bolsa 20 kg', 'Big-bag 500 kg', 'Big-bag 1 tn', 'A granel (>5 tn)'];
 const commonStorage = 'Lugar seco, ventilado y protegido de la luz solar directa. Vida útil: 24 meses desde fecha de elaboración.';
@@ -262,7 +231,7 @@ export const products: ProductDetail[] = [
     slug: 'seed',
     name: 'HiSoil Seed',
     short: 'Sustrato profesional para siembra y germinación.',
-    line: 'sustratos', Icon: Layers, image: IMG.seedlings,
+    line: 'sustratos', Icon: Layers,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Siembra en bandejas, almácigos y germinación de semillas',
     description: 'HiSoil Seed es un sustrato profesional de granulometría fina, especialmente formulado para lograr una germinación uniforme y un excelente desarrollo inicial de las plántulas. Su composición proporciona el equilibrio ideal entre retención de humedad, aireación y estabilidad física, favoreciendo una rápida emergencia y un sistema radicular vigoroso desde las primeras etapas del cultivo.',
     composition: ['Turba sphagnum', 'Perlita', 'Vermiculita', 'Fertilizante starter', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría fina y homogénea', 'Alta estabilidad física'],
@@ -275,7 +244,7 @@ export const products: ProductDetail[] = [
     slug: 'plug',
     name: 'HiSoil Plug',
     short: 'Sustrato profesional para producción de plantines en plugs.',
-    line: 'sustratos', Icon: Layers, image: IMG.seedlings,
+    line: 'sustratos', Icon: Layers,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción profesional de plantines en bandejas plug',
     description: 'HiSoil Plug es un sustrato profesional especialmente desarrollado para la producción intensiva de plantines en bandejas plug y sistemas de llenado automatizados. Su granulometría fina y uniforme permite un llenado preciso de las celdas, favoreciendo una excelente germinación, un desarrollo radicular equilibrado y la formación de un cepellón firme que facilita el trasplante. Su formulación combina materias primas de alta calidad que ofrecen un equilibrio óptimo entre retención de humedad, aireación y drenaje, asegurando un crecimiento uniforme y reduciendo el estrés durante el trasplante.',
     composition: ['Turba sphagnum', 'Perlita fina', 'Coco fibra', 'Fertilizante starter', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría fina y homogénea', 'Excelente estabilidad física'],
@@ -288,7 +257,7 @@ export const products: ProductDetail[] = [
     slug: 'nursery',
     name: 'HiSoil Nursery',
     short: 'Sustrato profesional para viveros de producción.',
-    line: 'sustratos', Icon: Layers, image: IMG.handSoil,
+    line: 'sustratos', Icon: Layers,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción comercial de plantas ornamentales, forestales y frutales',
     description: 'HiSoil Nursery es un sustrato profesional desarrollado para viveros comerciales que requieren un medio de cultivo estable durante todo el ciclo de producción. Su formulación proporciona el equilibrio ideal entre retención de humedad, aireación y drenaje, promoviendo un desarrollo radicular vigoroso y un crecimiento uniforme de las plantas. Gracias a su elevada estabilidad estructural, mantiene sus propiedades físicas durante ciclos prolongados, reduciendo la compactación y favoreciendo un manejo más eficiente del riego y la fertilización.',
     composition: ['Turba sphagnum', 'Corteza compostada', 'Perlita', 'Compost Premium', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría media', 'Alta estabilidad física'],
@@ -314,7 +283,7 @@ export const products: ProductDetail[] = [
     slug: 'forest',
     name: 'HiSoil Forest',
     short: 'Sustrato profesional para producción de plantines forestales.',
-    line: 'sustratos', Icon: Layers, image: IMG.landscape,
+    line: 'sustratos', Icon: Layers,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción de plantines para forestación y reforestación',
     description: 'HiSoil Forest es un sustrato profesional especialmente desarrollado para la producción de plantines forestales nativos y comerciales. Su formulación proporciona una estructura física estable durante ciclos de producción prolongados, favoreciendo el desarrollo de un sistema radicular vigoroso y la formación de un cepellón compacto que mejora el prendimiento luego del trasplante a campo. Gracias a su equilibrio entre retención de humedad, aireación y drenaje, ofrece condiciones óptimas para el crecimiento uniforme de especies forestales en vivero.',
     composition: ['Corteza compostada', 'Turba sphagnum', 'Perlita', 'Compost forestal', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría media', 'Alta estabilidad estructural'],
@@ -327,7 +296,7 @@ export const products: ProductDetail[] = [
     slug: 'tobacco',
     name: 'HiSoil Tobacco',
     short: 'Sustrato profesional para producción de plantines de tabaco.',
-    line: 'sustratos', Icon: Layers, image: IMG.tobaccoLeaf,
+    line: 'sustratos', Icon: Layers,
     format: 'Bolsa 25 · 50 · 80 dm³', usage: 'Producción de plantines de tabaco en sistema flotante y bandejas',
     description: 'HiSoil Tobacco es un sustrato profesional especialmente formulado para la producción de plantines de tabaco mediante sistemas flotantes y bandejas de germinación. Su estructura física garantiza una excelente retención de humedad, adecuada oxigenación radicular y una germinación uniforme, favoreciendo la obtención de plantines vigorosos y homogéneos. Elaborado con materias primas de alta calidad y libre de patógenos, ofrece un medio de cultivo estable que acompaña el desarrollo del plantín hasta el momento del trasplante.',
     composition: ['Turba sphagnum canadiense', 'Perlita', 'Fertilizante starter', 'pH controlado', 'Conductividad eléctrica controlada', 'Granulometría fina y homogénea', 'Excelente estabilidad física'],
@@ -438,7 +407,7 @@ export const products: ProductDetail[] = [
     slug: 'minichip',
     name: 'HiSoil MiniChip',
     short: 'Astillas finas de madera para cobertura decorativa premium.',
-    line: 'materiasprimas', Icon: TreePine, image: IMG.woodChips,
+    line: 'materiasprimas', Icon: TreePine,
     format: 'Granel · Big Bag · Bolsas de 130, 100, 60, 25 y 5 dm³', usage: 'Cobertura decorativa premium · Paisajismo · Jardinería',
     description: 'HiSoil MiniChip es un mulch elaborado con astillas finas de madera seleccionadas, especialmente desarrollado para proyectos de paisajismo de alta calidad. Su granulometría uniforme proporciona una terminación más delicada y elegante, ideal para jardines residenciales, hoteles, barrios privados, viveros y espacios verdes donde la estética es un factor diferencial. Además de aportar una excelente terminación visual, ayuda a conservar la humedad del suelo, controlar el crecimiento de malezas y proteger las raíces frente a las variaciones de temperatura, contribuyendo al desarrollo saludable de las plantas. Su tamaño reducido facilita una distribución uniforme y una mejor adaptación a canteros ornamentales y macizos florales.',
     composition: ['Astillas finas de madera seleccionadas', 'Granulometría 5–15 mm', 'Material cribado y limpio', 'Baja proporción de finos', 'Libre de contaminantes'],
@@ -466,7 +435,7 @@ export const products: ProductDetail[] = [
     slug: 'perlite',
     name: 'HiSoil Perlite',
     short: 'Perlita expandida para sustratos profesionales.',
-    line: 'materiasprimas', Icon: TreePine, image: IMG.perlite,
+    line: 'materiasprimas', Icon: TreePine,
     format: 'Bolsas de 125, 25 y 5 dm³', usage: 'Componente de sustratos · Mejora del drenaje y la aireación',
     description: 'HiSoil Perlite es perlita expandida de calidad hortícola, un material mineral inerte y ultraliviano utilizado para mejorar la estructura física de los sustratos. Gracias a su elevada porosidad incrementa la aireación y el drenaje, favoreciendo un desarrollo radicular más saludable y reduciendo el riesgo de compactación. Su estabilidad física y química permite mantener las propiedades del sustrato durante todo el ciclo del cultivo, siendo un componente ampliamente utilizado en viveros, producción hortícola, cultivos ornamentales, forestales y formulaciones profesionales. Al tratarse de un material estéril, inerte y de bajo peso específico, facilita la preparación de mezclas homogéneas de excelente calidad.',
     composition: ['Perlita expandida 100%', 'Granulometría 2–5 mm', 'pH 6,5–7,5', 'Material mineral inerte', 'Alta porosidad'],
@@ -480,7 +449,7 @@ export const products: ProductDetail[] = [
     slug: 'vermiculite',
     name: 'HiSoil Vermiculite',
     short: 'Vermiculita expandida para sustratos profesionales.',
-    line: 'materiasprimas', Icon: TreePine, image: IMG.perlite,
+    line: 'materiasprimas', Icon: TreePine,
     format: 'Bolsas de 50, 25 y 5 dm³', usage: 'Componente de sustratos · Semilleros · Cobertura de semillas',
     description: 'HiSoil Vermiculite es vermiculita expandida de calidad hortícola, un mineral natural procesado térmicamente que se caracteriza por su elevada capacidad de retención de agua y nutrientes. Su estructura liviana y porosa mejora las propiedades físicas de los sustratos, favoreciendo una germinación más uniforme y un desarrollo radicular vigoroso. Gracias a su elevada capacidad de intercambio catiónico (CIC), contribuye a retener nutrientes disponibles para las plantas, mejorando la eficiencia de fertilización y el aprovechamiento del agua. Es ampliamente utilizada en viveros, semilleros, almácigos y formulaciones profesionales donde se busca maximizar la retención hídrica sin comprometer la aireación del sistema radicular.',
     composition: ['Vermiculita expandida 100%', 'Granulometría 2–4 mm', 'pH 6,5–7,5', 'Material mineral natural', 'Alta capacidad de intercambio catiónico (CIC)'],
@@ -494,7 +463,7 @@ export const products: ProductDetail[] = [
     slug: 'pometina',
     name: 'HiSoil Pometina',
     short: 'Pometina volcánica para formulación de sustratos.',
-    line: 'materiasprimas', Icon: TreePine, image: IMG.soilDark,
+    line: 'materiasprimas', Icon: TreePine,
     format: 'Bolsas de 50, 25 y 5 dm³', usage: 'Formulación de sustratos · Drenaje · Techos verdes',
     description: 'HiSoil Pometina es un agregado mineral de origen volcánico especialmente seleccionado para la formulación de sustratos profesionales. Su estructura altamente porosa mejora el drenaje, incrementa la aireación y aporta estabilidad física a las mezclas, favoreciendo un desarrollo radicular saludable y un crecimiento uniforme de las plantas. Su resistencia a la degradación permite mantener las propiedades físicas del sustrato durante largos períodos, siendo un componente ideal para viveros, horticultura, paisajismo, cultivos ornamentales y sistemas de techos verdes. Su origen mineral natural aporta estabilidad estructural sin modificar significativamente las propiedades químicas de la mezcla.',
     composition: ['Pometina volcánica seleccionada', 'Granulometría 3–10 mm', 'pH 6,8–7,2', 'Material mineral natural', 'Alta estabilidad física'],
@@ -574,7 +543,7 @@ export const products: ProductDetail[] = [
     slug: 'level',
     name: 'HiSoil Level',
     short: 'Sustrato para nivelación, preparación y acondicionamiento de terrenos.',
-    line: 'paisajismo', Icon: TreePine, image: IMG.handSoil,
+    line: 'paisajismo', Icon: TreePine,
     format: 'A granel · Big Bag', usage: 'Nivelación y preparación de superficies',
     description: 'HiSoil Level es un sustrato técnico desarrollado para la nivelación y acondicionamiento de terrenos previo a la implantación de césped, parques, jardines y proyectos de paisajismo. Su formulación combina suelo seleccionado, compost HiSoil y agregados minerales cuidadosamente clasificados para obtener una mezcla homogénea, estable y de excelente comportamiento físico. Permite generar superficies uniformes, con buena capacidad de drenaje y una fertilidad inicial que favorece el rápido establecimiento de la cobertura vegetal, reduciendo los tiempos de preparación de obra y mejorando la calidad del terreno.',
     composition: [
@@ -637,7 +606,7 @@ export const products: ProductDetail[] = [
     slug: 'indoor',
     name: 'HiSoil Indoor',
     short: 'Sustrato profesional para plantas de interior y decoración vegetal.',
-    line: 'paisajismo', Icon: TreePine, image: IMG.indoorPlant,
+    line: 'paisajismo', Icon: TreePine,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³', usage: 'Plantación y trasplante de plantas de interior',
     description: 'HiSoil Indoor es un sustrato profesional especialmente desarrollado para plantas de interior. Su formulación combina materias primas seleccionadas que ofrecen una excelente relación entre aireación, retención de humedad y estabilidad física, creando un ambiente ideal para el desarrollo saludable del sistema radicular. Su textura liviana y homogénea facilita el trasplante y el mantenimiento de plantas ornamentales, permitiendo una distribución uniforme de la humedad y favoreciendo un crecimiento equilibrado durante todo el año. Está especialmente recomendado para hogares, oficinas, comercios, hoteles y cualquier espacio interior donde se busque mantener plantas saludables con un sustrato limpio, estable y de excelente calidad.',
     composition: [
@@ -786,7 +755,7 @@ export const products: ProductDetail[] = [
     slug: 'erosion',
     name: 'HiSoil Erosion',
     short: 'Sistema profesional para control de erosión y estabilización de suelos.',
-    line: 'infraestructura', Icon: Mountain, image: IMG.taludes,
+    line: 'infraestructura', Icon: Mountain,
     format: 'Producto en desarrollo', usage: 'Taludes · Banquinas · Márgenes de ríos', status: 'a-desarrollar',
     description: 'HiSoil Erosion estabiliza el terreno desde el primer momento, reduciendo la erosión y creando las condiciones ideales para el establecimiento de la vegetación. Actualmente se encuentra en etapa de desarrollo, con soluciones adaptables a las necesidades específicas de cada proyecto de restauración ambiental e infraestructura.',
     composition: ['Producto en desarrollo — consultar formulaciones específicas según proyecto'],
@@ -863,6 +832,6 @@ export const lineLabels: Record<ProductLine, string> = {
   agricultura: 'Agricultura',
   sustratos: 'Sustratos Profesionales',
   materiasprimas: 'Materias Primas',
-  paisajismo: 'Paisajismo & Techos Verdes',
+  paisajismo: 'Sustratos',
   infraestructura: 'Infraestructura & Restauración',
 };

@@ -1,4 +1,5 @@
 import { useReveal } from '../../hooks/useReveal';
+import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const kpis = [
   { value: "+25", label: "Años", sub: "desarrollando soluciones ambientales" },
@@ -58,11 +59,7 @@ export function WhoWeAre() {
           className={`grid grid-cols-12 gap-3 md:gap-5 mb-16 md:mb-20 scroll-reveal ${imgVisible ? 'is-visible' : ''}`}
         >
           <div className="col-span-12 md:col-span-7 aspect-[5/4] rounded-2xl overflow-hidden relative group">
-            <img
-              src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1400&q=85&fit=crop"
-              alt="Planta de compostaje Hisoil"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            />
+            <ImagePlaceholder label="Planta operativa Hisoil — Exaltación de la Cruz" />
             <div className="absolute inset-0 bg-gradient-to-tr from-oliva/30 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <div className="inline-block bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
@@ -76,11 +73,7 @@ export function WhoWeAre() {
 
           <div className="col-span-12 md:col-span-5 grid grid-rows-2 gap-3 md:gap-5">
             <div className="rounded-2xl overflow-hidden relative group min-h-[180px]">
-              <img
-                src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=900&q=85&fit=crop"
-                alt="Diagnóstico técnico"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
+              <ImagePlaceholder label="Trabajo técnico en terreno" />
               <div className="absolute inset-0 bg-gradient-to-t from-oliva/40 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <span className="inline-block bg-oliva/95 backdrop-blur-sm text-white text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full">
