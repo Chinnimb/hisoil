@@ -124,20 +124,15 @@ export function ServiceBenefits() {
         {/* Header */}
         <div
           ref={headerRef}
-          className={`flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
+          className={`max-w-xl mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
-          <div className="max-w-xl">
-            <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-              <span className="text-oliva text-xs font-mono uppercase tracking-widest">05 — Beneficios</span>
-            </div>
-            <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Una solución integral que combina cumplimiento ambiental, eficiencia operativa y generación de valor.
-            </p>
+          <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">05 — Beneficios</span>
           </div>
-          <button className="self-start md:self-auto border border-oliva text-oliva px-6 py-3 rounded-full text-sm font-medium hover:bg-oliva hover:text-white transition-all whitespace-nowrap">
-            Solicitar Presupuesto
-          </button>
+          <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Una solución integral que combina cumplimiento ambiental, eficiencia operativa y generación de valor.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">

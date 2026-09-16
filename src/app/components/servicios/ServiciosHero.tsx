@@ -57,7 +57,7 @@ export function ServiciosHero() {
         <div className="absolute inset-0 bg-gradient-to-t from-noche/60 via-transparent to-noche/10" />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
+        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-16 md:py-20">
           <div className="h-fade inline-block border border-white/30 px-4 py-1.5 mb-8" style={{ animationDelay: '0.1s' }}>
             <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Servicios</span>
           </div>
