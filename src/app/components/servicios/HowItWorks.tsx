@@ -53,7 +53,7 @@ export function HowItWorks() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">03 — Proceso</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">04 — Proceso</span>
           </div>
           <h2 className="text-oliva mb-4">Cómo funciona</h2>
           <p className="text-gray-700 leading-relaxed">
