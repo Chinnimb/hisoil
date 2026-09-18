@@ -7,7 +7,7 @@ import { LiveCounter } from './LiveCounter';
 const COUNTER_EPOCH = new Date('2026-08-25T00:00:00-03:00');
 
 const IMG_URL =
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1920";
+  'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1920';
 
 export function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -57,7 +57,6 @@ export function Hero() {
       `}</style>
 
       <section className="relative min-h-[95vh] flex flex-col overflow-hidden">
-
         {/* Background image with parallax */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
@@ -79,8 +78,11 @@ export function Hero() {
         <div className="relative z-10 border-b border-white/10 px-6 md:px-12 lg:px-20 py-4">
           <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs font-mono text-white/40">
-              <span>Hisoil</span><span>/</span>
-              <span className="text-white/70">Regeneración de recursos · Compostaje profesional</span>
+              <span>Hisoil</span>
+              <span>/</span>
+              <span className="text-white/70">
+                Regeneración de recursos · Compostaje profesional
+              </span>
             </div>
             <div className="hidden md:flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 bg-lima rounded-full animate-pulse" />
@@ -92,7 +94,6 @@ export function Hero() {
         {/* Main content */}
         <div className="relative z-10 flex-1 flex flex-col max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 pt-12 pb-16 md:pt-16 md:pb-20">
           <div className="flex-1 flex flex-col justify-center max-w-5xl">
-
             <div
               className="hero-fade inline-block border border-white/25 bg-white/5 backdrop-blur-sm px-4 py-1.5 self-start mb-8"
               style={{ animationDelay: '0.1s' }}
@@ -112,7 +113,8 @@ export function Hero() {
                 animationDelay: '0.25s',
               }}
             >
-              Regeneramos recursos.<br />
+              Regeneramos recursos.
+              <br />
               <span style={{ color: '#B8C521' }}>Construimos el futuro.</span>
             </h1>
 
@@ -120,7 +122,9 @@ export function Hero() {
               className="hero-fade text-white/85 leading-relaxed max-w-2xl mb-10"
               style={{ fontSize: '1.1rem', animationDelay: '0.4s' }}
             >
-              Transformamos recursos orgánicos en soluciones de valor mediante compostaje profesional, sustratos de alta calidad y asesoramiento técnico especializado para productores, empresas y municipios.
+              Transformamos recursos orgánicos en soluciones de valor mediante compostaje
+              profesional, sustratos de alta calidad y asesoramiento técnico especializado para
+              productores, empresas y municipios.
             </p>
 
             {/* 3 counters (2 dinámicos en tiempo real + 1 estático) */}
@@ -137,10 +141,20 @@ export function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
                     <Leaf className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
                   </div>
-                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Toneladas procesadas</div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">
+                    Toneladas procesadas
+                  </div>
                 </div>
-                <div className="text-white font-bold leading-none mb-1 tabular-nums" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
-                  <LiveCounter base={216854} epoch={COUNTER_EPOCH} ratePerSecondKg={1.15} suffix=" t" />
+                <div
+                  className="text-white font-bold leading-none mb-1 tabular-nums"
+                  style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
+                >
+                  <LiveCounter
+                    base={216854}
+                    epoch={COUNTER_EPOCH}
+                    ratePerSecondKg={1.15}
+                    suffix=" t"
+                  />
                 </div>
                 <div className="text-white/60 text-xs">de residuos valorizados en tiempo real</div>
               </div>
@@ -154,10 +168,20 @@ export function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
                     <CloudOff className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
                   </div>
-                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Emisiones evitadas</div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">
+                    Emisiones evitadas
+                  </div>
                 </div>
-                <div className="text-white font-bold leading-none mb-1 tabular-nums" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
-                  <LiveCounter base={118800} epoch={COUNTER_EPOCH} ratePerSecondKg={0.57} suffix=" t CO₂" />
+                <div
+                  className="text-white font-bold leading-none mb-1 tabular-nums"
+                  style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
+                >
+                  <LiveCounter
+                    base={118800}
+                    epoch={COUNTER_EPOCH}
+                    ratePerSecondKg={0.57}
+                    suffix=" t CO₂"
+                  />
                 </div>
                 <div className="text-white/60 text-xs">de gases de efecto invernadero</div>
               </div>
@@ -171,12 +195,19 @@ export function Hero() {
                   <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center group-hover:bg-lima/30 group-hover:border-lima/50 transition-all duration-300">
                     <MapPin className="w-4 h-4 text-lima group-hover:text-oliva transition-colors duration-300" />
                   </div>
-                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">Presencia</div>
+                  <div className="text-white/60 text-[10px] font-mono uppercase tracking-widest">
+                    Presencia
+                  </div>
                 </div>
-                <div className="text-white font-bold leading-none mb-1" style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}>
+                <div
+                  className="text-white font-bold leading-none mb-1"
+                  style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
+                >
                   3 provincias
                 </div>
-                <div className="text-white/60 text-xs">con proyectos activos · capacidad para desarrollar en todo el país</div>
+                <div className="text-white/60 text-xs">
+                  con proyectos activos · capacidad para desarrollar en todo el país
+                </div>
               </div>
             </div>
           </div>

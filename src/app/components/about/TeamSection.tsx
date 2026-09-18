@@ -2,11 +2,31 @@ import { Sprout, ClipboardCheck, Wrench, Factory, Handshake, ImagePlus } from 'l
 import { useReveal } from '../../hooks/useReveal';
 
 const disciplines = [
-  { Icon: Sprout, title: 'Ingenieros agrónomos', description: 'Diagnóstico técnico, planes nutricionales y seguimiento a campo.' },
-  { Icon: ClipboardCheck, title: 'Especialistas ambientales', description: 'Gestión de residuos, normativa y compliance ambiental.' },
-  { Icon: Wrench, title: 'Técnicos de producción', description: 'Control de calidad y procesos de compostaje profesional.' },
-  { Icon: Factory, title: 'Operadores de planta', description: 'Ejecución operativa en cada etapa del tratamiento.' },
-  { Icon: Handshake, title: 'Asesores comerciales', description: 'Acompañamiento personalizado desde la primera consulta.' },
+  {
+    Icon: Sprout,
+    title: 'Ingenieros agrónomos',
+    description: 'Diagnóstico técnico, planes nutricionales y seguimiento a campo.',
+  },
+  {
+    Icon: ClipboardCheck,
+    title: 'Especialistas ambientales',
+    description: 'Gestión de residuos, normativa y compliance ambiental.',
+  },
+  {
+    Icon: Wrench,
+    title: 'Técnicos de producción',
+    description: 'Control de calidad y procesos de compostaje profesional.',
+  },
+  {
+    Icon: Factory,
+    title: 'Operadores de planta',
+    description: 'Ejecución operativa en cada etapa del tratamiento.',
+  },
+  {
+    Icon: Handshake,
+    title: 'Asesores comerciales',
+    description: 'Acompañamiento personalizado desde la primera consulta.',
+  },
 ];
 
 export function TeamSection() {
@@ -24,7 +44,9 @@ export function TeamSection() {
           className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">08 — Equipo</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              08 — Equipo
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Las personas detrás de Hisoil.</h2>
         </div>
@@ -36,18 +58,29 @@ export function TeamSection() {
         >
           <div className="lg:col-span-4">
             <h3 className="text-oliva font-bold text-2xl leading-tight">
-              Un equipo <span className="text-lima">multidisciplinario</span> integrado en cada etapa.
+              Un equipo <span className="text-lima">multidisciplinario</span> integrado en cada
+              etapa.
             </h3>
           </div>
           <div className="lg:col-span-8 space-y-5 text-gray-700 leading-relaxed">
             <p>
-              Detrás de cada proyecto hay un equipo multidisciplinario que trabaja de manera integrada para desarrollar soluciones eficientes y sostenibles.
+              Detrás de cada proyecto hay un equipo multidisciplinario que trabaja de manera
+              integrada para desarrollar soluciones eficientes y sostenibles.
             </p>
             <p>
-              Combinamos <span className="text-oliva font-semibold">experiencia, conocimiento técnico y compromiso con la mejora continua</span> para acompañar a nuestros clientes en cada etapa del proceso, desde el diagnóstico inicial hasta la implementación y el seguimiento de los resultados.
+              Combinamos{' '}
+              <span className="text-oliva font-semibold">
+                experiencia, conocimiento técnico y compromiso con la mejora continua
+              </span>{' '}
+              para acompañar a nuestros clientes en cada etapa del proceso, desde el diagnóstico
+              inicial hasta la implementación y el seguimiento de los resultados.
             </p>
             <p>
-              Nuestro objetivo es brindar soluciones <span className="text-oliva font-semibold">confiables, cercanas y adaptadas a cada realidad productiva</span>, generando relaciones de largo plazo basadas en la confianza y el trabajo conjunto.
+              Nuestro objetivo es brindar soluciones{' '}
+              <span className="text-oliva font-semibold">
+                confiables, cercanas y adaptadas a cada realidad productiva
+              </span>
+              , generando relaciones de largo plazo basadas en la confianza y el trabajo conjunto.
             </p>
           </div>
         </div>
@@ -85,10 +118,15 @@ export function TeamSection() {
               <ImagePlus className="w-7 h-7 text-oliva" />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-2">Galería</div>
-              <h4 className="text-oliva font-bold text-lg md:text-xl mb-1">Fotos y videos de nuestras plantas</h4>
+              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-2">
+                Galería
+              </div>
+              <h4 className="text-oliva font-bold text-lg md:text-xl mb-1">
+                Fotos y videos de nuestras plantas
+              </h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Próximamente incorporaremos material audiovisual de nuestras operaciones y equipo en campo.
+                Próximamente incorporaremos material audiovisual de nuestras operaciones y equipo en
+                campo.
               </p>
             </div>
           </div>

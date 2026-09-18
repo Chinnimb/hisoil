@@ -22,11 +22,7 @@ export function Header() {
         <div className="flex lg:grid lg:grid-cols-[1fr_auto_1fr] justify-between items-center gap-4 lg:gap-6 h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center lg:justify-self-start">
-            <img
-              src="/hisoil-logo.png"
-              alt="HISOIL"
-              className="h-8 md:h-10 w-auto"
-            />
+            <img src="/hisoil-logo.png" alt="HISOIL" className="h-8 md:h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation — centered column of the grid */}
@@ -56,7 +52,10 @@ export function Header() {
             >
               Contacto
             </Link>
-            <button onClick={open} className="px-6 py-2.5 bg-oliva text-white font-medium rounded-full hover:bg-oliva transition-all shadow-md hover:shadow-lg text-sm">
+            <button
+              onClick={open}
+              className="px-6 py-2.5 bg-oliva text-white font-medium rounded-full hover:bg-oliva transition-all shadow-md hover:shadow-lg text-sm"
+            >
               Solicitar Presupuesto
             </button>
           </div>
@@ -66,10 +65,11 @@ export function Header() {
             className="lg:hidden p-2 rounded-lg hover:bg-paja"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen
-              ? <X className="w-6 h-6 text-gray-700" />
-              : <Menu className="w-6 h-6 text-gray-700" />
-            }
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-gray-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-700" />
+            )}
           </button>
         </div>
 
@@ -97,7 +97,10 @@ export function Header() {
                 Contacto
               </Link>
               <button
-                onClick={() => { open(); setMobileMenuOpen(false) }}
+                onClick={() => {
+                  open();
+                  setMobileMenuOpen(false);
+                }}
                 className="px-6 py-3 bg-oliva text-white font-medium rounded-full text-center"
               >
                 Solicitar Presupuesto

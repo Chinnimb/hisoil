@@ -54,7 +54,9 @@ export function CompostHighlight() {
               HiSoil <span className="text-lima">Compost</span>
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-8">
-              Nuestra enmienda orgánica de referencia. Elaborada mediante compostaje aeróbico controlado a partir de residuos agroindustriales seleccionados, con alto contenido de materia orgánica estabilizada y actividad biológica probada.
+              Nuestra enmienda orgánica de referencia. Elaborada mediante compostaje aeróbico
+              controlado a partir de residuos agroindustriales seleccionados, con alto contenido de
+              materia orgánica estabilizada y actividad biológica probada.
             </p>
 
             <ul className="space-y-3 mb-10">

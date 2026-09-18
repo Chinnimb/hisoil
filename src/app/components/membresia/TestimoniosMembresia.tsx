@@ -1,30 +1,33 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "[Testimonio — Desde que sumamos la membresía Hisoil, dejamos de preocuparnos por cuándo pedir los insumos. Llegan cuando los necesitamos, con el asesoramiento técnico que nos ayuda a decidir bien.]",
-    name: "Ing. [Nombre]",
-    role: "Responsable técnico, [Empresa A]",
-    plan: "Plan Profesional",
-    years: "2 años de membresía",
-    stats: { label: "Ahorro anual estimado", value: "+18%" },
+    quote:
+      '[Testimonio — Desde que sumamos la membresía Hisoil, dejamos de preocuparnos por cuándo pedir los insumos. Llegan cuando los necesitamos, con el asesoramiento técnico que nos ayuda a decidir bien.]',
+    name: 'Ing. [Nombre]',
+    role: 'Responsable técnico, [Empresa A]',
+    plan: 'Plan Profesional',
+    years: '2 años de membresía',
+    stats: { label: 'Ahorro anual estimado', value: '+18%' },
   },
   {
-    quote: "[Testimonio — El asesoramiento prioritario marcó la diferencia en la campaña de maíz. Teníamos un problema de pH que resolvimos en 24 horas con el equipo técnico. Sin membresía, eso hubiera tardado semanas.]",
-    name: "[Nombre]",
-    role: "Productor independiente, [Zona]",
-    plan: "Plan Profesional",
-    years: "1 año de membresía",
-    stats: { label: "Reducción en costos de insumos", value: "−12%" },
+    quote:
+      '[Testimonio — El asesoramiento prioritario marcó la diferencia en la campaña de maíz. Teníamos un problema de pH que resolvimos en 24 horas con el equipo técnico. Sin membresía, eso hubiera tardado semanas.]',
+    name: '[Nombre]',
+    role: 'Productor independiente, [Zona]',
+    plan: 'Plan Profesional',
+    years: '1 año de membresía',
+    stats: { label: 'Reducción en costos de insumos', value: '−12%' },
   },
   {
-    quote: "[Testimonio — La posibilidad de programar los envíos por campaña fue el cambio más importante para nuestra operación. Ahora planificamos con anticipación y el resultado se nota en los márgenes.]",
-    name: "Lic. [Nombre]",
-    role: "Gerente de producción, [Empresa B]",
-    plan: "Plan Premium",
-    years: "3 años de membresía",
-    stats: { label: "Operaciones anuales sin interrupciones", value: "100%" },
+    quote:
+      '[Testimonio — La posibilidad de programar los envíos por campaña fue el cambio más importante para nuestra operación. Ahora planificamos con anticipación y el resultado se nota en los márgenes.]',
+    name: 'Lic. [Nombre]',
+    role: 'Gerente de producción, [Empresa B]',
+    plan: 'Plan Premium',
+    years: '3 años de membresía',
+    stats: { label: 'Operaciones anuales sin interrupciones', value: '100%' },
   },
 ];
 
@@ -41,15 +44,23 @@ export function TestimoniosMembresia() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">08 — Testimonios</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+              08 — Testimonios
+            </span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-oliva">Lo que dicen nuestros miembros.</h2>
             <div className="flex gap-2">
-              <button onClick={prev} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja transition-colors">
+              <button
+                onClick={prev}
+                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja transition-colors"
+              >
                 <ChevronLeft size={16} className="text-gray-700" />
               </button>
-              <button onClick={next} className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja transition-colors">
+              <button
+                onClick={next}
+                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-paja transition-colors"
+              >
                 <ChevronRight size={16} className="text-gray-700" />
               </button>
             </div>
@@ -100,7 +111,7 @@ export function TestimoniosMembresia() {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all ${i === current ? "w-6 bg-oliva" : "w-1.5 bg-gray-300"}`}
+                  className={`h-1.5 rounded-full transition-all ${i === current ? 'w-6 bg-oliva' : 'w-1.5 bg-gray-300'}`}
                 />
               ))}
             </div>

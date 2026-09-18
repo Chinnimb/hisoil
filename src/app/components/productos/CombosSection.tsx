@@ -1,58 +1,54 @@
 const combos = [
   {
-    id: "huerta",
-    name: "Combo Huerta",
-    tagline: "Para producciones hortícolas intensivas",
-    icon: "🥬",
-    products: [
-      "Bioestimulante Radicular Plus",
-      "Fertilizante NPK Líquido",
-      "Compost Premium A",
-    ],
+    id: 'huerta',
+    name: 'Combo Huerta',
+    tagline: 'Para producciones hortícolas intensivas',
+    icon: '🥬',
+    products: ['Bioestimulante Radicular Plus', 'Fertilizante NPK Líquido', 'Compost Premium A'],
     benefits: [
-      "Mayor densidad de frutos",
-      "Reducción del ciclo productivo",
-      "Menos dependencia de agroquímicos",
+      'Mayor densidad de frutos',
+      'Reducción del ciclo productivo',
+      'Menos dependencia de agroquímicos',
     ],
-    saving: "Ahorro estimado 18% vs. compra individual",
+    saving: 'Ahorro estimado 18% vs. compra individual',
     highlight: false,
   },
   {
-    id: "recuperacion",
-    name: "Combo Recuperación de Suelos",
-    tagline: "Para suelos degradados o con baja productividad",
-    icon: "🪱",
+    id: 'recuperacion',
+    name: 'Combo Recuperación de Suelos',
+    tagline: 'Para suelos degradados o con baja productividad',
+    icon: '🪱',
     products: [
-      "Enmienda Calcárea",
-      "Inoculante Microbiano",
-      "Humus de Lombriz",
-      "Activador Biológico",
+      'Enmienda Calcárea',
+      'Inoculante Microbiano',
+      'Humus de Lombriz',
+      'Activador Biológico',
     ],
     benefits: [
-      "Restauración de pH y estructura",
-      "Reactivación de microbiota benéfica",
-      "Mejora de retención de agua",
+      'Restauración de pH y estructura',
+      'Reactivación de microbiota benéfica',
+      'Mejora de retención de agua',
     ],
-    saving: "Ahorro estimado 22% vs. compra individual",
+    saving: 'Ahorro estimado 22% vs. compra individual',
     highlight: true,
   },
   {
-    id: "alto-rendimiento",
-    name: "Combo Alto Rendimiento",
-    tagline: "Para campañas de soja y maíz de alta exigencia",
-    icon: "🌾",
+    id: 'alto-rendimiento',
+    name: 'Combo Alto Rendimiento',
+    tagline: 'Para campañas de soja y maíz de alta exigencia',
+    icon: '🌾',
     products: [
-      "Fertilizante NPK Balance",
-      "Zinc Quelado",
-      "Azufre Granulado",
-      "Bioestimulante Foliar",
+      'Fertilizante NPK Balance',
+      'Zinc Quelado',
+      'Azufre Granulado',
+      'Bioestimulante Foliar',
     ],
     benefits: [
-      "Aumento de rendimiento proyectado +20%",
-      "Nutrición balanceada en etapas críticas",
-      "Protocolo técnico incluido",
+      'Aumento de rendimiento proyectado +20%',
+      'Nutrición balanceada en etapas críticas',
+      'Protocolo técnico incluido',
     ],
-    saving: "Ahorro estimado 20% vs. compra individual",
+    saving: 'Ahorro estimado 20% vs. compra individual',
     highlight: false,
   },
 ];
@@ -64,11 +60,14 @@ export function CombosSection() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">05 — Soluciones recomendadas</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">
+              05 — Soluciones recomendadas
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Combos diseñados para resultados concretos</h2>
           <p className="text-gray-700 leading-relaxed">
-            [Descripción — Paquetes de productos formulados y recomendados por nuestro equipo técnico para objetivos específicos. Incluyen protocolo de aplicación.]
+            [Descripción — Paquetes de productos formulados y recomendados por nuestro equipo
+            técnico para objetivos específicos. Incluyen protocolo de aplicación.]
           </p>
         </div>
 
@@ -78,8 +77,8 @@ export function CombosSection() {
               key={combo.id}
               className={`rounded-sm overflow-hidden flex flex-col relative ${
                 combo.highlight
-                  ? "bg-oliva text-white border-2 border-gray-700 shadow-2xl scale-[1.02]"
-                  : "bg-paja border border-gray-200"
+                  ? 'bg-oliva text-white border-2 border-gray-700 shadow-2xl scale-[1.02]'
+                  : 'bg-paja border border-gray-200'
               }`}
             >
               {combo.highlight && (
@@ -89,28 +88,47 @@ export function CombosSection() {
               )}
 
               {/* Header area */}
-              <div className={`px-8 pt-10 pb-6 border-b ${combo.highlight ? "border-white/10" : "border-gray-200"}`}>
-                <div className={`w-14 h-14 rounded-sm flex items-center justify-center text-3xl mb-4 ${combo.highlight ? "bg-white/10" : "bg-white border border-gray-200"}`}>
+              <div
+                className={`px-8 pt-10 pb-6 border-b ${combo.highlight ? 'border-white/10' : 'border-gray-200'}`}
+              >
+                <div
+                  className={`w-14 h-14 rounded-sm flex items-center justify-center text-3xl mb-4 ${combo.highlight ? 'bg-white/10' : 'bg-white border border-gray-200'}`}
+                >
                   {combo.icon}
                 </div>
-                <h3 className={`text-xl font-bold mb-2 ${combo.highlight ? "text-white" : "text-oliva"}`}>
+                <h3
+                  className={`text-xl font-bold mb-2 ${combo.highlight ? 'text-white' : 'text-oliva'}`}
+                >
                   {combo.name}
                 </h3>
-                <p className={`text-sm ${combo.highlight ? "text-white/70" : "text-gray-700"}`}>
+                <p className={`text-sm ${combo.highlight ? 'text-white/70' : 'text-gray-700'}`}>
                   {combo.tagline}
                 </p>
               </div>
 
               {/* Products included */}
-              <div className={`px-8 py-6 border-b ${combo.highlight ? "border-white/10" : "border-gray-200"}`}>
-                <div className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? "text-white/55" : "text-gray-600"}`}>
+              <div
+                className={`px-8 py-6 border-b ${combo.highlight ? 'border-white/10' : 'border-gray-200'}`}
+              >
+                <div
+                  className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? 'text-white/55' : 'text-gray-600'}`}
+                >
                   Productos incluidos
                 </div>
                 <div className="space-y-2">
                   {combo.products.map((p) => (
-                    <div key={p} className={`flex items-center gap-2 text-sm ${combo.highlight ? "text-white/70" : "text-gray-600"}`}>
-                      <div className={`w-5 h-5 rounded-sm border flex items-center justify-center flex-shrink-0 ${combo.highlight ? "border-white/20 bg-white/5" : "border-gray-300 bg-white"}`}>
-                        <span className={`text-[10px] ${combo.highlight ? "text-white/55" : "text-gray-500"}`}>▪</span>
+                    <div
+                      key={p}
+                      className={`flex items-center gap-2 text-sm ${combo.highlight ? 'text-white/70' : 'text-gray-600'}`}
+                    >
+                      <div
+                        className={`w-5 h-5 rounded-sm border flex items-center justify-center flex-shrink-0 ${combo.highlight ? 'border-white/20 bg-white/5' : 'border-gray-300 bg-white'}`}
+                      >
+                        <span
+                          className={`text-[10px] ${combo.highlight ? 'text-white/55' : 'text-gray-500'}`}
+                        >
+                          ▪
+                        </span>
                       </div>
                       {p}
                     </div>
@@ -119,15 +137,26 @@ export function CombosSection() {
               </div>
 
               {/* Benefits */}
-              <div className={`px-8 py-6 flex-1 border-b ${combo.highlight ? "border-white/10" : "border-gray-200"}`}>
-                <div className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? "text-white/55" : "text-gray-600"}`}>
+              <div
+                className={`px-8 py-6 flex-1 border-b ${combo.highlight ? 'border-white/10' : 'border-gray-200'}`}
+              >
+                <div
+                  className={`text-xs font-mono uppercase tracking-widest mb-3 ${combo.highlight ? 'text-white/55' : 'text-gray-600'}`}
+                >
                   Beneficios
                 </div>
                 <ul className="space-y-2">
                   {combo.benefits.map((b) => (
-                    <li key={b} className={`flex items-start gap-2 text-sm ${combo.highlight ? "text-white/70" : "text-gray-600"}`}>
-                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center mt-0.5 flex-shrink-0 ${combo.highlight ? "border-white/20" : "border-gray-300"}`}>
-                        <div className={`w-1.5 h-1.5 rounded-full ${combo.highlight ? "bg-white/40" : "bg-gray-400"}`} />
+                    <li
+                      key={b}
+                      className={`flex items-start gap-2 text-sm ${combo.highlight ? 'text-white/70' : 'text-gray-600'}`}
+                    >
+                      <div
+                        className={`w-4 h-4 rounded-full border flex items-center justify-center mt-0.5 flex-shrink-0 ${combo.highlight ? 'border-white/20' : 'border-gray-300'}`}
+                      >
+                        <div
+                          className={`w-1.5 h-1.5 rounded-full ${combo.highlight ? 'bg-white/40' : 'bg-gray-400'}`}
+                        />
                       </div>
                       {b}
                     </li>
@@ -137,14 +166,18 @@ export function CombosSection() {
 
               {/* Saving + CTA */}
               <div className="px-8 py-6">
-                <div className={`text-xs font-mono mb-4 ${combo.highlight ? "text-white/65" : "text-gray-600"}`}>
+                <div
+                  className={`text-xs font-mono mb-4 ${combo.highlight ? 'text-white/65' : 'text-gray-600'}`}
+                >
                   {combo.saving}
                 </div>
-                <button className={`w-full py-3.5 rounded-full font-semibold text-sm transition-colors ${
-                  combo.highlight
-                    ? "bg-white text-oliva hover:bg-paja"
-                    : "bg-oliva text-white hover:bg-oliva"
-                }`}>
+                <button
+                  className={`w-full py-3.5 rounded-full font-semibold text-sm transition-colors ${
+                    combo.highlight
+                      ? 'bg-white text-oliva hover:bg-paja'
+                      : 'bg-oliva text-white hover:bg-oliva'
+                  }`}
+                >
                   Solicitar presupuesto
                 </button>
               </div>
@@ -154,8 +187,13 @@ export function CombosSection() {
 
         {/* Custom combo CTA */}
         <div className="mt-10 border border-dashed border-gray-300 rounded-sm p-8 text-center">
-          <p className="text-gray-700 mb-2 font-medium">¿Necesitás un combo personalizado para tu operación?</p>
-          <p className="text-gray-600 text-sm mb-5">[Texto — Nuestro equipo técnico diseña paquetes a medida según tu cultivo, superficie y objetivos.]</p>
+          <p className="text-gray-700 mb-2 font-medium">
+            ¿Necesitás un combo personalizado para tu operación?
+          </p>
+          <p className="text-gray-600 text-sm mb-5">
+            [Texto — Nuestro equipo técnico diseña paquetes a medida según tu cultivo, superficie y
+            objetivos.]
+          </p>
           <button className="border border-gray-400 text-gray-600 px-7 py-3 rounded-full text-sm font-medium hover:bg-paja transition-colors">
             Hablar con un asesor →
           </button>

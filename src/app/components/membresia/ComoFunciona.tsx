@@ -1,27 +1,31 @@
 const steps = [
   {
-    number: "01",
-    title: "Elegís tu plan",
-    description: "[Descripción — Seleccionás el plan que mejor se adapta al tamaño y necesidades de tu operación. Podés cambiar de plan en cualquier momento.]",
-    detail: "Proceso de selección online en menos de 5 minutos",
+    number: '01',
+    title: 'Elegís tu plan',
+    description:
+      '[Descripción — Seleccionás el plan que mejor se adapta al tamaño y necesidades de tu operación. Podés cambiar de plan en cualquier momento.]',
+    detail: 'Proceso de selección online en menos de 5 minutos',
   },
   {
-    number: "02",
-    title: "Configurás tus envíos",
-    description: "[Descripción — Indicás qué productos necesitás, en qué cantidades y con qué frecuencia. El equipo técnico te ayuda a armar el plan de suministro óptimo.]",
-    detail: "Asesoramiento técnico incluido en la configuración",
+    number: '02',
+    title: 'Configurás tus envíos',
+    description:
+      '[Descripción — Indicás qué productos necesitás, en qué cantidades y con qué frecuencia. El equipo técnico te ayuda a armar el plan de suministro óptimo.]',
+    detail: 'Asesoramiento técnico incluido en la configuración',
   },
   {
-    number: "03",
-    title: "Activamos la membresía",
-    description: "[Descripción — Confirmamos los datos, procesamos el primer pago y activamos tu acceso al área de miembros, fichas técnicas y canal prioritario de consultas.]",
-    detail: "Activación en menos de 24 horas hábiles",
+    number: '03',
+    title: 'Activamos la membresía',
+    description:
+      '[Descripción — Confirmamos los datos, procesamos el primer pago y activamos tu acceso al área de miembros, fichas técnicas y canal prioritario de consultas.]',
+    detail: 'Activación en menos de 24 horas hábiles',
   },
   {
-    number: "04",
-    title: "Recibís y seguimos",
-    description: "[Descripción — Los envíos llegan según el calendario acordado. Nuestro equipo hace el seguimiento técnico y ajusta las recomendaciones en cada campaña.]",
-    detail: "Monitoreo continuo de resultados incluido",
+    number: '04',
+    title: 'Recibís y seguimos',
+    description:
+      '[Descripción — Los envíos llegan según el calendario acordado. Nuestro equipo hace el seguimiento técnico y ajusta las recomendaciones en cada campaña.]',
+    detail: 'Monitoreo continuo de resultados incluido',
   },
 ];
 
@@ -32,12 +36,15 @@ export function ComoFunciona() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">04 — Cómo funciona</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+              04 — Cómo funciona
+            </span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-oliva max-w-xl">Cuatro pasos para empezar a ser miembro.</h2>
             <p className="text-gray-600 text-sm font-mono max-w-xs text-right">
-              [Tagline — El proceso completo lleva menos de un día hábil desde la solicitud hasta la activación.]
+              [Tagline — El proceso completo lleva menos de un día hábil desde la solicitud hasta la
+              activación.]
             </p>
           </div>
         </div>
@@ -53,9 +60,7 @@ export function ComoFunciona() {
                 <div className="w-10 h-10 rounded-full bg-oliva text-white flex items-center justify-center flex-shrink-0">
                   <span className="text-xs font-mono font-bold">{s.number}</span>
                 </div>
-                {i < steps.length - 1 && (
-                  <div className="flex-1 h-px bg-gray-200" />
-                )}
+                {i < steps.length - 1 && <div className="flex-1 h-px bg-gray-200" />}
               </div>
               <h3 className="text-oliva font-semibold mb-3">{s.title}</h3>
               <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-4">{s.description}</p>
@@ -74,7 +79,9 @@ export function ComoFunciona() {
                 <div className="w-10 h-10 rounded-full bg-oliva text-white flex items-center justify-center text-xs font-mono font-bold flex-shrink-0">
                   {s.number}
                 </div>
-                {i < steps.length - 1 && <div className="w-px flex-1 bg-gray-200 my-2" style={{ minHeight: 32 }} />}
+                {i < steps.length - 1 && (
+                  <div className="w-px flex-1 bg-gray-200 my-2" style={{ minHeight: 32 }} />
+                )}
               </div>
               <div className="pb-8 flex-1">
                 <h3 className="text-oliva font-semibold mb-2">{s.title}</h3>
@@ -91,7 +98,9 @@ export function ComoFunciona() {
         <div className="bg-oliva rounded-sm p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <div className="text-white font-semibold mb-1">¿Listo para empezar?</div>
-            <div className="text-white/65 text-sm font-mono">El primer mes incluye asesoramiento técnico de bienvenida sin cargo.</div>
+            <div className="text-white/65 text-sm font-mono">
+              El primer mes incluye asesoramiento técnico de bienvenida sin cargo.
+            </div>
           </div>
           <button className="bg-white text-oliva px-8 py-3 rounded-full font-semibold hover:bg-paja transition-colors flex-shrink-0">
             Solicitar membresía

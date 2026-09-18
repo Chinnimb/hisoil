@@ -1,45 +1,45 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const steps = [
   {
-    number: "01",
-    title: "Diagnóstico",
+    number: '01',
+    title: 'Diagnóstico',
     description:
-      "[Evaluación inicial del terreno, análisis de suelo y relevamiento de condiciones. Identificación de necesidades y factores críticos del proyecto.]",
-    duration: "1–2 semanas",
-    deliverable: "Informe de diagnóstico",
+      '[Evaluación inicial del terreno, análisis de suelo y relevamiento de condiciones. Identificación de necesidades y factores críticos del proyecto.]',
+    duration: '1–2 semanas',
+    deliverable: 'Informe de diagnóstico',
   },
   {
-    number: "02",
-    title: "Recomendación técnica",
+    number: '02',
+    title: 'Recomendación técnica',
     description:
-      "[Diseño de la solución personalizada basada en los datos del diagnóstico. Propuesta técnica detallada con opciones de implementación y costos.]",
-    duration: "3–5 días",
-    deliverable: "Propuesta técnica",
+      '[Diseño de la solución personalizada basada en los datos del diagnóstico. Propuesta técnica detallada con opciones de implementación y costos.]',
+    duration: '3–5 días',
+    deliverable: 'Propuesta técnica',
   },
   {
-    number: "03",
-    title: "Implementación",
+    number: '03',
+    title: 'Implementación',
     description:
-      "[Ejecución del plan con supervisión técnica continua. Aplicación de productos, tratamientos o instalación de sistemas según protocolos validados.]",
-    duration: "Variable",
-    deliverable: "Registro de aplicación",
+      '[Ejecución del plan con supervisión técnica continua. Aplicación de productos, tratamientos o instalación de sistemas según protocolos validados.]',
+    duration: 'Variable',
+    deliverable: 'Registro de aplicación',
   },
   {
-    number: "04",
-    title: "Seguimiento",
+    number: '04',
+    title: 'Seguimiento',
     description:
-      "[Monitoreo post-implementación con visitas técnicas y análisis comparativos. Ajustes en tiempo real según evolución del proyecto y condiciones del campo.]",
-    duration: "30–90 días",
-    deliverable: "Reporte de seguimiento",
+      '[Monitoreo post-implementación con visitas técnicas y análisis comparativos. Ajustes en tiempo real según evolución del proyecto y condiciones del campo.]',
+    duration: '30–90 días',
+    deliverable: 'Reporte de seguimiento',
   },
   {
-    number: "05",
-    title: "Optimización",
+    number: '05',
+    title: 'Optimización',
     description:
-      "[Análisis de resultados finales y optimización del plan para ciclos futuros. Documentación de aprendizajes y recomendaciones para la siguiente campaña.]",
-    duration: "Ciclo siguiente",
-    deliverable: "Plan optimizado",
+      '[Análisis de resultados finales y optimización del plan para ciclos futuros. Documentación de aprendizajes y recomendaciones para la siguiente campaña.]',
+    duration: 'Ciclo siguiente',
+    deliverable: 'Plan optimizado',
   },
 ];
 
@@ -52,11 +52,14 @@ export function AboutProcess() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">04 — Proceso</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">
+              04 — Proceso
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Cómo acompañamos cada proyecto</h2>
           <p className="text-gray-700 leading-relaxed">
-            [Descripción breve del proceso de trabajo, destacando el acompañamiento continuo y el enfoque técnico en cada etapa.]
+            [Descripción breve del proceso de trabajo, destacando el acompañamiento continuo y el
+            enfoque técnico en cada etapa.]
           </p>
         </div>
 
@@ -70,8 +73,8 @@ export function AboutProcess() {
                 onClick={() => setActiveStep(i)}
                 className={`flex-1 pb-4 text-left transition-colors border-b-2 -mb-px ${
                   activeStep === i
-                    ? "border-gray-900 text-oliva"
-                    : "border-transparent text-gray-600 hover:text-gray-600"
+                    ? 'border-gray-900 text-oliva'
+                    : 'border-transparent text-gray-600 hover:text-gray-600'
                 }`}
               >
                 <span className="block text-xs font-mono mb-1">Paso {step.number}</span>
@@ -95,11 +98,15 @@ export function AboutProcess() {
             </div>
             <div className="col-span-4 space-y-4">
               <div className="bg-paja border border-gray-300 p-5 rounded-sm">
-                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Duración estimada</div>
+                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">
+                  Duración estimada
+                </div>
                 <div className="font-medium text-gray-800">{steps[activeStep].duration}</div>
               </div>
               <div className="bg-paja border border-gray-300 p-5 rounded-sm">
-                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">Entregable</div>
+                <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1">
+                  Entregable
+                </div>
                 <div className="font-medium text-gray-800">{steps[activeStep].deliverable}</div>
               </div>
             </div>
@@ -111,7 +118,7 @@ export function AboutProcess() {
               <div
                 key={i}
                 className={`h-1 flex-1 rounded-full transition-colors ${
-                  i <= activeStep ? "bg-gray-700" : "bg-gray-200"
+                  i <= activeStep ? 'bg-gray-700' : 'bg-gray-200'
                 }`}
               />
             ))}

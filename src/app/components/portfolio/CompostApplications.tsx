@@ -7,7 +7,8 @@ const applications = [
     tag: 'Paisajismo',
     title: 'Central Park Conservancy',
     place: 'Nueva York · Estados Unidos',
-    description: 'Los programas de mantenimiento de Central Park incorporan compost para mejorar la estructura del suelo, aumentar la infiltración de agua y favorecer el desarrollo del césped y del arbolado urbano.',
+    description:
+      'Los programas de mantenimiento de Central Park incorporan compost para mejorar la estructura del suelo, aumentar la infiltración de agua y favorecer el desarrollo del césped y del arbolado urbano.',
     benefits: [
       'Mayor desarrollo radicular',
       'Mejor retención de humedad',
@@ -22,7 +23,8 @@ const applications = [
     tag: 'Techos Verdes',
     title: 'Chicago City Hall',
     place: 'Chicago · Estados Unidos',
-    description: 'El techo verde del Ayuntamiento utiliza un sustrato liviano con materia orgánica estabilizada. Demostró beneficios en reducción de temperatura superficial, retención de agua de lluvia y aislamiento térmico del edificio.',
+    description:
+      'El techo verde del Ayuntamiento utiliza un sustrato liviano con materia orgánica estabilizada. Demostró beneficios en reducción de temperatura superficial, retención de agua de lluvia y aislamiento térmico del edificio.',
     benefits: [
       'Reducción del efecto isla de calor',
       'Menor escorrentía de aguas pluviales',
@@ -37,7 +39,8 @@ const applications = [
     tag: 'Agricultura',
     title: 'Universidad Estatal de Iowa',
     place: 'Iowa · Estados Unidos',
-    description: 'Ensayo de largo plazo en rotación maíz, soja y trigo. El compost aumentó materia orgánica, mejoró fertilidad y mantuvo rendimientos superiores. El maíz aumentó hasta 10–11% y el trigo alrededor de 4%.',
+    description:
+      'Ensayo de largo plazo en rotación maíz, soja y trigo. El compost aumentó materia orgánica, mejoró fertilidad y mantuvo rendimientos superiores. El maíz aumentó hasta 10–11% y el trigo alrededor de 4%.',
     benefits: [
       'Mayor materia orgánica',
       'Menor necesidad de fertilización mineral',
@@ -52,7 +55,8 @@ const applications = [
     tag: 'Recuperación de Suelos',
     title: 'Restauración de áreas mineras',
     place: 'Europa, Australia y EE.UU.',
-    description: 'Proyectos de restauración ambiental utilizan compost para recuperar suelos degradados por minería. Se aplicaron dosis de 60 a 100 t/ha para lograr recuperación exitosa de la vegetación.',
+    description:
+      'Proyectos de restauración ambiental utilizan compost para recuperar suelos degradados por minería. Se aplicaron dosis de 60 a 100 t/ha para lograr recuperación exitosa de la vegetación.',
     benefits: [
       'Recuperación de la fertilidad',
       'Mayor infiltración de agua',
@@ -65,7 +69,7 @@ const applications = [
 ];
 
 interface CardProps {
-  a: typeof applications[number];
+  a: (typeof applications)[number];
   index: number;
 }
 
@@ -81,13 +85,19 @@ function AppCard({ a, index }: CardProps) {
     >
       {/* Image */}
       <div className="relative md:w-2/5 aspect-[16/9] md:aspect-auto overflow-hidden flex-shrink-0">
-        <img src={a.image} alt={a.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <img
+          src={a.image}
+          alt={a.title}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-noche/70 via-transparent to-transparent" />
         <div className="absolute top-4 left-4 flex items-center gap-2">
           <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center">
             <Icon className="w-5 h-5 text-white" />
           </div>
-          <span className="bg-white/95 text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-semibold">{a.tag}</span>
+          <span className="bg-white/95 text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full font-semibold">
+            {a.tag}
+          </span>
         </div>
       </div>
 
@@ -100,7 +110,9 @@ function AppCard({ a, index }: CardProps) {
         <p className="text-gray-700 text-sm leading-relaxed mb-5">{a.description}</p>
 
         <div className="mt-auto pt-4 border-t border-oliva/10">
-          <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">Beneficios comprobados</div>
+          <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">
+            Beneficios comprobados
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5">
             {a.benefits.map((b) => (
               <div key={b} className="flex items-start gap-2 text-gray-700 text-xs">
@@ -133,11 +145,14 @@ export function CompostApplications() {
           className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-lima/40 bg-lima/10 px-3 py-1 mb-6">
-            <span className="text-lima text-xs font-mono uppercase tracking-widest">Referencias internacionales</span>
+            <span className="text-lima text-xs font-mono uppercase tracking-widest">
+              Referencias internacionales
+            </span>
           </div>
           <h2 className="text-white mb-4">Aplicaciones comprobadas del compost.</h2>
           <p className="text-white/85 leading-relaxed text-lg">
-            El compost demostró su eficacia en proyectos agrícolas, urbanos y ambientales de todo el mundo. Ejemplos respaldados por investigaciones y experiencias internacionales.
+            El compost demostró su eficacia en proyectos agrícolas, urbanos y ambientales de todo el
+            mundo. Ejemplos respaldados por investigaciones y experiencias internacionales.
           </p>
         </div>
 

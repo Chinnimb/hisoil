@@ -4,54 +4,54 @@ import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const benefits = [
   {
-    number: "01",
+    number: '01',
     Icon: Leaf,
-    title: "Ambiental",
-    headline: "Gestión ambiental responsable",
-    imageLabel: "Beneficio ambiental — compost aplicado al suelo",
+    title: 'Ambiental',
+    headline: 'Gestión ambiental responsable',
+    imageLabel: 'Beneficio ambiental — compost aplicado al suelo',
     points: [
-      "Valorización de residuos orgánicos mediante compostaje",
-      "Reducción de emisiones asociadas a la disposición final",
-      "Recuperación de nutrientes para los suelos",
-      "Contribución a proyectos de economía circular",
-      "Menor impacto ambiental de la operación",
+      'Valorización de residuos orgánicos mediante compostaje',
+      'Reducción de emisiones asociadas a la disposición final',
+      'Recuperación de nutrientes para los suelos',
+      'Contribución a proyectos de economía circular',
+      'Menor impacto ambiental de la operación',
     ],
-    badge: "Ambiental",
+    badge: 'Ambiental',
   },
   {
-    number: "02",
+    number: '02',
     Icon: TrendingUp,
-    title: "Económico",
-    headline: "Reducción de costos",
-    imageLabel: "Beneficio económico — operación en planta",
+    title: 'Económico',
+    headline: 'Reducción de costos',
+    imageLabel: 'Beneficio económico — operación en planta',
     points: [
-      "Menores costos de disposición final",
-      "Optimización logística del retiro de residuos",
-      "Reducción de contingencias y sanciones",
-      "Soluciones adaptadas al volumen generado",
-      "Mayor previsibilidad de costos operativos",
+      'Menores costos de disposición final',
+      'Optimización logística del retiro de residuos',
+      'Reducción de contingencias y sanciones',
+      'Soluciones adaptadas al volumen generado',
+      'Mayor previsibilidad de costos operativos',
     ],
-    badge: "Económico",
+    badge: 'Económico',
   },
   {
-    number: "03",
+    number: '03',
     Icon: Settings,
-    title: "Operativo",
-    headline: "Gestión simple y segura",
-    imageLabel: "Beneficio operativo — equipo técnico en terreno",
+    title: 'Operativo',
+    headline: 'Gestión simple y segura',
+    imageLabel: 'Beneficio operativo — equipo técnico en terreno',
     points: [
-      "Un único proveedor para toda la gestión",
-      "Asesoramiento técnico permanente",
-      "Trazabilidad completa de cada retiro",
-      "Flexibilidad en frecuencias y volúmenes",
-      "Certificados y documentación para auditorías",
+      'Un único proveedor para toda la gestión',
+      'Asesoramiento técnico permanente',
+      'Trazabilidad completa de cada retiro',
+      'Flexibilidad en frecuencias y volúmenes',
+      'Certificados y documentación para auditorías',
     ],
-    badge: "Operativo",
+    badge: 'Operativo',
   },
 ];
 
 interface BenefitCardProps {
-  b: typeof benefits[number];
+  b: (typeof benefits)[number];
   index: number;
 }
 
@@ -83,7 +83,9 @@ function BenefitCard({ b, index }: BenefitCardProps) {
 
         {/* Number + title at bottom */}
         <div className="absolute bottom-4 left-4 right-4">
-          <div className="text-white/50 font-bold font-mono text-2xl leading-none mb-1">{b.number}</div>
+          <div className="text-white/50 font-bold font-mono text-2xl leading-none mb-1">
+            {b.number}
+          </div>
           <h3 className="text-white font-bold text-xl leading-tight">{b.title}</h3>
         </div>
       </div>
@@ -127,11 +129,14 @@ export function ServiceBenefits() {
           className={`max-w-xl mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">05 — Beneficios</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              05 — Beneficios
+            </span>
           </div>
           <h2 className="text-oliva mb-3">Beneficios para tu operación</h2>
           <p className="text-gray-700 leading-relaxed">
-            Una solución integral que combina cumplimiento ambiental, eficiencia operativa y generación de valor.
+            Una solución integral que combina cumplimiento ambiental, eficiencia operativa y
+            generación de valor.
           </p>
         </div>
 

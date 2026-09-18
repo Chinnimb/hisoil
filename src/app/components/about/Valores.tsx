@@ -4,57 +4,63 @@ import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const valores = [
   {
-    number: "01",
+    number: '01',
     Icon: Handshake,
-    title: "Compromiso",
-    quote: "Nos involucramos en cada proyecto hasta alcanzar los resultados esperados.",
-    description: "Acompañamos a nuestros clientes desde el diagnóstico inicial hasta la implementación y el seguimiento técnico, construyendo relaciones de largo plazo basadas en la confianza.",
-    imageLabel: "Compromiso — trabajo en terreno",
+    title: 'Compromiso',
+    quote: 'Nos involucramos en cada proyecto hasta alcanzar los resultados esperados.',
+    description:
+      'Acompañamos a nuestros clientes desde el diagnóstico inicial hasta la implementación y el seguimiento técnico, construyendo relaciones de largo plazo basadas en la confianza.',
+    imageLabel: 'Compromiso — trabajo en terreno',
   },
   {
-    number: "02",
+    number: '02',
     Icon: FlaskConical,
-    title: "Innovación",
-    quote: "Desarrollamos soluciones adaptadas a cada desafío.",
-    description: "Incorporamos nuevas tecnologías, procesos y conocimientos para mejorar continuamente nuestros productos y servicios, ofreciendo soluciones eficientes y de alto valor agregado.",
-    imageLabel: "Innovación — tecnología",
+    title: 'Innovación',
+    quote: 'Desarrollamos soluciones adaptadas a cada desafío.',
+    description:
+      'Incorporamos nuevas tecnologías, procesos y conocimientos para mejorar continuamente nuestros productos y servicios, ofreciendo soluciones eficientes y de alto valor agregado.',
+    imageLabel: 'Innovación — tecnología',
   },
   {
-    number: "03",
+    number: '03',
     Icon: Leaf,
-    title: "Sustentabilidad",
-    quote: "La economía circular es nuestra forma de trabajar.",
-    description: "Promovemos la valorización de residuos orgánicos, la recuperación de nutrientes y la regeneración de suelos mediante procesos que reducen el impacto ambiental y generan beneficios económicos.",
-    imageLabel: "Sustentabilidad — suelo + naturaleza",
+    title: 'Sustentabilidad',
+    quote: 'La economía circular es nuestra forma de trabajar.',
+    description:
+      'Promovemos la valorización de residuos orgánicos, la recuperación de nutrientes y la regeneración de suelos mediante procesos que reducen el impacto ambiental y generan beneficios económicos.',
+    imageLabel: 'Sustentabilidad — suelo + naturaleza',
   },
   {
-    number: "04",
+    number: '04',
     Icon: Users,
-    title: "Cercanía",
-    quote: "Cada cliente cuenta con un equipo que conoce su realidad.",
-    description: "Brindamos atención personalizada, acompañamiento permanente y respuestas ágiles para adaptar cada solución a las necesidades de cada proyecto.",
-    imageLabel: "Cercanía — acompañamiento",
+    title: 'Cercanía',
+    quote: 'Cada cliente cuenta con un equipo que conoce su realidad.',
+    description:
+      'Brindamos atención personalizada, acompañamiento permanente y respuestas ágiles para adaptar cada solución a las necesidades de cada proyecto.',
+    imageLabel: 'Cercanía — acompañamiento',
   },
   {
-    number: "05",
+    number: '05',
     Icon: Award,
-    title: "Calidad",
-    quote: "La calidad comienza en el proceso.",
-    description: "Aplicamos controles durante cada etapa de producción para garantizar productos confiables, trazables y consistentes, cumpliendo con los estándares técnicos y ambientales correspondientes.",
-    imageLabel: "Calidad — producto + control",
+    title: 'Calidad',
+    quote: 'La calidad comienza en el proceso.',
+    description:
+      'Aplicamos controles durante cada etapa de producción para garantizar productos confiables, trazables y consistentes, cumpliendo con los estándares técnicos y ambientales correspondientes.',
+    imageLabel: 'Calidad — producto + control',
   },
   {
-    number: "06",
+    number: '06',
     Icon: Scale,
-    title: "Responsabilidad",
-    quote: "Cada decisión tiene impacto sobre el ambiente y las personas.",
-    description: "Trabajamos con transparencia, compromiso y responsabilidad, promoviendo prácticas que contribuyen al desarrollo sostenible y al cumplimiento de los objetivos ambientales de nuestros clientes.",
-    imageLabel: "Responsabilidad — operación + proyecto ambiental",
+    title: 'Responsabilidad',
+    quote: 'Cada decisión tiene impacto sobre el ambiente y las personas.',
+    description:
+      'Trabajamos con transparencia, compromiso y responsabilidad, promoviendo prácticas que contribuyen al desarrollo sostenible y al cumplimiento de los objetivos ambientales de nuestros clientes.',
+    imageLabel: 'Responsabilidad — operación + proyecto ambiental',
   },
 ];
 
 interface ValorCardProps {
-  v: typeof valores[number];
+  v: (typeof valores)[number];
   index: number;
 }
 
@@ -116,11 +122,15 @@ export function Valores() {
           className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">05 — Lo que nos guía</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              05 — Lo que nos guía
+            </span>
           </div>
           <h2 className="text-oliva mb-6">Seis valores. Una sola forma de trabajar.</h2>
           <p className="text-gray-700 leading-relaxed text-lg">
-            Cada proyecto refleja nuestra manera de entender la sustentabilidad: compromiso técnico, mejora continua y soluciones pensadas para generar impacto positivo en el ambiente y en nuestros clientes.
+            Cada proyecto refleja nuestra manera de entender la sustentabilidad: compromiso técnico,
+            mejora continua y soluciones pensadas para generar impacto positivo en el ambiente y en
+            nuestros clientes.
           </p>
         </div>
 

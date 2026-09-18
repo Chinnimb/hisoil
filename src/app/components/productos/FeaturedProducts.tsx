@@ -1,48 +1,48 @@
 const featured = [
   {
     id: 1,
-    name: "[Nombre del producto 01]",
-    category: "Fertilizante",
-    benefit: "Alta disponibilidad de nitrógeno para etapas críticas del cultivo",
-    specs: ["NPK 20-10-10", "Líquido · 20L", "Soja / Maíz"],
-    badge: "⭐ Más vendido",
-    img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=700&q=80&fit=crop",
+    name: '[Nombre del producto 01]',
+    category: 'Fertilizante',
+    benefit: 'Alta disponibilidad de nitrógeno para etapas críticas del cultivo',
+    specs: ['NPK 20-10-10', 'Líquido · 20L', 'Soja / Maíz'],
+    badge: '⭐ Más vendido',
+    img: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=700&q=80&fit=crop',
   },
   {
     id: 2,
-    name: "[Nombre del producto 02]",
-    category: "Bioestimulante",
-    benefit: "Estimulación radicular en implantación y momentos de estrés hídrico",
-    specs: ["Aminoácidos", "Líquido · 1L", "Universal"],
-    badge: "🆕 Nuevo",
-    img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=700&q=80&fit=crop",
+    name: '[Nombre del producto 02]',
+    category: 'Bioestimulante',
+    benefit: 'Estimulación radicular en implantación y momentos de estrés hídrico',
+    specs: ['Aminoácidos', 'Líquido · 1L', 'Universal'],
+    badge: '🆕 Nuevo',
+    img: 'https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=700&q=80&fit=crop',
   },
   {
     id: 3,
-    name: "[Nombre del producto 03]",
-    category: "Compost",
-    benefit: "Mejora sustancial de materia orgánica y actividad microbiológica del suelo",
-    specs: ["MO > 40%", "Granulado · 25kg", "Universal"],
-    badge: "✅ Certificado",
-    img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=700&q=80&fit=crop",
+    name: '[Nombre del producto 03]',
+    category: 'Compost',
+    benefit: 'Mejora sustancial de materia orgánica y actividad microbiológica del suelo',
+    specs: ['MO > 40%', 'Granulado · 25kg', 'Universal'],
+    badge: '✅ Certificado',
+    img: 'https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=700&q=80&fit=crop',
   },
   {
     id: 4,
-    name: "[Nombre del producto 04]",
-    category: "Enmienda",
-    benefit: "Corrección de pH ácido y aporte de calcio biodisponible para cultivos extensivos",
-    specs: ["CaCO₃ 85%", "Sólido · 1000kg", "Soja / Trigo"],
+    name: '[Nombre del producto 04]',
+    category: 'Enmienda',
+    benefit: 'Corrección de pH ácido y aporte de calcio biodisponible para cultivos extensivos',
+    specs: ['CaCO₃ 85%', 'Sólido · 1000kg', 'Soja / Trigo'],
     badge: null,
-    img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80&fit=crop",
+    img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80&fit=crop',
   },
   {
     id: 5,
-    name: "[Nombre del producto 05]",
-    category: "Nutrición vegetal",
-    benefit: "Pack completo de microelementos quelatados para corrección de deficiencias",
-    specs: ["Fe, Zn, Mn, Cu", "Líquido · 5L", "Multicultura"],
-    badge: "🔥 Tendencia",
-    img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=700&q=80&fit=crop",
+    name: '[Nombre del producto 05]',
+    category: 'Nutrición vegetal',
+    benefit: 'Pack completo de microelementos quelatados para corrección de deficiencias',
+    specs: ['Fe, Zn, Mn, Cu', 'Líquido · 5L', 'Multicultura'],
+    badge: '🔥 Tendencia',
+    img: 'https://images.unsplash.com/photo-1492496913980-501348b61469?w=700&q=80&fit=crop',
   },
 ];
 
@@ -50,16 +50,18 @@ export function FeaturedProducts() {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-paja">
       <div className="max-w-[1600px] mx-auto w-full">
-
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">04 — Productos destacados</span>
+              <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">
+                04 — Productos destacados
+              </span>
             </div>
             <h2 className="text-oliva mb-3">Los productos que marcan la diferencia</h2>
             <p className="text-gray-700 leading-relaxed max-w-lg">
-              Selección técnica de los productos con mayor impacto en rendimiento y salud de suelo por campaña.
+              Selección técnica de los productos con mayor impacto en rendimiento y salud de suelo
+              por campaña.
             </p>
           </div>
           <button className="self-start md:self-auto border border-gray-300 text-gray-700 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja transition-colors whitespace-nowrap">
@@ -97,7 +99,12 @@ export function FeaturedProducts() {
                 <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5">{p.benefit}</p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-paja text-gray-600 text-xs px-3 py-1.5 rounded-full font-mono">{s}</span>
+                    <span
+                      key={s}
+                      className="bg-paja text-gray-600 text-xs px-3 py-1.5 rounded-full font-mono"
+                    >
+                      {s}
+                    </span>
                   ))}
                 </div>
                 <div className="flex gap-3">
@@ -142,7 +149,12 @@ export function FeaturedProducts() {
                 <p className="text-gray-700 text-xs leading-relaxed flex-1 mb-4">{p.benefit}</p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
+                    <span
+                      key={s}
+                      className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono"
+                    >
+                      {s}
+                    </span>
                   ))}
                 </div>
                 <div className="flex gap-2">
@@ -157,7 +169,6 @@ export function FeaturedProducts() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

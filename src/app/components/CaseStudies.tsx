@@ -4,39 +4,42 @@ import { useReveal } from '../hooks/useReveal';
 
 const cases = [
   {
-    href: "/portfolio#creditos-de-carbono",
-    metric: "36.951",
-    metricLabel: "tCO₂e reducción anual",
-    title: "Créditos de Carbono",
-    description: "Proyecto de valorización de residuos orgánicos con reducción certificada de emisiones. 44.400 t procesadas anualmente.",
-    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1200&q=85&fit=crop",
-    tag: "Carbono",
+    href: '/portfolio#creditos-de-carbono',
+    metric: '36.951',
+    metricLabel: 'tCO₂e reducción anual',
+    title: 'Créditos de Carbono',
+    description:
+      'Proyecto de valorización de residuos orgánicos con reducción certificada de emisiones. 44.400 t procesadas anualmente.',
+    image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1200&q=85&fit=crop',
+    tag: 'Carbono',
     isCompost: false,
   },
   {
-    href: "/portfolio#industrias",
-    metric: "10",
-    metricLabel: "industrias atendidas",
-    title: "Casos por Industria",
-    description: "Trabajamos con frigoríficos, cervecerías, alimenticias, laboratorios, barrios cerrados, retail, agroindustria y más.",
-    image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop",
-    tag: "Industrias",
+    href: '/portfolio#industrias',
+    metric: '10',
+    metricLabel: 'industrias atendidas',
+    title: 'Casos por Industria',
+    description:
+      'Trabajamos con frigoríficos, cervecerías, alimenticias, laboratorios, barrios cerrados, retail, agroindustria y más.',
+    image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop',
+    tag: 'Industrias',
     isCompost: false,
   },
   {
-    href: "/portfolio#aplicaciones-compost",
-    metric: "4",
-    metricLabel: "referencias internacionales",
-    title: "Aplicaciones del Compost",
-    description: "Referencias globales: Central Park (NY), Chicago City Hall, Universidad de Iowa y proyectos de restauración minera.",
-    image: "https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=85&fit=crop",
-    tag: "Compost",
+    href: '/portfolio#aplicaciones-compost',
+    metric: '4',
+    metricLabel: 'referencias internacionales',
+    title: 'Aplicaciones del Compost',
+    description:
+      'Referencias globales: Central Park (NY), Chicago City Hall, Universidad de Iowa y proyectos de restauración minera.',
+    image: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=85&fit=crop',
+    tag: 'Compost',
     isCompost: true,
   },
 ];
 
 interface CaseCardProps {
-  c: typeof cases[number];
+  c: (typeof cases)[number];
   index: number;
 }
 
@@ -62,7 +65,9 @@ function CaseCard({ c, index }: CaseCardProps) {
           {/* Metric tag — top left */}
           <div className="absolute top-5 left-5 bg-lima text-oliva rounded-lg px-4 py-2.5 shadow-lg">
             <div className="font-bold text-2xl leading-none">{c.metric}</div>
-            <div className="text-[10px] font-mono uppercase tracking-wider mt-1">{c.metricLabel}</div>
+            <div className="text-[10px] font-mono uppercase tracking-wider mt-1">
+              {c.metricLabel}
+            </div>
           </div>
 
           {/* Arrow corner */}
@@ -106,7 +111,9 @@ export function CaseStudies() {
         >
           <div className="max-w-2xl">
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-              <span className="text-oliva text-xs font-mono uppercase tracking-widest">Casos y trabajos</span>
+              <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+                Casos y trabajos
+              </span>
             </div>
             <h2 className="text-oliva">Proyectos que construimos con nuestros clientes.</h2>
           </div>

@@ -1,15 +1,71 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const moreProjects = [
-  { id: 1, title: "Inoculación de soja en siembra directa — 8.000 ha", category: "Agricultura", client: "Pool de siembra — Entre Ríos", result: "+12% nodulación efectiva", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=75&fit=crop" },
-  { id: 2, title: "Compostaje de biorresiduos municipales", category: "Municipios", client: "Municipio de [Ciudad]", result: "600 tn/mes", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=700&q=75&fit=crop" },
-  { id: 3, title: "Biorremediación de suelo contaminado con hidrocarburos", category: "Industria", client: "Estación de servicio — Córdoba", result: "Pasivo cerrado 14 meses", img: "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=700&q=75&fit=crop" },
-  { id: 4, title: "Nutrición vegetal en cultivo de papa bajo riego", category: "Agricultura", client: "Empresa hortícola — Mendoza", result: "+28% calibre comercial", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=75&fit=crop" },
-  { id: 5, title: "Tratamiento de lixiviados en relleno sanitario", category: "Municipios", client: "Consorcio regional — Santa Fe", result: "Cumplimiento normativo", img: "https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?w=700&q=75&fit=crop" },
-  { id: 6, title: "Bioestimulación en citrus — implantación y fructificación", category: "Agricultura", client: "Empresa citrícola — Tucumán", result: "+15% rendimiento", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=700&q=75&fit=crop" },
-  { id: 7, title: "Gestión de efluentes para feedlot 8.000 cab.", category: "Empresas", client: "Empresa ganadera — Córdoba", result: "0 infracciones en 2 años", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=75&fit=crop" },
-  { id: 8, title: "Producción de compost para programa de huerta social", category: "Municipios", client: "Municipio de [Ciudad]", result: "200 familias beneficiadas", img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=700&q=75&fit=crop" },
+  {
+    id: 1,
+    title: 'Inoculación de soja en siembra directa — 8.000 ha',
+    category: 'Agricultura',
+    client: 'Pool de siembra — Entre Ríos',
+    result: '+12% nodulación efectiva',
+    img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=75&fit=crop',
+  },
+  {
+    id: 2,
+    title: 'Compostaje de biorresiduos municipales',
+    category: 'Municipios',
+    client: 'Municipio de [Ciudad]',
+    result: '600 tn/mes',
+    img: 'https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=700&q=75&fit=crop',
+  },
+  {
+    id: 3,
+    title: 'Biorremediación de suelo contaminado con hidrocarburos',
+    category: 'Industria',
+    client: 'Estación de servicio — Córdoba',
+    result: 'Pasivo cerrado 14 meses',
+    img: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=700&q=75&fit=crop',
+  },
+  {
+    id: 4,
+    title: 'Nutrición vegetal en cultivo de papa bajo riego',
+    category: 'Agricultura',
+    client: 'Empresa hortícola — Mendoza',
+    result: '+28% calibre comercial',
+    img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=75&fit=crop',
+  },
+  {
+    id: 5,
+    title: 'Tratamiento de lixiviados en relleno sanitario',
+    category: 'Municipios',
+    client: 'Consorcio regional — Santa Fe',
+    result: 'Cumplimiento normativo',
+    img: 'https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?w=700&q=75&fit=crop',
+  },
+  {
+    id: 6,
+    title: 'Bioestimulación en citrus — implantación y fructificación',
+    category: 'Agricultura',
+    client: 'Empresa citrícola — Tucumán',
+    result: '+15% rendimiento',
+    img: 'https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=700&q=75&fit=crop',
+  },
+  {
+    id: 7,
+    title: 'Gestión de efluentes para feedlot 8.000 cab.',
+    category: 'Empresas',
+    client: 'Empresa ganadera — Córdoba',
+    result: '0 infracciones en 2 años',
+    img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=700&q=75&fit=crop',
+  },
+  {
+    id: 8,
+    title: 'Producción de compost para programa de huerta social',
+    category: 'Municipios',
+    client: 'Municipio de [Ciudad]',
+    result: '200 familias beneficiadas',
+    img: 'https://images.unsplash.com/photo-1492496913980-501348b61469?w=700&q=75&fit=crop',
+  },
 ];
 
 const PAGE_SIZE = 4;
@@ -26,12 +82,16 @@ export function MoreProjects() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="inline-block border border-white/20 px-3 py-1 mb-4">
-              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">10 — Más proyectos</span>
+              <span className="text-white/65 text-xs font-mono uppercase tracking-widest">
+                10 — Más proyectos
+              </span>
             </div>
             <h2 className="text-white">Seguí explorando casos</h2>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-white/55 text-sm font-mono">{page + 1}/{totalPages}</span>
+            <span className="text-white/55 text-sm font-mono">
+              {page + 1}/{totalPages}
+            </span>
             <button
               onClick={() => setPage((p) => Math.max(0, p - 1))}
               disabled={page === 0}
@@ -75,13 +135,14 @@ export function MoreProjects() {
                     {p.result}
                   </span>
                 </div>
-                <h3 className="text-white font-semibold text-base leading-snug mb-1">
-                  {p.title}
-                </h3>
+                <h3 className="text-white font-semibold text-base leading-snug mb-1">{p.title}</h3>
                 <div className="flex items-center justify-between">
                   <span className="text-white/35 text-xs font-mono">{p.client}</span>
                   <span className="text-white/70 text-sm flex items-center gap-1 group-hover:text-white transition-colors">
-                    Ver caso <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+                    Ver caso{' '}
+                    <span className="group-hover:translate-x-1 transition-transform inline-block">
+                      →
+                    </span>
                   </span>
                 </div>
               </div>
@@ -95,7 +156,7 @@ export function MoreProjects() {
             <button
               key={i}
               onClick={() => setPage(i)}
-              className={`rounded-full transition-all ${i === page ? "w-6 h-2 bg-white/60" : "w-2 h-2 bg-white/20 hover:bg-white/40"}`}
+              className={`rounded-full transition-all ${i === page ? 'w-6 h-2 bg-white/60' : 'w-2 h-2 bg-white/20 hover:bg-white/40'}`}
             />
           ))}
         </div>

@@ -1,25 +1,67 @@
 import { Link, useParams, Navigate } from 'react-router';
-import { ArrowLeft, ArrowUpRight, Check, ChevronRight, ShoppingCart, Eye, Sparkles, ShieldCheck, Package, Thermometer, Sprout, Layers, Droplets, Leaf, Repeat, Wheat, Grape, TreePine, Trees, Apple, Flower2, Carrot } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  Check,
+  ChevronRight,
+  ShoppingCart,
+  Eye,
+  Sparkles,
+  ShieldCheck,
+  Package,
+  Thermometer,
+  Sprout,
+  Layers,
+  Droplets,
+  Leaf,
+  Repeat,
+  Wheat,
+  Grape,
+  TreePine,
+  Trees,
+  Apple,
+  Flower2,
+  Carrot,
+} from 'lucide-react';
 
 // Map crop name to icon (case-insensitive substring match)
 function getCropIcon(crop: string) {
   const c = crop.toLowerCase();
   if (c.includes('soja') || c.includes('oleaginosa')) return Sprout;
-  if (c.includes('maíz') || c.includes('maiz') || c.includes('trigo') || c.includes('cebada') || c.includes('cereal')) return Wheat;
+  if (
+    c.includes('maíz') ||
+    c.includes('maiz') ||
+    c.includes('trigo') ||
+    c.includes('cebada') ||
+    c.includes('cereal')
+  )
+    return Wheat;
   if (c.includes('girasol')) return Flower2;
   if (c.includes('viñedo') || c.includes('vinedo') || c.includes('vid')) return Grape;
   if (c.includes('frutal')) return Apple;
   if (c.includes('hortaliza') || c.includes('horticultura')) return Carrot;
   if (c.includes('forestal')) return TreePine;
   if (c.includes('pastura') || c.includes('alfalfa')) return Leaf;
-  if (c.includes('mixta') || c.includes('extensiva') || c.includes('intensiva') || c.includes('regenerativa')) return Trees;
+  if (
+    c.includes('mixta') ||
+    c.includes('extensiva') ||
+    c.includes('intensiva') ||
+    c.includes('regenerativa')
+  )
+    return Trees;
   return Sprout;
 }
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ImagePlaceholder } from './components/ImagePlaceholder';
 import { useModal } from './context/ModalContext';
-import { getProductBySlug, getRelatedProducts, lineLabels, isCompostProduct, PRODUCTOS_SHOW_PLACEHOLDERS } from './data/products';
+import {
+  getProductBySlug,
+  getRelatedProducts,
+  lineLabels,
+  isCompostProduct,
+  PRODUCTOS_SHOW_PLACEHOLDERS,
+} from './data/products';
 import { useReveal } from './hooks/useReveal';
 
 export default function ProductoDetallePage() {
@@ -43,11 +85,20 @@ export default function ProductoDetallePage() {
         {/* Breadcrumb */}
         <nav className="border-b border-oliva/10 bg-white">
           <div className="max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 py-4 flex items-center gap-2 text-xs font-mono text-oliva/60 overflow-x-auto">
-            <Link to="/" className="hover:text-oliva transition-colors whitespace-nowrap">Inicio</Link>
+            <Link to="/" className="hover:text-oliva transition-colors whitespace-nowrap">
+              Inicio
+            </Link>
             <ChevronRight className="w-3 h-3 flex-shrink-0" />
-            <Link to="/productos" className="hover:text-oliva transition-colors whitespace-nowrap">Productos</Link>
+            <Link to="/productos" className="hover:text-oliva transition-colors whitespace-nowrap">
+              Productos
+            </Link>
             <ChevronRight className="w-3 h-3 flex-shrink-0" />
-            <Link to={`/productos#${product.line}`} className="hover:text-oliva transition-colors whitespace-nowrap">{lineLabels[product.line]}</Link>
+            <Link
+              to={`/productos#${product.line}`}
+              className="hover:text-oliva transition-colors whitespace-nowrap"
+            >
+              {lineLabels[product.line]}
+            </Link>
             <ChevronRight className="w-3 h-3 flex-shrink-0" />
             <span className="text-oliva font-semibold whitespace-nowrap">{product.name}</span>
           </div>
@@ -73,9 +124,16 @@ export default function ProductoDetallePage() {
             {/* Image */}
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-oliva/10 shadow-xl">
               {product.image && !PRODUCTOS_SHOW_PLACEHOLDERS ? (
-                <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               ) : (
-                <ImagePlaceholder label={`Foto pendiente — ${product.name}`} className="rounded-3xl" />
+                <ImagePlaceholder
+                  label={`Foto pendiente — ${product.name}`}
+                  className="rounded-3xl"
+                />
               )}
               {product.badge && (
                 <span className="absolute top-5 left-5 bg-lima text-oliva text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full font-bold shadow">
@@ -83,9 +141,13 @@ export default function ProductoDetallePage() {
                 </span>
               )}
               {product.status && (
-                <span className={`absolute top-5 right-5 text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full font-bold shadow ${
-                  product.status === 'a-desarrollar' ? 'bg-white text-oliva border border-oliva/40' : 'bg-white text-oliva/70 border border-oliva/20'
-                }`}>
+                <span
+                  className={`absolute top-5 right-5 text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full font-bold shadow ${
+                    product.status === 'a-desarrollar'
+                      ? 'bg-white text-oliva border border-oliva/40'
+                      : 'bg-white text-oliva/70 border border-oliva/20'
+                  }`}
+                >
                   {product.status === 'a-desarrollar' ? 'a desarrollar' : 'opcional'}
                 </span>
               )}
@@ -103,7 +165,10 @@ export default function ProductoDetallePage() {
                 </span>
               </div>
 
-              <h1 className="text-oliva font-bold leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
+              <h1
+                className="text-oliva font-bold leading-tight mb-4"
+                style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
+              >
                 {product.name}
               </h1>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">{product.short}</p>
@@ -113,14 +178,18 @@ export default function ProductoDetallePage() {
                 <div className="bg-white border border-oliva/15 rounded-2xl p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <Package className="w-3.5 h-3.5 text-oliva/60" />
-                    <span className="text-oliva/60 text-[10px] font-mono uppercase tracking-widest">Formato</span>
+                    <span className="text-oliva/60 text-[10px] font-mono uppercase tracking-widest">
+                      Formato
+                    </span>
                   </div>
                   <div className="text-oliva font-semibold text-sm">{product.format}</div>
                 </div>
                 <div className="bg-white border border-oliva/15 rounded-2xl p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <Sparkles className="w-3.5 h-3.5 text-oliva/60" />
-                    <span className="text-oliva/60 text-[10px] font-mono uppercase tracking-widest">Aplicación</span>
+                    <span className="text-oliva/60 text-[10px] font-mono uppercase tracking-widest">
+                      Aplicación
+                    </span>
                   </div>
                   <div className="text-oliva font-semibold text-sm">{product.usage}</div>
                 </div>
@@ -151,11 +220,16 @@ export default function ProductoDetallePage() {
                 <div className="mt-6 pt-6 border-t border-oliva/10">
                   <div className="flex items-center gap-2 mb-3">
                     <ShieldCheck className="w-4 h-4 text-oliva" />
-                    <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">Certificaciones</span>
+                    <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">
+                      Certificaciones
+                    </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {product.certifications.map((c) => (
-                      <span key={c} className="text-oliva text-xs font-mono bg-lima/20 border border-lima/40 px-2.5 py-1 rounded-full">
+                      <span
+                        key={c}
+                        className="text-oliva text-xs font-mono bg-lima/20 border border-lima/40 px-2.5 py-1 rounded-full"
+                      >
                         {c}
                       </span>
                     ))}
@@ -170,11 +244,17 @@ export default function ProductoDetallePage() {
         <section className="py-10 md:py-14 px-6 md:px-12 lg:px-20 bg-white border-y border-oliva/10">
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
             <div>
-              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">Descripción</div>
-              <h2 className="text-oliva text-2xl md:text-3xl font-bold leading-tight">¿Qué es {product.name}?</h2>
+              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">
+                Descripción
+              </div>
+              <h2 className="text-oliva text-2xl md:text-3xl font-bold leading-tight">
+                ¿Qué es {product.name}?
+              </h2>
             </div>
             <div className="lg:col-span-2">
-              <p className="text-gray-700 leading-relaxed text-base md:text-lg">{product.description}</p>
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                {product.description}
+              </p>
             </div>
           </div>
         </section>
@@ -228,22 +308,34 @@ export default function ProductoDetallePage() {
         <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-white">
           <div className="max-w-[1600px] mx-auto w-full">
             <div className="max-w-2xl mb-14">
-              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">Cómo usar</div>
-              <h3 className="text-oliva text-2xl md:text-3xl font-bold leading-tight mb-4">Formas de aplicación</h3>
-              <p className="text-gray-700 text-sm leading-relaxed">Recomendaciones técnicas del equipo Hisoil. Consultá con un asesor para ajustes específicos a tu operación.</p>
+              <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">
+                Cómo usar
+              </div>
+              <h3 className="text-oliva text-2xl md:text-3xl font-bold leading-tight mb-4">
+                Formas de aplicación
+              </h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Recomendaciones técnicas del equipo Hisoil. Consultá con un asesor para ajustes
+                específicos a tu operación.
+              </p>
             </div>
 
             {/* Desktop — horizontal timeline with connecting line */}
             <div className="hidden lg:block relative">
               {/* Connector line */}
-              <div className="absolute top-8 left-0 right-0 h-px bg-oliva/20" style={{
-                marginLeft: `calc((100% / ${product.applications.length}) / 2)`,
-                marginRight: `calc((100% / ${product.applications.length}) / 2)`,
-              }} />
+              <div
+                className="absolute top-8 left-0 right-0 h-px bg-oliva/20"
+                style={{
+                  marginLeft: `calc((100% / ${product.applications.length}) / 2)`,
+                  marginRight: `calc((100% / ${product.applications.length}) / 2)`,
+                }}
+              />
 
               <div
                 className="grid gap-6"
-                style={{ gridTemplateColumns: `repeat(${product.applications.length}, minmax(0, 1fr))` }}
+                style={{
+                  gridTemplateColumns: `repeat(${product.applications.length}, minmax(0, 1fr))`,
+                }}
               >
                 {product.applications.map((a, i) => {
                   const icons = [Sprout, Layers, Droplets, Leaf, Repeat];
@@ -278,7 +370,9 @@ export default function ProductoDetallePage() {
                       <div className="w-12 h-12 rounded-full bg-white border-2 border-oliva flex items-center justify-center flex-shrink-0 z-10">
                         <StepIcon className="w-5 h-5 text-oliva" />
                       </div>
-                      {!isLast && <div className="w-px flex-1 bg-oliva/20 my-2" style={{ minHeight: 32 }} />}
+                      {!isLast && (
+                        <div className="w-px flex-1 bg-oliva/20 my-2" style={{ minHeight: 32 }} />
+                      )}
                     </div>
                     <div className="pb-8 pt-2">
                       <div className="text-oliva/60 font-mono text-[10px] uppercase tracking-widest mb-1">
@@ -294,7 +388,9 @@ export default function ProductoDetallePage() {
             {product.crops && product.crops.length > 0 && (
               <>
                 <div className="pt-12 mt-16 border-t border-oliva/10 text-center">
-                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-6">Cultivos recomendados</div>
+                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-6">
+                    Cultivos recomendados
+                  </div>
                   <div className="flex flex-wrap justify-center gap-3">
                     {product.crops.map((c) => {
                       const CropIcon = getCropIcon(c);
@@ -350,8 +446,13 @@ export default function ProductoDetallePage() {
         {/* CTA */}
         <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-oliva">
           <div className="max-w-[1600px] mx-auto w-full text-center max-w-3xl">
-            <h2 className="text-white font-bold text-3xl md:text-4xl mb-4">¿Querés cotizar {product.name}?</h2>
-            <p className="text-white/75 leading-relaxed mb-8 text-lg">Nuestro equipo técnico analiza tu operación y te propone un plan a medida. Respuesta en menos de 24 hs.</p>
+            <h2 className="text-white font-bold text-3xl md:text-4xl mb-4">
+              ¿Querés cotizar {product.name}?
+            </h2>
+            <p className="text-white/75 leading-relaxed mb-8 text-lg">
+              Nuestro equipo técnico analiza tu operación y te propone un plan a medida. Respuesta
+              en menos de 24 hs.
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={open}
@@ -377,10 +478,17 @@ export default function ProductoDetallePage() {
             <div className="max-w-[1600px] mx-auto w-full">
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
                 <div>
-                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">Relacionados</div>
-                  <h2 className="text-oliva text-2xl md:text-3xl font-bold">Otros productos de {lineLabels[product.line]}</h2>
+                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">
+                    Relacionados
+                  </div>
+                  <h2 className="text-oliva text-2xl md:text-3xl font-bold">
+                    Otros productos de {lineLabels[product.line]}
+                  </h2>
                 </div>
-                <Link to="/productos" className="text-oliva font-medium text-sm hover:text-lima transition-colors flex items-center gap-2">
+                <Link
+                  to="/productos"
+                  className="text-oliva font-medium text-sm hover:text-lima transition-colors flex items-center gap-2"
+                >
                   Ver catálogo completo <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -396,7 +504,11 @@ export default function ProductoDetallePage() {
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
                         {r.image && !PRODUCTOS_SHOW_PLACEHOLDERS ? (
-                          <img src={r.image} alt={r.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                          <img
+                            src={r.image}
+                            alt={r.name}
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
                         ) : (
                           <ImagePlaceholder label={r.name} />
                         )}
@@ -410,7 +522,9 @@ export default function ProductoDetallePage() {
                       </div>
                       <div className="p-5">
                         <h3 className="text-oliva font-bold text-lg mb-2">{r.name}</h3>
-                        <p className="text-gray-700 text-xs leading-relaxed line-clamp-2">{r.short}</p>
+                        <p className="text-gray-700 text-xs leading-relaxed line-clamp-2">
+                          {r.short}
+                        </p>
                       </div>
                     </Link>
                   );

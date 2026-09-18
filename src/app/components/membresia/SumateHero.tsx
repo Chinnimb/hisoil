@@ -44,8 +44,8 @@ export function SumateHero() {
           </h1>
 
           <p className="text-white/85 text-lg leading-relaxed max-w-2xl mb-10">
-            Completá la ficha con tus datos y qué necesitás. Nuestro equipo técnico se pone en contacto
-            para armar una propuesta a medida, sin costo y sin compromiso.
+            Completá la ficha con tus datos y qué necesitás. Nuestro equipo técnico se pone en
+            contacto para armar una propuesta a medida, sin costo y sin compromiso.
           </p>
 
           {/* Trust indicators */}

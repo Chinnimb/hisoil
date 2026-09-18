@@ -1,14 +1,26 @@
 const mockNotifications = [
-  { text: "Próximo envío: 15 jun · Corrector pH + Inoculante X", time: "hace 2 días", dot: "bg-oliva" },
-  { text: "Informe técnico mayo 2025 disponible para descarga", time: "hace 5 días", dot: "bg-gray-400" },
-  { text: "Recordatorio: ventana óptima de aplicación foliar esta semana", time: "hace 1 semana", dot: "bg-gray-400" },
+  {
+    text: 'Próximo envío: 15 jun · Corrector pH + Inoculante X',
+    time: 'hace 2 días',
+    dot: 'bg-oliva',
+  },
+  {
+    text: 'Informe técnico mayo 2025 disponible para descarga',
+    time: 'hace 5 días',
+    dot: 'bg-gray-400',
+  },
+  {
+    text: 'Recordatorio: ventana óptima de aplicación foliar esta semana',
+    time: 'hace 1 semana',
+    dot: 'bg-gray-400',
+  },
 ];
 
 const mockProducts = [
-  { name: "Bioestimulante A 20L", qty: "x2", next: "15 jul" },
-  { name: "Corrector pH 10kg", qty: "x1", next: "15 jun" },
-  { name: "Inoculante X 5L", qty: "x1", next: "15 jun" },
-  { name: "Nutriente foliar 1L", qty: "x3", next: "01 ago" },
+  { name: 'Bioestimulante A 20L', qty: 'x2', next: '15 jul' },
+  { name: 'Corrector pH 10kg', qty: 'x1', next: '15 jun' },
+  { name: 'Inoculante X 5L', qty: 'x1', next: '15 jun' },
+  { name: 'Nutriente foliar 1L', qty: 'x3', next: '01 ago' },
 ];
 
 export function AreaMiembros() {
@@ -34,10 +46,14 @@ export function AreaMiembros() {
         {/* Header */}
         <div className="mb-12">
           <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-            <span className="text-white/65 text-xs font-mono uppercase tracking-widest">07 — Área de miembros</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-widest">
+              07 — Área de miembros
+            </span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-            <h2 className="text-white max-w-xl">Tu panel de control para gestionar la membresía.</h2>
+            <h2 className="text-white max-w-xl">
+              Tu panel de control para gestionar la membresía.
+            </h2>
             <p className="text-white/55 text-sm font-mono max-w-xs text-right">
               [Descripción — Acceso online desde cualquier dispositivo, disponible 24/7.]
             </p>
@@ -68,8 +84,18 @@ export function AreaMiembros() {
                 <div className="text-white/55 text-xs font-mono">Plan Profesional · Activo</div>
               </div>
               <nav className="space-y-1">
-                {["Dashboard", "Mis envíos", "Mis productos", "Informes técnicos", "Consultas", "Configuración"].map((item, i) => (
-                  <div key={item} className={`px-3 py-2 rounded-sm text-sm cursor-pointer transition-colors ${i === 0 ? "bg-white/10 text-white" : "text-white/65 hover:text-white/60 hover:bg-white/5"}`}>
+                {[
+                  'Dashboard',
+                  'Mis envíos',
+                  'Mis productos',
+                  'Informes técnicos',
+                  'Consultas',
+                  'Configuración',
+                ].map((item, i) => (
+                  <div
+                    key={item}
+                    className={`px-3 py-2 rounded-sm text-sm cursor-pointer transition-colors ${i === 0 ? 'bg-white/10 text-white' : 'text-white/65 hover:text-white/60 hover:bg-white/5'}`}
+                  >
                     {item}
                   </div>
                 ))}
@@ -81,10 +107,10 @@ export function AreaMiembros() {
               {/* KPIs */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
                 {[
-                  { label: "Próximo envío", value: "15 jun" },
-                  { label: "Descuento activo", value: "12%" },
-                  { label: "Meses activo", value: "8" },
-                  { label: "Ahorro acumulado", value: "$X.XXX" },
+                  { label: 'Próximo envío', value: '15 jun' },
+                  { label: 'Descuento activo', value: '12%' },
+                  { label: 'Meses activo', value: '8' },
+                  { label: 'Ahorro acumulado', value: '$X.XXX' },
                 ].map((kpi) => (
                   <div key={kpi.label} className="bg-white/5 border border-white/10 rounded-sm p-4">
                     <div className="text-white/55 text-xs font-mono mb-1">{kpi.label}</div>
@@ -96,7 +122,9 @@ export function AreaMiembros() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Products */}
                 <div className="bg-white/5 border border-white/10 rounded-sm p-5">
-                  <div className="text-white/65 text-xs font-mono uppercase tracking-widest mb-4">Próximos envíos</div>
+                  <div className="text-white/65 text-xs font-mono uppercase tracking-widest mb-4">
+                    Próximos envíos
+                  </div>
                   <div className="space-y-2">
                     {mockProducts.map((p) => (
                       <div key={p.name} className="flex items-center justify-between gap-2">
@@ -104,7 +132,9 @@ export function AreaMiembros() {
                           <div className="text-white text-sm">{p.name}</div>
                           <div className="text-white/55 text-xs font-mono">{p.qty}</div>
                         </div>
-                        <span className="text-white/65 text-xs font-mono bg-white/5 px-2 py-1 rounded-full">{p.next}</span>
+                        <span className="text-white/65 text-xs font-mono bg-white/5 px-2 py-1 rounded-full">
+                          {p.next}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -112,7 +142,9 @@ export function AreaMiembros() {
 
                 {/* Notifications */}
                 <div className="bg-white/5 border border-white/10 rounded-sm p-5">
-                  <div className="text-white/65 text-xs font-mono uppercase tracking-widest mb-4">Notificaciones</div>
+                  <div className="text-white/65 text-xs font-mono uppercase tracking-widest mb-4">
+                    Notificaciones
+                  </div>
                   <div className="space-y-4">
                     {mockNotifications.map((n, i) => (
                       <div key={i} className="flex items-start gap-3">
@@ -131,7 +163,8 @@ export function AreaMiembros() {
         </div>
 
         <p className="mt-6 text-center text-white/20 text-xs font-mono">
-          [Aclaración — El área de miembros está disponible para todos los planes. Acceso con usuario y contraseña.]
+          [Aclaración — El área de miembros está disponible para todos los planes. Acceso con
+          usuario y contraseña.]
         </p>
       </div>
     </section>

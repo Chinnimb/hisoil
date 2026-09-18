@@ -3,7 +3,6 @@ export function MisionVision() {
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
           {/* Misión — dark */}
           <div className="bg-oliva rounded-sm p-10 md:p-14 relative overflow-hidden flex flex-col">
             {/* Grid texture */}
@@ -15,19 +14,25 @@ export function MisionVision() {
             />
             <div className="relative z-10 flex flex-col flex-1">
               <div className="inline-block border border-white/20 px-3 py-1 mb-8 self-start">
-                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">03 — Misión</span>
+                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">
+                  03 — Misión
+                </span>
               </div>
 
               {/* Big quote mark */}
-              <div className="text-white/5 font-serif text-[120px] leading-none select-none -mt-4 mb-2">"</div>
+              <div className="text-white/5 font-serif text-[120px] leading-none select-none -mt-4 mb-2">
+                "
+              </div>
 
               <h2 className="text-white mb-6">Nuestra misión</h2>
               <p className="text-white/70 leading-relaxed text-lg flex-1">
-                [Misión — Generar valor real y medible para nuestros clientes a través de productos técnicos y servicios ambientales que transformen residuos en recursos, mejoren suelos y contribuyan a un sistema productivo más eficiente y sostenible.]
+                [Misión — Generar valor real y medible para nuestros clientes a través de productos
+                técnicos y servicios ambientales que transformen residuos en recursos, mejoren
+                suelos y contribuyan a un sistema productivo más eficiente y sostenible.]
               </p>
 
               <div className="mt-10 pt-8 border-t border-white/10 grid grid-cols-3 gap-4">
-                {["Impacto real", "Sostenibilidad", "Valor medible"].map((v) => (
+                {['Impacto real', 'Sostenibilidad', 'Valor medible'].map((v) => (
                   <div key={v} className="text-center">
                     <div className="w-8 h-8 border border-white/20 rounded-sm mx-auto mb-2 flex items-center justify-center">
                       <div className="w-2 h-2 bg-white/30 rounded-full" />
@@ -49,18 +54,25 @@ export function MisionVision() {
             />
             <div className="relative z-10 flex flex-col flex-1">
               <div className="inline-block border border-gray-300 px-3 py-1 mb-8 self-start">
-                <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">04 — Visión</span>
+                <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                  04 — Visión
+                </span>
               </div>
 
-              <div className="text-gray-100 font-serif text-[120px] leading-none select-none -mt-4 mb-2">"</div>
+              <div className="text-gray-100 font-serif text-[120px] leading-none select-none -mt-4 mb-2">
+                "
+              </div>
 
               <h2 className="text-oliva mb-6">Nuestra visión</h2>
               <p className="text-gray-700 leading-relaxed text-lg flex-1">
-                [Visión — Ser la empresa de referencia en soluciones agro-ambientales en Latinoamérica, reconocida por la innovación de sus productos, la solidez de su equipo técnico y su contribución concreta a la transición hacia una economía circular en el sector agropecuario e industrial.]
+                [Visión — Ser la empresa de referencia en soluciones agro-ambientales en
+                Latinoamérica, reconocida por la innovación de sus productos, la solidez de su
+                equipo técnico y su contribución concreta a la transición hacia una economía
+                circular en el sector agropecuario e industrial.]
               </p>
 
               <div className="mt-10 pt-8 border-t border-gray-300 grid grid-cols-3 gap-4">
-                {["Innovación", "Liderazgo", "Futuro"].map((v) => (
+                {['Innovación', 'Liderazgo', 'Futuro'].map((v) => (
                   <div key={v} className="text-center">
                     <div className="w-8 h-8 border border-gray-300 rounded-sm mx-auto mb-2 flex items-center justify-center bg-white">
                       <div className="w-2 h-2 bg-gray-400 rounded-full" />

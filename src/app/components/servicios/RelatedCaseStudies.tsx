@@ -1,49 +1,49 @@
 import { useReveal } from '../../hooks/useReveal';
 
 const caseImgs = [
-  "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=900&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?w=900&q=80&fit=crop",
+  'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=900&q=80&fit=crop',
+  'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&fit=crop',
+  'https://images.unsplash.com/photo-1651328846832-d1ab8725bf24?w=900&q=80&fit=crop',
 ];
 
 const cases = [
   {
-    number: "01",
-    client: "Empresa agroindustrial del NEA",
-    sector: "Procesamiento de aceite de soja",
+    number: '01',
+    client: 'Empresa agroindustrial del NEA',
+    sector: 'Procesamiento de aceite de soja',
     challenge:
-      "Efluentes con alta carga de aceites y sólidos suspendidos, incumplimiento de normativa provincial y riesgo de clausura operativa.",
+      'Efluentes con alta carga de aceites y sólidos suspendidos, incumplimiento de normativa provincial y riesgo de clausura operativa.',
     solution:
-      "Diseño e implementación de trampa de grasas, laguna anaerobia y sistema de riego controlado de efluentes tratados.",
-    result: "−85% carga contaminante",
-    badge: "Efluentes industriales",
+      'Diseño e implementación de trampa de grasas, laguna anaerobia y sistema de riego controlado de efluentes tratados.',
+    result: '−85% carga contaminante',
+    badge: 'Efluentes industriales',
   },
   {
-    number: "02",
-    client: "Pool de siembra — 12.000 ha",
-    sector: "Soja, maíz y girasol",
+    number: '02',
+    client: 'Pool de siembra — 12.000 ha',
+    sector: 'Soja, maíz y girasol',
     challenge:
-      "Baja eficiencia de fertilización nitrogenada, costo creciente de insumos y deterioro de la estructura del suelo por labranza intensiva.",
+      'Baja eficiencia de fertilización nitrogenada, costo creciente de insumos y deterioro de la estructura del suelo por labranza intensiva.',
     solution:
-      "Diagnóstico de suelo, ajuste de plan de fertilización con bioinsumos complementarios y plan de rotación para recuperación de materia orgánica.",
-    result: "+22% rendimiento en soja",
-    badge: "Nutrición de cultivos",
+      'Diagnóstico de suelo, ajuste de plan de fertilización con bioinsumos complementarios y plan de rotación para recuperación de materia orgánica.',
+    result: '+22% rendimiento en soja',
+    badge: 'Nutrición de cultivos',
   },
   {
-    number: "03",
-    client: "Municipio de [Región]",
-    sector: "Gestión de RSU y pasivos",
+    number: '03',
+    client: 'Municipio de [Región]',
+    sector: 'Gestión de RSU y pasivos',
     challenge:
-      "Relleno sanitario colmatado sin plan de cierre, contaminación de agua subterránea y presión vecinal y periodística.",
+      'Relleno sanitario colmatado sin plan de cierre, contaminación de agua subterránea y presión vecinal y periodística.',
     solution:
-      "EIA, diseño del plan de cierre, gestión de permisos ante organismo ambiental y coordinación con municipio para comunicación pública.",
-    result: "Plan aprobado — 8 meses",
-    badge: "Remediación ambiental",
+      'EIA, diseño del plan de cierre, gestión de permisos ante organismo ambiental y coordinación con municipio para comunicación pública.',
+    result: 'Plan aprobado — 8 meses',
+    badge: 'Remediación ambiental',
   },
 ];
 
 interface CaseCardProps {
-  c: typeof cases[number];
+  c: (typeof cases)[number];
   img: string;
   index: number;
 }
@@ -126,7 +126,9 @@ function CaseCard({ c, img, index }: CaseCardProps) {
         >
           <div className="flex items-center gap-2 mb-2">
             <div className="w-1.5 h-1.5 rounded-full bg-oliva/40" />
-            <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">Desafío</span>
+            <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">
+              Desafío
+            </span>
           </div>
           <p className="text-gray-700 text-sm leading-relaxed">{c.challenge}</p>
         </div>
@@ -142,7 +144,9 @@ function CaseCard({ c, img, index }: CaseCardProps) {
         >
           <div className="flex items-center gap-2 mb-2">
             <div className="w-1.5 h-1.5 rounded-full bg-oliva" />
-            <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">Solución</span>
+            <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">
+              Solución
+            </span>
           </div>
           <p className="text-gray-700 text-sm leading-relaxed">{c.solution}</p>
         </div>
@@ -157,7 +161,9 @@ function CaseCard({ c, img, index }: CaseCardProps) {
           }}
         >
           <div className="inline-flex items-center gap-2 bg-oliva text-white px-5 py-3 rounded-full">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-white/65">Resultado</span>
+            <span className="text-[10px] font-mono uppercase tracking-widest text-white/65">
+              Resultado
+            </span>
             <span className="font-bold text-sm">{c.result}</span>
           </div>
         </div>
@@ -179,7 +185,9 @@ export function RelatedCaseStudies() {
         >
           <div className="max-w-2xl">
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-              <span className="text-oliva text-xs font-mono uppercase tracking-widest">09 — Casos de estudio</span>
+              <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+                09 — Casos de estudio
+              </span>
             </div>
             <h2 className="text-oliva">Resultados en campo</h2>
           </div>

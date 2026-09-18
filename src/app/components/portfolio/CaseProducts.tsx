@@ -1,21 +1,24 @@
 const products = [
   {
-    name: "[Producto 01 — Nombre técnico]",
-    category: "Tratamiento biológico",
-    benefit: "Degradación acelerada de carga orgánica en efluentes industriales mediante consorcio microbiano especializado.",
-    specs: ["Consorcio bacteriano", "Líquido · 20L", "Efluentes industriales"],
+    name: '[Producto 01 — Nombre técnico]',
+    category: 'Tratamiento biológico',
+    benefit:
+      'Degradación acelerada de carga orgánica en efluentes industriales mediante consorcio microbiano especializado.',
+    specs: ['Consorcio bacteriano', 'Líquido · 20L', 'Efluentes industriales'],
   },
   {
-    name: "[Producto 02 — Nombre técnico]",
-    category: "Coagulante",
-    benefit: "Floculación y remoción de sólidos suspendidos en etapa de pre-tratamiento físico-químico.",
-    specs: ["Polímero catiónico", "25kg", "Tratamiento primario"],
+    name: '[Producto 02 — Nombre técnico]',
+    category: 'Coagulante',
+    benefit:
+      'Floculación y remoción de sólidos suspendidos en etapa de pre-tratamiento físico-químico.',
+    specs: ['Polímero catiónico', '25kg', 'Tratamiento primario'],
   },
   {
-    name: "[Producto 03 — Nombre técnico]",
-    category: "Corrector de pH",
-    benefit: "Estabilización del pH de efluentes antes del ingreso al sistema de tratamiento biológico.",
-    specs: ["Cal hidratada", "25kg", "pH 6.5–8.5"],
+    name: '[Producto 03 — Nombre técnico]',
+    category: 'Corrector de pH',
+    benefit:
+      'Estabilización del pH de efluentes antes del ingreso al sistema de tratamiento biológico.',
+    specs: ['Cal hidratada', '25kg', 'pH 6.5–8.5'],
   },
 ];
 
@@ -27,11 +30,14 @@ export function CaseProducts() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
             <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">06 — Productos utilizados en este caso</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                06 — Productos utilizados en este caso
+              </span>
             </div>
             <h2 className="text-oliva mb-2">Productos aplicados en el proyecto</h2>
             <p className="text-gray-700 text-sm leading-relaxed max-w-lg">
-              [Texto — Portafolio de productos específicos utilizados en este proyecto, seleccionados y formulados para los requerimientos del cliente.]
+              [Texto — Portafolio de productos específicos utilizados en este proyecto,
+              seleccionados y formulados para los requerimientos del cliente.]
             </p>
           </div>
           <button className="self-start md:self-auto border border-gray-300 text-gray-700 px-5 py-2.5 rounded-full text-sm font-mono hover:bg-paja transition-colors whitespace-nowrap">
@@ -47,11 +53,13 @@ export function CaseProducts() {
             >
               <div className="aspect-[4/3] border-b border-gray-300 relative overflow-hidden">
                 <img
-                  src={[
-                    "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&q=70&fit=crop",
-                    "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=400&q=70&fit=crop",
-                    "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&q=70&fit=crop",
-                  ][i % 3]}
+                  src={
+                    [
+                      'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=400&q=70&fit=crop',
+                      'https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=400&q=70&fit=crop',
+                      'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&q=70&fit=crop',
+                    ][i % 3]
+                  }
                   alt={p.name}
                   className="w-full h-full object-cover transition-all duration-300"
                 />
@@ -65,7 +73,12 @@ export function CaseProducts() {
                 <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5">{p.benefit}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {p.specs.map((s) => (
-                    <span key={s} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">{s}</span>
+                    <span
+                      key={s}
+                      className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono"
+                    >
+                      {s}
+                    </span>
                   ))}
                 </div>
                 <div className="flex gap-2">

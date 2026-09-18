@@ -1,27 +1,27 @@
 const approachCards = [
   {
-    number: "01",
-    title: "Respaldo técnico",
-    icon: "⚗️",
+    number: '01',
+    title: 'Respaldo técnico',
+    icon: '⚗️',
     description:
-      "[Texto — Equipo multidisciplinario con sólida formación científica y experiencia práctica. Protocolos validados, datos medibles y resultados documentados en cada intervención.]",
-    tags: ["Diagnóstico", "Laboratorio", "Informes técnicos"],
+      '[Texto — Equipo multidisciplinario con sólida formación científica y experiencia práctica. Protocolos validados, datos medibles y resultados documentados en cada intervención.]',
+    tags: ['Diagnóstico', 'Laboratorio', 'Informes técnicos'],
   },
   {
-    number: "02",
-    title: "Cercanía con el cliente",
-    icon: "🤝",
+    number: '02',
+    title: 'Cercanía con el cliente',
+    icon: '🤝',
     description:
-      "[Texto — Acompañamiento personalizado desde el primer contacto hasta el seguimiento post-implementación. Asesor técnico dedicado para cada proyecto y comunicación directa.]",
-    tags: ["Asesor dedicado", "Seguimiento activo", "Soporte postventa"],
+      '[Texto — Acompañamiento personalizado desde el primer contacto hasta el seguimiento post-implementación. Asesor técnico dedicado para cada proyecto y comunicación directa.]',
+    tags: ['Asesor dedicado', 'Seguimiento activo', 'Soporte postventa'],
   },
   {
-    number: "03",
-    title: "Sustentabilidad",
-    icon: "🌱",
+    number: '03',
+    title: 'Sustentabilidad',
+    icon: '🌱',
     description:
-      "[Texto — Todas las soluciones diseñadas bajo principios de economía circular y mínimo impacto ambiental. Certificaciones ambientales y compromisos medibles con el ecosistema.]",
-    tags: ["Economía circular", "ISO 14001", "Huella ambiental"],
+      '[Texto — Todas las soluciones diseñadas bajo principios de economía circular y mínimo impacto ambiental. Certificaciones ambientales y compromisos medibles con el ecosistema.]',
+    tags: ['Economía circular', 'ISO 14001', 'Huella ambiental'],
   },
 ];
 
@@ -32,11 +32,14 @@ export function OurApproach() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">03 — Nuestra forma de trabajar</span>
+            <span className="text-gray-700 text-xs font-mono uppercase tracking-widest">
+              03 — Nuestra forma de trabajar
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Nuestra forma de trabajar</h2>
           <p className="text-gray-700 leading-relaxed">
-            [Subtítulo — Descripción de los tres pilares que guían cada proyecto e intervención de Hisoil.]
+            [Subtítulo — Descripción de los tres pilares que guían cada proyecto e intervención de
+            Hisoil.]
           </p>
         </div>
 
@@ -59,9 +62,7 @@ export function OurApproach() {
 
               <h3 className="text-oliva mb-4 text-xl">{card.title}</h3>
 
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">
-                {card.description}
-              </p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">{card.description}</p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2">

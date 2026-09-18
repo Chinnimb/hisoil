@@ -2,35 +2,43 @@ import { TrendingUp, Leaf, DollarSign, ClipboardCheck } from 'lucide-react';
 
 const kpis = [
   {
-    category: "Rendimiento",
+    category: 'Rendimiento',
     Icon: TrendingUp,
     metrics: [
-      { value: "+22%", label: "Incremento de rendimiento", sub: "qq/ha promedio · campaña 2024/25" },
-      { value: "+18 qq", label: "Por hectárea adicionales", sub: "sobre histórico de la zona" },
+      {
+        value: '+22%',
+        label: 'Incremento de rendimiento',
+        sub: 'qq/ha promedio · campaña 2024/25',
+      },
+      { value: '+18 qq', label: 'Por hectárea adicionales', sub: 'sobre histórico de la zona' },
     ],
   },
   {
-    category: "Ambiental",
+    category: 'Ambiental',
     Icon: Leaf,
     metrics: [
-      { value: "−85%", label: "Reducción de carga orgánica", sub: "en efluentes industriales" },
-      { value: "1.200 tn", label: "Residuos valorizados / año", sub: "desviados de disposición final" },
+      { value: '−85%', label: 'Reducción de carga orgánica', sub: 'en efluentes industriales' },
+      {
+        value: '1.200 tn',
+        label: 'Residuos valorizados / año',
+        sub: 'desviados de disposición final',
+      },
     ],
   },
   {
-    category: "Económico",
+    category: 'Económico',
     Icon: DollarSign,
     metrics: [
-      { value: "−40%", label: "Ahorro operativo", sub: "en costos de disposición de residuos" },
-      { value: "3× ROI", label: "Retorno estimado", sub: "a 12 meses de implementación" },
+      { value: '−40%', label: 'Ahorro operativo', sub: 'en costos de disposición de residuos' },
+      { value: '3× ROI', label: 'Retorno estimado', sub: 'a 12 meses de implementación' },
     ],
   },
   {
-    category: "Regulatorio",
+    category: 'Regulatorio',
     Icon: ClipboardCheck,
     metrics: [
-      { value: "100%", label: "Cumplimiento normativo", sub: "en proyectos certificados" },
-      { value: "8", label: "Certificaciones obtenidas", sub: "en últimos 24 meses" },
+      { value: '100%', label: 'Cumplimiento normativo', sub: 'en proyectos certificados' },
+      { value: '8', label: 'Certificaciones obtenidas', sub: 'en últimos 24 meses' },
     ],
   },
 ];
@@ -42,13 +50,16 @@ export function ResultsMetrics() {
         {/* Header */}
         <div className="mb-16">
           <div className="inline-block border border-gray-300 px-3 py-1 mb-6">
-            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">08 — Resultados e indicadores</span>
+            <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+              08 — Resultados e indicadores
+            </span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <h2 className="text-oliva mb-3">Métricas que demuestran el impacto</h2>
               <p className="text-gray-700 leading-relaxed max-w-xl">
-                [Descripción — Indicadores documentados en proyectos reales, agrupados por dimensión de impacto.]
+                [Descripción — Indicadores documentados en proyectos reales, agrupados por dimensión
+                de impacto.]
               </p>
             </div>
             <p className="text-gray-600 text-xs font-mono flex-shrink-0">
@@ -62,26 +73,30 @@ export function ResultsMetrics() {
           {kpis.map((group) => {
             const { Icon } = group;
             return (
-            <div key={group.category} className="card-gradient-border overflow-hidden">
-              {/* Group header */}
-              <div className="bg-oliva px-7 py-4 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center">
-                  <Icon className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-white font-semibold text-sm">{group.category}</span>
-              </div>
-
-              {/* Metrics */}
-              <div className="grid grid-cols-2 gap-px bg-paja">
-                {group.metrics.map((m) => (
-                  <div key={m.label} className="bg-white px-7 py-7">
-                    <div className="text-3xl md:text-4xl font-bold text-oliva mb-2 leading-none">{m.value}</div>
-                    <div className="text-gray-700 font-medium text-sm mb-1 leading-tight">{m.label}</div>
-                    <div className="text-gray-600 text-xs font-mono leading-tight">{m.sub}</div>
+              <div key={group.category} className="card-gradient-border overflow-hidden">
+                {/* Group header */}
+                <div className="bg-oliva px-7 py-4 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-md border border-white/25 flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-white" />
                   </div>
-                ))}
+                  <span className="text-white font-semibold text-sm">{group.category}</span>
+                </div>
+
+                {/* Metrics */}
+                <div className="grid grid-cols-2 gap-px bg-paja">
+                  {group.metrics.map((m) => (
+                    <div key={m.label} className="bg-white px-7 py-7">
+                      <div className="text-3xl md:text-4xl font-bold text-oliva mb-2 leading-none">
+                        {m.value}
+                      </div>
+                      <div className="text-gray-700 font-medium text-sm mb-1 leading-tight">
+                        {m.label}
+                      </div>
+                      <div className="text-gray-600 text-xs font-mono leading-tight">{m.sub}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
             );
           })}
         </div>
@@ -90,9 +105,9 @@ export function ResultsMetrics() {
         <div className="mt-8 card-gradient-border px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-wrap gap-8 md:gap-12">
             {[
-              { value: "+2.400", label: "proyectos realizados" },
-              { value: "800+", label: "clientes atendidos" },
-              { value: "15 años", label: "de trayectoria técnica" },
+              { value: '+2.400', label: 'proyectos realizados' },
+              { value: '800+', label: 'clientes atendidos' },
+              { value: '15 años', label: 'de trayectoria técnica' },
             ].map((s) => (
               <div key={s.label} className="text-center md:text-left">
                 <div className="text-2xl font-bold text-oliva">{s.value}</div>
