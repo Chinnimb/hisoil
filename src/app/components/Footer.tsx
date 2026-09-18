@@ -1,4 +1,14 @@
-import { Mail, Phone, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook } from 'lucide-react';
+
+// Solo redes con URL confirmada. Pendientes: YouTube y Facebook (sin confirmar si existe).
+const redes = [
+  { Icon: Instagram, nombre: 'Instagram', url: 'https://www.instagram.com/hisoil_/' },
+  {
+    Icon: Facebook,
+    nombre: 'Facebook',
+    url: 'https://www.facebook.com/p/Hi-Soil-100066773138615/',
+  },
+];
 
 export function Footer() {
   const navigationSections = [
@@ -65,10 +75,13 @@ export function Footer() {
             <div className="mt-6">
               <h4 className="font-semibold text-white mb-4">Seguinos</h4>
               <div className="flex gap-3">
-                {[Facebook, Instagram, Linkedin, Youtube].map((Icon, index) => (
+                {redes.map(({ Icon, nombre, url }) => (
                   <a
-                    key={index}
-                    href="#"
+                    key={nombre}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={nombre}
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-lima/20 hover:text-lima transition-colors"
                   >
                     <Icon className="w-5 h-5 text-white/75" />
