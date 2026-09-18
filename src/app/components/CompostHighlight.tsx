@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Sprout, ArrowUpRight, Check } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
-import imgCompostHome from '../../imports/productos/compost-3.png';
+import imgCompostHome from '../../imports/productos/compost-3.webp';
 
 const benefits = [
   'Enmienda orgánica premium para regeneración de suelos',

@@ -14,22 +14,22 @@ import { useRef, useState, useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
 
 // Imágenes reales de producto (src/imports/productos)
-import imgCompost from '../../imports/productos/compost-1.png';
-import imgBiofert from '../../imports/productos/biofert-1.png';
-import imgHumic from '../../imports/productos/humic.png';
-import imgRegenera from '../../imports/productos/regenera.png';
-import imgPremium from '../../imports/productos/premium.png';
-import imgBerry from '../../imports/productos/berry.png';
-import imgCannabis from '../../imports/productos/cannabis.png';
-import imgSphagnum from '../../imports/productos/sphagnum.png';
-import imgChip from '../../imports/productos/chip.png';
-import imgGreenroof from '../../imports/productos/greenroof.png';
-import imgTierraFertil from '../../imports/productos/tierra-fertil.png';
-import imgRestore from '../../imports/productos/restore-1.png';
-import imgNative from '../../imports/productos/native.png';
-import imgCarbon from '../../imports/productos/carbon.png';
-import imgHydromulch from '../../imports/productos/hydromulch.png';
-import imgOutdoor from '../../imports/productos/outdoor.png';
+import imgCompost from '../../imports/productos/compost-1.webp';
+import imgBiofert from '../../imports/productos/biofert-1.webp';
+import imgHumic from '../../imports/productos/humic.webp';
+import imgRegenera from '../../imports/productos/regenera.webp';
+import imgPremium from '../../imports/productos/premium.webp';
+import imgBerry from '../../imports/productos/berry.webp';
+import imgCannabis from '../../imports/productos/cannabis.webp';
+import imgSphagnum from '../../imports/productos/sphagnum.webp';
+import imgChip from '../../imports/productos/chip.webp';
+import imgGreenroof from '../../imports/productos/greenroof.webp';
+import imgTierraFertil from '../../imports/productos/tierra-fertil.webp';
+import imgRestore from '../../imports/productos/restore-1.webp';
+import imgNative from '../../imports/productos/native.webp';
+import imgCarbon from '../../imports/productos/carbon.webp';
+import imgHydromulch from '../../imports/productos/hydromulch.webp';
+import imgOutdoor from '../../imports/productos/outdoor.webp';
 
 type LucideIcon = typeof Sprout;
 
