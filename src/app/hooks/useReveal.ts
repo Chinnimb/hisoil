@@ -22,7 +22,11 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     if (!el) return;
     const obs = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        // boundingClientRect.top < 0 = el elemento quedo arriba del viewport.
+        // Pasa al entrar por un ancla o al refrescar a media pagina: sin esto
+        // el observer nunca lo marca visible y la seccion queda en opacity 0.
+        const yaPasado = entry.boundingClientRect.top < 0;
+        if (entry.isIntersecting || yaPasado) {
           setIsVisible(true);
           if (once) obs.disconnect();
         } else if (!once) {

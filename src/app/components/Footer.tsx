@@ -1,6 +1,7 @@
+import { Link } from 'react-router';
 import { Mail, Phone, Instagram, Facebook } from 'lucide-react';
 
-// Solo redes con URL confirmada. Pendientes: YouTube y Facebook (sin confirmar si existe).
+// Solo redes con URL confirmada. LinkedIn y YouTube: no tienen cuenta.
 const redes = [
   { Icon: Instagram, nombre: 'Instagram', url: 'https://www.instagram.com/hisoil_/' },
   {
@@ -11,19 +12,26 @@ const redes = [
 ];
 
 export function Footer() {
+  // Solo destinos que existen. Los servicios enlazan a su card en /servicios.
   const navigationSections = [
     {
-      title: 'Empresa',
-      links: ['Sobre nosotros', 'Equipo', 'Certificaciones', 'Sostenibilidad', 'Blog', 'Carreras'],
+      title: 'Navegación',
+      links: [
+        { label: 'Productos', to: '/productos' },
+        { label: 'Servicios', to: '/servicios' },
+        { label: 'Portfolio', to: '/portfolio' },
+        { label: 'Nosotros', to: '/nosotros' },
+        { label: 'Sumate', to: '/sumate' },
+        { label: 'Contacto', to: '/contacto' },
+      ],
     },
     {
       title: 'Servicios',
       links: [
-        'Fertilización',
-        'Compostaje',
-        'Análisis de suelo',
-        'Asesoramiento',
-        'Capacitaciones',
+        { label: 'Tratamiento de residuos', to: '/servicios#servicio-residuo' },
+        { label: 'Compostaje a medida', to: '/servicios#servicio-proceso' },
+        { label: 'Restauración ambiental', to: '/servicios#servicio-recuperacion' },
+        { label: 'Asesoramiento técnico', to: '/servicios#servicio-conocimiento' },
       ],
     },
   ];
@@ -45,11 +53,14 @@ export function Footer() {
             <div key={index}>
               <h4 className="font-semibold text-white mb-4">{section.title}</h4>
               <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a href="#" className="text-white/65 hover:text-lima transition-colors text-sm">
-                      {link}
-                    </a>
+                {section.links.map(({ label, to }) => (
+                  <li key={to}>
+                    <Link
+                      to={to}
+                      className="text-white/65 hover:text-lima transition-colors text-sm"
+                    >
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -95,17 +106,6 @@ export function Footer() {
         <div className="pt-8 border-t border-white/15">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/55 text-sm">© 2026 Hisoil. Todos los derechos reservados.</p>
-            <div className="flex gap-6">
-              <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
-                Privacidad
-              </a>
-              <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
-                Términos y condiciones
-              </a>
-              <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
-                Cookies
-              </a>
-            </div>
           </div>
         </div>
       </div>

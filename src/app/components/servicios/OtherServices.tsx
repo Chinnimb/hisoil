@@ -73,6 +73,15 @@ function CompostCollage() {
   );
 }
 
+// Ancla por servicio, derivada del stage: servicio-residuo, servicio-proceso,
+// servicio-recuperacion, servicio-conocimiento. La usa el footer para enlazar.
+function slugStage(stage: string) {
+  return stage
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
 function ServiceCard({ s, index }: CardProps) {
   const [ref, visible] = useReveal<HTMLDivElement>({ threshold: 0.2 });
   const { Icon } = s;
@@ -84,7 +93,8 @@ function ServiceCard({ s, index }: CardProps) {
   return (
     <div
       ref={ref}
-      className={`scroll-reveal border border-oliva/15 rounded-2xl overflow-hidden flex flex-col md:flex-row group hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 bg-white ${visible ? 'is-visible' : ''}`}
+      id={`servicio-${slugStage(s.stage)}`}
+      className={`scroll-mt-28 scroll-reveal border border-oliva/15 rounded-2xl overflow-hidden flex flex-col md:flex-row group hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 bg-white ${visible ? 'is-visible' : ''}`}
       style={{ transitionDelay: visible ? `${(index % 2) * 0.12}s` : '0s' }}
     >
       {/* Image left */}

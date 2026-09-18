@@ -14,17 +14,22 @@ export function ScrollToAnchor() {
       return;
     }
     const id = hash.slice(1);
-    // Delay so the target section has time to mount
-    const t = setTimeout(() => {
-      const el = document.getElementById(id);
-      if (el) {
-        const header = document.querySelector('header');
-        const offset = (header?.getBoundingClientRect().height ?? 80) + 16;
-        const top = el.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    }, 120);
-    return () => clearTimeout(t);
+
+    // scrollIntoView deja el posicionamiento al navegador; el offset del header
+    // lo aporta scroll-margin-top en el destino (clase scroll-mt-*). Hacer la
+    // cuenta a mano daba una posicion corrida.
+    const irA = (behavior: ScrollBehavior) => {
+      document.getElementById(id)?.scrollIntoView({ behavior, block: 'start' });
+    };
+
+    // Segunda pasada tras la animacion de reveal (.scroll-reveal dura 0.9s),
+    // que hasta terminar desplaza el layout.
+    const t1 = setTimeout(() => irA('instant'), 120);
+    const t2 = setTimeout(() => irA('smooth'), 1100);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
   }, [pathname, hash]);
 
   return null;
