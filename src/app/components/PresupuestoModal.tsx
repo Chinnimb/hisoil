@@ -1,56 +1,88 @@
-import { useEffect, useState } from 'react'
-import { X, CheckCircle } from 'lucide-react'
-import { useModal } from '../context/ModalContext'
+import { useEffect, useState } from 'react';
+import { X, CheckCircle } from 'lucide-react';
+import { useModal } from '../context/ModalContext';
 
-const rubros = ['Productor agrícola', 'Empresa / industria', 'Municipio', 'Vivero', 'Paisajismo / jardinería', 'Constructora / desarrolladora', 'Particular', 'Otro']
-const servicios = ['Compost', 'Sustratos profesionales', 'Materias primas', 'Paisajismo y techos verdes', 'Infraestructura y restauración', 'Tratamiento de residuos', 'Asesoramiento técnico', 'Otro']
+const rubros = [
+  'Productor agrícola',
+  'Empresa / industria',
+  'Municipio',
+  'Vivero',
+  'Paisajismo / jardinería',
+  'Constructora / desarrolladora',
+  'Particular',
+  'Otro',
+];
+const servicios = [
+  'Compost',
+  'Sustratos profesionales',
+  'Materias primas',
+  'Paisajismo y techos verdes',
+  'Infraestructura y restauración',
+  'Tratamiento de residuos',
+  'Asesoramiento técnico',
+  'Otro',
+];
 
 export function PresupuestoModal() {
-  const { isOpen, close } = useModal()
-  const [step, setStep] = useState(1)
-  const [sent, setSent] = useState(false)
+  const { isOpen, close } = useModal();
+  const [step, setStep] = useState(1);
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
-    nombre: '', email: '', telefono: '', empresa: '',
-    rubro: '', servicio: '', volumen: '', mensaje: '',
-  })
+    nombre: '',
+    email: '',
+    telefono: '',
+    empresa: '',
+    rubro: '',
+    servicio: '',
+    volumen: '',
+    mensaje: '',
+  });
 
   // Cerrar con Escape
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') close() }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [close])
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [close]);
 
   // Bloquear scroll del body
   useEffect(() => {
-    if (isOpen) document.body.style.overflow = 'hidden'
-    else document.body.style.overflow = ''
-    return () => { document.body.style.overflow = '' }
-  }, [isOpen])
+    if (isOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setSent(true)
+    e.preventDefault();
+    setSent(true);
   }
 
   function handleClose() {
-    close()
-    setTimeout(() => { setStep(1); setSent(false) }, 300)
+    close();
+    setTimeout(() => {
+      setStep(1);
+      setSent(false);
+    }, 300);
   }
 
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Overlay */}
-      <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      <button
+        type="button"
+        aria-label="Cerrar"
+        className="absolute inset-0 w-full h-full bg-black/60 backdrop-blur-sm cursor-default"
         onClick={handleClose}
       />
 
       {/* Modal */}
       <div className="relative bg-white w-full max-w-2xl rounded-sm shadow-2xl max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200">
-
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-gray-300 px-5 md:px-8 py-5 flex items-center justify-between z-10">
           <div>
@@ -85,11 +117,16 @@ export function PresupuestoModal() {
             /* Confirmación */
             <div className="text-center py-8">
               <CheckCircle className="w-16 h-16 text-oliva mx-auto mb-5" />
-              <h3 className="text-oliva font-bold text-2xl mb-3">Gracias, {form.nombre.split(' ')[0]}.</h3>
+              <h3 className="text-oliva font-bold text-2xl mb-3">
+                Gracias, {form.nombre.split(' ')[0]}.
+              </h3>
               <p className="text-gray-700 leading-relaxed mb-2">
-                Tu solicitud fue recibida. Un asesor técnico de Hisoil se va a comunicar con vos en las próximas <strong className="text-gray-800">24 horas</strong>.
+                Tu solicitud fue recibida. Un asesor técnico de Hisoil se va a comunicar con vos en
+                las próximas <strong className="text-gray-800">24 horas</strong>.
               </p>
-              <p className="text-gray-600 text-sm font-mono mb-8">Confirmación enviada a {form.email}</p>
+              <p className="text-gray-600 text-sm font-mono mb-8">
+                Confirmación enviada a {form.email}
+              </p>
               <div className="grid grid-cols-3 gap-px bg-paja border border-gray-300 rounded-sm mb-8">
                 {[
                   { label: 'Interés', value: form.servicio || '—' },
@@ -111,15 +148,26 @@ export function PresupuestoModal() {
             </div>
           ) : step === 1 ? (
             /* Paso 1 — Datos de contacto */
-            <form onSubmit={(e) => { e.preventDefault(); setStep(2) }}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                setStep(2);
+              }}
+            >
               <p className="text-gray-700 text-sm mb-6">
                 Completá tus datos y en 24 horas te contactamos con una propuesta personalizada.
               </p>
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Nombre y apellido *</label>
+                    <label
+                      htmlFor="presupuesto-nombre"
+                      className="block text-xs font-medium text-gray-700 mb-1.5"
+                    >
+                      Nombre y apellido *
+                    </label>
                     <input
+                      id="presupuesto-nombre"
                       required
                       type="text"
                       value={form.nombre}
@@ -129,8 +177,14 @@ export function PresupuestoModal() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Empresa / Establecimiento</label>
+                    <label
+                      htmlFor="presupuesto-empresa"
+                      className="block text-xs font-medium text-gray-700 mb-1.5"
+                    >
+                      Empresa / Establecimiento
+                    </label>
                     <input
+                      id="presupuesto-empresa"
                       type="text"
                       value={form.empresa}
                       onChange={(e) => setForm({ ...form, empresa: e.target.value })}
@@ -141,8 +195,14 @@ export function PresupuestoModal() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Email *</label>
+                    <label
+                      htmlFor="presupuesto-email"
+                      className="block text-xs font-medium text-gray-700 mb-1.5"
+                    >
+                      Email *
+                    </label>
                     <input
+                      id="presupuesto-email"
                       required
                       type="email"
                       value={form.email}
@@ -152,8 +212,14 @@ export function PresupuestoModal() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Teléfono / WhatsApp</label>
+                    <label
+                      htmlFor="presupuesto-telefono"
+                      className="block text-xs font-medium text-gray-700 mb-1.5"
+                    >
+                      Teléfono / WhatsApp
+                    </label>
                     <input
+                      id="presupuesto-telefono"
                       type="tel"
                       value={form.telefono}
                       onChange={(e) => setForm({ ...form, telefono: e.target.value })}
@@ -181,32 +247,54 @@ export function PresupuestoModal() {
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">¿Qué te interesa? *</label>
+                    <label
+                      htmlFor="presupuesto-servicio"
+                      className="block text-xs font-medium text-gray-700 mb-1.5"
+                    >
+                      ¿Qué te interesa? *
+                    </label>
                     <select
+                      id="presupuesto-servicio"
                       required
                       value={form.servicio}
                       onChange={(e) => setForm({ ...form, servicio: e.target.value })}
                       className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
                     >
                       <option value="">Seleccioná una opción</option>
-                      {servicios.map((s) => <option key={s}>{s}</option>)}
+                      {servicios.map((s) => (
+                        <option key={s}>{s}</option>
+                      ))}
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1.5">Rubro</label>
+                    <label
+                      htmlFor="presupuesto-rubro"
+                      className="block text-xs font-medium text-gray-700 mb-1.5"
+                    >
+                      Rubro
+                    </label>
                     <select
+                      id="presupuesto-rubro"
                       value={form.rubro}
                       onChange={(e) => setForm({ ...form, rubro: e.target.value })}
                       className="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-white"
                     >
                       <option value="">Seleccioná tu rubro</option>
-                      {rubros.map((r) => <option key={r}>{r}</option>)}
+                      {rubros.map((r) => (
+                        <option key={r}>{r}</option>
+                      ))}
                     </select>
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-gray-700 mb-1.5">Volumen o escala estimada</label>
+                  <label
+                    htmlFor="presupuesto-volumen"
+                    className="block text-xs font-medium text-gray-700 mb-1.5"
+                  >
+                    Volumen o escala estimada
+                  </label>
                   <input
+                    id="presupuesto-volumen"
                     type="text"
                     value={form.volumen}
                     onChange={(e) => setForm({ ...form, volumen: e.target.value })}
@@ -215,8 +303,14 @@ export function PresupuestoModal() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-gray-700 mb-1.5">Mensaje o consulta</label>
+                  <label
+                    htmlFor="presupuesto-mensaje"
+                    className="block text-xs font-medium text-gray-700 mb-1.5"
+                  >
+                    Mensaje o consulta
+                  </label>
                   <textarea
+                    id="presupuesto-mensaje"
                     rows={4}
                     value={form.mensaje}
                     onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
@@ -245,5 +339,5 @@ export function PresupuestoModal() {
         </div>
       </div>
     </div>
-  )
+  );
 }
