@@ -24,10 +24,30 @@ const rubroOptions = [
 ];
 
 const provinciasArgentina = [
-  'Buenos Aires', 'CABA', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes',
-  'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones',
-  'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz',
-  'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán',
+  'Buenos Aires',
+  'CABA',
+  'Catamarca',
+  'Chaco',
+  'Chubut',
+  'Córdoba',
+  'Corrientes',
+  'Entre Ríos',
+  'Formosa',
+  'Jujuy',
+  'La Pampa',
+  'La Rioja',
+  'Mendoza',
+  'Misiones',
+  'Neuquén',
+  'Río Negro',
+  'Salta',
+  'San Juan',
+  'San Luis',
+  'Santa Cruz',
+  'Santa Fe',
+  'Santiago del Estero',
+  'Tierra del Fuego',
+  'Tucumán',
 ];
 
 export function SumateForm() {
@@ -56,8 +76,8 @@ export function SumateForm() {
             </div>
             <h2 className="text-oliva mb-4">Contanos sobre tu proyecto.</h2>
             <p className="text-gray-700 leading-relaxed mb-8">
-              Completá el formulario con los datos básicos y qué tipo de solución necesitás.
-              Nos comunicamos por WhatsApp, mail o teléfono según prefieras.
+              Completá el formulario con los datos básicos y qué tipo de solución necesitás. Nos
+              comunicamos por WhatsApp, mail o teléfono según prefieras.
             </p>
 
             <div className="bg-white border border-oliva/15 rounded-2xl p-6">
@@ -72,7 +92,9 @@ export function SumateForm() {
                   className="flex items-center justify-between text-oliva hover:text-lima transition-colors group"
                 >
                   <div>
-                    <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">WhatsApp</div>
+                    <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">
+                      WhatsApp
+                    </div>
                     <div className="font-semibold text-sm">+54 9 11 4440-1919</div>
                   </div>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -82,7 +104,9 @@ export function SumateForm() {
                   className="flex items-center justify-between text-oliva hover:text-lima transition-colors group"
                 >
                   <div>
-                    <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">Email</div>
+                    <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">
+                      Email
+                    </div>
                     <div className="font-semibold text-sm">administracion@hisoil.com.ar</div>
                   </div>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -100,7 +124,8 @@ export function SumateForm() {
                 </div>
                 <h3 className="text-oliva font-bold text-2xl md:text-3xl mb-4">¡Ficha recibida!</h3>
                 <p className="text-gray-700 leading-relaxed max-w-md mx-auto">
-                  Gracias por sumarte. Nuestro equipo se pondrá en contacto en las próximas 24 a 48 horas hábiles.
+                  Gracias por sumarte. Nuestro equipo se pondrá en contacto en las próximas 24 a 48
+                  horas hábiles.
                 </p>
               </div>
             ) : (
@@ -120,28 +145,41 @@ export function SumateForm() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <SelectField label="Rubro *" name="rubro" options={rubroOptions} required />
-                  <SelectField label="Provincia *" name="provincia" options={provinciasArgentina} required />
+                  <SelectField
+                    label="Provincia *"
+                    name="provincia"
+                    options={provinciasArgentina}
+                    required
+                  />
                 </div>
 
-                <div>
-                  <label className="block text-oliva text-xs font-mono uppercase tracking-widest mb-3">
+                <fieldset className="border-0 p-0 m-0">
+                  <legend className="block text-oliva text-xs font-mono uppercase tracking-widest mb-3">
                     ¿En qué estás interesado? (podés marcar más de uno)
-                  </label>
+                  </legend>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {interesOptions.map((op) => (
                       <label
                         key={op}
                         className="flex items-center gap-3 p-3 border border-oliva/15 rounded-lg cursor-pointer hover:border-oliva/40 hover:bg-paja/40 transition-colors"
                       >
-                        <input type="checkbox" name="interes" value={op} className="accent-oliva w-4 h-4" />
+                        <input
+                          type="checkbox"
+                          name="interes"
+                          value={op}
+                          className="accent-oliva w-4 h-4"
+                        />
                         <span className="text-sm text-gray-700">{op}</span>
                       </label>
                     ))}
                   </div>
-                </div>
+                </fieldset>
 
                 <div>
-                  <label htmlFor="mensaje" className="block text-oliva text-xs font-mono uppercase tracking-widest mb-2">
+                  <label
+                    htmlFor="mensaje"
+                    className="block text-oliva text-xs font-mono uppercase tracking-widest mb-2"
+                  >
                     Contanos más sobre tu proyecto
                   </label>
                   <textarea
@@ -162,7 +200,8 @@ export function SumateForm() {
                 </button>
 
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Al enviar aceptás que HISOIL utilice estos datos para contactarte. No compartimos tu información con terceros.
+                  Al enviar aceptás que HISOIL utilice estos datos para contactarte. No compartimos
+                  tu información con terceros.
                 </p>
               </form>
             )}
@@ -183,7 +222,10 @@ interface FieldProps {
 function Field({ label, name, type = 'text', required }: FieldProps) {
   return (
     <div>
-      <label htmlFor={name} className="block text-oliva text-xs font-mono uppercase tracking-widest mb-2">
+      <label
+        htmlFor={name}
+        className="block text-oliva text-xs font-mono uppercase tracking-widest mb-2"
+      >
         {label}
       </label>
       <input
@@ -207,7 +249,10 @@ interface SelectFieldProps {
 function SelectField({ label, name, options, required }: SelectFieldProps) {
   return (
     <div>
-      <label htmlFor={name} className="block text-oliva text-xs font-mono uppercase tracking-widest mb-2">
+      <label
+        htmlFor={name}
+        className="block text-oliva text-xs font-mono uppercase tracking-widest mb-2"
+      >
         {label}
       </label>
       <select
@@ -217,9 +262,13 @@ function SelectField({ label, name, options, required }: SelectFieldProps) {
         defaultValue=""
         className="w-full px-4 py-3 border border-oliva/15 rounded-lg focus:border-oliva focus:outline-none focus:ring-1 focus:ring-oliva/25 text-sm bg-white"
       >
-        <option value="" disabled>Seleccioná una opción</option>
+        <option value="" disabled>
+          Seleccioná una opción
+        </option>
         {options.map((o) => (
-          <option key={o} value={o}>{o}</option>
+          <option key={o} value={o}>
+            {o}
+          </option>
         ))}
       </select>
     </div>
