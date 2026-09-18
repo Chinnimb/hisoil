@@ -16,6 +16,7 @@ import ServiciosPage from './ServiciosPage';
 import ProductosPage from './ProductosPage';
 import ProductoDetallePage from './ProductoDetallePage';
 import PortfolioPage from './PortfolioPage';
+import SumatePage from './SumatePage';
 import ContactoPage from './ContactoPage';
 
 function HomePage() {
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/productos" element={<ProductosPage />} />
           <Route path="/productos/:slug" element={<ProductoDetallePage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/sumate" element={<SumatePage />} />
           <Route path="/contacto" element={<ContactoPage />} />
         </Routes>
         <PresupuestoModal />
