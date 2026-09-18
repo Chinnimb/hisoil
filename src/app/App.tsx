@@ -16,7 +16,6 @@ import ServiciosPage from './ServiciosPage';
 import ProductosPage from './ProductosPage';
 import ProductoDetallePage from './ProductoDetallePage';
 import PortfolioPage from './PortfolioPage';
-import MembresiaPage from './MembresiaPage';
 import ContactoPage from './ContactoPage';
 
 function HomePage() {
@@ -49,8 +48,6 @@ export default function App() {
           <Route path="/productos" element={<ProductosPage />} />
           <Route path="/productos/:slug" element={<ProductoDetallePage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/membresia" element={<MembresiaPage />} />
-          <Route path="/sumate" element={<MembresiaPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
         </Routes>
         <PresupuestoModal />

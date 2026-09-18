@@ -24,7 +24,6 @@ export function Footer() {
         'Análisis de suelo',
         'Asesoramiento',
         'Capacitaciones',
-        'Membresía',
       ],
     },
   ];

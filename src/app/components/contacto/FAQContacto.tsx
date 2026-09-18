@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: '¿Cuáles son los tiempos de entrega de los productos?',
-    a: '[Respuesta — Los tiempos de entrega varían según la zona y el tipo de producto: entre 1 y 5 días hábiles para las zonas principales. Los clientes con Membresía tienen envíos programados con fechas garantizadas.]',
+    a: '[Respuesta — Los tiempos de entrega varían según la zona y el tipo de producto: entre 1 y 5 días hábiles para las zonas principales.]',
   },
 ];
 

@@ -6,7 +6,6 @@ const tiposConsulta = [
   'Consulta técnica',
   'Información sobre productos',
   'Información sobre servicios',
-  'Membresía',
   'Otro',
 ];
 
