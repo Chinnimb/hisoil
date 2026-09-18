@@ -4,44 +4,44 @@ import { useReveal } from '../../hooks/useReveal';
 const services = [
   {
     Icon: Recycle,
-    title: "Tratamiento de residuos",
+    title: 'Tratamiento de residuos',
     description:
-      "Gestión integral de efluentes y residuos orgánicos generados durante la producción. Complementa el uso de productos biológicos con un circuito cerrado de residuos.",
-    link: "/servicios",
-    linkLabel: "Ver servicio",
-    tags: ["Efluentes", "RSO", "Normativa ambiental"],
+      'Gestión integral de efluentes y residuos orgánicos generados durante la producción. Complementa el uso de productos biológicos con un circuito cerrado de residuos.',
+    link: '/servicios',
+    linkLabel: 'Ver servicio',
+    tags: ['Efluentes', 'RSO', 'Normativa ambiental'],
   },
   {
     Icon: RotateCcw,
-    title: "Compostaje a medida",
+    title: 'Compostaje a medida',
     description:
-      "Producción de compost certificado a partir de residuos orgánicos propios. Permite reducir costos de insumos y valorizar subproductos de la actividad.",
-    link: "/servicios",
-    linkLabel: "Ver servicio",
-    tags: ["Economía circular", "Producción propia", "Certificado"],
+      'Producción de compost certificado a partir de residuos orgánicos propios. Permite reducir costos de insumos y valorizar subproductos de la actividad.',
+    link: '/servicios',
+    linkLabel: 'Ver servicio',
+    tags: ['Economía circular', 'Producción propia', 'Certificado'],
   },
   {
     Icon: Mountain,
-    title: "Restauración ambiental",
+    title: 'Restauración ambiental',
     description:
-      "Recuperación de suelos degradados, control de erosión, hidrosiembra y revegetación con especies nativas para proyectos de infraestructura y restauración.",
-    link: "/servicios",
-    linkLabel: "Ver servicio",
-    tags: ["Hidrosiembra", "Control de erosión", "Restauración ecológica"],
+      'Recuperación de suelos degradados, control de erosión, hidrosiembra y revegetación con especies nativas para proyectos de infraestructura y restauración.',
+    link: '/servicios',
+    linkLabel: 'Ver servicio',
+    tags: ['Hidrosiembra', 'Control de erosión', 'Restauración ecológica'],
   },
   {
     Icon: UserRoundCog,
-    title: "Asesoramiento técnico",
+    title: 'Asesoramiento técnico',
     description:
-      "Acompañamiento técnico personalizado para diseñar el plan nutricional más eficiente. Análisis de suelo, diagnóstico y recomendación de productos específicos para cada lote.",
-    link: "/servicios",
-    linkLabel: "Solicitar asesoramiento",
-    tags: ["Diagnóstico", "Plan nutricional", "Asesor dedicado"],
+      'Acompañamiento técnico personalizado para diseñar el plan nutricional más eficiente. Análisis de suelo, diagnóstico y recomendación de productos específicos para cada lote.',
+    link: '/servicios',
+    linkLabel: 'Solicitar asesoramiento',
+    tags: ['Diagnóstico', 'Plan nutricional', 'Asesor dedicado'],
   },
 ];
 
 interface CardProps {
-  s: typeof services[number];
+  s: (typeof services)[number];
   index: number;
 }
 
@@ -66,7 +66,10 @@ function Card({ s, index }: CardProps) {
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5 mb-6">
         {s.tags.map((tag) => (
-          <span key={tag} className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono">
+          <span
+            key={tag}
+            className="bg-paja text-gray-700 text-xs px-2.5 py-1 rounded-full font-mono"
+          >
             {tag}
           </span>
         ))}
@@ -101,11 +104,14 @@ export function RelatedServices() {
           className={`mb-16 max-w-2xl scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">09 — Servicios relacionados</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              09 — Servicios relacionados
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Potenciá tus productos con nuestros servicios</h2>
           <p className="text-gray-700 leading-relaxed">
-            Los productos funcionan mejor con el acompañamiento técnico adecuado. Estos servicios complementan y potencian cada solución.
+            Los productos funcionan mejor con el acompañamiento técnico adecuado. Estos servicios
+            complementan y potencian cada solución.
           </p>
         </div>
 

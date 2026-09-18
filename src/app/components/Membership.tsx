@@ -1,18 +1,18 @@
 import { Link } from 'react-router';
 
 const highlights = [
-  { value: "Hasta 20%", label: "descuento en productos" },
-  { value: "500+", label: "miembros activos" },
-  { value: "3", label: "planes disponibles" },
-  { value: "24 hs", label: "respuesta técnica garantizada" },
+  { value: 'Hasta 20%', label: 'descuento en productos' },
+  { value: '500+', label: 'miembros activos' },
+  { value: '3', label: 'planes disponibles' },
+  { value: '24 hs', label: 'respuesta técnica garantizada' },
 ];
 
 const quickBenefits = [
-  "Descuentos exclusivos en productos",
-  "Asesoramiento técnico prioritario",
-  "Envíos recurrentes programados",
-  "Acceso a recursos y fichas técnicas",
-  "Informes técnicos mensuales",
+  'Descuentos exclusivos en productos',
+  'Asesoramiento técnico prioritario',
+  'Envíos recurrentes programados',
+  'Acceso a recursos y fichas técnicas',
+  'Informes técnicos mensuales',
 ];
 
 export function Membership() {
@@ -20,7 +20,6 @@ export function Membership() {
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 border border-gray-300 rounded-sm overflow-hidden">
-
           {/* Left — dark copy */}
           <div className="lg:col-span-7 bg-oliva p-10 md:p-14 relative overflow-hidden">
             <div
@@ -31,11 +30,15 @@ export function Membership() {
             />
             <div className="relative z-10">
               <div className="inline-block border border-white/20 px-3 py-1 mb-8">
-                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">Membresía Hisoil</span>
+                <span className="text-white/65 text-xs font-mono uppercase tracking-widest">
+                  Membresía Hisoil
+                </span>
               </div>
               <h2 className="text-white mb-4">Un programa para clientes que operan en serio.</h2>
               <p className="text-white/70 leading-relaxed mb-10 max-w-lg">
-                La Membresía Hisoil es un programa de suscripción para productores, empresas y profesionales que quieren acceso continuo a productos, técnicos y recursos, con beneficios que crecen con el tiempo.
+                La Membresía Hisoil es un programa de suscripción para productores, empresas y
+                profesionales que quieren acceso continuo a productos, técnicos y recursos, con
+                beneficios que crecen con el tiempo.
               </p>
 
               {/* Stat grid */}
@@ -67,7 +70,8 @@ export function Membership() {
             <div className="mb-2">
               <div className="text-oliva font-bold text-xl mb-1">Elegí tu plan.</div>
               <div className="text-gray-700 text-sm leading-relaxed">
-                Starter, Profesional o Premium. Podés cambiar de plan en cualquier momento. El primer mes incluye asesoramiento técnico de bienvenida sin cargo.
+                Starter, Profesional o Premium. Podés cambiar de plan en cualquier momento. El
+                primer mes incluye asesoramiento técnico de bienvenida sin cargo.
               </div>
             </div>
 
@@ -83,7 +87,11 @@ export function Membership() {
             </Link>
 
             <div className="pt-6 border-t border-gray-300 space-y-3">
-              {["Activación en menos de 24 horas", "Sin permanencia obligatoria", "Soporte técnico desde el día uno"].map((f) => (
+              {[
+                'Activación en menos de 24 horas',
+                'Sin permanencia obligatoria',
+                'Soporte técnico desde el día uno',
+              ].map((f) => (
                 <div key={f} className="flex items-center gap-3 text-gray-600 text-sm">
                   <div className="w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="w-1.5 h-1.5 bg-gray-400 rounded-full" />

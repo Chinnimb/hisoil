@@ -7,12 +7,12 @@
  * inside the wrapper automatically pick up the warm earth palette.
  */
 .theme-compost {
-  --color-oliva: #606C38;    /* oliva militar warm (primario) */
-  --color-noche: #283618;    /* bosque profundo (overlays) */
-  --color-lima: #EDB731;     /* amarillo maiz / dorado (accent principal, mejor contraste con oliva) */
-  --color-canola: #BC6C25;   /* cobre terroso (para chips especificos) */
-  --color-paja: #FFFFFF;
-  --color-nata: #FFFFFF;
+  --color-oliva: #606c38; /* oliva militar warm (primario) */
+  --color-noche: #283618; /* bosque profundo (overlays) */
+  --color-lima: #edb731; /* amarillo maiz / dorado (accent principal, mejor contraste con oliva) */
+  --color-canola: #bc6c25; /* cobre terroso (para chips especificos) */
+  --color-paja: #ffffff;
+  --color-nata: #ffffff;
   --color-oliva-dark: #283618;
 }
 
@@ -21,100 +21,178 @@
  * asi que forzamos overrides explicitos dentro del scope compost para que
  * todas las clases utilitarias recojan la paleta calida.
  */
-.theme-compost { color: #1F2A1A; }
-.theme-compost .bg-oliva { background-color: #606C38 !important; }
-.theme-compost .bg-oliva\/10 { background-color: rgba(96, 108, 56, 0.1) !important; }
-.theme-compost .bg-oliva\/15 { background-color: rgba(96, 108, 56, 0.15) !important; }
-.theme-compost .bg-oliva\/25 { background-color: rgba(96, 108, 56, 0.25) !important; }
-.theme-compost .bg-oliva\/40 { background-color: rgba(96, 108, 56, 0.4) !important; }
-.theme-compost .text-oliva { color: #606C38 !important; }
-.theme-compost .text-oliva\/40 { color: rgba(96, 108, 56, 0.4) !important; }
-.theme-compost .text-oliva\/60 { color: rgba(96, 108, 56, 0.6) !important; }
-.theme-compost .text-oliva\/70 { color: rgba(96, 108, 56, 0.7) !important; }
-.theme-compost .border-oliva { border-color: #606C38 !important; }
-.theme-compost .border-oliva\/10 { border-color: rgba(96, 108, 56, 0.1) !important; }
-.theme-compost .border-oliva\/15 { border-color: rgba(96, 108, 56, 0.15) !important; }
-.theme-compost .border-oliva\/20 { border-color: rgba(96, 108, 56, 0.2) !important; }
-.theme-compost .border-oliva\/25 { border-color: rgba(96, 108, 56, 0.25) !important; }
-.theme-compost .border-oliva\/30 { border-color: rgba(96, 108, 56, 0.3) !important; }
-.theme-compost .border-oliva\/40 { border-color: rgba(96, 108, 56, 0.4) !important; }
-.theme-compost .hover\:bg-oliva:hover { background-color: #606C38 !important; }
-.theme-compost .hover\:border-oliva\/40:hover { border-color: rgba(96, 108, 56, 0.4) !important; }
-.theme-compost .hover\:text-oliva:hover { color: #606C38 !important; }
+.theme-compost {
+  color: #1f2a1a;
+}
+.theme-compost .bg-oliva {
+  background-color: #606c38 !important;
+}
+.theme-compost .bg-oliva\/10 {
+  background-color: rgba(96, 108, 56, 0.1) !important;
+}
+.theme-compost .bg-oliva\/15 {
+  background-color: rgba(96, 108, 56, 0.15) !important;
+}
+.theme-compost .bg-oliva\/25 {
+  background-color: rgba(96, 108, 56, 0.25) !important;
+}
+.theme-compost .bg-oliva\/40 {
+  background-color: rgba(96, 108, 56, 0.4) !important;
+}
+.theme-compost .text-oliva {
+  color: #606c38 !important;
+}
+.theme-compost .text-oliva\/40 {
+  color: rgba(96, 108, 56, 0.4) !important;
+}
+.theme-compost .text-oliva\/60 {
+  color: rgba(96, 108, 56, 0.6) !important;
+}
+.theme-compost .text-oliva\/70 {
+  color: rgba(96, 108, 56, 0.7) !important;
+}
+.theme-compost .border-oliva {
+  border-color: #606c38 !important;
+}
+.theme-compost .border-oliva\/10 {
+  border-color: rgba(96, 108, 56, 0.1) !important;
+}
+.theme-compost .border-oliva\/15 {
+  border-color: rgba(96, 108, 56, 0.15) !important;
+}
+.theme-compost .border-oliva\/20 {
+  border-color: rgba(96, 108, 56, 0.2) !important;
+}
+.theme-compost .border-oliva\/25 {
+  border-color: rgba(96, 108, 56, 0.25) !important;
+}
+.theme-compost .border-oliva\/30 {
+  border-color: rgba(96, 108, 56, 0.3) !important;
+}
+.theme-compost .border-oliva\/40 {
+  border-color: rgba(96, 108, 56, 0.4) !important;
+}
+.theme-compost .hover\:bg-oliva:hover {
+  background-color: #606c38 !important;
+}
+.theme-compost .hover\:border-oliva\/40:hover {
+  border-color: rgba(96, 108, 56, 0.4) !important;
+}
+.theme-compost .hover\:text-oliva:hover {
+  color: #606c38 !important;
+}
 /* Restaurar hover:text-white — sin esto queda oculto por text-oliva !important en cascada */
-.theme-compost .hover\:text-white:hover { color: #FFFFFF !important; }
+.theme-compost .hover\:text-white:hover {
+  color: #ffffff !important;
+}
 
 /* Lima -> amarillo maiz */
-.theme-compost .bg-lima { background-color: #EDB731 !important; }
-.theme-compost .bg-lima\/20 { background-color: rgba(237, 183, 49, 0.2) !important; }
-.theme-compost .bg-lima\/25 { background-color: rgba(237, 183, 49, 0.25) !important; }
-.theme-compost .bg-lima\/30 { background-color: rgba(237, 183, 49, 0.3) !important; }
-.theme-compost .text-lima { color: #EDB731 !important; }
-.theme-compost .border-lima { border-color: #EDB731 !important; }
-.theme-compost .border-lima\/40 { border-color: rgba(237, 183, 49, 0.4) !important; }
-.theme-compost .border-lima\/50 { border-color: rgba(237, 183, 49, 0.5) !important; }
-.theme-compost .hover\:bg-lima:hover { background-color: #EDB731 !important; }
-.theme-compost .hover\:text-lima:hover { color: #EDB731 !important; }
-.theme-compost .hover\:border-lima:hover { border-color: #EDB731 !important; }
-.theme-compost .group:hover .group-hover\:bg-lima { background-color: #EDB731 !important; }
-.theme-compost .group:hover .group-hover\:text-lima { color: #EDB731 !important; }
-.theme-compost .group:hover .group-hover\:border-lima { border-color: #EDB731 !important; }
+.theme-compost .bg-lima {
+  background-color: #edb731 !important;
+}
+.theme-compost .bg-lima\/20 {
+  background-color: rgba(237, 183, 49, 0.2) !important;
+}
+.theme-compost .bg-lima\/25 {
+  background-color: rgba(237, 183, 49, 0.25) !important;
+}
+.theme-compost .bg-lima\/30 {
+  background-color: rgba(237, 183, 49, 0.3) !important;
+}
+.theme-compost .text-lima {
+  color: #edb731 !important;
+}
+.theme-compost .border-lima {
+  border-color: #edb731 !important;
+}
+.theme-compost .border-lima\/40 {
+  border-color: rgba(237, 183, 49, 0.4) !important;
+}
+.theme-compost .border-lima\/50 {
+  border-color: rgba(237, 183, 49, 0.5) !important;
+}
+.theme-compost .hover\:bg-lima:hover {
+  background-color: #edb731 !important;
+}
+.theme-compost .hover\:text-lima:hover {
+  color: #edb731 !important;
+}
+.theme-compost .hover\:border-lima:hover {
+  border-color: #edb731 !important;
+}
+.theme-compost .group:hover .group-hover\:bg-lima {
+  background-color: #edb731 !important;
+}
+.theme-compost .group:hover .group-hover\:text-lima {
+  color: #edb731 !important;
+}
+.theme-compost .group:hover .group-hover\:border-lima {
+  border-color: #edb731 !important;
+}
 
 /* Overlays warm */
 .theme-compost .from-noche\/60,
 .theme-compost .from-noche\/70,
 .theme-compost .from-noche\/75,
 .theme-compost .from-noche\/80,
-.theme-compost .from-noche\/85 { --tw-gradient-from: rgba(40, 54, 24, 0.75) !important; }
+.theme-compost .from-noche\/85 {
+  --tw-gradient-from: rgba(40, 54, 24, 0.75) !important;
+}
 .theme-compost .via-noche\/25,
 .theme-compost .via-noche\/30,
 .theme-compost .via-noche\/40,
-.theme-compost .via-noche\/50 { --tw-gradient-via: rgba(40, 54, 24, 0.3) !important; }
+.theme-compost .via-noche\/50 {
+  --tw-gradient-via: rgba(40, 54, 24, 0.3) !important;
+}
 
 /* Backgrounds */
 .theme-compost .bg-nata,
-.theme-compost .bg-paja { background-color: #FFFFFF !important; }
+.theme-compost .bg-paja {
+  background-color: #ffffff !important;
+}
 .theme-compost .bg-paja\/40,
-.theme-compost .bg-paja\/50 { background-color: rgba(254, 250, 224, 0.5) !important; }
+.theme-compost .bg-paja\/50 {
+  background-color: rgba(254, 250, 224, 0.5) !important;
+}
 
 :root {
   --font-size: 16px;
 
   /* ── Hisoil type system ── */
-  --font-display:  'Syne', sans-serif;        /* H1, H2 — display headlines */
-  --font-body:     'DM Sans', sans-serif;     /* body, labels, buttons, H3/H4 */
-  --font-mono:     'IBM Plex Mono', monospace; /* eyebrows, tags, data */
+  --font-display: 'Syne', sans-serif; /* H1, H2 — display headlines */
+  --font-body: 'DM Sans', sans-serif; /* body, labels, buttons, H3/H4 */
+  --font-mono: 'IBM Plex Mono', monospace; /* eyebrows, tags, data */
 
   /* ── Hisoil brand palette ── */
-  --color-oliva:   #2F6B33;  /* Hisoil green — primary */
-  --color-oliva-dark: #0E1610;  /* deep forest almost black — for overlays */
-  --color-noche:   #0E1610;  /* alias — verde muy oscuro para overlays */
-  --color-lima:    #B8C521;  /* lima — accent bright */
-  --color-nata:    #FAFAF7;  /* warm off-white — section bg */
-  --color-canola:  #B1D182;  /* light sage — soft accent */
-  --color-paja:    #F2F4EE;  /* subtle alt section bg */
+  --color-oliva: #2f6b33; /* Hisoil green — primary */
+  --color-oliva-dark: #0e1610; /* deep forest almost black — for overlays */
+  --color-noche: #0e1610; /* alias — verde muy oscuro para overlays */
+  --color-lima: #b8c521; /* lima — accent bright */
+  --color-nata: #fafaf7; /* warm off-white — section bg */
+  --color-canola: #b1d182; /* light sage — soft accent */
+  --color-paja: #f2f4ee; /* subtle alt section bg */
 
   /* ── Compost warm-earth palette (Moodboard 03) ── */
-  --color-bosque:  #283618;  /* bosque profundo */
-  --color-oliva-warm: #606C38;  /* oliva militar */
-  --color-crema:   #FEFAE0;  /* crema cálido */
-  --color-tierra:  #EDB731;  /* tierra dorada */
-  --color-cobre:   #BC6C25;  /* cobre terroso */
+  --color-bosque: #283618; /* bosque profundo */
+  --color-oliva-warm: #606c38; /* oliva militar */
+  --color-crema: #fefae0; /* crema cálido */
+  --color-tierra: #edb731; /* tierra dorada */
+  --color-cobre: #bc6c25; /* cobre terroso */
 
-  --background: #FAFAF7;
-  --foreground: #14201A;
-  --card: #FFFFFF;
-  --card-foreground: #14201A;
-  --popover: #FFFFFF;
-  --popover-foreground: #14201A;
-  --primary: #2F6B33;
-  --primary-foreground: #FFFFFF;
-  --secondary: #F2F4EE;
-  --secondary-foreground: #14201A;
-  --muted: #F2F4EE;
-  --muted-foreground: #4A5950;
-  --accent: #B8C521;
-  --accent-foreground: #14201A;
+  --background: #fafaf7;
+  --foreground: #14201a;
+  --card: #ffffff;
+  --card-foreground: #14201a;
+  --popover: #ffffff;
+  --popover-foreground: #14201a;
+  --primary: #2f6b33;
+  --primary-foreground: #ffffff;
+  --secondary: #f2f4ee;
+  --secondary-foreground: #14201a;
+  --muted: #f2f4ee;
+  --muted-foreground: #4a5950;
+  --accent: #b8c521;
+  --accent-foreground: #14201a;
   --border: rgba(20, 32, 26, 0.12);
   --border: rgba(20, 32, 26, 0.12);
   --destructive: #d4183d;
@@ -316,7 +394,9 @@
     white-space: nowrap;
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-family: var(--font-body);
     font-size: var(--text-base);
     font-weight: 400;
@@ -331,18 +411,30 @@
   /* Card with gradient border + real shadow — pops against off-white bg */
   .card-gradient-border {
     position: relative;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 0.75rem;
-    box-shadow: 0 1px 2px rgba(20,32,26,0.04), 0 4px 12px -4px rgba(20,32,26,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:
+      0 1px 2px rgba(20, 32, 26, 0.04),
+      0 4px 12px -4px rgba(20, 32, 26, 0.06);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
   .card-gradient-border::before {
     content: '';
     position: absolute;
     inset: 0;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(47,107,51,0.7) 0%, rgba(184,197,33,0.35) 40%, rgba(47,107,51,0.15) 80%, rgba(47,107,51,0.55) 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    background: linear-gradient(
+      135deg,
+      rgba(47, 107, 51, 0.7) 0%,
+      rgba(184, 197, 33, 0.35) 40%,
+      rgba(47, 107, 51, 0.15) 80%,
+      rgba(47, 107, 51, 0.55) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     border-radius: inherit;
@@ -350,16 +442,30 @@
   }
   .card-gradient-border:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(20,32,26,0.05), 0 20px 40px -16px rgba(47,107,51,0.22);
+    box-shadow:
+      0 4px 8px rgba(20, 32, 26, 0.05),
+      0 20px 40px -16px rgba(47, 107, 51, 0.22);
   }
   .card-gradient-border:hover::before {
-    background: linear-gradient(135deg, rgba(47,107,51,1) 0%, rgba(184,197,33,0.7) 40%, rgba(47,107,51,0.4) 80%, rgba(47,107,51,0.9) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(47, 107, 51, 1) 0%,
+      rgba(184, 197, 33, 0.7) 40%,
+      rgba(47, 107, 51, 0.4) 80%,
+      rgba(47, 107, 51, 0.9) 100%
+    );
   }
 
   /* Reveal on scroll/page-load — used by cards Farm Minerals style */
   @keyframes revealUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .reveal-up {
     opacity: 0;
@@ -379,7 +485,9 @@
   .scroll-reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .scroll-reveal.is-visible {
     opacity: 1;
@@ -390,7 +498,9 @@
   .scroll-reveal-left {
     opacity: 0;
     transform: translateX(-30px);
-    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .scroll-reveal-left.is-visible {
     opacity: 1;
@@ -401,7 +511,9 @@
   .scroll-reveal-scale {
     opacity: 0;
     transform: scale(0.96);
-    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    transition:
+      opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .scroll-reveal-scale.is-visible {
     opacity: 1;

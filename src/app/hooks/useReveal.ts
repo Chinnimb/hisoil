@@ -11,7 +11,7 @@ interface UseRevealOptions {
  * Returns a ref to attach to the element and a boolean `isVisible`.
  */
 export function useReveal<T extends HTMLElement = HTMLDivElement>(
-  options: UseRevealOptions = {}
+  options: UseRevealOptions = {},
 ): [React.RefObject<T>, boolean] {
   const { threshold = 0.15, rootMargin = '0px 0px -10% 0px', once = true } = options;
   const ref = useRef<T>(null);
@@ -29,7 +29,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
           setIsVisible(false);
         }
       },
-      { threshold, rootMargin }
+      { threshold, rootMargin },
     );
     obs.observe(el);
     return () => obs.disconnect();

@@ -3,10 +3,26 @@ import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const stages = [
-  { Icon: Trash2, label: 'Residuo', desc: 'Materia orgánica que hoy se pierde como pasivo ambiental.' },
-  { Icon: Recycle, label: 'Valorización', desc: 'Compostaje profesional que transforma el residuo en recurso.' },
-  { Icon: Sprout, label: 'Suelo / vegetación', desc: 'El compost vuelve al suelo y regenera la vida vegetal.' },
-  { Icon: CloudOff, label: 'Impacto ambiental', desc: 'Recuperación de CO₂ y beneficio ambiental medible.' },
+  {
+    Icon: Trash2,
+    label: 'Residuo',
+    desc: 'Materia orgánica que hoy se pierde como pasivo ambiental.',
+  },
+  {
+    Icon: Recycle,
+    label: 'Valorización',
+    desc: 'Compostaje profesional que transforma el residuo en recurso.',
+  },
+  {
+    Icon: Sprout,
+    label: 'Suelo / vegetación',
+    desc: 'El compost vuelve al suelo y regenera la vida vegetal.',
+  },
+  {
+    Icon: CloudOff,
+    label: 'Impacto ambiental',
+    desc: 'Recuperación de CO₂ y beneficio ambiental medible.',
+  },
 ];
 
 /**
@@ -26,17 +42,23 @@ export function WasteToCarbon() {
         >
           {/* Image */}
           <div className="lg:col-span-5 relative aspect-[4/3] rounded-3xl overflow-hidden">
-            <ImagePlaceholder dark label="Del residuo al crédito de carbono — concepto general del Portfolio" />
+            <ImagePlaceholder
+              dark
+              label="Del residuo al crédito de carbono — concepto general del Portfolio"
+            />
           </div>
 
           {/* Content */}
           <div className="lg:col-span-7">
             <div className="inline-block border border-lima/40 bg-lima/10 px-3 py-1 mb-6">
-              <span className="text-lima text-xs font-mono uppercase tracking-widest">Concepto</span>
+              <span className="text-lima text-xs font-mono uppercase tracking-widest">
+                Concepto
+              </span>
             </div>
             <h2 className="text-white mb-5">Del residuo al crédito de carbono.</h2>
             <p className="text-white/75 leading-relaxed text-lg mb-10 max-w-2xl">
-              Cada caso de este Portfolio es un tramo del mismo recorrido: un residuo que HISOIL sabe gestionar, transformado en un beneficio ambiental concreto.
+              Cada caso de este Portfolio es un tramo del mismo recorrido: un residuo que HISOIL
+              sabe gestionar, transformado en un beneficio ambiental concreto.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">

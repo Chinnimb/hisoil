@@ -5,7 +5,13 @@ interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElemen
   alt: string;
 }
 
-export function ImageWithFallback({ src, alt, className, style, ...props }: ImageWithFallbackProps) {
+export function ImageWithFallback({
+  src,
+  alt,
+  className,
+  style,
+  ...props
+}: ImageWithFallbackProps) {
   const [error, setError] = useState(false);
 
   if (error) {

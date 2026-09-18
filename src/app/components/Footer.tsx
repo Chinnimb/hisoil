@@ -8,7 +8,14 @@ export function Footer() {
     },
     {
       title: 'Servicios',
-      links: ['Fertilización', 'Compostaje', 'Análisis de suelo', 'Asesoramiento', 'Capacitaciones', 'Membresía'],
+      links: [
+        'Fertilización',
+        'Compostaje',
+        'Análisis de suelo',
+        'Asesoramiento',
+        'Capacitaciones',
+        'Membresía',
+      ],
     },
   ];
 
@@ -18,11 +25,7 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <img
-              src="/hisoil-logo.png"
-              alt="HISOIL"
-              className="h-12 w-auto"
-            />
+            <img src="/hisoil-logo.png" alt="HISOIL" className="h-12 w-auto" />
             <p className="text-white/65 leading-relaxed text-sm">
               Soluciones agrícolas sostenibles que transforman residuos en valor para tu campo.
             </p>
@@ -79,9 +82,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/15">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/55 text-sm">
-              © 2026 Hisoil. Todos los derechos reservados.
-            </p>
+            <p className="text-white/55 text-sm">© 2026 Hisoil. Todos los derechos reservados.</p>
             <div className="flex gap-6">
               <a href="#" className="text-white/55 hover:text-lima text-sm transition-colors">
                 Privacidad

@@ -58,19 +58,34 @@ export function PortfolioHero() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
-          <div className="hp-fade inline-block border border-white/30 px-4 py-1.5 mb-8" style={{ animationDelay: '0.1s' }}>
-            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Casos de éxito</span>
+          <div
+            className="hp-fade inline-block border border-white/30 px-4 py-1.5 mb-8"
+            style={{ animationDelay: '0.1s' }}
+          >
+            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">
+              Casos de éxito
+            </span>
           </div>
 
-          <h1 className="hp-fade text-white max-w-4xl mb-8 leading-tight" style={{ animationDelay: '0.25s' }}>
+          <h1
+            className="hp-fade text-white max-w-4xl mb-8 leading-tight"
+            style={{ animationDelay: '0.25s' }}
+          >
             Casos documentados en <span className="text-lima">9 industrias</span>.
           </h1>
 
-          <p className="hp-fade text-white/75 max-w-2xl mb-12 text-lg leading-relaxed" style={{ animationDelay: '0.4s' }}>
-            Cada tarjeta representa un problema resuelto: qué residuos tratamos, qué servicios ejecutamos y las empresas del sector que confían en Hisoil.
+          <p
+            className="hp-fade text-white/75 max-w-2xl mb-12 text-lg leading-relaxed"
+            style={{ animationDelay: '0.4s' }}
+          >
+            Cada tarjeta representa un problema resuelto: qué residuos tratamos, qué servicios
+            ejecutamos y las empresas del sector que confían en Hisoil.
           </p>
 
-          <div className="hp-fade flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '0.55s' }}>
+          <div
+            className="hp-fade flex flex-col sm:flex-row gap-4 justify-center"
+            style={{ animationDelay: '0.55s' }}
+          >
             <a
               href="#creditos-carbono"
               className="bg-white text-oliva px-9 py-4 rounded-full font-semibold hover:bg-canola hover:text-oliva transition-all shadow-xl"
@@ -87,13 +102,16 @@ export function PortfolioHero() {
         </div>
 
         {/* Trust indicators */}
-        <div className="hp-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-5 px-6 md:px-12 lg:px-20" style={{ animationDelay: '0.7s' }}>
+        <div
+          className="hp-fade relative z-10 bg-[#14201A]/70 backdrop-blur-sm border-t border-white/10 py-5 px-6 md:px-12 lg:px-20"
+          style={{ animationDelay: '0.7s' }}
+        >
           <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6 max-w-[1600px] mx-auto">
             {[
-              "44.400 t procesadas en 2022",
-              "36.951 tCO₂e reducidas por año",
-              "9 industrias documentadas",
-              "BioCarbon Standard certificado",
+              '44.400 t procesadas en 2022',
+              '36.951 tCO₂e reducidas por año',
+              '9 industrias documentadas',
+              'BioCarbon Standard certificado',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-white/75 text-sm font-mono">
                 <div className="w-1.5 h-1.5 bg-lima rounded-full" />

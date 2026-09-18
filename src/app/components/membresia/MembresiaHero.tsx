@@ -1,9 +1,9 @@
 const quickBenefits = [
-  "Descuentos exclusivos en productos",
-  "Asesoramiento técnico prioritario",
-  "Envíos recurrentes programados",
-  "Acceso a recursos y fichas técnicas",
-  "Atención preferencial 24 hs",
+  'Descuentos exclusivos en productos',
+  'Asesoramiento técnico prioritario',
+  'Envíos recurrentes programados',
+  'Acceso a recursos y fichas técnicas',
+  'Atención preferencial 24 hs',
 ];
 
 export function MembresiaHero() {
@@ -12,17 +12,19 @@ export function MembresiaHero() {
       {/* Top label */}
       <div className="border-b border-white/10 px-6 py-4">
         <div className="w-full flex items-center gap-2 text-xs font-mono text-white/55">
-          <span>Inicio</span><span>/</span>
+          <span>Inicio</span>
+          <span>/</span>
           <span className="text-white/60">Membresía</span>
         </div>
       </div>
 
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 py-16 md:py-24 gap-12 items-center">
-
         {/* Left — copy */}
         <div className="lg:col-span-6 flex flex-col">
           <div className="inline-block border border-white/20 px-3 py-1.5 mb-8 self-start">
-            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">Programa de Membresía</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">
+              Programa de Membresía
+            </span>
           </div>
 
           <h1 className="text-white mb-6 leading-[1.05]">
@@ -30,7 +32,9 @@ export function MembresiaHero() {
           </h1>
 
           <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-lg">
-            [Subtítulo — Un programa de suscripción diseñado para clientes que quieren acceso prioritario a productos, asesoramiento técnico continuo y beneficios exclusivos en cada campaña.]
+            [Subtítulo — Un programa de suscripción diseñado para clientes que quieren acceso
+            prioritario a productos, asesoramiento técnico continuo y beneficios exclusivos en cada
+            campaña.]
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-12">
@@ -68,7 +72,9 @@ export function MembresiaHero() {
               />
               <div className="relative z-10 flex items-start justify-between mb-8">
                 <div>
-                  <div className="text-white/55 text-xs font-mono uppercase tracking-widest mb-1">Miembro Hisoil</div>
+                  <div className="text-white/55 text-xs font-mono uppercase tracking-widest mb-1">
+                    Miembro Hisoil
+                  </div>
                   <div className="text-white font-bold text-lg">Plan Profesional</div>
                 </div>
                 <div className="bg-white/10 border border-white/20 px-3 py-1.5 rounded-full">
@@ -77,9 +83,9 @@ export function MembresiaHero() {
               </div>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { label: "Ciclo", value: "Mensual" },
-                  { label: "Próximo envío", value: "15 jun" },
-                  { label: "Descuento", value: "15%" },
+                  { label: 'Ciclo', value: 'Mensual' },
+                  { label: 'Próximo envío', value: '15 jun' },
+                  { label: 'Descuento', value: '15%' },
                 ].map((s) => (
                   <div key={s.label}>
                     <div className="text-white/55 text-xs font-mono mb-0.5">{s.label}</div>
@@ -92,9 +98,9 @@ export function MembresiaHero() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-px bg-white/10">
               {[
-                { value: "500+", label: "miembros activos" },
-                { value: "3", label: "planes disponibles" },
-                { value: "15%", label: "ahorro promedio" },
+                { value: '500+', label: 'miembros activos' },
+                { value: '3', label: 'planes disponibles' },
+                { value: '15%', label: 'ahorro promedio' },
               ].map((s) => (
                 <div key={s.label} className="bg-oliva p-5 text-center">
                   <div className="text-white font-bold text-xl mb-1">{s.value}</div>

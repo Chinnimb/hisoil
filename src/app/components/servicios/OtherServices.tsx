@@ -55,7 +55,7 @@ const services = [
 ];
 
 interface CardProps {
-  s: typeof services[number];
+  s: (typeof services)[number];
   index: number;
 }
 
@@ -106,7 +106,10 @@ function ServiceCard({ s, index }: CardProps) {
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-2">
           {s.tags.map((tag) => (
-            <span key={tag} className="bg-paja/50 text-oliva text-[11px] font-mono px-2.5 py-1 rounded-full border border-oliva/15">
+            <span
+              key={tag}
+              className="bg-paja/50 text-oliva text-[11px] font-mono px-2.5 py-1 rounded-full border border-oliva/15"
+            >
               {tag}
             </span>
           ))}
@@ -132,7 +135,10 @@ export function OtherServices() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
 
   return (
-    <section id="servicios-overview" className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
+    <section
+      id="servicios-overview"
+      className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white"
+    >
       <div className="max-w-[1600px] mx-auto w-full">
         {/* Header */}
         <div
@@ -140,11 +146,15 @@ export function OtherServices() {
           className={`max-w-3xl mb-14 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">01 — Nuestros servicios</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              01 — Nuestros servicios
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Potenciá tus proyectos con nuestros servicios.</h2>
           <p className="text-gray-700 leading-relaxed text-lg mb-4">
-            Cuatro servicios que forman un mismo recorrido: recibimos el residuo, lo transformamos mediante un proceso técnico, recuperamos suelos y ecosistemas, y acompañamos cada proyecto con conocimiento especializado.
+            Cuatro servicios que forman un mismo recorrido: recibimos el residuo, lo transformamos
+            mediante un proceso técnico, recuperamos suelos y ecosistemas, y acompañamos cada
+            proyecto con conocimiento especializado.
           </p>
           <div className="flex flex-wrap items-center gap-2 text-oliva/70 text-xs font-mono uppercase tracking-widest">
             {['Residuo', 'Proceso', 'Recuperación', 'Conocimiento'].map((step, i, arr) => (

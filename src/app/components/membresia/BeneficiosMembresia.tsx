@@ -4,44 +4,50 @@ import { useReveal } from '../../hooks/useReveal';
 const benefits = [
   {
     Icon: TrendingDown,
-    title: "Descuentos exclusivos",
-    description: "Miembros acceden a precios preferenciales en toda la línea de productos Hisoil, con descuentos que aumentan según el plan y la antigüedad.",
-    tag: "Hasta 20% off",
+    title: 'Descuentos exclusivos',
+    description:
+      'Miembros acceden a precios preferenciales en toda la línea de productos Hisoil, con descuentos que aumentan según el plan y la antigüedad.',
+    tag: 'Hasta 20% off',
   },
   {
     Icon: Zap,
-    title: "Asesoramiento prioritario",
-    description: "Acceso directo al equipo técnico con respuesta garantizada en menos de 4 horas hábiles. Consultas ilimitadas incluidas en el plan.",
-    tag: "Respuesta en 4 hs",
+    title: 'Asesoramiento prioritario',
+    description:
+      'Acceso directo al equipo técnico con respuesta garantizada en menos de 4 horas hábiles. Consultas ilimitadas incluidas en el plan.',
+    tag: 'Respuesta en 4 hs',
   },
   {
     Icon: Package,
-    title: "Envíos programados",
-    description: "Configurá un calendario de envíos recurrentes y recibí los productos en el momento exacto que los necesitás, sin interrupciones en tu operación.",
-    tag: "Sin cargo adicional",
+    title: 'Envíos programados',
+    description:
+      'Configurá un calendario de envíos recurrentes y recibí los productos en el momento exacto que los necesitás, sin interrupciones en tu operación.',
+    tag: 'Sin cargo adicional',
   },
   {
     Icon: FileText,
-    title: "Fichas técnicas y recursos",
-    description: "Biblioteca exclusiva con protocolos de aplicación, fichas técnicas actualizadas, guías de manejo y acceso anticipado a nuevas líneas de productos.",
-    tag: "Actualizadas 2025",
+    title: 'Fichas técnicas y recursos',
+    description:
+      'Biblioteca exclusiva con protocolos de aplicación, fichas técnicas actualizadas, guías de manejo y acceso anticipado a nuevas líneas de productos.',
+    tag: 'Actualizadas 2025',
   },
   {
     Icon: Bell,
-    title: "Alertas de campaña",
-    description: "Recibís notificaciones personalizadas sobre ventanas de aplicación óptima, alertas de plagas y recomendaciones técnicas según tu zona y cultivo.",
-    tag: "Personalizado",
+    title: 'Alertas de campaña',
+    description:
+      'Recibís notificaciones personalizadas sobre ventanas de aplicación óptima, alertas de plagas y recomendaciones técnicas según tu zona y cultivo.',
+    tag: 'Personalizado',
   },
   {
     Icon: Handshake,
-    title: "Atención 24 hs",
-    description: "Canal de comunicación exclusivo para miembros activos. Atención preferencial fuera del horario comercial para situaciones críticas de campo.",
-    tag: "7 días",
+    title: 'Atención 24 hs',
+    description:
+      'Canal de comunicación exclusivo para miembros activos. Atención preferencial fuera del horario comercial para situaciones críticas de campo.',
+    tag: '7 días',
   },
 ];
 
 interface BenefitCardProps {
-  b: typeof benefits[number];
+  b: (typeof benefits)[number];
   index: number;
 }
 
@@ -85,11 +91,14 @@ export function BeneficiosMembresia() {
           className={`mb-16 max-w-2xl scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">03 — Beneficios</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              03 — Beneficios
+            </span>
           </div>
           <h2 className="text-oliva mb-4">Todo lo que incluye ser miembro Hisoil.</h2>
           <p className="text-gray-700 leading-relaxed">
-            Desde el descuento en productos hasta el acompañamiento técnico personalizado, cada beneficio está diseñado para mejorar la rentabilidad de tu operación.
+            Desde el descuento en productos hasta el acompañamiento técnico personalizado, cada
+            beneficio está diseñado para mejorar la rentabilidad de tu operación.
           </p>
         </div>
 
@@ -103,7 +112,9 @@ export function BeneficiosMembresia() {
         {/* Bottom note */}
         <div className="mt-8 flex items-center justify-center gap-3 text-gray-600 text-sm">
           <div className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
-          <span className="font-mono text-xs">Todos los beneficios aplican desde el primer mes de suscripción activa</span>
+          <span className="font-mono text-xs">
+            Todos los beneficios aplican desde el primer mes de suscripción activa
+          </span>
           <div className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
         </div>
       </div>

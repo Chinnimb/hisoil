@@ -6,16 +6,30 @@ export function MapaUbicacion() {
         <div className="py-10 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="inline-block border border-gray-300 px-3 py-1">
-              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">05 — Ubicación</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                05 — Ubicación
+              </span>
             </div>
-            <div className="text-gray-600 text-sm">
-              [Calle y número], [Localidad], [Provincia]
-            </div>
+            <div className="text-gray-600 text-sm">[Calle y número], [Localidad], [Provincia]</div>
           </div>
           <button className="border border-gray-400 text-gray-600 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white transition-colors flex items-center gap-2">
-            <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            <svg
+              viewBox="0 0 24 24"
+              className="w-4 h-4 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              />
             </svg>
             Cómo llegar
           </button>
@@ -37,10 +51,10 @@ export function MapaUbicacion() {
 
         {/* Simulated streets */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute bg-white" style={{ top: "35%", left: 0, right: 0, height: 8 }} />
-          <div className="absolute bg-white" style={{ top: "60%", left: 0, right: 0, height: 4 }} />
-          <div className="absolute bg-white" style={{ left: "30%", top: 0, bottom: 0, width: 8 }} />
-          <div className="absolute bg-white" style={{ left: "65%", top: 0, bottom: 0, width: 4 }} />
+          <div className="absolute bg-white" style={{ top: '35%', left: 0, right: 0, height: 8 }} />
+          <div className="absolute bg-white" style={{ top: '60%', left: 0, right: 0, height: 4 }} />
+          <div className="absolute bg-white" style={{ left: '30%', top: 0, bottom: 0, width: 8 }} />
+          <div className="absolute bg-white" style={{ left: '65%', top: 0, bottom: 0, width: 4 }} />
         </div>
 
         {/* Pin */}

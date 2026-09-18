@@ -1,60 +1,80 @@
 import { Link } from 'react-router';
-import { ArrowUpRight, Sprout, Recycle, UsersRound, Leaf, Building2, FlaskConical } from 'lucide-react';
+import {
+  ArrowUpRight,
+  Sprout,
+  Recycle,
+  UsersRound,
+  Leaf,
+  Building2,
+  FlaskConical,
+} from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 
 const services = [
   {
-    title: "Agricultura Regenerativa",
-    href: "/servicios#agricultura-regenerativa",
-    description: "Proyectos de regeneración de suelos y captura de carbono. Consultoría técnica junto a Prosustentia.",
+    title: 'Agricultura Regenerativa',
+    href: '/servicios#agricultura-regenerativa',
+    description:
+      'Proyectos de regeneración de suelos y captura de carbono. Consultoría técnica junto a Prosustentia.',
     Icon: Sprout,
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    tag: "Regeneración",
+    image:
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200',
+    tag: 'Regeneración',
   },
   {
-    title: "Gestión de Residuos Orgánicos",
-    href: "/servicios#gestion-residuos",
-    description: "Diseño, ingeniería y operación de plantas de compostaje. Planta de Exaltación de la Cruz en operación.",
+    title: 'Gestión de Residuos Orgánicos',
+    href: '/servicios#gestion-residuos',
+    description:
+      'Diseño, ingeniería y operación de plantas de compostaje. Planta de Exaltación de la Cruz en operación.',
     Icon: Recycle,
-    image: "https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    tag: "Operación",
+    image:
+      'https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200',
+    tag: 'Operación',
   },
   {
-    title: "Asesoramiento Técnico",
-    href: "/servicios#asesoramiento-tecnico",
-    description: "Equipo de agrónomos e ingenieros a tu disposición. Acompañamiento en campo con datos y seguimiento.",
+    title: 'Asesoramiento Técnico',
+    href: '/servicios#asesoramiento-tecnico',
+    description:
+      'Equipo de agrónomos e ingenieros a tu disposición. Acompañamiento en campo con datos y seguimiento.',
     Icon: UsersRound,
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    tag: "Consultoría",
+    image:
+      'https://images.unsplash.com/photo-1574943320219-553eb213f72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200',
+    tag: 'Consultoría',
   },
   {
-    title: "Sostenibilidad y Créditos de Carbono",
-    href: "/servicios#sostenibilidad",
-    description: "Proyectos de evitación de emisiones. Diseño, medición y certificación de créditos de carbono.",
+    title: 'Sostenibilidad y Créditos de Carbono',
+    href: '/servicios#sostenibilidad',
+    description:
+      'Proyectos de evitación de emisiones. Diseño, medición y certificación de créditos de carbono.',
     Icon: Leaf,
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    tag: "Impacto",
+    image:
+      'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200',
+    tag: 'Impacto',
   },
   {
-    title: "Asistencia Técnica a Municipios",
-    href: "/servicios#asistencia-municipios",
-    description: "Compostaje, chipeado y tratamiento de residuos verdes urbanos. Planes a medida por escala municipal.",
+    title: 'Asistencia Técnica a Municipios',
+    href: '/servicios#asistencia-municipios',
+    description:
+      'Compostaje, chipeado y tratamiento de residuos verdes urbanos. Planes a medida por escala municipal.',
     Icon: Building2,
-    image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    tag: "Municipios",
+    image:
+      'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200',
+    tag: 'Municipios',
   },
   {
-    title: "Laboratorio",
-    href: "/servicios#laboratorio",
-    description: "Análisis de compost, residuos y suelos. Desarrollo de soluciones a medida con validación técnica.",
+    title: 'Laboratorio',
+    href: '/servicios#laboratorio',
+    description:
+      'Análisis de compost, residuos y suelos. Desarrollo de soluciones a medida con validación técnica.',
     Icon: FlaskConical,
-    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    tag: "I+D",
+    image:
+      'https://images.unsplash.com/photo-1582719471384-894fbb16e074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200',
+    tag: 'I+D',
   },
 ];
 
 interface ServiceCardProps {
-  s: typeof services[number];
+  s: (typeof services)[number];
   index: number;
 }
 
@@ -147,9 +167,13 @@ export function ServicesOverview() {
         >
           <div className="max-w-2xl">
             <div className="inline-block border border-white/25 px-3 py-1 mb-6">
-              <span className="text-white/85 text-xs font-mono uppercase tracking-widest">Servicios</span>
+              <span className="text-white/85 text-xs font-mono uppercase tracking-widest">
+                Servicios
+              </span>
             </div>
-            <h2 className="text-white">Servicios integrales para cada etapa del ciclo regenerativo.</h2>
+            <h2 className="text-white">
+              Servicios integrales para cada etapa del ciclo regenerativo.
+            </h2>
           </div>
           <Link to="/servicios">
             <button className="border border-white/40 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-lima hover:text-oliva hover:border-lima transition-all flex-shrink-0">

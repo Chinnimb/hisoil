@@ -1,5 +1,14 @@
 import { Link } from 'react-router';
-import { ChevronLeft, ChevronRight, Sprout, Layers, TreePine, Mountain, Eye, ShoppingCart } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Sprout,
+  Layers,
+  TreePine,
+  Mountain,
+  Eye,
+  ShoppingCart,
+} from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import { useRef, useState, useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
@@ -28,7 +37,8 @@ interface Product {
   slug: string;
   name: string;
   desc: string;
-  line: 'Agricultura' | 'Sustratos Profesionales' | 'Materias Primas' | 'Sustratos' | 'Infraestructura';
+  line:
+    'Agricultura' | 'Sustratos Profesionales' | 'Materias Primas' | 'Sustratos' | 'Infraestructura';
   Icon: LucideIcon;
   image: string;
   format: string;
@@ -39,34 +49,42 @@ interface Product {
 const products: Product[] = [
   // Agricultura
   {
-    slug: 'compost', name: 'HiSoil Compost',
+    slug: 'compost',
+    name: 'HiSoil Compost',
     desc: 'Enmienda orgánica para cultivos extensivos e intensivos.',
-    line: 'Agricultura', Icon: Sprout,
+    line: 'Agricultura',
+    Icon: Sprout,
     image: imgCompost,
     format: 'Bolsa 20 kg · Big-bag 1 tn',
     usage: '3–6 t/ha',
     badge: 'Más vendido',
   },
   {
-    slug: 'biofert', name: 'HiSoil Biofert',
+    slug: 'biofert',
+    name: 'HiSoil Biofert',
     desc: 'Biofertilizante líquido con microorganismos para suelo y fertirriego.',
-    line: 'Agricultura', Icon: Sprout,
+    line: 'Agricultura',
+    Icon: Sprout,
     image: imgBiofert,
     format: 'Bidón 20 L · IBC 1.000 L',
     usage: '2–4 L/ha',
   },
   {
-    slug: 'humic', name: 'HiSoil Humic',
+    slug: 'humic',
+    name: 'HiSoil Humic',
     desc: 'Concentrado de ácidos húmicos y fúlvicos.',
-    line: 'Agricultura', Icon: Sprout,
+    line: 'Agricultura',
+    Icon: Sprout,
     image: imgHumic,
     format: 'Bidón 10 L · 20 L',
     usage: '1–2 L/ha',
   },
   {
-    slug: 'regenera', name: 'HiSoil Regenera',
+    slug: 'regenera',
+    name: 'HiSoil Regenera',
     desc: 'Programa integral de regeneración de suelos.',
-    line: 'Agricultura', Icon: Sprout,
+    line: 'Agricultura',
+    Icon: Sprout,
     image: imgRegenera,
     format: 'Plan por campaña',
     usage: 'A medida',
@@ -74,26 +92,32 @@ const products: Product[] = [
   },
   // Sustratos Profesionales
   {
-    slug: 'premium', name: 'HiSoil Premium',
+    slug: 'premium',
+    name: 'HiSoil Premium',
     desc: 'Sustrato profesional premium para cultivos de alta exigencia.',
-    line: 'Sustratos Profesionales', Icon: Layers,
+    line: 'Sustratos Profesionales',
+    Icon: Layers,
     image: imgPremium,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Cultivos de alto valor',
     badge: 'Premium',
   },
   {
-    slug: 'berry', name: 'HiSoil Berry',
+    slug: 'berry',
+    name: 'HiSoil Berry',
     desc: 'Sustrato profesional para arándanos y frutos rojos.',
-    line: 'Sustratos Profesionales', Icon: Layers,
+    line: 'Sustratos Profesionales',
+    Icon: Layers,
     image: imgBerry,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción profesional',
   },
   {
-    slug: 'cannabis', name: 'HiSoil Cannabis',
+    slug: 'cannabis',
+    name: 'HiSoil Cannabis',
     desc: 'Sustrato profesional para cannabis medicinal y cáñamo industrial.',
-    line: 'Sustratos Profesionales', Icon: Layers,
+    line: 'Sustratos Profesionales',
+    Icon: Layers,
     image: imgCannabis,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Indoor / greenhouse / outdoor',
@@ -101,76 +125,94 @@ const products: Product[] = [
   },
   // Materias Primas
   {
-    slug: 'sphagnum', name: 'HiSoil Sphagnum',
+    slug: 'sphagnum',
+    name: 'HiSoil Sphagnum',
     desc: 'Turba sphagnum natural de Tierra del Fuego.',
-    line: 'Materias Primas', Icon: TreePine,
+    line: 'Materias Primas',
+    Icon: TreePine,
     image: imgSphagnum,
     format: 'Bolsas 130 · 25 · 5 dm³',
     usage: 'Formulación de sustratos',
   },
   {
-    slug: 'chip', name: 'HiSoil Chip',
+    slug: 'chip',
+    name: 'HiSoil Chip',
     desc: 'Astillas de madera para cobertura decorativa (mulch).',
-    line: 'Materias Primas', Icon: TreePine,
+    line: 'Materias Primas',
+    Icon: TreePine,
     image: imgChip,
     format: 'Granel · Big Bag · Bolsas',
     usage: 'Cobertura decorativa 5–8 cm',
   },
   // Paisajismo
   {
-    slug: 'greenroof', name: 'HiSoil GreenRoof',
+    slug: 'greenroof',
+    name: 'HiSoil GreenRoof',
     desc: 'Sustrato liviano para terrazas y techos verdes.',
-    line: 'Sustratos', Icon: TreePine,
+    line: 'Sustratos',
+    Icon: TreePine,
     image: imgGreenroof,
     format: 'Big-bag 1 m³',
     usage: 'Espesor 10–15 cm',
   },
   {
-    slug: 'tierra-fertil', name: 'HiSoil Tierra Fértil',
+    slug: 'tierra-fertil',
+    name: 'HiSoil Tierra Fértil',
     desc: 'Tierra enriquecida para jardinería y paisajismo.',
-    line: 'Sustratos', Icon: TreePine,
+    line: 'Sustratos',
+    Icon: TreePine,
     image: imgTierraFertil,
     format: 'Bolsa 40 L · A granel',
     usage: 'Uso general',
   },
   {
-    slug: 'outdoor', name: 'HiSoil Outdoor',
+    slug: 'outdoor',
+    name: 'HiSoil Outdoor',
     desc: 'Sustrato profesional para plantas de exterior.',
-    line: 'Sustratos', Icon: TreePine,
+    line: 'Sustratos',
+    Icon: TreePine,
     image: imgOutdoor,
     format: 'Bolsa 50 L',
     usage: 'Trasplante directo',
   },
   // Infraestructura
   {
-    slug: 'restore', name: 'HiSoil Restore',
+    slug: 'restore',
+    name: 'HiSoil Restore',
     desc: 'Sustrato para recuperación integral de suelos degradados.',
-    line: 'Infraestructura', Icon: Mountain,
+    line: 'Infraestructura',
+    Icon: Mountain,
     image: imgRestore,
     format: 'A granel · Big-bag',
     usage: '10–20 cm de espesor',
     badge: 'Obra pública',
   },
   {
-    slug: 'native', name: 'HiSoil Native',
+    slug: 'native',
+    name: 'HiSoil Native',
     desc: 'Mezcla con semillas nativas para restauración ecológica.',
-    line: 'Infraestructura', Icon: Mountain,
+    line: 'Infraestructura',
+    Icon: Mountain,
     image: imgNative,
     format: 'Bolsa 25 kg',
     usage: '30–50 kg/ha',
   },
   {
-    slug: 'carbon', name: 'HiSoil Carbon',
+    slug: 'carbon',
+    name: 'HiSoil Carbon',
     desc: 'Mejorador de suelo rico en carbono estable.',
-    line: 'Infraestructura', Icon: Mountain,
+    line: 'Infraestructura',
+    Icon: Mountain,
     image: imgCarbon,
     format: 'Big-bag 1 tn',
     usage: '2–5 t/ha',
   },
   {
-    slug: 'hydromulch', name: 'HiSoil HydroMulch',
+    slug: 'hydromulch',
+    name: 'HiSoil HydroMulch',
     desc: 'Aplicación hidráulica para taludes y grandes superficies.',
-    line: 'Infraestructura', Icon: Mountain,
+    line: 'Infraestructura',
+    Icon: Mountain,
     image: imgHydromulch,
     format: 'Aplicación por hidrosiembra',
     usage: 'Taludes / canteras',
@@ -228,12 +270,20 @@ function ProductCard({ p }: ProductCardProps) {
           {/* Specs */}
           <div className="space-y-1 mb-3 py-2 border-y border-oliva/10">
             <div className="flex items-start justify-between gap-2 text-[10px]">
-              <span className="text-oliva/60 font-mono uppercase tracking-widest flex-shrink-0">Formato</span>
-              <span className="text-oliva font-semibold text-right text-[11px] line-clamp-1">{p.format}</span>
+              <span className="text-oliva/60 font-mono uppercase tracking-widest flex-shrink-0">
+                Formato
+              </span>
+              <span className="text-oliva font-semibold text-right text-[11px] line-clamp-1">
+                {p.format}
+              </span>
             </div>
             <div className="flex items-start justify-between gap-2 text-[10px]">
-              <span className="text-oliva/60 font-mono uppercase tracking-widest flex-shrink-0">Aplicación</span>
-              <span className="text-oliva font-semibold text-right text-[11px] line-clamp-1">{p.usage}</span>
+              <span className="text-oliva/60 font-mono uppercase tracking-widest flex-shrink-0">
+                Aplicación
+              </span>
+              <span className="text-oliva font-semibold text-right text-[11px] line-clamp-1">
+                {p.usage}
+              </span>
             </div>
           </div>
 
@@ -302,7 +352,9 @@ export function FeaturedProducts() {
         >
           <div className="max-w-2xl">
             <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-              <span className="text-oliva text-xs font-mono uppercase tracking-widest">Productos</span>
+              <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+                Productos
+              </span>
             </div>
             <h2 className="text-oliva">Cinco líneas. Un mismo compromiso con la regeneración.</h2>
           </div>
@@ -325,7 +377,9 @@ export function FeaturedProducts() {
           disabled={!canLeft}
           aria-label="Anterior"
           className={`hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-2xl border border-oliva/15 items-center justify-center transition-all duration-300 ${
-            canLeft ? 'opacity-100 hover:bg-lima hover:border-lima hover:scale-110' : 'opacity-0 pointer-events-none'
+            canLeft
+              ? 'opacity-100 hover:bg-lima hover:border-lima hover:scale-110'
+              : 'opacity-0 pointer-events-none'
           }`}
         >
           <ChevronLeft className="w-5 h-5 text-oliva" />
@@ -335,7 +389,9 @@ export function FeaturedProducts() {
           disabled={!canRight}
           aria-label="Siguiente"
           className={`hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-2xl border border-oliva/15 items-center justify-center transition-all duration-300 ${
-            canRight ? 'opacity-100 hover:bg-lima hover:border-lima hover:scale-110' : 'opacity-0 pointer-events-none'
+            canRight
+              ? 'opacity-100 hover:bg-lima hover:border-lima hover:scale-110'
+              : 'opacity-0 pointer-events-none'
           }`}
         >
           <ChevronRight className="w-5 h-5 text-oliva" />

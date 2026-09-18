@@ -36,21 +36,34 @@ export function ProductosHero() {
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto w-full px-6 md:px-12 lg:px-20 py-16 md:py-24 gap-12 lg:gap-0">
           {/* Left — copy */}
           <div className="lg:col-span-6 flex flex-col justify-center lg:pr-16">
-            <div className="ph-fade inline-block border border-white/20 px-3 py-1.5 mb-8 self-start" style={{ animationDelay: '0.1s' }}>
+            <div
+              className="ph-fade inline-block border border-white/20 px-3 py-1.5 mb-8 self-start"
+              style={{ animationDelay: '0.1s' }}
+            >
               <span className="text-white/65 text-xs font-mono uppercase tracking-[0.2em]">
                 Centro de soluciones agrícolas
               </span>
             </div>
 
-            <h1 className="ph-fade text-white mb-6 leading-[1.1]" style={{ animationDelay: '0.25s' }}>
+            <h1
+              className="ph-fade text-white mb-6 leading-[1.1]"
+              style={{ animationDelay: '0.25s' }}
+            >
               Insumos técnicos para cada etapa de tu cultivo.
             </h1>
 
-            <p className="ph-fade text-white/70 text-lg leading-relaxed mb-10 max-w-lg" style={{ animationDelay: '0.4s' }}>
-              Portafolio completo de fertilizantes, bioestimulantes y compost formulados para maximizar rendimiento, mejorar suelo y sostener la producción ciclo a ciclo.
+            <p
+              className="ph-fade text-white/70 text-lg leading-relaxed mb-10 max-w-lg"
+              style={{ animationDelay: '0.4s' }}
+            >
+              Portafolio completo de fertilizantes, bioestimulantes y compost formulados para
+              maximizar rendimiento, mejorar suelo y sostener la producción ciclo a ciclo.
             </p>
 
-            <div className="ph-fade flex flex-col sm:flex-row gap-3 mb-12" style={{ animationDelay: '0.55s' }}>
+            <div
+              className="ph-fade flex flex-col sm:flex-row gap-3 mb-12"
+              style={{ animationDelay: '0.55s' }}
+            >
               <button className="bg-white text-oliva px-8 py-4 rounded-full font-semibold hover:bg-paja transition-colors">
                 Solicitar presupuesto
               </button>
@@ -60,11 +73,14 @@ export function ProductosHero() {
             </div>
 
             {/* Quick stats */}
-            <div className="ph-fade grid grid-cols-3 gap-4 border-t border-white/10 pt-10" style={{ animationDelay: '0.7s' }}>
+            <div
+              className="ph-fade grid grid-cols-3 gap-4 border-t border-white/10 pt-10"
+              style={{ animationDelay: '0.7s' }}
+            >
               {[
-                { value: "33", label: "productos en catálogo" },
-                { value: "5", label: "líneas técnicas" },
-                { value: "SENASA", label: "registros vigentes" },
+                { value: '33', label: 'productos en catálogo' },
+                { value: '5', label: 'líneas técnicas' },
+                { value: 'SENASA', label: 'registros vigentes' },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="text-2xl font-bold text-white mb-1">{s.value}</div>
@@ -75,7 +91,10 @@ export function ProductosHero() {
           </div>
 
           {/* Right — featured product showcase */}
-          <div className="ph-img lg:col-span-6 flex items-center" style={{ animationDelay: '0.45s' }}>
+          <div
+            className="ph-img lg:col-span-6 flex items-center"
+            style={{ animationDelay: '0.45s' }}
+          >
             <div className="max-w-[1600px] mx-auto w-full">
               {/* Main product image */}
               <div className="relative rounded-sm aspect-[4/3] overflow-hidden mb-4">
@@ -97,12 +116,27 @@ export function ProductosHero() {
               {/* Thumbnail strip */}
               <div className="grid grid-cols-4 gap-2">
                 {[
-                  { label: "Bioestimulante", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=150&q=70&fit=crop" },
-                  { label: "Compost", img: "https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=150&q=70&fit=crop" },
-                  { label: "Enmienda", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=150&q=70&fit=crop" },
-                  { label: "Kit", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=150&q=70&fit=crop" },
+                  {
+                    label: 'Bioestimulante',
+                    img: 'https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=150&q=70&fit=crop',
+                  },
+                  {
+                    label: 'Compost',
+                    img: 'https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=150&q=70&fit=crop',
+                  },
+                  {
+                    label: 'Enmienda',
+                    img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=150&q=70&fit=crop',
+                  },
+                  {
+                    label: 'Kit',
+                    img: 'https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=150&q=70&fit=crop',
+                  },
                 ].map(({ label, img }) => (
-                  <div key={label} className="aspect-square rounded-sm overflow-hidden border border-white/10 cursor-pointer hover:border-white/30 transition-colors relative">
+                  <div
+                    key={label}
+                    className="aspect-square rounded-sm overflow-hidden border border-white/10 cursor-pointer hover:border-white/30 transition-colors relative"
+                  >
                     <img src={img} alt={label} className="w-full h-full object-cover" />
                     <div className="absolute bottom-0 inset-x-0 bg-black/50 py-1 text-center">
                       <span className="text-white/60 text-[9px] font-mono">{label}</span>
@@ -118,8 +152,18 @@ export function ProductosHero() {
         <div className="border-t border-white/10 py-4 px-6">
           <div className="w-full flex items-center justify-between">
             <div className="flex gap-6 overflow-x-auto">
-              {["Fertilizantes", "Bioestimulantes", "Compost", "Enmiendas", "Nutrición vegetal", "Tratamiento de suelos"].map((cat) => (
-                <button key={cat} className="text-white/55 text-xs font-mono whitespace-nowrap hover:text-white/60 transition-colors">
+              {[
+                'Fertilizantes',
+                'Bioestimulantes',
+                'Compost',
+                'Enmiendas',
+                'Nutrición vegetal',
+                'Tratamiento de suelos',
+              ].map((cat) => (
+                <button
+                  key={cat}
+                  className="text-white/55 text-xs font-mono whitespace-nowrap hover:text-white/60 transition-colors"
+                >
                   {cat}
                 </button>
               ))}

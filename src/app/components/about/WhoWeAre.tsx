@@ -2,14 +2,14 @@ import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
 
 const kpis = [
-  { value: "+25", label: "Años", sub: "desarrollando soluciones ambientales" },
-  { value: "3", label: "Provincias", sub: "con proyectos activos" },
-  { value: "Nacional", label: "Capacidad", sub: "para proyectos en todo el país" },
-  { value: "Circular", label: "Modelo", sub: "de trabajo y crecimiento" },
+  { value: '+25', label: 'Años', sub: 'desarrollando soluciones ambientales' },
+  { value: '3', label: 'Provincias', sub: 'con proyectos activos' },
+  { value: 'Nacional', label: 'Capacidad', sub: 'para proyectos en todo el país' },
+  { value: 'Circular', label: 'Modelo', sub: 'de trabajo y crecimiento' },
 ];
 
 interface KpiProps {
-  k: typeof kpis[number];
+  k: (typeof kpis)[number];
   index: number;
 }
 
@@ -48,7 +48,9 @@ export function WhoWeAre() {
           className={`max-w-3xl mb-12 md:mb-16 scroll-reveal ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-6">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">02 — Quiénes somos</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              02 — Quiénes somos
+            </span>
           </div>
           <h2 className="text-oliva mb-6">Transformamos problemas ambientales en oportunidades.</h2>
         </div>
@@ -63,7 +65,9 @@ export function WhoWeAre() {
             <div className="absolute inset-0 bg-gradient-to-tr from-oliva/30 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <div className="inline-block bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
-                <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">Planta operativa · Exaltación de la Cruz</span>
+                <span className="text-oliva text-[10px] font-mono uppercase tracking-widest">
+                  Planta operativa · Exaltación de la Cruz
+                </span>
               </div>
               <p className="text-white font-bold text-xl md:text-2xl leading-tight max-w-md">
                 +25 años de experiencia en soluciones agroambientales.
@@ -83,8 +87,12 @@ export function WhoWeAre() {
             </div>
             <div className="rounded-2xl overflow-hidden relative group bg-oliva flex items-center justify-center p-6 min-h-[180px]">
               <div className="text-center">
-                <div className="text-lima text-4xl md:text-5xl font-bold leading-none mb-2">+25</div>
-                <div className="text-white text-xs md:text-sm font-mono uppercase tracking-widest">años en el sector</div>
+                <div className="text-lima text-4xl md:text-5xl font-bold leading-none mb-2">
+                  +25
+                </div>
+                <div className="text-white text-xs md:text-sm font-mono uppercase tracking-widest">
+                  años en el sector
+                </div>
               </div>
             </div>
           </div>
@@ -96,20 +104,35 @@ export function WhoWeAre() {
           className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-16 md:mb-20 scroll-reveal ${bodyVisible ? 'is-visible' : ''}`}
         >
           <div className="lg:col-span-4">
-            <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">Nuestro trabajo</div>
+            <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-3">
+              Nuestro trabajo
+            </div>
             <h3 className="text-oliva font-bold text-2xl md:text-3xl leading-tight">
-              Los residuos orgánicos no son un descarte, sino un <span className="text-lima">recurso</span>.
+              Los residuos orgánicos no son un descarte, sino un{' '}
+              <span className="text-lima">recurso</span>.
             </h3>
           </div>
           <div className="lg:col-span-8 space-y-5 text-gray-700 leading-relaxed text-base md:text-lg">
             <p>
-              En HISOIL creemos que los residuos orgánicos no son un descarte, sino un recurso. Desde hace más de <span className="text-oliva font-semibold">25 años</span> desarrollamos soluciones que permiten reducir el impacto ambiental, recuperar suelos y valorizar residuos mediante tecnologías de compostaje, producción de enmiendas orgánicas, sustratos profesionales y restauración ecológica.
+              En HISOIL creemos que los residuos orgánicos no son un descarte, sino un recurso.
+              Desde hace más de <span className="text-oliva font-semibold">25 años</span>{' '}
+              desarrollamos soluciones que permiten reducir el impacto ambiental, recuperar suelos y
+              valorizar residuos mediante tecnologías de compostaje, producción de enmiendas
+              orgánicas, sustratos profesionales y restauración ecológica.
             </p>
             <p>
-              Trabajamos junto a <span className="text-oliva font-semibold">industrias, empresas, municipios y productores</span> para diseñar soluciones adaptadas a cada necesidad, integrando conocimiento técnico, experiencia operativa y un fuerte compromiso con la sustentabilidad.
+              Trabajamos junto a{' '}
+              <span className="text-oliva font-semibold">
+                industrias, empresas, municipios y productores
+              </span>{' '}
+              para diseñar soluciones adaptadas a cada necesidad, integrando conocimiento técnico,
+              experiencia operativa y un fuerte compromiso con la sustentabilidad.
             </p>
             <p>
-              Cada proyecto busca generar <span className="text-oliva font-semibold">resultados medibles</span>, reducir costos de gestión, recuperar nutrientes y devolver valor al suelo a través de procesos seguros, eficientes y ambientalmente responsables.
+              Cada proyecto busca generar{' '}
+              <span className="text-oliva font-semibold">resultados medibles</span>, reducir costos
+              de gestión, recuperar nutrientes y devolver valor al suelo a través de procesos
+              seguros, eficientes y ambientalmente responsables.
             </p>
           </div>
         </div>
@@ -119,12 +142,17 @@ export function WhoWeAre() {
           ref={quoteRef}
           className={`bg-oliva rounded-3xl p-10 md:p-14 mb-16 md:mb-20 relative overflow-hidden scroll-reveal-scale ${quoteVisible ? 'is-visible' : ''}`}
         >
-          <div className="absolute -top-10 -left-4 text-lima/20 font-bold leading-none select-none pointer-events-none" style={{ fontSize: 'clamp(8rem, 14vw, 14rem)' }}>"</div>
+          <div
+            className="absolute -top-10 -left-4 text-lima/20 font-bold leading-none select-none pointer-events-none"
+            style={{ fontSize: 'clamp(8rem, 14vw, 14rem)' }}
+          >
+            "
+          </div>
           <div className="relative max-w-3xl">
             <p className="text-white font-bold text-2xl md:text-3xl leading-tight">
               Lo que otros consideran un residuo,{' '}
-              <span className="text-lima">nosotros lo transformamos en una oportunidad</span>{' '}
-              para el ambiente y la producción.
+              <span className="text-lima">nosotros lo transformamos en una oportunidad</span> para
+              el ambiente y la producción.
             </p>
           </div>
         </div>
@@ -135,9 +163,13 @@ export function WhoWeAre() {
           className={`mb-8 md:mb-10 scroll-reveal ${kpisHeaderVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-block border border-oliva/30 px-3 py-1 mb-4">
-            <span className="text-oliva text-xs font-mono uppercase tracking-widest">Nuestros números</span>
+            <span className="text-oliva text-xs font-mono uppercase tracking-widest">
+              Nuestros números
+            </span>
           </div>
-          <h3 className="text-oliva font-bold text-2xl md:text-3xl leading-tight">Datos que respaldan lo que hacemos.</h3>
+          <h3 className="text-oliva font-bold text-2xl md:text-3xl leading-tight">
+            Datos que respaldan lo que hacemos.
+          </h3>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {kpis.map((k, i) => (

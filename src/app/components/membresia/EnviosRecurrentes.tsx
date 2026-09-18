@@ -1,18 +1,18 @@
-const months = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
+const months = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
 
 const sampleSchedule = [
-  { month: "MAR", products: ["Bioestimulante A", "Corrector pH"], status: "entregado" },
-  { month: "ABR", products: ["Inoculante X"], status: "entregado" },
-  { month: "MAY", products: ["Bioestimulante A", "Nutriente foliar"], status: "entregado" },
-  { month: "JUN", products: ["Corrector pH", "Inoculante X"], status: "próximo" },
-  { month: "JUL", products: ["Bioestimulante A"], status: "programado" },
-  { month: "AGO", products: ["Nutriente foliar", "Corrector pH"], status: "programado" },
+  { month: 'MAR', products: ['Bioestimulante A', 'Corrector pH'], status: 'entregado' },
+  { month: 'ABR', products: ['Inoculante X'], status: 'entregado' },
+  { month: 'MAY', products: ['Bioestimulante A', 'Nutriente foliar'], status: 'entregado' },
+  { month: 'JUN', products: ['Corrector pH', 'Inoculante X'], status: 'próximo' },
+  { month: 'JUL', products: ['Bioestimulante A'], status: 'programado' },
+  { month: 'AGO', products: ['Nutriente foliar', 'Corrector pH'], status: 'programado' },
 ];
 
 const statusStyle: Record<string, string> = {
-  entregado: "bg-gray-200 text-gray-600",
-  próximo: "bg-oliva text-white",
-  programado: "bg-paja text-gray-600 border border-gray-200",
+  entregado: 'bg-gray-200 text-gray-600',
+  próximo: 'bg-oliva text-white',
+  programado: 'bg-paja text-gray-600 border border-gray-200',
 };
 
 export function EnviosRecurrentes() {
@@ -20,27 +20,45 @@ export function EnviosRecurrentes() {
     <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
           {/* Left — copy */}
           <div className="lg:col-span-5">
             <div className="inline-block border border-gray-300 px-3 py-1 mb-8">
-              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">06 — Envíos recurrentes</span>
+              <span className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                06 — Envíos recurrentes
+              </span>
             </div>
-            <h2 className="text-oliva mb-6">Los productos llegan cuando los necesitás, sin que tengas que pedirlos.</h2>
+            <h2 className="text-oliva mb-6">
+              Los productos llegan cuando los necesitás, sin que tengas que pedirlos.
+            </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              [Descripción 1 — El sistema de envíos recurrentes de Hisoil te permite programar la entrega de los productos que usás regularmente según el calendario de tu campaña.]
+              [Descripción 1 — El sistema de envíos recurrentes de Hisoil te permite programar la
+              entrega de los productos que usás regularmente según el calendario de tu campaña.]
             </p>
             <p className="text-gray-700 leading-relaxed mb-10">
-              [Descripción 2 — Podés ajustar cantidades, pausar temporalmente o agregar productos en cualquier momento desde el área de miembros, con al menos 5 días hábiles de anticipación.]
+              [Descripción 2 — Podés ajustar cantidades, pausar temporalmente o agregar productos en
+              cualquier momento desde el área de miembros, con al menos 5 días hábiles de
+              anticipación.]
             </p>
 
             <div className="space-y-4">
               {[
-                { title: "Frecuencia configurable", body: "Mensual, quincenal o semanal según tu plan" },
-                { title: "Notificaciones automáticas", body: "Aviso previo 7 días antes de cada envío" },
-                { title: "Sin costo adicional de envío", body: "Incluido en todos los planes de membresía" },
+                {
+                  title: 'Frecuencia configurable',
+                  body: 'Mensual, quincenal o semanal según tu plan',
+                },
+                {
+                  title: 'Notificaciones automáticas',
+                  body: 'Aviso previo 7 días antes de cada envío',
+                },
+                {
+                  title: 'Sin costo adicional de envío',
+                  body: 'Incluido en todos los planes de membresía',
+                },
               ].map((f) => (
-                <div key={f.title} className="flex items-start gap-4 p-4 border border-gray-300 rounded-sm bg-paja">
+                <div
+                  key={f.title}
+                  className="flex items-start gap-4 p-4 border border-gray-300 rounded-sm bg-paja"
+                >
                   <div className="w-2 h-2 bg-oliva rounded-full mt-1.5 flex-shrink-0" />
                   <div>
                     <div className="text-oliva text-sm font-semibold">{f.title}</div>
@@ -57,7 +75,9 @@ export function EnviosRecurrentes() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <div className="text-oliva font-semibold">Calendario de envíos</div>
-                  <div className="text-gray-600 text-xs font-mono">Campaña 2025 — Plan Profesional</div>
+                  <div className="text-gray-600 text-xs font-mono">
+                    Campaña 2025 — Plan Profesional
+                  </div>
                 </div>
                 <button className="border border-gray-300 text-gray-700 text-xs font-mono px-3 py-1.5 rounded-full hover:bg-paja transition-colors">
                   Editar calendario
@@ -73,12 +93,12 @@ export function EnviosRecurrentes() {
                       key={m}
                       className={`aspect-square flex items-center justify-center rounded-sm text-[9px] font-mono cursor-pointer transition-colors ${
                         scheduled
-                          ? scheduled.status === "próximo"
-                            ? "bg-oliva text-white"
-                            : scheduled.status === "entregado"
-                            ? "bg-gray-200 text-gray-600"
-                            : "bg-paja border border-gray-300 text-gray-700"
-                          : "bg-white border border-gray-300 text-gray-500"
+                          ? scheduled.status === 'próximo'
+                            ? 'bg-oliva text-white'
+                            : scheduled.status === 'entregado'
+                              ? 'bg-gray-200 text-gray-600'
+                              : 'bg-paja border border-gray-300 text-gray-700'
+                          : 'bg-white border border-gray-300 text-gray-500'
                       }`}
                     >
                       {m}
@@ -90,16 +110,26 @@ export function EnviosRecurrentes() {
               {/* Schedule list */}
               <div className="space-y-2">
                 {sampleSchedule.map((item) => (
-                  <div key={item.month} className="flex items-center justify-between gap-4 py-2 border-b border-gray-300 last:border-0">
+                  <div
+                    key={item.month}
+                    className="flex items-center justify-between gap-4 py-2 border-b border-gray-300 last:border-0"
+                  >
                     <div className="flex items-center gap-3">
                       <span className="text-xs font-mono text-gray-600 w-8">{item.month}</span>
                       <div className="flex flex-wrap gap-1.5">
                         {item.products.map((p) => (
-                          <span key={p} className="text-xs text-gray-600 bg-white border border-gray-300 px-2 py-0.5 rounded-full">{p}</span>
+                          <span
+                            key={p}
+                            className="text-xs text-gray-600 bg-white border border-gray-300 px-2 py-0.5 rounded-full"
+                          >
+                            {p}
+                          </span>
                         ))}
                       </div>
                     </div>
-                    <span className={`text-[10px] font-mono px-2 py-1 rounded-full flex-shrink-0 ${statusStyle[item.status]}`}>
+                    <span
+                      className={`text-[10px] font-mono px-2 py-1 rounded-full flex-shrink-0 ${statusStyle[item.status]}`}
+                    >
                       {item.status}
                     </span>
                   </div>
@@ -107,9 +137,18 @@ export function EnviosRecurrentes() {
               </div>
 
               <div className="mt-6 flex gap-3 text-[10px] font-mono text-gray-600">
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-gray-200 inline-block" />Entregado</span>
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-oliva inline-block" />Próximo</span>
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-paja border border-gray-300 inline-block" />Programado</span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-sm bg-gray-200 inline-block" />
+                  Entregado
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-sm bg-oliva inline-block" />
+                  Próximo
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-sm bg-paja border border-gray-300 inline-block" />
+                  Programado
+                </span>
               </div>
             </div>
           </div>

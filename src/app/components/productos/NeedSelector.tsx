@@ -1,82 +1,142 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const needs = [
   {
-    id: "crecimiento",
-    label: "Mejorar crecimiento",
-    icon: "🌱",
-    description: "Estimular el desarrollo vegetativo, raíces y biomasa foliar desde las primeras etapas del cultivo.",
+    id: 'crecimiento',
+    label: 'Mejorar crecimiento',
+    icon: '🌱',
+    description:
+      'Estimular el desarrollo vegetativo, raíces y biomasa foliar desde las primeras etapas del cultivo.',
     products: [
-      { name: "Bioestimulante Radicular Plus", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=300&q=70&fit=crop" },
-      { name: "Aminoácidos Concentrados", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=300&q=70&fit=crop" },
-      { name: "Activador Foliar Pro", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=70&fit=crop" },
+      {
+        name: 'Bioestimulante Radicular Plus',
+        img: 'https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Aminoácidos Concentrados',
+        img: 'https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Activador Foliar Pro',
+        img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=70&fit=crop',
+      },
     ],
     productCount: 8,
   },
   {
-    id: "rendimiento",
-    label: "Aumentar rendimiento",
-    icon: "📈",
-    description: "Maximizar llenado de grano, cantidad de frutos y toneladas por hectárea en cereales y oleaginosas.",
+    id: 'rendimiento',
+    label: 'Aumentar rendimiento',
+    icon: '📈',
+    description:
+      'Maximizar llenado de grano, cantidad de frutos y toneladas por hectárea en cereales y oleaginosas.',
     products: [
-      { name: "Fertilizante NPK Balance", img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop" },
-      { name: "Potasio Activado", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop" },
-      { name: "Zinc Quelado", img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=300&q=70&fit=crop" },
+      {
+        name: 'Fertilizante NPK Balance',
+        img: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Potasio Activado',
+        img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Zinc Quelado',
+        img: 'https://images.unsplash.com/photo-1492496913980-501348b61469?w=300&q=70&fit=crop',
+      },
     ],
     productCount: 12,
   },
   {
-    id: "suelo",
-    label: "Mejorar suelo",
-    icon: "🪱",
-    description: "Recuperar estructura, aumentar actividad biológica y mejorar capacidad de retención hídrica del suelo.",
+    id: 'suelo',
+    label: 'Mejorar suelo',
+    icon: '🪱',
+    description:
+      'Recuperar estructura, aumentar actividad biológica y mejorar capacidad de retención hídrica del suelo.',
     products: [
-      { name: "Compost Premium A", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop" },
-      { name: "Inoculante Microbiano", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
-      { name: "Humus de Lombriz", img: "https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=300&q=70&fit=crop" },
+      {
+        name: 'Compost Premium A',
+        img: 'https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Inoculante Microbiano',
+        img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Humus de Lombriz',
+        img: 'https://images.unsplash.com/photo-1697047070930-12043019a0d5?w=300&q=70&fit=crop',
+      },
     ],
     productCount: 9,
   },
   {
-    id: "nutrientes",
-    label: "Recuperar nutrientes",
-    icon: "🔄",
-    description: "Reponer macronutrientes y microelementos perdidos por extracción del cultivo o lixiviación del suelo.",
+    id: 'nutrientes',
+    label: 'Recuperar nutrientes',
+    icon: '🔄',
+    description:
+      'Reponer macronutrientes y microelementos perdidos por extracción del cultivo o lixiviación del suelo.',
     products: [
-      { name: "Enmienda Calcárea", img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=70&fit=crop" },
-      { name: "Azufre Granulado", img: "https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=300&q=70&fit=crop" },
-      { name: "Microelemento Mix", img: "https://images.unsplash.com/photo-1492496913980-501348b61469?w=300&q=70&fit=crop" },
+      {
+        name: 'Enmienda Calcárea',
+        img: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Azufre Granulado',
+        img: 'https://images.unsplash.com/photo-1458014854819-1a40aa70211c?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Microelemento Mix',
+        img: 'https://images.unsplash.com/photo-1492496913980-501348b61469?w=300&q=70&fit=crop',
+      },
     ],
     productCount: 7,
   },
   {
-    id: "compostaje",
-    label: "Compostaje",
-    icon: "♻️",
-    description: "Transformar residuos orgánicos propios en enmienda de calidad para reducir costos y cerrar el ciclo.",
+    id: 'compostaje',
+    label: 'Compostaje',
+    icon: '♻️',
+    description:
+      'Transformar residuos orgánicos propios en enmienda de calidad para reducir costos y cerrar el ciclo.',
     products: [
-      { name: "Acelerador Compost", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
-      { name: "Inoculante Compostador", img: "https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop" },
-      { name: "Correctivo pH Orgánico", img: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop" },
+      {
+        name: 'Acelerador Compost',
+        img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Inoculante Compostador',
+        img: 'https://images.unsplash.com/photo-1613036582025-ba1d4ccb3226?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Correctivo pH Orgánico',
+        img: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=300&q=70&fit=crop',
+      },
     ],
     productCount: 5,
   },
   {
-    id: "sustentable",
-    label: "Agricultura sustentable",
-    icon: "🌍",
-    description: "Reducir la dependencia de agroquímicos convencionales con soluciones biológicas certificadas.",
+    id: 'sustentable',
+    label: 'Agricultura sustentable',
+    icon: '🌍',
+    description:
+      'Reducir la dependencia de agroquímicos convencionales con soluciones biológicas certificadas.',
     products: [
-      { name: "Biofungicida Bacillus", img: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop" },
-      { name: "Biofertilizante Rizobio", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop" },
-      { name: "Azospirillum Líquido", img: "https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=300&q=70&fit=crop" },
+      {
+        name: 'Biofungicida Bacillus',
+        img: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Biofertilizante Rizobio',
+        img: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=70&fit=crop',
+      },
+      {
+        name: 'Azospirillum Líquido',
+        img: 'https://images.unsplash.com/photo-1602928298849-325cec8771c0?w=300&q=70&fit=crop',
+      },
     ],
     productCount: 10,
   },
 ];
 
 export function NeedSelector() {
-  const [activeNeed, setActiveNeed] = useState("rendimiento");
+  const [activeNeed, setActiveNeed] = useState('rendimiento');
   const active = needs.find((n) => n.id === activeNeed)!;
 
   return (
@@ -85,11 +145,14 @@ export function NeedSelector() {
         {/* Header */}
         <div className="mb-16 max-w-2xl">
           <div className="inline-block border border-white/20 px-3 py-1 mb-6">
-            <span className="text-white/65 text-xs font-mono uppercase tracking-widest">03 — Descubrí por necesidad</span>
+            <span className="text-white/65 text-xs font-mono uppercase tracking-widest">
+              03 — Descubrí por necesidad
+            </span>
           </div>
           <h2 className="text-white mb-4">¿Qué necesitás mejorar?</h2>
           <p className="text-white/65 leading-relaxed">
-            [Descripción — Elegí el objetivo de tu campaña y te mostramos los productos más adecuados para cada situación.]
+            [Descripción — Elegí el objetivo de tu campaña y te mostramos los productos más
+            adecuados para cada situación.]
           </p>
         </div>
 
@@ -102,20 +165,26 @@ export function NeedSelector() {
                 onClick={() => setActiveNeed(need.id)}
                 className={`flex items-center gap-4 p-5 rounded-sm border text-left transition-all ${
                   activeNeed === need.id
-                    ? "bg-white text-oliva border-white"
-                    : "bg-white/5 border-white/10 text-white/60 hover:bg-white/10 hover:border-white/20"
+                    ? 'bg-white text-oliva border-white'
+                    : 'bg-white/5 border-white/10 text-white/60 hover:bg-white/10 hover:border-white/20'
                 }`}
               >
-                <div className={`w-10 h-10 rounded-sm flex items-center justify-center text-xl flex-shrink-0 ${
-                  activeNeed === need.id ? "bg-paja" : "bg-white/5"
-                }`}>
+                <div
+                  className={`w-10 h-10 rounded-sm flex items-center justify-center text-xl flex-shrink-0 ${
+                    activeNeed === need.id ? 'bg-paja' : 'bg-white/5'
+                  }`}
+                >
                   {need.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className={`font-medium text-sm ${activeNeed === need.id ? "text-oliva" : "text-white/70"}`}>
+                  <div
+                    className={`font-medium text-sm ${activeNeed === need.id ? 'text-oliva' : 'text-white/70'}`}
+                  >
                     {need.label}
                   </div>
-                  <div className={`text-xs font-mono mt-0.5 ${activeNeed === need.id ? "text-gray-700" : "text-white/55"}`}>
+                  <div
+                    className={`text-xs font-mono mt-0.5 ${activeNeed === need.id ? 'text-gray-700' : 'text-white/55'}`}
+                  >
                     {need.productCount} productos
                   </div>
                 </div>
@@ -152,15 +221,13 @@ export function NeedSelector() {
                       className="bg-white/5 border border-white/10 rounded-sm overflow-hidden hover:border-white/30 transition-colors cursor-pointer group"
                     >
                       <div className="aspect-square relative overflow-hidden">
-                        <img
-                          src={p.img}
-                          alt={p.name}
-                          className="w-full h-full object-cover"
-                        />
+                        <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>
                       <div className="p-4">
-                        <div className="text-white/70 text-sm font-medium leading-tight mb-2 group-hover:text-white transition-colors">{p.name}</div>
+                        <div className="text-white/70 text-sm font-medium leading-tight mb-2 group-hover:text-white transition-colors">
+                          {p.name}
+                        </div>
                         <div className="text-white/25 text-xs font-mono">Ver detalle →</div>
                       </div>
                     </div>
