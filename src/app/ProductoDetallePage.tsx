@@ -125,6 +125,8 @@ export default function ProductoDetallePage() {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-oliva/10 shadow-xl">
               {product.image && !PRODUCTOS_SHOW_PLACEHOLDERS ? (
                 <img
+                  fetchPriority="high"
+                  decoding="async"
                   src={product.image}
                   alt={product.name}
                   className="absolute inset-0 w-full h-full object-cover"
@@ -505,6 +507,8 @@ export default function ProductoDetallePage() {
                       <div className="relative aspect-[4/3] overflow-hidden">
                         {r.image && !PRODUCTOS_SHOW_PLACEHOLDERS ? (
                           <img
+                            loading="lazy"
+                            decoding="async"
                             src={r.image}
                             alt={r.name}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

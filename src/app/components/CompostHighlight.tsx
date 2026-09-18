@@ -23,6 +23,8 @@ export function CompostHighlight() {
           {/* Image */}
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden order-2 lg:order-1">
             <img
+              loading="lazy"
+              decoding="async"
               src={imgCompostHome}
               alt="HiSoil Compost — enmienda orgánica premium"
               className="w-full h-full object-cover"

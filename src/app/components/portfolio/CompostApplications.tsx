@@ -86,6 +86,8 @@ function AppCard({ a, index }: CardProps) {
       {/* Image */}
       <div className="relative md:w-2/5 aspect-[16/9] md:aspect-auto overflow-hidden flex-shrink-0">
         <img
+          loading="lazy"
+          decoding="async"
           src={a.image}
           alt={a.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"

@@ -42,7 +42,13 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <img src="/hisoil-logo.png" alt="HISOIL" className="h-12 w-auto" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/hisoil-logo.png"
+              alt="HISOIL"
+              className="h-12 w-auto"
+            />
             <p className="text-white/65 leading-relaxed text-sm">
               Soluciones agrícolas sostenibles que transforman residuos en valor para tu campo.
             </p>

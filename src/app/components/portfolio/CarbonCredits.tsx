@@ -310,6 +310,8 @@ export function CarbonCredits() {
       {/* ── HERO VERDE ─────────────────────────────── */}
       <div className="relative overflow-hidden">
         <img
+          loading="lazy"
+          decoding="async"
           src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85&fit=crop"
           alt=""
           aria-hidden="true"
@@ -414,6 +416,8 @@ export function CarbonCredits() {
               {/* Imagen del step (sticky en desktop) */}
               <div className="lg:col-span-5 relative aspect-[4/3] lg:aspect-auto lg:min-h-[520px] overflow-hidden bg-oliva">
                 <img
+                  loading="lazy"
+                  decoding="async"
                   src={active.image}
                   alt={active.title}
                   className="absolute inset-0 w-full h-full object-cover"

@@ -234,6 +234,8 @@ function ProductCard({ p }: ProductCardProps) {
         {/* Image */}
         <div className="relative aspect-[16/10] overflow-hidden">
           <img
+            loading="lazy"
+            decoding="async"
             src={p.image}
             alt={p.name}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

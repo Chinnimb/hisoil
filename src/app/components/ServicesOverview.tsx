@@ -91,6 +91,8 @@ function ServiceCard({ s, index }: ServiceCardProps) {
       <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/15 hover:border-lima/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
         {/* Background image — full card on hover */}
         <img
+          loading="lazy"
+          decoding="async"
           src={s.image}
           alt=""
           aria-hidden="true"
@@ -102,6 +104,8 @@ function ServiceCard({ s, index }: ServiceCardProps) {
         {/* Image visible en estado base (imagen chica arriba) — se oculta en hover */}
         <div className="relative aspect-[4/3] overflow-hidden transition-opacity duration-500 group-hover:opacity-0">
           <img
+            loading="lazy"
+            decoding="async"
             src={s.image}
             alt={s.title}
             className="absolute inset-0 w-full h-full object-cover"

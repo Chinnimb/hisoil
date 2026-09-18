@@ -297,6 +297,8 @@ function ProductCard({ p, index }: ProductCardProps) {
       <div className="relative aspect-[9/4] overflow-hidden flex-shrink-0">
         {img ? (
           <img
+            loading="lazy"
+            decoding="async"
             src={img}
             alt={p.name}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -391,6 +393,8 @@ function CategoryBlock({ category, index }: CategoryBlockProps) {
               <ImagePlaceholder label={`${category.name} — imagen editorial de familia`} />
             ) : (
               <img
+                loading="lazy"
+                decoding="async"
                 src={category.image}
                 alt={category.name}
                 className="w-full h-full object-cover"
