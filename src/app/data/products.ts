@@ -1,27 +1,27 @@
 import { Sprout, Layers, TreePine, Mountain } from 'lucide-react';
 
 // Imágenes reales de producto (src/imports/productos)
-import imgCompost from '../../imports/productos/compost-1.png';
-import imgCompostPaisajismo from '../../imports/productos/compost-2.png';
-import imgHumic from '../../imports/productos/humic.png';
-import imgBiofert from '../../imports/productos/biofert-1.png';
-import imgCarbon from '../../imports/productos/carbon.png';
-import imgRegenera from '../../imports/productos/regenera.png';
-import imgPremium from '../../imports/productos/premium.png';
-import imgBerry from '../../imports/productos/berry.png';
-import imgCannabis from '../../imports/productos/cannabis.png';
-import imgCitrus from '../../imports/productos/citrus.png';
-import imgTurf from '../../imports/productos/turf.png';
-import imgHydro from '../../imports/productos/hydro.png';
-import imgPalm from '../../imports/productos/palm.png';
-import imgChip from '../../imports/productos/chip.png';
-import imgSphagnum from '../../imports/productos/sphagnum.png';
-import imgTierraFertil from '../../imports/productos/tierra-fertil.png';
-import imgGreenroof from '../../imports/productos/greenroof.png';
-import imgRestore from '../../imports/productos/restore-1.png';
-import imgHydromulch from '../../imports/productos/hydromulch.png';
-import imgNative from '../../imports/productos/native.png';
-import imgOutdoor from '../../imports/productos/outdoor.png';
+import imgCompost from '../../imports/productos/compost-1.webp';
+import imgCompostPaisajismo from '../../imports/productos/compost-2.webp';
+import imgHumic from '../../imports/productos/humic.webp';
+import imgBiofert from '../../imports/productos/biofert-1.webp';
+import imgCarbon from '../../imports/productos/carbon.webp';
+import imgRegenera from '../../imports/productos/regenera.webp';
+import imgPremium from '../../imports/productos/premium.webp';
+import imgBerry from '../../imports/productos/berry.webp';
+import imgCannabis from '../../imports/productos/cannabis.webp';
+import imgCitrus from '../../imports/productos/citrus.webp';
+import imgTurf from '../../imports/productos/turf.webp';
+import imgHydro from '../../imports/productos/hydro.webp';
+import imgPalm from '../../imports/productos/palm.webp';
+import imgChip from '../../imports/productos/chip.webp';
+import imgSphagnum from '../../imports/productos/sphagnum.webp';
+import imgTierraFertil from '../../imports/productos/tierra-fertil.webp';
+import imgGreenroof from '../../imports/productos/greenroof.webp';
+import imgRestore from '../../imports/productos/restore-1.webp';
+import imgHydromulch from '../../imports/productos/hydromulch.webp';
+import imgNative from '../../imports/productos/native.webp';
+import imgOutdoor from '../../imports/productos/outdoor.webp';
 
 type LucideIcon = typeof Sprout;
 
