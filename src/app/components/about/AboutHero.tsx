@@ -1,6 +1,6 @@
 import { useModal } from '../../context/ModalContext';
 import { Link } from 'react-router';
-import { ImageIcon } from 'lucide-react';
+import imgHero from '../../../imports/nosotros-hero.webp';
 
 export function AboutHero() {
   const { open } = useModal();
@@ -18,19 +18,19 @@ export function AboutHero() {
         }
       `}</style>
 
-      <section className="relative min-h-screen flex flex-col overflow-hidden bg-noche">
-        {/* Foto pendiente — portada Nosotros: planta + paisaje. Fondo provisorio mientras se genera/produce la imagen final. */}
-        <div className="absolute inset-0 bg-gradient-to-br from-oliva via-noche to-noche" />
-        <div className="absolute inset-0 flex items-start justify-end p-8 opacity-30">
-          <div className="flex items-center gap-2 text-white/50 text-[10px] font-mono uppercase tracking-widest">
-            <ImageIcon className="w-4 h-4" />
-            Foto pendiente — planta + paisaje
-          </div>
+      <section className="relative min-h-[calc(100svh-5rem)] flex flex-col overflow-hidden bg-noche">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={imgHero}
+            alt="Equipo de HISOIL en la planta de compostaje"
+            className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
+          />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-noche/70 via-transparent to-noche/20" />
+        <div className="absolute inset-0 bg-noche/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noche/75 via-transparent to-noche/30" />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 text-center py-32 pt-44">
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-8 text-center">
           <div
             className="ha-fade inline-block border border-white/30 px-4 py-1.5 mb-8"
             style={{ animationDelay: '0.1s' }}

@@ -1,5 +1,6 @@
 import { useReveal } from '../../hooks/useReveal';
-import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgPlanta from '../../../imports/planta-exaltacion.webp';
+import imgTrabajo from '../../../imports/trabajo-tecnico.webp';
 
 const kpis = [
   { value: '+25', label: 'Años', sub: 'desarrollando soluciones ambientales' },
@@ -61,7 +62,13 @@ export function WhoWeAre() {
           className={`grid grid-cols-12 gap-3 md:gap-5 mb-16 md:mb-20 scroll-reveal ${imgVisible ? 'is-visible' : ''}`}
         >
           <div className="col-span-12 md:col-span-7 aspect-[5/4] rounded-2xl overflow-hidden relative group">
-            <ImagePlaceholder label="Planta operativa Hisoil — Exaltación de la Cruz" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src={imgPlanta}
+              alt="Planta operativa HISOIL en Exaltación de la Cruz"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-gradient-to-tr from-oliva/30 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <div className="inline-block bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
@@ -77,7 +84,13 @@ export function WhoWeAre() {
 
           <div className="col-span-12 md:col-span-5 grid grid-rows-2 gap-3 md:gap-5">
             <div className="rounded-2xl overflow-hidden relative group min-h-[180px]">
-              <ImagePlaceholder label="Trabajo técnico en terreno" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src={imgTrabajo}
+                alt="Equipo técnico de HISOIL muestreando suelo en campo"
+                className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-oliva/40 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <span className="inline-block bg-oliva/95 backdrop-blur-sm text-white text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full">

@@ -1,8 +1,21 @@
 import { Handshake, FlaskConical, Leaf, Users, Award, Scale } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgCompromiso from '../../../imports/compromiso.webp';
+import imgInnovacion from '../../../imports/innovacion.webp';
 
-const valores = [
+interface Valor {
+  number: string;
+  Icon: typeof Handshake;
+  title: string;
+  quote: string;
+  description: string;
+  imageLabel: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+const valores: Valor[] = [
   {
     number: '01',
     Icon: Handshake,
@@ -11,6 +24,8 @@ const valores = [
     description:
       'Acompañamos a nuestros clientes desde el diagnóstico inicial hasta la implementación y el seguimiento técnico, construyendo relaciones de largo plazo basadas en la confianza.',
     imageLabel: 'Compromiso — trabajo en terreno',
+    image: imgCompromiso,
+    imageAlt: 'Equipo de HISOIL revisando muestras en planta',
   },
   {
     number: '02',
@@ -20,6 +35,8 @@ const valores = [
     description:
       'Incorporamos nuevas tecnologías, procesos y conocimientos para mejorar continuamente nuestros productos y servicios, ofreciendo soluciones eficientes y de alto valor agregado.',
     imageLabel: 'Innovación — tecnología',
+    image: imgInnovacion,
+    imageAlt: 'Análisis de muestra en laboratorio HISOIL',
   },
   {
     number: '03',
@@ -60,7 +77,7 @@ const valores = [
 ];
 
 interface ValorCardProps {
-  v: (typeof valores)[number];
+  v: Valor;
   index: number;
 }
 
@@ -77,7 +94,17 @@ function ValorCard({ v, index }: ValorCardProps) {
       <div className="relative bg-white rounded-2xl overflow-hidden border border-oliva/15 hover:border-oliva/40 hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
         {/* Image with hover zoom */}
         <div className="relative aspect-[4/3] overflow-hidden">
-          <ImagePlaceholder label={v.imageLabel} />
+          {v.image ? (
+            <img
+              loading="lazy"
+              decoding="async"
+              src={v.image}
+              alt={v.imageAlt ?? v.imageLabel}
+              className="absolute inset-0 h-full w-full object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+            />
+          ) : (
+            <ImagePlaceholder label={v.imageLabel} />
+          )}
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 
