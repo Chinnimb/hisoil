@@ -3,6 +3,10 @@ import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
 import imgCompromiso from '../../../imports/compromiso.webp';
 import imgInnovacion from '../../../imports/innovacion.webp';
+import imgSustentabilidad from '../../../imports/sustentabilidad.webp';
+import imgCercania from '../../../imports/cercania.webp';
+import imgCalidad from '../../../imports/calidad.webp';
+import imgResponsabilidad from '../../../imports/responsabilidad.webp';
 
 interface Valor {
   number: string;
@@ -13,6 +17,7 @@ interface Valor {
   imageLabel: string;
   image?: string;
   imageAlt?: string;
+  imagePosition?: string;
 }
 
 const valores: Valor[] = [
@@ -46,6 +51,8 @@ const valores: Valor[] = [
     description:
       'Promovemos la valorización de residuos orgánicos, la recuperación de nutrientes y la regeneración de suelos mediante procesos que reducen el impacto ambiental y generan beneficios económicos.',
     imageLabel: 'Sustentabilidad — suelo + naturaleza',
+    image: imgSustentabilidad,
+    imageAlt: 'Plántula creciendo en suelo regenerado',
   },
   {
     number: '04',
@@ -55,6 +62,9 @@ const valores: Valor[] = [
     description:
       'Brindamos atención personalizada, acompañamiento permanente y respuestas ágiles para adaptar cada solución a las necesidades de cada proyecto.',
     imageLabel: 'Cercanía — acompañamiento',
+    image: imgCercania,
+    imageAlt: 'Equipo de HISOIL recorriendo el campo con un productor',
+    imagePosition: 'object-top',
   },
   {
     number: '05',
@@ -64,6 +74,8 @@ const valores: Valor[] = [
     description:
       'Aplicamos controles durante cada etapa de producción para garantizar productos confiables, trazables y consistentes, cumpliendo con los estándares técnicos y ambientales correspondientes.',
     imageLabel: 'Calidad — producto + control',
+    image: imgCalidad,
+    imageAlt: 'Control de calidad de compost en planta HISOIL',
   },
   {
     number: '06',
@@ -73,6 +85,9 @@ const valores: Valor[] = [
     description:
       'Trabajamos con transparencia, compromiso y responsabilidad, promoviendo prácticas que contribuyen al desarrollo sostenible y al cumplimiento de los objetivos ambientales de nuestros clientes.',
     imageLabel: 'Responsabilidad — operación + proyecto ambiental',
+    image: imgResponsabilidad,
+    imageAlt: 'Operario de HISOIL supervisando la planta de compostaje',
+    imagePosition: 'object-left',
   },
 ];
 
@@ -100,7 +115,7 @@ function ValorCard({ v, index }: ValorCardProps) {
               decoding="async"
               src={v.image}
               alt={v.imageAlt ?? v.imageLabel}
-              className="absolute inset-0 h-full w-full object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-105"
+              className={`absolute inset-0 h-full w-full object-cover ${v.imagePosition ?? 'object-center'} transition-transform duration-700 group-hover:scale-105`}
             />
           ) : (
             <ImagePlaceholder label={v.imageLabel} />
