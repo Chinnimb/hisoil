@@ -253,10 +253,12 @@ export default function ProductoDetallePage() {
                 ¿Qué es {product.name}?
               </h2>
             </div>
-            <div className="lg:col-span-2">
-              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                {product.description}
-              </p>
+            <div className="lg:col-span-2 space-y-5">
+              {product.description.split('\n\n').map((paragraph) => (
+                <p key={paragraph} className="text-gray-700 leading-relaxed text-base md:text-lg">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </section>
@@ -270,7 +272,9 @@ export default function ProductoDetallePage() {
                 <div className="w-10 h-10 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-oliva" />
                 </div>
-                <h3 className="text-oliva font-bold text-xl">Composición técnica</h3>
+                <h3 className="text-oliva font-bold text-xl">
+                  {product.compositionLabel ?? 'Composición técnica'}
+                </h3>
               </div>
               <ul className="space-y-3">
                 {product.composition.map((c) => (
@@ -314,7 +318,7 @@ export default function ProductoDetallePage() {
                 Cómo usar
               </div>
               <h3 className="text-oliva text-2xl md:text-3xl font-bold leading-tight mb-4">
-                Formas de aplicación
+                {product.applicationsTitle ?? 'Formas de aplicación'}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
                 Recomendaciones técnicas del equipo Hisoil. Consultá con un asesor para ajustes
@@ -391,7 +395,7 @@ export default function ProductoDetallePage() {
               <>
                 <div className="pt-12 mt-16 border-t border-oliva/10 text-center">
                   <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-6">
-                    Cultivos recomendados
+                    {product.cropsLabel ?? 'Cultivos recomendados'}
                   </div>
                   <div className="flex flex-wrap justify-center gap-3">
                     {product.crops.map((c) => {
@@ -416,12 +420,16 @@ export default function ProductoDetallePage() {
         {/* Packaging + Storage */}
         <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-paja/40">
           <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <div className="bg-white border border-oliva/15 rounded-2xl p-8">
+            <div
+              className={`bg-white border border-oliva/15 rounded-2xl p-8 ${product.storage ? '' : 'md:col-span-2'}`}
+            >
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-10 h-10 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center">
                   <Package className="w-5 h-5 text-oliva" />
                 </div>
-                <h3 className="text-oliva font-bold text-lg">Presentaciones</h3>
+                <h3 className="text-oliva font-bold text-lg">
+                  {product.packagingLabel ?? 'Presentaciones'}
+                </h3>
               </div>
               <ul className="space-y-2">
                 {product.packaging.map((p) => (
@@ -433,15 +441,28 @@ export default function ProductoDetallePage() {
               </ul>
             </div>
 
-            <div className="bg-white border border-oliva/15 rounded-2xl p-8">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center">
-                  <Thermometer className="w-5 h-5 text-oliva" />
+            {product.storage && (
+              <div className="bg-white border border-oliva/15 rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-oliva/10 backdrop-blur-md border border-oliva/20 flex items-center justify-center">
+                    <Thermometer className="w-5 h-5 text-oliva" />
+                  </div>
+                  <h3 className="text-oliva font-bold text-lg">Almacenamiento</h3>
                 </div>
-                <h3 className="text-oliva font-bold text-lg">Almacenamiento</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">{product.storage}</p>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed">{product.storage}</p>
-            </div>
+            )}
+
+            {product.highlight && (
+              <div className="md:col-span-2 bg-oliva rounded-2xl p-8 md:p-10 text-white">
+                <div className="text-lima text-[10px] font-mono uppercase tracking-widest mb-3">
+                  Destacado
+                </div>
+                <p className="text-white font-semibold text-lg md:text-xl leading-snug max-w-4xl">
+                  {product.highlight}
+                </p>
+              </div>
+            )}
           </div>
         </section>
 

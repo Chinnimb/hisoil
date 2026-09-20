@@ -53,7 +53,7 @@ const productImages: Record<string, string> = {
   // Paisajismo
   'HiSoil Tierra Fértil': imgTierraFertil,
   'HiSoil Outdoor': imgOutdoor,
-  'HiSoil GreenRoof': imgGreenroof,
+  'HiSoil Green Roof': imgGreenroof,
   // Infraestructura
   'HiSoil Restore': imgRestore,
   'HiSoil HydroMulch': imgHydromulch,
@@ -89,7 +89,7 @@ const productSlugs: Record<string, string> = {
   'HiSoil Level': 'level',
   'HiSoil Outdoor': 'outdoor',
   'HiSoil Indoor': 'indoor',
-  'HiSoil GreenRoof': 'greenroof',
+  'HiSoil Green Roof': 'greenroof',
   'HiSoil Restore': 'restore',
   'HiSoil HydroMulch': 'hydromulch',
   'HiSoil Erosion': 'erosion',
@@ -98,6 +98,8 @@ const productSlugs: Record<string, string> = {
 
 interface Product {
   name: string;
+  /** Solo cuando el nombre no alcanza para resolver la ficha (ej. HiSoil Compost aparece en 2 familias) */
+  slug?: string;
   desc: string;
   status?: 'a-desarrollar' | 'opcional';
 }
@@ -134,15 +136,21 @@ const categories: Category[] = [
         products: [
           {
             name: 'HiSoil Compost',
-            desc: 'Enmienda orgánica para cultivos extensivos e intensivos.',
+            desc: 'Enmienda orgánica premium para la regeneración y fertilidad de los suelos.',
           },
           {
             name: 'HiSoil Biofert',
-            desc: 'Biofertilizante líquido con microorganismos para aplicación al suelo y fertirriego.',
+            desc: 'Biofertilizante biológico de última generación.',
           },
-          { name: 'HiSoil Humic', desc: 'Concentrado de ácidos húmicos y fúlvicos.' },
-          { name: 'HiSoil Carbon', desc: 'Mejorador de suelo rico en carbono estable.' },
-          { name: 'HiSoil Regenera', desc: 'Programa de regeneración de suelos.' },
+          {
+            name: 'HiSoil Humic',
+            desc: 'Enmienda orgánica húmica a base de compost y leonardita.',
+          },
+          {
+            name: 'HiSoil Carbon',
+            desc: 'Enmienda orgánica carbonizada a base de compost y biochar.',
+          },
+          { name: 'HiSoil Regenera', desc: 'Programa integral para la regeneración de suelos.' },
         ],
       },
     ],
@@ -221,18 +229,31 @@ const categories: Category[] = [
       {
         title: 'Línea de Sustratos HiSoil',
         products: [
-          { name: 'HiSoil Compost', desc: 'Compost premium.' },
+          {
+            name: 'HiSoil Compost',
+            slug: 'compost-paisajismo',
+            desc: 'Enmienda orgánica para jardinería, paisajismo y espacios verdes.',
+          },
           {
             name: 'HiSoil Tierra Fértil',
-            desc: 'Tierra enriquecida para jardinería y paisajismo.',
+            desc: 'Tierra enriquecida lista para jardinería, paisajismo y espacios verdes.',
           },
           {
             name: 'HiSoil Level',
-            desc: 'Sustrato para nivelación y acondicionamiento de terrenos.',
+            desc: 'Sustrato para nivelación, preparación y acondicionamiento de terrenos.',
           },
-          { name: 'HiSoil Outdoor', desc: 'Sustrato para plantas de exterior.' },
-          { name: 'HiSoil Indoor', desc: 'Sustrato para plantas de interior.' },
-          { name: 'HiSoil GreenRoof', desc: 'Sustrato para terrazas y techos verdes.' },
+          {
+            name: 'HiSoil Outdoor',
+            desc: 'Sustrato profesional para plantas de exterior, jardines y paisajismo.',
+          },
+          {
+            name: 'HiSoil Indoor',
+            desc: 'Sustrato profesional para plantas de interior y decoración vegetal.',
+          },
+          {
+            name: 'HiSoil Green Roof',
+            desc: 'Sustrato técnico liviano para techos verdes, terrazas y cubiertas vegetadas.',
+          },
         ],
       },
     ],
@@ -284,7 +305,9 @@ function ProductCard({ p, index }: ProductCardProps) {
   const [ref, visible] = useReveal<HTMLAnchorElement>({ threshold: 0.15 });
   const img = SHOW_PLACEHOLDERS ? undefined : productImages[p.name];
   const slug =
-    productSlugs[p.name] ?? p.name.toLowerCase().replace('hisoil ', '').replace(/\s+/g, '-');
+    p.slug ??
+    productSlugs[p.name] ??
+    p.name.toLowerCase().replace('hisoil ', '').replace(/\s+/g, '-');
 
   return (
     <Link
