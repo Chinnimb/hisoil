@@ -203,7 +203,7 @@ export function Hero() {
                   className="text-white font-bold leading-none mb-1"
                   style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
                 >
-                  3 provincias
+                  12 provincias
                 </div>
                 <div className="text-white/60 text-xs">
                   con proyectos activos · capacidad para desarrollar en todo el país

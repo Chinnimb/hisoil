@@ -13,7 +13,7 @@ const trustSignals = [
   'Respondemos en menos de 24 horas hábiles',
   'Diagnóstico inicial sin costo',
   'Sin compromisos en la primera consulta',
-  'Presencia en 3 provincias · capacidad nacional',
+  'Presencia en 12 provincias · capacidad nacional',
 ];
 
 export function FormularioPresupuesto() {

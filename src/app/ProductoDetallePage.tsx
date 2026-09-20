@@ -259,6 +259,14 @@ export default function ProductoDetallePage() {
                   {paragraph}
                 </p>
               ))}
+              {product.idealFor && (
+                <div className="border-l-4 border-lima bg-nata rounded-r-xl px-6 py-4">
+                  <div className="text-oliva text-[10px] font-mono uppercase tracking-widest mb-1">
+                    Ideal para
+                  </div>
+                  <p className="text-gray-700 leading-relaxed text-base">{product.idealFor}</p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -286,6 +294,21 @@ export default function ProductoDetallePage() {
                   </li>
                 ))}
               </ul>
+              {product.technical && product.technical.length > 0 && (
+                <div className="mt-8 pt-6 border-t border-oliva/10">
+                  <h4 className="text-oliva font-bold text-base mb-4">Características técnicas</h4>
+                  <ul className="space-y-3">
+                    {product.technical.map((t) => (
+                      <li key={t} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-oliva" strokeWidth={3} />
+                        </div>
+                        <span className="text-gray-700 text-sm leading-relaxed">{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             {/* Benefits */}
@@ -321,8 +344,8 @@ export default function ProductoDetallePage() {
                 {product.applicationsTitle ?? 'Formas de aplicación'}
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Recomendaciones técnicas del equipo Hisoil. Consultá con un asesor para ajustes
-                específicos a tu operación.
+                {product.applicationsIntro ??
+                  'Recomendaciones técnicas del equipo Hisoil. Consultá con un asesor para ajustes específicos a tu operación.'}
               </p>
             </div>
 
@@ -391,6 +414,29 @@ export default function ProductoDetallePage() {
               })}
             </div>
 
+            {product.extra && (
+              <div className="pt-12 mt-16 border-t border-oliva/10 max-w-3xl mx-auto">
+                <h4 className="text-oliva font-bold text-xl mb-5 text-center">
+                  {product.extra.title}
+                </h4>
+                <ul className="space-y-3">
+                  {product.extra.items.map((it) => (
+                    <li key={it} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-oliva/10 border border-oliva/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-oliva" strokeWidth={3} />
+                      </div>
+                      <span className="text-gray-700 text-sm leading-relaxed">{it}</span>
+                    </li>
+                  ))}
+                </ul>
+                {product.extra.note && (
+                  <p className="text-gray-500 text-xs leading-relaxed mt-5 text-center">
+                    {product.extra.note}
+                  </p>
+                )}
+              </div>
+            )}
+
             {product.crops && product.crops.length > 0 && (
               <>
                 <div className="pt-12 mt-16 border-t border-oliva/10 text-center">
@@ -458,6 +504,11 @@ export default function ProductoDetallePage() {
                 <div className="text-lima text-[10px] font-mono uppercase tracking-widest mb-3">
                   Destacado
                 </div>
+                {product.highlightTitle && (
+                  <h3 className="text-white font-bold text-2xl md:text-3xl leading-tight mb-3">
+                    {product.highlightTitle}
+                  </h3>
+                )}
                 <p className="text-white font-semibold text-lg md:text-xl leading-snug max-w-4xl">
                   {product.highlight}
                 </p>

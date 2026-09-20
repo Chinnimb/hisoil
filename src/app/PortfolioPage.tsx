@@ -3,6 +3,7 @@ import { Footer } from './components/Footer';
 import { PortfolioHero } from './components/portfolio/PortfolioHero';
 import { CarbonCredits } from './components/portfolio/CarbonCredits';
 import { WasteToCarbon } from './components/portfolio/WasteToCarbon';
+import { FeaturedIndustryCases } from './components/portfolio/FeaturedIndustryCases';
 import { IndustryCases } from './components/portfolio/IndustryCases';
 import { CompostApplications } from './components/portfolio/CompostApplications';
 import { PortfolioFinalCTA } from './components/portfolio/PortfolioFinalCTA';
@@ -15,6 +16,7 @@ export default function PortfolioPage() {
         <PortfolioHero />
         <CarbonCredits />
         <WasteToCarbon />
+        <FeaturedIndustryCases />
         <IndustryCases />
         <CompostApplications />
         <PortfolioFinalCTA />

@@ -4,9 +4,9 @@ import imgTrabajo from '../../../imports/trabajo-tecnico.webp';
 
 const kpis = [
   { value: '+25', label: 'Años', sub: 'desarrollando soluciones ambientales' },
-  { value: '3', label: 'Provincias', sub: 'con proyectos activos' },
-  { value: 'Nacional', label: 'Capacidad', sub: 'para proyectos en todo el país' },
-  { value: 'Circular', label: 'Modelo', sub: 'de trabajo y crecimiento' },
+  { value: '12', label: 'Provincias', sub: 'con proyectos y clientes' },
+  { value: 'Miles', label: 'de toneladas', sub: 'de residuos orgánicos valorizados' },
+  { value: 'Circular', label: 'Economía', sub: 'como modelo de trabajo y crecimiento' },
 ];
 
 interface KpiProps {

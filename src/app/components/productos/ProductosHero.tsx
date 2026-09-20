@@ -74,13 +74,12 @@ export function ProductosHero() {
 
             {/* Quick stats */}
             <div
-              className="ph-fade grid grid-cols-3 gap-4 border-t border-white/10 pt-10"
+              className="ph-fade grid grid-cols-2 gap-4 border-t border-white/10 pt-10"
               style={{ animationDelay: '0.7s' }}
             >
               {[
                 { value: '33', label: 'productos en catálogo' },
                 { value: '5', label: 'líneas técnicas' },
-                { value: 'SENASA', label: 'registros vigentes' },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="text-2xl font-bold text-white mb-1">{s.value}</div>

@@ -148,7 +148,7 @@ const categories: Category[] = [
           },
           {
             name: 'HiSoil Carbon',
-            desc: 'Enmienda orgánica carbonizada a base de compost y biochar.',
+            desc: 'Enmienda orgánica carbonizada para agricultura regenerativa.',
           },
           { name: 'HiSoil Regenera', desc: 'Programa integral para la regeneración de suelos.' },
         ],
@@ -168,20 +168,38 @@ const categories: Category[] = [
       {
         products: [
           { name: 'HiSoil Seed', desc: 'Sustrato profesional para siembra y germinación.' },
-          { name: 'HiSoil Plug', desc: 'Sustrato para producción de plantines en plugs.' },
-          { name: 'HiSoil Nursery', desc: 'Sustrato para viveros de producción.' },
-          { name: 'HiSoil Premium', desc: 'Sustrato premium para cultivos de alta exigencia.' },
-          { name: 'HiSoil Forest', desc: 'Sustrato para producción de plantines forestales.' },
-          { name: 'HiSoil Tobacco', desc: 'Sustrato para producción de plantines de tabaco.' },
+          {
+            name: 'HiSoil Plug',
+            desc: 'Sustrato profesional para producción de plantines en plugs.',
+          },
+          { name: 'HiSoil Nursery', desc: 'Sustrato profesional para viveros de producción.' },
+          {
+            name: 'HiSoil Premium',
+            desc: 'Sustrato profesional premium para cultivos de alta exigencia.',
+          },
+          {
+            name: 'HiSoil Forest',
+            desc: 'Sustrato profesional para producción de plantines forestales.',
+          },
+          {
+            name: 'HiSoil Tobacco',
+            desc: 'Sustrato profesional para producción de plantines de tabaco.',
+          },
           { name: 'HiSoil Berry', desc: 'Sustrato profesional para arándanos y frutos rojos.' },
           {
             name: 'HiSoil Cannabis',
             desc: 'Sustrato profesional para cannabis medicinal y cáñamo industrial.',
           },
-          { name: 'HiSoil Citrus', desc: 'Sustrato para producción de cítricos y frutales.' },
-          { name: 'HiSoil Turf', desc: 'Sustrato para producción de césped en rollo.' },
+          {
+            name: 'HiSoil Citrus',
+            desc: 'Sustrato profesional para producción de cítricos y frutales.',
+          },
+          { name: 'HiSoil Turf', desc: 'Sustrato profesional para producción de césped en rollo.' },
           { name: 'HiSoil Hydro', desc: 'Sustrato profesional para cultivos hidropónicos.' },
-          { name: 'HiSoil Palm', desc: 'Sustrato para palmeras y plantas ornamentales.' },
+          {
+            name: 'HiSoil Palm',
+            desc: 'Sustrato profesional para palmeras y plantas ornamentales.',
+          },
         ],
       },
     ],
@@ -198,7 +216,7 @@ const categories: Category[] = [
     subcategories: [
       {
         products: [
-          { name: 'HiSoil Chip', desc: 'Astillas de madera para cobertura decorativa (mulch).' },
+          { name: 'HiSoil Chip', desc: 'Astillas de madera para cobertura decorativa (Mulch).' },
           {
             name: 'HiSoil MiniChip',
             desc: 'Astillas finas de madera para cobertura decorativa premium.',
@@ -278,7 +296,7 @@ const categories: Category[] = [
           },
           {
             name: 'HiSoil HydroMulch',
-            desc: 'Sistema profesional de hidrosiembra para revegetación y control de erosión.',
+            desc: 'Sistema profesional de hidrosiembra para revegetación, control de erosión y restauración ambiental.',
           },
           {
             name: 'HiSoil Erosion',
@@ -287,7 +305,7 @@ const categories: Category[] = [
           },
           {
             name: 'HiSoil Native',
-            desc: 'Mezclas profesionales de semillas nativas para restauración ecológica.',
+            desc: 'Mezclas profesionales de semillas nativas para restauración ecológica y revegetación de ecosistemas.',
             status: 'a-desarrollar',
           },
         ],

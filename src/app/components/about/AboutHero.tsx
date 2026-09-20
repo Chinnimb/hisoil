@@ -55,7 +55,8 @@ export function AboutHero() {
             HISOIL desarrolla soluciones integrales para la gestión de residuos orgánicos,
             producción de compost, sustratos técnicos y restauración ambiental. Acompañamos a
             empresas, industrias, municipios y productores con proyectos que generan beneficios
-            económicos, ambientales y sociales.
+            económicos, ambientales y sociales, impulsando un modelo de economía circular con
+            impacto real y medible.
           </p>
 
           <div
@@ -85,7 +86,7 @@ export function AboutHero() {
           <div className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             {[
               { value: '+25 años', label: 'de experiencia en soluciones agroambientales' },
-              { value: '3 provincias', label: 'con proyectos activos · capacidad nacional' },
+              { value: '12 provincias', label: 'con proyectos y presencia comercial' },
               { value: 'Economía Circular', label: 'transformando residuos en recursos' },
             ].map((item) => (
               <div

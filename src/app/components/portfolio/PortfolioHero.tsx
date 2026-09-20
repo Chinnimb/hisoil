@@ -71,7 +71,7 @@ export function PortfolioHero() {
             className="hp-fade text-white max-w-4xl mb-8 leading-tight"
             style={{ animationDelay: '0.25s' }}
           >
-            Casos documentados en <span className="text-lima">9 industrias</span>.
+            Casos documentados en <span className="text-lima">10 industrias</span>.
           </h1>
 
           <p
@@ -110,7 +110,7 @@ export function PortfolioHero() {
             {[
               '44.400 t procesadas en 2022',
               '36.951 tCO₂e reducidas por año',
-              '9 industrias documentadas',
+              '10 industrias documentadas',
               'BioCarbon Standard certificado',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-white/75 text-sm font-mono">

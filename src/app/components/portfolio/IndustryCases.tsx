@@ -3,6 +3,7 @@ import {
   Beef,
   Beer,
   GlassWater,
+  Wheat,
   FlaskConical,
   Home,
   ShoppingCart,
@@ -35,10 +36,9 @@ const cases: IndustryCase[] = [
   {
     id: 'frigorificos',
     Icon: Beef,
-    title: 'Frigoríficos',
+    title: 'Industria Frigorífica',
     waste: 'Rumen y subproductos orgánicos del proceso productivo',
-    description:
-      'Gestionamos el contenido digestivo y los subproductos orgánicos de la faena mediante compostaje controlado.',
+    description: 'Tratamiento de efluentes y valorización de rumen',
     treats: [
       'Compostaje de rumen y contenido digestivo',
       'Gestión de barros biológicos',
@@ -60,21 +60,44 @@ const cases: IndustryCase[] = [
   {
     id: 'cerveza',
     Icon: Beer,
-    title: 'Cerveza',
+    title: 'Industria Cervecera',
     waste: 'Bagazo de malta y levaduras',
-    description:
-      'Valorizamos el bagazo húmedo y las levaduras resultantes de la elaboración cervecera.',
+    description: 'Valorización de bagazo y tratamiento de efluentes',
     treats: ['Bagazo de malta', 'Levaduras', 'Barros biológicos', 'Efluentes industriales'],
     companies: ['Cervecería y Maltería Quilmes'],
     imageLabel: 'Cerveza — industria + bagazo de malta',
   },
   {
+    id: 'alimenticia',
+    Icon: Wheat,
+    title: 'Industria Alimenticia',
+    waste: 'Restos de producción y productos fuera de especificación',
+    description: 'Gestión integral de residuos orgánicos',
+    treats: [
+      'Restos de producción',
+      'Productos fuera de especificación',
+      'Lodos',
+      'Compostaje industrial',
+    ],
+    companies: [
+      'Molinos Río de la Plata',
+      'Bagley',
+      'PepsiCo',
+      'Molino Cañuelas',
+      'Alfajores Jorgito',
+      'Pilares Compañías Alimenticias',
+      "Pan's Company",
+      'Alimentaria La Pompeya',
+      'Frescovo',
+    ],
+    imageLabel: 'Alimenticia — industria + restos de producción',
+  },
+  {
     id: 'bebidas',
     Icon: GlassWater,
-    title: 'Bebidas',
+    title: 'Industria de Bebidas',
     waste: 'Restos de frutas, pulpas y cáscaras',
-    description:
-      'Tratamos subproductos orgánicos de destilerías, vinícolas y elaboración de bebidas sin alcohol.',
+    description: 'Economía circular para subproductos industriales',
     treats: ['Destilerías', 'Bebidas sin alcohol', 'Vinícolas', 'Efluentes'],
     companies: ['Grupo Peñaflor', 'Campari', 'Fratelli Branca', 'Refres Now'],
     imageLabel: 'Bebidas — industria + pulpas y cáscaras',
@@ -82,10 +105,9 @@ const cases: IndustryCase[] = [
   {
     id: 'laboratorios',
     Icon: FlaskConical,
-    title: 'Laboratorios',
+    title: 'Laboratorios y Biotecnología',
     waste: 'Corrientes orgánicas biodegradables',
-    description:
-      'Gestionamos residuos industriales biológicos aptos para tratamiento, con cumplimiento normativo estricto.',
+    description: 'Gestión ambiental de residuos industriales',
     treats: ['Barros biológicos', 'Residuos orgánicos', 'Cumplimiento normativo'],
     companies: [
       'Biogénesis Bagó',
@@ -100,10 +122,9 @@ const cases: IndustryCase[] = [
   {
     id: 'barrios-cerrados',
     Icon: Home,
-    title: 'Barrios Cerrados',
+    title: 'Barrios Cerrados y Urbanizaciones',
     waste: 'Poda, césped y hojas',
-    description:
-      'Gestionamos los residuos verdes del mantenimiento de espacios comunes en countries y barrios privados.',
+    description: 'Compostaje de residuos verdes y poda',
     treats: ['Poda', 'Césped', 'Hojas', 'Residuos de mantenimiento'],
     companies: [
       'Nordelta',
@@ -118,10 +139,9 @@ const cases: IndustryCase[] = [
   {
     id: 'retail',
     Icon: ShoppingCart,
-    title: 'Retail y Logística',
+    title: 'Retail y Centros Logísticos',
     waste: 'Frutas y verduras descartadas',
-    description:
-      'Valorizamos orgánicos y alimentos fuera de especificación de centros de distribución y comercios.',
+    description: 'Gestión de residuos orgánicos y poda',
     treats: ['Residuos alimenticios', 'Frutas y verduras', 'Mantenimiento de espacios verdes'],
     companies: [
       'Coto',
@@ -139,8 +159,7 @@ const cases: IndustryCase[] = [
     Icon: Factory,
     title: 'Agroindustria',
     waste: 'Restos vegetales y descartes de cosecha',
-    description:
-      'Tratamos grandes volúmenes de residuos vegetales provenientes del procesamiento agroindustrial.',
+    description: 'Valorización de residuos agroindustriales',
     treats: ['Residuos vegetales', 'Barros', 'Compost para uso agrícola'],
     companies: [
       'Ingredion',
@@ -156,8 +175,7 @@ const cases: IndustryCase[] = [
     Icon: Layers3,
     title: 'Curtiembres',
     waste: 'Barros y subproductos biodegradables del curtido',
-    description:
-      'Gestionamos las corrientes orgánicas del procesamiento de cueros aptas para tratamiento biológico.',
+    description: 'Tratamiento de residuos orgánicos industriales',
     treats: ['Barros', 'Carnazas', 'Efluentes'],
     companies: ['JBS Leather', 'La Hispano Argentina Curtiembre'],
     imageLabel: 'Curtiembres — industria + barros y subproductos',
@@ -165,16 +183,10 @@ const cases: IndustryCase[] = [
   {
     id: 'clubes-hipicos-golf',
     Icon: Trophy,
-    title: 'Clubes Hípicos y Golf',
+    title: 'Clubes y Grandes Predios',
     waste: 'Estiércol, cama de caballerizas y césped',
-    description:
-      'En hípicos gestionamos estiércol y cama de caballerizas; en golf, césped y poda del mantenimiento de la cancha.',
-    treats: [
-      'Estiércol equino',
-      'Cama de caballerizas',
-      'Césped y poda',
-      'Compost para reutilización',
-    ],
+    description: 'Gestión sustentable de residuos verdes',
+    treats: ['Poda', 'Césped', 'Hojas', 'Compost para reutilización interna'],
     companies: [
       'Hipódromo de Palermo',
       'Los Lagartos Country Club',
@@ -323,7 +335,7 @@ export function IndustryCases() {
                 Casos de éxito por industria
               </span>
             </div>
-            <h2 className="text-oliva mb-4">9 industrias, 9 residuos que sabemos gestionar.</h2>
+            <h2 className="text-oliva mb-4">10 industrias, 10 residuos que sabemos gestionar.</h2>
             <p className="text-gray-700 leading-relaxed">
               Cada tarjeta une industria y residuo: qué genera cada sector y cómo lo transformamos
               en un recurso.

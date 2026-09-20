@@ -64,8 +64,10 @@ export function TeamSection() {
           </div>
           <div className="lg:col-span-8 space-y-5 text-gray-700 leading-relaxed">
             <p>
-              Detrás de cada proyecto hay un equipo multidisciplinario que trabaja de manera
-              integrada para desarrollar soluciones eficientes y sostenibles.
+              Detrás de cada proyecto hay un equipo multidisciplinario formado por ingenieros
+              agrónomos, especialistas ambientales, técnicos de producción, operadores de planta y
+              asesores comerciales que trabajan de manera integrada para desarrollar soluciones
+              eficientes y sostenibles.
             </p>
             <p>
               Combinamos{' '}
