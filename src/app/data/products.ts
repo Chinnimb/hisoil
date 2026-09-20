@@ -1062,6 +1062,7 @@ export const products: ProductDetail[] = [
     crops: ['Jardines', 'Paisajismo', 'Parques', 'Plazas', 'Canteros', 'Césped', 'Viveros'],
     packaging: ['A granel', 'Big Bag', 'Bolsas de 50, 25 y 5 dm³'],
     storage: 'Conservar en un lugar seco, protegido de la lluvia y de la luz solar directa.',
+    applicationsTitle: 'Cómo usar',
     cropsLabel: 'Aplicaciones recomendadas',
   },
   {
@@ -1092,6 +1093,7 @@ export const products: ProductDetail[] = [
     crops: ['Jardines', 'Parques', 'Viveros', 'Macetas', 'Arbolado urbano'],
     packaging: ['A granel', 'Big Bag', 'Bolsas de 50, 25 y 5 dm³'],
     storage: 'Conservar en un lugar seco, protegido de la lluvia y de la luz solar directa.',
+    applicationsTitle: 'Cómo usar',
     cropsLabel: 'Aplicaciones recomendadas',
   },
   {
@@ -1120,6 +1122,7 @@ export const products: ProductDetail[] = [
     crops: ['Parques', 'Canchas', 'Barrios privados', 'Espacios públicos'],
     packaging: ['A granel', 'Big Bag'],
     storage: 'Conservar en un lugar seco, protegido de la lluvia y de la luz solar directa.',
+    applicationsTitle: 'Cómo usar',
     cropsLabel: 'Aplicaciones recomendadas',
   },
   {
@@ -1144,6 +1147,7 @@ export const products: ProductDetail[] = [
     crops: ['Ornamentales', 'Arbustos', 'Árboles', 'Paisajismo'],
     packaging: ['A granel', 'Big Bag', 'Bolsas de 50, 25 y 5 dm³'],
     storage: 'Conservar en un lugar seco, protegido de la lluvia y de la luz solar directa.',
+    applicationsTitle: 'Cómo usar',
     cropsLabel: 'Aplicaciones recomendadas',
   },
   {
@@ -1167,6 +1171,7 @@ export const products: ProductDetail[] = [
     crops: ['Follajes', 'Oficinas', 'Jardines de invierno', 'Decoración vegetal'],
     packaging: ['A granel', 'Big Bag', 'Bolsas de 50, 25 y 5 dm³'],
     storage: 'Conservar en un lugar seco, protegido de la lluvia y de la luz solar directa.',
+    applicationsTitle: 'Cómo usar',
     cropsLabel: 'Aplicaciones recomendadas',
   },
   {
@@ -1198,6 +1203,7 @@ export const products: ProductDetail[] = [
     crops: ['Cubiertas vegetadas', 'Arquitectura sustentable', 'Infraestructura verde'],
     packaging: ['A granel', 'Big Bag'],
     storage: 'Conservar en un lugar seco, protegido de la lluvia y de la luz solar directa.',
+    applicationsTitle: 'Cómo usar',
     cropsLabel: 'Aplicaciones recomendadas',
     highlight:
       'Ideal para arquitectos, paisajistas, constructoras, desarrolladores inmobiliarios y municipios que incorporan soluciones basadas en la naturaleza para mejorar el desempeño ambiental de sus proyectos.',
