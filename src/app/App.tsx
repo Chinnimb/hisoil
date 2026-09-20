@@ -19,7 +19,6 @@ const ServiciosPage = lazy(() => import('./ServiciosPage'));
 const ProductosPage = lazy(() => import('./ProductosPage'));
 const ProductoDetallePage = lazy(() => import('./ProductoDetallePage'));
 const PortfolioPage = lazy(() => import('./PortfolioPage'));
-const SumatePage = lazy(() => import('./SumatePage'));
 const ContactoPage = lazy(() => import('./ContactoPage'));
 
 function HomePage() {
@@ -53,7 +52,6 @@ export default function App() {
             <Route path="/productos" element={<ProductosPage />} />
             <Route path="/productos/:slug" element={<ProductoDetallePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/sumate" element={<SumatePage />} />
             <Route path="/contacto" element={<ContactoPage />} />
           </Routes>
         </Suspense>

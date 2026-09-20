@@ -21,7 +21,6 @@ export function Footer() {
         { label: 'Servicios', to: '/servicios' },
         { label: 'Portfolio', to: '/portfolio' },
         { label: 'Nosotros', to: '/nosotros' },
-        { label: 'Sumate', to: '/sumate' },
         { label: 'Contacto', to: '/contacto' },
       ],
     },
