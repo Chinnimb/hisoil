@@ -4,7 +4,7 @@ import { useReveal } from '../hooks/useReveal';
 
 const cases = [
   {
-    href: '/portfolio#creditos-de-carbono',
+    href: '/portfolio#creditos-carbono',
     metric: '36.951',
     metricLabel: 'tCO₂e reducción anual',
     title: 'Créditos de Carbono',
@@ -16,11 +16,11 @@ const cases = [
   },
   {
     href: '/portfolio#industrias',
-    metric: '10',
+    metric: '9',
     metricLabel: 'industrias atendidas',
     title: 'Casos por Industria',
     description:
-      'Trabajamos con frigoríficos, cervecerías, alimenticias, laboratorios, barrios cerrados, retail, agroindustria y más.',
+      'Trabajamos con frigoríficos, cervecerías, laboratorios, barrios cerrados, retail, agroindustria y más.',
     image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop',
     tag: 'Industrias',
     isCompost: false,

@@ -133,7 +133,10 @@ export function CompostApplications() {
   const [headerRef, headerVisible] = useReveal<HTMLDivElement>({ threshold: 0.3 });
 
   return (
-    <section className="theme-compost py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva relative overflow-hidden">
+    <section
+      id="aplicaciones-compost"
+      className="theme-compost py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20 bg-oliva relative overflow-hidden"
+    >
       {/* Grid texture */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
