@@ -16,6 +16,8 @@ import {
 } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgFrigorifica from '../../../imports/portfolio/industria-frigorifica.webp';
+import imgCervecera from '../../../imports/portfolio/industria-cervecera.webp';
 
 type LucideIcon = typeof Beef;
 
@@ -30,6 +32,8 @@ interface IndustryCase {
   treats: string[];
   companies: string[];
   imageLabel: string;
+  /** Foto propia; si no esta, la card cae al ImagePlaceholder */
+  image?: string;
 }
 
 const cases: IndustryCase[] = [
@@ -56,6 +60,7 @@ const cases: IndustryCase[] = [
       'Soychú',
     ],
     imageLabel: 'Frigoríficos — industria + rumen/subproductos orgánicos',
+    image: imgFrigorifica,
   },
   {
     id: 'cerveza',
@@ -66,6 +71,7 @@ const cases: IndustryCase[] = [
     treats: ['Bagazo de malta', 'Levaduras', 'Barros biológicos', 'Efluentes industriales'],
     companies: ['Cervecería y Maltería Quilmes'],
     imageLabel: 'Cerveza — industria + bagazo de malta',
+    image: imgCervecera,
   },
   {
     id: 'alimenticia',
@@ -213,7 +219,17 @@ function IndustryCard({ c, index }: CardProps) {
     <div id={c.id} className="group flex-shrink-0 w-[300px] sm:w-[340px] lg:w-[380px] snap-start">
       <div className="relative rounded-2xl overflow-hidden h-[460px] border border-oliva/15 hover:border-oliva/40 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
         {/* Full background image */}
-        <ImagePlaceholder dark label={c.imageLabel} />
+        {c.image ? (
+          <img
+            loading="lazy"
+            decoding="async"
+            src={c.image}
+            alt={c.title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <ImagePlaceholder dark label={c.imageLabel} />
+        )}
         {/* Gradient overlay — always visible but darker at bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-noche/95 via-noche/50 to-noche/15 transition-opacity duration-500" />
         {/* Extra dark on hover for readability */}
