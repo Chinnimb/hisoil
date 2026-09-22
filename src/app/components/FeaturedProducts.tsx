@@ -38,7 +38,11 @@ interface Product {
   name: string;
   desc: string;
   line:
-    'Agricultura' | 'Sustratos Profesionales' | 'Materias Primas' | 'Sustratos' | 'Infraestructura';
+    | 'Agricultura'
+    | 'Sustratos Profesionales'
+    | 'Materias Primas'
+    | 'Jardinería, Paisajismo y Sustratos'
+    | 'Infraestructura';
   Icon: LucideIcon;
   image: string;
   format: string;
@@ -149,7 +153,7 @@ const products: Product[] = [
     slug: 'greenroof',
     name: 'HiSoil Green Roof',
     desc: 'Sustrato técnico liviano para techos verdes, terrazas y cubiertas vegetadas.',
-    line: 'Sustratos',
+    line: 'Jardinería, Paisajismo y Sustratos',
     Icon: TreePine,
     image: imgGreenroof,
     format: 'A granel · Big Bag',
@@ -159,7 +163,7 @@ const products: Product[] = [
     slug: 'tierra-fertil',
     name: 'HiSoil Tierra Fértil',
     desc: 'Tierra enriquecida lista para jardinería, paisajismo y espacios verdes.',
-    line: 'Sustratos',
+    line: 'Jardinería, Paisajismo y Sustratos',
     Icon: TreePine,
     image: imgTierraFertil,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³',
@@ -169,7 +173,7 @@ const products: Product[] = [
     slug: 'outdoor',
     name: 'HiSoil Outdoor',
     desc: 'Sustrato profesional para plantas de exterior, jardines y paisajismo.',
-    line: 'Sustratos',
+    line: 'Jardinería, Paisajismo y Sustratos',
     Icon: TreePine,
     image: imgOutdoor,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³',

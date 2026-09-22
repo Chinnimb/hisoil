@@ -1652,6 +1652,6 @@ export const lineLabels: Record<ProductLine, string> = {
   agricultura: 'Agricultura',
   sustratos: 'Sustratos Profesionales',
   materiasprimas: 'Materias Primas',
-  paisajismo: 'Sustratos',
+  paisajismo: 'Jardinería, Paisajismo y Sustratos',
   infraestructura: 'Infraestructura & Restauración',
 };
