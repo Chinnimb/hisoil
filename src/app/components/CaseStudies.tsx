@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import imgCreditosCarbono from '../../imports/creditos-carbono.webp';
 import imgAplicacionesCompost from '../../imports/aplicaciones-compost.webp';
+import imgCasosIndustrias from '../../imports/casos-industrias.webp';
 
 const cases = [
   {
@@ -23,7 +24,7 @@ const cases = [
     title: 'Casos por Industria',
     description:
       'Trabajamos con frigoríficos, cervecerías, alimenticias, laboratorios, barrios cerrados, retail, agroindustria y más.',
-    image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200&q=85&fit=crop',
+    image: imgCasosIndustrias,
     tag: 'Industrias',
     isCompost: false,
   },
