@@ -1,6 +1,6 @@
 import { Trash2, Recycle, Sprout, CloudOff, ArrowRight } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
-import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgConcepto from '../../../imports/portfolio/del-residuo-al-credito.webp';
 
 const stages = [
   {
@@ -42,9 +42,12 @@ export function WasteToCarbon() {
         >
           {/* Image */}
           <div className="lg:col-span-5 relative aspect-[4/3] rounded-3xl overflow-hidden">
-            <ImagePlaceholder
-              dark
-              label="Del residuo al crédito de carbono — concepto general del Portfolio"
+            <img
+              loading="lazy"
+              decoding="async"
+              src={imgConcepto}
+              alt="Del residuo al crédito de carbono: recolección, compostaje, vegetación y compost terminado"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
 
