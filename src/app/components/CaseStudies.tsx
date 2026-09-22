@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
 import { ArrowUpRight } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import imgCreditosCarbono from '../../imports/creditos-carbono.webp';
+import imgAplicacionesCompost from '../../imports/aplicaciones-compost.webp';
 
 const cases = [
   {
@@ -10,7 +12,7 @@ const cases = [
     title: 'Créditos de Carbono',
     description:
       'Proyecto de valorización de residuos orgánicos con reducción certificada de emisiones. 44.400 t procesadas anualmente.',
-    image: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=1200&q=85&fit=crop',
+    image: imgCreditosCarbono,
     tag: 'Carbono',
     isCompost: false,
   },
@@ -32,7 +34,7 @@ const cases = [
     title: 'Aplicaciones del Compost',
     description:
       'Referencias globales: Central Park (NY), Chicago City Hall, Universidad de Iowa y proyectos de restauración minera.',
-    image: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=1200&q=85&fit=crop',
+    image: imgAplicacionesCompost,
     tag: 'Compost',
     isCompost: true,
   },
