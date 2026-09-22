@@ -18,6 +18,14 @@ import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
 import imgFrigorifica from '../../../imports/portfolio/industria-frigorifica.webp';
 import imgCervecera from '../../../imports/portfolio/industria-cervecera.webp';
+import imgBebidas from '../../../imports/portfolio/industria-bebidas.webp';
+import imgAlimenticia from '../../../imports/portfolio/industria-alimenticia.webp';
+import imgLaboratorios from '../../../imports/portfolio/laboratorios-y-biotecnologia.webp';
+import imgBarriosCerrados from '../../../imports/portfolio/barrios-cerrados.webp';
+import imgRetail from '../../../imports/portfolio/retail-y-centros-logisticos.webp';
+import imgAgroindustria from '../../../imports/portfolio/agroindustria.webp';
+import imgCurtiembres from '../../../imports/portfolio/curtiembre.webp';
+import imgClubes from '../../../imports/portfolio/clubes-grandes-predios.webp';
 
 type LucideIcon = typeof Beef;
 
@@ -97,6 +105,7 @@ const cases: IndustryCase[] = [
       'Frescovo',
     ],
     imageLabel: 'Alimenticia — industria + restos de producción',
+    image: imgAlimenticia,
   },
   {
     id: 'bebidas',
@@ -107,6 +116,7 @@ const cases: IndustryCase[] = [
     treats: ['Destilerías', 'Bebidas sin alcohol', 'Vinícolas', 'Efluentes'],
     companies: ['Grupo Peñaflor', 'Campari', 'Fratelli Branca', 'Refres Now'],
     imageLabel: 'Bebidas — industria + pulpas y cáscaras',
+    image: imgBebidas,
   },
   {
     id: 'laboratorios',
@@ -124,6 +134,7 @@ const cases: IndustryCase[] = [
       'Internacional Farmacéutica Argentina',
     ],
     imageLabel: 'Laboratorios — instalaciones industriales limpias',
+    image: imgLaboratorios,
   },
   {
     id: 'barrios-cerrados',
@@ -141,6 +152,7 @@ const cases: IndustryCase[] = [
       'Hacoaj',
     ],
     imageLabel: 'Barrios Cerrados — industria + poda y residuos verdes',
+    image: imgBarriosCerrados,
   },
   {
     id: 'retail',
@@ -159,6 +171,7 @@ const cases: IndustryCase[] = [
       'AXIS Logística',
     ],
     imageLabel: 'Retail y Logística — industria + frutas y verduras descartadas',
+    image: imgRetail,
   },
   {
     id: 'agroindustria',
@@ -175,6 +188,7 @@ const cases: IndustryCase[] = [
       'Refinería del Centro',
     ],
     imageLabel: 'Agroindustria — industria + restos vegetales',
+    image: imgAgroindustria,
   },
   {
     id: 'curtiembres',
@@ -185,6 +199,7 @@ const cases: IndustryCase[] = [
     treats: ['Barros', 'Carnazas', 'Efluentes'],
     companies: ['JBS Leather', 'La Hispano Argentina Curtiembre'],
     imageLabel: 'Curtiembres — industria + barros y subproductos',
+    image: imgCurtiembres,
   },
   {
     id: 'clubes-hipicos-golf',
@@ -200,6 +215,7 @@ const cases: IndustryCase[] = [
       'Club Náutico Hacoaj',
     ],
     imageLabel: 'Clubes Hípicos y Golf — industria + estiércol/césped',
+    image: imgClubes,
   },
 ];
 
