@@ -234,7 +234,7 @@ const categories: Category[] = [
   },
   {
     id: 'paisajismo',
-    name: 'Sustratos',
+    name: 'Jardinería, Paisajismo y Sustratos',
     Icon: TreePine,
     eyebrow: 'Línea D',
     intro:

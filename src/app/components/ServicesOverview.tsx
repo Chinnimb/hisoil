@@ -2,6 +2,10 @@ import { Link } from 'react-router';
 import { ArrowUpRight, Recycle, Layers, Mountain, UserRoundCog } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import { ImagePlaceholder } from './ImagePlaceholder';
+import imgResiduos from '../../imports/tratamiento-residuos.webp';
+import imgCompostaje from '../../imports/compostaje-a-medida.webp';
+import imgRestauracion from '../../imports/restauracion-ambiental.webp';
+import imgAsesoramiento from '../../imports/asesoramiento-tecnico.webp';
 
 // Los mismos 4 servicios (y las mismas fotos) que /servicios. Cuando estén las fotos finales,
 // cargarlas acá y en servicios/OtherServices.tsx.
@@ -14,7 +18,7 @@ const services = [
     Icon: Recycle,
     tag: 'Residuo',
     imageLabel: 'Recepción y manejo de residuos orgánicos en planta, con maquinaria',
-    image: undefined as string | undefined,
+    image: imgResiduos as string | undefined,
   },
   {
     title: 'Compostaje a medida',
@@ -24,7 +28,7 @@ const services = [
     Icon: Layers,
     tag: 'Proceso',
     imageLabel: 'Compostaje a medida — planta profesional',
-    image: undefined as string | undefined,
+    image: imgCompostaje as string | undefined,
   },
   {
     title: 'Restauración ambiental',
@@ -34,7 +38,7 @@ const services = [
     Icon: Mountain,
     tag: 'Recuperación',
     imageLabel: 'Recuperación de terrenos, taludes o grandes superficies',
-    image: undefined as string | undefined,
+    image: imgRestauracion as string | undefined,
   },
   {
     title: 'Asesoramiento técnico',
@@ -44,7 +48,7 @@ const services = [
     Icon: UserRoundCog,
     tag: 'Conocimiento',
     imageLabel: 'Técnicos e ingenieros trabajando en campo',
-    image: undefined as string | undefined,
+    image: imgAsesoramiento as string | undefined,
   },
 ];
 
