@@ -30,7 +30,7 @@ const valores: Valor[] = [
       'Acompañamos a nuestros clientes desde el diagnóstico inicial hasta la implementación y el seguimiento técnico, construyendo relaciones de largo plazo basadas en la confianza.',
     imageLabel: 'Compromiso — trabajo en terreno',
     image: imgCompromiso,
-    imageAlt: 'Equipo de HISOIL revisando muestras en planta',
+    imageAlt: 'Equipo de HISOIL analizando resultados en la computadora',
   },
   {
     number: '02',
@@ -41,7 +41,7 @@ const valores: Valor[] = [
       'Incorporamos nuevas tecnologías, procesos y conocimientos para mejorar continuamente nuestros productos y servicios, ofreciendo soluciones eficientes y de alto valor agregado.',
     imageLabel: 'Innovación — tecnología',
     image: imgInnovacion,
-    imageAlt: 'Análisis de muestra en laboratorio HISOIL',
+    imageAlt: 'Muestra de suelo en vaso de precipitado en el laboratorio de HISOIL',
   },
   {
     number: '03',
@@ -75,7 +75,7 @@ const valores: Valor[] = [
       'Aplicamos controles durante cada etapa de producción para garantizar productos confiables, trazables y consistentes, cumpliendo con los estándares técnicos y ambientales correspondientes.',
     imageLabel: 'Calidad — producto + control',
     image: imgCalidad,
-    imageAlt: 'Control de calidad de compost en planta HISOIL',
+    imageAlt: 'Muestras de compost rotuladas en el estante del laboratorio de HISOIL',
   },
   {
     number: '06',
