@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import imgHero from '../../../imports/servicios-gestion-ambiental.webp';
 
 export function ServiciosHero() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -45,8 +46,8 @@ export function ServiciosHero() {
         <div className="absolute inset-0 overflow-hidden">
           <img
             ref={imgRef}
-            src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=1920&q=85&fit=crop"
-            alt="Planta de compostaje industrial"
+            src={imgHero}
+            alt="Vista aérea de una planta de compostaje con pilas de compost y una pala cargadora"
             className="absolute w-full object-cover will-change-transform"
             style={{ height: '120%', top: '-10%' }}
           />
