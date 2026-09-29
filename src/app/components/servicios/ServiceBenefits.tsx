@@ -2,6 +2,7 @@ import { Leaf, TrendingUp, Settings, Check } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
 import imgGestionAmbiental from '../../../imports/servicios-gestion-ambiental.webp';
+import imgReduccionCostos from '../../../imports/servicios-reduccion-costos.webp';
 
 const benefits = [
   {
@@ -27,6 +28,8 @@ const benefits = [
     title: 'Económico',
     headline: 'Reducción de costos',
     imageLabel: 'Beneficio económico — operación en planta',
+    image: imgReduccionCostos,
+    imageAlt: 'Vista aérea de una minicargadora junto a un contenedor de residuos orgánicos',
     points: [
       'Menores costos de disposición final',
       'Optimización logística del retiro de residuos',
