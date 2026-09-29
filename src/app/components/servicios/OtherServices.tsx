@@ -1,7 +1,10 @@
 import { Recycle, Layers, Mountain, UserRoundCog, ArrowUpRight } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { useModal } from '../../context/ModalContext';
-import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgResiduos from '../../../imports/servicios-tratamiento-residuos.webp';
+import imgCompostaje from '../../../imports/servicios-compostaje-a-medida.webp';
+import imgRestauracion from '../../../imports/servicios-restauracion-ambiental.webp';
+import imgAsesoramiento from '../../../imports/servicios-asesoramiento-tecnico.webp';
 
 const services = [
   {
@@ -13,8 +16,8 @@ const services = [
     tags: ['Economía circular', 'Trazabilidad', 'Certificados ambientales'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    imageLabel: 'Recepción y manejo de residuos orgánicos en planta, con maquinaria',
-    collage: false,
+    image: imgResiduos,
+    imageAlt: 'Camión descargando residuos orgánicos junto a una pila de compostaje',
   },
   {
     Icon: Layers,
@@ -25,8 +28,8 @@ const services = [
     tags: ['Compostaje industrial', 'Valorización', 'Soluciones a medida'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    imageLabel: 'Compostaje a medida — planta profesional',
-    collage: true,
+    image: imgCompostaje,
+    imageAlt: 'Vista aérea de volteadoras trabajando sobre las pilas de compostaje',
   },
   {
     Icon: Mountain,
@@ -37,8 +40,8 @@ const services = [
     tags: ['Hidrosiembra', 'Control de erosión', 'Restauración ecológica'],
     cta: 'Ver servicio',
     action: 'link' as const,
-    imageLabel: 'Recuperación de terrenos, taludes o grandes superficies',
-    collage: false,
+    image: imgRestauracion,
+    imageAlt: 'Obra de restauración de espacios verdes con revegetación frente a un edificio',
   },
   {
     Icon: UserRoundCog,
@@ -49,28 +52,14 @@ const services = [
     tags: ['Diagnóstico técnico', 'Recomendaciones', 'Acompañamiento permanente'],
     cta: 'Solicitar asesoramiento',
     action: 'modal' as const,
-    imageLabel: 'Técnicos e ingenieros trabajando en campo',
-    collage: false,
+    image: imgAsesoramiento,
+    imageAlt: 'Técnico de HISOIL evaluando pilas de compost en un terreno',
   },
 ];
 
 interface CardProps {
   s: (typeof services)[number];
   index: number;
-}
-
-/** Small placeholder collage — reserves space for future photos of distintas industrias, sistemas de compostaje y tipos de residuos. */
-function CompostCollage() {
-  const slots = ['Industria A', 'Industria B', 'Sistema de compostaje', 'Tipo de residuo'];
-  return (
-    <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0.5 bg-oliva/10">
-      {slots.map((label) => (
-        <div key={label} className="relative">
-          <ImagePlaceholder label={label} className="text-[8px]" />
-        </div>
-      ))}
-    </div>
-  );
 }
 
 // Ancla por servicio, derivada del stage: servicio-residuo, servicio-proceso,
@@ -99,7 +88,13 @@ function ServiceCard({ s, index }: CardProps) {
     >
       {/* Image left */}
       <div className="relative md:w-2/5 aspect-[16/9] md:aspect-auto md:min-h-[280px] overflow-hidden flex-shrink-0">
-        {s.collage ? <CompostCollage /> : <ImagePlaceholder label={s.imageLabel} />}
+        <img
+          loading="lazy"
+          decoding="async"
+          src={s.image}
+          alt={s.imageAlt}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
         <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-white/90 backdrop-blur-md border border-oliva/20 flex items-center justify-center z-10">
           <Icon className="w-5 h-5 text-oliva" />
         </div>
