@@ -1,6 +1,8 @@
 import { Leaf, TrendingUp, Settings, Check } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
-import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgGestionAmbiental from '../../../imports/servicios-gestion-ambiental.webp';
+import imgReduccionCostos from '../../../imports/servicios-reduccion-costos.webp';
+import imgGestionSimple from '../../../imports/servicios-gestion-simple.webp';
 
 const benefits = [
   {
@@ -8,7 +10,8 @@ const benefits = [
     Icon: Leaf,
     title: 'Ambiental',
     headline: 'Gestión ambiental responsable',
-    imageLabel: 'Beneficio ambiental — compost aplicado al suelo',
+    image: imgGestionAmbiental,
+    imageAlt: 'Vista aérea de una planta de compostaje con pilas de compost y una pala cargadora',
     points: [
       'Valorización de residuos orgánicos mediante compostaje',
       'Reducción de emisiones asociadas a la disposición final',
@@ -23,7 +26,8 @@ const benefits = [
     Icon: TrendingUp,
     title: 'Económico',
     headline: 'Reducción de costos',
-    imageLabel: 'Beneficio económico — operación en planta',
+    image: imgReduccionCostos,
+    imageAlt: 'Vista aérea de una minicargadora junto a un contenedor de residuos orgánicos',
     points: [
       'Menores costos de disposición final',
       'Optimización logística del retiro de residuos',
@@ -38,7 +42,8 @@ const benefits = [
     Icon: Settings,
     title: 'Operativo',
     headline: 'Gestión simple y segura',
-    imageLabel: 'Beneficio operativo — equipo técnico en terreno',
+    image: imgGestionSimple,
+    imageAlt: 'Autoelevador trasladando bins por el patio de la planta',
     points: [
       'Un único proveedor para toda la gestión',
       'Asesoramiento técnico permanente',
@@ -67,7 +72,13 @@ function BenefitCard({ b, index }: BenefitCardProps) {
     >
       {/* Top image section */}
       <div className="relative aspect-[16/9] overflow-hidden">
-        <ImagePlaceholder label={b.imageLabel} />
+        <img
+          loading="lazy"
+          decoding="async"
+          src={b.image}
+          alt={b.imageAlt}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
         {/* Green gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 
