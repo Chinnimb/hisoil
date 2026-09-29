@@ -1,6 +1,7 @@
 import { Leaf, TrendingUp, Settings, Check } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { ImagePlaceholder } from '../ImagePlaceholder';
+import imgGestionAmbiental from '../../../imports/servicios-gestion-ambiental.webp';
 
 const benefits = [
   {
@@ -9,6 +10,8 @@ const benefits = [
     title: 'Ambiental',
     headline: 'Gestión ambiental responsable',
     imageLabel: 'Beneficio ambiental — compost aplicado al suelo',
+    image: imgGestionAmbiental,
+    imageAlt: 'Vista aérea de una planta de compostaje con pilas de compost y una pala cargadora',
     points: [
       'Valorización de residuos orgánicos mediante compostaje',
       'Reducción de emisiones asociadas a la disposición final',
@@ -67,7 +70,17 @@ function BenefitCard({ b, index }: BenefitCardProps) {
     >
       {/* Top image section */}
       <div className="relative aspect-[16/9] overflow-hidden">
-        <ImagePlaceholder label={b.imageLabel} />
+        {b.image ? (
+          <img
+            loading="lazy"
+            decoding="async"
+            src={b.image}
+            alt={b.imageAlt}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <ImagePlaceholder label={b.imageLabel} />
+        )}
         {/* Green gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-noche/80 via-noche/25 to-transparent" />
 
