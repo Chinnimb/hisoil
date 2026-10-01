@@ -15,6 +15,8 @@ import imgForest from '../../imports/productos/forest.webp';
 import imgTobacco from '../../imports/productos/tobacco.webp';
 import imgMiniChip from '../../imports/productos/minichip.webp';
 import imgPerlite from '../../imports/productos/perlite.webp';
+import imgVermiculite from '../../imports/productos/vermiculite.webp';
+import imgPometina from '../../imports/productos/pometina.webp';
 import imgBerry from '../../imports/productos/berry.webp';
 import imgCannabis from '../../imports/productos/cannabis.webp';
 import imgCitrus from '../../imports/productos/citrus.webp';
@@ -1029,6 +1031,7 @@ export const products: ProductDetail[] = [
     short: 'Vermiculita expandida para sustratos profesionales.',
     line: 'materiasprimas',
     Icon: TreePine,
+    image: imgVermiculite,
     format: 'Bolsas de 50, 25 y 5 dm³',
     usage: 'Componente de sustratos · Semilleros · Cobertura de semillas',
     description:
@@ -1075,6 +1078,7 @@ export const products: ProductDetail[] = [
     short: 'Pometina volcánica para formulación de sustratos.',
     line: 'materiasprimas',
     Icon: TreePine,
+    image: imgPometina,
     format: 'Bolsas de 50, 25 y 5 dm³',
     usage: 'Formulación de sustratos · Drenaje · Techos verdes',
     description:

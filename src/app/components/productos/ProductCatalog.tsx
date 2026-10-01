@@ -36,6 +36,8 @@ import imgSustratosPortada from '../../../imports/productos/sustratos-portada.we
 import imgMateriasPrimasPortada from '../../../imports/productos/materiasprimas-portada.webp';
 import imgMiniChip from '../../../imports/productos/minichip.webp';
 import imgPerlite from '../../../imports/productos/perlite.webp';
+import imgVermiculite from '../../../imports/productos/vermiculite.webp';
+import imgPometina from '../../../imports/productos/pometina.webp';
 
 type LucideIcon = typeof Sprout;
 
@@ -67,6 +69,8 @@ const productImages: Record<string, string> = {
   'HiSoil MiniChip': imgMiniChip,
   'HiSoil Sphagnum': imgSphagnum,
   'HiSoil Perlite': imgPerlite,
+  'HiSoil Vermiculite': imgVermiculite,
+  'HiSoil Pometina': imgPometina,
   // Paisajismo
   'HiSoil Tierra Fértil': imgTierraFertil,
   'HiSoil Outdoor': imgOutdoor,
