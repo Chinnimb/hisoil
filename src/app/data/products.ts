@@ -17,6 +17,8 @@ import imgMiniChip from '../../imports/productos/minichip.webp';
 import imgPerlite from '../../imports/productos/perlite.webp';
 import imgVermiculite from '../../imports/productos/vermiculite.webp';
 import imgPometina from '../../imports/productos/pometina.webp';
+import imgLevel from '../../imports/productos/level.webp';
+import imgIndoor from '../../imports/productos/indoor.webp';
 import imgBerry from '../../imports/productos/berry.webp';
 import imgCannabis from '../../imports/productos/cannabis.webp';
 import imgCitrus from '../../imports/productos/citrus.webp';
@@ -1226,6 +1228,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato para nivelación, preparación y acondicionamiento de terrenos.',
     line: 'paisajismo',
     Icon: TreePine,
+    image: imgLevel,
     format: 'A granel · Big Bag',
     usage: 'Nivelación y preparación de superficies',
     description:
@@ -1313,6 +1316,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato profesional para plantas de interior y decoración vegetal.',
     line: 'paisajismo',
     Icon: TreePine,
+    image: imgIndoor,
     format: 'A granel · Big Bag · Bolsas de 50, 25 y 5 dm³',
     usage: 'Plantación y trasplante de plantas de interior',
     description:
