@@ -40,7 +40,7 @@ export type ProductLine =
 // página de Productos (catálogo, banners de familia y ficha de detalle) se
 // reemplaza por ImagePlaceholder — tenga o no foto real confirmada. Volver a
 // `false` restaura las fotos reales ya cargadas.
-export const PRODUCTOS_SHOW_PLACEHOLDERS = true;
+export const PRODUCTOS_SHOW_PLACEHOLDERS = false;
 
 export interface ProductDetail {
   slug: string;
