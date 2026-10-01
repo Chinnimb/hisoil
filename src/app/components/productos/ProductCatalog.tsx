@@ -12,6 +12,11 @@ import imgBiofert from '../../../imports/productos/biofert-1.webp';
 import imgCarbon from '../../../imports/productos/carbon.webp';
 import imgRegenera from '../../../imports/productos/regenera.webp';
 import imgPremium from '../../../imports/productos/premium.webp';
+import imgNursery from '../../../imports/productos/nursery.webp';
+import imgPlug from '../../../imports/productos/plug.webp';
+import imgSeed from '../../../imports/productos/seed.webp';
+import imgForest from '../../../imports/productos/forest.webp';
+import imgTobacco from '../../../imports/productos/tobacco.webp';
 import imgBerry from '../../../imports/productos/berry.webp';
 import imgCannabis from '../../../imports/productos/cannabis.webp';
 import imgCitrus from '../../../imports/productos/citrus.webp';
@@ -26,6 +31,11 @@ import imgRestore from '../../../imports/productos/restore-1.webp';
 import imgHydromulch from '../../../imports/productos/hydromulch.webp';
 import imgNative from '../../../imports/productos/native.webp';
 import imgOutdoor from '../../../imports/productos/outdoor.webp';
+import imgAgriculturaPortada from '../../../imports/productos/agricultura-portada.webp';
+import imgSustratosPortada from '../../../imports/productos/sustratos-portada.webp';
+import imgMateriasPrimasPortada from '../../../imports/productos/materiasprimas-portada.webp';
+import imgMiniChip from '../../../imports/productos/minichip.webp';
+import imgPerlite from '../../../imports/productos/perlite.webp';
 
 type LucideIcon = typeof Sprout;
 
@@ -40,7 +50,12 @@ const productImages: Record<string, string> = {
   'HiSoil Carbon': imgCarbon,
   'HiSoil Regenera': imgRegenera,
   // Sustratos Profesionales
+  'HiSoil Seed': imgSeed,
+  'HiSoil Plug': imgPlug,
+  'HiSoil Nursery': imgNursery,
   'HiSoil Premium': imgPremium,
+  'HiSoil Forest': imgForest,
+  'HiSoil Tobacco': imgTobacco,
   'HiSoil Berry': imgBerry,
   'HiSoil Cannabis': imgCannabis,
   'HiSoil Citrus': imgCitrus,
@@ -49,7 +64,9 @@ const productImages: Record<string, string> = {
   'HiSoil Palm': imgPalm,
   // Materias Primas
   'HiSoil Chip': imgChip,
+  'HiSoil MiniChip': imgMiniChip,
   'HiSoil Sphagnum': imgSphagnum,
+  'HiSoil Perlite': imgPerlite,
   // Paisajismo
   'HiSoil Tierra Fértil': imgTierraFertil,
   'HiSoil Outdoor': imgOutdoor,
@@ -129,8 +146,7 @@ const categories: Category[] = [
     eyebrow: 'Línea A',
     intro:
       'Enmiendas, biofertilizantes y bioinsumos para cultivos extensivos e intensivos que regeneran el suelo y potencian el rendimiento.',
-    image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1600',
+    image: imgAgriculturaPortada,
     subcategories: [
       {
         products: [
@@ -162,8 +178,7 @@ const categories: Category[] = [
     eyebrow: 'Línea B',
     intro:
       'Sustratos profesionales formulados para maximizar el desarrollo radicular, la uniformidad del cultivo y el rendimiento en distintos sistemas productivos.',
-    image:
-      'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1600',
+    image: imgSustratosPortada,
     subcategories: [
       {
         products: [
@@ -211,8 +226,7 @@ const categories: Category[] = [
     eyebrow: 'Línea C',
     intro:
       'Materias primas seleccionadas para la formulación de sustratos profesionales, cobertura decorativa y proyectos de paisajismo.',
-    image:
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1600',
+    image: imgMateriasPrimasPortada,
     subcategories: [
       {
         products: [

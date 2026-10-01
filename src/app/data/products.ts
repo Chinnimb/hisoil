@@ -8,6 +8,13 @@ import imgBiofert from '../../imports/productos/biofert-1.webp';
 import imgCarbon from '../../imports/productos/carbon.webp';
 import imgRegenera from '../../imports/productos/regenera.webp';
 import imgPremium from '../../imports/productos/premium.webp';
+import imgNursery from '../../imports/productos/nursery.webp';
+import imgPlug from '../../imports/productos/plug.webp';
+import imgSeed from '../../imports/productos/seed.webp';
+import imgForest from '../../imports/productos/forest.webp';
+import imgTobacco from '../../imports/productos/tobacco.webp';
+import imgMiniChip from '../../imports/productos/minichip.webp';
+import imgPerlite from '../../imports/productos/perlite.webp';
 import imgBerry from '../../imports/productos/berry.webp';
 import imgCannabis from '../../imports/productos/cannabis.webp';
 import imgCitrus from '../../imports/productos/citrus.webp';
@@ -365,6 +372,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato profesional para siembra y germinación.',
     line: 'sustratos',
     Icon: Layers,
+    image: imgSeed,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Siembra en bandejas, almácigos y germinación de semillas',
     description:
@@ -401,6 +409,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato profesional para producción de plantines en plugs.',
     line: 'sustratos',
     Icon: Layers,
+    image: imgPlug,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción profesional de plantines en bandejas plug',
     description:
@@ -437,6 +446,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato profesional para viveros de producción.',
     line: 'sustratos',
     Icon: Layers,
+    image: imgNursery,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción comercial de plantas ornamentales, forestales y frutales',
     description:
@@ -517,6 +527,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato profesional para producción de plantines forestales.',
     line: 'sustratos',
     Icon: Layers,
+    image: imgForest,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción de plantines para forestación y reforestación',
     description:
@@ -553,6 +564,7 @@ export const products: ProductDetail[] = [
     short: 'Sustrato profesional para producción de plantines de tabaco.',
     line: 'sustratos',
     Icon: Layers,
+    image: imgTobacco,
     format: 'Bolsa 25 · 50 · 80 dm³',
     usage: 'Producción de plantines de tabaco en sistema flotante y bandejas',
     description:
@@ -874,6 +886,7 @@ export const products: ProductDetail[] = [
     short: 'Astillas finas de madera para cobertura decorativa premium.',
     line: 'materiasprimas',
     Icon: TreePine,
+    image: imgMiniChip,
     format: 'Granel · Big Bag · Bolsas de 130, 100, 60, 25 y 5 dm³',
     usage: 'Cobertura decorativa premium · Paisajismo · Jardinería',
     description:
@@ -968,6 +981,7 @@ export const products: ProductDetail[] = [
     short: 'Perlita expandida para sustratos profesionales.',
     line: 'materiasprimas',
     Icon: TreePine,
+    image: imgPerlite,
     format: 'Bolsas de 125, 25 y 5 dm³',
     usage: 'Componente de sustratos · Mejora del drenaje y la aireación',
     description:

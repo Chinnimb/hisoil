@@ -84,6 +84,16 @@ const products: Product[] = [
     usage: '100–500 kg/ha',
   },
   {
+    slug: 'carbon',
+    name: 'HiSoil Carbon',
+    desc: 'Enmienda orgánica carbonizada para agricultura regenerativa.',
+    line: 'Agricultura',
+    Icon: Sprout,
+    image: imgCarbon,
+    format: 'A granel · Big Bag 1 m³',
+    usage: '2–5 t/ha',
+  },
+  {
     slug: 'regenera',
     name: 'HiSoil Regenera',
     desc: 'Programa integral para la regeneración de suelos.',
@@ -200,16 +210,6 @@ const products: Product[] = [
     image: imgNative,
     format: 'Bolsa 25 kg',
     usage: '30–50 kg/ha',
-  },
-  {
-    slug: 'carbon',
-    name: 'HiSoil Carbon',
-    desc: 'Enmienda orgánica carbonizada para agricultura regenerativa.',
-    line: 'Infraestructura',
-    Icon: Mountain,
-    image: imgCarbon,
-    format: 'A granel · Big Bag 1 m³',
-    usage: '2–5 t/ha',
   },
   {
     slug: 'hydromulch',
