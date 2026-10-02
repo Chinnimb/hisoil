@@ -34,6 +34,7 @@ import imgOutdoor from '../../../imports/productos/outdoor.webp';
 import imgAgriculturaPortada from '../../../imports/productos/agricultura-portada.webp';
 import imgSustratosPortada from '../../../imports/productos/sustratos-portada.webp';
 import imgMateriasPrimasPortada from '../../../imports/productos/materiasprimas-portada.webp';
+import imgInfraestructuraPortada from '../../../imports/productos/infraestructura-portada.webp';
 import imgMiniChip from '../../../imports/productos/minichip.webp';
 import imgPerlite from '../../../imports/productos/perlite.webp';
 import imgVermiculite from '../../../imports/productos/vermiculite.webp';
@@ -305,8 +306,7 @@ const categories: Category[] = [
     eyebrow: 'Línea E',
     intro:
       'Soluciones para revegetación, recuperación de suelos y compensaciones ambientales en grandes obras.',
-    image:
-      'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1600',
+    image: imgInfraestructuraPortada,
     applications:
       'Revegetación · Recuperación de suelos · Taludes · Canteras · Minería · Obras civiles · Corredores viales · Compensaciones ambientales',
     subcategories: [
