@@ -30,6 +30,7 @@ import imgGreenroof from '../../../imports/productos/greenroof.webp';
 import imgRestore from '../../../imports/productos/restore-1.webp';
 import imgHydromulch from '../../../imports/productos/hydromulch.webp';
 import imgNative from '../../../imports/productos/native.webp';
+import imgErosion from '../../../imports/productos/erosion.webp';
 import imgOutdoor from '../../../imports/productos/outdoor.webp';
 import imgAgriculturaPortada from '../../../imports/productos/agricultura-portada.webp';
 import imgSustratosPortada from '../../../imports/productos/sustratos-portada.webp';
@@ -83,6 +84,7 @@ const productImages: Record<string, string> = {
   // Infraestructura
   'HiSoil Restore': imgRestore,
   'HiSoil HydroMulch': imgHydromulch,
+  'HiSoil Erosion': imgErosion,
   'HiSoil Native': imgNative,
 };
 

@@ -32,6 +32,7 @@ import imgGreenroof from '../../imports/productos/greenroof.webp';
 import imgRestore from '../../imports/productos/restore-1.webp';
 import imgHydromulch from '../../imports/productos/hydromulch.webp';
 import imgNative from '../../imports/productos/native.webp';
+import imgErosion from '../../imports/productos/erosion.webp';
 import imgOutdoor from '../../imports/productos/outdoor.webp';
 
 type LucideIcon = typeof Sprout;
@@ -1564,6 +1565,7 @@ export const products: ProductDetail[] = [
     short: 'Sistema profesional para control de erosión y estabilización de suelos.',
     line: 'infraestructura',
     Icon: Mountain,
+    image: imgErosion,
     format: 'Consultar disponibilidad y desarrollos específicos según cada proyecto',
     usage: 'Taludes · Banquinas · Márgenes de ríos',
     status: 'a-desarrollar',
