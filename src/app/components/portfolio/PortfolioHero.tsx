@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { LiveCounter } from '../LiveCounter';
-import { COUNTER_EPOCH, TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../../data/contadores';
+import { TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../../data/contadores';
 
 export function PortfolioHero() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -114,13 +114,7 @@ export function PortfolioHero() {
                 key: 'procesadas',
                 content: (
                   <>
-                    <LiveCounter
-                      base={TONELADAS_PROCESADAS.base}
-                      epoch={COUNTER_EPOCH}
-                      ratePerSecondKg={TONELADAS_PROCESADAS.ratePerSecondKg}
-                      suffix=" t"
-                    />{' '}
-                    procesadas
+                    <LiveCounter {...TONELADAS_PROCESADAS} /> procesadas
                   </>
                 ),
               },
@@ -128,13 +122,7 @@ export function PortfolioHero() {
                 key: 'evitadas',
                 content: (
                   <>
-                    <LiveCounter
-                      base={EMISIONES_EVITADAS.base}
-                      epoch={COUNTER_EPOCH}
-                      ratePerSecondKg={EMISIONES_EVITADAS.ratePerSecondKg}
-                      suffix=" t CO₂"
-                    />{' '}
-                    evitadas
+                    <LiveCounter {...EMISIONES_EVITADAS} /> evitadas
                   </>
                 ),
               },

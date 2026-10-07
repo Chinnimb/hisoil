@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Leaf, CloudOff, MapPin } from 'lucide-react';
 import { LiveCounter } from './LiveCounter';
-import { COUNTER_EPOCH, TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../data/contadores';
+import { TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../data/contadores';
 
 const IMG_URL =
   'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1920';
@@ -146,12 +146,7 @@ export function Hero() {
                   className="text-white font-bold leading-none mb-1 tabular-nums"
                   style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
                 >
-                  <LiveCounter
-                    base={TONELADAS_PROCESADAS.base}
-                    epoch={COUNTER_EPOCH}
-                    ratePerSecondKg={TONELADAS_PROCESADAS.ratePerSecondKg}
-                    suffix=" t"
-                  />
+                  <LiveCounter {...TONELADAS_PROCESADAS} />
                 </div>
                 <div className="text-white/60 text-xs">de residuos valorizados en tiempo real</div>
               </div>
@@ -173,12 +168,7 @@ export function Hero() {
                   className="text-white font-bold leading-none mb-1 tabular-nums"
                   style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
                 >
-                  <LiveCounter
-                    base={EMISIONES_EVITADAS.base}
-                    epoch={COUNTER_EPOCH}
-                    ratePerSecondKg={EMISIONES_EVITADAS.ratePerSecondKg}
-                    suffix=" t CO₂"
-                  />
+                  <LiveCounter {...EMISIONES_EVITADAS} />
                 </div>
                 <div className="text-white/60 text-xs">de gases de efecto invernadero</div>
               </div>

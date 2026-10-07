@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
 import { LiveCounter } from '../LiveCounter';
-import { COUNTER_EPOCH, TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../../data/contadores';
+import { TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../../data/contadores';
 
 type LucideIcon = typeof Target;
 
@@ -34,14 +34,12 @@ interface Step {
 // Los mismos contadores en tiempo real de la Home
 const stats = [
   {
-    ...TONELADAS_PROCESADAS,
-    suffix: ' t',
+    contador: TONELADAS_PROCESADAS,
     label: 'Toneladas procesadas',
     sub: 'de residuos valorizados en tiempo real',
   },
   {
-    ...EMISIONES_EVITADAS,
-    suffix: ' t CO₂',
+    contador: EMISIONES_EVITADAS,
     label: 'Emisiones evitadas',
     sub: 'de gases de efecto invernadero',
   },
@@ -360,12 +358,7 @@ export function CarbonCredits() {
                     className="text-white font-bold leading-none mb-2 tabular-nums"
                     style={{ fontSize: 'clamp(1.7rem, 3vw, 2.4rem)' }}
                   >
-                    <LiveCounter
-                      base={s.base}
-                      epoch={COUNTER_EPOCH}
-                      ratePerSecondKg={s.ratePerSecondKg}
-                      suffix={s.suffix}
-                    />
+                    <LiveCounter {...s.contador} />
                   </div>
                   <div className="text-white text-sm font-semibold mb-1">{s.label}</div>
                   <div className="text-white/55 text-xs font-mono">{s.sub}</div>
