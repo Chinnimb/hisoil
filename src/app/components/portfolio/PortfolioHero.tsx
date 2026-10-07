@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { LiveCounter } from '../LiveCounter';
+import { COUNTER_EPOCH, TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../../data/contadores';
 
 export function PortfolioHero() {
   const imgRef = useRef<HTMLImageElement>(null);
@@ -108,14 +110,43 @@ export function PortfolioHero() {
         >
           <div className="w-full flex flex-wrap justify-center md:justify-between items-center gap-6 max-w-[1600px] mx-auto">
             {[
-              '44.400 t procesadas en 2022',
-              '36.951 tCO₂e reducidas por año',
-              '10 industrias documentadas',
-              'BioCarbon Standard certificado',
+              {
+                key: 'procesadas',
+                content: (
+                  <>
+                    <LiveCounter
+                      base={TONELADAS_PROCESADAS.base}
+                      epoch={COUNTER_EPOCH}
+                      ratePerSecondKg={TONELADAS_PROCESADAS.ratePerSecondKg}
+                      suffix=" t"
+                    />{' '}
+                    procesadas
+                  </>
+                ),
+              },
+              {
+                key: 'evitadas',
+                content: (
+                  <>
+                    <LiveCounter
+                      base={EMISIONES_EVITADAS.base}
+                      epoch={COUNTER_EPOCH}
+                      ratePerSecondKg={EMISIONES_EVITADAS.ratePerSecondKg}
+                      suffix=" t CO₂"
+                    />{' '}
+                    evitadas
+                  </>
+                ),
+              },
+              { key: 'industrias', content: '10 industrias documentadas' },
+              { key: 'biocarbon', content: 'BioCarbon Standard certificado' },
             ].map((item) => (
-              <div key={item} className="flex items-center gap-2 text-white/75 text-sm font-mono">
+              <div
+                key={item.key}
+                className="flex items-center gap-2 text-white/75 text-sm font-mono tabular-nums"
+              >
                 <div className="w-1.5 h-1.5 bg-lima rounded-full" />
-                {item}
+                {item.content}
               </div>
             ))}
           </div>

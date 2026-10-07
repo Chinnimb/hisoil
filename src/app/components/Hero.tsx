@@ -1,10 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Leaf, CloudOff, MapPin } from 'lucide-react';
 import { LiveCounter } from './LiveCounter';
-
-// Epoch de referencia: los valores base están calculados para este momento.
-// El contador avanza en tiempo real desde acá.
-const COUNTER_EPOCH = new Date('2026-08-25T00:00:00-03:00');
+import { COUNTER_EPOCH, TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../data/contadores';
 
 const IMG_URL =
   'https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1920';
@@ -150,9 +147,9 @@ export function Hero() {
                   style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
                 >
                   <LiveCounter
-                    base={216854}
+                    base={TONELADAS_PROCESADAS.base}
                     epoch={COUNTER_EPOCH}
-                    ratePerSecondKg={1.15}
+                    ratePerSecondKg={TONELADAS_PROCESADAS.ratePerSecondKg}
                     suffix=" t"
                   />
                 </div>
@@ -177,9 +174,9 @@ export function Hero() {
                   style={{ fontSize: 'clamp(1.4rem, 2.6vw, 2rem)' }}
                 >
                   <LiveCounter
-                    base={118800}
+                    base={EMISIONES_EVITADAS.base}
                     epoch={COUNTER_EPOCH}
-                    ratePerSecondKg={0.57}
+                    ratePerSecondKg={EMISIONES_EVITADAS.ratePerSecondKg}
                     suffix=" t CO₂"
                   />
                 </div>
