@@ -15,7 +15,8 @@ import {
   Rocket,
 } from 'lucide-react';
 import { useReveal } from '../../hooks/useReveal';
-import { AnimatedCounter } from '../AnimatedCounter';
+import { LiveCounter } from '../LiveCounter';
+import { TONELADAS_PROCESADAS, EMISIONES_EVITADAS } from '../../data/contadores';
 
 type LucideIcon = typeof Target;
 
@@ -30,10 +31,18 @@ interface Step {
   render: () => React.ReactNode;
 }
 
+// Los mismos contadores en tiempo real de la Home
 const stats = [
-  { end: 44400, suffix: ' t', label: 'Residuos procesados', sub: 'medición 2022' },
-  { end: 4168, suffix: ' tCO₂e', label: 'Huella organizacional', sub: 'GHG Protocol' },
-  { end: 36951, suffix: ' tCO₂e', label: 'Reducción anual', sub: 'CDM AMS-III.F' },
+  {
+    contador: TONELADAS_PROCESADAS,
+    label: 'Toneladas procesadas',
+    sub: 'de residuos valorizados en tiempo real',
+  },
+  {
+    contador: EMISIONES_EVITADAS,
+    label: 'Emisiones evitadas',
+    sub: 'de gases de efecto invernadero',
+  },
 ];
 
 const projectScope = [
@@ -339,17 +348,17 @@ export function CarbonCredits() {
             </div>
 
             {/* Stats en el hero */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
               {stats.map((s) => (
                 <div
                   key={s.label}
                   className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-lima/40 transition-all"
                 >
                   <div
-                    className="text-white font-bold leading-none mb-2"
+                    className="text-white font-bold leading-none mb-2 tabular-nums"
                     style={{ fontSize: 'clamp(1.7rem, 3vw, 2.4rem)' }}
                   >
-                    <AnimatedCounter end={s.end} suffix={s.suffix} />
+                    <LiveCounter {...s.contador} />
                   </div>
                   <div className="text-white text-sm font-semibold mb-1">{s.label}</div>
                   <div className="text-white/55 text-xs font-mono">{s.sub}</div>
