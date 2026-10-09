@@ -349,7 +349,6 @@ export const products: ProductDetail[] = [
     cropsLabel: 'Destinado a',
     packagingLabel: 'Modalidades',
     certifications: [
-      'SENASA',
       'Compatible con programas de Agricultura Regenerativa',
       'Compatible con proyectos de captura de carbono',
     ],
