@@ -349,7 +349,6 @@ export const products: ProductDetail[] = [
     cropsLabel: 'Destinado a',
     packagingLabel: 'Modalidades',
     certifications: [
-      'SENASA',
       'Compatible con programas de Agricultura Regenerativa',
       'Compatible con proyectos de captura de carbono',
     ],
@@ -670,7 +669,7 @@ export const products: ProductDetail[] = [
       'Producción en greenhouse',
       'Cultivo outdoor',
     ],
-    certifications: ['SENASA', 'GAP'],
+    certifications: ['GAP'],
     packaging: ['Bolsa 25 dm³', 'Bolsa 50 dm³', 'Bolsa 80 dm³'],
     storage:
       'Conservar en un lugar seco, ventilado y protegido de la luz solar directa. Vida útil: 24 meses desde la fecha de elaboración.',
