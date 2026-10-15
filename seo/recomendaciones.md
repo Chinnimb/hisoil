@@ -17,10 +17,9 @@ la SPA se publique con el `<head>` genérico en todas las rutas.
 - Sin esto, las 17 fichas `/producto/…`, `/shop/` y las páginas del menú dan 404 desde el día uno.
 - Confirmar con HiSoil las filas marcadas como dudosas (productos sin equivalente: azaleas, cactus, humus,
   tierra negra).
-- ⚠ Decisión pendiente: `CLAUDE.md` dice que producción "no tiene servidor propio" y que no hay que depender de
-  rewrites; el pedido de este relevamiento dice que el sitio va al mismo Hostinger con LiteSpeed. Si es
-  LiteSpeed, `public/.htaccess` resuelve 301, 410 y el fallback. Si no, las 301 se pueden cargar en Cloudflare
-  (_Bulk Redirects_, el dominio ya está detrás de Cloudflare).
+- Decidido (ver `APLICAR.md`): el sitio va al mismo Hostinger con LiteSpeed, así que `public/.htaccess`
+  resuelve 301, 410, el HTML por ruta y la 404. El `.htaccess` final está probado en Docker (Apache y
+  OpenLiteSpeed), no en el hosting.
 
 ### 1.2 HTML propio por ruta (prerender en el build)
 
@@ -30,13 +29,16 @@ Figma Make. Google renderiza JavaScript, pero:
 - WhatsApp, Facebook, LinkedIn y X **no** ejecutan JS: toman el `<head>` del HTML tal cual. Sin prerender,
   cualquier link compartido muestra "Hisoil Wireframes".
 - El render de JS de Google llega en una segunda pasada y es menos confiable para title, canonical y JSON-LD.
-- Además resuelve la deuda de `CLAUDE.md`: "las 44 rutas que no son `/` dan 404 al entrar directo". Si cada
-  ruta tiene su `dist/<ruta>/index.html`, el servidor las encuentra sin rewrites.
+- Además resuelve la deuda de `CLAUDE.md`: "las rutas que no son `/` dan 404 al entrar directo". Cada ruta
+  tiene su HTML (`dist/nosotros.html`, `dist/fichas/chip.html`) y el `.htaccess` los sirve en `/nosotros` y
+  `/productos/chip`. No se usa `dist/<ruta>/index.html` porque fuerza la barra final (ver la sección 7 de
+  `redirecciones.md`).
 
 Opciones, de menor a mayor cambio:
 
 1. **Script `postbuild` propio** (recomendado): después de `vite build`, lee las rutas fijas y los 33 slugs de
-   `products.ts`, copia `dist/index.html` a `dist/<ruta>/index.html` y reemplaza `<title>`, `description`,
+   `products.ts`, copia `dist/index.html` a `dist/<ruta>.html` (las fichas, a `dist/fichas/<slug>.html`) y
+   reemplaza `<title>`, `description`,
    `canonical`, OG/Twitter y el JSON-LD de cada una. No toca el código de la app ni el scaffolding de Figma Make.
 2. `vite-plugin-prerender` / `vite-react-ssg`: renderizan también el contenido (mejor para el texto visible),
    pero cambian el arranque de la app y pueden chocar con una regeneración desde Make.
@@ -73,7 +75,7 @@ ese meta, Google desindexa todo el dominio. Al revés, mientras siga en Vercel d
 
 ### 2.1 `sitemap.xml` y `robots.txt`
 
-- Generar `dist/sitemap.xml` en el mismo `postbuild`: 7 rutas fijas + 33 fichas. Sin `lastmod` inventado
+- Generar `dist/sitemap.xml` en el mismo `postbuild`: 6 rutas fijas + 33 fichas = 39 URLs. Sin `lastmod` inventado
   (o con la fecha del build si cambió el contenido).
 - `public/robots.txt`:
   ```
@@ -97,7 +99,9 @@ ese meta, Google desindexa todo el dominio. Al revés, mientras siga en Vercel d
 
 El sitio viejo solo tiene `Product` + `BreadcrumbList` (WooCommerce). Proponer:
 
-- **Home**: `Organization` (o `LocalBusiness` si van a mostrar la planta de Pilar) + `WebSite`.
+- **Home**: `Organization` (o `LocalBusiness` si van a mostrar la planta de Pilar) + `WebSite`. Sin mail,
+  teléfono ni dirección hasta que se defina el NAP (2.4); cuando se defina, se suman `email`, `telephone` y
+  `address` (`PostalAddress`).
   ```json
   {
     "@context": "https://schema.org",
@@ -105,28 +109,22 @@ El sitio viejo solo tiene `Product` + `BreadcrumbList` (WooCommerce). Proponer:
     "name": "HiSoil",
     "url": "https://hisoil.com.ar/",
     "logo": "https://hisoil.com.ar/hisoil-logo.png",
-    "email": "<confirmar: info@ o administracion@>",
-    "telephone": "<confirmar>",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "El Hornero 1180, Edificio Alpina",
-      "addressLocality": "Pilar",
-      "postalCode": "1629",
-      "addressRegion": "Buenos Aires",
-      "addressCountry": "AR"
-    },
     "sameAs": [
       "https://www.instagram.com/hisoil_/",
       "https://www.facebook.com/p/Hi-Soil-100066773138615/"
     ]
   }
   ```
-- **`/productos/:slug`**: `Product` con `name`, `description` (`short`), `image`, `brand: HiSoil` y
+  Ojo con el `logo`: `hisoil-logo.png` mide 220×57 y Google pide al menos 112×112. Hace falta una versión
+  cuadrada.
+- **`/productos/:slug`**: `Product` con `name`, `description` (`short`), `image`,
+  `brand` (`{ "@type": "Brand", "name": "HiSoil" }`) y
   `category` (la línea), más `BreadcrumbList` Inicio › Productos › {name}. Sin `offers`, porque el sitio nuevo no
   publica precios. Ojo: sin `offers`/`review`/`aggregateRating` Google no muestra fragmento enriquecido de
   producto; igual sirve para entender la página. El sitio viejo sí tenía `offers` con precios en ARS de 2022.
 - **Resto**: `BreadcrumbList`.
-- Validar cada plantilla con la Prueba de resultados enriquecidos de Google antes de publicar.
+- Validar cada plantilla en validator.schema.org antes de publicar. La Prueba de resultados enriquecidos de
+  Google va a marcar el `Product` como no apto (por la falta de `offers`): es esperable.
 
 ### 2.4 Datos de negocio consistentes (NAP)
 
@@ -152,8 +150,8 @@ de 1200×630).
 
 ### 3.2 Canonical
 
-`<link rel="canonical">` absoluto por ruta, sin barra final (o con, pero igual en canonical, sitemap, links
-internos y `.htaccess`). Hoy `index.html` no tiene canonical.
+`<link rel="canonical">` absoluto por ruta, sin barra final (igual en canonical, sitemap, links internos y
+`.htaccess`). La home es la excepción: `https://hisoil.com.ar/`. Hoy `index.html` no tiene canonical.
 
 ### 3.3 Íconos y `theme-color`
 
