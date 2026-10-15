@@ -68,21 +68,21 @@ Relevado el 15/10/2026. Datos completos por URL en `sitio-actual.json`; mapeo a 
 - `/wp-sitemap.xml` (200): índice con 13 sub-sitemaps. `/sitemap.xml` redirige ahí. `/sitemap_index.xml` da 404
   (confirma que no hay Yoast/RankMath).
 
-| Sub-sitemap | URLs | Qué hay |
-|---|---|---|
-| `posts-page` | 134 | 10 páginas reales + ~120 páginas demo de Woodmart (2017–2020) + WooCommerce |
-| `posts-product` | 17 | Fichas de producto reales |
-| `posts-post` | 3 | Notas de blog (11/2020) |
-| `posts-portfolio` | 9 | Demo (lorem ipsum) |
-| `posts-woodmart_slide` | 35 | Demo |
-| `posts-cms_block` | 59 | Demo (`/?cms_block=…`) |
-| `posts-elementor_library` | 5 | Plantillas Elementor (`/?elementor_library=…`) |
-| `taxonomies-category` | 2 | `/category/paisajismo/`, `/category/medio-ambiente/` |
-| `taxonomies-product_cat` | 1 | `/categoria-producto/productos/` |
-| `taxonomies-product_tag` | 7 | viveros, paisajistas, compost, compost-organico, paisajismo, sustratos, agricultura |
-| `taxonomies-project-cat` | 5 | Demo (accessories, decor, furniture, kitchen, lighting) |
-| `taxonomies-woodmart_slider` | 14 | Demo |
-| `users` | 2 | `/author/carloslr/`, `/author/jjk1978/` (expone usuarios de WordPress) |
+| Sub-sitemap                  | URLs | Qué hay                                                                             |
+| ---------------------------- | ---- | ----------------------------------------------------------------------------------- |
+| `posts-page`                 | 134  | 10 páginas reales + ~120 páginas demo de Woodmart (2017–2020) + WooCommerce         |
+| `posts-product`              | 17   | Fichas de producto reales                                                           |
+| `posts-post`                 | 3    | Notas de blog (11/2020)                                                             |
+| `posts-portfolio`            | 9    | Demo (lorem ipsum)                                                                  |
+| `posts-woodmart_slide`       | 35   | Demo                                                                                |
+| `posts-cms_block`            | 59   | Demo (`/?cms_block=…`)                                                              |
+| `posts-elementor_library`    | 5    | Plantillas Elementor (`/?elementor_library=…`)                                      |
+| `taxonomies-category`        | 2    | `/category/paisajismo/`, `/category/medio-ambiente/`                                |
+| `taxonomies-product_cat`     | 1    | `/categoria-producto/productos/`                                                    |
+| `taxonomies-product_tag`     | 7    | viveros, paisajistas, compost, compost-organico, paisajismo, sustratos, agricultura |
+| `taxonomies-project-cat`     | 5    | Demo (accessories, decor, furniture, kitchen, lighting)                             |
+| `taxonomies-woodmart_slider` | 14   | Demo                                                                                |
+| `users`                      | 2    | `/author/carloslr/`, `/author/jjk1978/` (expone usuarios de WordPress)              |
 
 - Meta robots en todo el sitio: `max-image-preview:large` (indexable). Única excepción: `/my-account/` con
   `noindex, follow`.
@@ -93,19 +93,19 @@ Relevado el 15/10/2026. Datos completos por URL en `sitio-actual.json`; mapeo a 
 
 ### Páginas reales
 
-| URL | Title | H1 | H2 | Canonical |
-|---|---|---|---|---|
-| `/` | Hi-Soil – Energía para Cultivos – Sustratos de alta calidad para la agricultura, horticultura y jardineria | — | — | sí |
-| `/shop/` | Shop – Hi-Soil – Energía para Cultivos | Shop | — | no |
-| `/jardineria-profesional/` (menú "Paisajismo") | Jardinería Profesional – Hi-Soil – Energía para Cultivos | — | Jardinería Profesional | sí |
-| `/horticultura-profesional/` (menú "Productores") | Horticultura Profesional – Hi-Soil – Energía para Cultivos | — | Horticultura Profesional · Plantas Ornamentales · Ciclamen · Tabaco 01 · Hortalizas · Forestales · Frutales | sí |
-| `/hogar-y-jardin/` (menú "Viveros") | Hogar y Jardín – Hi-Soil – Energía para Cultivos | — | Hogar y Jardín · Productos para Hogar Y Jardín · Productos para Horticultura Profesional | sí |
-| `/servicios/` | Servicios – Hi-Soil – Energía para Cultivos | — | "Cuida el medio ambiente, no quemes ni entierres tu poda…" · CONTACTO | sí |
-| `/compost-organico/` | Compost Orgánico – Hi-Soil – Energía para Cultivos | — | — | sí |
-| `/techos-verdes/` | Techos verdes – Hi-Soil – Energía para Cultivos | — | — | sí |
-| `/portfolio/` | Portfolio – Hi-Soil – Energía para Cultivos (demo, imágenes placeholder) | Portfolio | — | no |
-| `/privacy-policy/` | Privacy Policy – Hi-Soil – Energía para Cultivos (plantilla en inglés) | Privacy Policy | — | sí |
-| `/blog/` | Blog – Hi-Soil – Energía para Cultivos | Blog | — | no |
+| URL                                               | Title                                                                                                      | H1             | H2                                                                                                          | Canonical |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------- | --------- |
+| `/`                                               | Hi-Soil – Energía para Cultivos – Sustratos de alta calidad para la agricultura, horticultura y jardineria | —              | —                                                                                                           | sí        |
+| `/shop/`                                          | Shop – Hi-Soil – Energía para Cultivos                                                                     | Shop           | —                                                                                                           | no        |
+| `/jardineria-profesional/` (menú "Paisajismo")    | Jardinería Profesional – Hi-Soil – Energía para Cultivos                                                   | —              | Jardinería Profesional                                                                                      | sí        |
+| `/horticultura-profesional/` (menú "Productores") | Horticultura Profesional – Hi-Soil – Energía para Cultivos                                                 | —              | Horticultura Profesional · Plantas Ornamentales · Ciclamen · Tabaco 01 · Hortalizas · Forestales · Frutales | sí        |
+| `/hogar-y-jardin/` (menú "Viveros")               | Hogar y Jardín – Hi-Soil – Energía para Cultivos                                                           | —              | Hogar y Jardín · Productos para Hogar Y Jardín · Productos para Horticultura Profesional                    | sí        |
+| `/servicios/`                                     | Servicios – Hi-Soil – Energía para Cultivos                                                                | —              | "Cuida el medio ambiente, no quemes ni entierres tu poda…" · CONTACTO                                       | sí        |
+| `/compost-organico/`                              | Compost Orgánico – Hi-Soil – Energía para Cultivos                                                         | —              | —                                                                                                           | sí        |
+| `/techos-verdes/`                                 | Techos verdes – Hi-Soil – Energía para Cultivos                                                            | —              | —                                                                                                           | sí        |
+| `/portfolio/`                                     | Portfolio – Hi-Soil – Energía para Cultivos (demo, imágenes placeholder)                                   | Portfolio      | —                                                                                                           | no        |
+| `/privacy-policy/`                                | Privacy Policy – Hi-Soil – Energía para Cultivos (plantilla en inglés)                                     | Privacy Policy | —                                                                                                           | sí        |
+| `/blog/`                                          | Blog – Hi-Soil – Energía para Cultivos                                                                     | Blog           | —                                                                                                           | no        |
 
 Notas de blog (11/2020, todas con canonical, H1 = título, sin description):
 
@@ -121,25 +121,25 @@ republicadas; si es así, aportan poco y pueden ser contenido duplicado.
 17 fichas. En todas: canonical propio, sin description, sin OG, H1 = nombre, H2 único "Valoraciones",
 imagen principal con `alt=""`. El JSON-LD de cada una (bloque completo en `sitio-actual.json`):
 
-| URL | Nombre (H1) | SKU | Descripción en JSON-LD | Última modificación |
-|---|---|---|---|---|
-| `/producto/compost-organico/` | Compost Orgánico | COMPOST | Ficha técnica completa | 2022-08-10 |
-| `/producto/chip/` | Chip | CHIP | Ficha técnica completa | 2022-04-13 |
-| `/producto/chip-mini/` | Chip Mini | CHIPMINI | Ficha técnica (igual a Chip) | 2022-04-13 |
-| `/producto/pometina/` | Pometina | POMETINA | Solo el nombre | 2024-03-13 |
-| `/producto/perlita/` | Perlita | PERLITA | Solo el nombre | 2022-04-13 |
-| `/producto/vermiculita/` | Vermiculita | VERMICU | Solo el nombre | 2022-04-13 |
-| `/producto/turba/` | Turba | TURBA | Solo el nombre | 2022-04-13 |
-| `/producto/humus/` | Humus | HUMUS | Ficha técnica completa | 2022-04-13 |
-| `/producto/sustrato-floral-f538/` | Sustrato para Azaleas | SUSF538 | Ficha técnica + componentes | 2025-05-25 |
-| `/producto/sustrato-floral-f546/` | Sustrato de siembra F545 | SUSF545 | Solo el nombre | 2022-04-13 |
-| `/producto/sustrato-profesional-exterior-f546/` | Sustrato Profesional Exterior F546 | SUSF546 | Solo el nombre | 2025-04-11 |
-| `/producto/sustrato-profesional-interior-f556/` | Sustrato Profesional Interior F556 | SUSF556 | Solo el nombre | 2025-05-29 |
-| `/producto/sustrato-floral-f590-tierra-compost/` | Sustrato Profesional Tierra + Compost F590 | SUSF590 | Solo el nombre | 2025-05-28 |
-| `/producto/sustrato-para-techos-y-terrazas/` | Sustrato para Techos y Terrazas | SUSTETE | Solo el nombre | 2022-04-13 |
-| `/producto/sustrato-formula-331-cactus-x-5dm/` | Sustrato Formula 331 Cactus X 5DM | SF 331 X 5 DM3 | Solo el nombre | 2024-08-09 |
-| `/producto/tierra-negra-25-dm3-tamizada/` | Tierra Negra Tamizada | TINEGT | Solo el nombre | 2025-05-22 |
-| `/producto/tierra-negra-a-granel-rotobateada/` | Tierra Negra a granel (Rotobateada) | TING | Solo el nombre | 2024-08-09 |
+| URL                                              | Nombre (H1)                                | SKU            | Descripción en JSON-LD       | Última modificación |
+| ------------------------------------------------ | ------------------------------------------ | -------------- | ---------------------------- | ------------------- |
+| `/producto/compost-organico/`                    | Compost Orgánico                           | COMPOST        | Ficha técnica completa       | 2022-08-10          |
+| `/producto/chip/`                                | Chip                                       | CHIP           | Ficha técnica completa       | 2022-04-13          |
+| `/producto/chip-mini/`                           | Chip Mini                                  | CHIPMINI       | Ficha técnica (igual a Chip) | 2022-04-13          |
+| `/producto/pometina/`                            | Pometina                                   | POMETINA       | Solo el nombre               | 2024-03-13          |
+| `/producto/perlita/`                             | Perlita                                    | PERLITA        | Solo el nombre               | 2022-04-13          |
+| `/producto/vermiculita/`                         | Vermiculita                                | VERMICU        | Solo el nombre               | 2022-04-13          |
+| `/producto/turba/`                               | Turba                                      | TURBA          | Solo el nombre               | 2022-04-13          |
+| `/producto/humus/`                               | Humus                                      | HUMUS          | Ficha técnica completa       | 2022-04-13          |
+| `/producto/sustrato-floral-f538/`                | Sustrato para Azaleas                      | SUSF538        | Ficha técnica + componentes  | 2025-05-25          |
+| `/producto/sustrato-floral-f546/`                | Sustrato de siembra F545                   | SUSF545        | Solo el nombre               | 2022-04-13          |
+| `/producto/sustrato-profesional-exterior-f546/`  | Sustrato Profesional Exterior F546         | SUSF546        | Solo el nombre               | 2025-04-11          |
+| `/producto/sustrato-profesional-interior-f556/`  | Sustrato Profesional Interior F556         | SUSF556        | Solo el nombre               | 2025-05-29          |
+| `/producto/sustrato-floral-f590-tierra-compost/` | Sustrato Profesional Tierra + Compost F590 | SUSF590        | Solo el nombre               | 2025-05-28          |
+| `/producto/sustrato-para-techos-y-terrazas/`     | Sustrato para Techos y Terrazas            | SUSTETE        | Solo el nombre               | 2022-04-13          |
+| `/producto/sustrato-formula-331-cactus-x-5dm/`   | Sustrato Formula 331 Cactus X 5DM          | SF 331 X 5 DM3 | Solo el nombre               | 2024-08-09          |
+| `/producto/tierra-negra-25-dm3-tamizada/`        | Tierra Negra Tamizada                      | TINEGT         | Solo el nombre               | 2025-05-22          |
+| `/producto/tierra-negra-a-granel-rotobateada/`   | Tierra Negra a granel (Rotobateada)        | TING           | Solo el nombre               | 2024-08-09          |
 
 Las fichas publican precios en ARS (`AggregateOffer` o `Offer`, `InStock`) que parecen viejos (ej. Compost de
 $157 a $1.908). Google puede estar mostrándolos en resultados.
@@ -154,9 +154,27 @@ Bloque JSON-LD de ejemplo, tal como sale en `/producto/compost-organico/`:
       "@context": "https://schema.org/",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"name": "Inicio", "@id": "https://hisoil.com.ar"}},
-        {"@type": "ListItem", "position": 2, "item": {"name": "Productos", "@id": "https://hisoil.com.ar/categoria-producto/productos/"}},
-        {"@type": "ListItem", "position": 3, "item": {"name": "Compost Orgánico", "@id": "https://hisoil.com.ar/producto/compost-organico/"}}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": { "name": "Inicio", "@id": "https://hisoil.com.ar" }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "name": "Productos",
+            "@id": "https://hisoil.com.ar/categoria-producto/productos/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "name": "Compost Orgánico",
+            "@id": "https://hisoil.com.ar/producto/compost-organico/"
+          }
+        }
       ]
     },
     {
@@ -168,14 +186,22 @@ Bloque JSON-LD de ejemplo, tal como sale en `/producto/compost-organico/`:
       "description": "Resultado del proceso de compostaje, que consiste en la transformación biológica de restos vegetales y animales en un producto estable, homogéneo, de reducido tamaño de partícula. Por sus excelentes propiedades para la producción vegetal se usa como agregado en sustratos o mejorador de suelos enfermos o degradados.\r\nCARACTERÍSTICAS FÍSICAS\r\npH 7,0 – 7,50\r\nCe 1,80 – 2,50 mS/cm\r\nMateria orgánica 30 – 35%\r\nDensidad seca 0,320 – 0,350 g/cm3",
       "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/COMPOST.jpg",
       "sku": "COMPOST",
-      "offers": [{
-        "@type": "AggregateOffer",
-        "lowPrice": "157", "highPrice": "1908", "offerCount": 5,
-        "priceCurrency": "ARS",
-        "availability": "http://schema.org/InStock",
-        "url": "https://hisoil.com.ar/producto/compost-organico/",
-        "seller": {"@type": "Organization", "name": "Hi-Soil - Energía para Cultivos", "url": "https://hisoil.com.ar"}
-      }]
+      "offers": [
+        {
+          "@type": "AggregateOffer",
+          "lowPrice": "157",
+          "highPrice": "1908",
+          "offerCount": 5,
+          "priceCurrency": "ARS",
+          "availability": "http://schema.org/InStock",
+          "url": "https://hisoil.com.ar/producto/compost-organico/",
+          "seller": {
+            "@type": "Organization",
+            "name": "Hi-Soil - Energía para Cultivos",
+            "url": "https://hisoil.com.ar"
+          }
+        }
+      ]
     }
   ]
 }
@@ -186,32 +212,32 @@ el nombre sale con entidades HTML mal escapadas (`Productos etiquetados &amp;ldq
 
 ### Imágenes principales
 
-| URL | Imagen | alt |
-|---|---|---|
-| `/` | `2020/11/slider1-foto.jpg`, `2021/08/Horticultura-slider.jpg`, `2021/08/vivero-slider.jpg` (Slider Revolution) | ausente |
-| `/compost-organico/` | `2020/11/compost-tierra.png`, `compost-tierra-suelta.png`, `material-original.jpg` | ausente / vacío |
-| `/techos-verdes/` | `2020/11/techos-verdes1.png`, `techos-verdes2.png`, `techos-tierra1.png` | vacío / ausente |
-| `/horticultura-profesional/` | íconos `horticultura-ico1…5` | `horticultura-ico1`… (nombre de archivo) |
-| Fichas de producto | `2021/04/{NOMBRE}.jpg` (ver tabla de JSON en el `.json`) | vacío |
+| URL                          | Imagen                                                                                                         | alt                                      |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| `/`                          | `2020/11/slider1-foto.jpg`, `2021/08/Horticultura-slider.jpg`, `2021/08/vivero-slider.jpg` (Slider Revolution) | ausente                                  |
+| `/compost-organico/`         | `2020/11/compost-tierra.png`, `compost-tierra-suelta.png`, `material-original.jpg`                             | ausente / vacío                          |
+| `/techos-verdes/`            | `2020/11/techos-verdes1.png`, `techos-verdes2.png`, `techos-tierra1.png`                                       | vacío / ausente                          |
+| `/horticultura-profesional/` | íconos `horticultura-ico1…5`                                                                                   | `horticultura-ico1`… (nombre de archivo) |
+| Fichas de producto           | `2021/04/{NOMBRE}.jpg` (ver tabla de JSON en el `.json`)                                                       | vacío                                    |
 
 Todas bajo `https://hisoil.com.ar/wp-content/uploads/`.
 
 ### Íconos, theme-color, verificaciones y analítica
 
-| Ítem | Valor |
-|---|---|
-| `icon` 32×32 | `/wp-content/uploads/2020/11/favicon-150x147.ico` |
-| `icon` 192×192, `apple-touch-icon`, `msapplication-TileImage` | `/wp-content/uploads/2020/11/favicon.ico` |
-| `theme-color` | presente pero vacío (`content=""`) |
-| `google-site-verification` | no hay (ni meta ni TXT de DNS) |
-| `msvalidate.01` (Bing) | no hay |
-| `facebook-domain-verification` | no hay |
-| GA4 / UA / GTM / Google Ads | no hay |
-| Meta Pixel / TikTok / LinkedIn / Hotjar / Clarity | no hay |
-| Cloudflare Web Analytics | sí, beacon con token `07006f268f034951b24eb3d57f89ae62` (lo inyecta Cloudflare) |
-| Terceros | Elfsight (widget `b49f5c8e-d650-48bb-be38-ecad3e461397`, tipo no identificado), Google Fonts |
-| DNS TXT | solo `v=spf1 include:_spf.mail.hostinger.com ~all` |
-| Otros `<head>` | `generator` WordPress 6.5.13, WooCommerce 9.3.6, Slider Revolution 6.2.23; feeds RSS; `shortlink`; `pingback`/`xmlrpc` |
+| Ítem                                                          | Valor                                                                                                                  |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `icon` 32×32                                                  | `/wp-content/uploads/2020/11/favicon-150x147.ico`                                                                      |
+| `icon` 192×192, `apple-touch-icon`, `msapplication-TileImage` | `/wp-content/uploads/2020/11/favicon.ico`                                                                              |
+| `theme-color`                                                 | presente pero vacío (`content=""`)                                                                                     |
+| `google-site-verification`                                    | no hay (ni meta ni TXT de DNS)                                                                                         |
+| `msvalidate.01` (Bing)                                        | no hay                                                                                                                 |
+| `facebook-domain-verification`                                | no hay                                                                                                                 |
+| GA4 / UA / GTM / Google Ads                                   | no hay                                                                                                                 |
+| Meta Pixel / TikTok / LinkedIn / Hotjar / Clarity             | no hay                                                                                                                 |
+| Cloudflare Web Analytics                                      | sí, beacon con token `07006f268f034951b24eb3d57f89ae62` (lo inyecta Cloudflare)                                        |
+| Terceros                                                      | Elfsight (widget `b49f5c8e-d650-48bb-be38-ecad3e461397`, tipo no identificado), Google Fonts                           |
+| DNS TXT                                                       | solo `v=spf1 include:_spf.mail.hostinger.com ~all`                                                                     |
+| Otros `<head>`                                                | `generator` WordPress 6.5.13, WooCommerce 9.3.6, Slider Revolution 6.2.23; feeds RSS; `shortlink`; `pingback`/`xmlrpc` |
 
 ### Datos de negocio que aparecen en el sitio
 
@@ -231,15 +257,15 @@ dirección y enlaza Instagram y Facebook. Hay que unificar (ver `recomendaciones
 
 Se pidieron las 293 URLs del sitemap. **247 son demo** del tema o tipos internos que nunca se limpiaron:
 
-| Grupo | URLs | Resultado | ¿Indexable? |
-|---|---|---|---|
-| Páginas demo (`/home-fashion/`, `/home-cars/`, `/home-medical-marijuana/`, `/contact-us-2/`, `/faqs/`, `/sample-page/`, `/products-grid/`, `/compare/`, `/wishlist/`…) | 120 | 200, title en inglés, canonical propio | Sí |
-| Slides (`/woodmart_slide/…`) | 35 | 200, canonical propio | Sí |
-| Portfolio demo (`/portfolio/potenti-parturient-parturie/`…) | 9 | 200, títulos en lorem ipsum | Sí |
-| Categorías de proyecto (`/project-cat/furniture/`…) | 5 | 200, sin canonical | Sí |
-| Bloques HTML (`/?cms_block=…`) | 59 | **500** "WordPress › Error", `noindex` | No |
-| Plantillas Elementor (`/?elementor_library=…`) | 5 | Redirigen a `/` | No |
-| Sliders (`/?taxonomy=woodmart_slider&term=…`) | 14 | 200 con el título del sitio, sin canonical | No verificado |
+| Grupo                                                                                                                                                                  | URLs | Resultado                                  | ¿Indexable?   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------ | ------------- |
+| Páginas demo (`/home-fashion/`, `/home-cars/`, `/home-medical-marijuana/`, `/contact-us-2/`, `/faqs/`, `/sample-page/`, `/products-grid/`, `/compare/`, `/wishlist/`…) | 120  | 200, title en inglés, canonical propio     | Sí            |
+| Slides (`/woodmart_slide/…`)                                                                                                                                           | 35   | 200, canonical propio                      | Sí            |
+| Portfolio demo (`/portfolio/potenti-parturient-parturie/`…)                                                                                                            | 9    | 200, títulos en lorem ipsum                | Sí            |
+| Categorías de proyecto (`/project-cat/furniture/`…)                                                                                                                    | 5    | 200, sin canonical                         | Sí            |
+| Bloques HTML (`/?cms_block=…`)                                                                                                                                         | 59   | **500** "WordPress › Error", `noindex`     | No            |
+| Plantillas Elementor (`/?elementor_library=…`)                                                                                                                         | 5    | Redirigen a `/`                            | No            |
+| Sliders (`/?taxonomy=woodmart_slider&term=…`)                                                                                                                          | 14   | 200 con el título del sitio, sin canonical | No verificado |
 
 Es decir: el sitemap le ofrece a Google **169 páginas indexables de demo** (en inglés, de rubros como autos,
 lencería, joyería o "medical marijuana") y 59 URLs que dan error 500. Eso diluye la relevancia del dominio y es

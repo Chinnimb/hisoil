@@ -20,7 +20,7 @@ la SPA se publique con el `<head>` genérico en todas las rutas.
 - ⚠ Decisión pendiente: `CLAUDE.md` dice que producción "no tiene servidor propio" y que no hay que depender de
   rewrites; el pedido de este relevamiento dice que el sitio va al mismo Hostinger con LiteSpeed. Si es
   LiteSpeed, `public/.htaccess` resuelve 301, 410 y el fallback. Si no, las 301 se pueden cargar en Cloudflare
-  (*Bulk Redirects*, el dominio ya está detrás de Cloudflare).
+  (_Bulk Redirects_, el dominio ya está detrás de Cloudflare).
 
 ### 1.2 HTML propio por ruta (prerender en el build)
 
@@ -52,15 +52,15 @@ para que no se desincronicen.
 Propuesta de títulos (≤ 60 caracteres) y descripciones (≤ 155), en rioplatense, partiendo de lo que hoy dice el
 sitio viejo ("Sustratos de alta calidad para la agricultura, horticultura y jardinería"):
 
-| Ruta | Title propuesto | Meta description propuesta |
-|---|---|---|
-| `/` | HiSoil · Enmiendas orgánicas, sustratos y servicios de suelo | Compost, sustratos profesionales y servicios de suelo para agro, viveros y paisajismo. Pilar, Buenos Aires. Pedí tu presupuesto. |
-| `/productos` | Productos · Compost, sustratos y materias primas \| HiSoil | Catálogo HiSoil: enmiendas para agricultura, sustratos profesionales, materias primas, paisajismo e infraestructura verde. |
-| `/productos/:slug` | `{name}` · `{línea}` \| HiSoil | El campo `short` de `products.ts` (ya tiene el largo justo). |
-| `/servicios` | Servicios de suelo y residuos orgánicos \| HiSoil | Tratamiento de residuos orgánicos, compostaje a medida, restauración ambiental y asesoramiento técnico. |
-| `/portfolio` | Casos y proyectos \| HiSoil | (a redactar con los casos reales del portfolio) |
-| `/nosotros` | Nosotros \| HiSoil | (a redactar) |
-| `/contacto` | Contacto y presupuestos \| HiSoil | Escribinos por WhatsApp, mail o formulario. Te respondemos con una propuesta a medida. |
+| Ruta               | Title propuesto                                              | Meta description propuesta                                                                                                       |
+| ------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `/`                | HiSoil · Enmiendas orgánicas, sustratos y servicios de suelo | Compost, sustratos profesionales y servicios de suelo para agro, viveros y paisajismo. Pilar, Buenos Aires. Pedí tu presupuesto. |
+| `/productos`       | Productos · Compost, sustratos y materias primas \| HiSoil   | Catálogo HiSoil: enmiendas para agricultura, sustratos profesionales, materias primas, paisajismo e infraestructura verde.       |
+| `/productos/:slug` | `{name}` · `{línea}` \| HiSoil                               | El campo `short` de `products.ts` (ya tiene el largo justo).                                                                     |
+| `/servicios`       | Servicios de suelo y residuos orgánicos \| HiSoil            | Tratamiento de residuos orgánicos, compostaje a medida, restauración ambiental y asesoramiento técnico.                          |
+| `/portfolio`       | Casos y proyectos \| HiSoil                                  | (a redactar con los casos reales del portfolio)                                                                                  |
+| `/nosotros`        | Nosotros \| HiSoil                                           | (a redactar)                                                                                                                     |
+| `/contacto`        | Contacto y presupuestos \| HiSoil                            | Escribinos por WhatsApp, mail o formulario. Te respondemos con una propuesta a medida.                                           |
 
 Los textos son un punto de partida para que los revise quien lleve el copy.
 
@@ -133,12 +133,12 @@ El sitio viejo solo tiene `Product` + `BreadcrumbList` (WooCommerce). Proponer:
 Hoy no coinciden entre sitios. Hay que elegir una versión y usarla igual en footer, contacto, JSON-LD y
 Google Business Profile (si existe; no lo pude verificar):
 
-| Dato | Sitio viejo | Sitio nuevo |
-|---|---|---|
-| Mail | info@hisoil.com.ar | administracion@hisoil.com.ar |
-| Teléfonos | (011) 4440 1919 · (011) 2879 2466 | +54 9 11 4440-1919 (WhatsApp) |
-| Dirección | El Hornero 1180 - Edificio Alpina (1629) Pilar - Buenos Aires · Colectora Panamericana km 56 | No aparece |
-| Redes | Ninguna enlazada | Instagram `hisoil_`, Facebook |
+| Dato      | Sitio viejo                                                                                  | Sitio nuevo                   |
+| --------- | -------------------------------------------------------------------------------------------- | ----------------------------- |
+| Mail      | info@hisoil.com.ar                                                                           | administracion@hisoil.com.ar  |
+| Teléfonos | (011) 4440 1919 · (011) 2879 2466                                                            | +54 9 11 4440-1919 (WhatsApp) |
+| Dirección | El Hornero 1180 - Edificio Alpina (1629) Pilar - Buenos Aires · Colectora Panamericana km 56 | No aparece                    |
+| Redes     | Ninguna enlazada                                                                             | Instagram `hisoil_`, Facebook |
 
 ## Prioridad 3 — Antes de difundir el sitio
 

@@ -16,71 +16,71 @@ Convenciones de la tabla:
 
 ## 1. Páginas reales del sitio
 
-| URL vieja | Qué es hoy | Ruta nueva | Acción | Nota |
-|---|---|---|---|---|
-| `/` | Home | `/` | — | Misma URL, no necesita regla. |
-| `/shop/` | Catálogo WooCommerce (ítem "Productos" del menú) | `/productos` | 301 | |
-| `/categoria-producto/productos/` | Única categoría de producto | `/productos` | 301 | |
-| `/jardineria-profesional/` | Página "Paisajismo" del menú | `/productos` | 301 | Se puede apuntar a `/productos#paisajismo` (ver nota de anclas abajo). |
-| `/horticultura-profesional/` | Página "Productores" del menú (ornamentales, ciclamen, tabaco, hortalizas, forestales, frutales) | `/productos` | 301 | Encaja con la línea `sustratos` (`/productos#sustratos`). |
-| `/hogar-y-jardin/` | Página "Viveros" del menú (H2: "Productos para Hogar y Jardín", "Productos para Horticultura Profesional") | `/productos` | 301 | ⚠ Dudosa: mezcla paisajismo y sustratos; `/productos` sin ancla es lo más seguro. |
-| `/servicios/` | Recepción y disposición de poda ("no quemes ni entierres tu poda") | `/servicios` | 301 | En el sitio nuevo corresponde a "Tratamiento de residuos orgánicos". |
-| `/compost-organico/` | Página institucional de compost | `/productos/compost` | 301 | ⚠ Dudosa: podría ser `/productos/compost-paisajismo`. Elegí la línea agro porque es el compost que destaca la home nueva. |
-| `/techos-verdes/` | Página institucional de techos verdes | `/productos/greenroof` | 301 | |
-| `/portfolio/` | Portfolio demo de Woodmart (imágenes placeholder) | `/portfolio` | 301 | Solo cambia la barra final. |
-| `/privacy-policy/` | "Privacy Policy" (plantilla de WordPress, en inglés) | `/` | 301 | ⚠ Dudosa: cuando exista la página legal de privacidad, apuntar ahí. |
-| `/blog/` | Listado de 3 notas de 2020 | `/` | 301 | ⚠ Dudosa: el sitio nuevo no tiene blog. Alternativa: 410. |
-| `/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/` | Nota (11/2020) | — | 410 | ⚠ Dudosa. Son notas de terceros republicadas (imágenes con nombres tipo `3480607w1920.jpg`), sin relación con productos. Si HiSoil quiere conservarlas, 301 a `/`. |
-| `/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/` | Nota (11/2020) | — | 410 | ⚠ Dudosa, ídem. |
-| `/plastico-5-claves-para-reducir-el-impacto-ambiental/` | Nota (11/2020) | — | 410 | ⚠ Dudosa, ídem. |
-| `/category/paisajismo/` | Archivo de notas | `/` | 301 | |
-| `/category/medio-ambiente/` | Archivo de notas | `/` | 301 | |
-| `/author/carloslr/` | Archivo de autor ("Nothing Found") | — | 410 | Expone el usuario de WordPress. |
-| `/author/jjk1978/` | Archivo de autor | — | 410 | Expone el usuario de WordPress. |
+| URL vieja                                                                 | Qué es hoy                                                                                                 | Ruta nueva             | Acción | Nota                                                                                                                                                               |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `/`                                                                       | Home                                                                                                       | `/`                    | —      | Misma URL, no necesita regla.                                                                                                                                      |
+| `/shop/`                                                                  | Catálogo WooCommerce (ítem "Productos" del menú)                                                           | `/productos`           | 301    |                                                                                                                                                                    |
+| `/categoria-producto/productos/`                                          | Única categoría de producto                                                                                | `/productos`           | 301    |                                                                                                                                                                    |
+| `/jardineria-profesional/`                                                | Página "Paisajismo" del menú                                                                               | `/productos`           | 301    | Se puede apuntar a `/productos#paisajismo` (ver nota de anclas abajo).                                                                                             |
+| `/horticultura-profesional/`                                              | Página "Productores" del menú (ornamentales, ciclamen, tabaco, hortalizas, forestales, frutales)           | `/productos`           | 301    | Encaja con la línea `sustratos` (`/productos#sustratos`).                                                                                                          |
+| `/hogar-y-jardin/`                                                        | Página "Viveros" del menú (H2: "Productos para Hogar y Jardín", "Productos para Horticultura Profesional") | `/productos`           | 301    | ⚠ Dudosa: mezcla paisajismo y sustratos; `/productos` sin ancla es lo más seguro.                                                                                  |
+| `/servicios/`                                                             | Recepción y disposición de poda ("no quemes ni entierres tu poda")                                         | `/servicios`           | 301    | En el sitio nuevo corresponde a "Tratamiento de residuos orgánicos".                                                                                               |
+| `/compost-organico/`                                                      | Página institucional de compost                                                                            | `/productos/compost`   | 301    | ⚠ Dudosa: podría ser `/productos/compost-paisajismo`. Elegí la línea agro porque es el compost que destaca la home nueva.                                          |
+| `/techos-verdes/`                                                         | Página institucional de techos verdes                                                                      | `/productos/greenroof` | 301    |                                                                                                                                                                    |
+| `/portfolio/`                                                             | Portfolio demo de Woodmart (imágenes placeholder)                                                          | `/portfolio`           | 301    | Solo cambia la barra final.                                                                                                                                        |
+| `/privacy-policy/`                                                        | "Privacy Policy" (plantilla de WordPress, en inglés)                                                       | `/`                    | 301    | ⚠ Dudosa: cuando exista la página legal de privacidad, apuntar ahí.                                                                                                |
+| `/blog/`                                                                  | Listado de 3 notas de 2020                                                                                 | `/`                    | 301    | ⚠ Dudosa: el sitio nuevo no tiene blog. Alternativa: 410.                                                                                                          |
+| `/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/` | Nota (11/2020)                                                                                             | —                      | 410    | ⚠ Dudosa. Son notas de terceros republicadas (imágenes con nombres tipo `3480607w1920.jpg`), sin relación con productos. Si HiSoil quiere conservarlas, 301 a `/`. |
+| `/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/` | Nota (11/2020)                                                                                             | —                      | 410    | ⚠ Dudosa, ídem.                                                                                                                                                    |
+| `/plastico-5-claves-para-reducir-el-impacto-ambiental/`                   | Nota (11/2020)                                                                                             | —                      | 410    | ⚠ Dudosa, ídem.                                                                                                                                                    |
+| `/category/paisajismo/`                                                   | Archivo de notas                                                                                           | `/`                    | 301    |                                                                                                                                                                    |
+| `/category/medio-ambiente/`                                               | Archivo de notas                                                                                           | `/`                    | 301    |                                                                                                                                                                    |
+| `/author/carloslr/`                                                       | Archivo de autor ("Nothing Found")                                                                         | —                      | 410    | Expone el usuario de WordPress.                                                                                                                                    |
+| `/author/jjk1978/`                                                        | Archivo de autor                                                                                           | —                      | 410    | Expone el usuario de WordPress.                                                                                                                                    |
 
 ## 2. Productos (WooCommerce `/producto/<slug>/`)
 
-| URL vieja | Producto viejo (H1 · SKU) | Ruta nueva | Acción | Nota |
-|---|---|---|---|---|
-| `/producto/compost-organico/` | Compost Orgánico · COMPOST | `/productos/compost-paisajismo` | 301 | ⚠ Dudosa: era compost en bolsa para jardín (5 presentaciones). Si se prefiere la línea agro: `/productos/compost`. |
-| `/producto/chip/` | Chip · CHIP | `/productos/chip` | 301 | |
-| `/producto/chip-mini/` | Chip Mini · CHIPMINI | `/productos/minichip` | 301 | |
-| `/producto/pometina/` | Pometina · POMETINA | `/productos/pometina` | 301 | |
-| `/producto/perlita/` | Perlita · PERLITA | `/productos/perlite` | 301 | |
-| `/producto/vermiculita/` | Vermiculita · VERMICU | `/productos/vermiculite` | 301 | |
-| `/producto/turba/` | Turba · TURBA | `/productos/sphagnum` | 301 | La nueva es "Turba sphagnum natural de Tierra del Fuego". |
-| `/producto/sustrato-profesional-exterior-f546/` | Sustrato Profesional Exterior F546 · SUSF546 | `/productos/outdoor` | 301 | |
-| `/producto/sustrato-profesional-interior-f556/` | Sustrato Profesional Interior F556 · SUSF556 | `/productos/indoor` | 301 | |
-| `/producto/sustrato-para-techos-y-terrazas/` | Sustrato para Techos y Terrazas · SUSTETE | `/productos/greenroof` | 301 | |
-| `/producto/sustrato-floral-f546/` | Sustrato de siembra F545 · SUSF545 | `/productos/seed` | 301 | ⚠ Dudosa: Seed es sustrato profesional de siembra; el viejo era de venta minorista. Ojo: el slug dice F546 y el producto F545. |
-| `/producto/sustrato-floral-f590-tierra-compost/` | Sustrato Profesional Tierra + Compost F590 · SUSF590 | `/productos/tierra-fertil` | 301 | ⚠ Dudosa. |
-| `/producto/tierra-negra-25-dm3-tamizada/` | Tierra Negra Tamizada · TINEGT | `/productos/tierra-fertil` | 301 | ⚠ Dudosa: no hay "tierra negra" en el catálogo nuevo. |
-| `/producto/tierra-negra-a-granel-rotobateada/` | Tierra Negra a granel (Rotobateada) · TING | `/productos/tierra-fertil` | 301 | ⚠ Dudosa: alternativa `/productos/level` (nivelación, a granel). |
-| `/producto/sustrato-floral-f538/` | Sustrato para Azaleas · SUSF538 | `/productos` | 301 | ⚠ Sin equivalente. No hay sustrato ácido para azaleas en el catálogo nuevo. |
-| `/producto/sustrato-formula-331-cactus-x-5dm/` | Sustrato Formula 331 Cactus X 5DM · SF 331 X 5 DM3 | `/productos` | 301 | ⚠ Sin equivalente. |
-| `/producto/humus/` | Humus (de lombriz) · HUMUS | `/productos` | 301 | ⚠ Sin equivalente. Alternativa: `/productos/compost-paisajismo`. |
+| URL vieja                                        | Producto viejo (H1 · SKU)                            | Ruta nueva                      | Acción | Nota                                                                                                                           |
+| ------------------------------------------------ | ---------------------------------------------------- | ------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `/producto/compost-organico/`                    | Compost Orgánico · COMPOST                           | `/productos/compost-paisajismo` | 301    | ⚠ Dudosa: era compost en bolsa para jardín (5 presentaciones). Si se prefiere la línea agro: `/productos/compost`.             |
+| `/producto/chip/`                                | Chip · CHIP                                          | `/productos/chip`               | 301    |                                                                                                                                |
+| `/producto/chip-mini/`                           | Chip Mini · CHIPMINI                                 | `/productos/minichip`           | 301    |                                                                                                                                |
+| `/producto/pometina/`                            | Pometina · POMETINA                                  | `/productos/pometina`           | 301    |                                                                                                                                |
+| `/producto/perlita/`                             | Perlita · PERLITA                                    | `/productos/perlite`            | 301    |                                                                                                                                |
+| `/producto/vermiculita/`                         | Vermiculita · VERMICU                                | `/productos/vermiculite`        | 301    |                                                                                                                                |
+| `/producto/turba/`                               | Turba · TURBA                                        | `/productos/sphagnum`           | 301    | La nueva es "Turba sphagnum natural de Tierra del Fuego".                                                                      |
+| `/producto/sustrato-profesional-exterior-f546/`  | Sustrato Profesional Exterior F546 · SUSF546         | `/productos/outdoor`            | 301    |                                                                                                                                |
+| `/producto/sustrato-profesional-interior-f556/`  | Sustrato Profesional Interior F556 · SUSF556         | `/productos/indoor`             | 301    |                                                                                                                                |
+| `/producto/sustrato-para-techos-y-terrazas/`     | Sustrato para Techos y Terrazas · SUSTETE            | `/productos/greenroof`          | 301    |                                                                                                                                |
+| `/producto/sustrato-floral-f546/`                | Sustrato de siembra F545 · SUSF545                   | `/productos/seed`               | 301    | ⚠ Dudosa: Seed es sustrato profesional de siembra; el viejo era de venta minorista. Ojo: el slug dice F546 y el producto F545. |
+| `/producto/sustrato-floral-f590-tierra-compost/` | Sustrato Profesional Tierra + Compost F590 · SUSF590 | `/productos/tierra-fertil`      | 301    | ⚠ Dudosa.                                                                                                                      |
+| `/producto/tierra-negra-25-dm3-tamizada/`        | Tierra Negra Tamizada · TINEGT                       | `/productos/tierra-fertil`      | 301    | ⚠ Dudosa: no hay "tierra negra" en el catálogo nuevo.                                                                          |
+| `/producto/tierra-negra-a-granel-rotobateada/`   | Tierra Negra a granel (Rotobateada) · TING           | `/productos/tierra-fertil`      | 301    | ⚠ Dudosa: alternativa `/productos/level` (nivelación, a granel).                                                               |
+| `/producto/sustrato-floral-f538/`                | Sustrato para Azaleas · SUSF538                      | `/productos`                    | 301    | ⚠ Sin equivalente. No hay sustrato ácido para azaleas en el catálogo nuevo.                                                    |
+| `/producto/sustrato-formula-331-cactus-x-5dm/`   | Sustrato Formula 331 Cactus X 5DM · SF 331 X 5 DM3   | `/productos`                    | 301    | ⚠ Sin equivalente.                                                                                                             |
+| `/producto/humus/`                               | Humus (de lombriz) · HUMUS                           | `/productos`                    | 301    | ⚠ Sin equivalente. Alternativa: `/productos/compost-paisajismo`.                                                               |
 
 ## 3. Etiquetas de producto (`/product-tag/…`)
 
 Todas listan los mismos 17 productos; no tienen contenido propio.
 
-| URL vieja | Ruta nueva | Acción |
-|---|---|---|
-| `/product-tag/viveros/` | `/productos` | 301 |
-| `/product-tag/paisajistas/` | `/productos` | 301 |
-| `/product-tag/paisajismo/` | `/productos` | 301 |
-| `/product-tag/sustratos/` | `/productos` | 301 |
-| `/product-tag/agricultura/` | `/productos` | 301 |
-| `/product-tag/compost/` | `/productos/compost` | 301 |
-| `/product-tag/compost-organico/` | `/productos/compost` | 301 |
+| URL vieja                        | Ruta nueva           | Acción |
+| -------------------------------- | -------------------- | ------ |
+| `/product-tag/viveros/`          | `/productos`         | 301    |
+| `/product-tag/paisajistas/`      | `/productos`         | 301    |
+| `/product-tag/paisajismo/`       | `/productos`         | 301    |
+| `/product-tag/sustratos/`        | `/productos`         | 301    |
+| `/product-tag/agricultura/`      | `/productos`         | 301    |
+| `/product-tag/compost/`          | `/productos/compost` | 301    |
+| `/product-tag/compost-organico/` | `/productos/compost` | 301    |
 
 ## 4. WooCommerce / cuenta (sin equivalente, no indexables)
 
-| URL vieja | Estado hoy | Acción propuesta |
-|---|---|---|
-| `/cart/`, `/checkout/` | Ya redirigen a `/` (el sitio está en modo catálogo) | 301 → `/` |
-| `/my-account/` y subrutas (`/my-account/pedidos/`, `/my-account/lost-password/`) | 200 con `noindex, follow` | 301 → `/` |
-| `/wishlist/`, `/compare/`, `/track-order/` | Páginas de WooCommerce/Woodmart en el sitemap | 301 → `/` |
+| URL vieja                                                                        | Estado hoy                                          | Acción propuesta |
+| -------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------- |
+| `/cart/`, `/checkout/`                                                           | Ya redirigen a `/` (el sitio está en modo catálogo) | 301 → `/`        |
+| `/my-account/` y subrutas (`/my-account/pedidos/`, `/my-account/lost-password/`) | 200 con `noindex, follow`                           | 301 → `/`        |
+| `/wishlist/`, `/compare/`, `/track-order/`                                       | Páginas de WooCommerce/Woodmart en el sitemap       | 301 → `/`        |
 
 ## 5. Contenido demo de Woodmart (basura del tema)
 
@@ -88,27 +88,27 @@ El sitemap publica 247 URLs del contenido de demostración que trae Woodmart y n
 El detalle de cada una está en `sitio-actual.json` (`demoWoodmart`). Propuesta: **410 Gone** para todo,
 así Google las saca rápido y no se mezclan con el sitio nuevo. Ninguna tiene equivalente.
 
-| Patrón | Cantidad en el sitemap | Ejemplos | Acción |
-|---|---|---|---|
-| Páginas demo del tema (sin contar `/compare/`, `/wishlist/` y `/track-order/`, que van con 301) | 117 | `/home-fashion/`, `/home-cars/`, `/home-medical-marijuana/`, `/contact-us-2/`, `/faqs/`, `/about-us/`, `/maintenance/`, `/products-grid/`, `/sample-page/`, `/custom-404/` | 410 |
-| Slides (`woodmart_slide`) | 35 | `/woodmart_slide/bike-slide-1/` | 410 |
-| Portfolio demo | 9 | `/portfolio/potenti-parturient-parturie/` | 410 |
-| Categorías de proyecto demo | 5 | `/project-cat/furniture/` | 410 |
-| Bloques HTML (`?cms_block=`) | 59 | `/?cms_block=footer-wine` | 410 |
-| Plantillas Elementor (`?elementor_library=`) | 5 | `/?elementor_library=pie-hisoil` | 410 |
-| Sliders (`?taxonomy=woodmart_slider&term=`) | 14 | `/?taxonomy=woodmart_slider&term=bike-slider` | 410 |
+| Patrón                                                                                          | Cantidad en el sitemap | Ejemplos                                                                                                                                                                   | Acción |
+| ----------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Páginas demo del tema (sin contar `/compare/`, `/wishlist/` y `/track-order/`, que van con 301) | 117                    | `/home-fashion/`, `/home-cars/`, `/home-medical-marijuana/`, `/contact-us-2/`, `/faqs/`, `/about-us/`, `/maintenance/`, `/products-grid/`, `/sample-page/`, `/custom-404/` | 410    |
+| Slides (`woodmart_slide`)                                                                       | 35                     | `/woodmart_slide/bike-slide-1/`                                                                                                                                            | 410    |
+| Portfolio demo                                                                                  | 9                      | `/portfolio/potenti-parturient-parturie/`                                                                                                                                  | 410    |
+| Categorías de proyecto demo                                                                     | 5                      | `/project-cat/furniture/`                                                                                                                                                  | 410    |
+| Bloques HTML (`?cms_block=`)                                                                    | 59                     | `/?cms_block=footer-wine`                                                                                                                                                  | 410    |
+| Plantillas Elementor (`?elementor_library=`)                                                    | 5                      | `/?elementor_library=pie-hisoil`                                                                                                                                           | 410    |
+| Sliders (`?taxonomy=woodmart_slider&term=`)                                                     | 14                     | `/?taxonomy=woodmart_slider&term=bike-slider`                                                                                                                              | 410    |
 
 La lista exacta de páginas demo está en la sección 7 (bloque `.htaccess`).
 
 ## 6. Otras URLs de WordPress que van a dejar de existir
 
-| URL | Acción propuesta |
-|---|---|
-| `/feed/`, `/comments/feed/`, `*/feed/` | 410 |
-| `/wp-sitemap.xml`, `/wp-sitemap-*.xml`, `/sitemap_index.xml` | 301 → `/sitemap.xml` (el nuevo) |
-| `/wp-admin/`, `/wp-login.php`, `/xmlrpc.php`, `/wp-json/` | 410 (o 404 natural) |
-| `/wp-content/uploads/…` (imágenes) | Dejar que den 404. Si Google Imágenes trae tráfico (no verificable sin Search Console), evaluar 301 de las fotos de producto a la ficha nueva. |
-| `http://` y `www.` | Hoy Cloudflare ya redirige a `https://hisoil.com.ar/` (verificado con `curl -I`). Mantener esa regla en Cloudflare. |
+| URL                                                          | Acción propuesta                                                                                                                               |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/feed/`, `/comments/feed/`, `*/feed/`                       | 410                                                                                                                                            |
+| `/wp-sitemap.xml`, `/wp-sitemap-*.xml`, `/sitemap_index.xml` | 301 → `/sitemap.xml` (el nuevo)                                                                                                                |
+| `/wp-admin/`, `/wp-login.php`, `/xmlrpc.php`, `/wp-json/`    | 410 (o 404 natural)                                                                                                                            |
+| `/wp-content/uploads/…` (imágenes)                           | Dejar que den 404. Si Google Imágenes trae tráfico (no verificable sin Search Console), evaluar 301 de las fotos de producto a la ficha nueva. |
+| `http://` y `www.`                                           | Hoy Cloudflare ya redirige a `https://hisoil.com.ar/` (verificado con `curl -I`). Mantener esa regla en Cloudflare.                            |
 
 ## 7. Borrador de `.htaccess`
 
@@ -118,7 +118,7 @@ está probado en el hosting**. Va en `public/.htaccess` para que Vite lo copie a
 ⚠ Ojo con `CLAUDE.md`: dice que producción "no tiene servidor propio" y que no hay que depender de
 rewrites. El pedido de este relevamiento dice que el sitio nuevo reemplaza al WordPress en el mismo
 Hostinger con LiteSpeed. Si eso se confirma, `.htaccess` es la vía; si el build se entrega a otro
-hosting, las 301 hay que configurarlas donde corresponda (o en Cloudflare con *Bulk Redirects*).
+hosting, las 301 hay que configurarlas donde corresponda (o en Cloudflare con _Bulk Redirects_).
 
 ```apache
 Options -MultiViews
