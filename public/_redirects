@@ -215,6 +215,41 @@
 /productos/ /productos 301
 /portfolio/ /portfolio 301
 /contacto/ /contacto 301
+# Fichas con barra final. Van como estáticas: en producción, una regla genérica /*/ le gana a las
+# dinámicas de abajo aunque esté última, y armaba cadenas 301 → 301 (probado en workers.dev, 21/10/2026).
+/productos/compost/ /productos/compost 301
+/productos/biofert/ /productos/biofert 301
+/productos/humic/ /productos/humic 301
+/productos/carbon/ /productos/carbon 301
+/productos/regenera/ /productos/regenera 301
+/productos/seed/ /productos/seed 301
+/productos/plug/ /productos/plug 301
+/productos/nursery/ /productos/nursery 301
+/productos/premium/ /productos/premium 301
+/productos/forest/ /productos/forest 301
+/productos/tobacco/ /productos/tobacco 301
+/productos/berry/ /productos/berry 301
+/productos/cannabis/ /productos/cannabis 301
+/productos/citrus/ /productos/citrus 301
+/productos/turf/ /productos/turf 301
+/productos/hydro/ /productos/hydro 301
+/productos/palm/ /productos/palm 301
+/productos/chip/ /productos/chip 301
+/productos/minichip/ /productos/minichip 301
+/productos/sphagnum/ /productos/sphagnum 301
+/productos/perlite/ /productos/perlite 301
+/productos/vermiculite/ /productos/vermiculite 301
+/productos/pometina/ /productos/pometina 301
+/productos/compost-paisajismo/ /productos/compost-paisajismo 301
+/productos/tierra-fertil/ /productos/tierra-fertil 301
+/productos/level/ /productos/level 301
+/productos/outdoor/ /productos/outdoor 301
+/productos/indoor/ /productos/indoor 301
+/productos/greenroof/ /productos/greenroof 301
+/productos/restore/ /productos/restore 301
+/productos/hydromulch/ /productos/hydromulch 301
+/productos/erosion/ /productos/erosion 301
+/productos/native/ /productos/native 301
 
 # --- Dinámicas (desde acá, todas con * o :nombre) ---
 /woodmart_slide/* / 301
@@ -239,6 +274,3 @@
 /product-tag/:t /productos 301
 /product-tag/:t/ /productos 301
 /wp-sitemap* /sitemap.xml 301
-
-# Barra final en cualquier otra URL: /productos/chip/ → /productos/chip. Va última.
-/*/ /:splat 301
