@@ -1,0 +1,1515 @@
+{
+  "relevamiento": {
+    "fecha": "2026-10-15",
+    "sitio": "https://hisoil.com.ar/",
+    "metodo": "Navegador real (Cloudflare bloquea curl con un desafío 'Just a moment...'). Desde la home ya cargada, fetch() same-origin de cada URL del sitemap, de a una, con 700 ms de pausa, sin bajar imágenes ni assets. Se parseó el HTML devuelto por el servidor (no el DOM después de ejecutar JS).",
+    "notas": [
+      "images: hasta 8 imágenes dentro de .main-page-wrapper, en orden de aparición; en fichas de producto, a partir de la segunda son de 'productos relacionados'. alt null = atributo ausente; alt '' = vacío.",
+      "h2: hasta 15. og y twitter: vacíos en todas las URLs relevadas.",
+      "final: solo aparece cuando la URL redirige a otra.",
+      "Las URLs de contenido demo de Woodmart están resumidas en demoWoodmart (status, title, robots)."
+    ]
+  },
+  "global": {
+    "cms": "WordPress 6.5.13",
+    "ecommerce": "WooCommerce 9.3.6 (modo catálogo: /cart/ y /checkout/ redirigen a /)",
+    "tema": "woodmart",
+    "plugins_detectados_en_html": [
+      "revslider (Slider Revolution 6.2.23)",
+      "elementor",
+      "elementor-pro",
+      "jet-tabs",
+      "woocommerce",
+      "contact-form-7"
+    ],
+    "plugin_seo": null,
+    "plugin_seo_nota": "No hay rastros de Yoast, RankMath, AIOSEO ni SEOPress. Los títulos son los de WordPress por defecto ('{página} – Hi-Soil – Energía para Cultivos') y el sitemap es el nativo wp-sitemap.xml.",
+    "site_name": "Hi-Soil - Energía para Cultivos",
+    "tagline": "Sustratos de alta calidad para la agricultura, horticultura y jardineria",
+    "lang_html": "es-AR",
+    "robots_txt": "User-agent: *\nDisallow: /wp-content/uploads/wc-logs/\nDisallow: /wp-content/uploads/woocommerce_transient_files/\nDisallow: /wp-content/uploads/woocommerce_uploads/\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://hisoil.com.ar/wp-sitemap.xml",
+    "sitemaps": {
+      "indice": "https://hisoil.com.ar/wp-sitemap.xml",
+      "sitemap.xml": "redirige a /wp-sitemap.xml",
+      "sitemap_index.xml": "404",
+      "sub_sitemaps": {
+        "wp-sitemap-posts-post-1.xml": 3,
+        "wp-sitemap-posts-page-1.xml": 134,
+        "wp-sitemap-posts-elementor_library-1.xml": 5,
+        "wp-sitemap-posts-cms_block-1.xml": 59,
+        "wp-sitemap-posts-woodmart_slide-1.xml": 35,
+        "wp-sitemap-posts-portfolio-1.xml": 9,
+        "wp-sitemap-posts-product-1.xml": 17,
+        "wp-sitemap-taxonomies-category-1.xml": 2,
+        "wp-sitemap-taxonomies-woodmart_slider-1.xml": 14,
+        "wp-sitemap-taxonomies-project-cat-1.xml": 5,
+        "wp-sitemap-taxonomies-product_cat-1.xml": 1,
+        "wp-sitemap-taxonomies-product_tag-1.xml": 7,
+        "wp-sitemap-users-1.xml": 2
+      },
+      "total_urls": 293
+    },
+    "meta_robots_global": "max-image-preview:large (sin noindex salvo /my-account/)",
+    "iconos": {
+      "icon_32": "https://hisoil.com.ar/wp-content/uploads/2020/11/favicon-150x147.ico",
+      "icon_192": "https://hisoil.com.ar/wp-content/uploads/2020/11/favicon.ico",
+      "apple_touch_icon": "https://hisoil.com.ar/wp-content/uploads/2020/11/favicon.ico",
+      "msapplication_TileImage": "https://hisoil.com.ar/wp-content/uploads/2020/11/favicon.ico"
+    },
+    "theme_color": "",
+    "verificaciones": {
+      "google_site_verification": null,
+      "msvalidate_bing": null,
+      "facebook_domain_verification": null,
+      "dns_txt": ["v=spf1 include:_spf.mail.hostinger.com ~all"],
+      "nota": "Ninguna visible en el HTML ni en el DNS. Puede existir verificación por archivo HTML u otra vía no observable."
+    },
+    "analitica": {
+      "ga4": null,
+      "universal_analytics": null,
+      "gtm": null,
+      "google_ads": null,
+      "meta_pixel": null,
+      "otros_pixeles": null,
+      "cloudflare_web_analytics": {
+        "beacon": "static.cloudflareinsights.com",
+        "token": "07006f268f034951b24eb3d57f89ae62"
+      },
+      "widgets_terceros": [
+        "Elfsight (app b49f5c8e-d650-48bb-be38-ecad3e461397, tipo no identificado)"
+      ]
+    },
+    "infra": {
+      "dns": "Cloudflare (nicolas.ns.cloudflare.com, evelyn.ns.cloudflare.com)",
+      "redirecciones_canonicas": {
+        "http://hisoil.com.ar/": "301 → https://hisoil.com.ar/",
+        "https://www.hisoil.com.ar/": "301 → https://hisoil.com.ar/",
+        "http://www.hisoil.com.ar/": "301 → https://www.hisoil.com.ar/ → https://hisoil.com.ar/"
+      },
+      "bot_protection": "Cloudflare devuelve desafío JS ('Just a moment...') a clientes sin navegador, incluido robots.txt"
+    },
+    "negocio": {
+      "nombre": "Hi-Soil",
+      "direccion": "El Hornero 1180 - Edificio Alpina (1629) Pilar - Buenos Aires",
+      "referencia": "Colectora ruta Panamericana kilómetro 56",
+      "telefonos": ["(011) 4440 1919", "(011) 2879 2466"],
+      "email": "info@hisoil.com.ar",
+      "redes_enlazadas": [],
+      "textos_institucionales": [
+        "Investigación y Desarrollo: Aplicamos nuestros conocimientos a lo largo 22 años en investigacion y desarrollo en la creacion de nuevos productos.",
+        "Medio Ambiente: Comprometidos con el cuidado del medio ambiente. Trabajando con materiales renovables y recuperables."
+      ],
+      "menu": {
+        "Productos": "/shop/",
+        "Paisajismo": "/jardineria-profesional/",
+        "Productores": "/horticultura-profesional/",
+        "Viveros": "/hogar-y-jardin/",
+        "Servicios": "/servicios/"
+      }
+    }
+  },
+  "urls": [
+    {
+      "path": "/",
+      "tipo": "home",
+      "status": 200,
+      "title": "Hi-Soil – Energía para Cultivos – Sustratos de alta calidad para la agricultura, horticultura y jardineria",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": [],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/slider1-foto.jpg", "alt": null },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2021/08/Horticultura-slider.jpg",
+          "alt": null
+        },
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2021/08/vivero-slider.jpg", "alt": null }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/shop/",
+      "tipo": "catalogo",
+      "status": 200,
+      "title": "Shop – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Shop"],
+      "h2": [],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2021/04/CHIP-600x600.jpg", "alt": "" },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2021/04/CHIPMINI-600x600.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2021/04/COMPOST-600x600.jpg",
+          "alt": ""
+        },
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/Humus-600x600.jpg", "alt": "" },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2021/04/PERLITA-600x600.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2021/04/POMETINA-600x600.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/Sust-Siembra-600x600.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2021/04/SUSTRATO-CACTUS-600x600.jpg",
+          "alt": ""
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": { "name": "Inicio", "@id": "https://hisoil.com.ar" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": { "name": "Shop", "@id": "https://hisoil.com.ar/shop/" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/categoria-producto/productos/",
+      "tipo": "categoria_producto",
+      "status": 200,
+      "title": "Productos – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Productos"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": { "name": "Inicio", "@id": "https://hisoil.com.ar" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Productos",
+                "@id": "https://hisoil.com.ar/categoria-producto/productos/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/jardineria-profesional/",
+      "tipo": "pagina",
+      "menu": "Paisajismo",
+      "status": 200,
+      "title": "Jardinería Profesional – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/jardineria-profesional/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": ["Jardinería Profesional"],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/separador.png", "alt": "" },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/logo-Vivero-La-Facultad.png",
+          "alt": ""
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/horticultura-profesional/",
+      "tipo": "pagina",
+      "menu": "Productores",
+      "status": 200,
+      "title": "Horticultura Profesional – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/horticultura-profesional/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": [
+        "Horticultura Profesional",
+        "Plantas Ornamentales",
+        "Ciclamen",
+        "Tabaco 01",
+        "Hortalizas",
+        "Forestales",
+        "Frutales"
+      ],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/separador.png", "alt": "" },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/elementor/thumbs/horticultura-ico1-pnedtz5gihl6684qwne86r9fdrf9csw4ylawf3y7ya.png",
+          "alt": "horticultura-ico1"
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/elementor/thumbs/horticultura-ico2-pnedtz5gihl6684qwne86r9fdrf9csw4ylawf3y7ya.png",
+          "alt": "horticultura-ico2"
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/elementor/thumbs/horticultura-ico3-pnedtz5gihl6684qwne86r9fdrf9csw4ylawf3y7ya.png",
+          "alt": "horticultura-ico3"
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/elementor/thumbs/horticultura-ico4-pnedtz5gihl6684qwne86r9fdrf9csw4ylawf3y7ya.png",
+          "alt": "horticultura-ico4"
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/elementor/thumbs/horticultura-ico5-pnedtz5gihl6684qwne86r9fdrf9csw4ylawf3y7ya.png",
+          "alt": "horticultura-ico5"
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/hogar-y-jardin/",
+      "tipo": "pagina",
+      "menu": "Viveros",
+      "status": 200,
+      "title": "Hogar y Jardín – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/hogar-y-jardin/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": [
+        "Hogar y Jardín",
+        "Productos para Hogar Y Jardín",
+        "Productos para Horticultura Profesional"
+      ],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/separador.png", "alt": "" },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/hogar-content-ico.png",
+          "alt": ""
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/horticultura-ico.png",
+          "alt": ""
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/servicios/",
+      "tipo": "pagina",
+      "menu": "Servicios",
+      "status": 200,
+      "title": "Servicios – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/servicios/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": [
+        "Cuida el medio ambiente, no quemes ni entierres tu poda. Realiza una poda y disposición responsable y sustentable.",
+        "CONTACTO"
+      ],
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "path": "/compost-organico/",
+      "tipo": "pagina",
+      "status": 200,
+      "title": "Compost Orgánico – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/compost-organico/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": [],
+      "images": [
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/compost-tierra.png",
+          "alt": null
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/compost-tierra-suelta.png",
+          "alt": ""
+        },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/material-original.jpg",
+          "alt": ""
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/techos-verdes/",
+      "tipo": "pagina",
+      "status": 200,
+      "title": "Techos verdes – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/techos-verdes/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": [],
+      "h2": [],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/techos-verdes1.png", "alt": "" },
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/techos-verdes2.png",
+          "alt": null
+        },
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/techos-tierra1.png", "alt": "" }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/portfolio/",
+      "tipo": "pagina_demo",
+      "status": 200,
+      "title": "Portfolio – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Portfolio"],
+      "h2": [],
+      "images": [
+        {
+          "src": "https://hisoil.com.ar/wp-content/uploads/2017/06/wood-portfolio-placeholder.jpg",
+          "alt": "",
+          "nota": "la misma imagen placeholder repetida"
+        }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/privacy-policy/",
+      "tipo": "pagina",
+      "status": 200,
+      "title": "Privacy Policy – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/privacy-policy/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Privacy Policy"],
+      "h2": [],
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "path": "/blog/",
+      "tipo": "archivo_blog",
+      "status": 200,
+      "title": "Blog – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Blog"],
+      "h2": [],
+      "images": "miniaturas de las 3 notas",
+      "jsonld": []
+    },
+    {
+      "path": "/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/",
+      "tipo": "post",
+      "lastmod": "2020-11-16",
+      "status": 200,
+      "title": "Un jardín diseñado para exponer la magnificencia de los cactus – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Un jardín diseñado para exponer la magnificencia de los cactus"],
+      "h2": [],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/3480607w1920-1.jpg", "alt": "" },
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/3480602w740.jpg", "alt": "" },
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/3480605w740.jpg", "alt": "" }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/",
+      "tipo": "post",
+      "lastmod": "2020-11-16",
+      "status": 200,
+      "title": "La Argentina obtuvo fondos para fortalecer la ley de bosques – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["La Argentina obtuvo fondos para fortalecer la ley de bosques"],
+      "h2": [],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/2869154w1033.jpg", "alt": "" }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/plastico-5-claves-para-reducir-el-impacto-ambiental/",
+      "tipo": "post",
+      "lastmod": "2020-11-16",
+      "status": 200,
+      "title": "Plástico. 5 claves para reducir el impacto ambiental en el mundo – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/plastico-5-claves-para-reducir-el-impacto-ambiental/",
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Plástico. 5 claves para reducir el impacto ambiental en el mundo"],
+      "h2": [
+        "1. CONOCIMIENTO Y RESIGNIFICACIÓN",
+        "2. EDUCACIÓN Y PROMOCIÓN",
+        "3. INFRAESTRUCTURA Y GESTIÓN",
+        "4. UNA LEY",
+        "5. COMPROMISO"
+      ],
+      "images": [
+        { "src": "https://hisoil.com.ar/wp-content/uploads/2020/11/3483522w1033.jpg", "alt": "" }
+      ],
+      "jsonld": []
+    },
+    {
+      "path": "/category/paisajismo/",
+      "tipo": "categoria_blog",
+      "status": 200,
+      "title": "Paisajismo – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Paisajismo"],
+      "h2": [],
+      "images": "miniatura de 1 nota",
+      "jsonld": []
+    },
+    {
+      "path": "/category/medio-ambiente/",
+      "tipo": "categoria_blog",
+      "status": 200,
+      "title": "Medio Ambiente – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["Medio Ambiente"],
+      "h2": [],
+      "images": "miniaturas de 2 notas",
+      "jsonld": []
+    },
+    {
+      "path": "/author/carloslr/",
+      "tipo": "autor",
+      "status": 200,
+      "title": "Carlos – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["PorCarlos", "Nothing Found"],
+      "h2": [],
+      "images": [],
+      "jsonld": []
+    },
+    {
+      "path": "/author/jjk1978/",
+      "tipo": "autor",
+      "status": 200,
+      "title": "Hisoil – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "hreflang": [],
+      "og": {},
+      "twitter": {},
+      "h1": ["PorHisoil"],
+      "h2": [],
+      "images": "miniaturas de las 3 notas",
+      "jsonld": []
+    },
+    {
+      "path": "/cart/",
+      "tipo": "woocommerce",
+      "status": 200,
+      "final": "https://hisoil.com.ar/",
+      "nota": "Redirige a la home (modo catálogo)."
+    },
+    {
+      "path": "/checkout/",
+      "tipo": "woocommerce",
+      "status": 200,
+      "final": "https://hisoil.com.ar/",
+      "nota": "Redirige a la home (modo catálogo)."
+    },
+    {
+      "path": "/my-account/",
+      "tipo": "woocommerce",
+      "status": 200,
+      "title": "My account – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": "https://hisoil.com.ar/my-account/",
+      "robots": "max-image-preview:large, noindex, follow",
+      "h1": ["My account"],
+      "h2": ["Iniciar sesión", "Registrarme"]
+    },
+    {
+      "path": "/product-tag/viveros/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Viveros – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Viveros"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": { "name": "Inicio", "@id": "https://hisoil.com.ar" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Productos etiquetados &amp;ldquo;Viveros&amp;rdquo;",
+                "@id": "https://hisoil.com.ar/product-tag/viveros/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/product-tag/paisajistas/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Paisajistas – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Paisajistas"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": "BreadcrumbList Inicio › Productos etiquetados “Paisajistas” (misma forma que /product-tag/viveros/)"
+    },
+    {
+      "path": "/product-tag/compost/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Compost – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Compost"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": "BreadcrumbList (misma forma que /product-tag/viveros/)"
+    },
+    {
+      "path": "/product-tag/compost-organico/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Compost Organico – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Compost Organico"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": "BreadcrumbList (misma forma que /product-tag/viveros/)"
+    },
+    {
+      "path": "/product-tag/paisajismo/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Paisajismo – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Paisajismo"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": "BreadcrumbList (misma forma que /product-tag/viveros/)"
+    },
+    {
+      "path": "/product-tag/sustratos/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Sustratos – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Sustratos"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": "BreadcrumbList (misma forma que /product-tag/viveros/)"
+    },
+    {
+      "path": "/product-tag/agricultura/",
+      "tipo": "etiqueta_producto",
+      "status": 200,
+      "title": "Agricultura – Hi-Soil – Energía para Cultivos",
+      "description": null,
+      "canonical": null,
+      "robots": "max-image-preview:large",
+      "h1": ["Agricultura"],
+      "h2": [],
+      "images": "mismo listado que /shop/",
+      "jsonld": "BreadcrumbList (misma forma que /product-tag/viveros/)"
+    }
+  ],
+  "productos": {
+    "nota": "Todas las fichas: status 200, canonical = su propia URL, robots 'max-image-preview:large', sin description, sin OG/Twitter, H2 único 'Valoraciones', imagen principal con alt vacío. JSON-LD: @graph con BreadcrumbList (Inicio › Productos › {name}) + Product. 'seller' es siempre {\"@type\":\"Organization\",\"name\":\"Hi-Soil - Energía para Cultivos\",\"url\":\"https://hisoil.com.ar\"}. Precios en ARS desactualizados.",
+    "jsonld_ejemplo_completo": {
+      "@context": "https://schema.org/",
+      "@graph": [
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": { "name": "Inicio", "@id": "https://hisoil.com.ar" }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Productos",
+                "@id": "https://hisoil.com.ar/categoria-producto/productos/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "name": "Compost Orgánico",
+                "@id": "https://hisoil.com.ar/producto/compost-organico/"
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "@id": "https://hisoil.com.ar/producto/compost-organico/#product",
+          "name": "Compost Orgánico",
+          "url": "https://hisoil.com.ar/producto/compost-organico/",
+          "description": "Resultado del proceso de compostaje, que consiste en la transformación biológica de restos vegetales y animales en un producto estable, homogéneo, de reducido tamaño de partícula. Por sus excelentes propiedades para la producción vegetal se usa como agregado en sustratos o mejorador de suelos enfermos o degradados.\r\nCARACTERÍSTICAS FÍSICAS\r\npH 7,0 – 7,50\r\nCe 1,80 – 2,50 mS/cm\r\nMateria orgánica 30 – 35%\r\nDensidad seca 0,320 – 0,350 g/cm3",
+          "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/COMPOST.jpg",
+          "sku": "COMPOST",
+          "offers": [
+            {
+              "@type": "AggregateOffer",
+              "lowPrice": "157",
+              "highPrice": "1908",
+              "offerCount": 5,
+              "priceCurrency": "ARS",
+              "availability": "http://schema.org/InStock",
+              "url": "https://hisoil.com.ar/producto/compost-organico/",
+              "seller": {
+                "@type": "Organization",
+                "name": "Hi-Soil - Energía para Cultivos",
+                "url": "https://hisoil.com.ar"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "items": [
+      {
+        "path": "/producto/compost-organico/",
+        "lastmod": "2022-08-10",
+        "title": "Compost Orgánico – Hi-Soil – Energía para Cultivos",
+        "h1": "Compost Orgánico",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/COMPOST.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Compost Orgánico",
+          "sku": "COMPOST",
+          "description": "Resultado del proceso de compostaje, que consiste en la transformación biológica de restos vegetales y animales en un producto estable, homogéneo, de reducido tamaño de partícula. Por sus excelentes propiedades para la producción vegetal se usa como agregado en sustratos o mejorador de suelos enfermos o degradados.\r\nCARACTERÍSTICAS FÍSICAS\r\npH 7,0 – 7,50\r\nCe 1,80 – 2,50 mS/cm\r\nMateria orgánica 30 – 35%\r\nDensidad seca 0,320 – 0,350 g/cm3",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "157",
+            "highPrice": "1908",
+            "offerCount": 5,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/compost-paisajismo",
+        "dudosa": true
+      },
+      {
+        "path": "/producto/chip/",
+        "lastmod": "2022-04-13",
+        "title": "Chip – Hi-Soil – Energía para Cultivos",
+        "h1": "Chip",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/CHIP.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Chip",
+          "sku": "CHIP",
+          "description": "Derivado de la corteza de pino, de tamaños diferentes según la molienda. Ideal para decoración de canteros y maceteros. Disminuye los cambios bruscos de temperatura y el crecimiento de maleza.\r\nCARACTERÍSTICAS FÍSICAS\r\nHumedad:5 - 10%\r\npH: 4,5 - 5,2\r\nC:E: 0.12 mS/cm",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "137",
+            "highPrice": "2760",
+            "offerCount": 6,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/chip"
+      },
+      {
+        "path": "/producto/chip-mini/",
+        "lastmod": "2022-04-13",
+        "title": "Chip Mini – Hi-Soil – Energía para Cultivos",
+        "h1": "Chip Mini",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/CHIPMINI.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Chip Mini",
+          "sku": "CHIPMINI",
+          "description": "Derivado de la corteza de pino, de tamaños diferentes según la molienda. Ideal para decoración de canteros y maceteros. Disminuye los cambios bruscos de temperatura y el crecimiento de maleza.\r\nCARACTERÍSTICAS FÍSICAS\r\nHumedad:5 - 10%\r\npH: 4,5 - 5,2\r\nC:E: 0.12 mS/cm",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "250",
+            "highPrice": "4140",
+            "offerCount": 6,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/minichip"
+      },
+      {
+        "path": "/producto/pometina/",
+        "lastmod": "2024-03-13",
+        "title": "Pometina – Hi-Soil – Energía para Cultivos",
+        "h1": "Pometina",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/POMETINA.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Pometina",
+          "sku": "POMETINA",
+          "description": "Pometina",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "236",
+            "highPrice": "1349",
+            "offerCount": 3,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/pometina"
+      },
+      {
+        "path": "/producto/perlita/",
+        "lastmod": "2022-04-13",
+        "title": "Perlita – Hi-Soil – Energía para Cultivos",
+        "h1": "Perlita",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/PERLITA.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Perlita",
+          "sku": "PERLITA",
+          "description": "Perlita",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "196",
+            "highPrice": "2497",
+            "offerCount": 3,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/perlite"
+      },
+      {
+        "path": "/producto/sustrato-floral-f538/",
+        "lastmod": "2025-05-25",
+        "title": "Sustrato para Azaleas – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato para Azaleas",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2020/11/Sust-Azaleas-1.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato para Azaleas",
+          "sku": "SUSF538",
+          "description": "Por su composición físico-química este sustrato esta diseñado para dar un medio moderadamente ácido permitiendo el adecuado desarrollo de este tipo de especies. Presenta un alto grado de porosidad y de Materia Orgánica ambas características le permiten a las especies desarrollarse correctamente.\r\nEl bajo peso específico del sustrato, hace que el mismo sea ideal para su uso en macetas y canteros.\r\nCARACTERÍSTICAS FÍSICAS\r\npH 4,7 – 4,8\r\nCe 0,12 – 0,16 mS/cm\r\nMateria Orgánica 26 – 29 %\r\nDensidad seca 0,270 – 0,280 g/cm3\r\nCOMPONENTES\r\nTurba, Sphagnum de ﬁbra gruesa y media. Compost de corteza, Compost organico, Tierra, Perlita y Fertilizante.",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "242",
+            "highPrice": "606",
+            "offerCount": 2,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos",
+        "sin_equivalente": true
+      },
+      {
+        "path": "/producto/sustrato-floral-f546/",
+        "lastmod": "2022-04-13",
+        "title": "Sustrato de siembra F545 – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato de siembra F545",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2020/11/Sust-Siembra.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato de siembra F545",
+          "sku": "SUSF545",
+          "description": "Sustrato de siembra F545",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "229",
+            "highPrice": "1953",
+            "offerCount": 3,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/seed",
+        "dudosa": true
+      },
+      {
+        "path": "/producto/sustrato-profesional-exterior-f546/",
+        "lastmod": "2025-04-11",
+        "title": "Sustrato Profesional Exterior F546 – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato Profesional Exterior F546",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/SUSTRATO-EXTERIOR.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato Profesional Exterior F546",
+          "sku": "SUSF546",
+          "description": "Sustrato Profesional Exterior F546",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "128",
+            "highPrice": "5131",
+            "offerCount": 6,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/outdoor"
+      },
+      {
+        "path": "/producto/sustrato-profesional-interior-f556/",
+        "lastmod": "2025-05-29",
+        "title": "Sustrato Profesional Interior F556 – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato Profesional Interior F556",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/SUSTRATO-INTERIOR.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato Profesional Interior F556",
+          "sku": "SUSF556",
+          "description": "Sustrato Profesional Interior F556",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "185",
+            "highPrice": "6436",
+            "offerCount": 6,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/indoor"
+      },
+      {
+        "path": "/producto/sustrato-floral-f590-tierra-compost/",
+        "lastmod": "2025-05-28",
+        "title": "Sustrato Profesional Tierra + Compost F590 – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato Profesional Tierra + Compost F590",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/TIERRACOMPOST.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato Profesional Tierra + Compost F590",
+          "sku": "SUSF590",
+          "description": "Sustrato Floral F590 (Tierra + Compost)",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "87",
+            "highPrice": "1626",
+            "offerCount": 6,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/tierra-fertil",
+        "dudosa": true
+      },
+      {
+        "path": "/producto/sustrato-para-techos-y-terrazas/",
+        "lastmod": "2022-04-13",
+        "title": "Sustrato para Techos y Terrazas – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato para Techos y Terrazas",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/SUSTRATO-TECHOS.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato para Techos y Terrazas",
+          "sku": "SUSTETE",
+          "description": "Sustrato para Techos y Terrazas",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "609",
+            "highPrice": "14418",
+            "offerCount": 3,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/greenroof"
+      },
+      {
+        "path": "/producto/turba/",
+        "lastmod": "2022-04-13",
+        "title": "Turba – Hi-Soil – Energía para Cultivos",
+        "h1": "Turba",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/TURBA-MUZGO.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Turba",
+          "sku": "TURBA",
+          "description": "Turba",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "151",
+            "highPrice": "3680",
+            "offerCount": 5,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/sphagnum"
+      },
+      {
+        "path": "/producto/vermiculita/",
+        "lastmod": "2022-04-13",
+        "title": "Vermiculita – Hi-Soil – Energía para Cultivos",
+        "h1": "Vermiculita",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/VERMICULITA.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Vermiculita",
+          "sku": "VERMICU",
+          "description": "Vermiculita",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "378",
+            "highPrice": "2704",
+            "offerCount": 3,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/vermiculite"
+      },
+      {
+        "path": "/producto/sustrato-formula-331-cactus-x-5dm/",
+        "lastmod": "2024-08-09",
+        "title": "Sustrato Formula 331 Cactus X 5DM – Hi-Soil – Energía para Cultivos",
+        "h1": "Sustrato Formula 331 Cactus X 5DM",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/SUSTRATO-CACTUS.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Sustrato Formula 331 Cactus X 5DM",
+          "sku": "SF 331 X 5 DM3",
+          "description": "Sustrato formula 331 cactus X 5DM",
+          "offers": {
+            "@type": "Offer",
+            "price": "181",
+            "priceValidUntil": "2027-12-31",
+            "priceSpecification": {
+              "price": "181",
+              "priceCurrency": "ARS",
+              "valueAddedTaxIncluded": "false"
+            },
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos",
+        "sin_equivalente": true
+      },
+      {
+        "path": "/producto/tierra-negra-25-dm3-tamizada/",
+        "lastmod": "2025-05-22",
+        "title": "Tierra Negra Tamizada – Hi-Soil – Energía para Cultivos",
+        "h1": "Tierra Negra Tamizada",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/TIERRA-NEGRA-TAMIZADA.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Tierra Negra Tamizada",
+          "sku": "TINEGT",
+          "description": "Tierra Negra tamizada",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "274",
+            "highPrice": "2046",
+            "offerCount": 2,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/tierra-fertil",
+        "dudosa": true
+      },
+      {
+        "path": "/producto/tierra-negra-a-granel-rotobateada/",
+        "lastmod": "2024-08-09",
+        "title": "Tierra Negra a granel (Rotobateada) – Hi-Soil – Energía para Cultivos",
+        "h1": "Tierra Negra a granel (Rotobateada)",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2021/04/TIERRA-NEGRA.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Tierra Negra a granel (Rotobateada)",
+          "sku": "TING",
+          "description": "Tierra Negra a granel (Rotobateada)",
+          "offers": {
+            "@type": "Offer",
+            "price": "1243",
+            "priceValidUntil": "2027-12-31",
+            "priceSpecification": {
+              "price": "1243",
+              "priceCurrency": "ARS",
+              "valueAddedTaxIncluded": "false"
+            },
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos/tierra-fertil",
+        "dudosa": true
+      },
+      {
+        "path": "/producto/humus/",
+        "lastmod": "2022-04-13",
+        "title": "Humus – Hi-Soil – Energía para Cultivos",
+        "h1": "Humus",
+        "image": "https://hisoil.com.ar/wp-content/uploads/2020/11/Humus.jpg",
+        "image_alt": "",
+        "product": {
+          "name": "Humus",
+          "sku": "HUMUS",
+          "description": "El humus se produce de la digestión de materiales orgánicos por parte de las lombrices y posee altas propiedades como mejorador de las propiedades físicas del suelo, tales como la permeabilidad, la retención de humedad o el intercambio catiónico.\r\nCARACTERÍSTICAS FÍSICAS\r\npH 7,2 – 7,60\r\nCe 1,70 – 2,30 mS/cm\r\nMateria orgánica 32– 37%\r\nDensidad seca 0,330 – 0,360 g/cm3",
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "248",
+            "highPrice": "1002",
+            "offerCount": 3,
+            "priceCurrency": "ARS",
+            "availability": "http://schema.org/InStock"
+          }
+        },
+        "ruta_nueva": "/productos",
+        "sin_equivalente": true
+      }
+    ]
+  },
+  "demoWoodmart": {
+    "nota": "Contenido demo del tema Woodmart (y páginas de WooCommerce sin uso) publicado en wp-sitemap.xml. Cada grupo comparte el resultado indicado (relevado URL por URL). Incluye /compare/, /wishlist/ y /track-order/ (WooCommerce/Woodmart sin uso).",
+    "grupos": [
+      {
+        "grupo": "paginas_demo",
+        "cantidad": 120,
+        "status": 200,
+        "robots": "max-image-preview:large",
+        "canonical": "autorreferente",
+        "title": "'{Título en inglés} – Hi-Soil – Energía para Cultivos' (ej. 'Home Medical-marijuana', 'Contact Us 2', 'Sample Page')",
+        "indexable": true,
+        "accion": "410 (compare, wishlist, track-order: 301 a /)",
+        "paths": [
+          "/compare/",
+          "/wishlist/",
+          "/track-order/",
+          "/sample-page/",
+          "/home-fashion/",
+          "/products-grid/",
+          "/products-widgets/",
+          "/products-by-id/",
+          "/products-category/",
+          "/products-categories/",
+          "/home-fashion-flat/",
+          "/home-fashion-color/",
+          "/home-electronics/",
+          "/home-furniture/",
+          "/home-cars/",
+          "/home-categories/",
+          "/home-basic/",
+          "/home-parallax/",
+          "/home-infinite-scrolling/",
+          "/home-boxed/",
+          "/home-grid/",
+          "/home-video/",
+          "/home-fullscreen/",
+          "/home-lookbook/",
+          "/home-landing/",
+          "/contact-us/",
+          "/contact-us-2/",
+          "/contact-us-3/",
+          "/contact-us-4/",
+          "/faqs/",
+          "/faqs-2/",
+          "/our-team/",
+          "/maintenance/",
+          "/maintenance-2/",
+          "/maintenance-3/",
+          "/infobox/",
+          "/pricing-tables/",
+          "/images-gallery/",
+          "/titles/",
+          "/carousels/",
+          "/banners/",
+          "/google-maps/",
+          "/instagram/",
+          "/social-buttons/",
+          "/team-member/",
+          "/testimonials/",
+          "/countdown-timer/",
+          "/360-degree-view/",
+          "/menu-price/",
+          "/portfolio-element/",
+          "/blog-element/",
+          "/animated-counter/",
+          "/ajax-products-tabs/",
+          "/button-with-popup/",
+          "/brands-element/",
+          "/section-dividers/",
+          "/gradients/",
+          "/recent-products/",
+          "/featured-products/",
+          "/sale-products/",
+          "/top-rated-products/",
+          "/about-us/",
+          "/about-us-2/",
+          "/about-me/",
+          "/home-watches/",
+          "/home-base/",
+          "/home-base-rtl/",
+          "/home-dark/",
+          "/home-food/",
+          "/about-factory/",
+          "/home-handmade/",
+          "/home-cosmetics/",
+          "/home-christmas/",
+          "/christmas-maintenance/",
+          "/demo-digitals/",
+          "/home-digital-portfolio/",
+          "/timeline/",
+          "/video/",
+          "/buttons/",
+          "/list-element/",
+          "/home-jewellery/",
+          "/home-sport/",
+          "/home-marketplace/",
+          "/home-lingerie/",
+          "/home-toys/",
+          "/home-shoes/",
+          "/home-mobile-app/",
+          "/home-hardware/",
+          "/home-electronics-2/",
+          "/home-books/",
+          "/custom-404/",
+          "/custom-404-2/",
+          "/home-magazine/",
+          "/home-corporate/",
+          "/parallax-scrolling/",
+          "/home-glasses/",
+          "/home-bikes/",
+          "/image-hotspot/",
+          "/animations/",
+          "/sliders/",
+          "/home-travel/",
+          "/home-retail/",
+          "/home-wine/",
+          "/home-decor/",
+          "/home-motorcycle/",
+          "/home-black-friday/",
+          "/home-landing-gadget/",
+          "/home-base-light/",
+          "/home-flowers/",
+          "/home-camping/",
+          "/home-retail-2/",
+          "/home-alternative-energy/",
+          "/home-drinks/",
+          "/home-sweets-bakery/",
+          "/home-fashion-minimalism/",
+          "/home-medical-marijuana/",
+          "/home-medical/",
+          "/home-minimalism/",
+          "/home-grocery/",
+          "/home-tools/"
+        ]
+      },
+      {
+        "grupo": "woodmart_slide",
+        "cantidad": 35,
+        "status": 200,
+        "robots": "max-image-preview:large",
+        "canonical": "autorreferente",
+        "title": "'Bike slide 1', 'Retail slide 2', etc.",
+        "indexable": true,
+        "accion": "410",
+        "paths": [
+          "/woodmart_slide/page-reserve-1/",
+          "/woodmart_slide/page-reserve-2/",
+          "/woodmart_slide/bike-slide-1/",
+          "/woodmart_slide/bike-slide-1-2/",
+          "/woodmart_slide/bike-slide-1-2-2/",
+          "/woodmart_slide/infinite-scrolling-slide-1/",
+          "/woodmart_slide/infinite-scrolling-slide-1-2/",
+          "/woodmart_slide/basic-slide-1/",
+          "/woodmart_slide/basic-slide-1-2/",
+          "/woodmart_slide/main-slide-1/",
+          "/woodmart_slide/main-slide-1-2/",
+          "/woodmart_slide/main-slide-1-2-2/",
+          "/woodmart_slide/dark-slide-1/",
+          "/woodmart_slide/dark-slide-1-2/",
+          "/woodmart_slide/dark-slide-1-2-2/",
+          "/woodmart_slide/retail-slide-1/",
+          "/woodmart_slide/retail-slide-1-2/",
+          "/woodmart_slide/retail-slide-1-2-2/",
+          "/woodmart_slide/decor-slide-1/",
+          "/woodmart_slide/decor-slide-1-2/",
+          "/woodmart_slide/motorcycle-slide-1/",
+          "/woodmart_slide/motorcycle-slide-1-2/",
+          "/woodmart_slide/base-light-slide-1/",
+          "/woodmart_slide/base-light-slide-1-2/",
+          "/woodmart_slide/base-light-slide-1-3/",
+          "/woodmart_slide/flowers-slide-1/",
+          "/woodmart_slide/flowers-slide-1-2/",
+          "/woodmart_slide/flowers-slide-1-3/",
+          "/woodmart_slide/camping-slider-1/",
+          "/woodmart_slide/camping-slider-1-2/",
+          "/woodmart_slide/retail-2-slide-1/",
+          "/woodmart_slide/retail-2-slide-1-2/",
+          "/woodmart_slide/alternative-energy-slide-1/",
+          "/woodmart_slide/alternative-energy-slide-1-2/",
+          "/woodmart_slide/alternative-energy-slide-1-3/"
+        ]
+      },
+      {
+        "grupo": "portfolio_demo",
+        "cantidad": 9,
+        "status": 200,
+        "robots": "max-image-preview:large",
+        "canonical": "autorreferente",
+        "title": "lorem ipsum (ej. 'Potenti parturient parturie')",
+        "indexable": true,
+        "accion": "410",
+        "paths": [
+          "/portfolio/potenti-parturient-parturie/",
+          "/portfolio/rhoncus-quisque-sollicitudin/",
+          "/portfolio/a-lacus-bibendum-pulvinar/",
+          "/portfolio/leo-uteu-ullamcorper/",
+          "/portfolio/venenatis-nam-phasellus/",
+          "/portfolio/imperdiet-mauris-a-nontin/",
+          "/portfolio/et-vestibulum-quis-a-suspendisse/",
+          "/portfolio/netus-eu-mollis-hac-dignis/",
+          "/portfolio/suspendisse-quam-at-vestibulum/"
+        ]
+      },
+      {
+        "grupo": "project_cat",
+        "cantidad": 5,
+        "status": 200,
+        "robots": "max-image-preview:large",
+        "canonical": null,
+        "title": "'Accessories', 'Decor', 'Furniture', 'Kitchen', 'Lighting'",
+        "indexable": true,
+        "accion": "410",
+        "paths": [
+          "/project-cat/accessories/",
+          "/project-cat/decor/",
+          "/project-cat/furniture/",
+          "/project-cat/kitchen/",
+          "/project-cat/lighting/"
+        ]
+      },
+      {
+        "grupo": "cms_block",
+        "cantidad": 59,
+        "status": 500,
+        "robots": "max-image-preview:large, noindex, follow",
+        "canonical": null,
+        "title": "WordPress › Error",
+        "indexable": false,
+        "accion": "410",
+        "nota": "Devuelven error 500 de WordPress.",
+        "paths": [
+          "/?cms_block=about-brand",
+          "/?cms_block=menu-category",
+          "/?cms_block=menu-category-2",
+          "/?cms_block=menu-category-3",
+          "/?cms_block=menu-category-4",
+          "/?cms_block=menu-category-5",
+          "/?cms_block=menu-category-6",
+          "/?cms_block=menu-category-7",
+          "/?cms_block=menu-shop",
+          "/?cms_block=menu-blog",
+          "/?cms_block=promo-popup",
+          "/?cms_block=shipping-delivery",
+          "/?cms_block=lamp-extra-content",
+          "/?cms_block=stool-extra-content",
+          "/?cms_block=prefooter",
+          "/?cms_block=header-link",
+          "/?cms_block=html-reserve-1",
+          "/?cms_block=html-reserve-2",
+          "/?cms_block=html-reserve-3",
+          "/?cms_block=html-reserve-4",
+          "/?cms_block=html-reserve-5",
+          "/?cms_block=html-reserve-6",
+          "/?cms_block=contact-us-popup",
+          "/?cms_block=html-block-example",
+          "/?cms_block=pre-footer-fashion",
+          "/?cms_block=home-watches-header",
+          "/?cms_block=header-handmade",
+          "/?cms_block=pre-footer-christmas",
+          "/?cms_block=header-digitals",
+          "/?cms_block=pre-footer-handmade",
+          "/?cms_block=shoes-header-banner",
+          "/?cms_block=books-contact-us",
+          "/?cms_block=pre-footer-magazine",
+          "/?cms_block=pre-footer-retail",
+          "/?cms_block=footer-retail",
+          "/?cms_block=footer-wine",
+          "/?cms_block=pre-footer-decor",
+          "/?cms_block=footer-decor",
+          "/?cms_block=pre-footer-black-friday",
+          "/?cms_block=footer-black-friday",
+          "/?cms_block=footer-landing-pixel",
+          "/?cms_block=footer-flowers",
+          "/?cms_block=footer-camping",
+          "/?cms_block=footer-retail-2",
+          "/?cms_block=promo-popup-5-fashion-minimalism",
+          "/?cms_block=map-content-lookbook",
+          "/?cms_block=pre-footer-minimalist",
+          "/?cms_block=contact-us-map",
+          "/?cms_block=grocery-menu-fresh-food",
+          "/?cms_block=grocery-products",
+          "/?cms_block=pre-footer-tools",
+          "/?cms_block=footer-magazine",
+          "/?cms_block=google-maps-contact-us",
+          "/?cms_block=google-maps-contact-us-color",
+          "/?cms_block=buttons-newsletter-popup",
+          "/?cms_block=buttons-gallery-popup",
+          "/?cms_block=buttons-popup-with-products",
+          "/?cms_block=buttons-popup",
+          "/?cms_block=buttons-popup-text"
+        ]
+      },
+      {
+        "grupo": "elementor_library",
+        "cantidad": 5,
+        "status": "redirige a /",
+        "robots": "(los de la home)",
+        "canonical": "https://hisoil.com.ar/",
+        "indexable": false,
+        "accion": "410",
+        "paths": [
+          "/?elementor_library=default-kit",
+          "/?elementor_library=tabs",
+          "/?elementor_library=foot",
+          "/?elementor_library=foot-2",
+          "/?elementor_library=pie-hisoil"
+        ]
+      },
+      {
+        "grupo": "woodmart_slider_taxonomy",
+        "cantidad": 14,
+        "status": 200,
+        "robots": "max-image-preview:large",
+        "canonical": null,
+        "title": "Hi-Soil – Energía para Cultivos",
+        "indexable": "no verificado",
+        "accion": "410",
+        "nota": "El sitemap las publica con '&amp;' dentro de la URL y así se pidieron; con '&' el resultado podría ser otro. No verificado.",
+        "paths": [
+          "/?taxonomy=woodmart_slider&term=best-sellers",
+          "/?taxonomy=woodmart_slider&term=alternative-energy-slider",
+          "/?taxonomy=woodmart_slider&term=retail-2-slider",
+          "/?taxonomy=woodmart_slider&term=camping-slider",
+          "/?taxonomy=woodmart_slider&term=flowers-slider",
+          "/?taxonomy=woodmart_slider&term=base-light-slider",
+          "/?taxonomy=woodmart_slider&term=motorcycle-slider",
+          "/?taxonomy=woodmart_slider&term=decor-slider",
+          "/?taxonomy=woodmart_slider&term=retail-slider",
+          "/?taxonomy=woodmart_slider&term=basic-slider",
+          "/?taxonomy=woodmart_slider&term=main-slider",
+          "/?taxonomy=woodmart_slider&term=dark-slider",
+          "/?taxonomy=woodmart_slider&term=bike-slider",
+          "/?taxonomy=woodmart_slider&term=infinite-scrolling-slider"
+        ]
+      }
+    ],
+    "total": 247
+  }
+}
