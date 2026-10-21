@@ -15,8 +15,7 @@ la SPA se publique con el `<head>` genérico en todas las rutas.
 
 - Implementar la tabla de `redirecciones.md` (borrador de `.htaccess` incluido).
 - Sin esto, las 17 fichas `/producto/…`, `/shop/` y las páginas del menú dan 404 desde el día uno.
-- Confirmar con HiSoil las filas marcadas como dudosas (tierra negra, F590, F545, compost). Azaleas, cactus y humus ya están
-  confirmados: van a `/productos`.
+- Confirmar con HiSoil las filas marcadas como dudosas (compost). Los productos viejos que no existen en el catálogo nuevo ya están confirmados: van a `/productos`.
 - Decidido (ver `APLICAR.md`): el sitio va al mismo Hostinger con LiteSpeed, así que `public/.htaccess`
   resuelve 301, 410, el HTML por ruta y la 404. El `.htaccess` final está probado en Docker (Apache y
   OpenLiteSpeed), no en el hosting.
