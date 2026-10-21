@@ -7,7 +7,8 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-config-prettier/flat';
 
 export default tseslint.config(
-  { ignores: ['dist', 'node_modules', 'src/app/components/ui'] },
+  // deploy/ tiene su propio package.json (cf y wrangler) y no entra en el tsconfig de la app.
+  { ignores: ['dist', 'node_modules', 'src/app/components/ui', 'deploy'] },
 
   {
     files: ['**/*.{ts,tsx}'],

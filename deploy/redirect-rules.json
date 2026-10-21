@@ -1,0 +1,30 @@
+{
+  "rules": [
+    {
+      "description": "www a la raíz (como hoy)",
+      "expression": "(http.host eq \"www.hisoil.com.ar\")",
+      "action": "redirect",
+      "action_parameters": {
+        "from_value": {
+          "status_code": 301,
+          "target_url": {
+            "expression": "concat(\"https://hisoil.com.ar\", http.request.uri.path)"
+          },
+          "preserve_query_string": true
+        }
+      }
+    },
+    {
+      "description": "Tipos internos del WordPress expuestos por query string (/?cms_block=…) a la home",
+      "expression": "(http.host eq \"hisoil.com.ar\" and http.request.uri.path eq \"/\" and (http.request.uri.query contains \"cms_block=\" or http.request.uri.query contains \"elementor_library=\" or http.request.uri.query contains \"taxonomy=\" or http.request.uri.query contains \"woodmart_slide=\" or http.request.uri.query contains \"portfolio=\" or http.request.uri.query contains \"project-cat=\"))",
+      "action": "redirect",
+      "action_parameters": {
+        "from_value": {
+          "status_code": 301,
+          "target_url": { "value": "https://hisoil.com.ar/" },
+          "preserve_query_string": false
+        }
+      }
+    }
+  ]
+}

@@ -5,3 +5,6 @@ dist
 .DS_Store
 *.log
 tsconfig*.tsbuildinfo
+# Salida local de cf / wrangler (deploy/)
+.cloudflare
+.wrangler

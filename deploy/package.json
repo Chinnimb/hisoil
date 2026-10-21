@@ -1,0 +1,14 @@
+{
+  "name": "hisoil-deploy",
+  "private": true,
+  "type": "module",
+  "description": "Publica el build de Vite (../dist) en Cloudflare Workers con cf",
+  "scripts": {
+    "dev": "cf dev",
+    "deploy": "cf deploy"
+  },
+  "devDependencies": {
+    "cf": "1.0.0-beta.20",
+    "wrangler": "4.151.3"
+  }
+}

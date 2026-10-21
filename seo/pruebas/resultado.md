@@ -2,6 +2,10 @@
 
 Fecha: 15/10/2026. Probado sobre un `dist/` simulado, **no** sobre el hosting real.
 
+**Actualización 21/10/2026 (Cloudflare):** el sitio se publica en Cloudflare, no en Hostinger. Esta prueba
+(Docker, `.htaccess`, `docker.sh`) queda como referencia. La prueba vigente es con `cf dev` sobre el `dist/`
+que arma `simular-dist.sh`: 495 de 495 (sección 2 de `../cloudflare.md`).
+
 **Actualización 21/10/2026:** cambiaron los destinos (los productos discontinuados van a `/productos` y todo lo
 que antes era 410 ahora es 301 a la home). Se volvió a correr la prueba completa con `casos.tsv` actualizado:
 495 de 495 en Apache y 495 de 495 en OpenLiteSpeed. Las tablas de abajo son de la corrida del 15/10.

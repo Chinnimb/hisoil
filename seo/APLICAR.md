@@ -3,7 +3,8 @@
 Este documento es la orden de trabajo. Los datos están en los otros archivos de `seo/`:
 
 - `sitio-actual.md` / `sitio-actual.json`: relevamiento del WordPress actual (15/10/2026).
-- `redirecciones.md`: tabla URL vieja → ruta nueva y borrador de `.htaccess`.
+- `redirecciones.md`: tabla URL vieja → ruta nueva (el `.htaccess` de la sección 7 quedó como referencia).
+- `cloudflare.md`: cómo se publica en Cloudflare, los registros DNS y el plan de mudanza.
 - `recomendaciones.md`: el porqué de cada punto y los textos propuestos.
 
 Leé primero el `CLAUDE.md` del repo y respetá sus restricciones (no tocar el scaffolding de Figma Make,
@@ -11,12 +12,14 @@ cambios quirúrgicos, `npm run validate` antes de dar algo por terminado, rama p
 
 ## Contexto que ya está decidido
 
-- **Dónde se publica:** en el mismo hosting donde hoy está el WordPress, en Hostinger (hosting compartido,
-  servidor LiteSpeed, lee `.htaccess`), detrás de Cloudflare. Lo sube Conecto, el revendedor; nosotros no
-  tenemos acceso al hosting. Por eso todo lo de servidor va en `public/.htaccess`, que Vite copia a `dist/`.
-  Esto reemplaza la nota de `CLAUDE.md` de "no depender de rewrites": el servidor ya es conocido.
-- **Los mails siguen en Hostinger.** No se toca nada del DNS (está en Cloudflare). Mismo dominio: no hace
-  falta "cambio de dirección" en Search Console.
+- **Dónde se publica:** en Cloudflare, como Worker con static assets, en una cuenta a nombre del cliente
+  (cambió el 21/10/2026: antes era Hostinger con `.htaccess`). La configuración está en `deploy/` y lo de
+  servidor en `public/_redirects` y `public/_headers`, que Vite copia a `dist/`. El detalle y el porqué, en
+  `cloudflare.md`. Esto reemplaza la nota de `CLAUDE.md` de "no depender de rewrites": el servidor ya es
+  conocido.
+- **Los mails siguen en Hostinger.** El DNS se muda de la cuenta de Cloudflare de Conecto a la del cliente,
+  copiando los registros de mail (`cloudflare.md`, sección 3). Mismo dominio: no hace falta "cambio de
+  dirección" en Search Console.
 - **El sitio viejo casi no tiene SEO** (sin plugin, sin meta descriptions, sin OG, sin H1). Lo que vale son
   las URLs: el trabajo central son las 301 y que cada ruta nueva tenga su propio `<head>`.
 - **Catálogo:** 33 productos en `src/app/data/products.ts` (el `CLAUDE.md` dice 37, está desactualizado).
@@ -91,26 +94,30 @@ Una rama por tarea grande o una sola rama `seo-aplicar`, a elección; cada tarea
 - Lee `dist/index.html` y escribe un HTML por ruta con el `<head>` de esa ruta: `<title>`, description, `<link rel="canonical">` absoluto, Open Graph (`og:type`, `og:site_name`,
   `og:locale=es_AR`, `og:title`, `og:description`, `og:url`, `og:image` absoluta) y
   `twitter:card=summary_large_image`, más el JSON-LD de la tarea 5.
-- Nombre de los archivos: **`dist/nosotros.html`** para las rutas fijas y **`dist/fichas/chip.html`** para las
-  fichas (no `dist/productos/chip.html` ni `dist/nosotros/index.html`). Una carpeta con el nombre de una ruta
-  hace que el servidor redirija `/productos` → `/productos/` (probado en Apache y OpenLiteSpeed; el detalle
-  está en la sección 7 de `redirecciones.md`). El `.htaccess` mapea `/productos/chip` → `fichas/chip.html`.
+- Nombre de los archivos: **`dist/nosotros.html`** para las rutas fijas y **`dist/productos/chip.html`** para
+  las fichas (no `dist/nosotros/index.html`: con `htmlHandling: 'auto-trailing-slash'`, esa forma haría
+  canónica `/nosotros/`). Cloudflare sirve `/nosotros` → `nosotros.html` y `/productos/chip` →
+  `productos/chip.html` sin reglas. Ya no hace falta la carpeta `fichas/` del plan de Hostinger: Cloudflare no
+  redirige `/productos` a `/productos/` aunque exista la carpeta `productos/` (probado con `cf dev`).
 - El `index.html` de la raíz conserva el `<head>` de la home. Canonical y `og:url` de la home:
   `https://hisoil.com.ar/` (la raíz siempre lleva barra); el resto, sin barra final.
 - Verificación: `npm run build` y revisar 3 archivos generados (home, una ruta fija, una ficha) con
   `grep -E "<title>|canonical|og:" dist/...`.
 
-### 4. `public/.htaccess`
+### 4. Redirecciones y 404
 
-- Copiá **tal cual** el bloque de la sección 7 de `redirecciones.md`. Ya incluye servir el HTML
-  prerenderizado, la home explícita y `ErrorDocument 404 /404.html` (sin fallback a `index.html`), y está
-  probado en Docker. Si cambiás una redirección, cambiá también `seo/pruebas/casos.tsv`.
+- Las redirecciones ya están en `public/_redirects` (traducción del `.htaccess` de la sección 7 de
+  `redirecciones.md`) y las de query string y `www`, en `deploy/redirect-rules.json` (reglas de la zona).
+  No hay `.htaccess`. Si cambiás una redirección, cambiá también `seo/pruebas/casos.tsv`.
 - Página 404 real: agregá una ruta `*` en `App.tsx` con contenido de "página no encontrada" (texto en
   rioplatense) y generá `dist/404.html` en el prerender, con `noindex` siempre (también después del
   lanzamiento). Así una URL inexistente devuelve 404 y no la home con 200.
-- Verificación: levantá Apache en Docker sirviendo el `dist/` real y corré `seo/pruebas/probar.sh` (las
-  instrucciones están en `seo/pruebas/resultado.md`). Tiene que dar todo OK. Si no podés levantarlo, decilo
-  en el PR: **no afirmes que las reglas andan sin haberlas probado.**
+- `deploy/cloudflare.config.ts` ya tiene `notFoundHandling: '404-page'`: Cloudflare sirve `404.html` con
+  estado 404 en lo que no existe.
+- Verificación: `npm run build`, `cd deploy && npx cf dev` y, en otra terminal,
+  `SIN_REGLA_QUERY=1 seo/pruebas/probar.sh http://localhost:8787 dist` (sección 2 de `cloudflare.md`). Tiene
+  que dar todo OK. Si no podés levantarlo, decilo en el PR: **no afirmes que las reglas andan sin haberlas
+  probado.**
 
 ### 5. JSON-LD
 
@@ -142,12 +149,12 @@ Dejá en el PR una checklist para el día de la publicación:
 
 - [ ] Ariel confirma el NAP.
 - [ ] Sacar `noindex, nofollow` de `index.html` (y que el prerender no lo copie a las demás rutas).
-- [ ] Antes de subir: exportar de Search Console el informe de rendimiento y de páginas (si HiSoil tiene
-      acceso; si no, verificar la propiedad de dominio por TXT en Cloudflare).
-- [ ] Entrega a Conecto según la sección "Entrega" de abajo y `entrega-conecto.md`.
+- [ ] Antes de publicar: exportar de Search Console el informe de rendimiento y de páginas (si HiSoil tiene
+      acceso; si no, verificar la propiedad de dominio por TXT en la zona nueva de Cloudflare).
+- [ ] Mudanza del DNS y publicación según la sección 4 de `cloudflare.md` (pasos A a D).
 - [ ] Correr `seo/pruebas/probar.sh https://hisoil.com.ar dist` contra el sitio publicado.
 - [ ] Enviar `sitemap.xml` en Search Console y revisar "Páginas" durante 4–6 semanas.
-- [ ] Confirmar que Cloudflare Web Analytics sigue midiendo.
+- [ ] Activar Cloudflare Web Analytics en la cuenta nueva (el de hoy está en la cuenta de Conecto).
 
 ### 8. Ajustes menores (si queda tiempo, en PR aparte)
 
@@ -157,37 +164,22 @@ Dejá en el PR una checklist para el día de la publicación:
   de `src/styles/theme.css`.
 - Imagen OG por defecto de 1200×630 en JPG o PNG (WhatsApp y LinkedIn no siempre leen WebP).
 
-## Entrega a Conecto (lo que se puede romper en el traspaso)
+## Publicación en Cloudflare (lo que se puede romper)
 
-No tenemos acceso al hosting ni vamos a poder depurar allá. Lo probado en Docker está en
-`pruebas/resultado.md`; esto es lo que depende del traspaso. Las instrucciones para Conecto están en
-`entrega-conecto.md`.
+Ya no hay entrega a Conecto: se publica desde Workers Builds en la cuenta del cliente. El paso a paso está
+en `cloudflare.md`. Lo que se puede romper:
 
-- **El `.htaccess` se pierde fácil.** Empieza con punto: el Finder no lo muestra, algunos clientes FTP no lo
-  suben si no tienen activado "mostrar archivos ocultos", y al arrastrar la carpeta al administrador de
-  archivos del hosting puede quedar afuera. Sin él, en Docker dieron lo esperado 140 de 495 pedidos: todas las
-  rutas salvo `/` dan 404 y ninguna URL vieja redirige. Entregar un `.zip` armado desde adentro de `dist/`
-  (`cd dist && zip -r ../hisoil-sitio.zip .`) y comprobar que esté adentro con `unzip -l ../hisoil-sitio.zip
-| grep htaccess`.
-- **Restos del WordPress en `public_html`.** Si queda el `.htaccess` viejo (bloques `# BEGIN WordPress` y
-  `# BEGIN LiteSpeed`), manda todo a `index.php`; si queda `index.php`, en Docker le ganó a `index.html` hasta
-  que se sumó la regla de la home al `.htaccess` (OpenLiteSpeed lo ejecutó). Pedir que muevan **todo** el
-  contenido viejo fuera de `public_html` (backup), y que `public_html` quede solo con lo del zip.
-- **Caché.** Cloudflare por defecto no cachea HTML, pero puede haber una regla "Cache Everything", APO, o el
-  caché de LiteSpeed/Hostinger con páginas del WordPress. Después de subir: purgar todo en Cloudflare y en el
-  caché de Hostinger.
-- **Modo SSL de Cloudflare.** Las 301 apuntan a `https://` explícito, así que no dependen de él. Pero si el
-  modo es "Flexible" y alguien agrega en el hosting una regla de "forzar https", el origen ve siempre http y
-  redirige en loop (problema conocido de ese modo; no lo probé). Pedir que no
-  agreguen reglas al `.htaccess` y que, si tienen que hacerlo, avisen.
-- **Desafío de Cloudflare a `curl`.** Durante el relevamiento Cloudflare respondía "Just a moment..." a `curl`
-  (ver `sitio-actual.md`); al revisar esto, tres pedidos con `curl` (`/`, `/robots.txt`, `/shop/`) dieron 200
-  sin desafío. Si vuelve a aparecer, `probar.sh` marca esas filas como `DESAFIO-CF` (no probadas): pedir a
-  quien administre Cloudflare que lo baje, o una excepción para nuestra IP, durante la prueba. Revisar también que no frene a los bots de WhatsApp, Facebook y LinkedIn (las vistas
-  previas de links): se ve con el Sharing Debugger de Facebook después de publicar.
-- **Lo que solo se confirma en el hosting real**: que LiteSpeed Enterprise lea `ErrorDocument`, `Options` y
-  `Header` del `.htaccess` (OpenLiteSpeed no los lee), que el resultado de `probar.sh` sea el mismo que en Docker,
-  el modo SSL de Cloudflare, los cachés y que Cloudflare Web Analytics siga midiendo.
+- **Los mails**, si falta un registro al mudar el DNS. Es el riesgo número uno: la lista completa y cómo
+  comparar la zona vieja con la nueva están en la sección 3 y el paso C5 de `cloudflare.md`.
+- **El deploy command de Workers Builds**: tiene que ser `npx cf deploy`. El default (`npx wrangler deploy`)
+  ignora `cloudflare.config.ts` y no aplica los dominios.
+- **Una regeneración de Make** puede pisar `public/_redirects` y `public/_headers`. Revisarlos después de
+  cada regeneración (sin `_redirects`, ninguna URL vieja redirige).
+- **Desafío de Cloudflare a `curl`.** Durante el relevamiento la zona vieja respondía "Just a moment..." a
+  `curl` (ver `sitio-actual.md`). Si aparece en la zona nueva, `probar.sh` marca esas filas como
+  `DESAFIO-CF`. Revisar también que no frene a los bots de WhatsApp, Facebook y LinkedIn (las vistas previas
+  de links): se ve con el Sharing Debugger de Facebook después de publicar.
+- **Lo que solo se confirma en la cuenta real**: sección 5 de `cloudflare.md`.
 
 ## Cómo cerrar
 

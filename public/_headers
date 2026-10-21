@@ -1,0 +1,6 @@
+# HiSoil: headers para Cloudflare Workers static assets.
+# El HTML no necesita regla: Cloudflare ya lo sirve con "Cache-Control: public, max-age=0,
+# must-revalidate" (lo mismo que pedía el .htaccess con no-cache).
+# Lo de assets/ lleva un hash en el nombre (lo pone Vite): si cambia el contenido, cambia el nombre.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

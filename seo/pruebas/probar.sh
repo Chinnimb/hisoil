@@ -4,8 +4,14 @@
 # Uso:
 #   seo/pruebas/probar.sh <url-base> [carpeta-dist] > resultado.md
 #
-#   <url-base>      http://localhost:8080 (Docker) o https://hisoil.com.ar (publicado)
-#   [carpeta-dist]  opcional: además pide cada archivo de esa carpeta (assets, imágenes) y espera 200
+#   <url-base>      http://localhost:8787 (cf dev en deploy/) o https://hisoil.com.ar (publicado)
+#   [carpeta-dist]  opcional: además pide cada archivo de esa carpeta (assets, imágenes) y espera 200.
+#                   Los .html esperan 307 a su URL limpia (/nosotros.html → /nosotros): así los sirve
+#                   Cloudflare con html_handling. _redirects y _headers no se sirven (Cloudflare los lee).
+#
+#   SIN_REGLA_QUERY=1  para probar en local: las URLs viejas con query string (/?cms_block=…) esperan
+#                      200 (la home) y no 301. La 301 la hace una Redirect Rule de la zona, que
+#                      wrangler dev no tiene (ver seo/cloudflare.md).
 #
 # Los casos están en casos.tsv (url, estado esperado, destino esperado, grupo). Para cada uno:
 #   - pide la URL sin seguir redirecciones y compara el estado;
@@ -57,6 +63,9 @@ echo "| --- | --- | --- | --- |"
 while IFS=$'\t' read -r url esp dest grupo; do
   case "$url" in '#'* | '') continue ;; esac
   IFS='|' read -r st loc cf <<<"$(pedir "$url")"
+  if [ "${SIN_REGLA_QUERY:-}" = 1 ] && [[ "$url" == '/?'* ]] && [ "$esp" = 301 ]; then
+    esp=200 dest=-
+  fi
   esperado="$esp"
   [ "$dest" != "-" ] && esperado="$esp → \`$dest\`"
   obtenido="$st"
@@ -91,15 +100,20 @@ done <"$CASOS"
 if [ -n "$DIST" ]; then
   while IFS= read -r f; do
     rel="/${f#"$DIST"/}"
-    case "$rel" in */.htaccess) continue ;; esac
-    st=$(cut -d'|' -f1 <<<"$(pedir "$rel")")
+    case "$rel" in */.htaccess | /_redirects | /_headers) continue ;; esac
+    IFS='|' read -r st loc _ <<<"$(pedir "$rel")"
     archivos=$((archivos + 1))
+    esp=200 dest=""
+    if [[ "$rel" == *.html ]]; then
+      esp=307 dest="${rel%.html}"
+      [ "$dest" = /index ] && dest=/
+    fi
     # De los archivos de dist solo se listan los que fallan.
-    if [ "$st" = "200" ]; then
+    if [ "$st" = "$esp" ] && [ "$(solo_path "$loc")" = "$dest" ]; then
       total=$((total + 1))
       ok=$((ok + 1))
     else
-      fila "$rel" 200 "$st" "FALLA: estado"
+      fila "$rel" "$esp${dest:+ → \`$dest\`}" "$st${loc:+ → \`$(solo_path "$loc")\`}" "FALLA: estado"
     fi
   done < <(find "$DIST" -type f | sort)
   echo

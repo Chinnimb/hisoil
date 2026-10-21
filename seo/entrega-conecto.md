@@ -1,43 +1,27 @@
-# Borrador: instrucciones para Conecto
+# Borrador: aviso a Conecto
 
-Borrador para mandarle a Conecto junto con el `.zip` del sitio. Revisarlo antes de enviar (Ariel).
+Cambió el 21/10/2026: el sitio ya no se sube al hosting de Hostinger, se publica en Cloudflare en una cuenta
+del cliente (ver `cloudflare.md`). Las instrucciones de subida que había acá (zip, `public_html`,
+`.htaccess`) ya no aplican. A Conecto solo hay que avisarle y pedirle el export del DNS. Revisarlo antes de
+enviar (Ariel). Mandarlo antes del paso C de `cloudflare.md`.
 
 ---
 
-Hola, les pasamos el sitio nuevo de HiSoil para reemplazar el WordPress de `hisoil.com.ar` en Hostinger.
-Es un sitio estático (HTML, JS e imágenes): no usa PHP ni base de datos. Los mails no se tocan.
+Hola, les contamos un cambio en `hisoil.com.ar`: el sitio nuevo se va a publicar en Cloudflare, en una
+cuenta a nombre de HiSoil. Para eso vamos a cambiar los nameservers del dominio en NIC.ar a esa cuenta.
 
-**1. Backup.** Hagan un backup completo del WordPress (archivos de `public_html` y base de datos) por si hay
-que volver atrás.
+**Los mails no cambian:** siguen en Hostinger, con las mismas casillas. En la zona nueva copiamos los
+registros de mail que tiene hoy la zona (MX `mx1` y `mx2.hostinger.com.ar`, el SPF y los tres DKIM
+`hostingermail-a`, `-b` y `-c`).
 
-**2. Vaciar `public_html`.** Muevan **todo** lo que hay en `public_html` fuera de esa carpeta (o bórrenlo
-después del backup), incluidos los archivos ocultos: `.htaccess`, `index.php`, `wp-config.php`,
-`wp-content/`, etc. Si queda el `.htaccess` o el `index.php` del WordPress, el sitio nuevo no funciona.
+Les pedimos:
 
-**3. Subir el sitio.** Suban `hisoil-sitio.zip` a `public_html` y descomprímanlo ahí, con el administrador de
-archivos de Hostinger. Los archivos tienen que quedar directo en `public_html` (`public_html/index.html`), no
-en una subcarpeta.
+1. **El export de la zona DNS de `hisoil.com.ar`** en Cloudflare (DNS → Records → Export), para confirmar
+   que no se nos escapa ningún registro. Si hay alguno que usen ustedes (verificaciones, subdominios), por
+   favor avísennos.
+2. **Que no den de baja el plan de Hostinger:** los mails viven ahí. Solo deja de usarse la parte web
+   (WordPress); si quieren, después del cambio pueden hacer un backup y apagarlo.
+3. **Nada más en Cloudflare:** cuando cambien los nameservers, la zona de su cuenta va a pasar a "Moved
+   Away" y Cloudflare la borra sola a los 7 días. No hace falta que hagan nada.
 
-**4. Comprobar el `.htaccess`.** En el administrador de archivos, activen "mostrar archivos ocultos" y
-confirmen que existe `public_html/.htaccess`. Es el archivo que hace las redirecciones de las páginas viejas:
-sin él, casi todo el sitio da error 404. No le agreguen ni le cambien reglas; si el hosting necesita alguna,
-avísennos antes.
-
-**5. Purgar cachés.** Purguen todo el caché de Cloudflare ("Purge Everything") y el caché de Hostinger (si
-está activo el de LiteSpeed o el Cache Manager).
-
-**6. Avisarnos.** Avísennos apenas esté subido para probar las redirecciones. Para eso necesitamos que, durante
-la prueba, Cloudflare no nos devuelva el desafío "Just a moment..." (a veces lo hace con los pedidos que no
-vienen de un navegador). Si pasa, les vamos a pedir una excepción para nuestra IP mientras probamos.
-
-**Comprobación rápida** (la pueden hacer ustedes desde un navegador):
-
-- `https://hisoil.com.ar/` muestra el sitio nuevo.
-- `https://hisoil.com.ar/nosotros` abre la página "Nosotros" (no un error).
-- `https://hisoil.com.ar/shop/` redirige a `https://hisoil.com.ar/productos`.
-- `https://hisoil.com.ar/esta-pagina-no-existe` muestra "página no encontrada".
-
-Si algo de esto falla, lo más probable es que falte el `.htaccess` o que haya quedado algo del WordPress.
-
-**Para confirmar con ustedes:** ¿qué modo de SSL tiene Cloudflare para este dominio ("Flexible", "Full" o
-"Full (strict)")? ¿Hay alguna regla de caché en Cloudflare ("Cache Everything") o APO activado?
+Les avisamos el día del cambio. Gracias.

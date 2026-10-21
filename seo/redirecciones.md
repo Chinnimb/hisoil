@@ -113,6 +113,10 @@ La lista exacta de páginas demo está en la sección 7 (bloque `.htaccess`).
 
 ## 7. `.htaccess` final
 
+> **21/10/2026: ya no se usa.** El sitio se publica en Cloudflare, que no lee `.htaccess`. Estas reglas
+> están traducidas en `public/_redirects` (y las de query string, en `deploy/redirect-rules.json`); las
+> diferencias y el porqué están en `cloudflare.md`. Queda como referencia de lo que se probó.
+
 Es el archivo completo, listo para copiar a `public/.htaccess` (Vite lo copia a `dist/`). Ya incluye el
 servir el HTML prerenderizado y la página 404 de la tarea 4 de `APLICAR.md`.
 

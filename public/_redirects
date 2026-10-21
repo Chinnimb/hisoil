@@ -1,0 +1,244 @@
+# HiSoil: redirecciones del sitio viejo (WordPress) para Cloudflare Workers static assets.
+# Traducción de la sección 7 de seo/redirecciones.md. Probado con wrangler dev (seo/cloudflare.md).
+#
+# Reglas de Cloudflare que importan acá (https://developers.cloudflare.com/workers/static-assets/redirects/):
+# - Gana la primera regla que coincide. Las estáticas tienen que ir antes que las dinámicas (* o :nombre).
+# - Tope: 2000 estáticas y 100 dinámicas. Sin regex y sin mirar el query string: /?cms_block=x sirve
+#   la home con 200 (ver seo/cloudflare.md).
+# - Cada regla coincide con el path exacto: por eso van con y sin barra final.
+
+# --- 301: páginas ---
+/shop /productos 301
+/shop/ /productos 301
+/categoria-producto/productos /productos 301
+/categoria-producto/productos/ /productos 301
+/jardineria-profesional /productos 301
+/jardineria-profesional/ /productos 301
+/horticultura-profesional /productos 301
+/horticultura-profesional/ /productos 301
+/hogar-y-jardin /productos 301
+/hogar-y-jardin/ /productos 301
+/compost-organico /productos/compost 301
+/compost-organico/ /productos/compost 301
+/techos-verdes /productos/greenroof 301
+/techos-verdes/ /productos/greenroof 301
+/privacy-policy / 301
+/privacy-policy/ / 301
+/blog / 301
+/blog/ / 301
+/cart / 301
+/cart/ / 301
+/checkout / 301
+/checkout/ / 301
+/wishlist / 301
+/wishlist/ / 301
+/compare / 301
+/compare/ / 301
+/track-order / 301
+/track-order/ / 301
+/my-account / 301
+/my-account/ / 301
+
+# --- 301: productos ---
+/producto/compost-organico /productos/compost-paisajismo 301
+/producto/compost-organico/ /productos/compost-paisajismo 301
+/producto/chip /productos/chip 301
+/producto/chip/ /productos/chip 301
+/producto/chip-mini /productos/minichip 301
+/producto/chip-mini/ /productos/minichip 301
+/producto/pometina /productos/pometina 301
+/producto/pometina/ /productos/pometina 301
+/producto/perlita /productos/perlite 301
+/producto/perlita/ /productos/perlite 301
+/producto/vermiculita /productos/vermiculite 301
+/producto/vermiculita/ /productos/vermiculite 301
+/producto/turba /productos/sphagnum 301
+/producto/turba/ /productos/sphagnum 301
+/producto/sustrato-profesional-exterior-f546 /productos/outdoor 301
+/producto/sustrato-profesional-exterior-f546/ /productos/outdoor 301
+/producto/sustrato-profesional-interior-f556 /productos/indoor 301
+/producto/sustrato-profesional-interior-f556/ /productos/indoor 301
+/producto/sustrato-para-techos-y-terrazas /productos/greenroof 301
+/producto/sustrato-para-techos-y-terrazas/ /productos/greenroof 301
+
+# --- 301: etiquetas de producto ---
+/product-tag/compost /productos/compost 301
+/product-tag/compost/ /productos/compost 301
+/product-tag/compost-organico /productos/compost 301
+/product-tag/compost-organico/ /productos/compost 301
+
+# --- 301 a la home: notas viejas del blog ---
+/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus / 301
+/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/ / 301
+/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques / 301
+/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/ / 301
+/plastico-5-claves-para-reducir-el-impacto-ambiental / 301
+/plastico-5-claves-para-reducir-el-impacto-ambiental/ / 301
+
+# --- 301 a la home: páginas demo de Woodmart ---
+/sample-page / 301
+/sample-page/ / 301
+/contact-us / 301
+/contact-us/ / 301
+/contact-us-2 / 301
+/contact-us-2/ / 301
+/contact-us-3 / 301
+/contact-us-3/ / 301
+/contact-us-4 / 301
+/contact-us-4/ / 301
+/faqs / 301
+/faqs/ / 301
+/faqs-2 / 301
+/faqs-2/ / 301
+/our-team / 301
+/our-team/ / 301
+/maintenance / 301
+/maintenance/ / 301
+/maintenance-2 / 301
+/maintenance-2/ / 301
+/maintenance-3 / 301
+/maintenance-3/ / 301
+/christmas-maintenance / 301
+/christmas-maintenance/ / 301
+/infobox / 301
+/infobox/ / 301
+/pricing-tables / 301
+/pricing-tables/ / 301
+/images-gallery / 301
+/images-gallery/ / 301
+/titles / 301
+/titles/ / 301
+/carousels / 301
+/carousels/ / 301
+/banners / 301
+/banners/ / 301
+/google-maps / 301
+/google-maps/ / 301
+/instagram / 301
+/instagram/ / 301
+/social-buttons / 301
+/social-buttons/ / 301
+/team-member / 301
+/team-member/ / 301
+/testimonials / 301
+/testimonials/ / 301
+/countdown-timer / 301
+/countdown-timer/ / 301
+/360-degree-view / 301
+/360-degree-view/ / 301
+/menu-price / 301
+/menu-price/ / 301
+/portfolio-element / 301
+/portfolio-element/ / 301
+/blog-element / 301
+/blog-element/ / 301
+/products-grid / 301
+/products-grid/ / 301
+/products-widgets / 301
+/products-widgets/ / 301
+/animated-counter / 301
+/animated-counter/ / 301
+/ajax-products-tabs / 301
+/ajax-products-tabs/ / 301
+/button-with-popup / 301
+/button-with-popup/ / 301
+/brands-element / 301
+/brands-element/ / 301
+/section-dividers / 301
+/section-dividers/ / 301
+/gradients / 301
+/gradients/ / 301
+/recent-products / 301
+/recent-products/ / 301
+/featured-products / 301
+/featured-products/ / 301
+/products-by-id / 301
+/products-by-id/ / 301
+/products-category / 301
+/products-category/ / 301
+/products-categories / 301
+/products-categories/ / 301
+/sale-products / 301
+/sale-products/ / 301
+/top-rated-products / 301
+/top-rated-products/ / 301
+/about-us / 301
+/about-us/ / 301
+/about-us-2 / 301
+/about-us-2/ / 301
+/about-me / 301
+/about-me/ / 301
+/about-factory / 301
+/about-factory/ / 301
+/demo-digitals / 301
+/demo-digitals/ / 301
+/timeline / 301
+/timeline/ / 301
+/video / 301
+/video/ / 301
+/buttons / 301
+/buttons/ / 301
+/list-element / 301
+/list-element/ / 301
+/custom-404 / 301
+/custom-404/ / 301
+/custom-404-2 / 301
+/custom-404-2/ / 301
+/parallax-scrolling / 301
+/parallax-scrolling/ / 301
+/image-hotspot / 301
+/image-hotspot/ / 301
+/animations / 301
+/animations/ / 301
+/sliders / 301
+/sliders/ / 301
+
+# --- 301 a la home: WordPress ---
+/feed / 301
+/feed/ / 301
+/wp-admin / 301
+/wp-admin/ / 301
+/wp-json / 301
+/wp-json/ / 301
+/wp-login.php / 301
+/wp-login.php/ / 301
+/xmlrpc.php / 301
+/xmlrpc.php/ / 301
+
+# --- 301: sitemaps viejos ---
+/sitemap_index.xml /sitemap.xml 301
+
+# --- Barra final de las rutas nuevas: /nosotros/ → /nosotros ---
+# /portfolio/ tiene que ir antes que /portfolio/* (que manda el portfolio demo a la home).
+/nosotros/ /nosotros 301
+/servicios/ /servicios 301
+/productos/ /productos 301
+/portfolio/ /portfolio 301
+/contacto/ /contacto 301
+
+# --- Dinámicas (desde acá, todas con * o :nombre) ---
+/woodmart_slide/* / 301
+/portfolio/* / 301
+/project-cat/* / 301
+/author/* / 301
+/wp-admin/* / 301
+/wp-json/* / 301
+/cart/* / 301
+/checkout/* / 301
+/wishlist/* / 301
+/compare/* / 301
+/track-order/* / 301
+/my-account/* / 301
+/home-* / 301
+/category/:c / 301
+/category/:c/ / 301
+/*/feed / 301
+/*/feed/ / 301
+/producto/:p /productos 301
+/producto/:p/ /productos 301
+/product-tag/:t /productos 301
+/product-tag/:t/ /productos 301
+/wp-sitemap* /sitemap.xml 301
+
+# Barra final en cualquier otra URL: /productos/chip/ → /productos/chip. Va última.
+/*/ /:splat 301
