@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prueba las redirecciones, los 410/404 y las rutas nuevas contra un servidor.
+# Prueba las redirecciones, los 404 y las rutas nuevas contra un servidor.
 #
 # Uso:
 #   seo/pruebas/probar.sh <url-base> [carpeta-dist] > resultado.md

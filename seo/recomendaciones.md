@@ -11,13 +11,13 @@ la SPA se publique con el `<head>` genérico en todas las rutas.
 
 ## Prioridad 1 — Bloqueantes para el lanzamiento
 
-### 1.1 Redirecciones 301 y 410
+### 1.1 Redirecciones 301
 
 - Implementar la tabla de `redirecciones.md` (borrador de `.htaccess` incluido).
 - Sin esto, las 17 fichas `/producto/…`, `/shop/` y las páginas del menú dan 404 desde el día uno.
 - Los destinos de la tabla ya están todos decididos.
 - Decidido (ver `APLICAR.md`): el sitio va al mismo Hostinger con LiteSpeed, así que `public/.htaccess`
-  resuelve 301, 410, el HTML por ruta y la 404. El `.htaccess` final está probado en Docker (Apache y
+  resuelve las 301, el HTML por ruta y la 404. El `.htaccess` final está probado en Docker (Apache y
   OpenLiteSpeed), no en el hosting.
 
 ### 1.2 HTML propio por ruta (prerender en el build)

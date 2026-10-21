@@ -270,7 +270,7 @@ Se pidieron las 293 URLs del sitemap. **247 son demo** del tema o tipos internos
 Es decir: el sitemap le ofrece a Google **169 páginas indexables de demo** (en inglés, de rubros como autos,
 lencería, joyería o "medical marijuana") y 59 URLs que dan error 500. Eso diluye la relevancia del dominio y es
 probable que parte esté indexada (no verificable sin Search Console). Con la migración se resuelve solo si
-esas URLs devuelven 410 (ver `redirecciones.md`). La lista completa está en `sitio-actual.json` → `demoWoodmart`.
+esas URLs redirigen a la home (ver `redirecciones.md`). La lista completa está en `sitio-actual.json` → `demoWoodmart`.
 
 ### Cómo se relevó
 

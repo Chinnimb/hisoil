@@ -7,7 +7,8 @@ más los links del menú. Rutas nuevas: `src/app/App.tsx` y los slugs de `src/ap
 Convenciones de la tabla:
 
 - **Estado viejo**: lo que devolvió la URL vieja al pedirla (200 salvo que diga otra cosa).
-- **Acción**: `301` a la ruta nueva, o `410` (Gone) para lo que no tiene equivalente y no vale la pena conservar.
+- **Acción**: `301` a la sección que corresponde; lo que no encuadra en ninguna sección va a la home (`/`),
+  también con `301` (decisión de Ariel, 21/10/2026).
 - **Decidido**: todos los destinos están cerrados (21/10/2026). Los que eran dudosos quedaron con la propuesta original.
 - Las URLs viejas terminan en `/`. Las reglas tienen que aceptar con y sin barra final.
 - No sé qué URLs tiene Google indexadas ni cuáles traen tráfico: no hay acceso a Search Console
@@ -16,27 +17,27 @@ Convenciones de la tabla:
 
 ## 1. Páginas reales del sitio
 
-| URL vieja                                                                 | Qué es hoy                                                                                                 | Ruta nueva             | Acción | Nota                                                                                                                                                     |
-| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/`                                                                       | Home                                                                                                       | `/`                    | —      | Misma URL, no necesita regla.                                                                                                                            |
-| `/shop/`                                                                  | Catálogo WooCommerce (ítem "Productos" del menú)                                                           | `/productos`           | 301    |                                                                                                                                                          |
-| `/categoria-producto/productos/`                                          | Única categoría de producto                                                                                | `/productos`           | 301    |                                                                                                                                                          |
-| `/jardineria-profesional/`                                                | Página "Paisajismo" del menú                                                                               | `/productos`           | 301    | Se puede apuntar a `/productos#paisajismo` (ver nota de anclas abajo).                                                                                   |
-| `/horticultura-profesional/`                                              | Página "Productores" del menú (ornamentales, ciclamen, tabaco, hortalizas, forestales, frutales)           | `/productos`           | 301    | Encaja con la línea `sustratos` (`/productos#sustratos`).                                                                                                |
-| `/hogar-y-jardin/`                                                        | Página "Viveros" del menú (H2: "Productos para Hogar y Jardín", "Productos para Horticultura Profesional") | `/productos`           | 301    | mezcla paisajismo y sustratos; `/productos` sin ancla es lo más seguro.                                                                                  |
-| `/servicios/`                                                             | Recepción y disposición de poda ("no quemes ni entierres tu poda")                                         | `/servicios`           | 301    | En el sitio nuevo corresponde a "Tratamiento de residuos orgánicos".                                                                                     |
-| `/compost-organico/`                                                      | Página institucional de compost                                                                            | `/productos/compost`   | 301    | podría ser `/productos/compost-paisajismo`. Elegí la línea agro porque es el compost que destaca la home nueva.                                          |
-| `/techos-verdes/`                                                         | Página institucional de techos verdes                                                                      | `/productos/greenroof` | 301    |                                                                                                                                                          |
-| `/portfolio/`                                                             | Portfolio demo de Woodmart (imágenes placeholder)                                                          | `/portfolio`           | 301    | Solo cambia la barra final.                                                                                                                              |
-| `/privacy-policy/`                                                        | "Privacy Policy" (plantilla de WordPress, en inglés)                                                       | `/`                    | 301    | cuando exista la página legal de privacidad, apuntar ahí.                                                                                                |
-| `/blog/`                                                                  | Listado de 3 notas de 2020                                                                                 | `/`                    | 301    | el sitio nuevo no tiene blog. Alternativa: 410.                                                                                                          |
-| `/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/` | Nota (11/2020)                                                                                             | —                      | 410    | Son notas de terceros republicadas (imágenes con nombres tipo `3480607w1920.jpg`), sin relación con productos. Si HiSoil quiere conservarlas, 301 a `/`. |
-| `/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/` | Nota (11/2020)                                                                                             | —                      | 410    | Ídem.                                                                                                                                                    |
-| `/plastico-5-claves-para-reducir-el-impacto-ambiental/`                   | Nota (11/2020)                                                                                             | —                      | 410    | Ídem.                                                                                                                                                    |
-| `/category/paisajismo/`                                                   | Archivo de notas                                                                                           | `/`                    | 301    |                                                                                                                                                          |
-| `/category/medio-ambiente/`                                               | Archivo de notas                                                                                           | `/`                    | 301    |                                                                                                                                                          |
-| `/author/carloslr/`                                                       | Archivo de autor ("Nothing Found")                                                                         | —                      | 410    | Expone el usuario de WordPress.                                                                                                                          |
-| `/author/jjk1978/`                                                        | Archivo de autor                                                                                           | —                      | 410    | Expone el usuario de WordPress.                                                                                                                          |
+| URL vieja                                                                 | Qué es hoy                                                                                                 | Ruta nueva             | Acción | Nota                                                                                                            |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------- |
+| `/`                                                                       | Home                                                                                                       | `/`                    | —      | Misma URL, no necesita regla.                                                                                   |
+| `/shop/`                                                                  | Catálogo WooCommerce (ítem "Productos" del menú)                                                           | `/productos`           | 301    |                                                                                                                 |
+| `/categoria-producto/productos/`                                          | Única categoría de producto                                                                                | `/productos`           | 301    |                                                                                                                 |
+| `/jardineria-profesional/`                                                | Página "Paisajismo" del menú                                                                               | `/productos`           | 301    | Se puede apuntar a `/productos#paisajismo` (ver nota de anclas abajo).                                          |
+| `/horticultura-profesional/`                                              | Página "Productores" del menú (ornamentales, ciclamen, tabaco, hortalizas, forestales, frutales)           | `/productos`           | 301    | Encaja con la línea `sustratos` (`/productos#sustratos`).                                                       |
+| `/hogar-y-jardin/`                                                        | Página "Viveros" del menú (H2: "Productos para Hogar y Jardín", "Productos para Horticultura Profesional") | `/productos`           | 301    | mezcla paisajismo y sustratos; `/productos` sin ancla es lo más seguro.                                         |
+| `/servicios/`                                                             | Recepción y disposición de poda ("no quemes ni entierres tu poda")                                         | `/servicios`           | 301    | En el sitio nuevo corresponde a "Tratamiento de residuos orgánicos".                                            |
+| `/compost-organico/`                                                      | Página institucional de compost                                                                            | `/productos/compost`   | 301    | podría ser `/productos/compost-paisajismo`. Elegí la línea agro porque es el compost que destaca la home nueva. |
+| `/techos-verdes/`                                                         | Página institucional de techos verdes                                                                      | `/productos/greenroof` | 301    |                                                                                                                 |
+| `/portfolio/`                                                             | Portfolio demo de Woodmart (imágenes placeholder)                                                          | `/portfolio`           | 301    | Solo cambia la barra final.                                                                                     |
+| `/privacy-policy/`                                                        | "Privacy Policy" (plantilla de WordPress, en inglés)                                                       | `/`                    | 301    | cuando exista la página legal de privacidad, apuntar ahí.                                                       |
+| `/blog/`                                                                  | Listado de 3 notas de 2020                                                                                 | `/`                    | 301    | el sitio nuevo no tiene blog.                                                                                   |
+| `/un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus/` | Nota (11/2020)                                                                                             | `/`                    | 301    | Son notas de terceros republicadas (imágenes con nombres tipo `3480607w1920.jpg`), sin relación con productos.  |
+| `/ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques/` | Nota (11/2020)                                                                                             | `/`                    | 301    | Ídem.                                                                                                           |
+| `/plastico-5-claves-para-reducir-el-impacto-ambiental/`                   | Nota (11/2020)                                                                                             | `/`                    | 301    | Ídem.                                                                                                           |
+| `/category/paisajismo/`                                                   | Archivo de notas                                                                                           | `/`                    | 301    |                                                                                                                 |
+| `/category/medio-ambiente/`                                               | Archivo de notas                                                                                           | `/`                    | 301    |                                                                                                                 |
+| `/author/carloslr/`                                                       | Archivo de autor ("Nothing Found")                                                                         | `/`                    | 301    | Expone el usuario de WordPress.                                                                                 |
+| `/author/jjk1978/`                                                        | Archivo de autor                                                                                           | `/`                    | 301    | Expone el usuario de WordPress.                                                                                 |
 
 ## 2. Productos (WooCommerce `/producto/<slug>/`)
 
@@ -85,30 +86,30 @@ Todas listan los mismos 17 productos; no tienen contenido propio.
 ## 5. Contenido demo de Woodmart (basura del tema)
 
 El sitemap publica 247 URLs del contenido de demostración que trae Woodmart y nunca se borró.
-El detalle de cada una está en `sitio-actual.json` (`demoWoodmart`). Propuesta: **410 Gone** para todo,
-así Google las saca rápido y no se mezclan con el sitio nuevo. Ninguna tiene equivalente.
+El detalle de cada una está en `sitio-actual.json` (`demoWoodmart`). Ninguna tiene equivalente: todas van a la
+home con 301.
 
-| Patrón                                                                                          | Cantidad en el sitemap | Ejemplos                                                                                                                                                                   | Acción |
-| ----------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Páginas demo del tema (sin contar `/compare/`, `/wishlist/` y `/track-order/`, que van con 301) | 117                    | `/home-fashion/`, `/home-cars/`, `/home-medical-marijuana/`, `/contact-us-2/`, `/faqs/`, `/about-us/`, `/maintenance/`, `/products-grid/`, `/sample-page/`, `/custom-404/` | 410    |
-| Slides (`woodmart_slide`)                                                                       | 35                     | `/woodmart_slide/bike-slide-1/`                                                                                                                                            | 410    |
-| Portfolio demo                                                                                  | 9                      | `/portfolio/potenti-parturient-parturie/`                                                                                                                                  | 410    |
-| Categorías de proyecto demo                                                                     | 5                      | `/project-cat/furniture/`                                                                                                                                                  | 410    |
-| Bloques HTML (`?cms_block=`)                                                                    | 59                     | `/?cms_block=footer-wine`                                                                                                                                                  | 410    |
-| Plantillas Elementor (`?elementor_library=`)                                                    | 5                      | `/?elementor_library=pie-hisoil`                                                                                                                                           | 410    |
-| Sliders (`?taxonomy=woodmart_slider&term=`)                                                     | 14                     | `/?taxonomy=woodmart_slider&term=bike-slider`                                                                                                                              | 410    |
+| Patrón                                                                                          | Cantidad en el sitemap | Ejemplos                                                                                                                                                                   | Acción    |
+| ----------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Páginas demo del tema (sin contar `/compare/`, `/wishlist/` y `/track-order/`, que van con 301) | 117                    | `/home-fashion/`, `/home-cars/`, `/home-medical-marijuana/`, `/contact-us-2/`, `/faqs/`, `/about-us/`, `/maintenance/`, `/products-grid/`, `/sample-page/`, `/custom-404/` | 301 → `/` |
+| Slides (`woodmart_slide`)                                                                       | 35                     | `/woodmart_slide/bike-slide-1/`                                                                                                                                            | 301 → `/` |
+| Portfolio demo                                                                                  | 9                      | `/portfolio/potenti-parturient-parturie/`                                                                                                                                  | 301 → `/` |
+| Categorías de proyecto demo                                                                     | 5                      | `/project-cat/furniture/`                                                                                                                                                  | 301 → `/` |
+| Bloques HTML (`?cms_block=`)                                                                    | 59                     | `/?cms_block=footer-wine`                                                                                                                                                  | 301 → `/` |
+| Plantillas Elementor (`?elementor_library=`)                                                    | 5                      | `/?elementor_library=pie-hisoil`                                                                                                                                           | 301 → `/` |
+| Sliders (`?taxonomy=woodmart_slider&term=`)                                                     | 14                     | `/?taxonomy=woodmart_slider&term=bike-slider`                                                                                                                              | 301 → `/` |
 
 La lista exacta de páginas demo está en la sección 7 (bloque `.htaccess`).
 
 ## 6. Otras URLs de WordPress que van a dejar de existir
 
-| URL                                                          | Acción propuesta                                                                                                                               |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/feed/`, `/comments/feed/`, `*/feed/`                       | 410                                                                                                                                            |
-| `/wp-sitemap.xml`, `/wp-sitemap-*.xml`, `/sitemap_index.xml` | 301 → `/sitemap.xml` (el nuevo)                                                                                                                |
-| `/wp-admin/`, `/wp-login.php`, `/xmlrpc.php`, `/wp-json/`    | 410 (o 404 natural)                                                                                                                            |
-| `/wp-content/uploads/…` (imágenes)                           | Dejar que den 404. Si Google Imágenes trae tráfico (no verificable sin Search Console), evaluar 301 de las fotos de producto a la ficha nueva. |
-| `http://` y `www.`                                           | Hoy Cloudflare ya redirige a `https://hisoil.com.ar/` (verificado con `curl -I`). Mantener esa regla en Cloudflare.                            |
+| URL                                                          | Acción propuesta                                                                                                                                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/feed/`, `/comments/feed/`, `*/feed/`                       | 301 → `/`                                                                                                                                                                 |
+| `/wp-sitemap.xml`, `/wp-sitemap-*.xml`, `/sitemap_index.xml` | 301 → `/sitemap.xml` (el nuevo)                                                                                                                                           |
+| `/wp-admin/`, `/wp-login.php`, `/xmlrpc.php`, `/wp-json/`    | 301 → `/`                                                                                                                                                                 |
+| `/wp-content/uploads/…` (imágenes)                           | Dejar que den 404 (son archivos, no páginas). Si Google Imágenes trae tráfico (no verificable sin Search Console), evaluar 301 de las fotos de producto a la ficha nueva. |
+| `http://` y `www.`                                           | Hoy Cloudflare ya redirige a `https://hisoil.com.ar/` (verificado con `curl -I`). Mantener esa regla en Cloudflare.                                                       |
 
 ## 7. `.htaccess` final
 
@@ -146,24 +147,25 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
-# --- 410: contenido demo y tipos internos expuestos por query string (/?cms_block=…) ---
+# --- 301 a la home: contenido demo y tipos internos expuestos por query string (/?cms_block=…) ---
+# El ? final del destino descarta el query string: sin él, /?cms_block=x redirigiría a sí misma.
 RewriteCond %{QUERY_STRING} (^|&)(cms_block|elementor_library|taxonomy|woodmart_slide|portfolio|project-cat)= [NC]
-RewriteRule ^$ - [G,L]
+RewriteRule ^$ https://%{HTTP_HOST}/? [R=301,L]
 
-# --- 410: slides, portfolio demo, categorías demo, autores, feeds, WordPress ---
-RewriteRule ^woodmart_slide/ - [G,L]
-RewriteRule ^portfolio/.+ - [G,L]
-RewriteRule ^project-cat/ - [G,L]
-RewriteRule ^author/ - [G,L]
-RewriteRule (^|/)feed/?$ - [G,L]
-RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|wp-json)(/|$) - [G,L]
+# --- 301 a la home: slides, portfolio demo, categorías demo, autores, feeds, WordPress ---
+RewriteRule ^woodmart_slide/ https://%{HTTP_HOST}/ [R=301,L]
+RewriteRule ^portfolio/.+ https://%{HTTP_HOST}/ [R=301,L]
+RewriteRule ^project-cat/ https://%{HTTP_HOST}/ [R=301,L]
+RewriteRule ^author/ https://%{HTTP_HOST}/ [R=301,L]
+RewriteRule (^|/)feed/?$ https://%{HTTP_HOST}/ [R=301,L]
+RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php|wp-json)(/|$) https://%{HTTP_HOST}/ [R=301,L]
 
-# --- 410: notas viejas del blog ---
-RewriteRule ^(un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus|ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques|plastico-5-claves-para-reducir-el-impacto-ambiental)/?$ - [G,L]
+# --- 301 a la home: notas viejas del blog ---
+RewriteRule ^(un-jardin-andino-disenado-para-exponer-la-magnificencia-de-los-cactus|ambiente-la-argentina-obtuvo-fondos-para-fortalecer-la-ley-de-bosques|plastico-5-claves-para-reducir-el-impacto-ambiental)/?$ https://%{HTTP_HOST}/ [R=301,L]
 
-# --- 410: páginas demo de Woodmart ---
-RewriteRule ^home-[a-z0-9-]+/?$ - [G,L]
-RewriteRule ^(sample-page|contact-us|contact-us-2|contact-us-3|contact-us-4|faqs|faqs-2|our-team|maintenance|maintenance-2|maintenance-3|christmas-maintenance|infobox|pricing-tables|images-gallery|titles|carousels|banners|google-maps|instagram|social-buttons|team-member|testimonials|countdown-timer|360-degree-view|menu-price|portfolio-element|blog-element|products-grid|products-widgets|animated-counter|ajax-products-tabs|button-with-popup|brands-element|section-dividers|gradients|recent-products|featured-products|products-by-id|products-category|products-categories|sale-products|top-rated-products|about-us|about-us-2|about-me|about-factory|demo-digitals|timeline|video|buttons|list-element|custom-404|custom-404-2|parallax-scrolling|image-hotspot|animations|sliders)/?$ - [G,L]
+# --- 301 a la home: páginas demo de Woodmart ---
+RewriteRule ^home-[a-z0-9-]+/?$ https://%{HTTP_HOST}/ [R=301,L]
+RewriteRule ^(sample-page|contact-us|contact-us-2|contact-us-3|contact-us-4|faqs|faqs-2|our-team|maintenance|maintenance-2|maintenance-3|christmas-maintenance|infobox|pricing-tables|images-gallery|titles|carousels|banners|google-maps|instagram|social-buttons|team-member|testimonials|countdown-timer|360-degree-view|menu-price|portfolio-element|blog-element|products-grid|products-widgets|animated-counter|ajax-products-tabs|button-with-popup|brands-element|section-dividers|gradients|recent-products|featured-products|products-by-id|products-category|products-categories|sale-products|top-rated-products|about-us|about-us-2|about-me|about-factory|demo-digitals|timeline|video|buttons|list-element|custom-404|custom-404-2|parallax-scrolling|image-hotspot|animations|sliders)/?$ https://%{HTTP_HOST}/ [R=301,L]
 
 # Las 301 apuntan a https://%{HTTP_HOST}/… y no a /…: con un destino relativo, el servidor arma el
 # Location con el esquema con el que le llega el pedido (http si Cloudflare habla con el origen por http)
@@ -218,7 +220,7 @@ RewriteRule ^([^/]+)$ /$1.html [L]
 
 Notas:
 
-- **Orden**: 410 → 301 → barra final → HTML prerenderizado. Sin fallback a `index.html`: una URL que no
+- **Orden**: 301 a la home → 301 a secciones → barra final → HTML prerenderizado. Sin fallback a `index.html`: una URL que no
   existe devuelve 404 con `404.html`, no la home con 200.
 - **Por qué `fichas/` y no `productos/`**: con `dist/productos.html` y una carpeta `dist/productos/` al lado,
   Apache respondió `/productos` con 301 a `/productos/` aunque la regla ya había reescrito a
@@ -236,7 +238,7 @@ Notas:
   y `Header` no los aplica (la 404 sale con su página genérica, no con `404.html`). LiteSpeed Enterprise, que
   es lo que usa Hostinger, se presenta como compatible con el `.htaccess` de Apache; no lo pude probar.
 - **Query string `/?cms_block=…`**: la condición sobre `QUERY_STRING` con `^$` agarró las 78 URLs con
-  `?cms_block=`, `?elementor_library=` y `?taxonomy=` (410) y dejó pasar `/?utm_source=…` (200, la home).
+  `?cms_block=`, `?elementor_library=` y `?taxonomy=` y dejó pasar `/?utm_source=…` (200, la home).
 - **Duplicados que quedan accesibles**: `/nosotros.html`, `/fichas/chip.html`, `/index`, `/404` responden 200. Nadie los enlaza y cada uno tiene su canonical, así que no hace falta bloquearlos.
 - **Anclas**: si se quiere mandar `/jardineria-profesional/` a `/productos#paisajismo`, usar
   `RewriteRule ^jardineria-profesional/?$ https://%{HTTP_HOST}/productos#paisajismo [R=301,NE,L]` (sin `NE`,

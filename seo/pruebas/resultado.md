@@ -2,6 +2,10 @@
 
 Fecha: 15/10/2026. Probado sobre un `dist/` simulado, **no** sobre el hosting real.
 
+**Actualización 21/10/2026:** cambiaron los destinos (los productos discontinuados van a `/productos` y todo lo
+que antes era 410 ahora es 301 a la home). Se volvió a correr la prueba completa con `casos.tsv` actualizado:
+495 de 495 en Apache y 495 de 495 en OpenLiteSpeed. Las tablas de abajo son de la corrida del 15/10.
+
 ## Qué se probó
 
 - **Servidores**: Apache 2.4.69 (`httpd:2.4`, con `mod_rewrite`, `mod_headers` y `AllowOverride All`) y
