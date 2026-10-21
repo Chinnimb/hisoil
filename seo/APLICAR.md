@@ -28,15 +28,13 @@ cambios quirúrgicos, `npm run validate` antes de dar algo por terminado, rama p
 - **No sacar el `noindex, nofollow` de `index.html`.** Se saca recién en el build que se entrega para
   publicar, y lo decide Ariel. Dejalo preparado (tarea 7), no lo apliques.
 - No modificar `vite.config.ts` (`figmaAssetResolver`), el nombre del paquete ni `src/app/components/ui/`.
-- No inventar datos de negocio (mail, teléfono, dirección) ni destinos de redirección dudosos: usá lo que
+- No inventar datos de negocio (mail, teléfono, dirección) ni destinos de redirección nuevos: usá lo que
   dice este documento y marcá lo pendiente.
 
 ## Pendiente de decisión (preguntale a Ariel antes de cerrar estos puntos)
 
-1. **Redirecciones dudosas** (marcadas con ⚠ en `redirecciones.md`): página institucional `/compost-organico/` → `compost` o `compost-paisajismo`; notas del blog (410 o 301 a `/`). Mientras no se confirmen, implementá la
-   propuesta de la tabla tal cual y listalas en el PR. Ya confirmado: todo producto viejo que no existe en el catálogo nuevo
-   (Azaleas, Cactus, Humus, Tierra Negra, F590, F545) va a `/productos`, y el producto Compost Orgánico
-   va a `/productos/compost-paisajismo`.
+1. **Redirecciones:** ya están todas decididas. Implementá la tabla de `redirecciones.md` tal cual, sin
+   preguntar.
 2. **Datos de contacto (NAP):** el sitio viejo usa `info@hisoil.com.ar`, (011) 4440 1919 / 2879 2466 y
    El Hornero 1180 - Edificio Alpina (1629) Pilar; el nuevo usa `administracion@hisoil.com.ar` y
    +54 9 11 4440-1919, sin dirección. En el JSON-LD de `Organization` dejá mail, teléfono y dirección
@@ -106,7 +104,7 @@ Una rama por tarea grande o una sola rama `seo-aplicar`, a elección; cada tarea
 
 - Copiá **tal cual** el bloque de la sección 7 de `redirecciones.md`. Ya incluye servir el HTML
   prerenderizado, la home explícita y `ErrorDocument 404 /404.html` (sin fallback a `index.html`), y está
-  probado en Docker. Si cambiás una redirección dudosa, cambiá también `seo/pruebas/casos.tsv`.
+  probado en Docker. Si cambiás una redirección, cambiá también `seo/pruebas/casos.tsv`.
 - Página 404 real: agregá una ruta `*` en `App.tsx` con contenido de "página no encontrada" (texto en
   rioplatense) y generá `dist/404.html` en el prerender, con `noindex` siempre (también después del
   lanzamiento). Así una URL inexistente devuelve 404 y no la home con 200.
@@ -142,7 +140,7 @@ Una rama por tarea grande o una sola rama `seo-aplicar`, a elección; cada tarea
 
 Dejá en el PR una checklist para el día de la publicación:
 
-- [ ] Ariel confirma las redirecciones dudosas y el NAP.
+- [ ] Ariel confirma el NAP.
 - [ ] Sacar `noindex, nofollow` de `index.html` (y que el prerender no lo copie a las demás rutas).
 - [ ] Antes de subir: exportar de Search Console el informe de rendimiento y de páginas (si HiSoil tiene
       acceso; si no, verificar la propiedad de dominio por TXT en Cloudflare).
