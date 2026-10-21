@@ -34,9 +34,9 @@ cambios quirúrgicos, `npm run validate` antes de dar algo por terminado, rama p
 ## Pendiente de decisión (preguntale a Ariel antes de cerrar estos puntos)
 
 1. **Redirecciones dudosas** (marcadas con ⚠ en `redirecciones.md`): compost viejo → `compost` o
-   `compost-paisajismo`; Tierra Negra y F590 → `tierra-fertil`; F545 → `seed`; Azaleas, Cactus y Humus sin
-   equivalente (→ `/productos`); notas del blog (410 o 301 a `/`). Mientras no se confirmen, implementá la
-   propuesta de la tabla tal cual y listalas en el PR.
+   `compost-paisajismo`; Tierra Negra y F590 → `tierra-fertil`; F545 → `seed`; notas del blog (410 o 301 a `/`). Mientras no se confirmen, implementá la
+   propuesta de la tabla tal cual y listalas en el PR. Ya confirmado: Azaleas, Cactus y Humus, que no tienen
+   equivalente, van a `/productos`.
 2. **Datos de contacto (NAP):** el sitio viejo usa `info@hisoil.com.ar`, (011) 4440 1919 / 2879 2466 y
    El Hornero 1180 - Edificio Alpina (1629) Pilar; el nuevo usa `administracion@hisoil.com.ar` y
    +54 9 11 4440-1919, sin dirección. En el JSON-LD de `Organization` dejá mail, teléfono y dirección
