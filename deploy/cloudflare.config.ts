@@ -7,8 +7,9 @@ export default {
     assets: {
       // /nosotros sirve nosotros.html y /productos/chip sirve productos/chip.html.
       htmlHandling: 'auto-trailing-slash',
-      // Lo que no existe devuelve 404 con 404.html (no la home con 200).
-      notFoundHandling: '404-page',
+      // Mientras no exista el prerender (seo/APLICAR.md), cualquier ruta sirve index.html y la SPA
+      // resuelve. Con el prerender hecho, volver a '404-page' (404 real con 404.html).
+      notFoundHandling: 'single-page-application',
     },
   },
 };
